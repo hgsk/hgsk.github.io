@@ -2,7 +2,7 @@
 
 札幌で働くソフトウェアエンジニアです。
 
-A programmer work in Sapporo, Japan.
+A programmer working in Sapporo, Japan.
 
 ## 雑記 Articles
 

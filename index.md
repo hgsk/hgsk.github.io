@@ -6,5 +6,5 @@ A programmer working in Sapporo, Japan.
 
 ## 雑記 Articles
 
-[インターンシップ](/internship)
+[インターンシップ](/internship.md)
 

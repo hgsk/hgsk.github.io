@@ -12,7 +12,7 @@ Needs needs: キャラクターのニーズ（食事、休息など）。
 Jobs jobs: キャラクターのジョブ（仕事）管理。
 MindState mindState: キャラクターの精神状態。
 
-```
+```mermaid
 classDiagram
     class Thing {
         ThingDef def

@@ -1,5 +1,39 @@
 # Cohesion
 
+Cohesion(凝集性）は、ソフトウェア設計においてコードの品質を測る指標です。
+
+凝集性が高いほど、推奨される品質の高いコードになります。
+
+凝集性が高いコードはそのコードの意図するふるまいにのみ焦点が当たっています。
+
+たとえば、
+
+```mermaid
+
+classDiagram
+    class Staff {
+        +checkEmail()
+        +sendEmail()
+        +emailValidate()
+        +PrintLetter()
+    }
+```
+
+```mermaid
+
+classDiagram
+    class Staff {
+        -salary
+        -emailAddr
+        +setSalary(newSalary)
+        +getSalary()
+        +setEmailAddr(newEmail)
+        +getEmailAddr()
+    }
+```
+
+
+
 Rimworldのコードで凝集性を学びます。
 
 機能的凝集、逐次的凝集の例として、Pawn＿Ownershipを見てみましょう。

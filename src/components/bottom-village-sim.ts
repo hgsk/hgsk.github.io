@@ -18,6 +18,13 @@ interface Villager {
   wanderAt: number;
 }
 
+interface NavEntity {
+  label: string;
+  href: string;
+  x: number;
+  y: number;
+}
+
 interface SimState {
   initialized: boolean;
   columns: number;
@@ -25,6 +32,7 @@ interface SimState {
   map: TileType[][];
   heights: number[];
   villagers: Villager[];
+  navEntities: NavEntity[];
   lastTime: number;
 }
 
@@ -48,6 +56,7 @@ const getState = (): SimState => {
       map: [],
       heights: [],
       villagers: [],
+      navEntities: [],
       lastTime: 0,
     };
   }
@@ -58,6 +67,7 @@ class BottomVillageSim extends HTMLElement {
   private readonly state = getState();
   private readonly root = this.attachShadow({ mode: "open" });
   private readonly canvas = document.createElement("canvas");
+  private readonly navLayer = document.createElement("div");
   private readonly context = this.canvas.getContext("2d");
   private raf = 0;
   private resizeObserver?: ResizeObserver;
@@ -82,11 +92,40 @@ class BottomVillageSim extends HTMLElement {
         height: 100%;
         image-rendering: pixelated;
         display: block;
+        pointer-events: none;
+      }
+      .nav-layer {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .nav-entity {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 6px;
+        border: 2px solid #4d321c;
+        background: #c58b5f;
+        color: #2f1d10;
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        transform: translate(-50%, -100%);
+        image-rendering: pixelated;
+        box-shadow: 0 2px 0 #4d321c;
+        pointer-events: auto;
+      }
+      .nav-entity:hover,
+      .nav-entity:focus-visible {
+        background: #ddb08b;
+        outline: none;
       }
     `;
 
-    this.canvas.setAttribute("aria-hidden", "true");
-    this.root.append(style, this.canvas);
+    this.navLayer.className = "nav-layer";
+    this.root.append(style, this.canvas, this.navLayer);
   }
 
   connectedCallback() {
@@ -123,6 +162,9 @@ class BottomVillageSim extends HTMLElement {
       this.state.rows !== rows
     ) {
       this.initializeWorld(columns, rows);
+    } else {
+      this.state.navEntities = this.createNavEntities();
+      this.renderNavEntities();
     }
   }
 
@@ -163,7 +205,33 @@ class BottomVillageSim extends HTMLElement {
         wanderAt: performance.now() + randomRange(800, 2600),
       };
     });
+    this.state.navEntities = this.createNavEntities();
+    this.renderNavEntities();
     this.state.initialized = true;
+  }
+
+  private createNavEntities(): NavEntity[] {
+    const entities = [{ label: "BLOG", href: "/" }];
+
+    return entities.map((entity, index) => {
+      const ratio = entities.length === 1 ? 0.5 : (index + 1) / (entities.length + 1);
+      const x = Math.floor(this.width * ratio);
+      const y = this.getGroundY(x) - 2;
+      return { ...entity, x, y };
+    });
+  }
+
+  private renderNavEntities() {
+    this.navLayer.textContent = "";
+    for (const entity of this.state.navEntities) {
+      const link = document.createElement("a");
+      link.className = "nav-entity";
+      link.href = entity.href;
+      link.textContent = entity.label;
+      link.style.left = `${entity.x}px`;
+      link.style.top = `${entity.y}px`;
+      this.navLayer.append(link);
+    }
   }
 
   private getGroundY(x: number) {

@@ -47,6 +47,9 @@ const randomRange = (min: number, max: number) => Math.random() * (max - min) + 
 const clamp = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(max, value));
 
+const getEvenSpacingRatio = (index: number, count: number) =>
+  count <= 1 ? 0.5 : (index + 1) / (count + 1);
+
 const getState = (): SimState => {
   if (!window.__bottomVillageSimState) {
     window.__bottomVillageSimState = {
@@ -214,7 +217,7 @@ class BottomVillageSim extends HTMLElement {
     const entities = [{ label: "BLOG", href: "/" }];
 
     return entities.map((entity, index) => {
-      const ratio = entities.length === 1 ? 0.5 : (index + 1) / (entities.length + 1);
+      const ratio = getEvenSpacingRatio(index, entities.length);
       const x = Math.floor(this.width * ratio);
       const y = this.getGroundY(x) - 2;
       return { ...entity, x, y };

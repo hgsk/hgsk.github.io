@@ -96,7 +96,7 @@ function splitWithTerms(input: string, terms: LinkEntry[], used: Set<string>) {
           title: longestMatch.status === "draft" ? "WIP: 作成中のキーワードページです" : undefined,
           "aria-label":
             longestMatch.status === "draft"
-              ? `${longestMatch.keyword} (WIP keyword page, under construction)`
+              ? `${longestMatch.keyword}（WIP・作成中のキーワードページ）`
               : undefined
         },
         children: [{ type: "text", value: longestMatch.keyword }]

@@ -15,9 +15,13 @@ const { title } = Astro.props;
     <title>{title}</title>
     <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
-  <body>
-    <main>
-      <slot />
-    </main>
-  </body>
-</html>
+   <body>
+     <main>
+       <slot />
+     </main>
+     <bottom-village-sim></bottom-village-sim>
+     <script>
+       import "../components/bottom-village-sim";
+     </script>
+   </body>
+ </html>

@@ -1,6 +1,7 @@
 :root {
   color-scheme: light dark;
   font-family: system-ui, sans-serif;
+  --bottom-sim-height: 176px;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 main {
   max-width: 760px;
   margin: 0 auto;
-  padding: 2rem 1rem 4rem;
+  padding: 2rem 1rem calc(4rem + var(--bottom-sim-height));
 }
 
 h1,

@@ -22,3 +22,16 @@ h3 {
 a {
   color: inherit;
 }
+
+.keyword-link {
+  text-decoration-thickness: 1px;
+}
+
+.keyword-link.is-draft {
+  text-decoration-style: dotted;
+}
+
+.keyword-status {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}

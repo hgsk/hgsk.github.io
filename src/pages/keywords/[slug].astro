@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from "astro:content";
+import { promises as fs } from "node:fs";
+import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+type BacklinkMap = {
+  entries?: Record<string, Array<{ slug: string; title: string; url: string }>>;
+};
+
+async function readBacklinks(): Promise<BacklinkMap> {
+  try {
+    const filePath = path.join(process.cwd(), "src/generated/backlink-map.json");
+    const raw = await fs.readFile(filePath, "utf-8");
+    return JSON.parse(raw) as BacklinkMap;
+  } catch {
+    return { entries: {} };
+  }
+}
+
+const backlinksFile = await readBacklinks();
+
+export async function getStaticPaths() {
+  const keywordEntries = await getCollection("keywords");
+  return keywordEntries.map((entry) => ({
+    params: { slug: encodeURIComponent(entry.data.title) },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const decodedSlug = decodeURIComponent(Astro.params.slug ?? "");
+const backlinkEntries = backlinksFile.entries?.[decodedSlug] ?? [];
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title}>
+  <article>
+    <h1>{entry.data.title}</h1>
+    {entry.data.status === "draft" && <p class="keyword-status">WIP: このページは作成中です</p>}
+    <Content />
+  </article>
+
+  <section>
+    <h2>この記事を参照しているページ一覧</h2>
+    {
+      backlinkEntries.length > 0 ? (
+        <ul>
+          {backlinkEntries.map((item) => (
+            <li>
+              <a href={item.url}>{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>参照しているページはまだありません。</p>
+      )
+    }
+  </section>
+</BaseLayout>

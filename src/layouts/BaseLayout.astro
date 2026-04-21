@@ -20,8 +20,84 @@ const { title } = Astro.props;
        <slot />
      </main>
      <bottom-village-sim></bottom-village-sim>
-     <script>
-       import "../components/bottom-village-sim";
-     </script>
-   </body>
- </html>
+      <script>
+        import "../components/bottom-village-sim";
+
+        let currentNavigationController = null;
+
+        const swapPage = (doc) => {
+          const nextMain = doc.querySelector("main");
+          if (!nextMain) return false;
+          const currentMain = document.querySelector("main");
+          if (!currentMain) return false;
+          currentMain.replaceWith(nextMain);
+          document.title = doc.title;
+          return true;
+        };
+
+        const fetchAndNavigate = async (url, push) => {
+          currentNavigationController?.abort();
+          const controller = new AbortController();
+          currentNavigationController = controller;
+
+          try {
+            const response = await fetch(url, {
+              signal: controller.signal,
+              headers: { "X-Requested-With": "history-fetch-navigation" },
+            });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const html = await response.text();
+            const doc = new DOMParser().parseFromString(html, "text/html");
+            const swapped = swapPage(doc);
+            if (!swapped) {
+              window.location.href = url;
+              return;
+            }
+
+            if (push) {
+              history.pushState({ path: url }, "", url);
+              window.scrollTo({ top: 0, behavior: "auto" });
+            }
+          } catch (error) {
+            if (error?.name === "AbortError") return;
+            window.location.href = url;
+          } finally {
+            if (currentNavigationController === controller) {
+              currentNavigationController = null;
+            }
+          }
+        };
+
+        document.addEventListener("click", (event) => {
+          if (
+            event.defaultPrevented ||
+            event.button !== 0 ||
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey
+          ) {
+            return;
+          }
+
+          const anchor = event.target.closest("a");
+          if (!anchor) return;
+          if (anchor.target && anchor.target !== "_self") return;
+          if (anchor.hasAttribute("download")) return;
+          if (!anchor.href) return;
+
+          const url = new URL(anchor.href, window.location.href);
+          if (url.origin !== window.location.origin) return;
+          if (url.hash && url.pathname === window.location.pathname) return;
+          if (url.pathname === window.location.pathname && url.search === window.location.search) return;
+
+          event.preventDefault();
+          fetchAndNavigate(url.href, true);
+        });
+
+        window.addEventListener("popstate", () => {
+          fetchAndNavigate(window.location.href, false);
+        });
+      </script>
+    </body>
+  </html>

@@ -1,61 +1,216 @@
 ---
-title: Uber Shaderと個別シェーダーの比較
-description: 描画パイプライン運用におけるUber Shader方式と個別シェーダー方式の違いと使い分け
+title: Uber Shaderと個別シェーダーの比較（Three.jsハンズオン）
+description: Three.jsでUber Shader方式と個別シェーダー方式を実装し、コードレベルで比較するハンズオン
 pubDate: 2026-04-21
+updatedDate: 2026-04-21
 ---
 
-## 概要
+## ゴール
 
-シェーダー設計では、大きく分けて次の2方式があります。
+Three.jsで同じ見た目要件（色 + テクスチャ + リムライト）を、次の2方式で実装して比較します。
 
-- **Uber Shader**: 1つのシェーダーに複数機能をまとめ、キーワードや分岐で機能を切り替える
-- **個別シェーダー**: 用途ごとにシェーダーを分離し、必要なものだけを使う
+- **Uber Shader方式**: 1つのShaderMaterialで機能をフラグ切り替え
+- **個別シェーダー方式**: 用途別にShaderMaterialを分ける
 
-どちらが正しいというより、**プロジェクト規模・運用体制・ターゲット環境**で最適解が変わります。
+## 前提環境
 
-## 比較表
+- Node.js 20+ 
+- Three.js r160+
+- Vite などESMで動く環境
 
-| 観点 | Uber Shader | 個別シェーダー |
-| --- | --- | --- |
-| 実装の集約度 | 高い（1本に集約） | 低い（機能ごとに分離） |
-| 保守性 | 仕様が増えるほど複雑化しやすい | ファイルは増えるが責務が明確 |
-| 機能追加 | 既存構造に乗せやすい | 新規シェーダー作成が必要な場合あり |
-| ビルド/バリアント管理 | バリアント爆発のリスク | 管理対象ファイル数が増える |
-| 実行時性能 | 動的分岐や不要コード混在の影響が出ることがある | ケース特化で最適化しやすい |
-| デバッグ | 条件分岐追跡が難しくなる | 問題箇所を特定しやすい |
+## 1. プロジェクト作成
 
-## Uber Shaderのメリット
+```bash
+npm create vite@latest threejs-shader-compare -- --template vanilla
+cd threejs-shader-compare
+npm install three
+npm run dev
+```
 
-- 共通ロジックを一元化しやすい
-- マテリアル側の設定を統一しやすい
-- アーティスト向けUIをまとめやすい
+`src/main.js` を以下の流れで作成します。
 
-## Uber Shaderの注意点
+- シーン・カメラ・レンダラー初期化
+- 球体メッシュを2つ配置
+- 左: Uber Shader / 右: 個別シェーダー
 
-- キーワード組み合わせが増えるとバリアント数が急増し、ビルド時間や容量に影響する
-- 条件分岐が増えるほど可読性が下がり、修正影響の見積もりが難しくなる
-- 対応プラットフォーム差分を1本で吸収しようとすると設計が破綻しやすい
+## 2. 共通の初期化コード
 
-## 個別シェーダーのメリット
+```js
+import * as THREE from "three";
 
-- 目的ごとに最小構成で記述でき、読みやすい
-- 最適化ポイントが明確で、性能チューニングしやすい
-- 不具合時に影響範囲を切り分けやすい
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x1a1a1a);
 
-## 個別シェーダーの注意点
+const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 100);
+camera.position.set(0, 0, 4);
 
-- 共通処理の重複が発生しやすい
-- 似たシェーダーが増えると管理コストが上がる
-- アーティスト向け設定項目の整合を取り続ける工夫が必要
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
 
-## 使い分けの指針
+const geometry = new THREE.SphereGeometry(0.8, 64, 64);
+const texture = new THREE.TextureLoader().load("/uv-grid.png");
 
-- **小〜中規模で表現パターンが限定的**: 個別シェーダー中心が管理しやすい
-- **多数のマテリアルと共通機能を横断運用**: Uber Shaderの恩恵が出やすい
-- **実務ではハイブリッド**: 共通基盤はUber、特殊用途は個別に分離する構成が現実的
+const uniformsBase = {
+  uColor: { value: new THREE.Color("#66ccff") },
+  uTexture: { value: texture },
+  uUseTexture: { value: true },
+  uUseRim: { value: true },
+  uRimPower: { value: 2.5 },
+  uCameraPos: { value: camera.position.clone() }
+};
+```
 
-## まとめ
+## 3. Uber Shader方式（1本で切り替え）
 
-Uber Shaderは運用効率の武器ですが、肥大化すると保守・性能の両面で負債になります。個別シェーダーは分かりやすく堅実ですが、重複管理が課題です。
+### Vertex Shader
 
-最終的には、**「どこを共通化し、どこを分離するか」**をチーム運用の観点で明確にし、定期的にシェーダー構成を見直すことが重要です。
+```glsl
+varying vec2 vUv;
+varying vec3 vNormalW;
+varying vec3 vPosW;
+
+void main() {
+  vUv = uv;
+  vNormalW = normalize(normalMatrix * normal);
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  vPosW = worldPos.xyz;
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+}
+```
+
+### Fragment Shader
+
+```glsl
+uniform vec3 uColor;
+uniform sampler2D uTexture;
+uniform bool uUseTexture;
+uniform bool uUseRim;
+uniform float uRimPower;
+uniform vec3 uCameraPos;
+
+varying vec2 vUv;
+varying vec3 vNormalW;
+varying vec3 vPosW;
+
+void main() {
+  vec3 baseColor = uColor;
+
+  if (uUseTexture) {
+    baseColor *= texture2D(uTexture, vUv).rgb;
+  }
+
+  if (uUseRim) {
+    vec3 viewDir = normalize(uCameraPos - vPosW);
+    float rim = pow(1.0 - max(dot(vNormalW, viewDir), 0.0), uRimPower);
+    baseColor += vec3(0.6, 0.8, 1.0) * rim * 0.6;
+  }
+
+  gl_FragColor = vec4(baseColor, 1.0);
+}
+```
+
+### Material作成
+
+```js
+const uberMaterial = new THREE.ShaderMaterial({
+  uniforms: THREE.UniformsUtils.clone(uniformsBase),
+  vertexShader: uberVertex,
+  fragmentShader: uberFragment
+});
+```
+
+## 4. 個別シェーダー方式（用途別に分離）
+
+ここでは2種類に分割します。
+
+- `textureOnlyFragment`: テクスチャ合成のみ
+- `textureRimFragment`: テクスチャ + リムライト
+
+### 例: textureRimFragment
+
+```glsl
+uniform vec3 uColor;
+uniform sampler2D uTexture;
+uniform float uRimPower;
+uniform vec3 uCameraPos;
+
+varying vec2 vUv;
+varying vec3 vNormalW;
+varying vec3 vPosW;
+
+void main() {
+  vec3 tex = texture2D(uTexture, vUv).rgb;
+  vec3 baseColor = uColor * tex;
+
+  vec3 viewDir = normalize(uCameraPos - vPosW);
+  float rim = pow(1.0 - max(dot(vNormalW, viewDir), 0.0), uRimPower);
+  baseColor += vec3(0.6, 0.8, 1.0) * rim * 0.6;
+
+  gl_FragColor = vec4(baseColor, 1.0);
+}
+```
+
+### Material作成
+
+```js
+const splitMaterial = new THREE.ShaderMaterial({
+  uniforms: {
+    uColor: { value: new THREE.Color("#66ccff") },
+    uTexture: { value: texture },
+    uRimPower: { value: 2.5 },
+    uCameraPos: { value: camera.position.clone() }
+  },
+  vertexShader: uberVertex,
+  fragmentShader: textureRimFragment
+});
+```
+
+## 5. 比較用に同時表示
+
+```js
+const left = new THREE.Mesh(geometry, uberMaterial);
+left.position.x = -1.1;
+scene.add(left);
+
+const right = new THREE.Mesh(geometry, splitMaterial);
+right.position.x = 1.1;
+scene.add(right);
+
+function tick() {
+  requestAnimationFrame(tick);
+  left.rotation.y += 0.01;
+  right.rotation.y += 0.01;
+
+  uberMaterial.uniforms.uCameraPos.value.copy(camera.position);
+  splitMaterial.uniforms.uCameraPos.value.copy(camera.position);
+
+  renderer.render(scene, camera);
+}
+tick();
+```
+
+## 6. ハンズオンで見るべき差分
+
+### A. 機能追加（例: ノイズ）
+
+- Uber: `uUseNoise` と `if (uUseNoise)` を追記
+- 個別: 必要なシェーダーだけにノイズ版を追加
+
+### B. デバッグ
+
+- Uber: 分岐条件の組み合わせ確認が必要
+- 個別: 対象シェーダーを1つ見ればよい
+
+### C. パフォーマンス確認
+
+- Chrome DevTools の WebGL/Performance でフレーム時間を比較
+- 条件分岐を増やしたUberと、軽量な個別版を同条件で比較
+
+## 7. 結論（Three.js実装観点）
+
+- **Uber Shader向き**: マテリアル設定を統一したい、機能の再利用を優先したい
+- **個別シェーダー向き**: 機能差が大きい、軽量化やデバッグ容易性を優先したい
+- 実務では、**共通部分はUber / 特殊表現は個別** のハイブリッドが扱いやすいです。
+
+まずは本記事の2メッシュ比較を動かし、機能追加時の変更行数・確認工数・FPS差を記録すると、チームに合う設計方針を決めやすくなります。

@@ -4,6 +4,12 @@ import { rehypeAutoLink } from "./src/plugins/rehype-auto-link";
 export default defineConfig({
   site: "https://hgsk.github.io",
   markdown: {
-    rehypePlugins: [rehypeAutoLink]
+    rehypePlugins: [rehypeAutoLink],
+    shikiConfig: {
+      themes: {
+        light: "github-light",
+        dark: "github-dark"
+      }
+    }
   }
 });

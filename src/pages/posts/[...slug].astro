@@ -15,9 +15,9 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout title={post.data.title}>
-  <article>
+  <article class="post-content">
     <h1>{post.data.title}</h1>
-    <p>{post.data.pubDate.toLocaleDateString("ja-JP")}</p>
+    <p class="post-meta">{post.data.pubDate.toLocaleDateString("ja-JP")}</p>
     <Content />
   </article>
 </BaseLayout>

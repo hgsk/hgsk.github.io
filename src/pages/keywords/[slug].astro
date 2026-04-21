@@ -21,11 +21,15 @@ async function readBacklinks(): Promise<BacklinkMap> {
 const backlinksFile = await readBacklinks();
 
 export async function getStaticPaths() {
-  const keywordEntries = await getCollection("keywords");
-  return keywordEntries.map((entry) => ({
-    params: { slug: encodeURIComponent(entry.data.title) },
-    props: { entry }
-  }));
+  try {
+    const keywordEntries = await getCollection("keywords");
+    return keywordEntries.map((entry) => ({
+      params: { slug: encodeURIComponent(entry.data.title) },
+      props: { entry }
+    }));
+  } catch {
+    return [];
+  }
 }
 
 const { entry } = Astro.props;

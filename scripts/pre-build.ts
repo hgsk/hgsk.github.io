@@ -298,18 +298,18 @@ function loadAhoCorasick() {
 
 function findOccurrences(text: string, terms: string[]) {
   const AhoCorasick = loadAhoCorasick();
-  const engine = new AhoCorasick(terms);
-  const raw = engine.search(text) as Array<[number, string[]]>;
-  const occurrences: Array<{ term: string; start: number; context: string }> = [];
-  for (const [endIndex, hits] of raw) {
-    for (const term of hits) {
-      const start = endIndex - term.length + 1;
-      const from = Math.max(0, start - 24);
-      const to = Math.min(text.length, endIndex + 25);
-      const context = text.slice(from, to);
-      occurrences.push({ term, start, context });
-    }
+  const engine = new AhoCorasick();
+  for (const term of terms) {
+    engine.add(term, term);
   }
+  engine.build_fail();
+  const occurrences: Array<{ term: string; start: number; context: string }> = [];
+  engine.search(text, (term: string, _data: unknown, start: number) => {
+    const from = Math.max(0, start - 24);
+    const to = Math.min(text.length, start + term.length + 24);
+    const context = text.slice(from, to);
+    occurrences.push({ term, start, context });
+  });
   occurrences.sort((a, b) => a.start - b.start || b.term.length - a.term.length);
   return occurrences;
 }

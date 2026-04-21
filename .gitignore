@@ -20,3 +20,6 @@ pnpm-debug.log*
 !.vscode/settings.json
 !.vscode/extensions.json
 !.vscode/tasks.json
+
+# Astro generated files
+.astro/

@@ -23,3 +23,7 @@ pnpm-debug.log*
 
 # Astro generated files
 .astro/
+
+# autolink generated data
+.cache/
+src/generated/*.json

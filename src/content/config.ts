@@ -9,4 +9,12 @@ const blog = defineCollection({
   })
 });
 
-export const collections = { blog };
+const keywords = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().default(""),
+    status: z.enum(["published", "draft"]).default("draft")
+  })
+});
+
+export const collections = { blog, keywords };

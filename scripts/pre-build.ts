@@ -15,6 +15,7 @@ const CACHE_DIR = path.join(ROOT, ".cache/autolink");
 const LINK_MAP_PATH = path.join(GENERATED_DIR, "link-map.json");
 const BACKLINK_MAP_PATH = path.join(GENERATED_DIR, "backlink-map.json");
 const CACHE_PATH = path.join(CACHE_DIR, "analysis-cache.json");
+const SIMILARITY_THRESHOLD = 0.85;
 
 type KeywordStatus = "published" | "draft";
 type Category = "it" | "economy" | "science" | "culture" | "cooking" | "general";
@@ -285,7 +286,7 @@ async function ensureDraftKeywordFiles(terms: string[]) {
       await fs.access(filePath);
       continue;
     } catch {
-      const content = `---\ntitle: "${term}"\ndescription: "Auto-generated WIP keyword page"\nstatus: "draft"\n---\n\nこのページは自動生成された下書きです。\n`;
+      const content = `---\ntitle: "${term}"\ndescription: "自動生成されたWIPキーワードページ"\nstatus: "draft"\n---\n\nこのページは自動生成された下書きです。\n`;
       await fs.writeFile(filePath, content, "utf-8");
       console.log(`[pre-build] Created draft keyword page: ${filePath}`);
     }
@@ -398,7 +399,7 @@ async function main() {
 
       const definition = `${keyword.term}\n${keyword.description}\n${keyword.body}`;
       const score = await ai.similarity(occurrence.context, definition);
-      if (score < 0.85) {
+      if (score < SIMILARITY_THRESHOLD) {
         continue;
       }
 

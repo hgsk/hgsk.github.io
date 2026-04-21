@@ -13,6 +13,23 @@ interface LinkMapFile {
   entries: Record<string, LinkEntry[]>;
 }
 
+interface VFileLike {
+  path?: string;
+  history?: string[];
+}
+
+type TextNode = { type: "text"; value: string };
+type ElementNode = {
+  type: "element";
+  tagName: "a";
+  properties: {
+    href: string;
+    className: string[];
+    title?: string;
+  };
+  children: TextNode[];
+};
+
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const LINK_MAP_PATH = path.join(ROOT, "src/generated/link-map.json");
 
@@ -31,7 +48,7 @@ function readLinkMap() {
   return cachedMap;
 }
 
-function extractSlug(vfile: any) {
+function extractSlug(vfile: VFileLike) {
   const candidate = String(vfile.path ?? vfile.history?.[0] ?? "");
   const normalized = candidate.replace(/\\/g, "/");
   const match = normalized.match(/\/src\/content\/blog\/(.+)\.md$/);
@@ -40,11 +57,11 @@ function extractSlug(vfile: any) {
 
 function splitWithTerms(input: string, terms: LinkEntry[], used: Set<string>) {
   if (!terms.length || !input.trim()) {
-    return [{ type: "text", value: input }];
+    return [{ type: "text", value: input } satisfies TextNode];
   }
 
   const sorted = [...terms].sort((a, b) => b.keyword.length - a.keyword.length || a.keyword.localeCompare(b.keyword));
-  const parts: any[] = [];
+  const parts: Array<TextNode | ElementNode> = [];
   let cursor = 0;
   let chunkStart = 0;
 
@@ -96,7 +113,7 @@ function splitWithTerms(input: string, terms: LinkEntry[], used: Set<string>) {
 const BLOCKED_PARENTS = new Set(["a", "code", "pre", "script", "style"]);
 
 export function rehypeAutoLink() {
-  return (tree: any, vfile: any) => {
+  return (tree: any, vfile: VFileLike) => {
     const linkMap = readLinkMap();
     const slug = extractSlug(vfile);
     const terms = linkMap.entries[slug] ?? [];

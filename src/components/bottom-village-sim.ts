@@ -4,6 +4,7 @@ const TILE_SIZE = 8;
 const SKY_ROWS = 8;
 const SURFACE_MIN = SKY_ROWS + 2;
 const SURFACE_MAX = SKY_ROWS + 5;
+const VILLAGER_SPEED = 0.7;
 
 type TileType = "sky" | "grass" | "dirt" | "stone";
 
@@ -155,7 +156,7 @@ class BottomVillageSim extends HTMLElement {
       return {
         x,
         y: ground - 11,
-        vx: Math.random() < 0.5 ? -0.6 : 0.6,
+        vx: Math.random() < 0.5 ? -VILLAGER_SPEED : VILLAGER_SPEED,
         vy: 0,
         width: 6,
         height: 11,
@@ -184,7 +185,7 @@ class BottomVillageSim extends HTMLElement {
   private updateVillagers(dt: number, now: number) {
     for (const villager of this.state.villagers) {
       if (now > villager.wanderAt) {
-        villager.vx = Math.random() < 0.5 ? -0.7 : 0.7;
+        villager.vx = Math.random() < 0.5 ? -VILLAGER_SPEED : VILLAGER_SPEED;
         villager.wanderAt = now + randomRange(1000, 4000);
       }
 

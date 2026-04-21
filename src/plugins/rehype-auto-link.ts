@@ -26,6 +26,7 @@ type ElementNode = {
     href: string;
     className: string[];
     title?: string;
+    "aria-label"?: string;
   };
   children: TextNode[];
 };
@@ -92,7 +93,11 @@ function splitWithTerms(input: string, terms: LinkEntry[], used: Set<string>) {
         properties: {
           href: longestMatch.url,
           className: longestMatch.status === "draft" ? ["keyword-link", "is-draft"] : ["keyword-link"],
-          title: longestMatch.status === "draft" ? "WIP: 作成中のキーワードページです" : undefined
+          title: longestMatch.status === "draft" ? "WIP: 作成中のキーワードページです" : undefined,
+          "aria-label":
+            longestMatch.status === "draft"
+              ? `${longestMatch.keyword} (WIP keyword page, under construction)`
+              : undefined
         },
         children: [{ type: "text", value: longestMatch.keyword }]
       });

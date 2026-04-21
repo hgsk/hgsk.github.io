@@ -6,7 +6,7 @@ const COMPONENT_TAG = "bottom-village-sim";
 // World dimensions
 const BASE_HEIGHT = 384;       // canvas height in CSS px
 const TILE_SIZE = 32;          // px per tile
-const ROWS = 12;               // BASE_HEIGHT / TILE_SIZE
+const ROWS = BASE_HEIGHT / TILE_SIZE;  // 12
 
 // Entity dimensions
 const ENTITY_W = 14;
@@ -18,6 +18,7 @@ const JUMP_VY = -6.0;
 const GRAVITY_ACCEL = 0.015;
 const V_SCALE = 0.08;          // velocity → px  multiplier (applied with dt)
 const MINE_COOLDOWN = 350;     // ms between mine actions
+const PLAYER_SPEED_MULTIPLIER = 1.4;
 
 // Row layout
 //  0-2  : sky / air  (Frontend walking space)
@@ -407,7 +408,7 @@ class BottomVillageSim extends HTMLElement {
 
   private applyPlayerControl(e: Entity, now: number) {
     const keys = this.state.keys;
-    const spd = AI_SPEED * 1.4;
+    const spd = AI_SPEED * PLAYER_SPEED_MULTIPLIER;
 
     if (keys.has("a"))      { e.vx = -spd; e.facingRight = false; }
     else if (keys.has("d")) { e.vx = spd;  e.facingRight = true;  }

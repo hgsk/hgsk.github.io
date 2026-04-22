@@ -16,6 +16,7 @@ const LINK_MAP_PATH = path.join(GENERATED_DIR, "link-map.json");
 const BACKLINK_MAP_PATH = path.join(GENERATED_DIR, "backlink-map.json");
 const CACHE_PATH = path.join(CACHE_DIR, "analysis-cache.json");
 const SIMILARITY_THRESHOLD = 0.85;
+const HAS_JAPANESE_CHAR = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
 
 type KeywordStatus = "published" | "draft";
 type Category = "it" | "economy" | "science" | "culture" | "cooking" | "general";
@@ -229,6 +230,17 @@ function normalizeTerm(term: string) {
   return term.trim().replace(/\s+/g, " ");
 }
 
+function extractJapaneseProse(markdown: string) {
+  const withoutFencedCode = markdown.replace(/```[\s\S]*?```/g, "\n");
+  const withoutIndentedCode = withoutFencedCode.replace(/^(?: {4}|\t).+$/gm, "");
+  const withoutInlineCode = withoutIndentedCode.replace(/`[^`\n]*`/g, " ");
+  const lines = withoutInlineCode
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0 && HAS_JAPANESE_CHAR.test(line));
+  return lines.join("\n");
+}
+
 function sanitizeFileName(term: string) {
   return term.replace(/[\\/:*?"<>|]/g, "_");
 }
@@ -244,7 +256,8 @@ async function mineTermsByPost(posts: PostEntry[], cache: CacheData) {
       continue;
     }
 
-    const tokens = tokenizer.tokenize(post.body) as Array<{ surface_form: string; pos: string }>;
+    const analysisText = extractJapaneseProse(post.body);
+    const tokens = tokenizer.tokenize(analysisText) as Array<{ surface_form: string; pos: string }>;
     const terms = new Set<string>();
     for (const token of tokens) {
       if (token.pos !== "名詞") {
@@ -252,6 +265,9 @@ async function mineTermsByPost(posts: PostEntry[], cache: CacheData) {
       }
       const normalized = normalizeTerm(token.surface_form);
       if (normalized.length < 2) {
+        continue;
+      }
+      if (!HAS_JAPANESE_CHAR.test(normalized)) {
         continue;
       }
       if (/^[\d\W_]+$/u.test(normalized)) {
@@ -379,7 +395,8 @@ async function main() {
   const backlinkMap: Record<string, Array<{ slug: string; title: string; url: string }>> = {};
 
   for (const post of posts) {
-    const occurrences = findOccurrences(post.body, terms);
+    const japaneseProse = extractJapaneseProse(post.body);
+    const occurrences = findOccurrences(japaneseProse, terms);
     const accepted = new Map<string, LinkEntry>();
 
     for (const occurrence of occurrences) {

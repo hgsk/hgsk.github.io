@@ -1,6 +1,14 @@
+@import "@fontsource/noto-sans-jp/400.css";
+@import "@fontsource/noto-sans-jp/700.css";
+
 :root {
   color-scheme: light dark;
-  font-family: system-ui, sans-serif;
+  font-family:
+    "Noto Sans JP",
+    "Noto Sans CJK JP",
+    "Noto Sans",
+    system-ui,
+    sans-serif;
   --bottom-sim-height: 176px;
 }
 

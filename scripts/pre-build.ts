@@ -16,6 +16,8 @@ const LINK_MAP_PATH = path.join(GENERATED_DIR, "link-map.json");
 const BACKLINK_MAP_PATH = path.join(GENERATED_DIR, "backlink-map.json");
 const CACHE_PATH = path.join(CACHE_DIR, "analysis-cache.json");
 const SIMILARITY_THRESHOLD = 0.85;
+const HAS_JAPANESE_CHAR = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
+const JAPANESE_CHAR_GLOBAL = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/gu;
 
 type KeywordStatus = "published" | "draft";
 type Category = "it" | "economy" | "science" | "culture" | "cooking" | "general";
@@ -229,6 +231,107 @@ function normalizeTerm(term: string) {
   return term.trim().replace(/\s+/g, " ");
 }
 
+function removeInlineCode(text: string) {
+  let output = "";
+  let index = 0;
+
+  while (index < text.length) {
+    if (text[index] !== "`") {
+      output += text[index];
+      index += 1;
+      continue;
+    }
+
+    let fenceEnd = index;
+    while (fenceEnd < text.length && text[fenceEnd] === "`") {
+      fenceEnd += 1;
+    }
+    const fence = text.slice(index, fenceEnd);
+    let cursor = fenceEnd;
+    let closeAt = -1;
+
+    while (cursor < text.length) {
+      if (text[cursor] !== "`") {
+        cursor += 1;
+        continue;
+      }
+      let candidateEnd = cursor;
+      while (candidateEnd < text.length && text[candidateEnd] === "`") {
+        candidateEnd += 1;
+      }
+      if (text.slice(cursor, candidateEnd) === fence) {
+        closeAt = candidateEnd;
+        break;
+      }
+      cursor = candidateEnd;
+    }
+
+    if (closeAt === -1) {
+      output += fence;
+      index = fenceEnd;
+      continue;
+    }
+
+    output += " ";
+    index = closeAt;
+  }
+
+  return output;
+}
+
+function isJapaneseProseLine(line: string) {
+  const japaneseChars = line.match(JAPANESE_CHAR_GLOBAL)?.length ?? 0;
+  const nonWhitespaceChars = line.replace(/\s+/g, "").length;
+  if (nonWhitespaceChars === 0) {
+    return false;
+  }
+  return japaneseChars / nonWhitespaceChars >= 0.3;
+}
+
+function extractJapaneseProse(markdown: string) {
+  const lines = markdown.split(/\r?\n/);
+  const proseLines: string[] = [];
+  let inFence = false;
+  let activeFence = "";
+  let inIndentedCode = false;
+
+  for (const line of lines) {
+    const trimmedStart = line.trimStart();
+    const fence = trimmedStart.match(/^(```+|~~~+)/)?.[1];
+    if (fence) {
+      if (!inFence) {
+        inFence = true;
+        activeFence = fence;
+      } else if (trimmedStart.startsWith(activeFence)) {
+        inFence = false;
+        activeFence = "";
+      }
+      continue;
+    }
+
+    if (inFence) {
+      continue;
+    }
+
+    const isIndentedCode = /^(?: {4}|\t)/.test(line);
+    if (isIndentedCode) {
+      inIndentedCode = true;
+      continue;
+    }
+    if (inIndentedCode && line.trim().length === 0) {
+      continue;
+    }
+    inIndentedCode = false;
+
+    const withoutInlineCode = removeInlineCode(line).trim();
+    if (withoutInlineCode.length > 0 && isJapaneseProseLine(withoutInlineCode)) {
+      proseLines.push(withoutInlineCode);
+    }
+  }
+
+  return proseLines.join("\n");
+}
+
 function sanitizeFileName(term: string) {
   return term.replace(/[\\/:*?"<>|]/g, "_");
 }
@@ -244,7 +347,8 @@ async function mineTermsByPost(posts: PostEntry[], cache: CacheData) {
       continue;
     }
 
-    const tokens = tokenizer.tokenize(post.body) as Array<{ surface_form: string; pos: string }>;
+    const analysisText = extractJapaneseProse(post.body);
+    const tokens = tokenizer.tokenize(analysisText) as Array<{ surface_form: string; pos: string }>;
     const terms = new Set<string>();
     for (const token of tokens) {
       if (token.pos !== "名詞") {
@@ -252,6 +356,9 @@ async function mineTermsByPost(posts: PostEntry[], cache: CacheData) {
       }
       const normalized = normalizeTerm(token.surface_form);
       if (normalized.length < 2) {
+        continue;
+      }
+      if (!HAS_JAPANESE_CHAR.test(normalized)) {
         continue;
       }
       if (/^[\d\W_]+$/u.test(normalized)) {
@@ -379,7 +486,8 @@ async function main() {
   const backlinkMap: Record<string, Array<{ slug: string; title: string; url: string }>> = {};
 
   for (const post of posts) {
-    const occurrences = findOccurrences(post.body, terms);
+    const japaneseProse = extractJapaneseProse(post.body);
+    const occurrences = findOccurrences(japaneseProse, terms);
     const accepted = new Map<string, LinkEntry>();
 
     for (const occurrence of occurrences) {

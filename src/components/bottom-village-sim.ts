@@ -17,7 +17,7 @@ const PROB_DIAMOND    = 0.04;
 const STORAGE_KEY     = "hytlog…rage";
 
 type Tile     = "sky" | "grass" | "dirt" | "stone" | "iron_ore" | "diamond_ore";
-type OreKind  = "iron" | "diamond" | "miss";
+type OreKind  = "iron" | "diamond" | "miss" | "celebrate";
 
 interface Villager  { x:number; y:number; vx:number; vy:number; w:number; h:number; wanderAt:number; }
 interface OrePopup  { kind:OreKind; x:number; y:number; alpha:number; vy:number; }
@@ -94,6 +94,7 @@ class BottomVillageSim extends HTMLElement {
     this.ro.observe(document.documentElement);
     this.lastScrollY = window.scrollY;
     window.addEventListener("scroll",this.onScroll,{passive:true});
+    window.addEventListener("punchline:celebrate",this.onCelebrate);
     // ドラッグ
     this.cv.addEventListener("mousedown",  this.onDown);
     this.cv.addEventListener("touchstart", this.onTouchStart, {passive:true});
@@ -113,9 +114,19 @@ class BottomVillageSim extends HTMLElement {
     window.removeEventListener("mouseup",   this.onUp);
     window.removeEventListener("touchmove", this.onTouchMove);
     window.removeEventListener("touchend",  this.onUp);
+    window.removeEventListener("punchline:celebrate", this.onCelebrate);
   }
 
   // ─── スクロール → 採掘 ───────────────────────────────────
+  private onCelebrate = () => {
+    for (const v of this.st.villagers) {
+      v.vy = -4.5;
+      const sx = v.x - this.st.camX;
+      if (sx < -20 || sx > this.vw + 20) continue;
+      this.st.popups.push({ kind:"celebrate", x:sx+v.w/2, y:v.y-this.st.camY-4, alpha:1, vy:-1.0 });
+    }
+  };
+
   private onScroll = () => {
     const cur = window.scrollY;
     this.st.scrollAccum += Math.abs(cur - this.lastScrollY);
@@ -345,7 +356,7 @@ class BottomVillageSim extends HTMLElement {
     if(!this.ctx) return;
     for(const p of this.st.popups){
       this.ctx.globalAlpha = Math.max(0,p.alpha);
-      const emoji = p.kind==="diamond"?"💎":p.kind==="iron"?"🪨":"💨";
+      const emoji = p.kind==="diamond"?"💎":p.kind==="iron"?"🪨":p.kind==="celebrate"?"🎉":"💨";
       const label = p.kind==="miss"?`${emoji} ハズレ`:`+1 ${emoji}`;
       this.ctx.font="bold 13px system-ui";
       this.ctx.textAlign="center";

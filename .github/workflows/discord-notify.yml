@@ -1,0 +1,62 @@
+name: "Discord Notify on New Post"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/content/blog/**.md"
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect new posts
+        id: detect
+        run: |
+          # 前のコミットから追加されたブログ記事を検出
+          NEW_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'src/content/blog/*.md' | grep -v 'test\.md' || true)
+          echo "new_files=$NEW_FILES" >> $GITHUB_OUTPUT
+
+          if [ -z "$NEW_FILES" ]; then
+            echo "has_new=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          echo "has_new=true" >> $GITHUB_OUTPUT
+
+          # 最初の新規ファイルのfrontmatterを取得
+          FILE=$(echo "$NEW_FILES" | head -1)
+          TITLE=$(grep '^title:' "$FILE" | head -1 | sed 's/^title: *//' | tr -d '"')
+          DESC=$(grep '^description:' "$FILE" | head -1 | sed 's/^description: *//' | tr -d '"')
+          DRAFT=$(grep '^draft:' "$FILE" | head -1 | sed 's/^draft: *//')
+          SLUG=$(basename "$FILE" .md)
+
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "desc=$DESC" >> $GITHUB_OUTPUT
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "draft=$DRAFT" >> $GITHUB_OUTPUT
+          echo "count=$(echo "$NEW_FILES" | wc -l | tr -d ' ')" >> $GITHUB_OUTPUT
+
+      - name: Send Discord notification
+        if: steps.detect.outputs.has_new == 'true' && steps.detect.outputs.draft != 'true'
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          TITLE="${{ steps.detect.outputs.title }}"
+          DESC="${{ steps.detect.outputs.desc }}"
+          SLUG="${{ steps.detect.outputs.slug }}"
+          COUNT="${{ steps.detect.outputs.count }}"
+          URL="https://hgsk.github.io/posts/${SLUG}/"
+
+          if [ "$COUNT" -gt 1 ]; then
+            BODY="**${COUNT}件の新しい記事**が公開されました。\n最新: **${TITLE}**\n${URL}"
+          else
+            BODY="**新しい記事**が公開されました。\n\n**${TITLE}**\n${DESC}\n${URL}"
+          fi
+
+          curl -s -X POST "$DISCORD_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\": \"📝 ${BODY}\"}"

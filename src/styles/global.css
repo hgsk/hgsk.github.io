@@ -238,7 +238,8 @@ punch-line {
   margin: 1.8em auto;
   max-width: 520px;
   padding: 0 1rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.05em;
+  font-family: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "YuMincho", "Noto Serif JP", Georgia, serif;
 }
 
 /* ── table ── */

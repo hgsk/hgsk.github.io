@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const isDev = import.meta.env.DEV;
+const posts = (await getCollection("blog"))
+  .filter((p) => isDev || !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="記事一覧">
+  <h1>記事一覧</h1>
+  <p class="post-count">{posts.length} 件</p>
+
+  <ul class="post-list">
+    {
+      posts.map((post) => (
+        <li class="post-list-item">
+          <span class="post-date">{post.data.pubDate.toLocaleDateString("ja-JP")}</span>
+          <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+          {post.data.draft && <span class="draft-badge">draft</span>}
+          {post.data.description && <p class="post-desc">{post.data.description}</p>}
+        </li>
+      ))
+    }
+  </ul>
+
+  <div class="back-link">
+    <a href="/">← トップへ</a>
+  </div>
+</BaseLayout>

@@ -3,22 +3,35 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const isDev = import.meta.env.DEV;
-const posts = (await getCollection("blog"))
+const allPosts = (await getCollection("blog"))
   .filter((p) => isDev || !p.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const recentPosts = allPosts.slice(0, 5);
+const hasMore = allPosts.length > 5;
 ---
 
 <BaseLayout title="Blog">
   <h1>Blog</h1>
-  <ul>
-    {
-      posts.map((post) => (
-        <li>
-          <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
-          {post.data.draft && <span style="opacity:0.5; font-size:0.85em;"> [draft]</span>}
-          <p>{post.data.description}</p>
-        </li>
-      ))
-    }
-  </ul>
+
+  <section>
+    <h2 class="section-heading">最近の記事</h2>
+    <ul class="post-list">
+      {
+        recentPosts.map((post) => (
+          <li class="post-list-item">
+            <span class="post-date">{post.data.pubDate.toLocaleDateString("ja-JP")}</span>
+            <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+            {post.data.draft && <span class="draft-badge">draft</span>}
+            {post.data.description && <p class="post-desc">{post.data.description}</p>}
+          </li>
+        ))
+      }
+    </ul>
+    {hasMore && (
+      <div class="more-link">
+        <a href="/posts/">全 {allPosts.length} 件の記事を見る →</a>
+      </div>
+    )}
+  </section>
 </BaseLayout>

@@ -4,22 +4,61 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const isDev = import.meta.env.DEV;
-  const posts = (await getCollection("blog")).filter((p) => isDev || !p.data.draft);
-  return posts.map((post) => ({
+  const posts = (await getCollection("blog"))
+    .filter((p) => isDev || !p.data.draft)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  return posts.map((post, index) => ({
     params: { slug: post.slug },
-    props: post
+    props: {
+      post,
+      prev: posts[index + 1] ?? null,
+      next: posts[index - 1] ?? null,
+    },
   }));
 }
 
-const post = Astro.props;
+const { post, prev, next } = Astro.props;
 const { Content } = await render(post);
 ---
 
 <BaseLayout title={post.data.title}>
   <article class="post-content">
-    {post.data.draft && <p style="background:#ff0;color:#333;padding:0.4rem 0.8rem;border-radius:4px;font-size:0.85em;">⚠️ 下書き — 公開されていません</p>}
+    {post.data.draft && (
+      <p style="background:#ff0;color:#333;padding:0.4rem 0.8rem;border-radius:4px;font-size:0.85em;">
+        ⚠️ 下書き — 公開されていません
+      </p>
+    )}
     <h1>{post.data.title}</h1>
-    <p class="post-meta">{post.data.pubDate.toLocaleDateString("ja-JP")}</p>
+    <p class="post-meta">
+      {post.data.pubDate.toLocaleDateString("ja-JP")}
+      {post.data.updatedDate && post.data.updatedDate.valueOf() !== post.data.pubDate.valueOf() && (
+        <span>（更新: {post.data.updatedDate.toLocaleDateString("ja-JP")}）</span>
+      )}
+    </p>
+
     <Content />
   </article>
+
+  <nav class="post-nav">
+    <div class="post-nav-prev">
+      {prev ? (
+        <a href={`/posts/${prev.slug}/`}>
+          <span class="post-nav-label">← 前の記事</span>
+          <span class="post-nav-title">{prev.data.title}</span>
+        </a>
+      ) : <span />}
+    </div>
+    <div class="post-nav-index">
+      <a href="/posts/">一覧</a>
+    </div>
+    <div class="post-nav-next">
+      {next ? (
+        <a href={`/posts/${next.slug}/`}>
+          <span class="post-nav-label">次の記事 →</span>
+          <span class="post-nav-title">{next.data.title}</span>
+        </a>
+      ) : <span />}
+    </div>
+  </nav>
 </BaseLayout>

@@ -3,7 +3,8 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const isDev = import.meta.env.DEV;
+  const posts = (await getCollection("blog")).filter((p) => isDev || !p.data.draft);
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post
@@ -16,6 +17,7 @@ const { Content } = await render(post);
 
 <BaseLayout title={post.data.title}>
   <article class="post-content">
+    {post.data.draft && <p style="background:#ff0;color:#333;padding:0.4rem 0.8rem;border-radius:4px;font-size:0.85em;">⚠️ 下書き — 公開されていません</p>}
     <h1>{post.data.title}</h1>
     <p class="post-meta">{post.data.pubDate.toLocaleDateString("ja-JP")}</p>
     <Content />

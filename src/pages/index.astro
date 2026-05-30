@@ -2,9 +2,10 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const isDev = import.meta.env.DEV;
+const posts = (await getCollection("blog"))
+  .filter((p) => isDev || !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <BaseLayout title="Blog">
@@ -14,6 +15,7 @@ const posts = (await getCollection("blog")).sort(
       posts.map((post) => (
         <li>
           <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+          {post.data.draft && <span style="opacity:0.5; font-size:0.85em;"> [draft]</span>}
           <p>{post.data.description}</p>
         </li>
       ))

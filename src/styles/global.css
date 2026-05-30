@@ -228,6 +228,19 @@ a {
   text-decoration: underline;
 }
 
+/* ── punch-line ── */
+punch-line {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin: 1.8em auto;
+  max-width: 520px;
+  padding: 0 1rem;
+  letter-spacing: 0.01em;
+}
+
 /* ── table ── */
 .post-content .table-wrap {
   overflow-x: auto;

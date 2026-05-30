@@ -2,9 +2,12 @@
 title: 08. C#によるHTTPサーバーの構築
 description: ASP.NET Core最小APIでhealthとechoを実装
 pubDate: 2026-04-21
+updatedDate: 2026-05-30
 ---
 
 ## プロジェクト作成
+
+*最小構成のASP.NET Coreプロジェクトを生成します。余分なファイルは一切含まれません。*
 
 ```bash
 dotnet new web -n HttpServerSample
@@ -12,6 +15,8 @@ cd HttpServerSample
 ```
 
 ## Program.cs
+
+*2つのエンドポイントを実装します。`/health` は死活確認用、`/echo` は入力の検証を兼ねた動作確認用です。*
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
@@ -33,6 +38,8 @@ app.Run("http://0.0.0.0:5000");
 ```
 
 ## 動作確認
+
+*curlで各エンドポイントをたたき、期待したレスポンスが返ることを確認します。*
 
 ```bash
 dotnet run

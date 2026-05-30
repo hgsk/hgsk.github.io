@@ -2,9 +2,12 @@
 title: 09. C#によるWebSocketサーバーの構築
 description: ASP.NET Coreで双方向エコーWebSocketを実装
 pubDate: 2026-04-21
+updatedDate: 2026-05-30
 ---
 
 ## Program.cs
+
+*WebSocketのアップグレードを受け付け、受信したテキストをそのままエコーするサーバーを実装します。*
 
 ```csharp
 using System.Net.WebSockets;
@@ -45,6 +48,8 @@ app.Run("http://0.0.0.0:5001");
 ```
 
 ## 動作確認
+
+*wscatで実際に接続し、双方向通信が成立していることを確認します。*
 
 ```bash
 dotnet run

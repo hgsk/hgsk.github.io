@@ -2,13 +2,18 @@
 title: 07. TCP上のRPCによるP2Pエコー
 description: C#で最小RPCプロトコルを作りP2Pでエコー応答する
 pubDate: 2026-04-21
+updatedDate: 2026-05-30
 ---
 
 ## 目標
 
+*フレームワークに頼らず、TCP上に最小限のRPCを自力で実装します。プロトコルが何をしているかを理解するための単元です。*
+
 JSON 1行を1メッセージとして扱う簡易RPCを作り、Peer間でエコーします。
 
 ## サーバー側（Peer A）
+
+*接続を待ち受け、受信したJSONをデシリアライズしてエコーを返します。*
 
 ```csharp
 using System.Net;
@@ -40,6 +45,8 @@ record EchoRequest(string method, string message);
 
 ## クライアント側（Peer B）
 
+*サーバーに接続し、JSONメッセージを1行送信してレスポンスを受け取ります。*
+
 ```csharp
 using System.Net.Sockets;
 using System.Text;
@@ -56,6 +63,8 @@ Console.WriteLine(line);
 ```
 
 ## 実装ポイント
+
+*このコードをそのまま本番に持ち込む前に、最低限ここだけは対処しておいてください。*
 
 - 区切りは改行（フレーミング簡易化）
 - `ReadLineAsync` のタイムアウトを設定

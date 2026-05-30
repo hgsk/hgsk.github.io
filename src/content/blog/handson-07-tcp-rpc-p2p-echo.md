@@ -5,13 +5,13 @@ pubDate: 2026-04-21
 updatedDate: 2026-05-30
 ---
 
-## 目標
+## 実装目標
 
 *フレームワークに頼らず、TCP上に<punch-line>最小限のRPC</punch-line>を自力で実装します。プロトコルが何をしているかを理解するための単元です。*
 
 JSON 1行を1メッセージとして扱う簡易RPCを作り、Peer間でエコーします。
 
-## サーバー側（Peer A）
+## サーバー実装（Peer A）
 
 *接続を待ち受け、受信したJSONを<punch-line>デシリアライズしてエコーを返します。</punch-line>*
 
@@ -43,7 +43,7 @@ while (true)
 record EchoRequest(string method, string message);
 ```
 
-## クライアント側（Peer B）
+## クライアント実装（Peer B）
 
 *サーバーに接続し、JSONメッセージを1行送信してレスポンスを受け取ります。*
 
@@ -62,7 +62,7 @@ var line = await reader.ReadLineAsync();
 Console.WriteLine(line);
 ```
 
-## 実装ポイント
+## 実装注意点
 
 *このコードをそのまま本番に持ち込む前に、<punch-line>最低限ここだけは対処</punch-line>しておいてください。*
 

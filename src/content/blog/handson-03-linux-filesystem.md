@@ -5,7 +5,7 @@ pubDate: 2026-04-21
 updatedDate: 2026-05-30
 ---
 
-## 実行コマンド
+## 実行コマンド一覧
 
 *Linux のディレクトリ構造と権限の実態を、<punch-line>自分の目で確かめます。</punch-line>*
 
@@ -19,7 +19,7 @@ stat /etc/hosts
 mount | head
 ```
 
-## 読み取りポイント
+## 出力解読指針
 
 *それぞれのコマンドが<punch-line>「何のために存在するか」</punch-line>を対応づけます。*
 

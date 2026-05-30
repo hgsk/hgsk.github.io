@@ -53,7 +53,7 @@ public class EchoServiceImpl : EchoService.EchoServiceBase
 }
 ```
 
-## `Program.cs` への登録
+## DIコンテナ登録
 
 *DI コンテナにサービスを登録し、<punch-line>ルーティングを有効</punch-line>にします。*
 

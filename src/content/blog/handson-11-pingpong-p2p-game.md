@@ -23,7 +23,7 @@ public record BallState(float X, float Y, float Vx, float Vy);
 public record GameState(int Frame, float PaddleA, float PaddleB, BallState Ball, int ScoreA, int ScoreB);
 ```
 
-## 固定Tickゲームループ（60fps）
+## 固定Tickゲームループ
 
 *フレームレートを固定し、毎フレームの処理を<punch-line>一定の順序で実行</punch-line>します。遅延は Task.Delay で吸収します。*
 

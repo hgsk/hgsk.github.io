@@ -5,7 +5,7 @@ pubDate: 2026-04-21
 updatedDate: 2026-05-30
 ---
 
-## 実行コマンド
+## 実行コマンド一覧
 
 *「このマシンは<punch-line>どこと繋がっているか</punch-line>」を、ネットワーク層ごとに確認します。*
 
@@ -18,7 +18,7 @@ nslookup example.com
 traceroute example.com
 ```
 
-## 読み取りポイント
+## 出力解読指針
 
 *各コマンドの出力が示す<punch-line>ネットワーク構造の意味</punch-line>を押さえます。*
 

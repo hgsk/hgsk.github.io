@@ -7,7 +7,7 @@ updatedDate: 2026-05-30
 
 ## Program.cs
 
-*WebSocketのアップグレードを受け付け、受信したテキストをそのままエコーするサーバーを実装します。*
+*WebSocket のアップグレードを受け付け、受信したテキストをそのままエコーする<punch-line>最小のサーバー</punch-line>を実装します。*
 
 ```csharp
 using System.Net.WebSockets;
@@ -49,7 +49,7 @@ app.Run("http://0.0.0.0:5001");
 
 ## 動作確認
 
-*wscatで実際に接続し、双方向通信が成立していることを確認します。*
+*wscat で実際に接続し、<punch-line>双方向通信が成立していること</punch-line>を確認します。*
 
 ```bash
 dotnet run

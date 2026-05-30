@@ -7,14 +7,14 @@ updatedDate: 2026-05-30
 
 ## 目標
 
-*本環境を用意することが、以降の全単元の前提となります。ここを省くと何も動きません。*
+*本環境を用意することが、<punch-line>以降の全単元の前提</punch-line>となります。ここを省くと何も動きません。*
 
 - Linux検証用コンテナを作る
 - 2台のコンテナを起動できる状態にする
 
 ## 手順
 
-*Dockerfileを書き、イメージをビルドし、コンテナを2つ起動します。*
+*Dockerfile を書き、イメージをビルドし、<punch-line>コンテナを2つ起動</punch-line>します。*
 
 ```bash
 mkdir linux-net-handson && cd linux-net-handson
@@ -42,7 +42,7 @@ docker run --rm -it --name linux-lab-2 linux-lab
 
 ## 確認
 
-*2台が同時に稼働していることを、一目で確認します。*
+*2台が<punch-line>同時に稼働していること</punch-line>を、一目で確認します。*
 
 ```bash
 docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"

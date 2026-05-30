@@ -7,7 +7,7 @@ updatedDate: 2026-05-30
 
 ## プロジェクト作成
 
-*最小構成のASP.NET Coreプロジェクトを生成します。余分なファイルは一切含まれません。*
+*最小構成の ASP.NET Core プロジェクトを生成します。<punch-line>余分なファイルは一切含まれません。</punch-line>*
 
 ```bash
 dotnet new web -n HttpServerSample
@@ -16,7 +16,7 @@ cd HttpServerSample
 
 ## Program.cs
 
-*2つのエンドポイントを実装します。`/health` は死活確認用、`/echo` は入力の検証を兼ねた動作確認用です。*
+*2つのエンドポイントを実装します。`/health` は<punch-line>死活確認用、</punch-line>`/echo` は入力の検証を兼ねた動作確認用です。*
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
@@ -39,7 +39,7 @@ app.Run("http://0.0.0.0:5000");
 
 ## 動作確認
 
-*curlで各エンドポイントをたたき、期待したレスポンスが返ることを確認します。*
+*curl で各エンドポイントをたたき、<punch-line>期待したレスポンスが返ること</punch-line>を確認します。*
 
 ```bash
 dotnet run

@@ -7,7 +7,7 @@ updatedDate: 2026-05-30
 
 ## プロジェクト作成
 
-*gRPCテンプレートからプロジェクトを生成します。`.proto` ファイルからコードが自動生成される仕組みを確認します。*
+*gRPC テンプレートからプロジェクトを生成します。`.proto` ファイルから<punch-line>コードが自動生成される仕組み</punch-line>を確認します。*
 
 ```bash
 dotnet new grpc -n GrpcServerSample
@@ -16,7 +16,7 @@ cd GrpcServerSample
 
 ## `Protos/echo.proto`
 
-*サービスの契約をIDLで定義します。ここが型安全性の出発点です。*
+*サービスの契約を IDL で定義します。<punch-line>ここが型安全性の出発点</punch-line>です。*
 
 ```proto
 syntax = "proto3";
@@ -39,7 +39,7 @@ message EchoReply {
 
 ## サービス実装
 
-*自動生成された基底クラスを継承し、RPC本体のロジックを実装します。*
+*自動生成された基底クラスを継承し、<punch-line>RPC本体のロジック</punch-line>を実装します。*
 
 ```csharp
 using Grpc.Core;
@@ -55,7 +55,7 @@ public class EchoServiceImpl : EchoService.EchoServiceBase
 
 ## `Program.cs` への登録
 
-*DIコンテナにサービスを登録し、ルーティングを有効にします。*
+*DI コンテナにサービスを登録し、<punch-line>ルーティングを有効</punch-line>にします。*
 
 ```csharp
 builder.Services.AddGrpc();
@@ -67,7 +67,7 @@ app.Run();
 
 ## 動作確認
 
-*grpcurlでRPCを直接呼び出し、レスポンスを確認します。*
+*grpcurl で RPC を直接呼び出し、<punch-line>レスポンスを確認</punch-line>します。*
 
 ```bash
 grpcurl -plaintext -d '{"message":"hello"}' localhost:5000 echo.EchoService/Echo

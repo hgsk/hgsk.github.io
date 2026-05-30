@@ -13,7 +13,7 @@ const PROB_DIAMOND = 0.04;         // ダイヤ確率
 const STORAGE_KEY  = "hytlog-mine-storage";
 
 type TileType = "sky" | "grass" | "dirt" | "stone";
-type OreKind  = "iron" | "diamond";
+type OreKind  = "iron" | "diamond" | "miss";
 
 interface Villager {
   x: number; y: number;
@@ -148,16 +148,18 @@ class BottomVillageSim extends HTMLElement {
     if (r < PROB_DIAMOND)      found = "diamond";
     else if (r < PROB_DIAMOND + PROB_IRON) found = "iron";
 
-    if (!found) return;
+    const px = randomRange(this.width * 0.2, this.width * 0.8);
+    const groundRow = this.state.heights[clamp(Math.floor(px / TILE_SIZE), 0, this.state.columns - 1)];
+    const py = groundRow * TILE_SIZE - 20;
+
+    if (!found) {
+      this.state.popups.push({ kind: "miss", x: px, y: py, alpha: 0.7, vy: -0.3 });
+      return;
+    }
 
     this.state.storage[found]++;
     saveStorage(this.state.storage);
     this.state.mineFlash = 400;
-
-    // ポップアップをランダム位置に追加
-    const px = randomRange(this.width * 0.2, this.width * 0.8);
-    const groundRow = this.state.heights[clamp(Math.floor(px / TILE_SIZE), 0, this.state.columns - 1)];
-    const py = groundRow * TILE_SIZE - 20;
     this.state.popups.push({ kind: found, x: px, y: py, alpha: 1, vy: -0.6 });
   }
 
@@ -299,10 +301,11 @@ class BottomVillageSim extends HTMLElement {
     if (!this.context) return;
     for (const p of this.state.popups) {
       this.context.globalAlpha = Math.max(0, p.alpha);
-      const emoji = p.kind === "diamond" ? "💎" : "🪨";
+      const emoji = p.kind === "diamond" ? "💎" : p.kind === "iron" ? "🪨" : "💨";
       this.context.font = "14px system-ui";
       this.context.textAlign = "center";
-      this.context.fillText(`+1 ${emoji}`, p.x, p.y);
+      const label = p.kind === "miss" ? `${emoji} ハズレ` : `+1 ${emoji}`;
+      this.context.fillText(label, p.x, p.y);
     }
     this.context.globalAlpha = 1;
   }

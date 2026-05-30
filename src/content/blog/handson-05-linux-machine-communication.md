@@ -1,5 +1,5 @@
 ---
-title: 05. Linuxマシン同士の通信
+title: 05. コンテナ間通信実験
 description: 同一Dockerネットワーク上での疎通とパケット観察
 pubDate: 2026-04-21
 updatedDate: 2026-05-30

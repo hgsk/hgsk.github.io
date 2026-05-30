@@ -1,5 +1,5 @@
 ---
-title: ツールファーストとLLM哲学
+title: 決定論的ツール設計とLLM百科事典仮説
 description: OpenClawでカレンダー・タスクを自作ツール化する理由と、トークン効率・LLMの本質についての考え方
 pubDate: 2026-05-30
 updatedDate: 2026-05-30

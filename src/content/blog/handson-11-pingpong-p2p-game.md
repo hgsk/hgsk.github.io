@@ -1,5 +1,5 @@
 ---
-title: 11. Ping PongのリアルタイムP2P通信対戦ゲームの製作
+title: 11. リアルタイムP2P対戦実装
 description: 入力同期型のP2P対戦ゲームを段階的に実装する
 pubDate: 2026-04-21
 updatedDate: 2026-05-30

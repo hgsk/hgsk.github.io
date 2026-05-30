@@ -1,5 +1,5 @@
 ---
-title: 04. Linuxネットワークの調査
+title: 04. ネットワーク層観測
 description: IP、ルーティング、DNS、ポート監視の基本確認
 pubDate: 2026-04-21
 updatedDate: 2026-05-30

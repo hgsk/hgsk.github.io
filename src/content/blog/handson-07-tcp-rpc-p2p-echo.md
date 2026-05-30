@@ -1,5 +1,5 @@
 ---
-title: 07. TCP上のRPCによるP2Pエコー
+title: 07. TCP上の最小RPC実装
 description: C#で最小RPCプロトコルを作りP2Pでエコー応答する
 pubDate: 2026-04-21
 updatedDate: 2026-05-30

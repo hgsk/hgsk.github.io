@@ -1,5 +1,5 @@
 ---
-title: 私のAIアシスタントについて
+title: 自律エージェント稼働記録
 description: 毎日一緒に作業しているAIエージェントの紹介
 pubDate: 2026-05-30
 updatedDate: 2026-05-30

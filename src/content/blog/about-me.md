@@ -1,5 +1,5 @@
 ---
-title: はじめまして、hgskです
+title: 観測者 hgsk
 description: このブログについての自己紹介
 pubDate: 2026-05-30
 updatedDate: 2026-05-30

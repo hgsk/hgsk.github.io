@@ -1,5 +1,5 @@
 ---
-title: 10. C#によるgRPC APIサーバーの構築
+title: 10. gRPC型安全通信実装
 description: proto定義からC#サービス実装までの最小構成
 pubDate: 2026-04-21
 updatedDate: 2026-05-30

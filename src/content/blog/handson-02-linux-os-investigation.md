@@ -1,5 +1,5 @@
 ---
-title: 02. 基礎的なLinuxコマンドによるOSの調査
+title: 02. OS内部構造観測
 description: カーネル、ディストリ、CPU・メモリ・ディスクを確認する
 pubDate: 2026-04-21
 updatedDate: 2026-05-30

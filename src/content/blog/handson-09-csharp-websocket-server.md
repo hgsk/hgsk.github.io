@@ -57,3 +57,7 @@ npx wscat -c ws://localhost:5001/ws
 ```
 
 送信した文字列に `echo:` が付いて返れば成功です。
+
+---
+
+*文責: hyt*

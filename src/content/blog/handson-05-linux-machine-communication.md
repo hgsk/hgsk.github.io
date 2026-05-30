@@ -38,3 +38,7 @@ ping -c 4 <linux-lab-1のIP>
 ```bash
 tcpdump -i any icmp
 ```
+
+---
+
+*文責: hyt*

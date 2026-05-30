@@ -69,3 +69,7 @@ Console.WriteLine(line);
 - 区切りは改行（フレーミング簡易化）
 - `ReadLineAsync` のタイムアウトを設定
 - 例外時に `TcpClient` を確実に破棄
+
+---
+
+*文責: hyt*

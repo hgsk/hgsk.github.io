@@ -26,3 +26,7 @@ traceroute example.com
 - `ip route`: デフォルトゲートウェイ
 - `ss -tulpen`: LISTENポートとPID
 - `resolv.conf`: DNSサーバー設定
+
+---
+
+*文責: hyt*

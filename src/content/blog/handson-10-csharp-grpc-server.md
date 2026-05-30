@@ -72,3 +72,7 @@ app.Run();
 ```bash
 grpcurl -plaintext -d '{"message":"hello"}' localhost:5000 echo.EchoService/Echo
 ```
+
+---
+
+*文責: hyt*

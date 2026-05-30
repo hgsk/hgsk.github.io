@@ -18,3 +18,7 @@ updatedDate: 2026-04-21
 9. [C#によるWebSocketサーバーの構築](/posts/handson-09-csharp-websocket-server/)
 10. [C#によるgRPC APIサーバーの構築](/posts/handson-10-csharp-grpc-server/)
 11. [Ping PongのリアルタイムP2P通信対戦ゲームの製作](/posts/handson-11-pingpong-p2p-game/)
+
+---
+
+*文責: hyt*

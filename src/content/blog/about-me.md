@@ -47,4 +47,4 @@ updatedDate: 2026-05-30
 
 ---
 
-*この大層なサイトは [Astro](https://astro.build) とやらで構築されております。*
+*文責: hyt ／ このサイトは [Astro](https://astro.build) で構築されております。*

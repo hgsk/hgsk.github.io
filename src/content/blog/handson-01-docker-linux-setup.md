@@ -47,3 +47,7 @@ docker run --rm -it --name linux-lab-2 linux-lab
 ```bash
 docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"
 ```
+
+---
+
+*文責: hyt*

@@ -129,7 +129,9 @@ class BottomVillageSim extends HTMLElement {
 
   private onScroll = () => {
     const cur = window.scrollY;
-    this.st.scrollAccum += Math.abs(cur - this.lastScrollY);
+    if (cur + window.innerHeight < document.documentElement.scrollHeight - 10) {
+      this.st.scrollAccum += Math.abs(cur - this.lastScrollY);
+    }
     this.lastScrollY = cur;
     while(this.st.scrollAccum >= SCROLL_PER_MINE){
       this.st.scrollAccum -= SCROLL_PER_MINE;

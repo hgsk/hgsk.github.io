@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の税制対応・車両トータルコストシミュレーター</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        /* スライダーの見た目カスタマイズ */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            background: #e2e8f0;
+            height: 6px;
+            border-radius: 9999px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: -5px;
+            background-color: #3b82f6;
+            height: 16px;
+            width: 16px;
+            border-radius: 9999px;
+            transition: transform 0.1s;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+    <!-- ヘッダー -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <div class="bg-brand-600 text-white p-2 rounded-xl shadow-md shadow-brand-500/20">
+                    <i data-lucide="landmark" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-slate-900 leading-tight">日本の税制対応 クルマ費用シミュレーター</h1>
+                    <p class="text-xs text-slate-500">補助金・エコカー減税・13年重課・ガソリンvs電気代を完全網羅</p>
+                </div>
+            </div>
+            <div class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full hidden sm:block">
+                日本の令和税制・補助金準拠
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- 左側：設定・入力エリア（5/12） -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- 基本走行条件・税制設定 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-6">
+                    <div class="flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="sliders" class="w-5 h-5 text-brand-600"></i>
+                        <h2 class="text-base font-bold text-slate-900">1. 共通条件と燃料単価の設定</h2>
+                    </div>
+                    
+                    <!-- 年間走行距離スライダー -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <label for="annualDistance" class="text-xs font-bold text-slate-600">年間走行距離</label>
+                            <div class="flex items-center gap-1">
+                                <input type="number" id="annualDistanceNum" value="10000" min="500" max="100000" step="500" oninput="syncInputs('annualDistance', this.value)" class="w-20 px-2 py-0.5 border border-slate-200 rounded text-right text-xs font-bold text-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-500">
+                                <span class="text-xs text-slate-500 font-medium">km</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-[10px] text-slate-400 font-medium">500</span>
+                            <input type="range" id="annualDistance" value="10000" min="500" max="40000" step="500" oninput="syncInputs('annualDistanceNum', this.value)" class="w-full">
+                            <span class="text-[10px] text-slate-400 font-medium">40,000</span>
+                        </div>
+                    </div>
+
+                    <!-- 想定所有年数スライダー -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <label for="ownershipYears" class="text-xs font-bold text-slate-600">想定所有年数</label>
+                            <div class="flex items-center gap-1">
+                                <input type="number" id="ownershipYearsNum" value="10" min="1" max="20" step="1" oninput="syncInputs('ownershipYears', this.value)" class="w-12 px-2 py-0.5 border border-slate-200 rounded text-right text-xs font-bold text-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-500">
+                                <span class="text-xs text-slate-500 font-medium">年</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-[10px] text-slate-400 font-medium">1年</span>
+                            <input type="range" id="ownershipYears" value="10" min="1" max="20" step="1" oninput="syncInputs('ownershipYearsNum', this.value)" class="w-full">
+                            <span class="text-[10px] text-slate-400 font-medium">20年</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-medium flex items-center gap-1">
+                            <i data-lucide="info" class="w-3.5 h-3.5 text-brand-500"></i>
+                            13年を超えると、日本の税制ルール（ガソリン車の自動車税・重量税増税）が自動適用されます。
+                        </p>
+                    </div>
+
+                    <!-- 燃料単価の設定 -->
+                    <div class="pt-2 border-t border-slate-100">
+                        <span class="block text-xs font-bold text-slate-600 mb-3">燃料・エネルギー単価設定 (円)</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                            <div class="bg-slate-50 p-2 rounded-xl border border-slate-100">
+                                <label class="block text-[10px] text-slate-400 mb-0.5">レギュラー</label>
+                                <div class="flex items-center gap-0.5">
+                                    <input type="number" id="priceRegular" value="170" class="w-full bg-transparent font-bold text-xs text-slate-800 focus:outline-none">
+                                    <span class="text-[10px] text-slate-400">/L</span>
+                                </div>
+                            </div>
+                            <div class="bg-slate-50 p-2 rounded-xl border border-slate-100">
+                                <label class="block text-[10px] text-slate-400 mb-0.5">ハイオク</label>
+                                <div class="flex items-center gap-0.5">
+                                    <input type="number" id="priceHighOctane" value="180" class="w-full bg-transparent font-bold text-xs text-slate-800 focus:outline-none">
+                                    <span class="text-[10px] text-slate-400">/L</span>
+                                </div>
+                            </div>
+                            <div class="bg-slate-50 p-2 rounded-xl border border-slate-100">
+                                <label class="block text-[10px] text-slate-400 mb-0.5">軽油</label>
+                                <div class="flex items-center gap-0.5">
+                                    <input type="number" id="priceDiesel" value="150" class="w-full bg-transparent font-bold text-xs text-slate-800 focus:outline-none">
+                                    <span class="text-[10px] text-slate-400">/L</span>
+                                </div>
+                            </div>
+                            <div class="bg-slate-50 p-2 rounded-xl border border-slate-100">
+                                <label class="block text-[10px] text-slate-400 mb-0.5">電気(EV)</label>
+                                <div class="flex items-center gap-0.5">
+                                    <input type="number" id="priceElectricity" value="31" class="w-full bg-transparent font-bold text-xs text-slate-800 focus:outline-none">
+                                    <span class="text-[10px] text-slate-400">/kWh</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 比較車両の編集リスト -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="car" class="w-5 h-5 text-brand-600"></i>
+                            <h2 class="text-base font-bold text-slate-900">2. 比較車両の税制・スペック</h2>
+                        </div>
+                    </div>
+
+                    <!-- 車両カードが挿入されるエリア -->
+                    <div id="vehiclesContainer" class="space-y-4">
+                        <!-- 動的に車両入力フォームが生成されます -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右側：結果・グラフ表示エリア（7/12） -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <!-- トータルコスト推移グラフ -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="trending-up" class="w-5 h-5 text-brand-600"></i>
+                            <h2 class="text-base font-bold text-slate-900">累積トータルコストの推移</h2>
+                        </div>
+                        <span class="text-xs text-slate-400">本体 ＋ 諸税 ＋ 燃料代 ＋ 任意維持費 - 補助金</span>
+                    </div>
+                    
+                    <div class="relative w-full h-[320px]">
+                        <canvas id="costChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- 損益分岐点・元が取れるかの分析 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+                    <div class="flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="award" class="w-5 h-5 text-emerald-600"></i>
+                        <h2 class="text-base font-bold text-slate-900">日本の税制を反映した損益分岐分析</h2>
+                    </div>
+
+                    <!-- 損益分岐比較のセレクト -->
+                    <div class="flex flex-wrap items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 text-sm">
+                        <span class="text-slate-500 font-medium">初期費用の高い</span>
+                        <select id="vehicleHigh" onchange="calculateBreakEven()" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-800 focus:outline-none focus:ring-1 focus:ring-brand-500"></select>
+                        <span class="text-slate-500 font-medium">と、安くて維持費・税金の劣る</span>
+                        <select id="vehicleLow" onchange="calculateBreakEven()" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-800 focus:outline-none focus:ring-1 focus:ring-brand-500"></select>
+                        <span class="text-slate-500 font-medium">を比較</span>
+                    </div>
+
+                    <div id="breakEvenResult" class="p-5 rounded-xl transition-all">
+                        <!-- 結果がJavaScriptで書き換えられます -->
+                    </div>
+                </div>
+
+                <!-- 車両別の詳細内訳テーブル -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+                    <div class="flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="table" class="w-5 h-5 text-slate-600"></i>
+                        <h2 class="text-base font-bold text-slate-900">期間累計コストの内訳（税金・補助金詳細）</h2>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm text-slate-500 min-w-[600px]">
+                            <thead class="text-xs text-slate-400 uppercase bg-slate-50 rounded-lg">
+                                <tr>
+                                    <th scope="col" class="px-4 py-3 rounded-l-lg">正式車両区分</th>
+                                    <th scope="col" class="px-4 py-3">初期費用(実質)</th>
+                                    <th scope="col" class="px-4 py-3">毎年の燃料代</th>
+                                    <th scope="col" class="px-4 py-3">毎年の自動車諸税</th>
+                                    <th scope="col" class="px-4 py-3 rounded-r-lg font-bold text-brand-600 text-right"><span id="tableHeaderYears">10</span>年合計コスト</th>
+                                </tr>
+                            </thead>
+                            <tbody id="costTableBody" class="divide-y divide-slate-100 text-xs">
+                                <!-- JSで動的生成 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 日本の自動車税制豆知識 -->
+                <div class="bg-slate-100 p-5 rounded-2xl border border-slate-200/60 space-y-3">
+                    <div class="flex items-center gap-2 text-slate-800 font-bold text-sm">
+                        <i data-lucide="help-circle" class="w-4.5 h-4.5 text-brand-600"></i>
+                        <span>日本の自動車に関する税制のポイント</span>
+                    </div>
+                    <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside leading-relaxed">
+                        <li><strong class="text-slate-800">エコカー減税とグリーン化特例：</strong>EV（電気自動車）や一部の低排出ガス適合車は、自動車税の翌年度軽減（概ね75%）や自動車重量税の免税（初回・2回目の車検時まで）が適用されます。</li>
+                        <li><strong class="text-slate-800">13年経過での重課税：</strong>新車登録から13年（ガソリン車・軽ガソリン車）を超えると、自動車税が約15%（軽は約20%）、重量税が約20%〜39%も増税になります。ただし、<span class="text-emerald-600 font-bold">EV車やハイブリッド車（HEV）は重課の対象外</span>です。</li>
+                        <li><strong class="text-slate-800">CEV補助金：</strong>EV車には国や自治体から手厚い「クリーンエネルギー自動車導入促進補助金」が支払われ、実質的な初期費用を数十万円単位で抑えられます。</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <p class="text-sm">日本の税制対応・車両トータルコストシミュレーター</p>
+            <p class="text-xs text-slate-500">※本シミュレーションの計算結果は目安です。自動車税制は年度改正や地方自治体独自の追加減税などにより詳細が異なる場合があります。燃料費はカタログ値ではなくご指定の実燃費（実質電費）をもとに算出します。</p>
+        </div>
+    </footer>
+
+    <!-- JS ロジック -->
+    <script>
+        // 日本の税制に基づいた初期5車種のパラメータ
+        let vehicles = [
+            {
+                id: "v1",
+                name: "軽ガソリン車",
+                fullName: "軽自動車（ガソリン車）",
+                price: 150, // 万円
+                efficiency: 18.0, // km/L
+                fuelType: "regular",
+                maintenance: 5, // 万円/年 (保険、点検整備、消耗品など)
+                subsidy: 0, // 補助金なし
+                taxCategory: "kei-gas", // 税制計算用
+                color: "#e11d48" // ローズ/レッド
+            },
+            {
+                id: "v2",
+                name: "軽EV車",
+                fullName: "軽自動車（電気自動車）",
+                price: 240, // 万円
+                efficiency: 8.0, // km/kWh
+                fuelType: "electricity",
+                maintenance: 4, // 万円/年 (オイル交換不要・パッド消耗少)
+                subsidy: 55, // CEV補助金想定（万円）
+                taxCategory: "kei-ev",
+                color: "#10b981" // エメラルド
+            },
+            {
+                id: "v3",
+                name: "乗用車EV車",
+                fullName: "登録車（電気自動車）",
+                price: 450, // 万円
+                efficiency: 6.5, // km/kWh
+                fuelType: "electricity",
+                maintenance: 5, // 万円/年 (車体が大きいが消耗パーツは少ない)
+                subsidy: 85, // CEV補助金想定（万円）
+                taxCategory: "ev",
+                color: "#2563eb" // ブルー
+            },
+            {
+                id: "v4",
+                name: "乗用車ガソリン車",
+                fullName: "登録車（ガソリン車）",
+                price: 220, // 万円 (コンパクト〜ミドルクラス 1500cc想定)
+                efficiency: 15.0, // km/L
+                fuelType: "regular",
+                maintenance: 6, // 万円/年
+                subsidy: 0, // 補助金なし
+                taxCategory: "gas-1500",
+                color: "#d97706" // アンバー
+            },
+            {
+                id: "v5",
+                name: "乗用車ハイブリッド車",
+                fullName: "登録車（ハイブリッド自動車）",
+                price: 275, // 万円 (コンパクト〜ミドルクラス HEV)
+                efficiency: 27.5, // km/L
+                fuelType: "regular",
+                maintenance: 5, // 万円/年
+                subsidy: 0,
+                taxCategory: "hev-1500",
+                color: "#8b5cf6" // パープル
+            }
+        ];
+
+        let chart = null;
+
+        // ドキュメント読み込み完了時の処理
+        window.onload = function() {
+            lucide.createIcons();
+            
+            // 共通入力設定へのイベントリスナー設定
+            const unitInputs = ['priceRegular', 'priceHighOctane', 'priceDiesel', 'priceElectricity'];
+            unitInputs.forEach(id => {
+                document.getElementById(id).addEventListener('input', updateSimulation);
+            });
+
+            renderVehicleCards();
+            updateSimulation();
+        };
+
+        // スライダーとテキストボックスを双方向に同期させるヘルパー関数
+        function syncInputs(targetId, val) {
+            const numVal = parseFloat(val);
+            document.getElementById(targetId).value = val;
+            
+            if (targetId.startsWith('annualDistance')) {
+                document.getElementById('annualDistance').value = numVal;
+                document.getElementById('annualDistanceNum').value = numVal;
+            } else if (targetId.startsWith('ownershipYears')) {
+                document.getElementById('ownershipYears').value = numVal;
+                document.getElementById('ownershipYearsNum').value = numVal;
+            }
+            updateSimulation();
+        }
+
+        // 車両個別のスライダーと数値ボックスの同期用
+        function syncVehicleInput(id, field, value) {
+            const textInput = document.getElementById(`${field}Num-${id}`);
+            const rangeInput = document.getElementById(`${field}Range-${id}`);
+            if (textInput) textInput.value = value;
+            if (rangeInput) rangeInput.value = value;
+
+            updateVehicleData(id, field, parseFloat(value));
+        }
+
+        // 燃料消費の単位
+        function getEfficiencyUnit(type) {
+            return type === 'electricity' ? 'km/kWh' : 'km/L';
+        }
+
+        // 車両カードのレンダリング
+        function renderVehicleCards() {
+            const container = document.getElementById('vehiclesContainer');
+            container.innerHTML = '';
+
+            vehicles.forEach((v) => {
+                const card = document.createElement('div');
+                card.className = `bg-white p-5 rounded-xl border-l-4 border-slate-200 shadow-sm space-y-4 relative transition-all duration-200 hover:shadow-md`;
+                card.style.borderLeftColor = v.color;
+
+                card.innerHTML = `
+                    <!-- カードヘッダー -->
+                    <div class="flex flex-col border-b border-slate-100 pb-2.5">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full" style="background-color: ${v.color}"></span>
+                            <span class="text-xs text-slate-400 font-bold bg-slate-100 px-2 py-0.5 rounded-full">${v.fullName}</span>
+                        </div>
+                        <div class="text-sm font-bold text-slate-800 mt-1 pl-5">
+                            ${v.name}
+                        </div>
+                    </div>
+
+                    <!-- パラメータ入力（スライダー付き） -->
+                    <div class="space-y-3.5 text-xs">
+                        
+                        <!-- 車両購入価格 -->
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between items-center">
+                                <label class="text-slate-500 font-semibold">車両購入価格 (税込・メーカー希望価格)</label>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="priceNum-${v.id}" value="${v.price}" step="5" min="50" max="1500" oninput="syncVehicleInput('${v.id}', 'price', this.value)" class="w-16 px-1.5 py-0.5 border border-slate-200 rounded text-right font-bold text-slate-800 focus:outline-none focus:ring-1 focus:ring-brand-500">
+                                    <span class="text-slate-400 font-bold">万円</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-[9px] text-slate-400">50万</span>
+                                <input type="range" id="priceRange-${v.id}" value="${v.price}" min="50" max="1000" step="5" oninput="syncVehicleInput('${v.id}', 'price', this.value)" class="w-full">
+                                <span class="text-[9px] text-slate-400">1000万</span>
+                            </div>
+                        </div>
+
+                        <!-- 補助金設定（EV系のみ表示、ガソリン等は0固定） -->
+                        ${v.fuelType === 'electricity' ? `
+                        <div class="space-y-1.5 bg-emerald-50/50 p-2.5 rounded-lg border border-emerald-100/60">
+                            <div class="flex justify-between items-center">
+                                <label class="text-emerald-700 font-bold flex items-center gap-1">
+                                    <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+                                    CEV補助金（国＋自治体の合計想定）
+                                </label>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="subsidyNum-${v.id}" value="${v.subsidy}" step="5" min="0" max="200" oninput="syncVehicleInput('${v.id}', 'subsidy', this.value)" class="w-14 px-1.5 py-0.5 border border-emerald-200 bg-white rounded text-right font-bold text-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-500">
+                                    <span class="text-emerald-600 font-bold">万円</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-[9px] text-emerald-400">0万</span>
+                                <input type="range" id="subsidyRange-${v.id}" value="${v.subsidy}" min="0" max="150" step="5" oninput="syncVehicleInput('${v.id}', 'subsidy', this.value)" class="w-full accent-emerald-500">
+                                <span class="text-[9px] text-emerald-400">150万</span>
+                            </div>
+                        </div>
+                        ` : ''}
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- 燃料の種類 (表示固定) -->
+                            <div>
+                                <label class="block text-slate-400 mb-1">燃料区分</label>
+                                <span class="block px-2.5 py-1.5 bg-slate-100 rounded-lg font-bold text-slate-700 border border-slate-200">
+                                    ${v.fuelType === 'regular' ? 'レギュラー' : '電気 (EV)'}
+                                </span>
+                            </div>
+
+                            <!-- 実燃費・電費 -->
+                            <div class="space-y-1">
+                                <div class="flex justify-between items-center">
+                                    <label class="text-slate-500 font-semibold">実走行 燃費/電費</label>
+                                    <div class="flex items-center gap-1">
+                                        <input type="number" id="efficiencyNum-${v.id}" value="${v.efficiency}" step="0.5" min="1" max="50" oninput="syncVehicleInput('${v.id}', 'efficiency', this.value)" class="w-12 px-1.5 py-0.5 border border-slate-200 rounded text-right font-bold text-slate-800 focus:outline-none focus:ring-1 focus:ring-brand-500">
+                                        <span class="text-[10px] text-slate-400 font-bold">${getEfficiencyUnit(v.fuelType)}</span>
+                                    </div>
+                                </div>
+                                <input type="range" id="efficiencyRange-${v.id}" value="${v.efficiency}" min="${v.fuelType === 'electricity' ? 3 : 8}" max="${v.fuelType === 'electricity' ? 12 : 40}" step="0.5" oninput="syncVehicleInput('${v.id}', 'efficiency', this.value)" class="w-full">
+                            </div>
+                        </div>
+
+                        <!-- 他維持費 -->
+                        <div class="space-y-1.5 pt-1.5 border-t border-slate-50">
+                            <div class="flex justify-between items-center">
+                                <label class="text-slate-500 font-semibold">他維持費 (車検整備・任意保険・消耗品)</label>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="maintenanceNum-${v.id}" value="${v.maintenance}" step="1" min="0" max="50" oninput="syncVehicleInput('${v.id}', 'maintenance', this.value)" class="w-12 px-1.5 py-0.5 border border-slate-200 rounded text-right font-bold text-slate-800 focus:outline-none focus:ring-1 focus:ring-brand-500">
+                                    <span class="text-slate-400">万円/年</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-[9px] text-slate-400">0万</span>
+                                <input type="range" id="maintenanceRange-${v.id}" value="${v.maintenance}" min="0" max="30" step="1" oninput="syncVehicleInput('${v.id}', 'maintenance', this.value)" class="w-full">
+                                <span class="text-[9px] text-slate-400">30万</span>
+                            </div>
+                        </div>
+
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            lucide.createIcons();
+            updateSelectOptions();
+        }
+
+        // 車両データのリアルタイムアップデート
+        function updateVehicleData(id, field, value) {
+            const index = vehicles.findIndex(v => v.id === id);
+            if (index !== -1) {
+                vehicles[index][field] = value;
+                updateSimulation();
+            }
+        }
+
+        // 損益分岐点比較用のセレクトボックス更新
+        function updateSelectOptions() {
+            const selHigh = document.getElementById('vehicleHigh');
+            const selLow = document.getElementById('vehicleLow');
+            
+            const prevHighVal = selHigh.value;
+            const prevLowVal = selLow.value;
+
+            selHigh.innerHTML = '';
+            selLow.innerHTML = '';
+
+            // 車両リストを価格順にソートして、高額車・低額車の候補にしやすくする
+            const sortedVehicles = [...vehicles].sort((a, b) => b.price - a.price);
+
+            sortedVehicles.forEach(v => {
+                const optH = document.createElement('option');
+                optH.value = v.id;
+                optH.text = `${v.name} (${v.price}万円)`;
+                selHigh.appendChild(optH);
+
+                const optL = document.createElement('option');
+                optL.value = v.id;
+                optL.text = `${v.name} (${v.price}万円)`;
+                selLow.appendChild(optL);
+            });
+
+            // 以前の選択を復元するか、適当な初期値をセット
+            if (sortedVehicles.length >= 2) {
+                selHigh.value = prevHighVal && vehicles.some(v => v.id === prevHighVal) ? prevHighVal : sortedVehicles[0].id;
+                selLow.value = prevLowVal && vehicles.some(v => v.id === prevLowVal) && prevLowVal !== selHigh.value ? prevLowVal : sortedVehicles[sortedVehicles.length - 1].id;
+            }
+        }
+
+        // 設定の取得
+        function getFuelPrice(type) {
+            switch(type) {
+                case 'regular': return parseFloat(document.getElementById('priceRegular').value) || 0;
+                case 'premium': return parseFloat(document.getElementById('priceHighOctane').value) || 0;
+                case 'diesel': return parseFloat(document.getElementById('priceDiesel').value) || 0;
+                case 'electricity': return parseFloat(document.getElementById('priceElectricity').value) || 0;
+                default: return 0;
+            }
+        }
+
+        // 日本の自動車諸税を計算する関数 (年次ごとに計算)
+        function calculateJapaneseTaxes(taxCategory, year) {
+            let carTax = 0; // 自動車税・軽自動車税(種別割)
+            let weightTax = 0; // 重量税(年換算)
+
+            // 1. 自動車税 / 軽自動車税（種別割）
+            switch(taxCategory) {
+                case 'kei-gas': // 軽自動車ガソリン車
+                    carTax = 10800;
+                    if (year > 13) carTax = 12900; // 13年超重課 約20%増
+                    break;
+                case 'kei-ev': // 軽自動車EV
+                    if (year === 2) {
+                        carTax = 2700; // グリーン化特例75%軽減
+                    } else {
+                        carTax = 10800; // EVは13年超重課対象外
+                    }
+                    break;
+                case 'ev': // 普通EV（登録車、1000cc以下相当で一番安い自動車税）
+                    if (year === 2) {
+                        carTax = 6500; // グリーン化特例 概ね75%軽減 (標準6500円)
+                    } else {
+                        carTax = 25000; // 2019年10月以降新規登録は標準25,000円
+                    }
+                    // EVは13年超重課対象外
+                    break;
+                case 'gas-1500': // 普通ガソリン車 (コンパクト1500cc以下想定)
+                    carTax = 30500;
+                    if (year > 13) carTax = 35000; // 13年超重課 概ね15%増 (30,500 * 1.15)
+                    break;
+                case 'hev-1500': // 普通HV (コンパクト1500cc以下、エコカー)
+                    carTax = 30500; // HVは現在自動車税軽減対象外
+                    // HEVは13年超重課対象外
+                    break;
+            }
+
+            // 2. 自動車重量税 (年換算コスト)
+            // 新車3年免税、その後車検2年ごとに支払い。これらを毎年に平滑化して年換算した実質費用。
+            switch(taxCategory) {
+                case 'kei-gas': // 軽自動車ガソリン（エコカー本則: 3,300円/年）
+                    weightTax = 3300;
+                    if (year > 13) weightTax = 4100; // 13年超重課
+                    if (year > 18) weightTax = 4400; // 18年超重課
+                    break;
+                case 'kei-ev': // 軽自動車EV（エコカー減税 新車・初回免税）
+                    if (year <= 5) {
+                        weightTax = 0; // 新車時3年・初回車検2年(計5年)は完全免税
+                    } else {
+                        weightTax = 3300; // 6年目以降は本則
+                    }
+                    break;
+                case 'ev': // 普通EV (車重2.0t以下想定、エコカー本則: 10,000円/年)
+                    if (year <= 5) {
+                        weightTax = 0; // 新車時3年・初回車検2年完全免税
+                    } else {
+                        weightTax = 10000;
+                    }
+                    break;
+                case 'gas-1500': // 普通ガソリン（エコカー未達成を想定。一般基準重量税: 約1.5t以下で 12,300円/年）
+                    weightTax = 12300;
+                    if (year > 13) weightTax = 17100; // 13年超
+                    if (year > 18) weightTax = 18900; // 18年超
+                    break;
+                case 'hev-1500': // 普通HV (車重1.5t以下エコカー本則: 7,500円/年、新車のみ免税)
+                    if (year <= 3) {
+                        weightTax = 0; // 新車購入時3年免税
+                    } else {
+                        weightTax = 7500; // 4年目以降通常
+                    }
+                    break;
+            }
+
+            return {
+                carTax: carTax / 10000, // 万円換算
+                weightTax: weightTax / 10000, // 万円換算
+                totalAnnualTax: (carTax + weightTax) / 10000
+            };
+        }
+
+        // 初期購入時の税金「環境性能割」（新車取得時の一時課税）
+        function calculateInitialAcquisitionTax(taxCategory, price) {
+            // 課税標準額（およそ本体価格の90%）
+            const taxableValue = price * 0.9;
+            let rate = 0;
+
+            switch(taxCategory) {
+                case 'kei-gas': // 軽ガソリン：約1%
+                    rate = 0.01;
+                    break;
+                case 'kei-ev': // 軽EV：非課税
+                case 'ev':     // 普通EV：非課税
+                    rate = 0.00;
+                    break;
+                case 'gas-1500': // 普通ガソリン：燃費等によるが標準約2%
+                    rate = 0.02;
+                    break;
+                case 'hev-1500': // 普通HV：燃費等による。最新HVは非課税または約0.5%
+                    rate = 0.005;
+                    break;
+            }
+            return taxableValue * rate; // 万円
+        }
+
+        // シミュレーション計算
+        function calculateSimulationData() {
+            const annualDistance = parseFloat(document.getElementById('annualDistance').value) || 0;
+            const ownershipYears = parseInt(document.getElementById('ownershipYears').value) || 10;
+
+            const results = vehicles.map(v => {
+                const fuelPrice = getFuelPrice(v.fuelType);
+                
+                // 1. 年間燃料・電気代
+                let annualFuelCost = 0;
+                if (v.efficiency > 0) {
+                    annualFuelCost = (annualDistance / v.efficiency) * fuelPrice;
+                }
+                
+                // 2. 初期実質コスト（購入価格 ＋ 環境性能割 - 補助金）
+                const initialAcquisitionTax = calculateInitialAcquisitionTax(v.taxCategory, v.price);
+                const initialCost = v.price + initialAcquisitionTax - v.subsidy;
+
+                // 3. 各年ごとの累積トータルコスト(万円)を追跡
+                const yearlyCosts = [];
+                // 0年目（購入時点）
+                yearlyCosts.push(initialCost);
+
+                let accumulatedFuel = 0;
+                let accumulatedMaintenance = 0;
+                let accumulatedTax = 0;
+
+                for (let year = 1; year <= ownershipYears; year++) {
+                    accumulatedFuel += (annualFuelCost / 10000); // 万円換算
+                    accumulatedMaintenance += v.maintenance;
+                    
+                    // 各年ごとの自動車税・重量税（グリーン化特例・13年重課を考慮）
+                    const taxInfo = calculateJapaneseTaxes(v.taxCategory, year);
+                    accumulatedTax += taxInfo.totalAnnualTax;
+
+                    const totalCostYen = initialCost + accumulatedFuel + accumulatedMaintenance + accumulatedTax;
+                    yearlyCosts.push(totalCostYen);
+                }
+
+                // 代表的な「毎年の自動車諸税」の平均（簡易表示用）
+                let sampleTaxSum = 0;
+                for (let year = 1; year <= ownershipYears; year++) {
+                    sampleTaxSum += calculateJapaneseTaxes(v.taxCategory, year).totalAnnualTax;
+                }
+                const averageAnnualTax = sampleTaxSum / ownershipYears;
+
+                return {
+                    ...v,
+                    initialAcquisitionTax: initialAcquisitionTax,
+                    initialCost: initialCost,
+                    annualFuelCost: annualFuelCost,
+                    averageAnnualTax: averageAnnualTax,
+                    yearlyCosts: yearlyCosts
+                };
+            });
+
+            return results;
+        }
+
+        // シミュレーター全体の更新
+        function updateSimulation() {
+            const results = calculateSimulationData();
+            const ownershipYears = parseInt(document.getElementById('ownershipYears').value) || 10;
+            
+            // テーブルヘッダーの年数を更新
+            document.getElementById('tableHeaderYears').innerText = ownershipYears;
+
+            // 1. グラフの更新
+            updateChart(results, ownershipYears);
+
+            // 2. 詳細テーブルの更新
+            updateTable(results, ownershipYears);
+
+            // 3. 損益分岐点の更新
+            calculateBreakEven(results);
+        }
+
+        // グラフ描画
+        function updateChart(results, maxYears) {
+            const ctx = document.getElementById('costChart').getContext('2d');
+            
+            const labels = ['購入時'];
+            for (let i = 1; i <= maxYears; i++) {
+                labels.push(`${i}年目`);
+            }
+
+            const datasets = results.map(r => {
+                return {
+                    label: r.name,
+                    data: r.yearlyCosts,
+                    borderColor: r.color,
+                    backgroundColor: r.color + '15',
+                    borderWidth: 3,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    tension: 0.1
+                };
+            });
+
+            if (chart) {
+                chart.destroy();
+            }
+
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    family: 'Noto Sans JP',
+                                    size: 11
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += Math.round(context.parsed.y).toFixed(0) + ' 万円';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: '累積コスト (万円)',
+                                font: {
+                                    family: 'Noto Sans JP',
+                                    size: 11
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    family: 'Noto Sans JP'
+                                }
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                font: {
+                                    family: 'Noto Sans JP'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 詳細テーブルの更新
+        function updateTable(results, maxYears) {
+            const tbody = document.getElementById('costTableBody');
+            tbody.innerHTML = '';
+
+            results.forEach(r => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-slate-100 hover:bg-slate-50/50 transition-colors';
+
+                const totalCost = r.yearlyCosts[maxYears];
+
+                // 補助金や取得税の内訳文字列
+                let initialDetailStr = `本体: ${r.price}万`;
+                if (r.initialAcquisitionTax > 0) {
+                    initialDetailStr += ` + 環境割: ${r.initialAcquisitionTax.toFixed(1)}万`;
+                }
+                if (r.subsidy > 0) {
+                    initialDetailStr += ` - 補助金: ${r.subsidy}万`;
+                }
+
+                tr.innerHTML = `
+                    <td class="px-4 py-3.5 font-bold text-slate-800 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full inline-block flex-shrink-0" style="background-color: ${r.color}"></span>
+                        <div>
+                            <span class="block">${r.fullName}</span>
+                            <span class="text-[10px] text-slate-400 font-normal">(${r.name})</span>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3.5 font-medium text-slate-600">
+                        <span class="font-bold text-slate-800">${Math.round(r.initialCost).toLocaleString()} 万円</span>
+                        <div class="text-[10px] text-slate-400 font-normal">${initialDetailStr}</div>
+                    </td>
+                    <td class="px-4 py-3.5 font-medium text-slate-600">
+                        ${Math.round(r.annualFuelCost / 10000).toLocaleString()} 万円/年
+                        <div class="text-[10px] text-slate-400">月換算: 約 ${Math.round(r.annualFuelCost / 12).toLocaleString()} 円</div>
+                    </td>
+                    <td class="px-4 py-3.5 font-medium text-slate-600">
+                        ${Math.round(r.averageAnnualTax * 10000).toLocaleString()} 円/年
+                        <div class="text-[10px] text-slate-400">自動車税＋重量税(年換算)</div>
+                    </td>
+                    <td class="px-4 py-3.5 text-right font-bold text-slate-900 text-sm">
+                        ${Math.round(totalCost).toLocaleString()} 万円
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // 損益分岐点（元が取れるか）の計算
+        function calculateBreakEven(passedResults) {
+            const results = passedResults || calculateSimulationData();
+            const idHigh = document.getElementById('vehicleHigh').value;
+            const idLow = document.getElementById('vehicleLow').value;
+
+            const vHigh = results.find(v => v.id === idHigh);
+            const vLow = results.find(v => v.id === idLow);
+            const resultDiv = document.getElementById('breakEvenResult');
+
+            if (!vHigh || !vLow) {
+                resultDiv.innerHTML = '<div class="text-center text-slate-400 py-4">分析対象の車両を選択してください。</div>';
+                return;
+            }
+
+            if (idHigh === idLow) {
+                resultDiv.className = "p-5 rounded-xl border border-dashed border-slate-200 bg-slate-50 text-center";
+                resultDiv.innerHTML = `
+                    <div class="flex flex-col items-center justify-center gap-1.5 text-slate-500 py-2">
+                        <i data-lucide="info" class="w-5 h-5 text-slate-400"></i>
+                        <span class="text-sm font-bold">同じ車両が選択されています</span>
+                        <span class="text-xs">異なる区分同士を選択してトータルコストを比較してみましょう。</span>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            // A車(初期実質高・維持費安) vs B車(初期実質安・維持費高) に整理
+            let expensiveCar, cheaperCar;
+            if (vHigh.initialCost > vLow.initialCost) {
+                expensiveCar = vHigh;
+                cheaperCar = vLow;
+            } else {
+                expensiveCar = vLow;
+                cheaperCar = vHigh;
+            }
+
+            const initialDiff = expensiveCar.initialCost - cheaperCar.initialCost; // 初期実質差額 (万円)
+
+            // 年数ごとの累積コストの差を算出して、いつ交差するか特定する
+            const ownershipYears = parseInt(document.getElementById('ownershipYears').value) || 10;
+            let breakEvenYear = -1;
+
+            for (let year = 1; year <= ownershipYears; year++) {
+                const costExpensive = expensiveCar.yearlyCosts[year];
+                const costCheaper = cheaperCar.yearlyCosts[year];
+                if (costExpensive < costCheaper) {
+                    // 交差した！ (逆転した)
+                    breakEvenYear = year;
+                    break;
+                }
+            }
+
+            if (breakEvenYear === -1) {
+                // 最後まで交差しなかった
+                // 1年あたりの平均的な維持費節約度を計算してみる
+                const finalExpensiveCost = expensiveCar.yearlyCosts[ownershipYears];
+                const finalCheaperCost = cheaperCar.yearlyCosts[ownershipYears];
+
+                if (finalExpensiveCost >= finalCheaperCost) {
+                    // 初期費用が高い車が、設定年数内では最後まで高いままだった
+                    resultDiv.className = "p-5 rounded-xl border border-amber-100 bg-amber-50/30 space-y-3";
+                    resultDiv.innerHTML = `
+                        <div class="flex items-start gap-3">
+                            <div class="bg-amber-500 text-white p-1.5 rounded-lg mt-0.5 shadow-sm">
+                                <i data-lucide="help-circle" class="w-4.5 h-4.5"></i>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-sm font-bold text-slate-900">
+                                    設定した所有期間（${ownershipYears}年）内では、初期費用差額を回収できません
+                                </p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    実質初期価格が <span class="font-bold text-slate-800">${initialDiff.toFixed(1)}万円</span> 高い <span class="font-bold text-indigo-600">${expensiveCar.name}</span> は、
+                                    燃費・電費や税金などの毎年の維持費が安くなりますが、設定された期間（${ownershipYears}年）内では元を回収しきれず、
+                                    トータルコストは初期費用の安い <span class="font-bold text-emerald-600">${cheaperCar.name}</span> の方がお得です。
+                                </p>
+                                <p class="text-[10px] text-slate-400 mt-1">💡 所有期間をさらに長く設定するか、年間走行距離を多め（例: 15,000km以上など）にスライドすると、税金や燃料代の削減効果が大きくなり、早くに元が取れるようになります。</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // 理論上おかしいが、最初から安い方がお得
+                    resultDiv.className = "p-5 rounded-xl border border-rose-100 bg-rose-50/50 space-y-2";
+                    resultDiv.innerHTML = `
+                        <div class="flex items-start gap-3">
+                            <div class="bg-rose-500 text-white p-1.5 rounded-lg mt-0.5 shadow-sm">
+                                <i data-lucide="x-circle" class="w-4.5 h-4.5"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-900">コストが逆転することはありません</p>
+                                <p class="text-xs text-slate-600 mt-1">
+                                    <span class="font-bold text-rose-600">${expensiveCar.name}</span> は初期費用も高く、毎年の税金・燃料代も <span class="font-bold text-emerald-600">${cheaperCar.name}</span> より高いため、トータルコストで有利になるタイミングはありません。
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                }
+            } else {
+                // 逆転（交差）があった場合
+                const annualDistance = parseFloat(document.getElementById('annualDistance').value) || 0;
+                const breakEvenDistance = breakEvenYear * annualDistance;
+
+                resultDiv.className = "p-5 rounded-xl border border-emerald-100 bg-emerald-50/50 space-y-3";
+                resultDiv.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <div class="bg-emerald-500 text-white p-1.5 rounded-lg mt-0.5 shadow-sm">
+                            <i data-lucide="sparkles" class="w-4.5 h-4.5"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm font-bold text-slate-900">
+                                約 <span class="text-emerald-600 text-lg font-black">${breakEvenYear}</span> 年目で初期費用差額を完全回収！
+                            </p>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                実質的な初期購入価格の差 <span class="font-semibold text-slate-800">${initialDiff.toFixed(1)}万円</span> を、
+                                優遇税制（エコカー減税や自動車税減税）および電気代・燃料代の節約メリットによってカバーし、
+                                購入から <span class="font-bold text-emerald-600">${breakEvenYear}年目</span> 
+                                (累計走行距離: 約 <span class="font-bold text-slate-800">${Math.round(breakEvenDistance).toLocaleString()}km</span>) 
+                                を過ぎた時点で、トータルコストは維持費の安い <span class="font-bold text-emerald-600">${expensiveCar.name}</span> の方がおトクになります。
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

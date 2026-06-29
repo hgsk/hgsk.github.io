@@ -1,117 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECS Memory Simulation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/lucide-react@0.263.1/dist/umd/lucide-react.min.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #111827; color: white; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        .box { background: #1f2937; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #374151; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { padding: 20px; border-radius: 8px; }
+        .oop { border-left: 5px solid #ef4444; background: #1f2937; }
+        .ecs { border-left: 5px solid #3b82f6; background: #1f2937; }
+        input { width: 100%; margin-top: 5px; }
+        button { padding: 10px 20px; cursor: pointer; border: none; border-radius: 4px; font-weight: bold; }
+        .btn-start { background: #2563eb; color: white; }
+        .btn-reset { background: #4b5563; color: white; }
+    </style>
 </head>
 <body>
-    <div id="root"></div>
+    <div class="container">
+        <div class="box">
+            <h2>設定</h2>
+            <label>Object数: <span id="val1">16</span></label><input type="range" id="rng1" min="16" max="1024" value="16">
+            <label>Component数: <span id="val2">4</span></label><input type="range" id="rng2" min="2" max="8" value="4">
+            <div style="margin-top:15px;">
+                <button class="btn-start" id="startBtn">スタート</button>
+                <button class="btn-reset" id="resetBtn">リセット</button>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="card oop">
+                <h3>従来 (AoS)</h3>
+                <div id="oopProg" style="font-size: 2em; font-weight: bold;">0 / 16</div>
+                <p>無駄な読込: <span id="oopWaste" style="color:#ef4444; font-weight:bold;">0</span></p>
+            </div>
+            <div class="card ecs">
+                <h3>次世代 (SoA/ECS)</h3>
+                <div id="ecsProg" style="font-size: 2em; font-weight: bold;">0 / 16</div>
+                <p>無駄な読込: <span style="color:#3b82f6; font-weight:bold;">0</span></p>
+            </div>
+        </div>
+    </div>
 
-    <script type="text/babel">
-        const { useState, useEffect, useCallback } = React;
-        const { Play, Pause, RotateCcw, Info, Settings } = lucide;
+    <script>
+        let oop = 0, ecs = 0, running = false, timer = null;
+        const startBtn = document.getElementById('startBtn');
+        const resetBtn = document.getElementById('resetBtn');
 
-        function App() {
-            const [numEntities, setNumEntities] = useState(16);
-            const [numComponents, setNumComponents] = useState(4);
-            const [cacheLineSize, setCacheLineSize] = useState(4);
-            const [isPlaying, setIsPlaying] = useState(false);
+        function update() {
+            const max = parseInt(document.getElementById('rng1').value);
+            const comp = parseInt(document.getElementById('rng2').value);
             
-            const [oopState, setOopState] = useState({ processed: 0, completed: false });
-            const [ecsState, setEcsState] = useState({ processed: 0, completed: false });
+            if (oop < max) oop++;
+            if (ecs < max) ecs += 4;
+            if (ecs > max) ecs = max;
 
-            const reset = useCallback(() => {
-                setIsPlaying(false);
-                setOopState({ processed: 0, completed: false });
-                setEcsState({ processed: 0, completed: false });
-            }, []);
+            document.getElementById('oopProg').innerText = `${oop} / ${max}`;
+            document.getElementById('oopWaste').innerText = (comp - 2) * oop;
+            document.getElementById('ecsProg').innerText = `${ecs} / ${max}`;
 
-            useEffect(() => reset(), [numEntities, numComponents, cacheLineSize, reset]);
-
-            useEffect(() => {
-                let timer;
-                if (isPlaying && (!oopState.completed || !ecsState.completed)) {
-                    timer = setInterval(() => {
-                        setOopState(prev => {
-                            const next = prev.processed + 1;
-                            return { processed: next, completed: next >= numEntities };
-                        });
-                        setEcsState(prev => {
-                            const next = Math.min(prev.processed + cacheLineSize, numEntities);
-                            return { processed: next, completed: next >= numEntities };
-                        });
-                    }, 100);
-                }
-                return () => clearTimeout(timer);
-            }, [isPlaying, oopState.completed, ecsState.completed, numEntities, cacheLineSize]);
-
-            return (
-                <div className="min-h-screen bg-gray-900 text-gray-100 p-6 font-sans">
-                    <div className="max-w-4xl mx-auto space-y-6">
-                        <div className="bg-gray-800 p-6 rounded-xl border border-gray-700">
-                            <h2 className="text-xl font-bold mb-4 flex items-center"><Settings className="mr-2" /> シミュレーション設定</h2>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                                <div>
-                                    <label className="block text-sm text-gray-400">オブジェクト数: {numEntities}</label>
-                                    <input type="range" min="16" max="1024" step="16" value={numEntities} onChange={(e) => setNumEntities(Number(e.target.value))} className="w-full" />
-                                </div>
-                                <div>
-                                    <label className="block text-sm text-gray-400">コンポーネント数: {numComponents}</label>
-                                    <input type="range" min="2" max="8" value={numComponents} onChange={(e) => setNumComponents(Number(e.target.value))} className="w-full" />
-                                </div>
-                                <div>
-                                    <label className="block text-sm text-gray-400">キャッシュライン: {cacheLineSize}</label>
-                                    <input type="range" min="1" max="16" value={cacheLineSize} onChange={(e) => setCacheLineSize(Number(e.target.value))} className="w-full" />
-                                </div>
-                            </div>
-                            <div className="mt-6 flex gap-4">
-                                <button onClick={() => setIsPlaying(!isPlaying)} className="px-6 py-2 bg-blue-600 rounded hover:bg-blue-500 font-bold">
-                                    {isPlaying ? <Pause /> : <Play />}
-                                </button>
-                                <button onClick={reset} className="px-6 py-2 bg-gray-700 rounded hover:bg-gray-600"><RotateCcw /></button>
-                            </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
-                                <h3 className="font-bold text-red-400">従来 (AoS)</h3>
-                                <div className="text-4xl font-mono my-4">{oopState.processed} / {numEntities}</div>
-                                <div className="text-sm text-gray-400">
-                                    無駄なデータ読み込み: <span className="text-red-500 font-bold">{(numComponents - 2) * oopState.processed}個</span>
-                                </div>
-                            </div>
-
-                            <div className="bg-gray-800 p-6 rounded-xl border-l-4 border-blue-500">
-                                <h3 className="font-bold text-blue-400">次世代 (SoA/ECS)</h3>
-                                <div className="text-4xl font-mono my-4">{ecsState.processed} / {numEntities}</div>
-                                <div className="text-sm text-gray-400">
-                                    無駄なデータ読み込み: <span className="text-blue-500 font-bold">0個</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 text-sm">
-                            <h3 className="font-bold mb-2 flex items-center"><Info className="mr-2" />解説</h3>
-                            <p>
-                                コンポーネント数（フィールド数）を増やすと、OOPでは読み込むたびにスキップされる不要なデータが指数関数的に増え、キャッシュが汚染されます。
-                                ECSではコンポーネントの種類が増えても、必要なデータ配列にのみアクセスするため、このオーバーヘッドは発生しません。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            );
+            if (oop >= max && ecs >= max) clearInterval(timer);
         }
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
+        startBtn.onclick = () => {
+            if (running) { clearInterval(timer); running = false; startBtn.innerText = "再開"; }
+            else { timer = setInterval(update, 50); running = true; startBtn.innerText = "一時停止"; }
+        };
+        resetBtn.onclick = () => { 
+            clearInterval(timer); oop = 0; ecs = 0; running = false; 
+            document.getElementById('oopProg').innerText = "0 / " + document.getElementById('rng1').value;
+            document.getElementById('oopWaste').innerText = 0;
+            document.getElementById('ecsProg').innerText = "0 / " + document.getElementById('rng1').value;
+            startBtn.innerText = "スタート";
+        };
+        document.getElementById('rng1').oninput = (e) => { document.getElementById('val1').innerText = e.target.value; resetBtn.onclick(); };
+        document.getElementById('rng2').oninput = (e) => { document.getElementById('val2').innerText = e.target.value; resetBtn.onclick(); };
     </script>
 </body>
 </html>
-

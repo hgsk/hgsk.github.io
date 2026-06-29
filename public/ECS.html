@@ -4,77 +4,32 @@
     <meta charset="UTF-8">
     <title>ECS Memory Simulation</title>
     <style>
-        body { font-family: sans-serif; background: #111827; color: white; padding: 20px; }
-        .container { max-width: 800px; margin: auto; }
+        body { font-family: sans-serif; background: #111827; color: #e5e7eb; padding: 20px; }
+        .container { max-width: 900px; margin: auto; }
         .box { background: #1f2937; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #374151; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .card { padding: 20px; border-radius: 8px; }
-        .oop { border-left: 5px solid #ef4444; background: #1f2937; }
-        .ecs { border-left: 5px solid #3b82f6; background: #1f2937; }
-        input { width: 100%; margin-top: 5px; }
-        button { padding: 10px 20px; cursor: pointer; border: none; border-radius: 4px; font-weight: bold; }
-        .btn-start { background: #2563eb; color: white; }
-        .btn-reset { background: #4b5563; color: white; }
+        .visualizer { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; min-height: 100px; background: #000; padding: 10px; border-radius: 4px; }
+        .block { width: 16px; height: 16px; border: 1px solid #444; }
+        .used { background: #3b82f6; } /* 有効なデータ */
+        .wasted { background: #ef4444; } /* 無駄なデータ */
+        button { padding: 10px 20px; cursor: pointer; border: none; border-radius: 4px; font-weight: bold; background: #2563eb; color: white; }
     </style>
 </head>
 <body>
     <div class="container">
+        <h1>ECS メモリ最適化シミュレーション</h1>
         <div class="box">
-            <h2>設定</h2>
-            <label>Object数: <span id="val1">16</span></label><input type="range" id="rng1" min="16" max="1024" value="16">
-            <label>Component数: <span id="val2">4</span></label><input type="range" id="rng2" min="2" max="8" value="4">
-            <div style="margin-top:15px;">
-                <button class="btn-start" id="startBtn">スタート</button>
-                <button class="btn-reset" id="resetBtn">リセット</button>
-            </div>
+            <label>Object数: <input type="range" id="rngNum" min="16" max="256" value="64"></label>
+            <button id="startBtn">スタート</button>
+            <button id="resetBtn" style="background:#4b5563;">リセット</button>
         </div>
+
         <div class="grid">
-            <div class="card oop">
-                <h3>従来 (AoS)</h3>
-                <div id="oopProg" style="font-size: 2em; font-weight: bold;">0 / 16</div>
-                <p>無駄な読込: <span id="oopWaste" style="color:#ef4444; font-weight:bold;">0</span></p>
+            <div>
+                <h3>従来 (AoS: Objectごと)</h3>
+                <div id="oopVis" class="visualizer"></div>
+                <p>無駄な読込: <span id="oopWaste" style="color:#ef4444;">0</span></p>
             </div>
-            <div class="card ecs">
-                <h3>次世代 (SoA/ECS)</h3>
-                <div id="ecsProg" style="font-size: 2em; font-weight: bold;">0 / 16</div>
-                <p>無駄な読込: <span style="color:#3b82f6; font-weight:bold;">0</span></p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        let oop = 0, ecs = 0, running = false, timer = null;
-        const startBtn = document.getElementById('startBtn');
-        const resetBtn = document.getElementById('resetBtn');
-
-        function update() {
-            const max = parseInt(document.getElementById('rng1').value);
-            const comp = parseInt(document.getElementById('rng2').value);
-            
-            if (oop < max) oop++;
-            if (ecs < max) ecs += 4;
-            if (ecs > max) ecs = max;
-
-            document.getElementById('oopProg').innerText = `${oop} / ${max}`;
-            document.getElementById('oopWaste').innerText = (comp - 2) * oop;
-            document.getElementById('ecsProg').innerText = `${ecs} / ${max}`;
-
-            if (oop >= max && ecs >= max) clearInterval(timer);
-        }
-
-        startBtn.onclick = () => {
-            if (running) { clearInterval(timer); running = false; startBtn.innerText = "再開"; }
-            else { timer = setInterval(update, 50); running = true; startBtn.innerText = "一時停止"; }
-        };
-        resetBtn.onclick = () => { 
-            clearInterval(timer); oop = 0; ecs = 0; running = false; 
-            document.getElementById('oopProg').innerText = "0 / " + document.getElementById('rng1').value;
-            document.getElementById('oopWaste').innerText = 0;
-            document.getElementById('ecsProg').innerText = "0 / " + document.getElementById('rng1').value;
-            startBtn.innerText = "スタート";
-        };
-        document.getElementById('rng1').oninput = (e) => { document.getElementById('val1').innerText = e.target.value; resetBtn.onclick(); };
-        document.getElementById('rng2').oninput = (e) => { document.getElementById('val2').innerText = e.target.value; resetBtn.onclick(); };
-    </script>
-</body>
-</html>
+            <div>
+                <h3>次世代 (SoA: データごと)</h3>
+                <div id="ecsVis" class="visualizer"></div>

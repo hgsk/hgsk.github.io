@@ -1107,3 +1107,23 @@ label {
 .sig-item b {
   color: var(--accent);
 }
+
+/* ---------- 公開ビュー（実行モード専用の配布アプリ / Issue #38） ---------- */
+/* 編集 UI を持たない単独ページ。キャンバスだけを全画面表示する。 */
+body.qero-published {
+  overflow: hidden;
+}
+body.qero-published #app {
+  height: 100vh;
+}
+body.qero-published #main {
+  flex: 1;
+  min-height: 0;
+}
+body.qero-published #canvas-area {
+  flex: 1;
+}
+/* 公開ビューではキャンバスの操作系 HUD（ズーム等）を隠す */
+body.qero-published .canvas-hud {
+  display: none;
+}

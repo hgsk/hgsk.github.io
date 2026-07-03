@@ -309,6 +309,22 @@ label {
 .comp[data-locked="true"] {
   pointer-events: none;
 }
+/* repeated list rows: derived from data, never directly interactive */
+.list-cell {
+  position: absolute;
+}
+.list-cell .comp {
+  position: absolute;
+}
+#list-repeats {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+#list-repeats .list-cell {
+  outline: 1px dashed rgba(120, 130, 150, 0.4);
+  border-radius: 4px;
+}
 .comp .comp-text {
   width: 100%;
   height: 100%;

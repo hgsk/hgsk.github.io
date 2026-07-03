@@ -612,6 +612,19 @@ label {
   max-height: 80vh;
   overflow-y: auto;
 }
+.dialog.dialog-xl {
+  width: 90vw;
+  height: 90vh;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.dialog.dialog-xl > div {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
 .dialog h3 {
   margin-bottom: 12px;
   font-size: 14px;
@@ -760,10 +773,49 @@ label {
 }
 
 /* ---------- query editor / preview ---------- */
+.q-layout {
+  display: flex;
+  gap: 14px;
+  height: 100%;
+  min-height: 0;
+}
+.q-main {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.q-sidebar {
+  width: 220px;
+  flex: 0 0 auto;
+  overflow-y: auto;
+  border-left: 1px solid var(--border);
+  padding-left: 14px;
+}
+.q-wizard-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.q-wizard-cards button {
+  padding: 10px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  text-align: center;
+}
+.q-wizard-cards button .p-icon {
+  font-size: 18px;
+}
 .q-steps {
   margin: 10px 0;
   max-height: 50vh;
   overflow: auto;
+}
+.dialog-xl .q-steps {
+  max-height: none;
 }
 .q-step {
   background: var(--bg-panel2);
@@ -797,19 +849,28 @@ label {
 .q-field textarea {
   flex: 1;
 }
-.q-add {
-  display: flex;
-  gap: 6px;
-  margin-top: 4px;
-}
 .q-preview {
-  overflow: auto;
-  max-height: 220px;
+  position: relative;
   margin-top: 6px;
+}
+.q-preview-viewport {
+  width: 100%;
+  max-height: 220px;
+  overflow: auto;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--bg-panel2),
+    var(--bg-panel2) 8px,
+    var(--bg-panel) 8px,
+    var(--bg-panel) 16px
+  );
 }
 .q-table {
   border-collapse: collapse;
   font-size: 11px;
+  width: max-content;
+  min-width: 100%;
+  background: var(--bg-panel);
 }
 .q-table th,
 .q-table td {
@@ -824,6 +885,19 @@ label {
   background: var(--bg-panel2);
   position: sticky;
   top: 0;
+}
+.q-join-wizard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 6px 0;
+}
+.q-join-wizard .q-join-col > .d-note {
+  font-weight: 600;
+  color: var(--text);
+}
+.q-join-result {
+  margin-top: 4px;
 }
 .q-error {
   color: var(--danger);

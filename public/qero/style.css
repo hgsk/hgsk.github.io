@@ -449,6 +449,25 @@ label {
   pointer-events: all;
   cursor: grab;
 }
+.link-handle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #8a7ee8;
+  border: 1.5px solid #fff;
+  pointer-events: all;
+  cursor: crosshair;
+}
+#links-layer {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+.link-label {
+  font-size: 12px;
+}
 .canvas-hud {
   position: absolute;
   bottom: 10px;
@@ -525,6 +544,28 @@ label {
 .backlink-item {
   font-size: 12px;
   padding: 3px 8px;
+}
+.link-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 10px 6px;
+  font-size: 11px;
+}
+.link-row select {
+  flex: 0 0 auto;
+  max-width: 88px;
+}
+.link-row input[type="text"] {
+  flex: 1 1 60px;
+  min-width: 0;
+}
+.link-target {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* ---------- Timeline ---------- */

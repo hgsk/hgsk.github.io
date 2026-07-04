@@ -516,6 +516,16 @@ label {
   text-align: center;
   font-size: 12px;
 }
+.backlink-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 10px 10px;
+}
+.backlink-item {
+  font-size: 12px;
+  padding: 3px 8px;
+}
 
 /* ---------- Timeline ---------- */
 #timeline-panel {

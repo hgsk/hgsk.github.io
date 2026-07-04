@@ -556,6 +556,13 @@ label {
   flex: 0 0 auto;
   max-width: 88px;
 }
+
+/* Structure (dependency graph) panel, #31 */
+.structure-list {
+  margin-bottom: 8px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
 .link-row input[type="text"] {
   flex: 1 1 60px;
   min-width: 0;

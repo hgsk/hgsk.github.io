@@ -675,6 +675,19 @@ label {
   background: #fff;
   border-color: var(--accent);
 }
+.tl-keyframe.kf-appear {
+  background: #3fae57;
+  border-color: #2c7a3d;
+}
+.tl-keyframe.kf-disappear {
+  background: #8a8f9c;
+  border-color: #5c6070;
+}
+.tl-keyframe.kf-appear.selected,
+.tl-keyframe.kf-disappear.selected {
+  background: #fff;
+  border-color: var(--accent);
+}
 .tl-playhead {
   position: absolute;
   top: 0;

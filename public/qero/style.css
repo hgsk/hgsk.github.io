@@ -1165,6 +1165,38 @@ label {
   color: var(--text-dim);
   padding: 0 4px;
 }
+.te-schema {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 10px;
+  padding-top: 2px;
+}
+.te-schema select,
+.te-schema input[type="text"] {
+  font-size: 10px;
+  min-width: 0;
+  width: 100%;
+}
+.te-schema-chk {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.te-computed {
+  display: inline-block;
+  min-width: 90px;
+  padding: 2px 4px;
+  color: var(--text-dim);
+  font-style: italic;
+}
+.te-grid input.te-invalid {
+  outline: 1px solid #e0503c;
+  background: rgba(224, 80, 60, 0.08);
+}
 
 /* ---------- logic tab ---------- */
 .skill-kind-badge {

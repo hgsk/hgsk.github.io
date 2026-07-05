@@ -493,6 +493,19 @@ label {
 .link-label {
   font-size: 12px;
 }
+#layout-preview-layer {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+.layout-ghost {
+  position: absolute;
+  border: 1.5px dashed var(--accent);
+  border-radius: 3px;
+  background: rgba(138, 126, 232, 0.08);
+  pointer-events: none;
+}
 .canvas-hud {
   position: absolute;
   bottom: 10px;

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "plugin",
+    "id": "scoreboard.js",
+    "name": "スコアボード",
+    "description": "放送・ライブ配信向けのスコアボードコンポーネントを追加します。",
+    "file": "plugins/scoreboard.js"
+  },
+  {
+    "kind": "template",
+    "id": "signage-basic",
+    "name": "基本サイネージ",
+    "description": "見出し・本文・背景を配置したシンプルなサイネージテンプレートです。",
+    "file": "gallery/templates/signage-basic.json"
+  }
+]

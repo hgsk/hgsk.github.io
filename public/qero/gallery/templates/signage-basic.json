@@ -1,0 +1,74 @@
+{
+  "qero": 1,
+  "exportedAt": "2026-01-01T00:00:00.000Z",
+  "meta": { "name": "基本サイネージ" },
+  "components": [
+    {
+      "id": "gallery-signage-bg",
+      "type": "shape",
+      "name": "背景",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "rotation": 0,
+      "opacity": 1,
+      "scale": 1,
+      "z": 0,
+      "locked": false,
+      "props": {
+        "shape": "rect",
+        "fill": "#1c2733",
+        "stroke": "#00000000",
+        "strokeWidth": 0,
+        "radius": 0
+      }
+    },
+    {
+      "id": "gallery-signage-title",
+      "type": "text",
+      "name": "見出し",
+      "x": 120,
+      "y": 120,
+      "w": 1200,
+      "h": 160,
+      "rotation": 0,
+      "opacity": 1,
+      "scale": 1,
+      "z": 1,
+      "locked": false,
+      "props": {
+        "text": "{{見出し}}",
+        "fontSize": 72,
+        "color": "#ffffff",
+        "fontFamily": "sans-serif",
+        "bold": true,
+        "align": "left",
+        "lineHeight": 1.2
+      }
+    },
+    {
+      "id": "gallery-signage-body",
+      "type": "text",
+      "name": "本文",
+      "x": 120,
+      "y": 320,
+      "w": 1200,
+      "h": 400,
+      "rotation": 0,
+      "opacity": 1,
+      "scale": 1,
+      "z": 2,
+      "locked": false,
+      "props": {
+        "text": "{{本文}}",
+        "fontSize": 32,
+        "color": "#d8dee7",
+        "fontFamily": "sans-serif",
+        "bold": false,
+        "align": "left",
+        "lineHeight": 1.5
+      }
+    }
+  ]
+}

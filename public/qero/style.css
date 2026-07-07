@@ -341,6 +341,11 @@ label {
 .comp[data-locked="true"] {
   pointer-events: none;
 }
+/* #27: too small on screen to show real detail — flat placeholder instead of
+   a full component render (level of detail) */
+.comp.lod-mini {
+  background: rgba(140, 140, 160, 0.35);
+}
 /* repeated list rows: derived from data, never directly interactive */
 .list-cell {
   position: absolute;

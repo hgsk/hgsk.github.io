@@ -850,6 +850,32 @@ label {
   line-height: 1.5;
 }
 
+/* ---------- Project dialog (#003) ---------- */
+.project-dialog-panes {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+.project-pane {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.project-list,
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.project-pane .layer-item.legacy-row {
+  opacity: 0.6;
+  font-style: italic;
+}
+
 /* ---------- AI Chat Assistant ---------- */
 .chat-panel {
   position: fixed;

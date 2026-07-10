@@ -479,6 +479,12 @@ label {
   pointer-events: all;
   cursor: grab;
 }
+.marquee-box {
+  position: absolute;
+  border: 1px solid var(--accent);
+  background: rgba(79, 140, 255, 0.12);
+  pointer-events: none;
+}
 .link-handle {
   position: absolute;
   width: 12px;

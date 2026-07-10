@@ -815,6 +815,25 @@ label {
 .net-dot.offline {
   background: var(--warn);
 }
+/* #005: シグナリング接続中 / ICE 交渉中 — 進行中であることを示す点滅 */
+.net-dot.connecting {
+  background: var(--accent);
+  animation: net-dot-pulse 1.2s ease-in-out infinite;
+}
+/* #005: 再接続試行中 — 一度切れて再挑戦していることを明示する */
+.net-dot.retrying {
+  background: var(--danger);
+  animation: net-dot-pulse 1.2s ease-in-out infinite;
+}
+@keyframes net-dot-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
 
 /* ---------- Dialogs ---------- */
 #dialog-root:empty {
@@ -868,8 +887,21 @@ label {
   font-size: 12px;
 }
 .dialog .d-row input,
-.dialog .d-row select {
+.dialog .d-row select,
+.dialog .d-row textarea {
   flex: 1;
+}
+/* #006: ICE サーバー (STUN/TURN) JSON 入力欄 */
+.share-ice-input {
+  font-family: monospace;
+  font-size: 11px;
+  resize: vertical;
+}
+/* #008: 共有ダイアログのプロジェクト/ファイル名（読み取り専用ラベル） */
+.d-readonly {
+  flex: 1;
+  color: var(--text-dim);
+  font-size: 12px;
 }
 .dialog .d-actions {
   display: flex;

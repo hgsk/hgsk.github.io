@@ -997,6 +997,22 @@ label {
   resize: none;
   font-size: 12px;
 }
+.chat-preview-list {
+  margin: 6px 0;
+  padding-left: 16px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.chat-preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+.chat-preview-done {
+  font-size: 11px;
+  color: var(--text-dim, #999);
+}
 
 /* ---------- Print ---------- */
 #print-root {

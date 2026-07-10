@@ -447,6 +447,40 @@ label {
   display: block;
   pointer-events: none;
 }
+/* ベクター描画（Flash 風のドローイングと塗り、client/editor/vector.ts）。
+   SVG はコンポーネントいっぱいに広がり、ツール非選択時はポインタを透過して
+   通常どおりコンポーネントを選択できる（pointer-events はレンダラが制御）。 */
+.comp .vector-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  touch-action: none;
+}
+.comp .vector-preview {
+  pointer-events: none;
+}
+/* インスペクタの描画ツールバー */
+.vec-toolbar {
+  display: flex;
+  gap: 4px;
+  margin: 6px 0;
+  flex-wrap: wrap;
+}
+.vec-tool {
+  flex: 1 1 auto;
+  min-width: 36px;
+  padding: 6px 0;
+  font-size: 15px;
+  line-height: 1;
+}
+.vec-tool.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
 
 /* selection overlay */
 #selection-overlay {

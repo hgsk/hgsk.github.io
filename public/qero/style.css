@@ -765,6 +765,39 @@ label {
   max-height: 40vh;
   overflow-y: auto;
 }
+
+/* Outline data browser (left panel), #076 */
+.section-title.outline-section {
+  cursor: pointer;
+  user-select: none;
+}
+.outline-children {
+  margin-left: 14px;
+  border-left: 1px solid var(--border);
+  padding-left: 4px;
+}
+.outline-note {
+  color: var(--text-dim);
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 45%;
+}
+.outline-toggle {
+  flex: 0 0 auto;
+  padding: 0 2px;
+  font-size: 10px;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+}
+.outline-toggle-spacer {
+  display: inline-block;
+  width: 14px;
+  flex: 0 0 auto;
+}
 .link-row input[type="text"] {
   flex: 1 1 60px;
   min-width: 0;

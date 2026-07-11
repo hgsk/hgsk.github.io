@@ -137,6 +137,31 @@ label {
   flex-shrink: 0;
 }
 
+/* ---------- カード切替ストリップ（HyperCard 風カード/スタック; #84） ---------- */
+.card-strip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 32vw;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.card-strip button.card-tab {
+  padding: 3px 9px;
+  font-size: 11px;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-strip button.card-tab.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+}
+.card-strip button.card-del {
+  padding: 3px 5px;
+  color: var(--text-dim);
+}
+
 /* ---------- Layout ---------- */
 #main {
   display: flex;
@@ -538,6 +563,32 @@ label {
   border: 1.5px dashed var(--accent);
   border-radius: 3px;
   background: rgba(138, 126, 232, 0.08);
+  pointer-events: none;
+}
+/* ピークモード（#95）: 実行モード中に Alt でクリック可能要素を一斉可視化 */
+#peek-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.peek-box {
+  position: absolute;
+  border: 1.5px dashed #e2762b;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.peek-badge {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  padding: 1px 5px;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: #fff;
+  background: #e2762b;
+  border-radius: 3px;
   pointer-events: none;
 }
 .canvas-hud {
@@ -1497,6 +1548,47 @@ body.qero-published .canvas-hud {
 .qero-publish-gate-error {
   color: #d33;
   font-size: 13px;
+}
+
+/* ---------- メッセージボックス（HC-M1 / #89: Ctrl/Cmd+M のワンライナー REPL） ---------- */
+#messagebox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 5px 8px;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+}
+#messagebox[hidden] {
+  display: none;
+}
+.msgbox-output {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--text-dim);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.msgbox-output.error {
+  color: var(--danger);
+}
+.msgbox-input {
+  width: 100%;
+  padding: 4px 6px;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--text);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.msgbox-input:focus {
+  outline: 1px solid var(--accent);
 }
 
 /* ==========================================================================

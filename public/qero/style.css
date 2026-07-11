@@ -2097,3 +2097,24 @@ body.qero-published .canvas-hud {
   color: var(--text-dim);
 }
 
+/* ==== features/hc-userlevel.css ==== */
+/* ユーザーレベル（HC-L3 / #86）: トップバーの段階的オーサリング開示セレクタ。
+   閲覧 / 入力 / 配置 / スクリプトの切替。端末ローカル設定（CRDT 非依存・ルール5）。
+   パネルの表示可否自体は各パネルが style.display で切り替えるため、ここは
+   セレクタの見た目だけを整える。 */
+.level-select {
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: var(--bg-panel2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  flex-shrink: 0;
+  /* トップバーで縮んでも1文字ずつ縦折れしないように（base.css の button と同趣旨） */
+  white-space: nowrap;
+}
+.level-select:hover {
+  background: #383944;
+}
+

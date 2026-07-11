@@ -471,26 +471,6 @@ label {
 .comp .vector-preview {
   pointer-events: none;
 }
-/* インスペクタの描画ツールバー */
-.vec-toolbar {
-  display: flex;
-  gap: 4px;
-  margin: 6px 0;
-  flex-wrap: wrap;
-}
-.vec-tool {
-  flex: 1 1 auto;
-  min-width: 36px;
-  padding: 6px 0;
-  font-size: 15px;
-  line-height: 1;
-}
-.vec-tool.active {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #fff;
-}
-
 /* selection overlay */
 #selection-overlay {
   position: absolute;
@@ -571,6 +551,85 @@ label {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 4px 8px;
+}
+
+/* ---------- ツールボックス（issue #009）: Photoshop 風の縦型アイコンパレット ---------- */
+.toolbox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(38, 39, 46, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px;
+}
+.toolbox.disabled {
+  /* 実行モード中は無効化/非表示（既存の編集ショートカット無効化と同じ扱い） */
+  display: none;
+}
+.toolbox-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+}
+.toolbox-btn:hover {
+  background: var(--bg-panel2);
+}
+.toolbox-btn.active {
+  /* issue #009 レビュー修正10: background/border-color は 69行目付近の
+     グローバル button.active（値は同一）に委ねる。ここでは .toolbox-btn の
+     既定 color（透明背景に合わせた文字色）を上書きする分だけ残す。 */
+  color: #fff;
+}
+.toolbox-swatches {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.toolbox-swatches:not(:empty) {
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+.toolbox-swatches input[type="color"] {
+  width: 32px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: none;
+}
+.toolbox-swatches input[type="number"] {
+  width: 32px;
+  font-size: 10px;
+  padding: 2px;
+}
+
+/* ツールに応じたキャンバス上のカーソル形状（issue #009 受け入れ条件: 常時可視化） */
+#canvas-area[data-tool="pan"] #canvas-viewport {
+  cursor: grab;
+}
+#canvas-area[data-tool="pen"] #canvas-viewport,
+#canvas-area[data-tool="line"] #canvas-viewport,
+#canvas-area[data-tool="shape"] #canvas-viewport,
+#canvas-area[data-tool="text"] #canvas-viewport,
+#canvas-area[data-tool="connector"] #canvas-viewport {
+  cursor: crosshair;
+}
+#canvas-area[data-tool="fill"] #canvas-viewport,
+#canvas-area[data-tool="erase"] #canvas-viewport {
+  cursor: cell;
 }
 
 /* ---------- Inspector ---------- */
@@ -1603,6 +1662,49 @@ body.qero-published .canvas-hud {
   }
   .mobile-nav-btn:disabled {
     opacity: 0.4;
+  }
+
+  /* ---------- ツールボックス（issue #009）: 下部の横スクロールバー化 ----------
+     将来ノート（docs/issues/009-toolbox.md）の通り、#canvas-area の下端に
+     固定する横並びバーにする。#canvas-area 自体は #main（flex:1）の唯一の
+     可視な子（左右パネルは既定 display:none、#075 と同じ扱い）で、
+     タイムライン/ボトムナビはその外（#app の別の flex 子）にあるため、
+     bottom:0 で重ならない。 */
+  .toolbox {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    border-radius: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .toolbox-swatches {
+    flex-direction: row;
+  }
+  .toolbox-swatches:not(:empty) {
+    margin-top: 0;
+    margin-left: 4px;
+    padding-top: 0;
+    padding-left: 6px;
+    border-top: none;
+    border-left: 1px solid var(--border);
+  }
+  .toolbox-btn,
+  .toolbox-swatches input {
+    flex: 0 0 auto;
+  }
+
+  /* issue #009 レビュー修正4: モバイルでは上の .toolbox がツールバー帯として
+     #canvas-area の下端（bottom:0）に横並び表示される（高さ約46px: パディング
+     6px×2 + ボタン32px + ボーダー1px×2）。.canvas-hud は元々 bottom:10px の
+     絶対配置で、モバイルではこのツールバーの真上に重なりズーム/全体/Grid が
+     隠れて操作できなかった。ツールバーの高さぶん退避させる。 */
+  .canvas-hud {
+    bottom: 54px;
   }
 
   /* ---------- タイムライン: 既定は「▶ + 時刻」だけの薄いバー ---------- */

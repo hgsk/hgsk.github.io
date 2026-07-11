@@ -14,3 +14,8 @@
 *.png binary
 *.jpg binary
 *.ico binary
+*.apk binary
+
+# Auto-published by hgsk/Loci's CD workflow (.github/workflows/android.yml).
+# Exclude from language stats and keep PR/commit diffs quiet.
+public/Loci/update/** linguist-generated=true diff=false

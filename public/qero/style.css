@@ -1,3 +1,6 @@
+/* 生成ファイル — 直接編集しないこと。ソースは static/css/base.css と
+   static/css/features/*.css。再生成: `deno task build:css`。 */
+
 :root {
   --bg: #1e1f24;
   --bg-panel: #26272e;
@@ -160,6 +163,35 @@ label {
 .card-strip button.card-del {
   padding: 3px 5px;
   color: var(--text-dim);
+}
+/* 共有背景（HC-L2; #85）: カードストリップ内の背景ピッカーとトグル */
+.card-strip select.bg-select {
+  max-width: 130px;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.card-strip button.bg-toggle.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+}
+/* 遷移効果セレクタ（HC-M2 / #90）— 表示中カードの入場遷移の設定 */
+.card-strip .card-transition-label {
+  margin-left: 6px;
+  font-size: 10px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+.card-strip select.card-transition-select {
+  font-size: 11px;
+  padding: 2px 4px;
+  max-width: 96px;
+  flex-shrink: 0;
+}
+.card-strip input.card-transition-ms {
+  width: 56px;
+  font-size: 11px;
+  padding: 2px 4px;
+  flex-shrink: 0;
 }
 
 /* ---------- Layout ---------- */
@@ -369,11 +401,52 @@ label {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
   transform-origin: 0 0;
 }
+/* ---------- カード遷移オーバーレイ（HC-M2 / #90） ---------- */
+/* 旧カードの視覚クローンをビューポート全面に重ね、CSS transition で退場させる
+   （client/editor/transitions.ts）。一時的なローカル DOM で CRDT には書かない。 */
+.card-transition-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  will-change: opacity, transform, clip-path, mask-size;
+  /* 旧ビューの背景ごと覆う（#canvas-area と同じ背景） */
+  background:
+    radial-gradient(circle, #33343c 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--bg);
+}
+/* page クローン: id を外す代わりに #canvas-page 相当の骨格をここで与える
+   （transform / サイズ / 背景は render() のインラインスタイルが複製済み） */
+.card-transition-overlay .card-transition-page {
+  position: absolute;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  transform-origin: 0 0;
+}
 .comp {
   position: absolute;
 }
 .comp[data-locked="true"] {
   pointer-events: none;
+}
+/* 共有背景レイヤー（HC-L2; #85）: 通常の編集では背景コンポーネントはクリックを
+   素通しし（下のカード側コンポーネント/キャンバスに当たる）、背景編集モード
+   （#canvas-page.bg-edit）でだけ選択できる。実行モードでは背景上のボタン等も
+   操作できるよう pointer-events を戻す。 */
+#canvas-page .comp.bg-comp {
+  pointer-events: none;
+}
+#canvas-area.run-mode #canvas-page .comp.bg-comp {
+  pointer-events: auto;
+}
+#canvas-page.bg-edit .comp.bg-comp {
+  pointer-events: auto;
+}
+/* 背景編集モード中はカード側のコンポーネントを薄く表示し、選択不可にする
+   （opacity はコンポーネントごとの inline style が使うため filter で薄める） */
+#canvas-page.bg-edit .comp:not(.bg-comp) {
+  pointer-events: none;
+  filter: grayscale(0.7) opacity(0.35);
 }
 /* #27: too small on screen to show real detail — flat placeholder instead of
    a full component render (level of detail) */
@@ -472,6 +545,26 @@ label {
 .comp .comp-text[contenteditable="true"] {
   cursor: text;
   user-select: text;
+}
+/* ウィキリンク（[[カード名]] タイトルベース AutoLink; #104） */
+.wikilink {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 2px;
+}
+#canvas-area.run-mode .wikilink {
+  cursor: pointer;
+}
+/* 未解決（同名カードなし）: 破線 + 減光。編集モードで Alt+クリックすると作成 */
+.wikilink-missing {
+  color: inherit;
+  opacity: 0.65;
+  text-decoration-style: dashed;
+  text-decoration-color: currentColor;
+}
+#canvas-area.run-mode .wikilink-missing {
+  cursor: default;
 }
 .comp img,
 .comp video {
@@ -1238,6 +1331,13 @@ label {
 #canvas-area.run-mode #canvas-page {
   cursor: default;
 }
+/* HC-S6 (#103): リンク付きコンポーネントはクリックで URL を開けることを示す。
+   inner の <button> は UA スタイルの cursor を持つので明示的に上書きする。
+   movable（grab）が後勝ちになるよう movable より前に置く。 */
+#canvas-area.run-mode .comp.has-link,
+#canvas-area.run-mode .comp.has-link .comp-button {
+  cursor: pointer;
+}
 #canvas-area.run-mode .comp.movable {
   cursor: grab;
 }
@@ -1624,6 +1724,34 @@ body.qero-published .canvas-hud {
   outline: 1px solid var(--accent);
 }
 
+/* ---------- 指差しリンク作成（HC-M3 / #91: LinkTo モードのフローティングバー） ---------- */
+#linkto-bar {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: min(90%, 640px);
+  padding: 6px 10px;
+  background: var(--bg-panel);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  font-size: 12px;
+}
+#linkto-bar[hidden] {
+  display: none;
+}
+.linkto-label {
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* ==========================================================================
    モバイルレイアウト（#015）
    デスクトップ（> 768px）は本セクションの影響を一切受けない。公開ビュー
@@ -1885,3 +2013,87 @@ body.qero-published .canvas-hud {
     min-width: 40px;
   }
 }
+
+/* ==========================================================================
+   スタック横断 Find パレット（HC-M5 / #93）
+   Ctrl/Cmd+F で開く中央パレット。client/ui/findpalette.ts が生成する。
+   ========================================================================== */
+.find-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.25);
+}
+.find-backdrop[hidden] {
+  display: none;
+}
+#findpalette {
+  margin-top: 12vh;
+  width: min(560px, 92vw);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+.find-input {
+  margin: 8px;
+  padding: 7px 9px;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+.find-input:focus {
+  outline: 1px solid var(--accent);
+}
+.find-results {
+  max-height: 52vh;
+  overflow-y: auto;
+  padding-bottom: 6px;
+}
+.find-group-title {
+  padding: 7px 12px 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+.find-item {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+.find-item.active {
+  background: var(--accent-dim);
+}
+.find-label {
+  flex: none;
+  max-width: 55%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--text);
+}
+.find-detail {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.find-note {
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+

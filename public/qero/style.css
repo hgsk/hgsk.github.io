@@ -48,6 +48,9 @@ button {
   padding: 4px 10px;
   cursor: pointer;
   font-size: 12px;
+  /* #015: flex コンテナ（#topbar / .tl-toolbar 等）の中で幅が縮んだときに
+     ラベルが1文字ずつ縦書きに折り返される実機バグの根本修正。 */
+  white-space: nowrap;
 }
 button:hover {
   background: #383944;
@@ -126,6 +129,12 @@ label {
 }
 #topbar input.project-name {
   width: 180px;
+}
+/* #015: ボタン/入力欄は内容幅を確保する（flex の縮小で潰れて折り返さない）。 */
+#topbar button,
+#topbar input.project-name,
+.tl-toolbar button {
+  flex-shrink: 0;
 }
 
 /* ---------- Layout ---------- */
@@ -674,6 +683,17 @@ label {
   padding: 5px 10px;
   border-bottom: 1px solid var(--border);
   flex: 0 0 auto;
+}
+/* #015: この2つの div（client/timeline/view.ts）は `display: contents` により
+   デスクトップでは見た目上ここに存在しないのと同じ（子要素が直接
+   .tl-toolbar の flex item として並ぶ）。モバイルの折りたたみ時のみ
+   @media (max-width: 768px) 側で display: none に上書きする。 */
+.tl-toolbar-extra {
+  display: contents;
+}
+/* #015: 折りたたみ/展開トグル。デスクトップでは非表示（モバイル専用 UI）。 */
+.tl-mobile-toggle {
+  display: none;
 }
 .tl-time {
   font-family: monospace;
@@ -1418,4 +1438,223 @@ body.qero-published .canvas-hud {
 .qero-publish-gate-error {
   color: #d33;
   font-size: 13px;
+}
+
+/* ==========================================================================
+   モバイルレイアウト（#015）
+   デスクトップ（> 768px）は本セクションの影響を一切受けない。公開ビュー
+   （body.qero-published、上記参照）は #topbar/#left-panel/#right-panel/
+   #timeline-panel/#statusbar 自体を持たない別 HTML（client/export/publish.ts の
+   renderShell）なので、ここの CSS はそもそも公開ビューの DOM に一致しない。
+   ========================================================================== */
+
+/* client/ui/mobilelayout.ts が生成する要素は、モバイル専用 UI として既定で
+   非表示にしておく（デスクトップでは常にゼロ影響）。 */
+.tb-hamburger,
+.tb-more-menu,
+.mobile-backdrop,
+.mobile-bottomnav,
+.mobile-sheet-handle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --mobile-nav-h: 54px;
+  }
+
+  /* ---------- トップバー: 1行に圧縮し、残りは ☰ へ ---------- */
+  #topbar {
+    padding: 6px 8px;
+    gap: 6px;
+    /* position: relative — 上の .mobile-bottomnav と同じ理由。position: fixed の
+       .mobile-backdrop の下に埋もれて ☰ 自身が押せなくならないようにする。 */
+    position: relative;
+    z-index: 80;
+  }
+  #topbar .logo span {
+    display: none;
+  }
+  #topbar input.project-name {
+    width: 32vw;
+    min-width: 90px;
+    flex: 1 1 auto;
+  }
+  #topbar button.tb-more {
+    display: none;
+  }
+  .tb-hamburger {
+    display: inline-flex;
+  }
+  .tb-more-menu {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 8px;
+    z-index: 92;
+    flex-direction: column;
+    min-width: 200px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  }
+  .tb-more-menu.open {
+    display: flex;
+  }
+  .tb-more-menu button {
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    padding: 10px 14px;
+  }
+  .tb-more-menu button + button {
+    border-top: 1px solid var(--border);
+  }
+
+  /* ---------- キャンバス全面化: 左右パネルは既定で非表示、ボトムシート化 ---------- */
+  #left-panel,
+  #right-panel {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: var(--mobile-nav-h);
+    width: auto;
+    height: 55vh;
+    z-index: 70;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.55);
+  }
+  #app[data-mobile-sheet="left"] #left-panel {
+    display: flex;
+  }
+  #app[data-mobile-sheet="right"] #right-panel {
+    display: block;
+  }
+  .mobile-sheet-handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 6px 8px;
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-sheet-grip {
+    flex: 1;
+    height: 4px;
+    margin: 0 8px;
+    border-radius: 2px;
+    background: var(--border);
+  }
+
+  .mobile-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 65;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .mobile-backdrop.show {
+    display: block;
+  }
+
+  /* ---------- ボトムナビ ---------- */
+  .mobile-bottomnav {
+    display: flex;
+    flex: 0 0 auto;
+    /* position: relative — stays in normal flow (bottom of #app's column) but
+       still needs its own stacking level: without it, `position: static`
+       loses to the `position: fixed` backdrop no matter the z-index, since
+       unpositioned elements can't compete in the positioned stacking order. */
+    position: relative;
+    z-index: 80;
+    height: var(--mobile-nav-h);
+    background: var(--bg-panel);
+    border-top: 1px solid var(--border);
+  }
+  .mobile-nav-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 44px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 9px;
+    padding: 4px 2px;
+  }
+  .mobile-nav-btn .mb-icon {
+    font-size: 16px;
+  }
+  .mobile-nav-btn.active {
+    color: var(--text);
+    background: var(--bg-panel2);
+  }
+  .mobile-nav-btn:disabled {
+    opacity: 0.4;
+  }
+
+  /* ---------- タイムライン: 既定は「▶ + 時刻」だけの薄いバー ---------- */
+  #timeline-panel {
+    height: 42px;
+    overflow: hidden;
+  }
+  #timeline-panel .tl-toolbar-extra {
+    display: none;
+  }
+  #timeline-panel .tl-body {
+    display: none;
+  }
+  #timeline-panel.tl-mobile-expanded {
+    height: 45vh;
+    overflow: visible;
+  }
+  #timeline-panel.tl-mobile-expanded .tl-toolbar {
+    flex-wrap: wrap;
+  }
+  #timeline-panel.tl-mobile-expanded .tl-toolbar-extra {
+    display: contents;
+  }
+  #timeline-panel.tl-mobile-expanded .tl-body {
+    display: flex;
+  }
+  .tl-mobile-toggle {
+    display: inline-flex;
+  }
+
+  /* ---------- ステータスバー: 接続ドット + 短いラベルのみ ---------- */
+  #statusbar {
+    padding: 3px 8px;
+    gap: 6px;
+  }
+  #statusbar > *:not(:first-child) {
+    display: none;
+  }
+  #statusbar > *:first-child {
+    max-width: 92vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* ---------- タップターゲット: 主要ボタンは最低 40px 角 ---------- */
+  #topbar button,
+  .mobile-bottomnav button,
+  .tl-toolbar button,
+  .mobile-sheet-handle button,
+  .tb-more-menu button {
+    min-height: 40px;
+    min-width: 40px;
+  }
 }

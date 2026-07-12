@@ -3156,3 +3156,13 @@ body.qero-published .canvas-hud {
   background: #383944;
 }
 
+/* ==== features/unified-creation-tools.css ==== */
+/* #079 / GitHub #108: every registry component is exposed in the toolbox. */
+@media (min-width: 769px) {
+  .toolbox {
+    max-height: calc(100% - 20px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+}
+

@@ -6,7 +6,26 @@
     <title>Qero — LocalFirst Groupwork Platform</title>
     <link rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234f8cff'/%3E%3Ctext x='16' y='22' font-size='18' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#1e1f24" />
     <link rel="stylesheet" href="./style.css" />
+    <!-- テーマの FOUC 防止（Issue #069）: スタイルシート適用前に data-theme を確定させる。
+         ロジックは client/core/theme.ts の resolveTheme と同一（tests/theme_test.ts で検証）。
+         同期スクリプトなのでモジュール本体（app.js）の読み込みを待たずに実行される。 -->
+    <script>
+    (function () {
+      try {
+        var setting = localStorage.getItem("qero.theme") || "auto";
+        if (setting !== "dark" && setting !== "light" && setting !== "auto") setting = "auto";
+        var osDark = matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = setting === "auto"
+          ? (osDark ? "dark" : "light")
+          : setting;
+      } catch (e) {
+        // localStorage 不可（プライベートモード等）でも既定のダークのまま表示を続ける
+      }
+    })();
+    </script>
   </head>
   <body>
     <div id="app">

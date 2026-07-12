@@ -1,6 +1,9 @@
 /* 生成ファイル — 直接編集しないこと。ソースは static/css/base.css と
    static/css/features/*.css。再生成: `deno task build:css`。 */
 
+/* 既定はダーク（従来どおり）。ライトは :root[data-theme="light"] で上書きする
+   （Issue #069）。適用は client/core/theme.ts が document.documentElement の
+   data-theme 属性を設定して行う。 */
 :root {
   --bg: #1e1f24;
   --bg-panel: #26272e;
@@ -15,7 +18,25 @@
   --ok: #27c93f;
   --warn: #ffbd2e;
   --keyframe: #ffd23f;
+  color-scheme: dark light;
   font-size: 13px;
+}
+
+/* ライトテーマ（Issue #069）。コントラスト確保: 白系背景 + 濃色文字。 */
+:root[data-theme="light"] {
+  --bg: #f5f6f8;
+  --bg-panel: #ffffff;
+  --bg-panel2: #eef0f4;
+  --bg-input: #ffffff;
+  --border: #d7dae0;
+  --text: #1e1f24;
+  --text-dim: #5b5d6b;
+  --accent: #2f6fdb;
+  --accent-dim: #d9e6ff;
+  --danger: #d9362b;
+  --ok: #1fa834;
+  --warn: #b98900;
+  --keyframe: #a67c00;
 }
 
 * {
@@ -72,6 +93,15 @@ button.icon-btn {
 button.active {
   background: var(--accent-dim);
   border-color: var(--accent);
+}
+/* #030: 完全削除の危険操作ボタン */
+button.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+button.danger:hover {
+  filter: brightness(1.1);
 }
 
 input,
@@ -138,6 +168,51 @@ label {
 #topbar input.project-name,
 .tl-toolbar button {
   flex-shrink: 0;
+}
+
+/* ---------- Presence (#015: avatar stack, #019: join/leave toasts) ---------- */
+.presence-root {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+.presence-stack {
+  display: flex;
+  align-items: center;
+}
+.presence-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-left: -8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid var(--bg-panel);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  cursor: default;
+  position: relative;
+}
+.presence-avatar:first-child {
+  margin-left: 0;
+}
+.presence-avatar.self {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+/* #022: 閲覧専用参加者のプレゼンスマーク */
+.presence-readonly-badge {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  font-size: 9px;
+  line-height: 1;
+  background: var(--bg-panel);
+  border-radius: 50%;
+  padding: 1px;
 }
 
 /* ---------- カード切替ストリップ（HyperCard 風カード/スタック; #84） ---------- */
@@ -234,6 +309,20 @@ label {
   border-bottom: 2px solid var(--accent);
   background: transparent;
 }
+/* #018: 未読メンションがある「コメント」タブボタンに小さなドットを添える */
+.tabs button {
+  position: relative;
+}
+.tabs button.has-badge::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: calc(50% - 22px);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--danger);
+}
 .tab-body {
   flex: 1;
   overflow-y: auto;
@@ -293,6 +382,35 @@ label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+/* #020: 他ピアがこの要素を選択中であることを示す小さな色ドット */
+.l-presence-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-left: 3px;
+  flex: 0 0 auto;
+}
+/* #057: レイヤータブ上部の名前絞り込み入力 */
+.layer-filter {
+  width: 100%;
+  margin-bottom: 8px;
+}
+/* #051: レイヤー行の 👁/🚫 表示トグル */
+.layer-vis-toggle {
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.layer-item.layer-hidden .l-name {
+  opacity: 0.5;
+}
+/* #057: ドラッグ&ドロップ中のドロップ位置インジケータ */
+.layer-item.drag-over-above {
+  box-shadow: inset 0 2px 0 var(--accent);
+}
+.layer-item.drag-over-below {
+  box-shadow: inset 0 -2px 0 var(--accent);
 }
 
 /* Data panel */
@@ -429,6 +547,13 @@ label {
 .comp[data-locked="true"] {
   pointer-events: none;
 }
+/* #051: 編集モードの非表示コンポーネント — 半透明表示 + 選択・ドラッグ対象外
+   （ロックの除外と同じ pointer-events: none 方式）。レイヤータブからは
+   引き続き選択できる（layer-item のクリックは別要素なので影響しない）。 */
+.comp[data-hidden="true"] {
+  opacity: 0.25;
+  pointer-events: none;
+}
 /* 共有背景レイヤー（HC-L2; #85）: 通常の編集では背景コンポーネントはクリックを
    素通しし（下のカード側コンポーネント/キャンバスに当たる）、背景編集モード
    （#canvas-page.bg-edit）でだけ選択できる。実行モードでは背景上のボタン等も
@@ -546,6 +671,40 @@ label {
   cursor: text;
   user-select: text;
 }
+/* #059: markdown-lite（見出し・箇条書き・リンク・太字/斜体/コード）—
+   client/editor/mdlite.ts が組み立てる DOM のスタイル。見出しはコンポーネント
+   自体の fontSize からの相対倍率（em）でスケールする（h1-h3 タグは使わない
+   ——テキストコンポーネントは任意の位置に置かれるため文書アウトラインの
+   意味を持たせない）。 */
+.mdlite-h1,
+.mdlite-h2,
+.mdlite-h3 {
+  font-weight: 700;
+  margin: 0.2em 0;
+}
+.mdlite-p {
+  margin: 0;
+}
+.mdlite-list {
+  margin: 0.2em 0;
+  padding-left: 1.4em;
+}
+.mdlite-code {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+.mdlite-link {
+  color: var(--accent);
+  text-decoration: underline;
+}
+a.mdlite-link:not([href]) {
+  cursor: default;
+  text-decoration-style: dotted;
+}
 /* ウィキリンク（[[カード名]] タイトルベース AutoLink; #104） */
 .wikilink {
   color: var(--accent);
@@ -626,6 +785,56 @@ label {
   background: rgba(79, 140, 255, 0.12);
   pointer-events: none;
 }
+
+/* #049: smart guides — local-only overlay shown while dragging/resizing,
+   cleared on drag end (CLAUDE.md rule 5, never written to the CRDT). */
+.smart-guide-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.smart-guide {
+  position: absolute;
+  background: #ff5f8f;
+  pointer-events: none;
+  z-index: 5;
+}
+.smart-guide-x {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+.smart-guide-y {
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+/* other peers' selection (#016) — identifying-color frame + name label,
+   local DOM overlay only, never written to the CRDT. */
+#remote-selection-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform-origin: 0 0;
+}
+.remote-sel-box {
+  position: absolute;
+  border: 1.5px dashed var(--accent);
+  pointer-events: none;
+}
+.remote-sel-label {
+  position: absolute;
+  top: -18px;
+  left: -1.5px;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 3px 3px 3px 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+}
 .link-handle {
   position: absolute;
   width: 12px;
@@ -695,6 +904,32 @@ label {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 4px 8px;
+}
+/* ミニマップ（#062）: キャンバス右下、HUD バーの上に重ねる小さなオーバーレイ。
+   実行モード中は canvas.ts 側で display:none にする（読み取り専用の公開ビューは
+   runMode=false のままなのでナビゲーション用に表示を維持する）。 */
+.minimap {
+  position: absolute;
+  bottom: 54px;
+  right: 12px;
+  background: rgba(38, 39, 46, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px;
+  touch-action: none;
+}
+.minimap svg {
+  display: block;
+  cursor: pointer;
+}
+.minimap-comp-rect {
+  fill: rgba(150, 155, 175, 0.7);
+}
+.minimap-viewport-rect {
+  fill: rgba(79, 140, 255, 0.15);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  pointer-events: none;
 }
 
 /* ---------- ツールボックス（issue #009）: Photoshop 風の縦型アイコンパレット ---------- */
@@ -797,9 +1032,27 @@ label {
   flex: 1;
   min-width: 0;
 }
+.insp-row input[type="range"] {
+  flex: 1;
+  min-width: 40px;
+  padding: 0;
+}
 .insp-row textarea {
   resize: vertical;
   min-height: 48px;
+}
+.insp-unit {
+  color: var(--text-dim);
+  font-size: 9px;
+  margin-left: 2px;
+}
+/* #60: ラベルの水平ドラッグでスクラブ増減（Shift=粗く・Alt=細かく） */
+.insp-row > label.scrub-label {
+  cursor: ew-resize;
+  touch-action: none;
+}
+.insp-row > label.scrub-label.scrubbing {
+  color: var(--accent);
 }
 .insp-pair {
   display: flex;
@@ -824,21 +1077,59 @@ label {
   flex-wrap: wrap;
   margin-top: 10px;
 }
+/* #048: 整列・等間隔配置ツールバー（複数選択時のみ表示） */
+.align-toolbar {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
 .empty-note {
   color: var(--text-dim);
   padding: 18px 10px;
   text-align: center;
   font-size: 12px;
 }
+/* #020: インスペクタの「〇〇さんが編集中」表示 */
+.editing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 2px 0;
+}
+.editing-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
 .backlink-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 6px;
   padding: 4px 10px 10px;
 }
+/* #44: 参照元コンポーネント名 + 参照プロパティ/文脈スニペットの複数行表示 */
 .backlink-item {
+  display: block;
+  width: 100%;
+  text-align: left;
   font-size: 12px;
-  padding: 3px 8px;
+  padding: 5px 8px;
+}
+.backlink-name {
+  font-weight: 600;
+}
+.backlink-snippet {
+  color: var(--text-dim);
+  font-size: 11px;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .link-row {
   display: flex;
@@ -850,6 +1141,56 @@ label {
 .link-row select {
   flex: 0 0 auto;
   max-width: 88px;
+}
+/* #42: 「接続」セクション見出し + 関係タイプ管理ボタン */
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin: 14px 10px 6px 0;
+}
+.section-title-row > .section-title {
+  margin: 0;
+}
+.link-manage-btn {
+  font-size: 10px;
+  padding: 2px 6px;
+}
+.reltype-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.reltype-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+}
+.reltype-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+.reltype-name {
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+.reltype-detail {
+  color: var(--text-dim);
+  font-size: 11px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Structure (dependency graph) panel, #31 */
@@ -903,6 +1244,44 @@ label {
   white-space: nowrap;
 }
 
+/* Visual dependency graph (#043) */
+.graph-view {
+  height: 45vh;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-panel);
+  margin-bottom: 6px;
+  touch-action: none;
+}
+.graph-svg {
+  display: block;
+  cursor: grab;
+}
+.graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 10px 10px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.graph-legend-item {
+  display: inline-flex;
+  align-items: center;
+}
+.graph-legend-swatch {
+  display: inline-block;
+  width: 16px;
+  border-top-width: 2px;
+  margin-right: 3px;
+}
+/* one-shot jump highlight (structure tab signal node -> logic tab trigger) */
+.structure-highlight {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
 /* ---------- Timeline ---------- */
 #timeline-panel {
   height: 200px;
@@ -935,6 +1314,12 @@ label {
   font-family: monospace;
   color: var(--text-dim);
   min-width: 90px;
+}
+.tl-zoom-label {
+  font-family: monospace;
+  color: var(--text-dim);
+  min-width: 40px;
+  text-align: center;
 }
 .tl-body {
   flex: 1;
@@ -1090,6 +1475,21 @@ label {
     opacity: 0.35;
   }
 }
+/* #068: IndexedDB 永続化ができない環境（プライベートブラウジング等）の常時警告 */
+#statusbar .persist-warn {
+  color: var(--danger);
+  font-weight: 600;
+}
+/* #031: 未同期のローカル変更あり（オフライン編集中・再接続待ち）を目立たせる */
+#statusbar .sync-pending {
+  color: var(--warn);
+  font-weight: 600;
+}
+/* #022: 閲覧専用参加モードの常時表示 */
+#statusbar .viewonly-badge {
+  color: var(--accent);
+  font-weight: 600;
+}
 
 /* ---------- Dialogs ---------- */
 #dialog-root:empty {
@@ -1171,6 +1571,268 @@ label {
   margin: 8px 0;
   line-height: 1.5;
 }
+/* #028: 最近のルーム（共有ダイアログ）の各行 — ルーム名ボタン＋日時＋削除 */
+.room-history-row {
+  margin-bottom: 4px;
+}
+.room-history-row .d-note {
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* #029: プロジェクトダイアログのファイル行に付く更新/作成日時ラベル */
+.file-updated-at {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin: 0 6px;
+}
+/* #023: バージョン一覧の手動/自動バッジ */
+.version-badge {
+  flex: 0 0 auto;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: var(--bg-panel2);
+  color: var(--text-dim);
+}
+.version-badge-auto {
+  background: var(--accent-dim);
+  color: var(--text);
+}
+/* #027: バージョンダイアログの「ローカル限定」注記を強調 */
+.version-local-warning {
+  color: var(--warn);
+  font-weight: 600;
+}
+/* #063: プログラムでフォーカスされたとき（フォーカス可能な子要素が無い場合）
+   だけ視認できる枠を出す。マウスクリックでの選択解除フォーカスは邪魔しない。 */
+.dialog:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* ---------- Context menu (#052) ---------- */
+#contextmenu-root:empty {
+  display: none;
+}
+.contextmenu {
+  position: fixed;
+  z-index: 200;
+  min-width: 180px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  font-size: 12px;
+}
+.contextmenu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--text);
+}
+.contextmenu-item:hover,
+.contextmenu-item:focus {
+  background: var(--accent);
+  color: #fff;
+  outline: none;
+}
+.contextmenu-item.danger {
+  color: var(--danger);
+}
+.contextmenu-item.danger:hover,
+.contextmenu-item.danger:focus {
+  background: var(--danger);
+  color: #fff;
+}
+.contextmenu-item.disabled {
+  color: var(--text-dim);
+  cursor: default;
+  opacity: 0.5;
+}
+.contextmenu-shortcut {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+.contextmenu-item:hover .contextmenu-shortcut,
+.contextmenu-item:focus .contextmenu-shortcut {
+  color: rgba(255, 255, 255, 0.8);
+}
+.contextmenu-sep {
+  height: 1px;
+  margin: 4px 6px;
+  background: var(--border);
+}
+
+/* #032/#033: グローバル検索/コマンドパレット */
+.search-palette-input {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 10px;
+}
+.search-palette-status {
+  margin: 6px 2px;
+}
+.search-palette-list {
+  max-height: 50vh;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+.search-palette-item .search-palette-badge {
+  flex: 0 0 auto;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: var(--bg-panel2);
+  white-space: nowrap;
+}
+/* #034: 「このファイル」/「プロジェクト全体」検索スコープ切替 */
+.search-palette-scope {
+  display: flex;
+  gap: 4px;
+  margin: 6px 2px 0;
+}
+.search-palette-scope-btn {
+  flex: 1 1 auto;
+  font-size: 11px;
+  padding: 4px 8px;
+}
+.search-palette-scope-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* #036: 参照・バインディング記法のオートコンプリート（client/ui/refautocomplete.ts）。
+   attachMentionAutocomplete の .mention-dropdown/.mention-item と見た目を揃えつつ、
+   候補ごとの補助テキスト（データソース名・関数など）用に detail 列を足す。 */
+.ref-ac-dropdown {
+  position: fixed;
+  z-index: 160;
+  max-height: 200px;
+  overflow-y: auto;
+  background: var(--bg-panel2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+.ref-ac-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ref-ac-item.active,
+.ref-ac-item:hover {
+  background: var(--accent-dim);
+}
+.ref-ac-detail {
+  flex: 0 0 auto;
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+/* #035: ファイル間リンク（{{>fileId}} / {{>fileId|表示名}}）— text/button
+   コンポーネントの解決テキスト内に埋め込まれるインラインリンク片。 */
+.file-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.file-link-active {
+  cursor: pointer;
+}
+.file-link-active:hover {
+  text-decoration-style: solid;
+}
+
+/* ---------- Toast (#064) ---------- */
+#qero-toast {
+  position: fixed;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  max-width: 70vw;
+}
+.toast-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(20, 21, 26, 0.95);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+.toast-item.toast-error {
+  border-color: var(--danger);
+  background: rgba(58, 24, 22, 0.95);
+}
+.toast-icon {
+  flex: 0 0 auto;
+  font-size: 13px;
+}
+.toast-item.toast-error .toast-icon {
+  color: var(--danger);
+}
+.toast-text {
+  flex: 1;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.toast-close {
+  flex: 0 0 auto;
+  padding: 1px 6px;
+  font-size: 11px;
+  line-height: 1.4;
+  background: transparent;
+}
+.toast-close:hover {
+  border-color: var(--danger);
+  background: transparent;
+}
+
+/* ---------- Spinner / busy button (#073) ---------- */
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: -2px;
+}
+button .spinner {
+  margin-right: 5px;
+}
+button.primary .spinner {
+  border-color: rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* ---------- Project dialog (#003) ---------- */
 .project-dialog-panes {
@@ -1196,6 +1858,46 @@ label {
 .project-pane .layer-item.legacy-row {
   opacity: 0.6;
   font-style: italic;
+}
+/* #037: タグ・お気に入り・アーカイブ */
+.file-row.archived-row {
+  opacity: 0.55;
+}
+.fav-star {
+  color: var(--text-dim);
+}
+.fav-star.active {
+  color: #e8b93a;
+}
+.file-row-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.tag-chip {
+  cursor: default;
+}
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.tag-filter-chip {
+  cursor: pointer;
+}
+.tag-filter-chip.active {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+.archived-toggle {
+  margin: 2px 0 6px;
+}
+/* #030: ストレージ使用量表示 */
+.storage-usage {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
 }
 
 /* ---------- AI Chat Assistant ---------- */
@@ -1301,7 +2003,28 @@ label {
   font-size: 11px;
   color: var(--text-dim, #999);
 }
+/* AI キー未設定時のセットアップ案内カード（Issue #074） */
+.chat-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+.chat-setup-note {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
 
+.shortcut-keys {
+  font-family: monospace;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-right: 8px;
+  white-space: nowrap;
+}
 /* ---------- Print ---------- */
 #print-root {
   display: none;
@@ -1501,6 +2224,17 @@ label {
 .q-field textarea {
   flex: 1;
 }
+/* #072: 式フィールド（skilleditor.ts）— 検証エラーをラベル+入力の下に
+   フルwidthで表示するため折り返しを許可する。 */
+.q-field-expr {
+  flex-wrap: wrap;
+}
+.q-field-expr .expr-error {
+  flex-basis: 100%;
+  margin-left: 96px;
+  color: var(--danger);
+  font-size: 11px;
+}
 .q-preview {
   position: relative;
   margin-top: 6px;
@@ -1681,6 +2415,188 @@ body.qero-published .canvas-hud {
 .qero-publish-gate-error {
   color: #d33;
   font-size: 13px;
+}
+
+/* ---------- 起動失敗画面（#068） ---------- */
+/* boot() が失敗したとき、白画面の代わりに全画面オーバーレイでエラーを見せる。
+   partial に描画済みの UI があっても隠すため fixed + 高い z-index。 */
+.boot-error-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg, #1e1f24);
+  color: var(--text, #e8e8ec);
+  padding: 24px;
+}
+.boot-error-box {
+  max-width: 480px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.boot-error-box h2 {
+  font-size: 18px;
+  color: var(--danger, #ff5f56);
+}
+.boot-error-box p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dim, #9a9ba6);
+}
+.boot-error-box button {
+  margin-top: 4px;
+}
+
+/* ---------- Comments (#017 コメント・アノテーション / #018 メンション) ---------- */
+#comment-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform-origin: 0 0;
+}
+.comment-pin {
+  position: absolute;
+  transform: translate(-6px, -22px);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: all;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+  user-select: none;
+}
+.comment-pin.unread::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--danger);
+  border: 1.5px solid var(--bg);
+}
+
+.comment-popover {
+  position: fixed;
+  z-index: 150;
+  width: 300px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  gap: 8px;
+  overflow: hidden;
+}
+.comment-popover-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.comment-popover-title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.comment-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+.comment-post {
+  position: relative;
+  padding: 6px 8px;
+  background: var(--bg-panel2);
+  border-radius: 6px;
+  font-size: 12px;
+}
+.comment-post-head {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.comment-post-author {
+  font-weight: 600;
+}
+.comment-post-time {
+  color: var(--text-dim);
+  font-size: 10px;
+}
+.comment-post-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.comment-post-del {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+.comment-reply-row {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+}
+.comment-reply-input {
+  flex: 1;
+  resize: vertical;
+  min-height: 40px;
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+/* #018: @mention autocomplete dropdown. `position: fixed` (coordinates set in
+   JS from the textarea's own bounding rect — see client/ui/commentpopover.ts's
+   attachMentionAutocomplete) so it isn't clipped by the comment popover's
+   `overflow: hidden`, unlike a plain `position: absolute` sibling would be. */
+.mention-dropdown {
+  position: fixed;
+  z-index: 160;
+  max-height: 160px;
+  overflow-y: auto;
+  background: var(--bg-panel2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+.mention-item {
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.mention-item.active,
+.mention-item:hover {
+  background: var(--accent-dim);
+}
+
+/* left panel コメント一覧タブ */
+.comment-list-item {
+  position: relative;
+}
+.comment-list-badge {
+  display: inline-block;
+  min-width: 14px;
+  padding: 0 4px;
+  margin-left: 6px;
+  border-radius: 8px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  line-height: 15px;
 }
 
 /* ---------- メッセージボックス（HC-M1 / #89: Ctrl/Cmd+M のワンライナー REPL） ---------- */

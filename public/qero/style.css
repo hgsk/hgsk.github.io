@@ -170,6 +170,99 @@ label {
   flex-shrink: 0;
 }
 
+/* ---------- パンくず: ルーム › プロジェクト › ファイル名 (#010) ---------- */
+#topbar .topbar-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+}
+#topbar .crumb {
+  color: var(--text-dim);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 22vw;
+}
+#topbar .crumb-sep {
+  color: var(--text-dim);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+#topbar button.crumb-project {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 4px 6px;
+  color: var(--text);
+  font-weight: 600;
+}
+#topbar button.crumb-project:hover {
+  background: var(--bg-panel2);
+  border-color: var(--border);
+}
+
+/* ---------- ▶ 実行: PowerApps のプレビュー相当、右端に強調配置 (#010) ----------
+   共有ボタン（primary = accent 青）と隣り合っても見分けられるよう、
+   実行は別トーン（緑 = ok）にする。実行中は warn（オレンジ）に切り替わり、
+   「■ 編集に戻る」という停止操作であることを色でも示す。 */
+#topbar button.tb-run {
+  font-weight: 700;
+  background: var(--ok);
+  border-color: var(--ok);
+  color: #0c2b0f;
+  padding: 4px 16px;
+}
+#topbar button.tb-run:hover {
+  background: #3ee055;
+}
+#topbar button.tb-run.tb-run-active {
+  background: var(--warn);
+  border-color: var(--warn);
+  color: #1e1f24;
+}
+#topbar button.tb-run.tb-run-active:hover {
+  background: #ffd23f;
+}
+
+/* ---------- 「ファイル」「拡張」ドロップダウンメニュー (#010) ----------
+   openDialog() ではなく、クリックで開閉する軽量なポップオーバー
+   （Escape/外側クリックで閉じる、client/ui/topbar.ts の createMenu()）。 */
+#topbar .tb-menu {
+  position: relative;
+}
+#topbar .tb-menu-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 92;
+  flex-direction: column;
+  min-width: 200px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+#topbar .tb-menu-panel.open {
+  display: flex;
+}
+#topbar .tb-menu-panel button {
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  padding: 8px 12px;
+  background: transparent;
+}
+#topbar .tb-menu-panel button:hover {
+  background: var(--bg-panel2);
+}
+#topbar .tb-menu-panel button + button {
+  border-top: 1px solid var(--border);
+}
+
 /* ---------- Presence (#015: avatar stack, #019: join/leave toasts) ---------- */
 .presence-root {
   display: flex;
@@ -2135,6 +2228,9 @@ button.primary .spinner {
 .tl-signal-in {
   width: 140px;
 }
+.tl-easing-sel {
+  max-width: 220px;
+}
 .tl-keyframe.has-signal {
   background: #ffb84f;
   border-color: #ffb84f;
@@ -2703,12 +2799,26 @@ body.qero-published .canvas-hud {
   #topbar .logo span {
     display: none;
   }
+  #topbar .topbar-breadcrumb {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  /* ルーム名・プロジェクト名はモバイルでは幅の都合上省略し、ファイル名入力
+     （最も重要な操作）を優先表示する。プロジェクト部分は crumb-project 自体が
+     tb-more（button.tb-more は下の共通ルールで非表示）なので☰メニューへ
+     委譲され、ここでは前後の区切り「›」だけを一緒に隠す。DOM 順序は
+     ルーム, 区切り, プロジェクト, 区切り, ファイル名入力（client/ui/topbar.ts）。 */
+  #topbar .crumb-room,
+  #topbar .topbar-breadcrumb .crumb-sep {
+    display: none;
+  }
   #topbar input.project-name {
     width: 32vw;
     min-width: 90px;
     flex: 1 1 auto;
   }
-  #topbar button.tb-more {
+  #topbar button.tb-more,
+  #topbar button.tb-menu-btn {
     display: none;
   }
   .tb-hamburger {
@@ -2740,6 +2850,18 @@ body.qero-published .canvas-hud {
   }
   .tb-more-menu button + button {
     border-top: 1px solid var(--border);
+  }
+  /* #010: 「ファイル」「拡張」の見出し（client/ui/mobilelayout.ts の
+     renderMoreMenu() が data-menu-group ごとに挿入）。フラットな寄せ集め
+     列挙にしないための区切り。 */
+  .tb-more-menu-heading {
+    padding: 8px 14px 4px;
+    font-size: 10px;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border);
+  }
+  .tb-more-menu-heading:first-child {
+    border-top: none;
   }
 
   /* ---------- キャンバス全面化: 左右パネルは既定で非表示、ボトムシート化 ---------- */

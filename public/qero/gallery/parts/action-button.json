@@ -1,0 +1,32 @@
+{
+  "qeroPart": 1,
+  "component": {
+    "id": "gallery-action-button",
+    "type": "button",
+    "name": "アクションボタン",
+    "x": 80,
+    "y": 80,
+    "w": 160,
+    "h": 44,
+    "rotation": 0,
+    "opacity": 1,
+    "scale": 1,
+    "locked": false,
+    "props": { "text": "実行" },
+    "events": { "click": "gallery.action" }
+  },
+  "children": [],
+  "tracks": {},
+  "skills": [
+    { "name": "ギャラリーアクション", "steps": [{ "kind": "toast", "expr": "'実行しました'" }] }
+  ],
+  "triggers": [
+    {
+      "id": "gallery-action-trigger",
+      "name": "ギャラリーアクション",
+      "signal": "gallery.action",
+      "skill": "ギャラリーアクション",
+      "enabled": true
+    }
+  ]
+}

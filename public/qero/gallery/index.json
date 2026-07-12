@@ -1,16 +1,29 @@
 [
   {
+    "kind": "part",
+    "id": "action-button",
+    "name": "アクションボタン",
+    "description": "クリック時の振る舞いを含む再利用部品です。",
+    "file": "gallery/parts/action-button.json",
+    "source": "Qero bundled examples",
+    "permissions": []
+  },
+  {
     "kind": "plugin",
     "id": "scoreboard.js",
     "name": "スコアボード",
     "description": "放送・ライブ配信向けのスコアボードコンポーネントを追加します。",
-    "file": "plugins/scoreboard.js"
+    "file": "plugins/scoreboard.js",
+    "source": "Qero bundled examples",
+    "permissions": []
   },
   {
     "kind": "template",
     "id": "signage-basic",
     "name": "基本サイネージ",
     "description": "見出し・本文・背景を配置したシンプルなサイネージテンプレートです。",
-    "file": "gallery/templates/signage-basic.json"
+    "file": "gallery/templates/signage-basic.json",
+    "source": "Qero bundled examples",
+    "permissions": []
   }
 ]

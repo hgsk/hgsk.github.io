@@ -3156,6 +3156,68 @@ body.qero-published .canvas-hud {
   background: #383944;
 }
 
+/* ==== features/leftpanel-tab-groups.css ==== */
+/**
+ * issue #013: 左パネルのタブ再編。
+ * - .tabs 内のグループ区切り線（ステージ系/アプリ系/横断）
+ * - 自動化タブの未ペアリング時プレースホルダー
+ * - レイヤータブの mesh3d（3Dオブジェクト）バッジ
+ * - モバイルのボトムナビにも同じグループ区切りを反映
+ */
+
+/* ---------- デスクトップ左パネルのタブ列: グループ区切り ---------- */
+.tabs {
+  align-items: stretch;
+}
+.tab-group-sep {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 1px;
+  height: 20px;
+  margin: 0 1px;
+  background: var(--text-dim);
+  opacity: 0.5;
+}
+
+/* ---------- 自動化タブ: 未ペアリング時プレースホルダー ---------- */
+.automation-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px 0 8px;
+}
+.automation-placeholder .automation-placeholder-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+.automation-placeholder .section-title {
+  margin: 0;
+}
+
+/* ---------- レイヤータブ: 3D バッジ ---------- */
+.layer-3d-badge {
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: var(--accent);
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- モバイルのボトムナビ: グループ区切り ---------- */
+@media (max-width: 768px) {
+  .mobile-nav-sep {
+    flex: 0 0 auto;
+    align-self: center;
+    width: 1px;
+    height: 24px;
+    margin: 0 1px;
+    background: var(--border);
+  }
+}
+
 /* ==== features/unified-creation-tools.css ==== */
 /* #079 / GitHub #108: every registry component is exposed in the toolbox. */
 @media (min-width: 769px) {

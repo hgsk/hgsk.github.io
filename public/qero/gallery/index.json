@@ -25,5 +25,25 @@
     "file": "gallery/templates/signage-basic.json",
     "source": "Qero bundled examples",
     "permissions": []
+  },
+  {
+    "kind": "template",
+    "id": "household-garden",
+    "name": "家庭菜園管理",
+    "description": "区画・作物・栽培予定・作業実績・生育ステージをまとめて管理します。",
+    "file": "gallery/templates/household-garden.json",
+    "source": "Qero bundled examples",
+    "permissions": []
+  },
+  {
+    "kind": "plugin",
+    "id": "garden-calendar.js",
+    "name": "家庭菜園カレンダー",
+    "description": "栽培予定を月表示とアジェンダで確認できるコンポーネントを追加します。",
+    "file": "plugins/garden-calendar.js",
+    "source": "Qero bundled examples",
+    "version": "1.0.0",
+    "integrity": "sha256-XgHGYmvRz0Hk66CmpSaDwuXh92ltRKvxVEStkf3HOO8=",
+    "permissions": []
   }
 ]

@@ -1,0 +1,19 @@
+{
+  "qeroPackage": 1,
+  "id": "household-garden",
+  "name": "家庭菜園管理",
+  "version": "1.0.0",
+  "source": "Qero bundled examples",
+  "plugin": {
+    "id": "garden-calendar.js",
+    "file": "plugins/garden-calendar.js",
+    "integrity": "sha256-XgHGYmvRz0Hk66CmpSaDwuXh92ltRKvxVEStkf3HOO8=",
+    "permissions": []
+  },
+  "template": {
+    "file": "templates/household-garden.json"
+  },
+  "data": [
+    { "file": "data/crop-guides.json" }
+  ]
+}

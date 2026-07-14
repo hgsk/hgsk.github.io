@@ -1,0 +1,889 @@
+{
+  "schemaVersion": "crop-guide/1",
+  "locale": "ja-JP",
+  "dayRangeBasis": "播種日を0日目とする目安。品種、作型、地域、気温で前後する",
+  "crops": [
+    {
+      "id": "tomato",
+      "name": "トマト",
+      "scientificName": "Solanum lycopersicum",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽・育苗",
+          "dayRange": { "start": 0, "end": 35 },
+          "trigger": "子葉が開き、本葉が2〜4枚になる",
+          "physiology": "吸水した種子が貯蔵養分を使って発芽し、子葉展開後は光合成へ移行する。低照度では茎が徒長する。",
+          "management": [
+            "地温24〜29℃を目安に保つ",
+            "発芽後は十分な光と風を与える",
+            "過湿を避けて徐々に鉢上げする"
+          ],
+          "stressCues": [
+            "茎が細長い: 光不足",
+            "地際がくびれる: 過湿や立枯れ",
+            "葉が紫がかる: 低温またはリン吸収低下"
+          ],
+          "animation": {
+            "type": "sprout",
+            "durationMs": 1800,
+            "description": "種子から根、胚軸、子葉が順に伸びる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-tomatoes"
+        },
+        {
+          "id": "vegetative",
+          "name": "栄養成長・定植",
+          "dayRange": { "start": 36, "end": 60 },
+          "trigger": "霜の心配がなく土が温まり、苗が十分に硬化する",
+          "physiology": "葉面積と根系を増やして光合成能力を高める。節から不定根を出せるため、深植えで根域を増やせる。",
+          "management": [
+            "1週間ほど外気に慣らしてから定植する",
+            "定植時に支柱またはケージを設置する",
+            "深く均一に潅水し葉を濡らし続けない"
+          ],
+          "stressCues": [
+            "日中の萎れが夕方も戻らない: 水分不足",
+            "新葉の縮れ: 根傷みや吸汁害虫",
+            "下葉の黄化: 過湿または養分不足"
+          ],
+          "animation": {
+            "type": "root-and-leaf-growth",
+            "durationMs": 2200,
+            "description": "根域と葉面積が並行して広がる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-tomatoes"
+        },
+        {
+          "id": "flowering",
+          "name": "開花・着果",
+          "dayRange": { "start": 61, "end": 90 },
+          "trigger": "花房が開花し、花後に子房が肥大し始める",
+          "physiology": "両性花は主に振動で花粉を放出して自家受粉する。極端な高温・低温や水分ストレスは花粉活性と着果を低下させる。",
+          "management": [
+            "株を軽く揺らすか訪花昆虫の活動を妨げない",
+            "土壌水分を急変させない",
+            "過剰な窒素で葉ばかり茂らせない"
+          ],
+          "stressCues": [
+            "花が落ちる: 高温・低温・乾燥",
+            "果実の尻が黒い: 水分変動に伴うカルシウム移行不足",
+            "葉だけ繁る: 窒素過多"
+          ],
+          "animation": {
+            "type": "pollination-pulse",
+            "durationMs": 1600,
+            "description": "花の振動、花粉放出、子房肥大を連続表示する"
+          },
+          "source": "https://extension.umn.edu/pollination/requirements"
+        },
+        {
+          "id": "ripening",
+          "name": "果実肥大・成熟",
+          "dayRange": { "start": 91, "end": 140 },
+          "trigger": "果実が品種固有の大きさに達し、緑から着色を始める",
+          "physiology": "果実へ糖と水が転流し、成熟時に軟化と色素形成が進む。高温では赤色色素の形成が遅れることがある。",
+          "management": [
+            "均一な水分を保つ",
+            "成熟色と硬さを見て順次収穫する",
+            "降霜前に成熟緑果も取り込む"
+          ],
+          "stressCues": [
+            "裂果: 乾燥後の急な吸水",
+            "着色停滞: 高温",
+            "果実の白い斑: 強日射による日焼け"
+          ],
+          "animation": {
+            "type": "fruit-ripen",
+            "durationMs": 2400,
+            "description": "果実が肥大し緑から赤へ滑らかに変色する"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-tomatoes"
+        }
+      ]
+    },
+    {
+      "id": "cucumber",
+      "name": "キュウリ",
+      "scientificName": "Cucumis sativus",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽",
+          "dayRange": { "start": 0, "end": 10 },
+          "trigger": "子葉が展開する",
+          "physiology": "高温を好む種子が吸水して発芽し、大きな子葉が初期成長を支える。冷たい過湿土では呼吸と根の伸長が鈍る。",
+          "management": [
+            "地温が十分に上がってから播く",
+            "排水のよい土で過湿を避ける",
+            "根鉢を崩さず扱う"
+          ],
+          "stressCues": [
+            "発芽しない・腐る: 低温過湿",
+            "子葉の縁が褐変: 乾燥または肥料濃度",
+            "茎が徒長: 光不足"
+          ],
+          "animation": {
+            "type": "cotyledon-open",
+            "durationMs": 1500,
+            "description": "土を押し上げて大きな子葉が開く"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-cucumbers"
+        },
+        {
+          "id": "vine-growth",
+          "name": "つる伸長",
+          "dayRange": { "start": 11, "end": 35 },
+          "trigger": "本葉が増え、巻きひげが支柱をつかむ",
+          "physiology": "葉で得た同化産物を使って節間と巻きひげが急速に伸びる。葉が混み合うと光合成と通風が低下する。",
+          "management": [
+            "早めにネットへ誘引する",
+            "株間を確保して光と風を通す",
+            "根元へ深く潅水する"
+          ],
+          "stressCues": [
+            "葉が昼夜とも萎れる: 水分不足",
+            "節間が長く葉色が淡い: 光不足",
+            "葉に角張った斑点: 病害の疑い"
+          ],
+          "animation": {
+            "type": "vine-climb",
+            "durationMs": 2200,
+            "description": "巻きひげがネットを探して巻き付く"
+          },
+          "source": "https://extension.umn.edu/commercial-fruit-growing-guides/vining-vegetable-growing-guide"
+        },
+        {
+          "id": "flowering",
+          "name": "開花・受粉",
+          "dayRange": { "start": 36, "end": 50 },
+          "trigger": "雄花に続いて子房のある雌花が咲く",
+          "physiology": "一般的な品種は雄花から雌花への昆虫受粉で果実が発達する。単為結果性品種は受粉なしでも肥大する。",
+          "management": [
+            "開花中の訪花昆虫を保護する",
+            "必要なら午前中に人工授粉する",
+            "単為結果性か品種特性を確認する"
+          ],
+          "stressCues": [
+            "小果が黄化して落ちる: 受粉不足または暑熱",
+            "曲がり果: 不完全受粉や水分変動",
+            "雄花ばかり: 生育初期またはストレス"
+          ],
+          "animation": {
+            "type": "bee-pollination",
+            "durationMs": 1900,
+            "description": "蜂が雄花から雌花へ花粉を運ぶ"
+          },
+          "source": "https://extension.umn.edu/pollination/requirements"
+        },
+        {
+          "id": "fruiting",
+          "name": "果実肥大・収穫",
+          "dayRange": { "start": 51, "end": 90 },
+          "trigger": "果実が品種の収穫サイズに達する",
+          "physiology": "若い果実は強いシンクとなって水と同化産物を急速に取り込む。取り遅れた果実の種子成熟は次の着果を抑える。",
+          "management": [
+            "盛期は毎日確認して若採りする",
+            "水分を切らさない",
+            "傷んだ葉と果実を除く"
+          ],
+          "stressCues": [
+            "苦味・空洞: 高温や水分ストレス",
+            "肥大停止: 根の乾燥または着果過多",
+            "果実表面の黄化: 取り遅れ"
+          ],
+          "animation": {
+            "type": "fruit-elongate",
+            "durationMs": 2000,
+            "description": "雌花の基部が伸長して収穫サイズになる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-cucumbers"
+        }
+      ]
+    },
+    {
+      "id": "eggplant",
+      "name": "ナス",
+      "scientificName": "Solanum melongena",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽・育苗",
+          "dayRange": { "start": 0, "end": 55 },
+          "trigger": "本葉が4〜6枚になり苗が充実する",
+          "physiology": "高い地温で発芽と根の代謝が進む暖地性作物。低温では生長点と根の活動が大きく鈍る。",
+          "management": [
+            "発芽まで地温24〜29℃を保つ",
+            "強い光で徒長を防ぐ",
+            "花が早く付いたら定植まで摘む"
+          ],
+          "stressCues": ["発芽遅延: 地温不足", "細長い苗: 光不足", "紫葉と停滞: 低温"],
+          "animation": {
+            "type": "warm-germination",
+            "durationMs": 1800,
+            "description": "温度ゲージ上昇とともに発芽する"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-eggplant"
+        },
+        {
+          "id": "transplant",
+          "name": "定植・株づくり",
+          "dayRange": { "start": 56, "end": 80 },
+          "trigger": "夜温が10℃を安定して上回る",
+          "physiology": "温かい根域で吸水と養分吸収が進み、葉面積を増やす。根傷みや低温は後の着果まで影響しやすい。",
+          "management": [
+            "十分に硬化して夕方に定植する",
+            "定植時に支柱を立てる",
+            "マルチで地温と水分を安定させる"
+          ],
+          "stressCues": [
+            "定植後に生長しない: 低温障害",
+            "葉縁の焦げ: 急な日射または乾燥",
+            "慢性的な萎れ: 根傷み"
+          ],
+          "animation": {
+            "type": "root-establish",
+            "durationMs": 2000,
+            "description": "根鉢から周囲の土へ新根が伸びる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-eggplant"
+        },
+        {
+          "id": "flowering",
+          "name": "開花・着果",
+          "dayRange": { "start": 81, "end": 110 },
+          "trigger": "花が開き、果実が下向きに肥大する",
+          "physiology": "自家受粉可能な花が結実するが、昼の高温・夜の低温または高温、乾燥で花粉と子房の機能が落ちる。",
+          "management": [
+            "水分を均一に保つ",
+            "強い枝を残して整枝する",
+            "葉を残して果実の日焼けを防ぐ"
+          ],
+          "stressCues": ["落花: 乾燥や温度ストレス", "尻腐れ: 不均一な水分", "白い果皮斑: 日焼け"],
+          "animation": {
+            "type": "flower-to-fruit",
+            "durationMs": 1900,
+            "description": "紫花が閉じて果実へ変化する"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-eggplant"
+        },
+        {
+          "id": "harvest",
+          "name": "果実肥大・収穫",
+          "dayRange": { "start": 111, "end": 160 },
+          "trigger": "果皮につやがあり、押すと弾力がある",
+          "physiology": "種子が硬くなる前の未熟果を収穫する。水分不足や過熟で果肉の食味が落ち、種子成熟へ資源が移る。",
+          "management": [
+            "はさみで果柄を切って若採りする",
+            "週1回以上、土を深く湿らせる",
+            "収穫を続けて次の着果を促す"
+          ],
+          "stressCues": [
+            "果皮のつや消失: 過熟",
+            "苦味や硬い果肉: 水分不足",
+            "収量低下: 取り遅れまたは低温"
+          ],
+          "animation": {
+            "type": "gloss-and-size",
+            "durationMs": 2100,
+            "description": "果実が肥大し光沢が現れ、収穫サインが点灯する"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-eggplant"
+        }
+      ]
+    },
+    {
+      "id": "pepper",
+      "name": "ピーマン",
+      "scientificName": "Capsicum annuum",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽・育苗",
+          "dayRange": { "start": 0, "end": 50 },
+          "trigger": "本葉が4〜6枚になり茎が充実する",
+          "physiology": "温度依存性の高い発芽後、子葉から本葉へ光合成の主役が移る。冷温と過湿で根の働きが弱る。",
+          "management": [
+            "暖かい培土で播種する",
+            "発芽後は明るく管理する",
+            "定植前に徐々に外気へ慣らす"
+          ],
+          "stressCues": ["発芽がそろわない: 低温", "葉が淡く徒長: 光不足", "根元の腐敗: 過湿"],
+          "animation": {
+            "type": "sprout",
+            "durationMs": 1700,
+            "description": "子葉から本葉へ段階的に切り替わる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-peppers"
+        },
+        {
+          "id": "vegetative",
+          "name": "定植・分枝",
+          "dayRange": { "start": 51, "end": 75 },
+          "trigger": "夜温が10℃以上になり、定植後に新葉が動く",
+          "physiology": "主茎が分枝し、各節で葉と花芽をつくる。根域温度が低いと養水分吸収と成長が停滞する。",
+          "management": ["暖かくなってから定植する", "株間を確保する", "根元へ均一に潅水する"],
+          "stressCues": ["生育停止: 低温", "葉巻き: 暑熱または乾燥", "下葉黄化: 過湿"],
+          "animation": {
+            "type": "branching",
+            "durationMs": 1900,
+            "description": "主茎がY字に分枝して葉を増やす"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-peppers"
+        },
+        {
+          "id": "flowering",
+          "name": "開花・着果",
+          "dayRange": { "start": 76, "end": 105 },
+          "trigger": "白い花が開き、花弁落下後に子房が膨らむ",
+          "physiology": "自家受粉性だが、乾燥、32℃を超える高温、低すぎるまたは高すぎる夜温は花と幼果の脱落を招く。",
+          "management": ["開花期の乾燥を避ける", "過剰施肥を避ける", "強光下では葉で果実を覆う"],
+          "stressCues": [
+            "落花: 温度または乾燥ストレス",
+            "葉ばかり繁る: 窒素過多",
+            "幼果の尻が黒い: 水分変動"
+          ],
+          "animation": {
+            "type": "flower-set",
+            "durationMs": 1700,
+            "description": "花が揺れて受粉し、小さな果実へ変わる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-peppers"
+        },
+        {
+          "id": "fruiting",
+          "name": "果実肥大・着色",
+          "dayRange": { "start": 106, "end": 155 },
+          "trigger": "果実が十分な大きさ、または完熟色に達する",
+          "physiology": "未熟果は緑色だが、成熟に伴い葉緑素が減り品種固有の色素が現れる。完熟まで置くほど次の果実への資源配分は減る。",
+          "management": [
+            "青果または完熟果として適期収穫する",
+            "果柄を傷めず切り取る",
+            "水分を一定に保つ"
+          ],
+          "stressCues": ["薄い白斑: 日焼け", "小果のまま: 着果過多や水不足", "裂果: 水分急変"],
+          "animation": {
+            "type": "color-ripen",
+            "durationMs": 2300,
+            "description": "緑果が肥大し赤色へ変わる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-peppers"
+        }
+      ]
+    },
+    {
+      "id": "carrot",
+      "name": "ニンジン",
+      "scientificName": "Daucus carota subsp. sativus",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽",
+          "dayRange": { "start": 0, "end": 21 },
+          "trigger": "細い子葉が地上に現れる",
+          "physiology": "小さな種子は発芽が遅く、浅い土層の水分に依存する。発芽直後から直根が伸び始める。",
+          "management": [
+            "直播して表土を乾かさない",
+            "土のクラストを軽い散水で軟らかくする",
+            "目印作物を併播する場合は競合前に抜く"
+          ],
+          "stressCues": [
+            "欠株: 表土乾燥",
+            "曲がった幼根: 石や締まった土",
+            "苗が倒れる: 過湿や立枯れ"
+          ],
+          "animation": {
+            "type": "taproot-first",
+            "durationMs": 1800,
+            "description": "地上の子葉より先に細い直根が下へ伸びる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips"
+        },
+        {
+          "id": "root-elongation",
+          "name": "根長決定・間引き",
+          "dayRange": { "start": 22, "end": 35 },
+          "trigger": "本葉が増え、草丈が7〜10cmになる",
+          "physiology": "発芽後およそ3週間で直根はほぼ最終長に達し、その後の肥大の骨格が決まる。移植や障害物は分岐根を生む。",
+          "management": ["株間5〜10cmへ間引く", "浅く除草して根を傷めない", "土を締め固めない"],
+          "stressCues": [
+            "密生: 肥大不足の予兆",
+            "二股根: 障害物や根傷み",
+            "葉色が淡い: 養分または水分不足"
+          ],
+          "animation": {
+            "type": "root-elongate",
+            "durationMs": 2200,
+            "description": "細い直根が先端から下へ伸び切る"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips"
+        },
+        {
+          "id": "root-bulking",
+          "name": "根部肥大",
+          "dayRange": { "start": 36, "end": 70 },
+          "trigger": "根の肩が太り、品種固有の色が濃くなる",
+          "physiology": "形成層の細胞分裂と貯蔵組織への糖の蓄積で根が太る。葉の光合成と安定した吸水が品質を左右する。",
+          "management": [
+            "深く均一に潅水する",
+            "根の肩が露出したら軽く土寄せする",
+            "葉を健全に保つ"
+          ],
+          "stressCues": ["細く硬い根: 水不足", "裂根: 乾燥後の急な吸水", "緑化した肩: 光への露出"],
+          "animation": {
+            "type": "root-bulking",
+            "durationMs": 2300,
+            "description": "細い直根が外側へ肥大し橙色が濃くなる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips"
+        },
+        {
+          "id": "harvest",
+          "name": "成熟・収穫",
+          "dayRange": { "start": 71, "end": 100 },
+          "trigger": "根径が品種の目安に達する",
+          "physiology": "根は貯蔵器官として糖を蓄え続ける。過度の老化や乾燥では繊維質が増え、地温上昇後は再成長へ資源を使う。",
+          "management": [
+            "前日に潅水して土を緩める",
+            "フォークで横から持ち上げる",
+            "収穫後は葉を切り離す"
+          ],
+          "stressCues": [
+            "苦く硬い根: 長期の水不足",
+            "折れ: 乾いた締まった土での無理な引抜き",
+            "多数の細根: 根域ストレス"
+          ],
+          "animation": {
+            "type": "harvest-lift",
+            "durationMs": 1400,
+            "description": "土が緩み根が折れずに持ち上がる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips"
+        }
+      ]
+    },
+    {
+      "id": "radish",
+      "name": "ラディッシュ",
+      "scientificName": "Raphanus sativus var. radicula",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽",
+          "dayRange": { "start": 0, "end": 7 },
+          "trigger": "B字形の子葉が開く",
+          "physiology": "冷涼条件でも速やかに発芽し、胚軸と直根が伸びる。表面の硬化は小さな苗の出芽を妨げる。",
+          "management": ["涼しい時期に直播する", "表土を湿らせる", "小型種は浅く播く"],
+          "stressCues": [
+            "出芽不良: 土壌クラスト",
+            "徒長: 光不足または密播",
+            "小穴のある子葉: ノミハムシ"
+          ],
+          "animation": {
+            "type": "fast-sprout",
+            "durationMs": 1200,
+            "description": "子葉が素早く地表へ現れる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-radishes"
+        },
+        {
+          "id": "leaf-growth",
+          "name": "葉の展開・間引き",
+          "dayRange": { "start": 8, "end": 14 },
+          "trigger": "本葉が2〜3枚になる",
+          "physiology": "葉の光合成で作った同化産物が、肥大を始める胚軸・根へ送られる。密植では光と根域が競合する。",
+          "management": ["株間約5cmへ間引く", "浅く除草する", "週を通じ水分を安定させる"],
+          "stressCues": ["密集して細い: 間引き不足", "葉がしおれる: 水不足", "葉の穴: ノミハムシ"],
+          "animation": {
+            "type": "leaf-to-root-flow",
+            "durationMs": 1600,
+            "description": "葉から根へ糖が流れる粒子を表示する"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-radishes"
+        },
+        {
+          "id": "root-bulking",
+          "name": "根部肥大",
+          "dayRange": { "start": 15, "end": 28 },
+          "trigger": "地際の根肩が丸く太る",
+          "physiology": "胚軸と主根上部の貯蔵組織が短期間で肥大する。高温や乾燥で成長が遅れると辛味と木質化が進む。",
+          "management": ["深く均一に潅水する", "根を露出させない", "暑くなる前に収穫を始める"],
+          "stressCues": ["強い辛味・硬さ: 高温や乾燥", "裂根: 水分変動", "肥大しない: 密植"],
+          "animation": {
+            "type": "root-bulking",
+            "durationMs": 1700,
+            "description": "根肩が球状に膨らむ"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-radishes"
+        },
+        {
+          "id": "harvest",
+          "name": "収穫",
+          "dayRange": { "start": 29, "end": 35 },
+          "trigger": "根が利用サイズに達し、表面が張っている",
+          "physiology": "春まきの小型品種は3〜5週で収穫期に達する。畑に長く残すと花芽形成や繊維化へ進む。",
+          "management": [
+            "適期にまとめて抜く",
+            "葉を外して冷蔵する",
+            "連続収穫は時期をずらして播く"
+          ],
+          "stressCues": [
+            "す入り・木質化: 取り遅れ",
+            "抽苔: 高温と長日",
+            "しなび: 収穫後の水分損失"
+          ],
+          "animation": {
+            "type": "ready-pulse",
+            "durationMs": 1200,
+            "description": "収穫サイズの根が脈動して合図する"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-radishes"
+        }
+      ]
+    },
+    {
+      "id": "lettuce",
+      "name": "レタス",
+      "scientificName": "Lactuca sativa",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽・育苗",
+          "dayRange": { "start": 0, "end": 14 },
+          "trigger": "子葉が開き本葉が現れる",
+          "physiology": "小さな種子が浅い土層で発芽する。高温は品種により発芽を抑え、弱光は苗を徒長させる。",
+          "management": ["涼しい環境で浅く播く", "表土を均一に湿らせる", "明るい場所で育苗する"],
+          "stressCues": ["発芽不良: 高温または乾燥", "徒長: 光不足", "地際の腐敗: 過湿"],
+          "animation": {
+            "type": "cool-germination",
+            "durationMs": 1500,
+            "description": "温度が適域に入ると子葉が開く"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-lettuce-endive-and-radicchio"
+        },
+        {
+          "id": "rosette",
+          "name": "ロゼット・葉の展開",
+          "dayRange": { "start": 15, "end": 35 },
+          "trigger": "中心から葉が連続して広がる",
+          "physiology": "短い茎の周囲に葉を重ね、光合成産物を新葉へ配分する。株間が狭いほど葉は立ち、広いほど横へ広がる。",
+          "management": [
+            "目的サイズに合わせて間引く",
+            "葉の品質を保つため水を切らさない",
+            "外葉を傷めないよう浅く除草する"
+          ],
+          "stressCues": [
+            "葉先枯れ: 急成長時のカルシウム移行不足",
+            "葉が硬く小さい: 水不足",
+            "外葉黄化: 過湿や老化"
+          ],
+          "animation": {
+            "type": "rosette-unfold",
+            "durationMs": 2000,
+            "description": "中心から葉がらせん状に展開する"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-lettuce-endive-and-radicchio"
+        },
+        {
+          "id": "heading",
+          "name": "結球・収穫葉形成",
+          "dayRange": { "start": 36, "end": 60 },
+          "trigger": "結球種は内葉が重なり、葉レタスは利用サイズになる",
+          "physiology": "内葉の成長角度と葉の重なりで球が形成される。冷涼な温度では葉の成長と食味を維持しやすい。",
+          "management": [
+            "朝の涼しい時間に収穫する",
+            "土壌水分を保つ",
+            "高温期は遮光や秋作へ切り替える"
+          ],
+          "stressCues": [
+            "球が緩い: 高温または品種特性",
+            "苦味増加: 暑熱",
+            "中心葉の褐変: 生理障害"
+          ],
+          "animation": {
+            "type": "head-form",
+            "durationMs": 2200,
+            "description": "外葉の内側で新葉が重なり球を作る"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-lettuce-endive-and-radicchio"
+        },
+        {
+          "id": "bolting",
+          "name": "抽苔サイン",
+          "dayRange": { "start": 61, "end": 80 },
+          "trigger": "中心茎が伸び始める、または葉の苦味が強くなる",
+          "physiology": "長日、高光強度、高温に反応して栄養成長から生殖成長へ移り、花茎を伸ばす。移行後は食味が急低下する。",
+          "management": [
+            "兆候が出た株をすぐ収穫する",
+            "次作は耐暑性品種か涼しい作期を選ぶ",
+            "播種時期をずらす"
+          ],
+          "stressCues": [
+            "中心茎の伸長: 抽苔開始",
+            "乳液と強い苦味: 生殖成長への移行",
+            "葉が細長く立つ: 抽苔前兆"
+          ],
+          "animation": {
+            "type": "bolt-warning",
+            "durationMs": 1800,
+            "description": "短い茎が急伸し警告色へ変わる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-lettuce-endive-and-radicchio"
+        }
+      ]
+    },
+    {
+      "id": "spinach",
+      "name": "ホウレンソウ",
+      "scientificName": "Spinacia oleracea",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽",
+          "dayRange": { "start": 0, "end": 10 },
+          "trigger": "細長い子葉が展開する",
+          "physiology": "冷涼条件で発芽しやすく、高温下では発芽と初期生育が不安定になる。直根と葉の基部となる冠部を形成する。",
+          "management": ["春早く、または秋に直播する", "表土を乾かさない", "株間を確保する"],
+          "stressCues": ["発芽不良: 高温", "倒伏: 過湿", "食害穴: 昆虫"],
+          "animation": {
+            "type": "cool-sprout",
+            "durationMs": 1400,
+            "description": "冷涼帯で子葉と直根が同時に伸びる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard"
+        },
+        {
+          "id": "rosette",
+          "name": "葉の展開",
+          "dayRange": { "start": 11, "end": 25 },
+          "trigger": "冠部から本葉が放射状に増える",
+          "physiology": "冠部の生長点が葉を連続的につくる。十分な水分は葉の拡大と春の抽苔遅延に役立つ。",
+          "management": [
+            "週を通じて水分を保つ",
+            "株元を傷つけず除草する",
+            "若葉は外側から収穫する"
+          ],
+          "stressCues": [
+            "葉が小さく硬い: 乾燥",
+            "黄化: 過湿や養分不足",
+            "葉の蛇行痕: ハモグリバエ"
+          ],
+          "animation": {
+            "type": "rosette-unfold",
+            "durationMs": 1800,
+            "description": "冠部から葉が放射状に開く"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard"
+        },
+        {
+          "id": "harvest",
+          "name": "収穫・再生",
+          "dayRange": { "start": 26, "end": 40 },
+          "trigger": "葉が利用サイズに達する",
+          "physiology": "生長点を残して外葉を採れば、冠部から新葉を再生できる。全株収穫では再生しない。",
+          "management": [
+            "朝に外葉から収穫する",
+            "再収穫する場合は冠部を残す",
+            "収穫後すぐ冷却する"
+          ],
+          "stressCues": ["再生しない: 冠部の切断", "しおれ: 収穫後の高温", "成長停止: 水分不足"],
+          "animation": {
+            "type": "cut-and-regrow",
+            "durationMs": 2100,
+            "description": "外葉収穫後、中心から新葉が再生する"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard"
+        },
+        {
+          "id": "bolting",
+          "name": "抽苔サイン",
+          "dayRange": { "start": 41, "end": 60 },
+          "trigger": "中心茎が伸び、葉形が細く変わる",
+          "physiology": "ホウレンソウは日長に敏感で、長日と高温により生殖成長へ移行する。秋の短日条件では抽苔しにくい。",
+          "management": ["抽苔前に全株収穫する", "春は播種を分散する", "夏を避けて秋作を選ぶ"],
+          "stressCues": ["中心軸の伸長: 抽苔", "葉が細くなる: 花茎形成", "苦味・硬化: 収穫遅れ"],
+          "animation": {
+            "type": "photoperiod-bolt",
+            "durationMs": 2000,
+            "description": "日照時間メーターと連動して花茎が伸びる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard"
+        }
+      ]
+    },
+    {
+      "id": "bean",
+      "name": "インゲンマメ",
+      "scientificName": "Phaseolus vulgaris",
+      "stages": [
+        {
+          "id": "germination",
+          "name": "発芽",
+          "dayRange": { "start": 0, "end": 10 },
+          "trigger": "厚い子葉が地上へ持ち上がる",
+          "physiology": "種子の大きな子葉に蓄えた養分で発芽する。冷たい土では代謝が遅く、吸水した種子が腐りやすい。",
+          "management": [
+            "土が温まってから直播する",
+            "播種後の過湿を避ける",
+            "つる性は播種時に支柱を立てる"
+          ],
+          "stressCues": ["欠株・種子腐敗: 低温過湿", "子葉の欠損: 鳥獣や虫害", "黄化: 根の酸欠"],
+          "animation": {
+            "type": "epigeal-germination",
+            "durationMs": 1700,
+            "description": "胚軸が曲がって子葉を地上へ持ち上げる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-beans"
+        },
+        {
+          "id": "vegetative",
+          "name": "茎葉・根粒形成",
+          "dayRange": { "start": 11, "end": 30 },
+          "trigger": "三出複葉が増え、つる性は支柱へ巻き付く",
+          "physiology": "深い直根と浅い側根を形成する。根粒菌との共生により窒素を得るため、一般に多量の窒素肥料を必要としない。",
+          "management": [
+            "浅く除草して側根を傷めない",
+            "つるを支柱へ誘引する",
+            "過剰な窒素施肥を避ける"
+          ],
+          "stressCues": [
+            "葉ばかり繁る: 窒素過多",
+            "淡緑色: 根の不調や養分不足",
+            "つるが地面を這う: 支柱不足"
+          ],
+          "animation": {
+            "type": "nodule-and-climb",
+            "durationMs": 2300,
+            "description": "根粒が点灯し、つるが支柱を登る"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-beans"
+        },
+        {
+          "id": "flowering",
+          "name": "開花・莢形成",
+          "dayRange": { "start": 31, "end": 48 },
+          "trigger": "花が咲き、細い莢が現れる",
+          "physiology": "多くは自家受粉性で、受精後に莢と種子が成長する。開花期の極端な高温は一時的に着莢を妨げる。",
+          "management": [
+            "開花中の乾燥を避ける",
+            "高温時は根域をマルチで守る",
+            "葉が濡れた状態で株を触らない"
+          ],
+          "stressCues": [
+            "花だけ落ちる: 高温または乾燥",
+            "莢が少ない: 開花期ストレス",
+            "斑点が広がる: 病害の疑い"
+          ],
+          "animation": {
+            "type": "self-pollination",
+            "durationMs": 1700,
+            "description": "花内で受粉し細い莢が伸び始める"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-beans"
+        },
+        {
+          "id": "pod-harvest",
+          "name": "莢肥大・収穫",
+          "dayRange": { "start": 49, "end": 80 },
+          "trigger": "莢は十分な長さだが内部の種子が膨らむ前",
+          "physiology": "若莢は柔らかい組織を維持するが、種子成熟が進むと莢の繊維化と乾燥が進む。継続収穫で新しい開花を促せる。",
+          "management": [
+            "若莢をこまめに収穫する",
+            "株を引っ張らず両手で摘む",
+            "乾燥豆は莢が完全に乾いてから収穫する"
+          ],
+          "stressCues": ["莢の膨らみ: 若莢の取り遅れ", "硬い筋: 過熟", "莢の変形: 水分ストレス"],
+          "animation": {
+            "type": "pod-fill",
+            "durationMs": 1900,
+            "description": "若莢が伸び、種子が膨らむ前に収穫合図を出す"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-beans"
+        }
+      ]
+    },
+    {
+      "id": "potato",
+      "name": "ジャガイモ",
+      "scientificName": "Solanum tuberosum",
+      "stages": [
+        {
+          "id": "sprouting",
+          "name": "萌芽",
+          "dayRange": { "start": 0, "end": 21 },
+          "trigger": "種いもの芽が地上へ現れる",
+          "physiology": "種いもの芽と貯蔵養分から茎と根が伸びる。各切片の芽が生長点となり、切り口の治癒は腐敗を防ぐ。",
+          "management": [
+            "健全な種いもを使う",
+            "切片に1〜3個の芽を残し切り口を乾かす",
+            "土が温まったら植える"
+          ],
+          "stressCues": ["萌芽しない: 芽の欠損や低温", "切片腐敗: 過湿", "弱い芽: 種いもの劣化"],
+          "animation": {
+            "type": "eye-sprout",
+            "durationMs": 1800,
+            "description": "種いもの芽から地上茎と地下根が分かれて伸びる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-potatoes"
+        },
+        {
+          "id": "vegetative-stolon",
+          "name": "茎葉・ストロン形成",
+          "dayRange": { "start": 22, "end": 45 },
+          "trigger": "草丈が約30cmになり地下茎が伸びる",
+          "physiology": "主茎の地下部から細いストロンが伸び、その先端が塊茎になる。土寄せは地下茎の空間を確保し浅い塊茎を遮光する。",
+          "management": ["草丈に合わせて土寄せする", "浅く除草する", "日当たりを確保する"],
+          "stressCues": ["露出いもの緑化: 遮光不足", "下葉黄化: 過湿や病害", "茎の食害: 害虫"],
+          "animation": {
+            "type": "stolon-network",
+            "durationMs": 2300,
+            "description": "地下茎が横へ伸び先端が丸くなる"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-potatoes"
+        },
+        {
+          "id": "tuber-bulking",
+          "name": "塊茎形成・肥大",
+          "dayRange": { "start": 46, "end": 80 },
+          "trigger": "開花前後、ストロン先端の塊茎が肥大する",
+          "physiology": "葉の同化産物が地下の塊茎へ転流してデンプンとして蓄積される。肥大期の水分変動は内部空洞やこぶ状変形を招く。",
+          "management": [
+            "週1〜2回、深く均一に潅水する",
+            "追加の土寄せで光を遮る",
+            "土壌診断に基づき追肥する"
+          ],
+          "stressCues": [
+            "こぶ状・内部空洞: 水分変動",
+            "新しい塊茎が増えない: 乾燥",
+            "葉の病斑: 疫病類の疑い"
+          ],
+          "animation": {
+            "type": "tuber-bulking",
+            "durationMs": 2400,
+            "description": "葉から地下へ糖粒子が流れ塊茎が膨らむ"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-potatoes"
+        },
+        {
+          "id": "maturation",
+          "name": "成熟・収穫",
+          "dayRange": { "start": 81, "end": 120 },
+          "trigger": "地上部が黄化・枯れ、皮がこすっても剥けにくい",
+          "physiology": "地上部の老化とともに塊茎の肥大が止まり、表皮が厚くなって貯蔵性が高まる。光に当たると緑化する。",
+          "management": [
+            "地上部が枯れてから乾いた日に掘る",
+            "傷つけないようフォークを離して入れる",
+            "暗く風通しのよい場所で皮を硬化させる"
+          ],
+          "stressCues": ["皮がすぐ剥ける: 未熟", "緑色: 光への露出", "軟化や腐敗臭: 傷または病害"],
+          "animation": {
+            "type": "senescence-harvest",
+            "durationMs": 2200,
+            "description": "地上部が黄化し、地下の塊茎に収穫合図が出る"
+          },
+          "source": "https://extension.umn.edu/vegetables/growing-potatoes"
+        }
+      ]
+    }
+  ]
+}

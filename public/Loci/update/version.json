@@ -1,7 +1,7 @@
 {
-  "versionCode": 29734753,
-  "versionName": "1.0.202607150313",
+  "versionCode": 29734925,
+  "versionName": "1.0.202607150605",
   "apkUrl": "https://hgsk.github.io/Loci/update/app-debug.apk",
-  "sha256": "7b3bf2480baf40b6ea181b93cd6ae678554ed27b2b6b551dd1a52caf6a2656e2",
-  "commit": "be4b344fdb328bed7ec7768b10cd473304d59d75"
+  "sha256": "5af9025247a9bf5f0e5ab345e50dfe6ba11acc9fe5be7c7637fb83d79f1ec57e",
+  "commit": "28bf0f4181f261355422547e1d11d7c5e3fca932"
 }

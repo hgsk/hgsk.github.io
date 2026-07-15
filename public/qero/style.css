@@ -3135,6 +3135,197 @@ body.qero-published .canvas-hud {
   color: var(--text-dim);
 }
 
+/* ==== features/106-design-system.css ==== */
+/* Qero design-system foundation (#106). Existing colors remain authoritative. */
+:root {
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+  --ds-radius-sm: 4px;
+  --ds-radius-md: 8px;
+  --ds-radius-lg: 12px;
+  --ds-font-xs: 11px;
+  --ds-font-sm: 12px;
+  --ds-font-md: 13px;
+  --ds-font-lg: 15px;
+  --ds-line-compact: 1.35;
+  --ds-line-body: 1.55;
+  --ds-control-height: 32px;
+  --ds-dialog-width: 480px;
+  --ds-dialog-overlay: rgba(8, 9, 12, 0.68);
+  --ds-shadow-dialog: 0 20px 56px rgba(0, 0, 0, 0.38);
+  --ds-shadow-tooltip: 0 8px 24px rgba(0, 0, 0, 0.32);
+  --ds-layer-dialog: 100;
+  --ds-layer-tooltip: 300;
+}
+
+:root[data-theme="light"] {
+  --ds-dialog-overlay: rgba(28, 32, 40, 0.42);
+  --ds-shadow-dialog: 0 20px 56px rgba(31, 38, 52, 0.22);
+  --ds-shadow-tooltip: 0 8px 24px rgba(31, 38, 52, 0.2);
+}
+
+/* Keep the established public classes while giving dialogs one hierarchy. */
+.dialog-backdrop {
+  padding: var(--ds-space-4);
+  background: var(--ds-dialog-overlay);
+  z-index: var(--ds-layer-dialog);
+}
+
+.dialog {
+  width: min(var(--ds-dialog-width), 100%);
+  min-width: 0;
+  padding: 0;
+  border-radius: var(--ds-radius-lg);
+  box-shadow: var(--ds-shadow-dialog);
+  overflow: hidden auto;
+}
+
+.dialog > .dialog-title {
+  margin: 0;
+  padding: var(--ds-space-5) var(--ds-space-6) var(--ds-space-3);
+  font-size: var(--ds-font-lg);
+  line-height: var(--ds-line-compact);
+}
+
+.dialog > .dialog-body {
+  padding: var(--ds-space-2) var(--ds-space-6) var(--ds-space-6);
+}
+
+.dialog .d-row {
+  gap: var(--ds-space-3);
+  margin-bottom: var(--ds-space-3);
+}
+
+.dialog .d-row > label {
+  font-size: var(--ds-font-sm);
+  line-height: var(--ds-line-compact);
+}
+
+.dialog .d-actions {
+  gap: var(--ds-space-2);
+  margin-top: var(--ds-space-5);
+  padding-top: var(--ds-space-3);
+  border-top: 1px solid var(--border);
+}
+
+.dialog .d-note {
+  font-size: var(--ds-font-xs);
+  line-height: var(--ds-line-body);
+}
+
+.dialog .ds-dialog-section {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  margin-top: var(--ds-space-5);
+  line-height: var(--ds-line-compact);
+}
+
+.ds-dialog-section-label {
+  min-width: 0;
+}
+
+/* Accessible tooltip primitive used by dialogHint(). */
+.ds-hint {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+
+button.ds-hint-trigger {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  padding: 0;
+  border-radius: 50%;
+  color: var(--text-dim);
+  font-size: var(--ds-font-xs);
+  font-weight: 700;
+  line-height: 1;
+}
+
+button.ds-hint-trigger:hover,
+button.ds-hint-trigger:focus-visible {
+  color: var(--text);
+  border-color: var(--accent);
+  outline: 2px solid var(--accent-dim);
+  outline-offset: 1px;
+}
+
+button.ds-hint-warning {
+  color: var(--warn);
+}
+
+.ds-tooltip {
+  position: absolute;
+  z-index: var(--ds-layer-tooltip);
+  inset-block-start: calc(100% + var(--ds-space-2));
+  inset-inline-start: 50%;
+  width: max-content;
+  max-width: min(320px, calc(100vw - 48px));
+  padding: var(--ds-space-2) var(--ds-space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--ds-radius-md);
+  background: var(--bg-input);
+  color: var(--text);
+  box-shadow: var(--ds-shadow-tooltip);
+  font-size: var(--ds-font-xs);
+  font-weight: 400;
+  line-height: var(--ds-line-body);
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -4px);
+  transition: opacity 120ms ease, transform 120ms ease, visibility 120ms;
+}
+
+.ds-tooltip-warning {
+  border-color: var(--warn);
+}
+
+.ds-hint:hover > .ds-tooltip,
+.ds-hint:focus-within > .ds-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 560px) {
+  .dialog > .dialog-title {
+    padding: var(--ds-space-4) var(--ds-space-4) var(--ds-space-2);
+  }
+
+  .dialog > .dialog-body {
+    padding: var(--ds-space-2) var(--ds-space-4) var(--ds-space-4);
+  }
+
+  .dialog .d-row {
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--ds-space-1);
+  }
+
+  .dialog .d-row > label {
+    width: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-tooltip {
+    transition: none;
+  }
+}
+
 /* ==== features/gallery.css ==== */
 /* Issue #098: ギャラリーを目的別のカードグリッドとして整理する。 */
 .dialog.dialog-xl.gallery-dialog {

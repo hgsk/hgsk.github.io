@@ -3653,6 +3653,151 @@ button.ds-hint-warning {
   }
 }
 
+/* ==== features/project-document-card-hierarchy.css ==== */
+/* Issue #de773b: プロジェクト ＞ 文書 ＞ カードを一列で示す階層ナビ。 */
+#topbar .hierarchy-nav {
+  flex: 1 1 520px;
+  gap: 4px;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--bg);
+}
+
+#topbar .hierarchy-nav .crumb-icon {
+  flex: 0 0 auto;
+  font-size: 13px;
+  line-height: 1;
+}
+
+#topbar button.crumb-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 150px;
+  padding: 3px 5px;
+}
+
+#topbar button.crumb-project .crumb-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#topbar .hierarchy-nav input.project-name {
+  width: clamp(96px, 13vw, 180px);
+  min-width: 72px;
+  padding: 3px 5px;
+  border-color: transparent;
+  background: transparent;
+  font-weight: 600;
+}
+
+#topbar .hierarchy-nav input.project-name:hover,
+#topbar .hierarchy-nav input.project-name:focus {
+  border-color: var(--border);
+  background: var(--bg-panel2);
+}
+
+#topbar .hierarchy-card {
+  flex: 1 1 320px;
+  max-width: none;
+  min-width: 145px;
+  overflow-x: auto;
+  gap: 3px;
+}
+
+#topbar .hierarchy-card select.card-select {
+  width: clamp(88px, 11vw, 150px);
+  min-width: 72px;
+  padding: 2px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  border-color: var(--accent);
+}
+
+#topbar .hierarchy-card .icon-btn {
+  padding: 2px 5px;
+  min-width: 24px;
+}
+
+#topbar .hierarchy-card .card-add {
+  color: var(--ok);
+}
+
+#topbar .hierarchy-card .card-del {
+  color: var(--danger);
+}
+
+#topbar .hierarchy-card .card-tool-sep {
+  color: var(--text-dim);
+  opacity: 0.45;
+  margin: 0 2px;
+}
+
+#topbar .hierarchy-card .card-tool-icon,
+#topbar .hierarchy-card .card-transition-label {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+#topbar .hierarchy-card select.bg-select {
+  max-width: 96px;
+  padding: 2px 4px;
+}
+
+@media (max-width: 768px) {
+  /* 非表示のメニューボタンを包む空 wrapper とレベル選択で横幅を消費させない。 */
+  #topbar .tb-menu,
+  #topbar select.tb-more {
+    display: none;
+  }
+
+  #topbar .hierarchy-nav {
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+    padding: 2px 4px;
+    gap: 2px;
+  }
+
+  /* projectCrumb は tb-more としてハンバーガーに残し、本体では文書 ＞ カードに絞る。 */
+  #topbar button.crumb-project,
+  #topbar .hierarchy-nav .project-document-sep {
+    display: none;
+  }
+
+  #topbar .hierarchy-nav .document-card-sep {
+    display: inline;
+  }
+
+  #topbar .hierarchy-nav input.project-name {
+    flex: 0 1 70px;
+    width: 70px;
+    min-width: 48px;
+  }
+
+  #topbar .hierarchy-card {
+    flex: 1 1 72px;
+    min-width: 0;
+  }
+
+  #topbar .hierarchy-card select.card-select {
+    width: 70px;
+    min-width: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 主要導線（文書・カード、実行、☰）へ幅を譲る。検索・ホームは tb-more 経由。 */
+  #topbar .logo,
+  #topbar .presence-root,
+  #topbar .spacer {
+    display: none;
+  }
+}
+
 /* ==== features/unified-creation-tools.css ==== */
 /* #079 / GitHub #108: every registry component is exposed in the toolbox. */
 @media (min-width: 769px) {

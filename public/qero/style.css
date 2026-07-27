@@ -3326,6 +3326,60 @@ button.ds-hint-warning {
   }
 }
 
+/* ==== features/contextual-radial-menu.css ==== */
+/* #073d50: canvas commands are arranged around the right-click target rather
+   than detached from the document in a top-bar File dropdown. */
+.tb-document-menu {
+  display: none;
+}
+
+.contextmenu-radial {
+  --radial-size: 420px;
+  --radial-radius: 162px;
+  width: var(--radial-size);
+  height: var(--radial-size);
+  min-width: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--bg-panel) 92%, transparent);
+  backdrop-filter: blur(8px);
+}
+.contextmenu-radial .contextmenu-sep {
+  display: none;
+}
+.contextmenu-radial .contextmenu-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 76px;
+  min-height: 42px;
+  padding: 4px 6px;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 11px;
+  transform: translate(-50%, -50%) rotate(calc(360deg * var(--menu-index) / var(--menu-count)))
+    translateY(calc(-1 * var(--radial-radius)))
+    rotate(calc(-360deg * var(--menu-index) / var(--menu-count)));
+}
+.contextmenu-radial .contextmenu-shortcut {
+  display: none;
+}
+.contextmenu-radial .contextmenu-label {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .contextmenu-radial {
+    --radial-size: 330px;
+    --radial-radius: 125px;
+  }
+  .contextmenu-radial .contextmenu-item {
+    width: 62px;
+    min-height: 36px;
+    font-size: 10px;
+  }
+}
+
 /* ==== features/gallery.css ==== */
 /* Issue #098: ギャラリーを目的別のカードグリッドとして整理する。 */
 .dialog.dialog-xl.gallery-dialog {

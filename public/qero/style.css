@@ -18,6 +18,10 @@
   --ok: #27c93f;
   --warn: #ffbd2e;
   --keyframe: #ffd23f;
+  /* ツールボックスはテーマにかかわらず濃色のフローティングパレット。 */
+  --toolbox-icon: #ffffff;
+  --toolbox-active-icon: #ffffff;
+  --toolbox-hover-icon: #ffffff;
   color-scheme: dark light;
   font-size: 13px;
 }
@@ -37,6 +41,8 @@
   --ok: #1fa834;
   --warn: #b98900;
   --keyframe: #a67c00;
+  /* 淡い選択背景上だけは暗色の方が WCAG コントラストを満たす。 */
+  --toolbox-active-icon: #1e1f24;
 }
 
 * {
@@ -1054,15 +1060,22 @@ a.mdlite-link:not([href]) {
   justify-content: center;
   background: transparent;
   border: 1px solid transparent;
+  color: var(--toolbox-icon);
+  /* 絵文字フォントの固有色を避け、前景色を単色グリフにも適用する。 */
+  font-variant-emoji: text;
 }
 .toolbox-btn:hover {
-  background: var(--bg-panel2);
+  background: rgba(255, 255, 255, 0.12);
 }
 .toolbox-btn.active {
   /* issue #009 レビュー修正10: background/border-color は 69行目付近の
      グローバル button.active（値は同一）に委ねる。ここでは .toolbox-btn の
      既定 color（透明背景に合わせた文字色）を上書きする分だけ残す。 */
-  color: #fff;
+  color: var(--toolbox-active-icon);
+}
+.toolbox-btn.active:hover {
+  /* hover は淡青の選択背景を覆うため、濃色テーマと同じ白を使う。 */
+  color: var(--toolbox-hover-icon);
 }
 .toolbox-swatches {
   display: flex;

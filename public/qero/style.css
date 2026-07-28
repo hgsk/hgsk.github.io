@@ -3326,6 +3326,35 @@ button.ds-hint-warning {
   }
 }
 
+/* ==== features/audit-history.css ==== */
+.audit-history-list {
+  display: grid;
+  gap: 4px;
+  margin: 4px 0 14px;
+}
+.audit-history-item {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  padding: 7px 8px;
+  text-align: left;
+  color: var(--text);
+  background: var(--bg-panel2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.audit-history-item:hover {
+  border-color: var(--accent);
+}
+.audit-history-main {
+  font-size: 12px;
+}
+.audit-history-meta {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
 /* ==== features/contextual-radial-menu.css ==== */
 /* #073d50: canvas commands are arranged around the right-click target rather
    than detached from the document in a top-bar File dropdown. */

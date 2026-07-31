@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Qeroは基本機能を永年無料で提供し、データを利用者自身で管理できるlocal-first共同作業ツールです。必要な組織だけが復旧・接続継続の有償pilotを選べます。"
+    />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta property="og:title" content="Qero Trust Continuity Pilot" />
+    <meta
+      property="og:description"
+      content="基本機能は永年無料。データは自分で管理。必要な組織だけが継続性を追加できます。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./og.png" />
+    <title>Qero Trust Continuity Pilot</title>
+    <link rel="icon" href="../icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip"></a>
+
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Qero">
+        <img src="../icon.svg" width="32" height="32" alt="" />
+        <span>Qero</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#pilots" data-i18n="navPilots"></a>
+        <a href="#trust" data-i18n="navTrust"></a>
+        <a href="#consult" class="nav-cta" data-i18n="navConsult"></a>
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Language">
+          EN
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow"></p>
+          <h1 id="hero-title" data-i18n="heroTitle"></h1>
+          <p class="hero-lead" data-i18n="heroLead"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#consult" data-i18n="heroCta"></a>
+            <a class="button button-ghost" href="#pilots" data-i18n="heroSecondary"></a>
+          </div>
+          <p class="hero-note" data-i18n="heroNote"></p>
+        </div>
+
+        <div class="continuity-card" aria-label="Trust continuity overview">
+          <div class="card-topline">
+            <span class="status-dot"></span>
+            <span data-i18n="cardStatus"></span>
+            <span class="card-meta">LOCAL FIRST</span>
+          </div>
+          <div class="continuity-path" aria-hidden="true">
+            <div class="path-line"></div>
+            <div class="path-node node-one">
+              <span>01</span>
+              <strong data-i18n="pathRecord"></strong>
+            </div>
+            <div class="path-node node-two">
+              <span>02</span>
+              <strong data-i18n="pathProtect"></strong>
+            </div>
+            <div class="path-node node-three">
+              <span>03</span>
+              <strong data-i18n="pathRestore"></strong>
+            </div>
+          </div>
+          <div class="proof-grid">
+            <div>
+              <span class="proof-value">&lt; 20s</span>
+              <span data-i18n="proofConnect"></span>
+            </div>
+            <div>
+              <span class="proof-value">&lt; 30m</span>
+              <span data-i18n="proofRestore"></span>
+            </div>
+            <div>
+              <span class="proof-value">2-of-3</span>
+              <span data-i18n="proofKeys"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="Pilot principles">
+        <p><span>01</span><strong data-i18n="signalLocal"></strong></p>
+        <p><span>02</span><strong data-i18n="signalRecovery"></strong></p>
+        <p><span>03</span><strong data-i18n="signalEvidence"></strong></p>
+      </section>
+
+      <section class="free-promise" aria-labelledby="free-title">
+        <div class="free-promise-heading">
+          <p class="eyebrow" data-i18n="freeEyebrow"></p>
+          <h2 id="free-title" data-i18n="freeTitle"></h2>
+          <p data-i18n="freeLead"></p>
+        </div>
+        <div class="free-boundary">
+          <article class="free-card">
+            <div class="free-card-top">
+              <span class="plan-tag">QERO FREE</span>
+              <strong data-i18n="freeForever"></strong>
+            </div>
+            <h3 data-i18n="freeCardTitle"></h3>
+            <ul>
+              <li data-i18n="freeItemOne"></li>
+              <li data-i18n="freeItemTwo"></li>
+              <li data-i18n="freeItemThree"></li>
+              <li data-i18n="freeItemFour"></li>
+            </ul>
+          </article>
+          <article class="paid-boundary-card">
+            <span class="plan-tag" data-i18n="paidTag"></span>
+            <h3 data-i18n="paidBoundaryTitle"></h3>
+            <p data-i18n="paidBoundaryBody"></p>
+            <p class="no-lockin" data-i18n="noLockin"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="problem section-grid" aria-labelledby="problem-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="problemEyebrow"></p>
+          <h2 id="problem-title" data-i18n="problemTitle"></h2>
+        </div>
+        <div class="problem-list">
+          <article>
+            <span>01</span>
+            <div>
+              <h3 data-i18n="problemOneTitle"></h3>
+              <p data-i18n="problemOneBody"></p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3 data-i18n="problemTwoTitle"></h3>
+              <p data-i18n="problemTwoBody"></p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3 data-i18n="problemThreeTitle"></h3>
+              <p data-i18n="problemThreeBody"></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="pilots" class="pilots" aria-labelledby="pilots-title">
+        <div class="section-heading centered">
+          <p class="eyebrow" data-i18n="pilotsEyebrow"></p>
+          <h2 id="pilots-title" data-i18n="pilotsTitle"></h2>
+          <p data-i18n="pilotsLead"></p>
+        </div>
+        <div class="pilot-grid">
+          <article class="pilot-card">
+            <div class="pilot-label">PRESERVE</div>
+            <h3 data-i18n="preserveTitle"></h3>
+            <p class="pilot-for" data-i18n="preserveFor"></p>
+            <p class="price"><strong>30,000</strong><span data-i18n="priceSuffix"></span></p>
+            <ul>
+              <li data-i18n="preserveItemOne"></li>
+              <li data-i18n="preserveItemTwo"></li>
+              <li data-i18n="preserveItemThree"></li>
+              <li data-i18n="preserveItemFour"></li>
+            </ul>
+            <a href="#consult" class="button button-dark" data-pilot="preserve"
+              data-i18n="choosePreserve"></a>
+          </article>
+
+          <article class="pilot-card pilot-card-featured">
+            <div class="pilot-label">MESH</div>
+            <h3 data-i18n="meshTitle"></h3>
+            <p class="pilot-for" data-i18n="meshFor"></p>
+            <p class="price"><strong>60,000</strong><span data-i18n="priceSuffix"></span></p>
+            <ul>
+              <li data-i18n="meshItemOne"></li>
+              <li data-i18n="meshItemTwo"></li>
+              <li data-i18n="meshItemThree"></li>
+              <li data-i18n="meshItemFour"></li>
+            </ul>
+            <a href="#consult" class="button button-primary" data-pilot="mesh"
+              data-i18n="chooseMesh"></a>
+          </article>
+        </div>
+      </section>
+
+      <section id="trust" class="trust section-grid" aria-labelledby="trust-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="trustEyebrow"></p>
+          <h2 id="trust-title" data-i18n="trustTitle"></h2>
+          <p data-i18n="trustLead"></p>
+        </div>
+        <div class="trust-boundary">
+          <div class="boundary-ring">
+            <span>Q</span>
+          </div>
+          <dl>
+            <div>
+              <dt data-i18n="trustOneTitle"></dt>
+              <dd data-i18n="trustOneBody"></dd>
+            </div>
+            <div>
+              <dt data-i18n="trustTwoTitle"></dt>
+              <dd data-i18n="trustTwoBody"></dd>
+            </div>
+            <div>
+              <dt data-i18n="trustThreeTitle"></dt>
+              <dd data-i18n="trustThreeBody"></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="steps" aria-labelledby="steps-title">
+        <div class="section-heading centered">
+          <p class="eyebrow" data-i18n="stepsEyebrow"></p>
+          <h2 id="steps-title" data-i18n="stepsTitle"></h2>
+        </div>
+        <ol>
+          <li>
+            <span>WEEK 0</span>
+            <h3 data-i18n="stepOneTitle"></h3>
+            <p data-i18n="stepOneBody"></p>
+          </li>
+          <li>
+            <span>WEEK 1</span>
+            <h3 data-i18n="stepTwoTitle"></h3>
+            <p data-i18n="stepTwoBody"></p>
+          </li>
+          <li>
+            <span>WEEK 2–5</span>
+            <h3 data-i18n="stepThreeTitle"></h3>
+            <p data-i18n="stepThreeBody"></p>
+          </li>
+          <li>
+            <span>WEEK 6</span>
+            <h3 data-i18n="stepFourTitle"></h3>
+            <p data-i18n="stepFourBody"></p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="consult" class="consult" aria-labelledby="consult-title">
+        <div class="consult-copy">
+          <p class="eyebrow" data-i18n="consultEyebrow"></p>
+          <h2 id="consult-title" data-i18n="consultTitle"></h2>
+          <p data-i18n="consultLead"></p>
+          <div class="privacy-note">
+            <strong data-i18n="privacyTitle"></strong>
+            <span data-i18n="privacyBody"></span>
+          </div>
+        </div>
+
+        <form id="consult-form" class="consult-form">
+          <label>
+            <span data-i18n="fieldOrg"></span>
+            <input id="org" name="org" type="text" autocomplete="organization"
+              data-i18n-placeholder="fieldOrgPlaceholder" />
+          </label>
+          <label>
+            <span data-i18n="fieldPain"></span>
+            <select id="pain" name="pain">
+              <option value="records" data-i18n="painRecords"></option>
+              <option value="restore" data-i18n="painRestore"></option>
+              <option value="connect" data-i18n="painConnect"></option>
+              <option value="evidence" data-i18n="painEvidence"></option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="fieldPilot"></span>
+            <select id="pilot" name="pilot">
+              <option value="preserve" data-i18n="pilotPreserve"></option>
+              <option value="mesh" data-i18n="pilotMesh"></option>
+              <option value="undecided" data-i18n="pilotUndecided"></option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="fieldContext"></span>
+            <textarea id="context" name="context" rows="4"
+              data-i18n-placeholder="fieldContextPlaceholder"></textarea>
+          </label>
+          <button class="button button-primary" type="submit" data-i18n="copyDraft"></button>
+          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="disclaimer">
+        <strong data-i18n="disclaimerTitle"></strong>
+        <p data-i18n="disclaimerBody"></p>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="./" aria-label="Qero">
+        <img src="../icon.svg" width="28" height="28" alt="" />
+        <span>Qero</span>
+      </a>
+      <p data-i18n="footer"></p>
+      <a href="../" data-i18n="openApp"></a>
+    </footer>
+  </body>
+</html>

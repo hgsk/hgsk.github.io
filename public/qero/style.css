@@ -4029,3 +4029,56 @@ button.card-row {
   }
 }
 
+/* ==== features/voice-chat.css ==== */
+/* Room voice chat (#f69767). Audio elements stay hidden; controls remain compact in the top bar. */
+.voice-root {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-right: 4px;
+}
+
+.voice-root .voice-status {
+  color: var(--text-muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.voice-root[data-voice-state="joined"] .voice-status {
+  color: var(--accent);
+}
+
+.voice-root .voice-leave {
+  color: var(--danger, #e57373);
+}
+
+.voice-audio {
+  display: none;
+}
+
+.presence-avatar.voice-joined {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.presence-avatar.voice-muted {
+  filter: saturate(0.45);
+}
+
+.presence-voice-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 1px;
+  border-radius: 50%;
+  background: var(--bg-panel);
+  font-size: 9px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .voice-root .voice-status {
+    display: none;
+  }
+}
+

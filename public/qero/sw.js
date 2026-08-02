@@ -25,7 +25,7 @@
  * 内容と手動で同期させること — このファイルは非モジュールの素の JS で
  * バンドル対象外のため import できない。
  */
-const CACHE_VERSION = "deploy-110-5e7ac20";
+const CACHE_VERSION = "deploy-111-a3a47b3";
 const CACHE_NAME = `qero-shell-${CACHE_VERSION}`;
 const SHELL_ASSETS = ["./", "./index.html", "./style.css", "./app.js", "./manifest.webmanifest"];
 const NETWORK_FIRST_ASSETS = new Set([

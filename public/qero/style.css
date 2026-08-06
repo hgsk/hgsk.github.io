@@ -4019,6 +4019,293 @@ button.card-row {
   }
 }
 
+/* ==== features/room-metaverse.css ==== */
+/* Gather-like room and proximity voice in the right pane (#75fca9). */
+.room-metaverse {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--accent) 12%, transparent),
+    transparent 42%),
+    var(--bg-panel);
+}
+
+.room-space-header,
+.room-space-heading {
+  display: flex;
+  align-items: center;
+}
+.room-space-header {
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.room-space-heading {
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.room-space-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+.room-space-status {
+  max-width: 150px;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.room-space-settings {
+  padding: 4px 7px;
+  font-size: 10px;
+}
+
+.room-space-scene {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+  border-radius: 10px;
+  outline: none;
+  background-color: color-mix(in srgb, var(--bg-panel2) 82%, var(--accent));
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--border) 35%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--border) 35%, transparent) 1px, transparent 1px);
+  background-size: 20px 20px;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.18);
+  cursor: crosshair;
+}
+.room-space-scene:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.room-metaverse[data-room-connected="false"] .room-space-scene {
+  cursor: not-allowed;
+  filter: saturate(0.45);
+  opacity: 0.72;
+}
+
+.room-space-furniture,
+.room-space-avatars {
+  position: absolute;
+  inset: 0;
+}
+.room-space-furniture {
+  pointer-events: none;
+}
+.room-space-rug {
+  position: absolute;
+  left: 31%;
+  top: 28%;
+  width: 38%;
+  height: 44%;
+  border: 1px solid color-mix(in srgb, var(--accent) 38%, transparent);
+  border-radius: 38%;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+.room-space-table {
+  position: absolute;
+  left: 43%;
+  top: 42%;
+  width: 14%;
+  height: 20%;
+  border: 2px solid color-mix(in srgb, #9c6c44 68%, var(--border));
+  border-radius: 6px;
+  background: color-mix(in srgb, #9c6c44 52%, var(--bg-panel));
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.16);
+}
+.room-space-sofa {
+  position: absolute;
+  width: 27%;
+  height: 10%;
+  border: 2px solid color-mix(in srgb, var(--accent) 42%, var(--border));
+  border-radius: 8px 8px 4px 4px;
+  background: color-mix(in srgb, var(--accent) 20%, var(--bg-panel2));
+}
+.room-space-sofa.sofa-a {
+  left: 12%;
+  top: 14%;
+}
+.room-space-sofa.sofa-b {
+  right: 11%;
+  bottom: 12%;
+}
+.room-space-plant {
+  position: absolute;
+  color: #65b86f;
+  font-size: 25px;
+  text-shadow: 0 4px 0 #6f513a;
+}
+.room-space-plant.plant-a {
+  right: 5%;
+  top: 5%;
+}
+.room-space-plant.plant-b {
+  left: 5%;
+  bottom: 6%;
+}
+
+.room-space-proximity-ring {
+  position: absolute;
+  z-index: 1;
+  width: 36%;
+  height: 36%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed color-mix(in srgb, var(--accent) 65%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+  pointer-events: none;
+  transition: left 140ms ease, top 140ms ease;
+}
+.room-space-avatars {
+  z-index: 2;
+  pointer-events: none;
+}
+.room-space-avatar {
+  --peer-color: var(--accent);
+  position: absolute;
+  width: 38px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: auto;
+  transition: left 140ms ease, top 140ms ease;
+}
+.room-space-avatar-body {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid color-mix(in srgb, var(--peer-color) 72%, white);
+  border-radius: 50% 50% 42% 42%;
+  background: var(--peer-color);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.22);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.room-space-avatar.self .room-space-avatar-body {
+  outline: 2px solid color-mix(in srgb, var(--accent) 58%, transparent);
+  outline-offset: 2px;
+}
+.room-space-avatar.voice-joined .room-space-avatar-body {
+  box-shadow: 0 0 0 3px color-mix(in srgb, #57d487 38%, transparent), 0 3px 0 rgba(0, 0, 0, 0.22);
+}
+.room-space-avatar.voice-muted .room-space-avatar-body {
+  filter: saturate(0.45);
+}
+.room-space-avatar-name {
+  display: block;
+  position: relative;
+  left: 50%;
+  width: max-content;
+  max-width: 70px;
+  margin-top: 3px;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 9px;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+.room-space-avatar-readonly,
+.room-space-avatar-voice {
+  position: absolute;
+  top: -6px;
+  z-index: 3;
+  font-size: 10px;
+}
+.room-space-avatar-readonly {
+  left: -1px;
+}
+.room-space-avatar-voice {
+  right: -1px;
+}
+
+.room-space-hint {
+  margin: 5px 0 0;
+  color: var(--text-muted);
+  font-size: 9px;
+  line-height: 1.35;
+}
+.room-space-voice.voice-root {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 5px;
+  margin: 8px 0 0;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--bg-panel2);
+}
+.room-space-voice .voice-status {
+  align-self: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.room-space-voice .icon-btn {
+  min-width: 28px;
+  height: 27px;
+  padding: 2px 6px;
+}
+
+.room-space-participants-title {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.room-space-participants {
+  display: flex;
+  max-height: 92px;
+  margin: 4px 0 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 2px;
+  overflow-y: auto;
+  list-style: none;
+}
+.room-space-participants li {
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr) auto;
+  gap: 5px;
+  align-items: center;
+  min-height: 20px;
+  font-size: 10px;
+}
+.room-space-peer-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--peer-color);
+}
+.room-space-peer-name {
+  overflow: hidden;
+  color: var(--text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.room-space-peer-detail {
+  color: var(--text-muted);
+  font-size: 9px;
+}
+
+@media (max-width: 768px) {
+  .room-metaverse {
+    padding-top: 8px;
+  }
+  .room-space-scene {
+    height: 150px;
+  }
+}
+
 /* ==== features/unified-creation-tools.css ==== */
 /* #079 / GitHub #108: every registry component is exposed in the toolbox. */
 @media (min-width: 769px) {
@@ -4030,7 +4317,7 @@ button.card-row {
 }
 
 /* ==== features/voice-chat.css ==== */
-/* Room voice chat (#f69767). Audio elements stay hidden; controls remain compact in the top bar. */
+/* Room voice chat (#f69767, #75fca9). Audio elements stay hidden; controls can be embedded. */
 .voice-root {
   display: flex;
   align-items: center;
@@ -4078,7 +4365,7 @@ button.card-row {
 
 @media (max-width: 768px) {
   .voice-root .voice-status {
-    display: none;
+    font-size: 10px;
   }
 }
 

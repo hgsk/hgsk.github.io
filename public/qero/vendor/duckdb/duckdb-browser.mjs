@@ -4,7 +4,7 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs
 function __rest(s, e) {
   var t = {};
   for (var p2 in s) if (Object.prototype.hasOwnProperty.call(s, p2) && e.indexOf(p2) < 0)
@@ -131,7 +131,7 @@ function __asyncValues(o) {
   }
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/buffer.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/buffer.mjs
 var buffer_exports = {};
 __export(buffer_exports, {
   compareArrayLike: () => compareArrayLike,
@@ -172,13 +172,13 @@ __export(buffer_exports, {
   toUint8ClampedArrayIterator: () => toUint8ClampedArrayIterator
 });
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/utf8.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/utf8.mjs
 var decoder = new TextDecoder("utf-8");
 var decodeUtf8 = (buffer) => decoder.decode(buffer);
 var encoder = new TextEncoder();
 var encodeUtf8 = (value) => encoder.encode(value);
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/compat.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/compat.mjs
 var isNumber = (x2) => typeof x2 === "number";
 var isBoolean = (x2) => typeof x2 === "boolean";
 var isFunction = (x2) => typeof x2 === "function";
@@ -221,7 +221,7 @@ var isFlatbuffersByteBuffer = (x2) => {
   return isObject(x2) && isFunction(x2["clear"]) && isFunction(x2["bytes"]) && isFunction(x2["position"]) && isFunction(x2["setPosition"]) && isFunction(x2["capacity"]) && isFunction(x2["getBufferIdentifier"]) && isFunction(x2["createLong"]);
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/buffer.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/buffer.mjs
 var SharedArrayBuf = typeof SharedArrayBuffer !== "undefined" ? SharedArrayBuffer : ArrayBuffer;
 function collapseContiguousByteRanges(chunks) {
   const result = chunks[0] ? [chunks[0]] : [];
@@ -404,7 +404,7 @@ function compareArrayLike(a, b2) {
   return true;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/adapters.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/adapters.mjs
 var adapters_default = {
   fromIterable(source) {
     return pump2(fromIterable(source));
@@ -648,7 +648,7 @@ function fromNodeStream(stream) {
   });
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/metadata-version.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/metadata-version.mjs
 var MetadataVersion;
 (function(MetadataVersion2) {
   MetadataVersion2[MetadataVersion2["V1"] = 0] = "V1";
@@ -658,14 +658,14 @@ var MetadataVersion;
   MetadataVersion2[MetadataVersion2["V5"] = 4] = "V5";
 })(MetadataVersion || (MetadataVersion = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/union-mode.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/union-mode.mjs
 var UnionMode;
 (function(UnionMode2) {
   UnionMode2[UnionMode2["Sparse"] = 0] = "Sparse";
   UnionMode2[UnionMode2["Dense"] = 1] = "Dense";
 })(UnionMode || (UnionMode = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/precision.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/precision.mjs
 var Precision;
 (function(Precision2) {
   Precision2[Precision2["HALF"] = 0] = "HALF";
@@ -673,14 +673,14 @@ var Precision;
   Precision2[Precision2["DOUBLE"] = 2] = "DOUBLE";
 })(Precision || (Precision = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/date-unit.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/date-unit.mjs
 var DateUnit;
 (function(DateUnit2) {
   DateUnit2[DateUnit2["DAY"] = 0] = "DAY";
   DateUnit2[DateUnit2["MILLISECOND"] = 1] = "MILLISECOND";
 })(DateUnit || (DateUnit = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/time-unit.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/time-unit.mjs
 var TimeUnit;
 (function(TimeUnit2) {
   TimeUnit2[TimeUnit2["SECOND"] = 0] = "SECOND";
@@ -689,7 +689,7 @@ var TimeUnit;
   TimeUnit2[TimeUnit2["NANOSECOND"] = 3] = "NANOSECOND";
 })(TimeUnit || (TimeUnit = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/interval-unit.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/interval-unit.mjs
 var IntervalUnit;
 (function(IntervalUnit2) {
   IntervalUnit2[IntervalUnit2["YEAR_MONTH"] = 0] = "YEAR_MONTH";
@@ -697,26 +697,26 @@ var IntervalUnit;
   IntervalUnit2[IntervalUnit2["MONTH_DAY_NANO"] = 2] = "MONTH_DAY_NANO";
 })(IntervalUnit || (IntervalUnit = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/constants.js
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/constants.js
 var SIZEOF_SHORT = 2;
 var SIZEOF_INT = 4;
 var FILE_IDENTIFIER_LENGTH = 4;
 var SIZE_PREFIX_LENGTH = 4;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/utils.js
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/utils.js
 var int32 = new Int32Array(2);
 var float32 = new Float32Array(int32.buffer);
 var float64 = new Float64Array(int32.buffer);
 var isLittleEndian = new Uint16Array(new Uint8Array([1, 0]).buffer)[0] === 1;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/encoding.js
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/encoding.js
 var Encoding;
 (function(Encoding2) {
   Encoding2[Encoding2["UTF8_BYTES"] = 1] = "UTF8_BYTES";
   Encoding2[Encoding2["UTF16_STRING"] = 2] = "UTF16_STRING";
 })(Encoding || (Encoding = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/byte-buffer.js
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/byte-buffer.js
 var ByteBuffer = class _ByteBuffer {
   /**
    * Create a new ByteBuffer with a given array of bytes (`Uint8Array`)
@@ -960,7 +960,7 @@ var ByteBuffer = class _ByteBuffer {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/builder.js
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/flatbuffers@24.12.23/node_modules/flatbuffers/mjs/builder.js
 var Builder = class _Builder {
   /**
    * Create a FlatBufferBuilder.
@@ -1457,20 +1457,20 @@ var Builder = class _Builder {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/body-compression-method.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/body-compression-method.mjs
 var BodyCompressionMethod;
 (function(BodyCompressionMethod2) {
   BodyCompressionMethod2[BodyCompressionMethod2["BUFFER"] = 0] = "BUFFER";
 })(BodyCompressionMethod || (BodyCompressionMethod = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/compression-type.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/compression-type.mjs
 var CompressionType;
 (function(CompressionType2) {
   CompressionType2[CompressionType2["LZ4_FRAME"] = 0] = "LZ4_FRAME";
   CompressionType2[CompressionType2["ZSTD"] = 1] = "ZSTD";
 })(CompressionType || (CompressionType = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/body-compression.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/body-compression.mjs
 var BodyCompression = class _BodyCompression {
   constructor() {
     this.bb = null;
@@ -1524,7 +1524,7 @@ var BodyCompression = class _BodyCompression {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/buffer.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/buffer.mjs
 var Buffer2 = class {
   constructor() {
     this.bb = null;
@@ -1563,7 +1563,7 @@ var Buffer2 = class {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/field-node.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/field-node.mjs
 var FieldNode = class {
   constructor() {
     this.bb = null;
@@ -1600,7 +1600,7 @@ var FieldNode = class {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/record-batch.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/record-batch.mjs
 var RecordBatch = class _RecordBatch {
   constructor() {
     this.bb = null;
@@ -1687,7 +1687,7 @@ var RecordBatch = class _RecordBatch {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/dictionary-batch.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/dictionary-batch.mjs
 var DictionaryBatch = class _DictionaryBatch {
   constructor() {
     this.bb = null;
@@ -1740,20 +1740,20 @@ var DictionaryBatch = class _DictionaryBatch {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/endianness.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/endianness.mjs
 var Endianness;
 (function(Endianness2) {
   Endianness2[Endianness2["Little"] = 0] = "Little";
   Endianness2[Endianness2["Big"] = 1] = "Big";
 })(Endianness || (Endianness = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/dictionary-kind.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/dictionary-kind.mjs
 var DictionaryKind;
 (function(DictionaryKind2) {
   DictionaryKind2[DictionaryKind2["DenseArray"] = 0] = "DenseArray";
 })(DictionaryKind || (DictionaryKind = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/int.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/int.mjs
 var Int = class _Int {
   constructor() {
     this.bb = null;
@@ -1800,7 +1800,7 @@ var Int = class _Int {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/dictionary-encoding.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/dictionary-encoding.mjs
 var DictionaryEncoding = class _DictionaryEncoding {
   constructor() {
     this.bb = null;
@@ -1873,7 +1873,7 @@ var DictionaryEncoding = class _DictionaryEncoding {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/key-value.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/key-value.mjs
 var KeyValue = class _KeyValue {
   constructor() {
     this.bb = null;
@@ -1920,7 +1920,7 @@ var KeyValue = class _KeyValue {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/binary.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/binary.mjs
 var Binary = class _Binary {
   constructor() {
     this.bb = null;
@@ -1951,7 +1951,7 @@ var Binary = class _Binary {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/bool.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/bool.mjs
 var Bool = class _Bool {
   constructor() {
     this.bb = null;
@@ -1982,7 +1982,7 @@ var Bool = class _Bool {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/date.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/date.mjs
 var Date2 = class _Date {
   constructor() {
     this.bb = null;
@@ -2021,7 +2021,7 @@ var Date2 = class _Date {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/decimal.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/decimal.mjs
 var Decimal = class _Decimal {
   constructor() {
     this.bb = null;
@@ -2086,7 +2086,7 @@ var Decimal = class _Decimal {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/duration.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/duration.mjs
 var Duration = class _Duration {
   constructor() {
     this.bb = null;
@@ -2125,7 +2125,7 @@ var Duration = class _Duration {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/fixed-size-binary.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/fixed-size-binary.mjs
 var FixedSizeBinary = class _FixedSizeBinary {
   constructor() {
     this.bb = null;
@@ -2167,7 +2167,7 @@ var FixedSizeBinary = class _FixedSizeBinary {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/fixed-size-list.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/fixed-size-list.mjs
 var FixedSizeList = class _FixedSizeList {
   constructor() {
     this.bb = null;
@@ -2209,7 +2209,7 @@ var FixedSizeList = class _FixedSizeList {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/floating-point.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/floating-point.mjs
 var FloatingPoint = class _FloatingPoint {
   constructor() {
     this.bb = null;
@@ -2248,7 +2248,7 @@ var FloatingPoint = class _FloatingPoint {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/interval.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/interval.mjs
 var Interval = class _Interval {
   constructor() {
     this.bb = null;
@@ -2287,7 +2287,7 @@ var Interval = class _Interval {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/large-binary.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/large-binary.mjs
 var LargeBinary = class _LargeBinary {
   constructor() {
     this.bb = null;
@@ -2318,7 +2318,7 @@ var LargeBinary = class _LargeBinary {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/large-utf8.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/large-utf8.mjs
 var LargeUtf8 = class _LargeUtf8 {
   constructor() {
     this.bb = null;
@@ -2349,7 +2349,7 @@ var LargeUtf8 = class _LargeUtf8 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/list.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/list.mjs
 var List = class _List {
   constructor() {
     this.bb = null;
@@ -2380,7 +2380,7 @@ var List = class _List {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/map.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/map.mjs
 var Map2 = class _Map {
   constructor() {
     this.bb = null;
@@ -2422,7 +2422,7 @@ var Map2 = class _Map {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/null.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/null.mjs
 var Null = class _Null {
   constructor() {
     this.bb = null;
@@ -2453,7 +2453,7 @@ var Null = class _Null {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/struct-.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/struct-.mjs
 var Struct_ = class _Struct_ {
   constructor() {
     this.bb = null;
@@ -2484,7 +2484,7 @@ var Struct_ = class _Struct_ {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/time.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/time.mjs
 var Time = class _Time {
   constructor() {
     this.bb = null;
@@ -2531,7 +2531,7 @@ var Time = class _Time {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/timestamp.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/timestamp.mjs
 var Timestamp = class _Timestamp {
   constructor() {
     this.bb = null;
@@ -2578,7 +2578,7 @@ var Timestamp = class _Timestamp {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/union.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/union.mjs
 var Union = class _Union {
   constructor() {
     this.bb = null;
@@ -2643,7 +2643,7 @@ var Union = class _Union {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/utf8.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/utf8.mjs
 var Utf8 = class _Utf8 {
   constructor() {
     this.bb = null;
@@ -2674,7 +2674,7 @@ var Utf8 = class _Utf8 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/type.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/type.mjs
 var Type;
 (function(Type3) {
   Type3[Type3["NONE"] = 0] = "NONE";
@@ -2702,7 +2702,7 @@ var Type;
   Type3[Type3["RunEndEncoded"] = 22] = "RunEndEncoded";
 })(Type || (Type = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/field.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/field.mjs
 var Field = class _Field {
   constructor() {
     this.bb = null;
@@ -2822,7 +2822,7 @@ var Field = class _Field {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/schema.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/schema.mjs
 var Schema = class _Schema {
   constructor() {
     this.bb = null;
@@ -2941,7 +2941,7 @@ var Schema = class _Schema {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/message-header.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/message-header.mjs
 var MessageHeader;
 (function(MessageHeader2) {
   MessageHeader2[MessageHeader2["NONE"] = 0] = "NONE";
@@ -2952,7 +2952,7 @@ var MessageHeader;
   MessageHeader2[MessageHeader2["SparseTensor"] = 5] = "SparseTensor";
 })(MessageHeader || (MessageHeader = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/enum.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/enum.mjs
 var Type2;
 (function(Type3) {
   Type3[Type3["NONE"] = 0] = "NONE";
@@ -3015,7 +3015,7 @@ var BufferType;
   BufferType2[BufferType2["TYPE"] = 3] = "TYPE";
 })(BufferType || (BufferType = {}));
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/vector.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/vector.mjs
 var vector_exports = {};
 __export(vector_exports, {
   clampRange: () => clampRange,
@@ -3023,7 +3023,7 @@ __export(vector_exports, {
   wrapIndex: () => wrapIndex
 });
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/pretty.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/pretty.mjs
 var pretty_exports = {};
 __export(pretty_exports, {
   valueToString: () => valueToString
@@ -3056,7 +3056,7 @@ function valueToString(x2) {
   return ArrayBuffer.isView(x2) ? `[${x2}]` : JSON.stringify(x2, (_2, y2) => typeof y2 === "bigint" ? `${y2}` : y2);
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/bn.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/bn.mjs
 var bn_exports = {};
 __export(bn_exports, {
   BN: () => BN,
@@ -3066,7 +3066,7 @@ __export(bn_exports, {
   isArrowBigNumSymbol: () => isArrowBigNumSymbol
 });
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/bigint.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/bigint.mjs
 function bigIntToNumber(number) {
   if (typeof number === "bigint" && (number < Number.MIN_SAFE_INTEGER || number > Number.MAX_SAFE_INTEGER)) {
     throw new TypeError(`${number} is not safe to convert to a number.`);
@@ -3077,7 +3077,7 @@ function divideBigInts(number, divisor) {
   return bigIntToNumber(number / divisor) + bigIntToNumber(number % divisor) / bigIntToNumber(divisor);
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/bn.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/bn.mjs
 var isArrowBigNumSymbol = Symbol.for("isArrowBigNum");
 function BigNum(x2, ...xs) {
   if (xs.length === 0) {
@@ -3236,7 +3236,7 @@ var BN = class _BN {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/type.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/type.mjs
 var _a;
 var _b;
 var _c;
@@ -3876,7 +3876,7 @@ function strideForType(type) {
   }
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor.mjs
 var Visitor = class {
   visitMany(nodes, ...args) {
     return nodes.map((node, i) => this.visit(node, ...args.map((x2) => x2[i])));
@@ -4275,7 +4275,7 @@ Visitor.prototype.visitDurationMillisecond = null;
 Visitor.prototype.visitDurationMicrosecond = null;
 Visitor.prototype.visitDurationNanosecond = null;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/math.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/math.mjs
 var math_exports = {};
 __export(math_exports, {
   float64ToUint16: () => float64ToUint16,
@@ -4320,7 +4320,7 @@ function float64ToUint16(d2) {
   return sign | expo | sigf & 65535;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/set.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/set.mjs
 var SetVisitor = class extends Visitor {
 };
 function wrapSet(fn) {
@@ -4577,7 +4577,7 @@ SetVisitor.prototype.visitFixedSizeList = wrapSet(setFixedSizeList);
 SetVisitor.prototype.visitMap = wrapSet(setMap);
 var instance = new SetVisitor();
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/row/struct.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/row/struct.mjs
 var kParent = Symbol.for("parent");
 var kRowIndex = Symbol.for("rowIndex");
 var StructRow = class {
@@ -4685,7 +4685,7 @@ var StructRowProxyHandler = class {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/get.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/get.mjs
 var GetVisitor = class extends Visitor {
 };
 function wrapGet(fn) {
@@ -4869,7 +4869,7 @@ GetVisitor.prototype.visitFixedSizeList = wrapGet(getFixedSizeList);
 GetVisitor.prototype.visitMap = wrapGet(getMap);
 var instance2 = new GetVisitor();
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/row/map.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/row/map.mjs
 var kKeys = Symbol.for("keys");
 var kVals = Symbol.for("vals");
 var kKeysAsStrings = Symbol.for("kKeysAsStrings");
@@ -4986,7 +4986,7 @@ Object.defineProperties(MapRow.prototype, {
   [_kKeysAsStrings]: { writable: true, enumerable: false, configurable: false, value: null }
 });
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/vector.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/vector.mjs
 var tmp;
 function clampRange(source, begin, end, then) {
   const { length: len = 0 } = source;
@@ -5124,7 +5124,7 @@ function compareObject(comparators, obj, keys) {
   return false;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/bit.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/bit.mjs
 var bit_exports = {};
 __export(bit_exports, {
   BitIterator: () => BitIterator,
@@ -5247,7 +5247,7 @@ function popcnt_uint32(uint32) {
   return (i + (i >>> 4) & 252645135) * 16843009 >>> 24;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/data.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/data.mjs
 var kUnknownNullCount = -1;
 var Data = class _Data {
   get typeId() {
@@ -5571,7 +5571,7 @@ function makeData(props) {
   return makeDataVisitor.visit(props);
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/chunk.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/chunk.mjs
 var ChunkedIterator = class {
   constructor(numChunks = 0, getChunkIterator) {
     this.numChunks = numChunks;
@@ -5690,7 +5690,7 @@ function wrapChunkedIndexOf(indexOf) {
   };
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/indexof.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/indexof.mjs
 var IndexOfVisitor = class extends Visitor {
 };
 function nullIndexOf(data, searchElement) {
@@ -5798,7 +5798,7 @@ IndexOfVisitor.prototype.visitFixedSizeList = indexOfValue;
 IndexOfVisitor.prototype.visitMap = indexOfValue;
 var instance3 = new IndexOfVisitor();
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/iterator.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/iterator.mjs
 var IteratorVisitor = class extends Visitor {
 };
 function vectorIterator(vector) {
@@ -5889,7 +5889,7 @@ IteratorVisitor.prototype.visitFixedSizeList = vectorIterator;
 IteratorVisitor.prototype.visitMap = vectorIterator;
 var instance4 = new IteratorVisitor();
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/vector.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/vector.mjs
 var _a2;
 var visitorsByTypeId = {};
 var vectorPrototypesByTypeId = {};
@@ -6200,7 +6200,7 @@ var MemoizedVector = class _MemoizedVector extends Vector {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/valid.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/valid.mjs
 function createIsValidFunction(nullValues) {
   if (!nullValues || nullValues.length <= 0) {
     return function isValid(value) {
@@ -6230,7 +6230,7 @@ function valueToCase(x2) {
   return `${valueToString(x2)}n`;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/buffer.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/buffer.mjs
 function roundLengthUpToNearest64Bytes(len, BPE) {
   const bytesMinus1 = Math.ceil(len) * BPE - 1;
   return (bytesMinus1 - bytesMinus1 % 64 + 64 || 64) / BPE;
@@ -6348,7 +6348,7 @@ var OffsetsBufferBuilder = class extends DataBufferBuilder {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder.mjs
 var Builder2 = class {
   /** @nocollapse */
   // @ts-ignore
@@ -6615,7 +6615,7 @@ var VariableWidthBuilder = class extends Builder2 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/block.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/block.mjs
 var Block = class {
   constructor() {
     this.bb = null;
@@ -6658,7 +6658,7 @@ var Block = class {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/footer.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/footer.mjs
 var Footer = class _Footer {
   constructor() {
     this.bb = null;
@@ -6757,7 +6757,7 @@ var Footer = class _Footer {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/schema.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/schema.mjs
 var Schema2 = class _Schema {
   constructor(fields = [], metadata, dictionaries, metadataVersion = MetadataVersion.V5) {
     this.fields = fields || [];
@@ -6873,7 +6873,7 @@ function generateDictionaryMap(fields, dictionaries = /* @__PURE__ */ new Map())
   return dictionaries;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/metadata/file.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/metadata/file.mjs
 var Builder3 = Builder;
 var ByteBuffer2 = ByteBuffer;
 var Footer_ = class {
@@ -6988,7 +6988,7 @@ var FileBlock = class _FileBlock {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/interfaces.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/interfaces.mjs
 var ITERATOR_DONE = Object.freeze({ done: true, value: void 0 });
 var ArrowJSON = class {
   constructor(_json) {
@@ -7111,7 +7111,7 @@ var AsyncQueue = class extends ReadableInterop {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/stream.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/stream.mjs
 var AsyncByteQueue = class extends AsyncQueue {
   write(value) {
     if ((value = toUint8Array(value)).byteLength > 0) {
@@ -7286,7 +7286,7 @@ var AsyncByteStreamSource = class {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/file.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/file.mjs
 var RandomAccessFile = class extends ByteStream {
   constructor(buffer, byteLength) {
     super();
@@ -7409,7 +7409,7 @@ var AsyncRandomAccessFile = class extends AsyncByteStream {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/int.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/int.mjs
 var int_exports = {};
 __export(int_exports, {
   BaseInt64: () => BaseInt64,
@@ -7725,7 +7725,7 @@ var Int128 = class _Int128 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/vectorloader.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/vectorloader.mjs
 var VectorLoader = class extends Visitor {
   constructor(bytes, nodes, buffers, dictionaries, metadataVersion = MetadataVersion.V5) {
     super();
@@ -7877,7 +7877,7 @@ function binaryDataFromJSON(values) {
   return data;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/binary.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/binary.mjs
 var BinaryBuilder = class extends VariableWidthBuilder {
   constructor(opts) {
     super(opts);
@@ -7910,7 +7910,7 @@ var BinaryBuilder = class extends VariableWidthBuilder {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/largebinary.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/largebinary.mjs
 var LargeBinaryBuilder = class extends VariableWidthBuilder {
   constructor(opts) {
     super(opts);
@@ -7943,7 +7943,7 @@ var LargeBinaryBuilder = class extends VariableWidthBuilder {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/bool.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/bool.mjs
 var BoolBuilder = class extends Builder2 {
   constructor(options) {
     super(options);
@@ -7954,7 +7954,7 @@ var BoolBuilder = class extends Builder2 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/date.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/date.mjs
 var DateBuilder = class extends FixedWidthBuilder {
 };
 DateBuilder.prototype._setValue = setDate;
@@ -7965,12 +7965,12 @@ var DateMillisecondBuilder = class extends DateBuilder {
 };
 DateMillisecondBuilder.prototype._setValue = setDateMillisecond;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/decimal.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/decimal.mjs
 var DecimalBuilder = class extends FixedWidthBuilder {
 };
 DecimalBuilder.prototype._setValue = setDecimal;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/dictionary.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/dictionary.mjs
 var DictionaryBuilder = class extends Builder2 {
   constructor({ "type": type, "nullValues": nulls, "dictionaryHashFunction": hashFn }) {
     super({ type: new Dictionary(type.dictionary, type.indices, type.id, type.isOrdered) });
@@ -8047,12 +8047,12 @@ var DictionaryBuilder = class extends Builder2 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/fixedsizebinary.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/fixedsizebinary.mjs
 var FixedSizeBinaryBuilder = class extends FixedWidthBuilder {
 };
 FixedSizeBinaryBuilder.prototype._setValue = setFixedSizeBinary;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/fixedsizelist.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/fixedsizelist.mjs
 var FixedSizeListBuilder = class extends Builder2 {
   setValue(index, value) {
     const [child] = this.children;
@@ -8071,7 +8071,7 @@ var FixedSizeListBuilder = class extends Builder2 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/float.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/float.mjs
 var FloatBuilder = class extends FixedWidthBuilder {
   setValue(index, value) {
     this._values.set(index, value);
@@ -8087,7 +8087,7 @@ var Float32Builder = class extends FloatBuilder {
 var Float64Builder = class extends FloatBuilder {
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/interval.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/interval.mjs
 var IntervalBuilder = class extends FixedWidthBuilder {
 };
 IntervalBuilder.prototype._setValue = setIntervalValue;
@@ -8098,7 +8098,7 @@ var IntervalYearMonthBuilder = class extends IntervalBuilder {
 };
 IntervalYearMonthBuilder.prototype._setValue = setIntervalYearMonth;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/duration.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/duration.mjs
 var DurationBuilder = class extends FixedWidthBuilder {
 };
 DurationBuilder.prototype._setValue = setDuration;
@@ -8115,7 +8115,7 @@ var DurationNanosecondBuilder = class extends DurationBuilder {
 };
 DurationNanosecondBuilder.prototype._setValue = setDurationNanosecond;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/int.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/int.mjs
 var IntBuilder = class extends FixedWidthBuilder {
   setValue(index, value) {
     this._values.set(index, value);
@@ -8138,7 +8138,7 @@ var Uint32Builder = class extends IntBuilder {
 var Uint64Builder = class extends IntBuilder {
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/list.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/list.mjs
 var ListBuilder = class extends VariableWidthBuilder {
   constructor(opts) {
     super(opts);
@@ -8170,7 +8170,7 @@ var ListBuilder = class extends VariableWidthBuilder {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/map.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/map.mjs
 var MapBuilder = class extends VariableWidthBuilder {
   set(index, value) {
     return super.set(index, value);
@@ -8209,7 +8209,7 @@ var MapBuilder = class extends VariableWidthBuilder {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/null.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/null.mjs
 var NullBuilder = class extends Builder2 {
   // @ts-ignore
   setValue(index, value) {
@@ -8220,7 +8220,7 @@ var NullBuilder = class extends Builder2 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/struct.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/struct.mjs
 var StructBuilder = class extends Builder2 {
   setValue(index, value) {
     const { children, type } = this;
@@ -8247,7 +8247,7 @@ var StructBuilder = class extends Builder2 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/timestamp.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/timestamp.mjs
 var TimestampBuilder = class extends FixedWidthBuilder {
 };
 TimestampBuilder.prototype._setValue = setTimestamp;
@@ -8264,7 +8264,7 @@ var TimestampNanosecondBuilder = class extends TimestampBuilder {
 };
 TimestampNanosecondBuilder.prototype._setValue = setTimestampNanosecond;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/time.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/time.mjs
 var TimeBuilder = class extends FixedWidthBuilder {
 };
 TimeBuilder.prototype._setValue = setTime;
@@ -8281,7 +8281,7 @@ var TimeNanosecondBuilder = class extends TimeBuilder {
 };
 TimeNanosecondBuilder.prototype._setValue = setTimeNanosecond;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/union.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/union.mjs
 var UnionBuilder = class extends Builder2 {
   constructor(options) {
     super(options);
@@ -8338,7 +8338,7 @@ var DenseUnionBuilder = class extends UnionBuilder {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/utf8.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/utf8.mjs
 var Utf8Builder = class extends VariableWidthBuilder {
   constructor(opts) {
     super(opts);
@@ -8360,7 +8360,7 @@ var Utf8Builder = class extends VariableWidthBuilder {
 };
 Utf8Builder.prototype._flushPending = BinaryBuilder.prototype._flushPending;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/largeutf8.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/builder/largeutf8.mjs
 var LargeUtf8Builder = class extends VariableWidthBuilder {
   constructor(opts) {
     super(opts);
@@ -8382,7 +8382,7 @@ var LargeUtf8Builder = class extends VariableWidthBuilder {
 };
 LargeUtf8Builder.prototype._flushPending = LargeBinaryBuilder.prototype._flushPending;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/builderctor.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/builderctor.mjs
 var GetBuilderCtor = class extends Visitor {
   visitNull() {
     return NullBuilder;
@@ -8537,7 +8537,7 @@ var GetBuilderCtor = class extends Visitor {
 };
 var instance5 = new GetBuilderCtor();
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/typecomparator.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/typecomparator.mjs
 var TypeComparator = class extends Visitor {
   compareSchemas(schema, other) {
     return schema === other || other instanceof schema.constructor && this.compareManyFields(schema.fields, other.fields);
@@ -8658,7 +8658,7 @@ function compareTypes(type, other) {
   return instance6.visit(type, other);
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/factories.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/factories.mjs
 function makeBuilder(options) {
   const type = options.type;
   const builder = new (instance5.getVisitFn(type)())(options);
@@ -8675,7 +8675,7 @@ function makeBuilder(options) {
   return builder;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/recordbatch.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/util/recordbatch.mjs
 function distributeVectorsIntoRecordBatches(schema, vecs) {
   return uniformlyDistributeChunksAcrossRecordBatches(schema, vecs.map((v2) => v2.data.concat()));
 }
@@ -8736,7 +8736,7 @@ function distributeChildren(fields, batchLength, children, columns, memo) {
   return children;
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/table.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/table.mjs
 var _a3;
 var Table = class _Table {
   constructor(...args) {
@@ -9019,7 +9019,7 @@ Table[_a3] = ((proto) => {
   return "Table";
 })(Table.prototype);
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/recordbatch.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/recordbatch.mjs
 var _a4;
 var RecordBatch2 = class _RecordBatch {
   constructor(...args) {
@@ -9284,7 +9284,7 @@ var _InternalEmptyPlaceholderRecordBatch = class extends RecordBatch2 {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/message.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/fb/message.mjs
 var Message = class _Message {
   constructor() {
     this.bb = null;
@@ -9375,7 +9375,7 @@ var Message = class _Message {
   }
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/typeassembler.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/typeassembler.mjs
 var TypeAssembler = class extends Visitor {
   visit(node, builder) {
     return node == null || builder == null ? void 0 : super.visit(node, builder);
@@ -9496,7 +9496,7 @@ var TypeAssembler = class extends Visitor {
 };
 var instance7 = new TypeAssembler();
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/metadata/json.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/metadata/json.mjs
 function schemaFromJSON(_schema, dictionaries = /* @__PURE__ */ new Map()) {
   return new Schema2(schemaFieldsFromJSON(_schema, dictionaries), customMetadataFromJSON(_schema["metadata"]), dictionaries);
 }
@@ -9640,7 +9640,7 @@ function typeFromJSON(f2, children) {
   throw new Error(`Unrecognized type: "${typeId}"`);
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/metadata/message.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/metadata/message.mjs
 var Builder4 = Builder;
 var ByteBuffer3 = ByteBuffer;
 var Message2 = class _Message {
@@ -10092,7 +10092,7 @@ var platformIsLittleEndian = (() => {
   return new Int16Array(buffer)[0] === 256;
 })();
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/message.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/message.mjs
 var invalidMessageType = (type) => `Expected ${MessageHeader[type]} Message in stream, but was null or length 0.`;
 var nullMessage = (type) => `Header pointer of flatbuffer-encoded ${MessageHeader[type]} Message is null or length 0.`;
 var invalidMessageMetadata = (expected, actual) => `Expected to read ${expected} metadata bytes, but only read ${actual}.`;
@@ -10347,7 +10347,7 @@ var magicLength = MAGIC.length;
 var magicAndPadding = magicLength + PADDING;
 var magicX2AndPadding = magicLength * 2 + PADDING;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/reader.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/reader.mjs
 var RecordBatchReader = class _RecordBatchReader extends ReadableInterop {
   constructor(impl) {
     super();
@@ -10979,7 +10979,7 @@ function fromFileHandle(source) {
   });
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/vectorassembler.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/visitor/vectorassembler.mjs
 var VectorAssembler = class _VectorAssembler extends Visitor {
   /** @nocollapse */
   static assemble(...args) {
@@ -11132,7 +11132,7 @@ VectorAssembler.prototype.visitDuration = assembleFlatVector;
 VectorAssembler.prototype.visitFixedSizeList = assembleListVector;
 VectorAssembler.prototype.visitMap = assembleListVector;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/writer.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/writer.mjs
 var RecordBatchWriter = class extends ReadableInterop {
   /** @nocollapse */
   // @ts-ignore
@@ -11417,7 +11417,7 @@ function writeAllAsync(writer, batches) {
   });
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/whatwg/iterable.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/whatwg/iterable.mjs
 function toDOMStream(source, options) {
   if (isAsyncIterable(source)) {
     return asyncIterableAsReadableDOMStream(source, options);
@@ -11500,7 +11500,7 @@ function asyncIterableAsReadableDOMStream(source, options) {
   }
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/whatwg/builder.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/whatwg/builder.mjs
 function builderThroughDOMStream(options) {
   return new BuilderTransform(options);
 }
@@ -11580,7 +11580,7 @@ var chunkByteLength = (chunk) => {
   return (_a5 = chunk === null || chunk === void 0 ? void 0 : chunk.byteLength) !== null && _a5 !== void 0 ? _a5 : 0;
 };
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/whatwg/reader.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/whatwg/reader.mjs
 function recordBatchReaderThroughDOMStream(writableStrategy, readableStrategy) {
   const queue = new AsyncByteQueue();
   let reader = null;
@@ -11622,7 +11622,7 @@ function recordBatchReaderThroughDOMStream(writableStrategy, readableStrategy) {
   }
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/whatwg/writer.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/io/whatwg/writer.mjs
 function recordBatchWriterThroughDOMStream(writableStrategy, readableStrategy) {
   const writer = new this(writableStrategy);
   const reader = new AsyncByteStream(writer);
@@ -11660,19 +11660,19 @@ function recordBatchWriterThroughDOMStream(writableStrategy, readableStrategy) {
   }
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/serialization.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/ipc/serialization.mjs
 function tableToIPC(table, type = "stream") {
   return (type === "stream" ? RecordBatchStreamWriter : RecordBatchFileWriter).writeAll(table).toUint8Array(true);
 }
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/Arrow.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/Arrow.mjs
 var util = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, bn_exports), int_exports), bit_exports), math_exports), buffer_exports), vector_exports), pretty_exports), {
   compareSchemas,
   compareFields,
   compareTypes
 });
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/Arrow.dom.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/apache-arrow@17.0.0/node_modules/apache-arrow/Arrow.dom.mjs
 adapters_default.toDOMStream = toDOMStream;
 Builder2["throughDOM"] = builderThroughDOMStream;
 RecordBatchReader["throughDOM"] = recordBatchReaderThroughDOMStream;
@@ -11682,7 +11682,7 @@ RecordBatchWriter["throughDOM"] = recordBatchWriterThroughDOMStream;
 RecordBatchFileWriter["throughDOM"] = recordBatchWriterThroughDOMStream;
 RecordBatchStreamWriter["throughDOM"] = recordBatchWriterThroughDOMStream;
 
-// ../../../../.cache/deno/deno_esbuild/registry.npmjs.org/@duckdb/duckdb-wasm@1.29.0/node_modules/@duckdb/duckdb-wasm/dist/duckdb-browser.mjs
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/@duckdb/duckdb-wasm@1.29.0/node_modules/@duckdb/duckdb-wasm/dist/duckdb-browser.mjs
 var Y = Object.create;
 var N = Object.defineProperty;
 var H = Object.getOwnPropertyDescriptor;

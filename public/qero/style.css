@@ -1868,6 +1868,128 @@ a.mdlite-link:not([href]) {
   border-color: var(--accent);
 }
 
+/* #e74231: 非エンジニア向けの検索可能なアプリ内ヘルプ */
+.help-search-intro {
+  margin: 0 0 10px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.help-search-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px;
+}
+.help-search-input {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 11px;
+  font-size: 14px;
+}
+.help-search-clear {
+  min-width: 70px;
+}
+.help-search-examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin: 8px 2px;
+  color: var(--text-dim);
+  font-size: 11px;
+}
+.help-search-example {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+.help-search-status {
+  min-height: 20px;
+  margin: 8px 2px 4px;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+.help-search-results {
+  display: grid;
+  gap: 7px;
+  max-height: 54vh;
+  overflow-y: auto;
+  padding-right: 3px;
+}
+.help-topic {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--bg-panel2);
+}
+.help-topic[open] {
+  border-color: var(--accent);
+}
+.help-topic-heading {
+  display: grid;
+  grid-template-columns: auto minmax(150px, 0.7fr) minmax(220px, 1.3fr);
+  align-items: baseline;
+  gap: 8px;
+  padding: 9px 10px;
+  cursor: pointer;
+}
+.help-topic-heading:hover,
+.help-topic-heading:focus-visible {
+  background: var(--accent-dim);
+  outline: none;
+}
+.help-topic-category {
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--bg-panel);
+  color: var(--text-dim);
+  font-size: 10px;
+  white-space: nowrap;
+}
+.help-topic-title {
+  color: var(--text);
+  font-weight: 600;
+}
+.help-topic-summary {
+  color: var(--text-dim);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.help-topic-body {
+  padding: 0 14px 12px 38px;
+  border-top: 1px solid var(--border);
+}
+.help-topic-body h4 {
+  margin: 11px 0 4px;
+  font-size: 12px;
+}
+.help-topic-steps,
+.help-topic-recovery {
+  margin: 4px 0 0;
+  padding-left: 20px;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.help-topic-recovery {
+  color: var(--text-dim);
+}
+.help-search-more {
+  margin: 10px 2px 0;
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+@media (max-width: 700px) {
+  .help-topic-heading {
+    grid-template-columns: auto 1fr;
+  }
+  .help-topic-summary {
+    grid-column: 1 / -1;
+  }
+  .help-topic-body {
+    padding-left: 20px;
+  }
+}
+
 /* #036: 参照・バインディング記法のオートコンプリート（client/ui/refautocomplete.ts）。
    attachMentionAutocomplete の .mention-dropdown/.mention-item と見た目を揃えつつ、
    候補ごとの補助テキスト（データソース名・関数など）用に detail 列を足す。 */

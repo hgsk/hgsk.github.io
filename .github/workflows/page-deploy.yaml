@@ -44,6 +44,28 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Fetch Loci update APK
+        run: |
+          MANIFEST=./dist/Loci/update/version.json
+          TARGET=./dist/Loci/update/app-debug.apk
+          [ -f "$MANIFEST" ] || exit 0
+          mkdir -p "$(dirname "$TARGET")"
+          TEMP_APK=$(mktemp)
+          if curl --fail --location --retry 3 --retry-delay 2 \
+            --output "$TEMP_APK" \
+            https://github.com/hgsk/Loci/releases/download/continuous/app-debug.apk; then
+            EXPECTED_SHA=$(node -p "JSON.parse(require('fs').readFileSync('$MANIFEST', 'utf8')).sha256")
+            echo "${EXPECTED_SHA}  ${TEMP_APK}" | sha256sum --check -
+            mv "$TEMP_APK" "$TARGET"
+          elif [ ! -s "$TARGET" ]; then
+            rm -f "$TEMP_APK"
+            echo "Loci update APK is unavailable" >&2
+            exit 1
+          else
+            rm -f "$TEMP_APK"
+            echo "::warning::Rolling Loci APK is not available yet; keeping the source copy."
+          fi
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -53,7 +53,7 @@ jobs:
           TEMP_APK=$(mktemp)
           if curl --fail --location --retry 3 --retry-delay 2 \
             --output "$TEMP_APK" \
-            https://github.com/hgsk/Loci/releases/download/continuous/app-debug.apk; then
+            https://github.com/hgsk/hgsk.github.io/releases/download/loci-continuous/app-debug.apk; then
             EXPECTED_SHA=$(node -p "JSON.parse(require('fs').readFileSync('$MANIFEST', 'utf8')).sha256")
             echo "${EXPECTED_SHA}  ${TEMP_APK}" | sha256sum --check -
             mv "$TEMP_APK" "$TARGET"

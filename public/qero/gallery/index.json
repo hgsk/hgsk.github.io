@@ -36,6 +36,15 @@
     "permissions": []
   },
   {
+    "kind": "template",
+    "id": "design-showcase",
+    "name": "デザインとアニメーション見本帖",
+    "description": "カード、タイムライン、画像・動画の見せ方と教材配布形式を確認できます。",
+    "file": "gallery/templates/design-showcase.json",
+    "source": "Qero bundled examples",
+    "permissions": []
+  },
+  {
     "kind": "plugin",
     "id": "garden-calendar.js",
     "name": "家庭菜園カレンダー",

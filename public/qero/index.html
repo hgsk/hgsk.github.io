@@ -3,20 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="qero-version" content="131-8f17b92" />
-    <meta name="qero-commit" content="8f17b92" />
-    <meta name="qero-deployed-at" content="2026-08-20T12:31:52.835Z" />
-    <title>Qero — LocalFirst Groupwork Platform</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234f8cff'/%3E%3Ctext x='16' y='22' font-size='18' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E"
-    />
+    <meta name="qero-version" content="132-430625a" />
+    <meta name="qero-commit" content="430625a" />
+    <meta name="qero-deployed-at" content="2026-08-20T12:42:20.455Z" />
+    <title>Qero</title>
+    <link rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234f8cff'/%3E%3Ctext x='16' y='22' font-size='18' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="theme-color" content="#1e1f24" />
     <link rel="stylesheet" href="./style.css" />
     <!-- テーマの FOUC 防止（Issue #069）: スタイルシート適用前に data-theme を確定させる。
-         ロジックは client/core/theme.ts の resolveTheme と同一（tests/theme_test.ts で検証）。
-         同期スクリプトなのでモジュール本体（app.js）の読み込みを待たずに実行される。 -->
+           ロジックは client/core/theme.ts の resolveTheme と同一（tests/theme_test.ts で検証）。
+           同期スクリプトなのでモジュール本体（app.js）の読み込みを待たずに実行される。 -->
     <script>
     (function () {
       try {
@@ -32,6 +30,7 @@
     })();
     </script>
   </head>
+
   <body>
     <div id="app">
       <header id="topbar"></header>
@@ -46,5 +45,17 @@
     <div id="print-root"></div>
     <div id="dialog-root"></div>
     <script type="module" src="./app.js"></script>
+    <script>
+    (function () {
+      if (typeof EventSource === "undefined") return;
+      try {
+        var es = new EventSource("/live-reload");
+        es.addEventListener("reload", function () {
+          console.log("[LiveReload] File change detected, reloading page...");
+          location.reload();
+        });
+      } catch (e) {}
+    })();
+    </script>
   </body>
 </html>

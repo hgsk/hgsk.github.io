@@ -3451,10 +3451,12 @@ button.ds-hint-warning {
 }
 
 .ds-tooltip {
-  position: absolute;
+  --ds-tooltip-top: 0px;
+  --ds-tooltip-left: 0px;
+  position: fixed;
   z-index: var(--ds-layer-tooltip);
-  inset-block-start: calc(100% + var(--ds-space-2));
-  inset-inline-start: 50%;
+  inset-block-start: var(--ds-tooltip-top);
+  inset-inline-start: var(--ds-tooltip-left);
   width: max-content;
   max-width: min(320px, calc(100vw - 48px));
   padding: var(--ds-space-2) var(--ds-space-3);
@@ -3472,7 +3474,7 @@ button.ds-hint-warning {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%, -4px);
+  transform: translateY(-4px);
   transition: opacity 120ms ease, transform 120ms ease, visibility 120ms;
 }
 
@@ -3480,11 +3482,34 @@ button.ds-hint-warning {
   border-color: var(--warn);
 }
 
-.ds-hint:hover > .ds-tooltip,
-.ds-hint:focus-within > .ds-tooltip {
+.ds-tooltip[data-open="true"] {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, 0);
+  transform: translateY(0);
+}
+
+.ds-tooltip[data-resolved-placement="top"] {
+  transform: translateY(4px);
+}
+
+.ds-tooltip[data-resolved-placement="top"][data-open="true"] {
+  transform: translateY(0);
+}
+
+.ds-tooltip[data-dismissed="true"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ds-inline-help {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: var(--ds-space-2);
+}
+
+.ds-inline-help > .ds-hint {
+  margin-inline-start: 2px;
 }
 
 @media (max-width: 560px) {
@@ -3551,6 +3576,55 @@ textarea,
   /* Progressive enhancement: browsers without caret-shape keep their native
      caret while still applying the requested color. */
   caret-shape: block;
+}
+
+/* ==== features/component-references.css ==== */
+/* Component-reference authoring and derived labels (GitHub #152 follow-up). */
+
+.component-ref-label {
+  --component-reference-color: #2563eb;
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.04em 0.3em;
+  border: 1px solid var(--component-reference-color);
+  border-radius: 0.35em;
+  background: color-mix(in srgb, var(--component-reference-color) 12%, transparent);
+  box-decoration-break: clone;
+  line-height: 1.15;
+  vertical-align: baseline;
+}
+
+.component-ref-source-controls {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+}
+
+.component-ref-source {
+  overflow: hidden;
+  flex: 1;
+  cursor: grab;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.component-ref-source:active {
+  cursor: grabbing;
+}
+
+.component-ref-source-controls input[type="color"] {
+  width: 32px;
+  min-width: 32px;
+  height: 26px;
+  padding: 2px;
+}
+
+.component-ref-drop-target {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 2px;
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent) !important;
 }
 
 /* ==== features/contextual-radial-menu.css ==== */
@@ -4141,66 +4215,10 @@ button.card-row {
   display: none;
 }
 
-/* 1280px 前後はトップバーをグローバル操作だけに圧縮し、左ツリーへ幅を渡す。 */
 @media (min-width: 769px) and (max-width: 1400px) {
   #topbar {
     position: relative;
     z-index: 80;
-  }
-
-  #topbar .tb-menu,
-  #topbar .logo,
-  #topbar .presence-root,
-  #topbar .spacer,
-  #topbar button.tb-more,
-  #topbar select.tb-more {
-    display: none;
-  }
-
-  #topbar .tb-hamburger {
-    display: inline-flex;
-  }
-
-  .tb-more-menu {
-    display: none;
-    position: absolute;
-    top: 48px;
-    right: 8px;
-    z-index: 92;
-    flex-direction: column;
-    min-width: 220px;
-    max-height: 70vh;
-    overflow-y: auto;
-    background: var(--bg-panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
-  }
-
-  .tb-more-menu.open {
-    display: flex;
-  }
-
-  .tb-more-menu button {
-    border: none;
-    border-radius: 0;
-    text-align: left;
-    padding: 9px 14px;
-  }
-
-  .tb-more-menu button + button {
-    border-top: 1px solid var(--border);
-  }
-
-  .tb-more-menu-heading {
-    padding: 8px 14px 4px;
-    font-size: 10px;
-    color: var(--text-dim);
-    border-top: 1px solid var(--border);
-  }
-
-  .tb-more-menu-heading:first-child {
-    border-top: none;
   }
 }
 
@@ -4618,13 +4636,13 @@ button:disabled,
 }
 
 .empty-canvas-guide h2 {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 20px;
 }
 
-.empty-canvas-guide p {
-  margin: 0 0 18px;
-  color: var(--muted);
+.empty-canvas-heading {
+  justify-content: center;
+  margin-block-end: 18px;
 }
 
 .empty-canvas-actions {

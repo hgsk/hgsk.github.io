@@ -2135,7 +2135,7 @@ button.primary .spinner {
   max-height: 280px;
   overflow-y: auto;
 }
-.project-pane .layer-item.legacy-row {
+.project-pane .layer-item.protected-row {
   opacity: 0.6;
   font-style: italic;
 }
@@ -4671,6 +4671,35 @@ button:disabled,
 
 .onboarding-purpose:has(input:checked) {
   background: var(--accent-soft, #4c8bf522);
+}
+
+/* Keep the first-run route usable on short screens. The generic dialog owns
+   the scroll container, which can push the start actions below the viewport
+   when the mobile design-system rule stacks every `.d-row` vertically. */
+.dialog.onboarding-dialog {
+  width: min(520px, calc(100vw - 32px));
+  max-height: min(720px, calc(100vh - 32px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dialog.onboarding-dialog > .dialog-body {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.dialog.onboarding-dialog .d-actions {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 560px) {
+  .dialog.onboarding-dialog .onboarding-concept-row {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--ds-space-2, 8px);
+  }
 }
 
 .toolbox-btn {

@@ -1,0 +1,17667 @@
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __require = /* @__PURE__ */ ((x2) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x2, {
+  get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
+}) : x2)(function(x2) {
+  if (typeof require !== "undefined") return require.apply(this, arguments);
+  throw Error('Dynamic require of "' + x2 + '" is not supported');
+});
+var __commonJS = (cb, mod) => function __require2() {
+  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+};
+
+// C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/jsuites@5.13.5/node_modules/jsuites/dist/jsuites.js
+var require_jsuites = __commonJS({
+  "C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/jsuites@5.13.5/node_modules/jsuites/dist/jsuites.js"(exports2, module2) {
+    (function(global, factory2) {
+      typeof exports2 === "object" && typeof module2 !== "undefined" ? module2.exports = factory2() : typeof define === "function" && define.amd ? define(factory2) : global.jSuites = factory2();
+    })(exports2, function() {
+      var jSuites2;
+      (function() {
+        var __webpack_modules__2 = {
+          /***/
+          195: (
+            /***/
+            function(module3) {
+              ;
+              (function(global, factory2) {
+                true ? module3.exports = factory2() : 0;
+              })(this, function() {
+                return function(str) {
+                  function int64(msint_32, lsint_32) {
+                    this.highOrder = msint_32;
+                    this.lowOrder = lsint_32;
+                  }
+                  var H = [
+                    new int64(1779033703, 4089235720),
+                    new int64(3144134277, 2227873595),
+                    new int64(1013904242, 4271175723),
+                    new int64(2773480762, 1595750129),
+                    new int64(1359893119, 2917565137),
+                    new int64(2600822924, 725511199),
+                    new int64(528734635, 4215389547),
+                    new int64(1541459225, 327033209)
+                  ];
+                  var K = [
+                    new int64(1116352408, 3609767458),
+                    new int64(1899447441, 602891725),
+                    new int64(3049323471, 3964484399),
+                    new int64(3921009573, 2173295548),
+                    new int64(961987163, 4081628472),
+                    new int64(1508970993, 3053834265),
+                    new int64(2453635748, 2937671579),
+                    new int64(2870763221, 3664609560),
+                    new int64(3624381080, 2734883394),
+                    new int64(310598401, 1164996542),
+                    new int64(607225278, 1323610764),
+                    new int64(1426881987, 3590304994),
+                    new int64(1925078388, 4068182383),
+                    new int64(2162078206, 991336113),
+                    new int64(2614888103, 633803317),
+                    new int64(3248222580, 3479774868),
+                    new int64(3835390401, 2666613458),
+                    new int64(4022224774, 944711139),
+                    new int64(264347078, 2341262773),
+                    new int64(604807628, 2007800933),
+                    new int64(770255983, 1495990901),
+                    new int64(1249150122, 1856431235),
+                    new int64(1555081692, 3175218132),
+                    new int64(1996064986, 2198950837),
+                    new int64(2554220882, 3999719339),
+                    new int64(2821834349, 766784016),
+                    new int64(2952996808, 2566594879),
+                    new int64(3210313671, 3203337956),
+                    new int64(3336571891, 1034457026),
+                    new int64(3584528711, 2466948901),
+                    new int64(113926993, 3758326383),
+                    new int64(338241895, 168717936),
+                    new int64(666307205, 1188179964),
+                    new int64(773529912, 1546045734),
+                    new int64(1294757372, 1522805485),
+                    new int64(1396182291, 2643833823),
+                    new int64(1695183700, 2343527390),
+                    new int64(1986661051, 1014477480),
+                    new int64(2177026350, 1206759142),
+                    new int64(2456956037, 344077627),
+                    new int64(2730485921, 1290863460),
+                    new int64(2820302411, 3158454273),
+                    new int64(3259730800, 3505952657),
+                    new int64(3345764771, 106217008),
+                    new int64(3516065817, 3606008344),
+                    new int64(3600352804, 1432725776),
+                    new int64(4094571909, 1467031594),
+                    new int64(275423344, 851169720),
+                    new int64(430227734, 3100823752),
+                    new int64(506948616, 1363258195),
+                    new int64(659060556, 3750685593),
+                    new int64(883997877, 3785050280),
+                    new int64(958139571, 3318307427),
+                    new int64(1322822218, 3812723403),
+                    new int64(1537002063, 2003034995),
+                    new int64(1747873779, 3602036899),
+                    new int64(1955562222, 1575990012),
+                    new int64(2024104815, 1125592928),
+                    new int64(2227730452, 2716904306),
+                    new int64(2361852424, 442776044),
+                    new int64(2428436474, 593698344),
+                    new int64(2756734187, 3733110249),
+                    new int64(3204031479, 2999351573),
+                    new int64(3329325298, 3815920427),
+                    new int64(3391569614, 3928383900),
+                    new int64(3515267271, 566280711),
+                    new int64(3940187606, 3454069534),
+                    new int64(4118630271, 4000239992),
+                    new int64(116418474, 1914138554),
+                    new int64(174292421, 2731055270),
+                    new int64(289380356, 3203993006),
+                    new int64(460393269, 320620315),
+                    new int64(685471733, 587496836),
+                    new int64(852142971, 1086792851),
+                    new int64(1017036298, 365543100),
+                    new int64(1126000580, 2618297676),
+                    new int64(1288033470, 3409855158),
+                    new int64(1501505948, 4234509866),
+                    new int64(1607167915, 987167468),
+                    new int64(1816402316, 1246189591)
+                  ];
+                  var W = new Array(64);
+                  var a, b, c, d, e, f, g, h, i2, j;
+                  var T1, T2;
+                  var charsize = 8;
+                  function utf8_encode(str2) {
+                    return unescape(encodeURIComponent(str2));
+                  }
+                  function str2binb(str2) {
+                    var bin = [];
+                    var mask = (1 << charsize) - 1;
+                    var len = str2.length * charsize;
+                    for (var i3 = 0; i3 < len; i3 += charsize) {
+                      bin[i3 >> 5] |= (str2.charCodeAt(i3 / charsize) & mask) << 32 - charsize - i3 % 32;
+                    }
+                    return bin;
+                  }
+                  function binb2hex(binarray2) {
+                    var hex_tab = "0123456789abcdef";
+                    var str2 = "";
+                    var length = binarray2.length * 4;
+                    var srcByte;
+                    for (var i3 = 0; i3 < length; i3 += 1) {
+                      srcByte = binarray2[i3 >> 2] >> (3 - i3 % 4) * 8;
+                      str2 += hex_tab.charAt(srcByte >> 4 & 15) + hex_tab.charAt(srcByte & 15);
+                    }
+                    return str2;
+                  }
+                  function safe_add_2(x2, y2) {
+                    var lsw, msw, lowOrder, highOrder;
+                    lsw = (x2.lowOrder & 65535) + (y2.lowOrder & 65535);
+                    msw = (x2.lowOrder >>> 16) + (y2.lowOrder >>> 16) + (lsw >>> 16);
+                    lowOrder = (msw & 65535) << 16 | lsw & 65535;
+                    lsw = (x2.highOrder & 65535) + (y2.highOrder & 65535) + (msw >>> 16);
+                    msw = (x2.highOrder >>> 16) + (y2.highOrder >>> 16) + (lsw >>> 16);
+                    highOrder = (msw & 65535) << 16 | lsw & 65535;
+                    return new int64(highOrder, lowOrder);
+                  }
+                  function safe_add_4(a2, b2, c2, d2) {
+                    var lsw, msw, lowOrder, highOrder;
+                    lsw = (a2.lowOrder & 65535) + (b2.lowOrder & 65535) + (c2.lowOrder & 65535) + (d2.lowOrder & 65535);
+                    msw = (a2.lowOrder >>> 16) + (b2.lowOrder >>> 16) + (c2.lowOrder >>> 16) + (d2.lowOrder >>> 16) + (lsw >>> 16);
+                    lowOrder = (msw & 65535) << 16 | lsw & 65535;
+                    lsw = (a2.highOrder & 65535) + (b2.highOrder & 65535) + (c2.highOrder & 65535) + (d2.highOrder & 65535) + (msw >>> 16);
+                    msw = (a2.highOrder >>> 16) + (b2.highOrder >>> 16) + (c2.highOrder >>> 16) + (d2.highOrder >>> 16) + (lsw >>> 16);
+                    highOrder = (msw & 65535) << 16 | lsw & 65535;
+                    return new int64(highOrder, lowOrder);
+                  }
+                  function safe_add_5(a2, b2, c2, d2, e2) {
+                    var lsw, msw, lowOrder, highOrder;
+                    lsw = (a2.lowOrder & 65535) + (b2.lowOrder & 65535) + (c2.lowOrder & 65535) + (d2.lowOrder & 65535) + (e2.lowOrder & 65535);
+                    msw = (a2.lowOrder >>> 16) + (b2.lowOrder >>> 16) + (c2.lowOrder >>> 16) + (d2.lowOrder >>> 16) + (e2.lowOrder >>> 16) + (lsw >>> 16);
+                    lowOrder = (msw & 65535) << 16 | lsw & 65535;
+                    lsw = (a2.highOrder & 65535) + (b2.highOrder & 65535) + (c2.highOrder & 65535) + (d2.highOrder & 65535) + (e2.highOrder & 65535) + (msw >>> 16);
+                    msw = (a2.highOrder >>> 16) + (b2.highOrder >>> 16) + (c2.highOrder >>> 16) + (d2.highOrder >>> 16) + (e2.highOrder >>> 16) + (lsw >>> 16);
+                    highOrder = (msw & 65535) << 16 | lsw & 65535;
+                    return new int64(highOrder, lowOrder);
+                  }
+                  function maj(x2, y2, z) {
+                    return new int64(
+                      x2.highOrder & y2.highOrder ^ x2.highOrder & z.highOrder ^ y2.highOrder & z.highOrder,
+                      x2.lowOrder & y2.lowOrder ^ x2.lowOrder & z.lowOrder ^ y2.lowOrder & z.lowOrder
+                    );
+                  }
+                  function ch(x2, y2, z) {
+                    return new int64(
+                      x2.highOrder & y2.highOrder ^ ~x2.highOrder & z.highOrder,
+                      x2.lowOrder & y2.lowOrder ^ ~x2.lowOrder & z.lowOrder
+                    );
+                  }
+                  function rotr(x2, n) {
+                    if (n <= 32) {
+                      return new int64(
+                        x2.highOrder >>> n | x2.lowOrder << 32 - n,
+                        x2.lowOrder >>> n | x2.highOrder << 32 - n
+                      );
+                    } else {
+                      return new int64(
+                        x2.lowOrder >>> n | x2.highOrder << 32 - n,
+                        x2.highOrder >>> n | x2.lowOrder << 32 - n
+                      );
+                    }
+                  }
+                  function sigma0(x2) {
+                    var rotr28 = rotr(x2, 28);
+                    var rotr34 = rotr(x2, 34);
+                    var rotr39 = rotr(x2, 39);
+                    return new int64(
+                      rotr28.highOrder ^ rotr34.highOrder ^ rotr39.highOrder,
+                      rotr28.lowOrder ^ rotr34.lowOrder ^ rotr39.lowOrder
+                    );
+                  }
+                  function sigma1(x2) {
+                    var rotr14 = rotr(x2, 14);
+                    var rotr18 = rotr(x2, 18);
+                    var rotr41 = rotr(x2, 41);
+                    return new int64(
+                      rotr14.highOrder ^ rotr18.highOrder ^ rotr41.highOrder,
+                      rotr14.lowOrder ^ rotr18.lowOrder ^ rotr41.lowOrder
+                    );
+                  }
+                  function gamma0(x2) {
+                    var rotr1 = rotr(x2, 1), rotr8 = rotr(x2, 8), shr7 = shr(x2, 7);
+                    return new int64(
+                      rotr1.highOrder ^ rotr8.highOrder ^ shr7.highOrder,
+                      rotr1.lowOrder ^ rotr8.lowOrder ^ shr7.lowOrder
+                    );
+                  }
+                  function gamma1(x2) {
+                    var rotr19 = rotr(x2, 19);
+                    var rotr61 = rotr(x2, 61);
+                    var shr6 = shr(x2, 6);
+                    return new int64(
+                      rotr19.highOrder ^ rotr61.highOrder ^ shr6.highOrder,
+                      rotr19.lowOrder ^ rotr61.lowOrder ^ shr6.lowOrder
+                    );
+                  }
+                  function shr(x2, n) {
+                    if (n <= 32) {
+                      return new int64(
+                        x2.highOrder >>> n,
+                        x2.lowOrder >>> n | x2.highOrder << 32 - n
+                      );
+                    } else {
+                      return new int64(
+                        0,
+                        x2.highOrder << 32 - n
+                      );
+                    }
+                  }
+                  var str = utf8_encode(str);
+                  var strlen = str.length * charsize;
+                  str = str2binb(str);
+                  str[strlen >> 5] |= 128 << 24 - strlen % 32;
+                  str[(strlen + 128 >> 10 << 5) + 31] = strlen;
+                  for (var i2 = 0; i2 < str.length; i2 += 32) {
+                    a = H[0];
+                    b = H[1];
+                    c = H[2];
+                    d = H[3];
+                    e = H[4];
+                    f = H[5];
+                    g = H[6];
+                    h = H[7];
+                    for (var j = 0; j < 80; j++) {
+                      if (j < 16) {
+                        W[j] = new int64(str[j * 2 + i2], str[j * 2 + i2 + 1]);
+                      } else {
+                        W[j] = safe_add_4(gamma1(W[j - 2]), W[j - 7], gamma0(W[j - 15]), W[j - 16]);
+                      }
+                      T1 = safe_add_5(h, sigma1(e), ch(e, f, g), K[j], W[j]);
+                      T2 = safe_add_2(sigma0(a), maj(a, b, c));
+                      h = g;
+                      g = f;
+                      f = e;
+                      e = safe_add_2(d, T1);
+                      d = c;
+                      c = b;
+                      b = a;
+                      a = safe_add_2(T1, T2);
+                    }
+                    H[0] = safe_add_2(a, H[0]);
+                    H[1] = safe_add_2(b, H[1]);
+                    H[2] = safe_add_2(c, H[2]);
+                    H[3] = safe_add_2(d, H[3]);
+                    H[4] = safe_add_2(e, H[4]);
+                    H[5] = safe_add_2(f, H[5]);
+                    H[6] = safe_add_2(g, H[6]);
+                    H[7] = safe_add_2(h, H[7]);
+                  }
+                  var binarray = [];
+                  for (var i2 = 0; i2 < H.length; i2++) {
+                    binarray.push(H[i2].highOrder);
+                    binarray.push(H[i2].lowOrder);
+                  }
+                  return binb2hex(binarray);
+                };
+              });
+            }
+          )
+          /******/
+        };
+        var __webpack_module_cache__2 = {};
+        function __webpack_require__2(moduleId) {
+          var cachedModule = __webpack_module_cache__2[moduleId];
+          if (cachedModule !== void 0) {
+            return cachedModule.exports;
+          }
+          var module3 = __webpack_module_cache__2[moduleId] = {
+            /******/
+            // no module.id needed
+            /******/
+            // no module.loaded needed
+            /******/
+            exports: {}
+            /******/
+          };
+          __webpack_modules__2[moduleId].call(module3.exports, module3, module3.exports, __webpack_require__2);
+          return module3.exports;
+        }
+        !function() {
+          __webpack_require__2.n = function(module3) {
+            var getter = module3 && module3.__esModule ? (
+              /******/
+              function() {
+                return module3["default"];
+              }
+            ) : (
+              /******/
+              function() {
+                return module3;
+              }
+            );
+            __webpack_require__2.d(getter, { a: getter });
+            return getter;
+          };
+        }();
+        !function() {
+          __webpack_require__2.d = function(exports3, definition) {
+            for (var key in definition) {
+              if (__webpack_require__2.o(definition, key) && !__webpack_require__2.o(exports3, key)) {
+                Object.defineProperty(exports3, key, { enumerable: true, get: definition[key] });
+              }
+            }
+          };
+        }();
+        !function() {
+          __webpack_require__2.o = function(obj2, prop) {
+            return Object.prototype.hasOwnProperty.call(obj2, prop);
+          };
+        }();
+        var __webpack_exports__2 = {};
+        !function() {
+          "use strict";
+          __webpack_require__2.d(__webpack_exports__2, {
+            "default": function() {
+              return (
+                /* binding */
+                jsuites
+              );
+            }
+          });
+          ;
+          var setDictionary = function(d) {
+            if (!document.dictionary) {
+              document.dictionary = {};
+            }
+            var t = null;
+            var i2 = null;
+            var k = Object.keys(d);
+            for (i2 = 0; i2 < k.length; i2++) {
+              document.dictionary[k[i2]] = d[k[i2]];
+            }
+          };
+          var translate = function(t) {
+            if (typeof document !== "undefined" && document.dictionary) {
+              return document.dictionary[t] || t;
+            } else {
+              return t;
+            }
+          };
+          var dictionary = { setDictionary, translate };
+          ;
+          const Tracking = function(component, state) {
+            if (state === true) {
+              window["jSuitesStateControl"] = window["jSuitesStateControl"].filter(function(v) {
+                return v !== null;
+              });
+              setTimeout(function() {
+                window["jSuitesStateControl"].push(component);
+              }, 0);
+            } else {
+              var index = window["jSuitesStateControl"].indexOf(component);
+              if (index >= 0) {
+                window["jSuitesStateControl"].splice(index, 1);
+              }
+            }
+          };
+          var tracking = Tracking;
+          ;
+          var Helpers2 = {};
+          Helpers2.two = function(value) {
+            value = "" + value;
+            if (value.length == 1) {
+              value = "0" + value;
+            }
+            return value;
+          };
+          Helpers2.focus = function(el) {
+            if (el.textContent.length) {
+              const range = document.createRange();
+              const sel = window.getSelection();
+              let node = el;
+              while (node.lastChild) node = node.lastChild;
+              if (node.nodeType === Node.TEXT_NODE) {
+                range.setStart(node, node.length);
+              } else {
+                range.setStart(node, node.childNodes.length);
+              }
+              range.collapse(true);
+              sel.removeAllRanges();
+              sel.addRange(range);
+              el.scrollLeft = el.scrollWidth;
+            }
+          };
+          Helpers2.isNumeric = function(num) {
+            if (typeof num === "string") {
+              num = num.trim();
+            }
+            return !isNaN(num) && num !== null && num !== "";
+          };
+          Helpers2.guid = function() {
+            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+              var r = Math.random() * 16 | 0, v = c == "x" ? r : r & 3 | 8;
+              return v.toString(16);
+            });
+          };
+          Helpers2.getNode = function() {
+            var node = document.getSelection().anchorNode;
+            if (node) {
+              return node.nodeType == 3 ? node.parentNode : node;
+            } else {
+              return null;
+            }
+          };
+          Helpers2.hash = function(str) {
+            var hash = 0, i2, chr;
+            if (str.length === 0) {
+              return hash;
+            } else {
+              for (i2 = 0; i2 < str.length; i2++) {
+                chr = str.charCodeAt(i2);
+                if (chr > 32) {
+                  hash = (hash << 5) - hash + chr;
+                  hash |= 0;
+                }
+              }
+            }
+            return hash;
+          };
+          Helpers2.randomColor = function(h) {
+            var lum = -0.25;
+            var hex = String("#" + Math.random().toString(16).slice(2, 8).toUpperCase()).replace(/[^0-9a-f]/gi, "");
+            if (hex.length < 6) {
+              hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+            }
+            var rgb = [], c, i2;
+            for (i2 = 0; i2 < 3; i2++) {
+              c = parseInt(hex.substr(i2 * 2, 2), 16);
+              c = Math.round(Math.min(Math.max(0, c + c * lum), 255)).toString(16);
+              rgb.push(("00" + c).substr(c.length));
+            }
+            if (h == true) {
+              return "#" + Helpers2.two(rgb[0].toString(16)) + Helpers2.two(rgb[1].toString(16)) + Helpers2.two(rgb[2].toString(16));
+            }
+            return rgb;
+          };
+          Helpers2.getWindowWidth = function() {
+            var w = window, d = document, e = d.documentElement, g = d.getElementsByTagName("body")[0], x2 = w.innerWidth || e.clientWidth || g.clientWidth;
+            return x2;
+          };
+          Helpers2.getWindowHeight = function() {
+            var w = window, d = document, e = d.documentElement, g = d.getElementsByTagName("body")[0], y2 = w.innerHeight || e.clientHeight || g.clientHeight;
+            return y2;
+          };
+          Helpers2.getPosition = function(e) {
+            if (e.changedTouches && e.changedTouches[0]) {
+              var x2 = e.changedTouches[0].pageX;
+              var y2 = e.changedTouches[0].pageY;
+            } else {
+              var x2 = window.Event ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+              var y2 = window.Event ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+            }
+            return [x2, y2];
+          };
+          Helpers2.click = function(el) {
+            if (el.click) {
+              el.click();
+            } else {
+              var evt = new MouseEvent("click", {
+                bubbles: true,
+                cancelable: true,
+                view: window
+              });
+              el.dispatchEvent(evt);
+            }
+          };
+          Helpers2.findElement = function(element, condition) {
+            var foundElement = false;
+            function path(element2) {
+              if (element2 && !foundElement) {
+                if (typeof condition == "function") {
+                  foundElement = condition(element2);
+                } else if (typeof condition == "string") {
+                  if (element2.classList && element2.classList.contains(condition)) {
+                    foundElement = element2;
+                  }
+                }
+              }
+              if (element2.parentNode && !foundElement) {
+                path(element2.parentNode);
+              }
+            }
+            path(element);
+            return foundElement;
+          };
+          var helpers2 = Helpers2;
+          ;
+          const isValidPathObj = function(o) {
+            return typeof o === "object" || typeof o === "function";
+          };
+          function Path(pathString, value, remove) {
+            if (typeof pathString !== "string" || pathString.length === 0) {
+              return void 0;
+            }
+            const keys = pathString.split(".");
+            if (keys.length === 0) {
+              return void 0;
+            }
+            let currentObject = this;
+            if (typeof value === "undefined" && typeof remove === "undefined") {
+              for (let i2 = 0; i2 < keys.length; i2++) {
+                const key = keys[i2];
+                if (currentObject != null && isValidPathObj(currentObject) && Object.prototype.hasOwnProperty.call(currentObject, key)) {
+                  currentObject = currentObject[key];
+                } else {
+                  return void 0;
+                }
+              }
+              return currentObject;
+            }
+            for (let i2 = 0; i2 < keys.length - 1; i2++) {
+              const key = keys[i2];
+              if (currentObject == null || !isValidPathObj(currentObject)) {
+                console.warn(`Cannot set value: path '${pathString}' blocked by invalid object at '${key}'`);
+                return false;
+              }
+              if (Object.prototype.hasOwnProperty.call(currentObject, key) && (currentObject[key] == null || !isValidPathObj(currentObject[key]))) {
+                currentObject[key] = {};
+              } else if (!Object.prototype.hasOwnProperty.call(currentObject, key)) {
+                currentObject[key] = {};
+              }
+              currentObject = currentObject[key];
+            }
+            const finalKey = keys[keys.length - 1];
+            if (currentObject == null || !isValidPathObj(currentObject)) {
+              return false;
+            }
+            if (remove === true) {
+              if (Object.prototype.hasOwnProperty.call(currentObject, finalKey)) {
+                delete currentObject[finalKey];
+                return true;
+              }
+              return false;
+            }
+            currentObject[finalKey] = value;
+            return true;
+          }
+          ;
+          function Sorting(el, options) {
+            var obj2 = {};
+            obj2.options = {};
+            var defaults = {
+              pointer: null,
+              direction: null,
+              ondragstart: null,
+              ondragend: null,
+              ondrop: null
+            };
+            var dragElement = null;
+            for (var property in defaults) {
+              if (options && options.hasOwnProperty(property)) {
+                obj2.options[property] = options[property];
+              } else {
+                obj2.options[property] = defaults[property];
+              }
+            }
+            el.classList.add("jsorting");
+            el.addEventListener("dragstart", function(e) {
+              let target = e.target;
+              if (target.nodeType === 3) {
+                if (target.parentNode.getAttribute("draggable") === "true") {
+                  target = target.parentNode;
+                } else {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return;
+                }
+              }
+              if (target.getAttribute("draggable") === "true") {
+                let position = Array.prototype.indexOf.call(target.parentNode.children, target);
+                dragElement = {
+                  element: target,
+                  o: position,
+                  d: position
+                };
+                target.style.opacity = "0.25";
+                if (typeof obj2.options.ondragstart == "function") {
+                  obj2.options.ondragstart(el, target, e);
+                }
+                e.dataTransfer.setDragImage(target, 0, 0);
+              }
+            });
+            el.addEventListener("dragover", function(e) {
+              e.preventDefault();
+              if (dragElement) {
+                if (getElement2(e.target)) {
+                  if (e.target.getAttribute("draggable") == "true" && dragElement.element != e.target) {
+                    if (!obj2.options.direction) {
+                      var condition = e.target.clientHeight / 2 > e.offsetY;
+                    } else {
+                      var condition = e.target.clientWidth / 2 > e.offsetX;
+                    }
+                    if (condition) {
+                      e.target.parentNode.insertBefore(dragElement.element, e.target);
+                    } else {
+                      e.target.parentNode.insertBefore(dragElement.element, e.target.nextSibling);
+                    }
+                    dragElement.d = Array.prototype.indexOf.call(e.target.parentNode.children, dragElement.element);
+                  }
+                }
+              }
+            });
+            el.addEventListener("dragleave", function(e) {
+              e.preventDefault();
+            });
+            el.addEventListener("dragend", function(e) {
+              e.preventDefault();
+              if (dragElement) {
+                if (typeof obj2.options.ondragend == "function") {
+                  obj2.options.ondragend(el, dragElement.element, e);
+                }
+                if (dragElement.o < dragElement.d) {
+                  e.target.parentNode.insertBefore(dragElement.element, e.target.parentNode.children[dragElement.o]);
+                } else {
+                  e.target.parentNode.insertBefore(dragElement.element, e.target.parentNode.children[dragElement.o].nextSibling);
+                }
+                dragElement.element.style.opacity = "";
+                dragElement = null;
+              }
+            });
+            el.addEventListener("drop", function(e) {
+              e.preventDefault();
+              if (dragElement) {
+                if (dragElement.o !== dragElement.d) {
+                  if (typeof obj2.options.ondrop == "function") {
+                    obj2.options.ondrop(el, dragElement.o, dragElement.d, dragElement.element, e.target, e);
+                  }
+                }
+                dragElement.element.style.opacity = "";
+                dragElement = null;
+              }
+            });
+            var getElement2 = function(element) {
+              var sorting = false;
+              function path(element2) {
+                if (element2.className) {
+                  if (element2.classList.contains("jsorting")) {
+                    sorting = true;
+                  }
+                }
+                if (!sorting) {
+                  path(element2.parentNode);
+                }
+              }
+              path(element);
+              return sorting;
+            };
+            for (var i2 = 0; i2 < el.children.length; i2++) {
+              if (!el.children[i2].hasAttribute("draggable")) {
+                el.children[i2].setAttribute("draggable", "true");
+              }
+            }
+            el.val = function() {
+              var id = null;
+              var data = [];
+              for (var i3 = 0; i3 < el.children.length; i3++) {
+                if (id = el.children[i3].getAttribute("data-id")) {
+                  data.push(id);
+                }
+              }
+              return data;
+            };
+            return el;
+          }
+          ;
+          function LazyLoading(el, options) {
+            var obj2 = {};
+            if (!options.loadUp || typeof options.loadUp != "function") {
+              options.loadUp = function() {
+                return false;
+              };
+            }
+            if (!options.loadDown || typeof options.loadDown != "function") {
+              options.loadDown = function() {
+                return false;
+              };
+            }
+            if (!options.timer) {
+              options.timer = 100;
+            }
+            var timeControlLoading = null;
+            var scrollControls2 = function(e) {
+              if (timeControlLoading == null) {
+                var event = false;
+                var scrollTop = el.scrollTop;
+                if (el.scrollTop + el.clientHeight * 2 >= el.scrollHeight) {
+                  if (options.loadDown()) {
+                    if (scrollTop == el.scrollTop) {
+                      el.scrollTop = el.scrollTop - el.clientHeight;
+                    }
+                    event = true;
+                  }
+                } else if (el.scrollTop <= el.clientHeight) {
+                  if (options.loadUp()) {
+                    if (scrollTop == el.scrollTop) {
+                      el.scrollTop = el.scrollTop + el.clientHeight;
+                    }
+                    event = true;
+                  }
+                }
+                timeControlLoading = setTimeout(function() {
+                  timeControlLoading = null;
+                }, options.timer);
+                if (event) {
+                  if (typeof options.onupdate == "function") {
+                    options.onupdate();
+                  }
+                }
+              }
+            };
+            el.onscroll = function(e) {
+              scrollControls2(e);
+            };
+            el.onwheel = function(e) {
+              scrollControls2(e);
+            };
+            return obj2;
+          }
+          ;
+          function Ajax() {
+            var Component = function(options, complete) {
+              if (Array.isArray(options)) {
+                var multiple = {
+                  instance: [],
+                  complete
+                };
+                if (options.length > 0) {
+                  for (var i2 = 0; i2 < options.length; i2++) {
+                    options[i2].multiple = multiple;
+                    multiple.instance.push(Component(options[i2]));
+                  }
+                }
+                return multiple;
+              }
+              if (!options.data) {
+                options.data = {};
+              }
+              if (options.type) {
+                options.method = options.type;
+              }
+              if (!options.method) {
+                options.method = "GET";
+              }
+              if (!options.dataType) {
+                options.dataType = "json";
+              }
+              if (options.data) {
+                var parseData = function(value, key) {
+                  var vars2 = [];
+                  if (value) {
+                    var keys = Object.keys(value);
+                    if (keys.length) {
+                      for (var i3 = 0; i3 < keys.length; i3++) {
+                        if (key) {
+                          var k2 = key + "[" + keys[i3] + "]";
+                        } else {
+                          var k2 = keys[i3];
+                        }
+                        if (value[k2] instanceof FileList) {
+                          vars2[k2] = value[keys[i3]];
+                        } else if (value[keys[i3]] === null || value[keys[i3]] === void 0) {
+                          vars2[k2] = "";
+                        } else if (typeof value[keys[i3]] == "object") {
+                          var r = parseData(value[keys[i3]], k2);
+                          var o = Object.keys(r);
+                          for (var j2 = 0; j2 < o.length; j2++) {
+                            vars2[o[j2]] = r[o[j2]];
+                          }
+                        } else {
+                          vars2[k2] = value[keys[i3]];
+                        }
+                      }
+                    }
+                  }
+                  return vars2;
+                };
+                var d = parseData(options.data);
+                var k = Object.keys(d);
+                if (options.method == "GET") {
+                  if (k.length) {
+                    var data = [];
+                    for (var i2 = 0; i2 < k.length; i2++) {
+                      data.push(k[i2] + "=" + encodeURIComponent(d[k[i2]]));
+                    }
+                    if (options.url.indexOf("?") < 0) {
+                      options.url += "?";
+                    }
+                    options.url += data.join("&");
+                  }
+                } else {
+                  var data = new FormData();
+                  for (var i2 = 0; i2 < k.length; i2++) {
+                    if (d[k[i2]] instanceof FileList) {
+                      if (d[k[i2]].length) {
+                        for (var j = 0; j < d[k[i2]].length; j++) {
+                          data.append(k[i2], d[k[i2]][j], d[k[i2]][j].name);
+                        }
+                      }
+                    } else {
+                      data.append(k[i2], d[k[i2]]);
+                    }
+                  }
+                }
+              }
+              var httpRequest = new XMLHttpRequest();
+              httpRequest.open(options.method, options.url, true);
+              if (options.requestedWith) {
+                httpRequest.setRequestHeader("X-Requested-With", options.requestedWith);
+              } else {
+                if (options.requestedWith !== false) {
+                  httpRequest.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+                }
+              }
+              if (options.contentType) {
+                httpRequest.setRequestHeader("Content-Type", options.contentType);
+              }
+              if (options.method === "POST") {
+                httpRequest.setRequestHeader("Accept", "application/json");
+              } else {
+                if (options.dataType === "blob") {
+                  httpRequest.responseType = "blob";
+                } else {
+                  if (!options.contentType) {
+                    if (options.dataType === "json") {
+                      httpRequest.setRequestHeader("Content-Type", "text/json");
+                    } else if (options.dataType === "html") {
+                      httpRequest.setRequestHeader("Content-Type", "text/html");
+                    }
+                  }
+                }
+              }
+              if (options.cache !== true) {
+                httpRequest.setRequestHeader("pragma", "no-cache");
+                httpRequest.setRequestHeader("cache-control", "no-cache");
+              }
+              if (options.withCredentials === true) {
+                httpRequest.withCredentials = true;
+              }
+              if (typeof options.beforeSend == "function") {
+                options.beforeSend(httpRequest);
+              }
+              if (typeof Component.beforeSend == "function") {
+                Component.beforeSend(httpRequest);
+              }
+              if (document.ajax && typeof document.ajax.beforeSend == "function") {
+                document.ajax.beforeSend(httpRequest);
+              }
+              httpRequest.onerror = function() {
+                if (options.error && typeof options.error == "function") {
+                  options.error({
+                    message: "Network error: Unable to reach the server.",
+                    status: 0
+                  });
+                }
+              };
+              httpRequest.ontimeout = function() {
+                if (options.error && typeof options.error == "function") {
+                  options.error({
+                    message: "Request timed out after " + httpRequest.timeout + "ms.",
+                    status: 0
+                  });
+                }
+              };
+              httpRequest.onload = function() {
+                if (httpRequest.status >= 200 && httpRequest.status < 300) {
+                  if (options.dataType === "json") {
+                    try {
+                      var result = JSON.parse(httpRequest.responseText);
+                      if (options.success && typeof options.success == "function") {
+                        options.success(result);
+                      }
+                    } catch (err) {
+                      if (options.error && typeof options.error == "function") {
+                        options.error(err, result);
+                      }
+                    }
+                  } else {
+                    if (options.dataType === "blob") {
+                      var result = httpRequest.response;
+                    } else {
+                      var result = httpRequest.responseText;
+                    }
+                    if (options.success && typeof options.success == "function") {
+                      options.success(result);
+                    }
+                  }
+                } else {
+                  if (options.error && typeof options.error == "function") {
+                    options.error(httpRequest.responseText, httpRequest.status);
+                  }
+                }
+                if (Component.queue && Component.queue.length > 0) {
+                  Component.send(Component.queue.shift());
+                }
+                if (Component.requests && Component.requests.length) {
+                  var index = Component.requests.indexOf(httpRequest);
+                  Component.requests.splice(index, 1);
+                  if (!Component.requests.length) {
+                    if (options.complete && typeof options.complete == "function") {
+                      options.complete(result);
+                    }
+                  }
+                  if (options.group) {
+                    if (Component.oncomplete && typeof Component.oncomplete[options.group] == "function") {
+                      if (!Component.pending(options.group)) {
+                        Component.oncomplete[options.group]();
+                        Component.oncomplete[options.group] = null;
+                      }
+                    }
+                  }
+                  if (options.multiple && options.multiple.instance) {
+                    var index = options.multiple.instance.indexOf(httpRequest);
+                    options.multiple.instance.splice(index, 1);
+                    if (!options.multiple.instance.length) {
+                      if (options.multiple.complete && typeof options.multiple.complete == "function") {
+                        options.multiple.complete(result);
+                      }
+                    }
+                  }
+                }
+              };
+              httpRequest.options = options;
+              httpRequest.data = data;
+              if (options.queue === true && Component.requests.length > 0) {
+                Component.queue.push(httpRequest);
+              } else {
+                Component.send(httpRequest);
+              }
+              return httpRequest;
+            };
+            Component.send = function(httpRequest) {
+              if (httpRequest.data) {
+                if (Array.isArray(httpRequest.data)) {
+                  httpRequest.send(httpRequest.data.join("&"));
+                } else {
+                  httpRequest.send(httpRequest.data);
+                }
+              } else {
+                httpRequest.send();
+              }
+              Component.requests.push(httpRequest);
+            };
+            Component.exists = function(url, __callback) {
+              var http = new XMLHttpRequest();
+              http.open("HEAD", url, false);
+              http.send();
+              if (http.status) {
+                __callback(http.status);
+              }
+            };
+            Component.pending = function(group) {
+              var n = 0;
+              var o = Component.requests;
+              if (o && o.length) {
+                for (var i2 = 0; i2 < o.length; i2++) {
+                  if (!group || group == o[i2].options.group) {
+                    n++;
+                  }
+                }
+              }
+              return n;
+            };
+            Component.oncomplete = {};
+            Component.requests = [];
+            Component.queue = [];
+            return Component;
+          }
+          var ajax = Ajax();
+          ;
+          function Animation() {
+            const Component = {
+              loading: {}
+            };
+            Component.loading.show = function(timeout) {
+              if (!Component.loading.element) {
+                Component.loading.element = document.createElement("div");
+                Component.loading.element.className = "jloading";
+              }
+              document.body.appendChild(Component.loading.element);
+              if (timeout > 0) {
+                setTimeout(function() {
+                  Component.loading.hide();
+                }, timeout * 1e3);
+              }
+            };
+            Component.loading.hide = function() {
+              if (Component.loading.element && Component.loading.element.parentNode) {
+                document.body.removeChild(Component.loading.element);
+              }
+            };
+            Component.slideLeft = function(element, direction, done) {
+              if (direction == true) {
+                element.classList.add("jslide-left-in");
+                setTimeout(function() {
+                  element.classList.remove("jslide-left-in");
+                  if (typeof done == "function") {
+                    done();
+                  }
+                }, 400);
+              } else {
+                element.classList.add("jslide-left-out");
+                setTimeout(function() {
+                  element.classList.remove("jslide-left-out");
+                  if (typeof done == "function") {
+                    done();
+                  }
+                }, 400);
+              }
+            };
+            Component.slideRight = function(element, direction, done) {
+              if (direction === true) {
+                element.classList.add("jslide-right-in");
+                setTimeout(function() {
+                  element.classList.remove("jslide-right-in");
+                  if (typeof done == "function") {
+                    done();
+                  }
+                }, 400);
+              } else {
+                element.classList.add("jslide-right-out");
+                setTimeout(function() {
+                  element.classList.remove("jslide-right-out");
+                  if (typeof done == "function") {
+                    done();
+                  }
+                }, 400);
+              }
+            };
+            Component.slideTop = function(element, direction, done) {
+              if (direction === true) {
+                element.classList.add("jslide-top-in");
+                setTimeout(function() {
+                  element.classList.remove("jslide-top-in");
+                  if (typeof done == "function") {
+                    done();
+                  }
+                }, 400);
+              } else {
+                element.classList.add("jslide-top-out");
+                setTimeout(function() {
+                  element.classList.remove("jslide-top-out");
+                  if (typeof done == "function") {
+                    done();
+                  }
+                }, 400);
+              }
+            };
+            Component.slideBottom = function(element, direction, done) {
+              if (direction === true) {
+                element.classList.add("jslide-bottom-in");
+                setTimeout(function() {
+                  element.classList.remove("jslide-bottom-in");
+                  if (typeof done == "function") {
+                    done();
+                  }
+                }, 400);
+              } else {
+                element.classList.add("jslide-bottom-out");
+                setTimeout(function() {
+                  element.classList.remove("jslide-bottom-out");
+                  if (typeof done == "function") {
+                    done();
+                  }
+                }, 100);
+              }
+            };
+            Component.fadeIn = function(element, done) {
+              element.style.display = "";
+              element.classList.add("jfade-in");
+              setTimeout(function() {
+                element.classList.remove("jfade-in");
+                if (typeof done == "function") {
+                  done();
+                }
+              }, 2e3);
+            };
+            Component.fadeOut = function(element, done) {
+              element.classList.add("jfade-out");
+              setTimeout(function() {
+                element.style.display = "none";
+                element.classList.remove("jfade-out");
+                if (typeof done == "function") {
+                  done();
+                }
+              }, 1e3);
+            };
+            return Component;
+          }
+          var animation = Animation();
+          ;
+          function HelpersDate() {
+            var Component = {};
+            Component.now = function(date, dateOnly) {
+              var y2 = null;
+              var m = null;
+              var d = null;
+              var h = null;
+              var i2 = null;
+              var s = null;
+              if (Array.isArray(date)) {
+                y2 = date[0];
+                m = date[1];
+                d = date[2];
+                h = date[3];
+                i2 = date[4];
+                s = date[5];
+              } else {
+                if (!date) {
+                  date = /* @__PURE__ */ new Date();
+                }
+                y2 = date.getFullYear();
+                m = date.getMonth() + 1;
+                d = date.getDate();
+                h = date.getHours();
+                i2 = date.getMinutes();
+                s = date.getSeconds();
+              }
+              if (dateOnly == true) {
+                return helpers2.two(y2) + "-" + helpers2.two(m) + "-" + helpers2.two(d);
+              } else {
+                return helpers2.two(y2) + "-" + helpers2.two(m) + "-" + helpers2.two(d) + " " + helpers2.two(h) + ":" + helpers2.two(i2) + ":" + helpers2.two(s);
+              }
+            };
+            Component.toArray = function(value) {
+              var date = value.split(value.indexOf("T") !== -1 ? "T" : " ");
+              var time = date[1];
+              var date = date[0].split("-");
+              var y2 = parseInt(date[0]);
+              var m = parseInt(date[1]);
+              var d = parseInt(date[2]);
+              var h = 0;
+              var i2 = 0;
+              if (time) {
+                time = time.split(":");
+                h = parseInt(time[0]);
+                i2 = parseInt(time[1]);
+              }
+              return [y2, m, d, h, i2, 0];
+            };
+            var excelInitialTime = Date.UTC(1900, 0, 0);
+            var excelLeapYearBug = Date.UTC(1900, 1, 29);
+            var millisecondsPerDay = 864e5;
+            Component.dateToNum = function(jsDate) {
+              if (typeof jsDate === "string") {
+                jsDate = /* @__PURE__ */ new Date(jsDate + "  GMT+0");
+              }
+              var jsDateInMilliseconds = jsDate.getTime();
+              if (jsDateInMilliseconds >= excelLeapYearBug) {
+                jsDateInMilliseconds += millisecondsPerDay;
+              }
+              jsDateInMilliseconds -= excelInitialTime;
+              return jsDateInMilliseconds / millisecondsPerDay;
+            };
+            Component.numToDate = function(excelSerialNumber) {
+              var jsDateInMilliseconds = excelInitialTime + excelSerialNumber * millisecondsPerDay;
+              if (jsDateInMilliseconds >= excelLeapYearBug) {
+                jsDateInMilliseconds -= millisecondsPerDay;
+              }
+              const d = new Date(jsDateInMilliseconds);
+              var date = [
+                d.getUTCFullYear(),
+                d.getUTCMonth() + 1,
+                d.getUTCDate(),
+                d.getUTCHours(),
+                d.getUTCMinutes(),
+                d.getUTCSeconds()
+              ];
+              return Component.now(date);
+            };
+            let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            Object.defineProperty(Component, "weekdays", {
+              get: function() {
+                return weekdays.map(function(v) {
+                  return dictionary.translate(v);
+                });
+              }
+            });
+            Object.defineProperty(Component, "weekdaysShort", {
+              get: function() {
+                return weekdays.map(function(v) {
+                  return dictionary.translate(v).substring(0, 3);
+                });
+              }
+            });
+            Object.defineProperty(Component, "months", {
+              get: function() {
+                return months.map(function(v) {
+                  return dictionary.translate(v);
+                });
+              }
+            });
+            Object.defineProperty(Component, "monthsShort", {
+              get: function() {
+                return months.map(function(v) {
+                  return dictionary.translate(v).substring(0, 3);
+                });
+              }
+            });
+            return Component;
+          }
+          var helpers_date = HelpersDate();
+          ;
+          function Mask() {
+            var tokens2 = {
+              // Text
+              text: ["@"],
+              // Currency tokens
+              currency: ["#(.{1})##0?(.{1}0+)?( ?;(.*)?)?", "#"],
+              // Scientific
+              scientific: ["0{1}(.{1}0+)?E{1}\\+0+"],
+              // Percentage
+              percentage: ["0{1}(.{1}0+)?%"],
+              // Number
+              numeric: ["0{1}(.{1}0+)?"],
+              // Data tokens
+              datetime: ["YYYY", "YYY", "YY", "MMMMM", "MMMM", "MMM", "MM", "DDDDD", "DDDD", "DDD", "DD", "DY", "DAY", "WD", "D", "Q", "MONTH", "MON", "HH24", "HH12", "HH", "\\[H\\]", "H", "AM/PM", "MI", "SS", "MS", "Y", "M"],
+              // Other
+              general: ["A", "0", "[0-9a-zA-Z$]+", "."]
+            };
+            var getDate = function() {
+              if (this.mask.toLowerCase().indexOf("[h]") !== -1) {
+                var m = 0;
+                if (this.date[4]) {
+                  m = parseFloat(this.date[4] / 60);
+                }
+                var v = parseInt(this.date[3]) + m;
+                v /= 24;
+              } else if (!(this.date[0] && this.date[1] && this.date[2]) && (this.date[3] || this.date[4])) {
+                v = helpers2.two(this.date[3]) + ":" + helpers2.two(this.date[4]) + ":" + helpers2.two(this.date[5]);
+              } else {
+                if (this.date[0] && this.date[1] && !this.date[2]) {
+                  this.date[2] = 1;
+                }
+                v = helpers2.two(this.date[0]) + "-" + helpers2.two(this.date[1]) + "-" + helpers2.two(this.date[2]);
+                if (this.date[3] || this.date[4] || this.date[5]) {
+                  v += " " + helpers2.two(this.date[3]) + ":" + helpers2.two(this.date[4]) + ":" + helpers2.two(this.date[5]);
+                }
+              }
+              return v;
+            };
+            var extractDate = function() {
+              var v = "";
+              if (!(this.date[0] && this.date[1] && this.date[2]) && (this.date[3] || this.date[4])) {
+                if (this.mask.toLowerCase().indexOf("[h]") !== -1) {
+                  v = parseInt(this.date[3]);
+                } else {
+                  let h = parseInt(this.date[3]);
+                  if (h < 13 && this.values.indexOf("PM") !== -1) {
+                    v = (h + 12) % 24;
+                  } else {
+                    v = h % 24;
+                  }
+                }
+                if (this.date[4]) {
+                  v += parseFloat(this.date[4] / 60);
+                }
+                if (this.date[5]) {
+                  v += parseFloat(this.date[5] / 3600);
+                }
+                v /= 24;
+              } else if (this.date[0] || this.date[1] || this.date[2] || this.date[3] || this.date[4] || this.date[5]) {
+                if (this.date[0] && this.date[1] && !this.date[2]) {
+                  this.date[2] = 1;
+                }
+                var t = helpers_date.now(this.date);
+                v = helpers_date.dateToNum(t);
+              }
+              if (isNaN(v)) {
+                v = "";
+              }
+              return v;
+            };
+            var isBlank = function(v) {
+              return v === null || v === "" || v === void 0 ? true : false;
+            };
+            var isFormula2 = function(value) {
+              var v = ("" + value)[0];
+              return v == "=" ? true : false;
+            };
+            var isNumeric = function(t) {
+              return t === "currency" || t === "percentage" || t === "scientific" || t === "numeric" ? true : false;
+            };
+            var getDecimal = function(v) {
+              if (v && Number(v) == v) {
+                return ".";
+              } else {
+                if (this.options.decimal) {
+                  return this.options.decimal;
+                } else {
+                  if (this.locale) {
+                    var t = Intl.NumberFormat(this.locale).format(1.1);
+                    return this.options.decimal = t[1];
+                  } else {
+                    if (!v) {
+                      v = this.mask;
+                    }
+                    var e = new RegExp("0{1}(.{1})0+", "ig");
+                    var t = e.exec(v);
+                    if (t && t[1] && t[1].length == 1) {
+                      this.options.decimal = t[1];
+                      return t[1];
+                    } else {
+                      var e = new RegExp("#{1}(.{1})#+", "ig");
+                      var t = e.exec(v);
+                      if (t && t[1] && t[1].length == 1) {
+                        if (t[1] === ",") {
+                          this.options.decimal = ".";
+                        } else {
+                          this.options.decimal = ",";
+                        }
+                      } else {
+                        this.options.decimal = "1.1".toLocaleString().substring(1, 2);
+                      }
+                    }
+                  }
+                }
+              }
+              if (this.options.decimal) {
+                return this.options.decimal;
+              } else {
+                return null;
+              }
+            };
+            var ParseValue = function(v, decimal) {
+              if (v == "") {
+                return "";
+              }
+              if (!decimal) {
+                decimal = getDecimal.call(this);
+              }
+              v = ("" + v).split(decimal);
+              var signal = v[0].match(/[-]+/g);
+              if (signal && signal.length) {
+                signal = true;
+              } else {
+                signal = false;
+              }
+              v[0] = v[0].match(/[0-9]+/g);
+              if (v[0]) {
+                if (signal) {
+                  v[0].unshift("-");
+                }
+                v[0] = v[0].join("");
+              } else {
+                if (signal) {
+                  v[0] = "-";
+                }
+              }
+              if (v[0] || v[1]) {
+                if (v[1] !== void 0) {
+                  v[1] = v[1].match(/[0-9]+/g);
+                  if (v[1]) {
+                    v[1] = v[1].join("");
+                  } else {
+                    v[1] = "";
+                  }
+                }
+              } else {
+                return "";
+              }
+              return v;
+            };
+            var FormatValue = function(v, event) {
+              if (v === "") {
+                return "";
+              }
+              var d = getDecimal.call(this);
+              var o = this.options;
+              v = ParseValue.call(this, v);
+              if (v === "") {
+                return "";
+              }
+              var t = null;
+              if (v[0]) {
+                if (o.style === "percent") {
+                  t = parseFloat(v[0]) / 100;
+                } else {
+                  t = parseFloat(v[0] + ".1");
+                }
+              }
+              if ((v[0] === "-" || v[0] === "-00") && !v[1] && (event && event.inputType == "deleteContentBackward")) {
+                return "";
+              }
+              var n = new Intl.NumberFormat(this.locale, o).format(t);
+              n = n.split(d);
+              if (o.style === "percent") {
+                if (n[0].indexOf("%") !== -1) {
+                  n[0] = n[0].replace("%", "");
+                  n[2] = "%";
+                }
+              }
+              if (typeof n[1] !== "undefined") {
+                var s = n[1].replace(/[0-9]*/g, "");
+                if (s) {
+                  n[2] = s;
+                }
+              }
+              if (v[1] !== void 0) {
+                n[1] = d + v[1];
+              } else {
+                n[1] = "";
+              }
+              return n.join("");
+            };
+            var Format = function(e, event) {
+              var v = Value.call(e);
+              if (!v) {
+                return;
+              }
+              var n = FormatValue.call(this, v, event);
+              var t = n.length - v.length;
+              var index = Caret.call(e) + t;
+              Value.call(e, n, index, true);
+            };
+            var Extract = function(v) {
+              var current = ParseValue.call(this, v);
+              if (current) {
+                if (current[0] === "-") {
+                  current[0] = "-0";
+                }
+                return parseFloat(current.join("."));
+              }
+              return null;
+            };
+            var Caret = function(index, adjustNumeric) {
+              if (index === void 0) {
+                if (this.tagName == "DIV") {
+                  var pos = 0;
+                  var s = window.getSelection();
+                  if (s) {
+                    if (s.rangeCount !== 0) {
+                      var r = s.getRangeAt(0);
+                      var p = r.cloneRange();
+                      p.selectNodeContents(this);
+                      p.setEnd(r.endContainer, r.endOffset);
+                      pos = p.toString().length;
+                    }
+                  }
+                  return pos;
+                } else {
+                  return this.selectionStart;
+                }
+              } else {
+                var n = Value.call(this);
+                if (adjustNumeric) {
+                  var p = null;
+                  for (var i2 = 0; i2 < n.length; i2++) {
+                    if (n[i2].match(/[\-0-9]/g) || n[i2] === "." || n[i2] === ",") {
+                      p = i2;
+                    }
+                  }
+                  if (p === null) {
+                    p = n.indexOf(" ");
+                  }
+                  if (index >= p) {
+                    index = p + 1;
+                  }
+                }
+                if (index > n.length) {
+                  index = n.length;
+                }
+                if (index) {
+                  if (this.tagName == "DIV") {
+                    var s = window.getSelection();
+                    var r = document.createRange();
+                    if (this.childNodes[0]) {
+                      r.setStart(this.childNodes[0], index);
+                      s.removeAllRanges();
+                      s.addRange(r);
+                    }
+                  } else {
+                    this.selectionStart = index;
+                    this.selectionEnd = index;
+                  }
+                }
+              }
+            };
+            var Value = function(v, updateCaret, adjustNumeric) {
+              if (this.tagName == "DIV") {
+                if (v === void 0) {
+                  var v = this.innerText;
+                  if (this.value && this.value.length > v.length) {
+                    v = this.value;
+                  }
+                  return v;
+                } else {
+                  if (this.innerText !== v) {
+                    this.innerText = v;
+                    if (updateCaret) {
+                      Caret.call(this, updateCaret, adjustNumeric);
+                    }
+                  }
+                }
+              } else {
+                if (v === void 0) {
+                  return this.value;
+                } else {
+                  if (this.value !== v) {
+                    this.value = v;
+                    if (updateCaret) {
+                      Caret.call(this, updateCaret, adjustNumeric);
+                    }
+                  }
+                }
+              }
+            };
+            var weekDaysFull = helpers_date.weekdays;
+            var weekDays = helpers_date.weekdaysShort;
+            var monthsFull = helpers_date.months;
+            var months = helpers_date.monthsShort;
+            var parser = {
+              "YEAR": function(v, s) {
+                var y2 = "" + (/* @__PURE__ */ new Date()).getFullYear();
+                if (typeof this.values[this.index] === "undefined") {
+                  this.values[this.index] = "";
+                }
+                if (parseInt(v) >= 0 && parseInt(v) <= 10) {
+                  if (this.values[this.index].length < s) {
+                    this.values[this.index] += v;
+                  }
+                }
+                if (this.values[this.index].length == s) {
+                  if (s == 2) {
+                    var y2 = y2.substr(0, 2) + this.values[this.index];
+                  } else if (s == 3) {
+                    var y2 = y2.substr(0, 1) + this.values[this.index];
+                  } else if (s == 4) {
+                    var y2 = this.values[this.index];
+                  }
+                  this.date[0] = y2;
+                  this.index++;
+                }
+              },
+              "YYYY": function(v) {
+                parser.YEAR.call(this, v, 4);
+              },
+              "YYY": function(v) {
+                parser.YEAR.call(this, v, 3);
+              },
+              "YY": function(v) {
+                parser.YEAR.call(this, v, 2);
+              },
+              "FIND": function(v, a) {
+                if (isBlank(this.values[this.index])) {
+                  this.values[this.index] = "";
+                }
+                if (this.event && this.event.inputType && this.event.inputType.indexOf("delete") > -1) {
+                  this.values[this.index] += v;
+                  return;
+                }
+                var pos = 0;
+                var count = 0;
+                var value = (this.values[this.index] + v).toLowerCase();
+                for (var i2 = 0; i2 < a.length; i2++) {
+                  if (a[i2].toLowerCase().indexOf(value) == 0) {
+                    pos = i2;
+                    count++;
+                  }
+                }
+                if (count > 1) {
+                  this.values[this.index] += v;
+                } else if (count == 1) {
+                  var t = a[pos].length - this.values[this.index].length - 1;
+                  this.position += t;
+                  this.values[this.index] = a[pos];
+                  this.index++;
+                  return pos;
+                }
+              },
+              "MMM": function(v) {
+                var ret2 = parser.FIND.call(this, v, months);
+                if (ret2 !== void 0) {
+                  this.date[1] = ret2 + 1;
+                }
+              },
+              "MON": function(v) {
+                parser["MMM"].call(this, v);
+              },
+              "MMMM": function(v) {
+                var ret2 = parser.FIND.call(this, v, monthsFull);
+                if (ret2 !== void 0) {
+                  this.date[1] = ret2 + 1;
+                }
+              },
+              "MONTH": function(v) {
+                parser["MMMM"].call(this, v);
+              },
+              "MMMMM": function(v) {
+                if (isBlank(this.values[this.index])) {
+                  this.values[this.index] = "";
+                }
+                var pos = 0;
+                var count = 0;
+                var value = (this.values[this.index] + v).toLowerCase();
+                for (var i2 = 0; i2 < monthsFull.length; i2++) {
+                  if (monthsFull[i2][0].toLowerCase().indexOf(value) == 0) {
+                    this.values[this.index] = monthsFull[i2][0];
+                    this.date[1] = i2 + 1;
+                    this.index++;
+                    break;
+                  }
+                }
+              },
+              "MM": function(v) {
+                if (isBlank(this.values[this.index])) {
+                  if (parseInt(v) > 1 && parseInt(v) < 10) {
+                    this.date[1] = this.values[this.index] = "0" + v;
+                    this.index++;
+                  } else if (parseInt(v) < 2) {
+                    this.values[this.index] = v;
+                  }
+                } else {
+                  if (this.values[this.index] == 1 && parseInt(v) < 3) {
+                    this.date[1] = this.values[this.index] += v;
+                    this.index++;
+                  } else if (this.values[this.index] == 0 && parseInt(v) > 0 && parseInt(v) < 10) {
+                    this.date[1] = this.values[this.index] += v;
+                    this.index++;
+                  }
+                }
+              },
+              "M": function(v) {
+                var test = false;
+                if (parseInt(v) >= 0 && parseInt(v) < 10) {
+                  if (isBlank(this.values[this.index])) {
+                    this.values[this.index] = v;
+                    if (v > 1) {
+                      this.date[1] = this.values[this.index];
+                      this.index++;
+                    }
+                  } else {
+                    if (this.values[this.index] == 1 && parseInt(v) < 3) {
+                      this.date[1] = this.values[this.index] += v;
+                      this.index++;
+                    } else if (this.values[this.index] == 0 && parseInt(v) > 0) {
+                      this.date[1] = this.values[this.index] += v;
+                      this.index++;
+                    } else {
+                      var test = true;
+                    }
+                  }
+                } else {
+                  var test = true;
+                }
+                if (test == true) {
+                  var t = parseInt(this.values[this.index]);
+                  if (t > 0 && t < 12) {
+                    this.date[1] = this.values[this.index];
+                    this.index++;
+                    this.position--;
+                  }
+                }
+              },
+              "D": function(v) {
+                var test = false;
+                if (parseInt(v) >= 0 && parseInt(v) < 10) {
+                  if (isBlank(this.values[this.index])) {
+                    this.values[this.index] = v;
+                    if (parseInt(v) > 3) {
+                      this.date[2] = this.values[this.index];
+                      this.index++;
+                    }
+                  } else {
+                    if (this.values[this.index] == 3 && parseInt(v) < 2) {
+                      this.date[2] = this.values[this.index] += v;
+                      this.index++;
+                    } else if (this.values[this.index] == 1 || this.values[this.index] == 2) {
+                      this.date[2] = this.values[this.index] += v;
+                      this.index++;
+                    } else if (this.values[this.index] == 0 && parseInt(v) > 0) {
+                      this.date[2] = this.values[this.index] += v;
+                      this.index++;
+                    } else {
+                      var test = true;
+                    }
+                  }
+                } else {
+                  var test = true;
+                }
+                if (test == true) {
+                  var t = parseInt(this.values[this.index]);
+                  if (t > 0 && t < 32) {
+                    this.date[2] = this.values[this.index];
+                    this.index++;
+                    this.position--;
+                  }
+                }
+              },
+              "DD": function(v) {
+                if (isBlank(this.values[this.index])) {
+                  if (parseInt(v) > 3 && parseInt(v) < 10) {
+                    this.date[2] = this.values[this.index] = "0" + v;
+                    this.index++;
+                  } else if (parseInt(v) < 10) {
+                    this.values[this.index] = v;
+                  }
+                } else {
+                  if (this.values[this.index] == 3 && parseInt(v) < 2) {
+                    this.date[2] = this.values[this.index] += v;
+                    this.index++;
+                  } else if ((this.values[this.index] == 1 || this.values[this.index] == 2) && parseInt(v) < 10) {
+                    this.date[2] = this.values[this.index] += v;
+                    this.index++;
+                  } else if (this.values[this.index] == 0 && parseInt(v) > 0 && parseInt(v) < 10) {
+                    this.date[2] = this.values[this.index] += v;
+                    this.index++;
+                  }
+                }
+              },
+              "DDD": function(v) {
+                parser.FIND.call(this, v, weekDays);
+              },
+              "DY": function(v) {
+                parser["DDD"].call(this, v);
+              },
+              "DDDD": function(v) {
+                parser.FIND.call(this, v, weekDaysFull);
+              },
+              "DAY": function(v) {
+                parser["DDDD"].call(this, v);
+              },
+              "HH12": function(v, two) {
+                var test = false;
+                if (parseInt(v) >= 0 && parseInt(v) < 10) {
+                  if (isBlank(this.values[this.index])) {
+                    if (parseInt(v) > 1 && parseInt(v) < 10) {
+                      if (two) {
+                        v = 0 + v;
+                      }
+                      this.date[3] = this.values[this.index] = v;
+                      this.index++;
+                    } else if (parseInt(v) < 10) {
+                      this.values[this.index] = v;
+                    }
+                  } else {
+                    if (this.values[this.index] == 1 && parseInt(v) < 3) {
+                      this.date[3] = this.values[this.index] += v;
+                      this.index++;
+                    } else if (this.values[this.index] < 1 && parseInt(v) < 10) {
+                      this.date[3] = this.values[this.index] += v;
+                      this.index++;
+                    } else {
+                      var test = true;
+                    }
+                  }
+                } else {
+                  var test = true;
+                }
+                if (test == true) {
+                  var t = parseInt(this.values[this.index]);
+                  if (t >= 0 && t <= 12) {
+                    this.date[3] = this.values[this.index];
+                    this.index++;
+                    this.position--;
+                  }
+                }
+              },
+              "HH24": function(v, two) {
+                var test = false;
+                if (parseInt(v) >= 0 && parseInt(v) < 10) {
+                  if (this.values[this.index] == null || this.values[this.index] == "") {
+                    if (parseInt(v) > 2 && parseInt(v) < 10) {
+                      if (two) {
+                        v = 0 + v;
+                      }
+                      this.date[3] = this.values[this.index] = v;
+                      this.index++;
+                    } else if (parseInt(v) < 10) {
+                      this.values[this.index] = v;
+                    }
+                  } else {
+                    if (this.values[this.index] == 2 && parseInt(v) < 4) {
+                      if (!two && this.values[this.index] === "0") {
+                        this.values[this.index] = "";
+                      }
+                      this.date[3] = this.values[this.index] += v;
+                      this.index++;
+                    } else if (this.values[this.index] < 2 && parseInt(v) < 10) {
+                      if (!two && this.values[this.index] === "0") {
+                        this.values[this.index] = "";
+                      }
+                      this.date[3] = this.values[this.index] += v;
+                      this.index++;
+                    } else {
+                      var test = true;
+                    }
+                  }
+                } else {
+                  var test = true;
+                }
+                if (test == true) {
+                  var t = parseInt(this.values[this.index]);
+                  if (t >= 0 && t < 24) {
+                    this.date[3] = this.values[this.index];
+                    this.index++;
+                    this.position--;
+                  }
+                }
+              },
+              "HH": function(v) {
+                parser["HH24"].call(this, v, 1);
+              },
+              "H": function(v) {
+                parser["HH24"].call(this, v, 0);
+              },
+              "\\[H\\]": function(v) {
+                if (this.values[this.index] == void 0) {
+                  this.values[this.index] = "";
+                }
+                if (v.match(/[0-9]/g)) {
+                  this.date[3] = this.values[this.index] += v;
+                } else {
+                  if (this.values[this.index].match(/[0-9]/g)) {
+                    this.date[3] = this.values[this.index];
+                    this.index++;
+                    this.position--;
+                  }
+                }
+              },
+              "N60": function(v, i2) {
+                if (this.values[this.index] == null || this.values[this.index] == "") {
+                  if (parseInt(v) > 5 && parseInt(v) < 10) {
+                    this.date[i2] = this.values[this.index] = "0" + v;
+                    this.index++;
+                  } else if (parseInt(v) < 10) {
+                    this.values[this.index] = v;
+                  }
+                } else {
+                  if (parseInt(v) < 10) {
+                    this.date[i2] = this.values[this.index] += v;
+                    this.index++;
+                  }
+                }
+              },
+              "MI": function(v) {
+                parser.N60.call(this, v, 4);
+              },
+              "SS": function(v) {
+                parser.N60.call(this, v, 5);
+              },
+              "AM/PM": function(v) {
+                if (typeof this.values[this.index] === "undefined") {
+                  this.values[this.index] = "";
+                }
+                if (this.values[this.index] === "") {
+                  if (v.match(/a/i) && this.date[3] < 13) {
+                    this.values[this.index] += "A";
+                  } else if (v.match(/p/i)) {
+                    this.values[this.index] += "P";
+                  }
+                } else if (this.values[this.index] === "A" || this.values[this.index] === "P") {
+                  this.values[this.index] += "M";
+                  this.index++;
+                }
+              },
+              "WD": function(v) {
+                if (typeof this.values[this.index] === "undefined") {
+                  this.values[this.index] = "";
+                }
+                if (parseInt(v) >= 0 && parseInt(v) < 7) {
+                  this.values[this.index] = v;
+                }
+                if (this.values[this.index].length == 1) {
+                  this.index++;
+                }
+              },
+              "0{1}(.{1}0+)?": function(v) {
+                var decimal = getDecimal.call(this);
+                var neg = false;
+                if (isBlank(this.values[this.index])) {
+                  this.values[this.index] = "";
+                } else {
+                  if (this.values[this.index] == "-") {
+                    neg = true;
+                  }
+                }
+                var current = ParseValue.call(this, this.values[this.index], decimal);
+                if (current) {
+                  this.values[this.index] = current.join(decimal);
+                }
+                if (parseInt(v) >= 0 && parseInt(v) < 10) {
+                  if (this.values[this.index] == "0" && v > 0) {
+                    this.values[this.index] = "";
+                  } else if (this.values[this.index] == "-0" && v > 0) {
+                    this.values[this.index] = "-";
+                  }
+                  if (this.values[this.index] != "0" && this.values[this.index] != "-0" || v == decimal) {
+                    this.values[this.index] += v;
+                  }
+                } else if (decimal && v == decimal) {
+                  if (this.values[this.index].indexOf(decimal) == -1) {
+                    if (!this.values[this.index]) {
+                      this.values[this.index] = "0";
+                    }
+                    this.values[this.index] += v;
+                  }
+                } else if (v == "-") {
+                  neg = true;
+                }
+                if (neg === true && this.values[this.index][0] !== "-") {
+                  this.values[this.index] = "-" + this.values[this.index];
+                }
+              },
+              "0{1}(.{1}0+)?E{1}\\+0+": function(v) {
+                parser["0{1}(.{1}0+)?"].call(this, v);
+              },
+              "0{1}(.{1}0+)?%": function(v) {
+                parser["0{1}(.{1}0+)?"].call(this, v);
+                if (this.values[this.index].match(/[\-0-9]/g)) {
+                  if (this.values[this.index] && this.values[this.index].indexOf("%") == -1) {
+                    this.values[this.index] += "%";
+                  }
+                } else {
+                  this.values[this.index] = "";
+                }
+              },
+              "#(.{1})##0?(.{1}0+)?( ?;(.*)?)?": function(v) {
+                parser["0{1}(.{1}0+)?"].call(this, v);
+                var decimal = getDecimal.call(this);
+                var separator = this.tokens[this.index].substr(1, 1);
+                var negative = this.values[this.index][0] === "-" ? true : false;
+                var current = ParseValue.call(this, this.values[this.index], decimal);
+                if (current !== "") {
+                  var n = current[0].match(/[0-9]/g);
+                  if (n) {
+                    n = n.join("");
+                    var t = [];
+                    var s = 0;
+                    for (var j = n.length - 1; j >= 0; j--) {
+                      t.push(n[j]);
+                      s++;
+                      if (!(s % 3)) {
+                        t.push(separator);
+                      }
+                    }
+                    t = t.reverse();
+                    current[0] = t.join("");
+                    if (current[0].substr(0, 1) == separator) {
+                      current[0] = current[0].substr(1);
+                    }
+                  } else {
+                    current[0] = "";
+                  }
+                  this.values[this.index] = current.join(decimal);
+                  if (negative) {
+                    this.values[this.index] = "-" + this.values[this.index];
+                  }
+                }
+              },
+              "0": function(v) {
+                if (v.match(/[0-9]/g)) {
+                  this.values[this.index] = v;
+                  this.index++;
+                }
+              },
+              "[0-9a-zA-Z$]+": function(v) {
+                if (isBlank(this.values[this.index])) {
+                  this.values[this.index] = "";
+                }
+                var t = this.tokens[this.index];
+                var s = this.values[this.index];
+                var i2 = s.length;
+                if (t[i2] == v) {
+                  this.values[this.index] += v;
+                  if (this.values[this.index] == t) {
+                    this.index++;
+                  }
+                } else {
+                  this.values[this.index] = t;
+                  this.index++;
+                  if (v.match(/[\-0-9]/g)) {
+                    this.position--;
+                  }
+                }
+              },
+              "A": function(v) {
+                if (v.match(/[a-zA-Z]/gi)) {
+                  this.values[this.index] = v;
+                  this.index++;
+                }
+              },
+              ".": function(v) {
+                parser["[0-9a-zA-Z$]+"].call(this, v);
+              },
+              "@": function(v) {
+                if (isBlank(this.values[this.index])) {
+                  this.values[this.index] = "";
+                }
+                this.values[this.index] += v;
+              }
+            };
+            var getTokens = function(str) {
+              if (this.type == "general") {
+                var t = [].concat(tokens2.general);
+              } else {
+                var t = [].concat(tokens2.currency, tokens2.datetime, tokens2.percentage, tokens2.scientific, tokens2.numeric, tokens2.text, tokens2.general);
+              }
+              var e = new RegExp(t.join("|"), "gi");
+              return str.match(e);
+            };
+            var getMethod = function(str) {
+              if (!this.type) {
+                var types = Object.keys(tokens2);
+              } else if (this.type == "text") {
+                var types = ["text"];
+              } else if (this.type == "general") {
+                var types = ["general"];
+              } else if (this.type == "datetime") {
+                var types = ["numeric", "datetime", "general"];
+              } else {
+                var types = ["currency", "percentage", "scientific", "numeric", "general"];
+              }
+              for (var i2 = 0; i2 < types.length; i2++) {
+                var type = types[i2];
+                for (var j = 0; j < tokens2[type].length; j++) {
+                  var e = new RegExp(tokens2[type][j], "gi");
+                  var r = str.match(e);
+                  if (r) {
+                    return { type, method: tokens2[type][j] };
+                  }
+                }
+              }
+            };
+            var getMethods = function(t) {
+              var result = [];
+              for (var i2 = 0; i2 < t.length; i2++) {
+                var m = getMethod.call(this, t[i2]);
+                if (m) {
+                  result.push(m.method);
+                } else {
+                  result.push(null);
+                }
+              }
+              for (var i2 = 0; i2 < result.length; i2++) {
+                if (result[i2] == "MM") {
+                  if (result[i2 - 1] && result[i2 - 1].indexOf("H") >= 0) {
+                    result[i2] = "MI";
+                  } else if (result[i2 - 2] && result[i2 - 2].indexOf("H") >= 0) {
+                    result[i2] = "MI";
+                  } else if (result[i2 + 1] && result[i2 + 1].indexOf("S") >= 0) {
+                    result[i2] = "MI";
+                  } else if (result[i2 + 2] && result[i2 + 2].indexOf("S") >= 0) {
+                    result[i2] = "MI";
+                  }
+                }
+              }
+              return result;
+            };
+            var getType = function(str) {
+              var m = getMethod.call(this, str);
+              if (m) {
+                var type = m.type;
+              }
+              if (type) {
+                var numeric = 0;
+                var t = getTokens.call(this, str);
+                for (var i2 = 0; i2 < t.length; i2++) {
+                  m = getMethod.call(this, t[i2]);
+                  if (m && isNumeric(m.type)) {
+                    numeric++;
+                  }
+                }
+                if (numeric > 1) {
+                  type = "general";
+                }
+              }
+              return type;
+            };
+            var parse2 = function() {
+              if (typeof parser[this.methods[this.index]] == "function") {
+                parser[this.methods[this.index]].call(this, this.value[this.position]);
+                this.position++;
+              } else {
+                this.values[this.index] = this.tokens[this.index];
+                this.index++;
+              }
+            };
+            var toPlainString = function(num) {
+              return ("" + +num).replace(
+                /(-?)(\d*)\.?(\d*)e([+-]\d+)/,
+                function(a, b, c, d, e) {
+                  return e < 0 ? b + "0." + Array(1 - e - c.length).join(0) + c + d : b + c + d + Array(e - d.length + 1).join(0);
+                }
+              );
+            };
+            var obj2 = function(e, config, returnObject) {
+              var r = null;
+              var t = null;
+              var o = {
+                // Element
+                input: null,
+                // Current value
+                value: null,
+                // Mask options
+                options: {},
+                // New values for each token found
+                values: [],
+                // Token position
+                index: 0,
+                // Character position
+                position: 0,
+                // Date raw values
+                date: [0, 0, 0, 0, 0, 0],
+                // Raw number for the numeric values
+                number: 0
+              };
+              if (typeof e == "object") {
+                o.input = e.target;
+                o.value = Value.call(e.target);
+                o.caret = Caret.call(e.target);
+                if (t = e.target.getAttribute("data-mask")) {
+                  o.mask = t;
+                }
+                if (t = e.target.getAttribute("data-type")) {
+                  o.type = t;
+                }
+                if (e.target.mask) {
+                  if (e.target.mask.options) {
+                    o.options = e.target.mask.options;
+                  }
+                  if (e.target.mask.locale) {
+                    o.locale = e.target.mask.locale;
+                  }
+                } else {
+                  if (t = e.target.getAttribute("data-locale")) {
+                    o.locale = t;
+                    if (o.mask) {
+                      o.options.style = o.mask;
+                    }
+                  }
+                }
+                if (e.target.attributes && e.target.attributes.length) {
+                  for (var i2 = 0; i2 < e.target.attributes.length; i2++) {
+                    var k = e.target.attributes[i2].name;
+                    var v = e.target.attributes[i2].value;
+                    if (k.substr(0, 4) == "data") {
+                      o.options[k.substr(5)] = v;
+                    }
+                  }
+                }
+              } else {
+                if (typeof config == "string") {
+                  o.mask = config;
+                } else {
+                  var k = Object.keys(config);
+                  for (var i2 = 0; i2 < k.length; i2++) {
+                    o[k[i2]] = config[k[i2]];
+                  }
+                }
+                if (typeof e === "number") {
+                  getDecimal.call(o, o.mask);
+                  e = ("" + e).replace(".", o.options.decimal);
+                }
+                o.value = e;
+                if (o.input) {
+                  Value.call(o.input, e);
+                  helpers2.focus(o.input);
+                  o.caret = Caret.call(o.input);
+                }
+              }
+              if (!isFormula2(o.value) && (o.mask || o.locale)) {
+                if (o.mask) {
+                  o.mask = o.mask.replace(new RegExp(/\[h]/), "|h|");
+                  o.mask = o.mask.replace(new RegExp(/\[.*?\]/), "");
+                  o.mask = o.mask.replace(new RegExp(/\|h\|/), "[h]");
+                  if (o.mask.indexOf(";") !== -1) {
+                    var t = o.mask.split(";");
+                    o.mask = t[0];
+                  }
+                  if (o.mask.indexOf("##") !== -1) {
+                    var d = o.mask.split(";");
+                    if (d[0]) {
+                      if (typeof e == "object") {
+                        d[0] = d[0].replace(new RegExp(/_\)/g), "");
+                        d[0] = d[0].replace(new RegExp(/_\(/g), "");
+                      }
+                      d[0] = d[0].replace("*", "	");
+                      d[0] = d[0].replace(new RegExp(/_-/g), "");
+                      d[0] = d[0].replace(new RegExp(/_/g), "");
+                      d[0] = d[0].replace(new RegExp(/"/g), "");
+                      d[0] = d[0].replace("##0.###", "##0.000");
+                      d[0] = d[0].replace("##0.##", "##0.00");
+                      d[0] = d[0].replace("##0.#", "##0.0");
+                      d[0] = d[0].replace("##0,###", "##0,000");
+                      d[0] = d[0].replace("##0,##", "##0,00");
+                      d[0] = d[0].replace("##0,#", "##0,0");
+                    }
+                    o.mask = d[0];
+                  }
+                  if (o.mask.indexOf("\\") !== -1) {
+                    var d = o.mask.split(";");
+                    d[0] = d[0].replace(new RegExp(/\\/g), "");
+                    o.mask = d[0];
+                  }
+                  if (!o.type) {
+                    o.type = getType.call(o, o.mask);
+                  }
+                  o.tokens = getTokens.call(o, o.mask);
+                }
+                if (typeof e !== "object" || !e.inputType || !e.inputType.indexOf("insert") || !e.inputType.indexOf("delete")) {
+                  if (o.locale) {
+                    if (o.input) {
+                      Format.call(o, o.input, e);
+                    } else {
+                      var newValue = FormatValue.call(o, o.value);
+                    }
+                  } else {
+                    o.methods = getMethods.call(o, o.tokens);
+                    o.event = e;
+                    while (o.position < o.value.length && typeof o.tokens[o.index] !== "undefined") {
+                      parse2.call(o);
+                    }
+                    var newValue = o.values.join("");
+                    if (isNumeric(o.type) && newValue !== "") {
+                      while (typeof o.tokens[o.index] !== "undefined") {
+                        var t = getMethod.call(o, o.tokens[o.index]);
+                        if (t && t.type == "general") {
+                          o.values[o.index] = o.tokens[o.index];
+                        }
+                        o.index++;
+                      }
+                      var adjustNumeric = true;
+                    } else {
+                      var adjustNumeric = false;
+                    }
+                    newValue = o.values.join("");
+                    if (o.input) {
+                      t = newValue.length - o.value.length;
+                      if (t > 0) {
+                        var caret = o.caret + t;
+                      } else {
+                        var caret = o.caret;
+                      }
+                      Value.call(o.input, newValue, caret, adjustNumeric);
+                    }
+                  }
+                }
+                if (o.input) {
+                  var label = null;
+                  if (isNumeric(o.type)) {
+                    let v2 = Value.call(o.input);
+                    o.number = Extract.call(o, v2);
+                    if (o.type == "percentage" && ("" + v2).indexOf("%") !== -1) {
+                      label = obj2.adjustPrecision(o.number / 100);
+                    } else {
+                      label = o.number;
+                    }
+                  } else if (o.type == "datetime") {
+                    label = getDate.call(o);
+                    if (o.date[0] && o.date[1] && o.date[2]) {
+                      o.input.setAttribute("data-completed", true);
+                    }
+                  }
+                  if (label) {
+                    o.input.setAttribute("data-value", label);
+                  }
+                }
+                if (newValue !== void 0) {
+                  if (returnObject) {
+                    return o;
+                  } else {
+                    return newValue;
+                  }
+                }
+              }
+            };
+            obj2.adjustPrecision = function(num) {
+              if (typeof num === "number" && !Number.isInteger(num)) {
+                const v = num.toString().split(".");
+                if (v[1] && v[1].length > 10) {
+                  let t0 = 0;
+                  const t1 = v[1][v[1].length - 2];
+                  if (t1 == 0 || t1 == 9) {
+                    for (let i2 = v[1].length - 2; i2 > 0; i2--) {
+                      if (t0 >= 0 && v[1][i2] == t1) {
+                        t0++;
+                        if (t0 > 6) {
+                          break;
+                        }
+                      } else {
+                        t0 = 0;
+                        break;
+                      }
+                    }
+                    if (t0) {
+                      return parseFloat(parseFloat(num).toFixed(v[1].length - 1));
+                    }
+                  }
+                }
+              }
+              return num;
+            };
+            obj2.getType = getType;
+            obj2.prepare = function(str, o) {
+              if (!o) {
+                o = {};
+              }
+              return getTokens.call(o, str);
+            };
+            obj2.apply = function(e) {
+              var v = Value.call(e.target);
+              if (e.key.length == 1) {
+                v += e.key;
+              }
+              Value.call(e.target, obj2(v, e.target.getAttribute("data-mask")));
+            };
+            obj2.run = function(value, mask2, decimal) {
+              return obj2(value, { mask: mask2, decimal });
+            };
+            obj2.extract = function(v, options, returnObject) {
+              if (isBlank(v)) {
+                return v;
+              }
+              if (typeof options != "object") {
+                return v;
+              } else {
+                options = Object.assign({}, options);
+                if (!options.options) {
+                  options.options = {};
+                }
+              }
+              if (!options.mask && options.format) {
+                options.mask = options.format;
+              }
+              if (options.mask) {
+                if (options.mask.indexOf(";") !== -1) {
+                  var t = options.mask.split(";");
+                  options.mask = t[0];
+                }
+                options.mask = options.mask.replace(new RegExp(/\[h]/), "|h|");
+                options.mask = options.mask.replace(new RegExp(/\[.*?\]/), "");
+                options.mask = options.mask.replace(new RegExp(/\|h\|/), "[h]");
+              }
+              getDecimal.call(options, options.mask);
+              var type = null;
+              var value = null;
+              if (options.type == "percent" || options.options.style == "percent") {
+                type = "percentage";
+              } else if (options.mask) {
+                type = getType.call(options, options.mask);
+              }
+              if (type === "text") {
+                var o = {};
+                value = v;
+              } else if (type === "general") {
+                var o = obj2(v, options, true);
+                value = v;
+              } else if (type === "datetime") {
+                if (v instanceof Date) {
+                  v = obj2.getDateString(v, options.mask);
+                }
+                var o = obj2(v, options, true);
+                if (helpers2.isNumeric(v)) {
+                  value = v;
+                } else {
+                  value = extractDate.call(o);
+                }
+              } else if (type === "scientific") {
+                value = v;
+                if (typeof v === "string") {
+                  value = Number(value);
+                }
+                var o = options;
+              } else {
+                value = Extract.call(options, v);
+                if (type === "percentage" && ("" + v).indexOf("%") !== -1) {
+                  value /= 100;
+                }
+                var o = options;
+              }
+              o.value = value;
+              if (!o.type && type) {
+                o.type = type;
+              }
+              if (returnObject) {
+                return o;
+              } else {
+                return value;
+              }
+            };
+            obj2.render = function(value, options, fullMask, strict) {
+              if (isBlank(value)) {
+                return value;
+              }
+              if (typeof options != "object") {
+                return value;
+              } else {
+                options = Object.assign({}, options);
+                if (!options.options) {
+                  options.options = {};
+                }
+              }
+              if (!options.mask && options.format) {
+                options.mask = options.format;
+              }
+              if (options.mask) {
+                if (options.mask.indexOf(";") !== -1) {
+                  var t = options.mask.split(";");
+                  if (!fullMask) {
+                    t[0] = t[0].replace(new RegExp(/_\)/g), "");
+                    t[0] = t[0].replace(new RegExp(/_\(/g), "");
+                  }
+                  options.mask = t[0];
+                }
+                options.mask = options.mask.replace(new RegExp(/\[h]/), "|h|");
+                options.mask = options.mask.replace(new RegExp(/\[.*?\]/), "");
+                options.mask = options.mask.replace(new RegExp(/\|h\|/), "[h]");
+              }
+              var type = null;
+              if (options.type == "percent" || options.options.style == "percent") {
+                type = "percentage";
+              } else if (options.mask) {
+                type = getType.call(options, options.mask);
+              } else if (value instanceof Date) {
+                type = "datetime";
+              }
+              var fillWithBlanks = false;
+              if (type == "datetime" || options.type == "calendar") {
+                var t = obj2.getDateString(value, options.mask);
+                if (t) {
+                  value = t;
+                }
+                if (options.mask && fullMask) {
+                  fillWithBlanks = true;
+                }
+              } else if (type === "text") {
+                if (typeof value === "number") {
+                  value = value.toString();
+                }
+              } else {
+                if (typeof value === "string" && jSuites2.isNumeric(value)) {
+                  value = Number(value);
+                }
+                if (type === "percentage") {
+                  value = obj2.adjustPrecision(value * 100);
+                }
+                if (typeof value === "number") {
+                  var t = null;
+                  if (options.mask && fullMask) {
+                    var d = getDecimal.call(options, options.mask);
+                    if (type === "scientific") {
+                      if (options.mask.indexOf(d) !== -1) {
+                        let exp = options.mask.split("E");
+                        exp = exp[0].split(d);
+                        exp = "" + exp[1].match(/[0-9]+/g);
+                        exp = exp.length;
+                        t = value.toExponential(exp);
+                      } else {
+                        t = value.toExponential(0);
+                      }
+                    } else {
+                      if (options.mask.indexOf(d) !== -1) {
+                        d = options.mask.split(d);
+                        d = "" + d[1].match(/[0-9]+/g);
+                        d = d.length;
+                        t = value.toFixed(d);
+                        let n = value.toString().split(".");
+                        let fraction = n[1];
+                        if (fraction && fraction.length > d && fraction[fraction.length - 1] === "5") {
+                          t = parseFloat(n[0] + "." + fraction + "1").toFixed(d);
+                        }
+                      } else {
+                        t = value.toFixed(0);
+                      }
+                      if (("" + t).indexOf("e") !== -1) {
+                        t = toPlainString(t);
+                      }
+                    }
+                  } else if (options.locale && fullMask) {
+                    var d = ("" + value).split(".");
+                    if (options.options) {
+                      if (typeof d[1] === "undefined") {
+                        d[1] = "";
+                      }
+                      var len = d[1].length;
+                      if (options.options.minimumFractionDigits > len) {
+                        for (var i2 = 0; i2 < options.options.minimumFractionDigits - len; i2++) {
+                          d[1] += "0";
+                        }
+                      }
+                    }
+                    if (!d[1].length) {
+                      t = d[0];
+                    } else {
+                      t = d.join(".");
+                    }
+                    var len = d[1].length;
+                    if (options.options && options.options.maximumFractionDigits < len) {
+                      t = parseFloat(t).toFixed(options.options.maximumFractionDigits);
+                    }
+                  } else {
+                    t = toPlainString(value);
+                  }
+                  if (t !== null) {
+                    value = t;
+                    getDecimal.call(options, options.mask);
+                    if (options.options.decimal) {
+                      value = value.replace(".", options.options.decimal);
+                    }
+                  }
+                } else {
+                  if (options.mask && fullMask) {
+                    fillWithBlanks = true;
+                  }
+                }
+              }
+              if (fillWithBlanks) {
+                var s = options.mask.length - value.length;
+                if (s > 0) {
+                  for (var i2 = 0; i2 < s; i2++) {
+                    value += " ";
+                  }
+                }
+              }
+              if (type === "scientific") {
+                if (!fullMask) {
+                  value = toPlainString(value);
+                } else {
+                  return value;
+                }
+              }
+              if (type === "numeric" && strict === false && typeof value === "string") {
+                return value;
+              }
+              value = obj2(value, options);
+              if (fullMask && type === "numeric") {
+                var maskZeros = options.mask.match(new RegExp(/^[0]+$/gm));
+                if (maskZeros && maskZeros.length === 1) {
+                  var maskLength = maskZeros[0].length;
+                  if (maskLength > 3) {
+                    value = "" + value;
+                    while (value.length < maskLength) {
+                      value = "0" + value;
+                    }
+                  }
+                }
+              }
+              return value;
+            };
+            obj2.set = function(e, m) {
+              if (m) {
+                e.setAttribute("data-mask", m);
+                var event = new Event("input", {
+                  bubbles: true,
+                  cancelable: true
+                });
+                e.dispatchEvent(event);
+              }
+            };
+            obj2.extractDateFromString = function(date, format) {
+              var o = obj2(date, { mask: format }, true);
+              if (date > 0 && Number(date) == date && (o.values.join("") !== o.value || o.type == "numeric")) {
+                var d = new Date(Math.round((date - 25569) * 86400 * 1e3));
+                return d.getFullYear() + "-" + helpers2.two(d.getMonth()) + "-" + helpers2.two(d.getDate()) + " 00:00:00";
+              }
+              var complete = false;
+              if (o.values && o.values.length === o.tokens.length && o.values[o.values.length - 1].length >= o.tokens[o.tokens.length - 1].length) {
+                complete = true;
+              }
+              if (o.date[0] && o.date[1] && (o.date[2] || complete)) {
+                if (!o.date[2]) {
+                  o.date[2] = 1;
+                }
+                return o.date[0] + "-" + helpers2.two(o.date[1]) + "-" + helpers2.two(o.date[2]) + " " + helpers2.two(o.date[3]) + ":" + helpers2.two(o.date[4]) + ":" + helpers2.two(o.date[5]);
+              }
+              return "";
+            };
+            obj2.getDateString = function(value, options) {
+              if (!options) {
+                var options = {};
+              }
+              if (options && typeof options == "object") {
+                if (options.format) {
+                  var format = options.format;
+                } else if (options.mask) {
+                  var format = options.mask;
+                }
+              } else {
+                var format = options;
+              }
+              if (!format) {
+                format = "YYYY-MM-DD";
+              }
+              if (format.indexOf("[h]") >= 0) {
+                var result = 0;
+                if (value && helpers2.isNumeric(value)) {
+                  result = parseFloat(24 * Number(value));
+                  if (format.indexOf("mm") >= 0) {
+                    var h = ("" + result).split(".");
+                    if (h[1]) {
+                      var d = 60 * parseFloat("0." + h[1]);
+                      d = parseFloat(d.toFixed(2));
+                    } else {
+                      var d = 0;
+                    }
+                    result = parseInt(h[0]) + ":" + helpers2.two(d);
+                  }
+                }
+                return result;
+              }
+              if (value instanceof Date) {
+                value = helpers_date.now(value);
+              } else if (value && helpers2.isNumeric(value)) {
+                value = helpers_date.numToDate(value);
+              }
+              var tokens3 = ["DAY", "WD", "DDDD", "DDD", "DD", "D", "Q", "HH24", "HH12", "HH", "H", "AM/PM", "MI", "SS", "MS", "YYYY", "YYY", "YY", "Y", "MONTH", "MON", "MMMMM", "MMMM", "MMM", "MM", "M", "."];
+              var e = new RegExp(tokens3.join("|"), "gi");
+              var t = format.match(e);
+              for (var i2 = 0; i2 < t.length; i2++) {
+                if (t[i2].toUpperCase() == "MM") {
+                  if (t[i2 - 1] && t[i2 - 1].toUpperCase().indexOf("H") >= 0) {
+                    t[i2] = "mi";
+                  } else if (t[i2 - 2] && t[i2 - 2].toUpperCase().indexOf("H") >= 0) {
+                    t[i2] = "mi";
+                  } else if (t[i2 + 1] && t[i2 + 1].toUpperCase().indexOf("S") >= 0) {
+                    t[i2] = "mi";
+                  } else if (t[i2 + 2] && t[i2 + 2].toUpperCase().indexOf("S") >= 0) {
+                    t[i2] = "mi";
+                  }
+                }
+              }
+              var o = {
+                tokens: t
+              };
+              if (value) {
+                var d = "" + value;
+                var splitStr = d.indexOf("T") !== -1 ? "T" : " ";
+                d = d.split(splitStr);
+                var h = 0;
+                var m = 0;
+                var s = 0;
+                if (d[1]) {
+                  h = d[1].split(":");
+                  m = h[1] ? h[1] : 0;
+                  s = h[2] ? h[2] : 0;
+                  h = h[0] ? h[0] : 0;
+                }
+                d = d[0].split("-");
+                let day = new Date(d[0], d[1], 0).getDate();
+                if (d[0] && d[1] && d[2] && d[0] > 0 && d[1] > 0 && d[1] < 13 && d[2] > 0 && d[2] <= day) {
+                  o.data = [d[0], d[1], d[2], h, m, s];
+                  o.value = [];
+                  var calendar2 = new Date(o.data[0], o.data[1] - 1, o.data[2], o.data[3], o.data[4], o.data[5]);
+                  var get = function(i3) {
+                    var t2 = this.tokens[i3];
+                    var s2 = t2.toUpperCase();
+                    var v = null;
+                    if (s2 === "YYYY") {
+                      v = this.data[0];
+                    } else if (s2 === "YYY") {
+                      v = this.data[0].substring(1, 4);
+                    } else if (s2 === "YY") {
+                      v = this.data[0].substring(2, 4);
+                    } else if (s2 === "Y") {
+                      v = this.data[0].substring(3, 4);
+                    } else if (t2 === "MON") {
+                      v = helpers_date.months[calendar2.getMonth()].substr(0, 3).toUpperCase();
+                    } else if (t2 === "mon") {
+                      v = helpers_date.months[calendar2.getMonth()].substr(0, 3).toLowerCase();
+                    } else if (t2 === "MONTH") {
+                      v = helpers_date.months[calendar2.getMonth()].toUpperCase();
+                    } else if (t2 === "month") {
+                      v = helpers_date.months[calendar2.getMonth()].toLowerCase();
+                    } else if (s2 === "MMMMM") {
+                      v = helpers_date.months[calendar2.getMonth()].substr(0, 1);
+                    } else if (s2 === "MMMM" || t2 === "Month") {
+                      v = helpers_date.months[calendar2.getMonth()];
+                    } else if (s2 === "MMM" || t2 == "Mon") {
+                      v = helpers_date.months[calendar2.getMonth()].substr(0, 3);
+                    } else if (s2 === "MM") {
+                      v = helpers2.two(this.data[1]);
+                    } else if (s2 === "M") {
+                      v = calendar2.getMonth() + 1;
+                    } else if (t2 === "DAY") {
+                      v = helpers_date.weekdays[calendar2.getDay()].toUpperCase();
+                    } else if (t2 === "day") {
+                      v = helpers_date.weekdays[calendar2.getDay()].toLowerCase();
+                    } else if (s2 === "DDDD" || t2 == "Day") {
+                      v = helpers_date.weekdays[calendar2.getDay()];
+                    } else if (s2 === "DDD") {
+                      v = helpers_date.weekdays[calendar2.getDay()].substr(0, 3);
+                    } else if (s2 === "DD") {
+                      v = helpers2.two(this.data[2]);
+                    } else if (s2 === "D") {
+                      v = parseInt(this.data[2]);
+                    } else if (s2 === "Q") {
+                      v = Math.floor((calendar2.getMonth() + 3) / 3);
+                    } else if (s2 === "HH24" || s2 === "HH") {
+                      v = this.data[3];
+                      if (v > 12 && this.tokens.indexOf("am/pm") !== -1) {
+                        v -= 12;
+                      }
+                      v = helpers2.two(v);
+                    } else if (s2 === "HH12") {
+                      if (this.data[3] > 12) {
+                        v = helpers2.two(this.data[3] - 12);
+                      } else {
+                        v = helpers2.two(this.data[3]);
+                      }
+                    } else if (s2 === "H") {
+                      v = this.data[3];
+                      if (v > 12 && this.tokens.indexOf("am/pm") !== -1) {
+                        v -= 12;
+                        v = helpers2.two(v);
+                      }
+                    } else if (s2 === "MI") {
+                      v = helpers2.two(this.data[4]);
+                    } else if (s2 === "SS") {
+                      v = helpers2.two(this.data[5]);
+                    } else if (s2 === "MS") {
+                      v = calendar2.getMilliseconds();
+                    } else if (s2 === "AM/PM") {
+                      if (this.data[3] >= 12) {
+                        v = "PM";
+                      } else {
+                        v = "AM";
+                      }
+                    } else if (s2 === "WD") {
+                      v = helpers_date.weekdays[calendar2.getDay()];
+                    }
+                    if (v === null) {
+                      this.value[i3] = this.tokens[i3];
+                    } else {
+                      this.value[i3] = v;
+                    }
+                  };
+                  for (var i2 = 0; i2 < o.tokens.length; i2++) {
+                    get.call(o, i2);
+                  }
+                  value = o.value.join("");
+                } else {
+                  value = "";
+                }
+              }
+              return value;
+            };
+            return obj2;
+          }
+          var mask = Mask();
+          ;
+          function Calendar() {
+            var Component = function(el, options) {
+              if (el.calendar) {
+                return el.calendar.setOptions(options, true);
+              }
+              var obj2 = { type: "calendar" };
+              obj2.options = {};
+              obj2.date = null;
+              obj2.setOptions = function(options2, reset) {
+                var defaults = {
+                  // Render type: [ default | year-month-picker ]
+                  type: "default",
+                  // Restrictions
+                  validRange: null,
+                  // Starting weekday - 0 for sunday, 6 for saturday
+                  startingDay: null,
+                  // Date format
+                  format: "DD/MM/YYYY",
+                  // Allow keyboard date entry
+                  readonly: true,
+                  // Today is default
+                  today: false,
+                  // Show timepicker
+                  time: false,
+                  // Show the reset button
+                  resetButton: true,
+                  // Placeholder
+                  placeholder: "",
+                  // Translations can be done here
+                  months: helpers_date.monthsShort,
+                  monthsFull: helpers_date.months,
+                  weekdays: helpers_date.weekdays,
+                  textDone: dictionary.translate("Done"),
+                  textReset: dictionary.translate("Reset"),
+                  textUpdate: dictionary.translate("Update"),
+                  // Value
+                  value: null,
+                  // Fullscreen (this is automatic set for screensize < 800)
+                  fullscreen: false,
+                  // Create the calendar closed as default
+                  opened: false,
+                  // Events
+                  onopen: null,
+                  onclose: null,
+                  onchange: null,
+                  onupdate: null,
+                  // Internal mode controller
+                  mode: null,
+                  position: null,
+                  // Data type
+                  dataType: null,
+                  // Controls
+                  controls: true,
+                  // Auto select
+                  autoSelect: true
+                };
+                for (var property in defaults) {
+                  if (options2 && options2.hasOwnProperty(property)) {
+                    obj2.options[property] = options2[property];
+                  } else {
+                    if (typeof obj2.options[property] == "undefined" || reset === true) {
+                      obj2.options[property] = defaults[property];
+                    }
+                  }
+                }
+                if (obj2.options.resetButton == false) {
+                  calendarReset.style.display = "none";
+                } else {
+                  calendarReset.style.display = "";
+                }
+                if (obj2.options.readonly) {
+                  el.setAttribute("readonly", "readonly");
+                } else {
+                  el.removeAttribute("readonly");
+                }
+                if (obj2.options.placeholder) {
+                  el.setAttribute("placeholder", obj2.options.placeholder);
+                } else {
+                  el.removeAttribute("placeholder");
+                }
+                if (helpers2.isNumeric(obj2.options.value) && obj2.options.value > 0) {
+                  obj2.options.value = Component.numToDate(obj2.options.value);
+                  obj2.options.dataType = "numeric";
+                }
+                calendarReset.innerHTML = obj2.options.textReset;
+                calendarConfirm.innerHTML = obj2.options.textDone;
+                calendarControlsUpdateButton.innerHTML = obj2.options.textUpdate;
+                if (obj2.options.format) {
+                  el.setAttribute("data-mask", obj2.options.format.toLowerCase());
+                }
+                if (!obj2.options.value && obj2.options.today) {
+                  var value = Component.now();
+                } else {
+                  var value = obj2.options.value;
+                }
+                if (value) {
+                  obj2.options.value = null;
+                  obj2.setValue(value);
+                }
+                return obj2;
+              };
+              obj2.open = function(value) {
+                if (!calendar2.classList.contains("jcalendar-focus")) {
+                  if (!calendar2.classList.contains("jcalendar-inline")) {
+                    Component.current = obj2;
+                    tracking(obj2, true);
+                    obj2.getDays();
+                    if (obj2.options.type == "year-month-picker") {
+                      obj2.getMonths();
+                    }
+                    if (obj2.options.time) {
+                      calendarSelectHour.value = obj2.date[3];
+                      calendarSelectMin.value = obj2.date[4];
+                    }
+                    calendar2.classList.add("jcalendar-focus");
+                    if (helpers2.getWindowWidth() < 800 || obj2.options.fullscreen) {
+                      calendar2.classList.add("jcalendar-fullsize");
+                      animation.slideBottom(calendarContent, 1);
+                    } else {
+                      calendar2.classList.remove("jcalendar-fullsize");
+                      var rect = el.getBoundingClientRect();
+                      var rectContent = calendarContent.getBoundingClientRect();
+                      if (obj2.options.position) {
+                        calendarContainer.style.position = "fixed";
+                        if (window.innerHeight < rect.bottom + rectContent.height) {
+                          calendarContainer.style.top = rect.top - (rectContent.height + 2) + "px";
+                        } else {
+                          calendarContainer.style.top = rect.top + rect.height + 2 + "px";
+                        }
+                        calendarContainer.style.left = rect.left + "px";
+                      } else {
+                        if (window.innerHeight < rect.bottom + rectContent.height) {
+                          var d = -1 * (rect.height + rectContent.height + 2);
+                          if (d + rect.top < 0) {
+                            d = -1 * (rect.top + rect.height);
+                          }
+                          calendarContainer.style.top = d + "px";
+                        } else {
+                          calendarContainer.style.top = "2px";
+                        }
+                        if (window.innerWidth < rect.left + rectContent.width) {
+                          var d = window.innerWidth - (rect.left + rectContent.width + 20);
+                          calendarContainer.style.left = d + "px";
+                        } else {
+                          calendarContainer.style.left = "0px";
+                        }
+                      }
+                    }
+                    if (typeof obj2.options.onopen == "function") {
+                      obj2.options.onopen(el);
+                    }
+                  }
+                }
+              };
+              obj2.close = function(ignoreEvents, update) {
+                if (obj2.options.autoSelect !== true && typeof update === "undefined") {
+                  update = false;
+                }
+                if (calendar2.classList.contains("jcalendar-focus")) {
+                  if (update !== false) {
+                    var element = calendar2.querySelector(".jcalendar-selected");
+                    if (typeof update == "string") {
+                      var value = update;
+                    } else if (!element || element.classList.contains("jcalendar-disabled")) {
+                      var value = obj2.options.value;
+                    } else {
+                      var value = obj2.getValue();
+                    }
+                    obj2.setValue(value);
+                  } else {
+                    let value2 = obj2.options.value || "";
+                    obj2.options.value = null;
+                    obj2.setValue(value2);
+                  }
+                  if (!ignoreEvents && typeof obj2.options.onclose == "function") {
+                    obj2.options.onclose(el);
+                  }
+                  calendar2.classList.remove("jcalendar-focus");
+                  tracking(obj2, false);
+                  Component.current = null;
+                }
+                return obj2.options.value;
+              };
+              obj2.prev = function() {
+                if (obj2.options.mode == "years") {
+                  obj2.date[0] = obj2.date[0] - 12;
+                  obj2.getYears();
+                } else if (obj2.options.mode == "months") {
+                  obj2.date[0] = parseInt(obj2.date[0]) - 1;
+                  obj2.getMonths();
+                } else {
+                  if (obj2.date[1] < 2) {
+                    obj2.date[0] = obj2.date[0] - 1;
+                    obj2.date[1] = 12;
+                  } else {
+                    obj2.date[1] = obj2.date[1] - 1;
+                  }
+                  obj2.getDays();
+                }
+              };
+              obj2.next = function() {
+                if (obj2.options.mode == "years") {
+                  obj2.date[0] = parseInt(obj2.date[0]) + 12;
+                  obj2.getYears();
+                } else if (obj2.options.mode == "months") {
+                  obj2.date[0] = parseInt(obj2.date[0]) + 1;
+                  obj2.getMonths();
+                } else {
+                  if (obj2.date[1] > 11) {
+                    obj2.date[0] = parseInt(obj2.date[0]) + 1;
+                    obj2.date[1] = 1;
+                  } else {
+                    obj2.date[1] = parseInt(obj2.date[1]) + 1;
+                  }
+                  obj2.getDays();
+                }
+              };
+              obj2.setToday = function() {
+                var value = (/* @__PURE__ */ new Date()).toISOString().substr(0, 10);
+                obj2.setValue(value);
+                return value;
+              };
+              obj2.setValue = function(val) {
+                if (!val) {
+                  val = "" + val;
+                }
+                var newValue = val;
+                var oldValue = obj2.options.value;
+                if (oldValue != newValue) {
+                  if (!newValue) {
+                    obj2.date = null;
+                    var val = "";
+                    el.classList.remove("jcalendar_warning");
+                    el.title = "";
+                  } else {
+                    var value = obj2.setLabel(newValue, obj2.options);
+                    var date = newValue.split(" ");
+                    if (!date[1]) {
+                      date[1] = "00:00:00";
+                    }
+                    var time = date[1].split(":");
+                    var date = date[0].split("-");
+                    var y2 = parseInt(date[0]);
+                    var m = parseInt(date[1]);
+                    var d = parseInt(date[2]);
+                    var h = parseInt(time[0]);
+                    var i2 = parseInt(time[1]);
+                    obj2.date = [y2, m, d, h, i2, 0];
+                    var val = obj2.setLabel(newValue, obj2.options);
+                    var current = Component.now(new Date(y2, m - 1, d), true);
+                    if (obj2.options.validRange) {
+                      if (!obj2.options.validRange[0] || current >= obj2.options.validRange[0]) {
+                        var test1 = true;
+                      } else {
+                        var test1 = false;
+                      }
+                      if (!obj2.options.validRange[1] || current <= obj2.options.validRange[1]) {
+                        var test2 = true;
+                      } else {
+                        var test2 = false;
+                      }
+                      if (!(test1 && test2)) {
+                        el.classList.add("jcalendar_warning");
+                        el.title = dictionary.translate("Date outside the valid range");
+                      } else {
+                        el.classList.remove("jcalendar_warning");
+                        el.title = "";
+                      }
+                    } else {
+                      el.classList.remove("jcalendar_warning");
+                      el.title = "";
+                    }
+                  }
+                  obj2.options.value = newValue;
+                  if (typeof obj2.options.onchange == "function") {
+                    obj2.options.onchange(el, newValue, oldValue);
+                  }
+                  if (el.value != val) {
+                    el.value = val;
+                    if (typeof el.oninput == "function") {
+                      el.oninput({
+                        type: "input",
+                        target: el,
+                        value: el.value
+                      });
+                    }
+                  }
+                }
+                if (obj2.date) {
+                  obj2.getDays();
+                  if (obj2.options.type == "year-month-picker") {
+                    obj2.getMonths();
+                  }
+                }
+              };
+              obj2.getValue = function() {
+                if (obj2.date) {
+                  if (obj2.options.time) {
+                    return helpers2.two(obj2.date[0]) + "-" + helpers2.two(obj2.date[1]) + "-" + helpers2.two(obj2.date[2]) + " " + helpers2.two(obj2.date[3]) + ":" + helpers2.two(obj2.date[4]) + ":" + helpers2.two(0);
+                  } else {
+                    return helpers2.two(obj2.date[0]) + "-" + helpers2.two(obj2.date[1]) + "-" + helpers2.two(obj2.date[2]) + " " + helpers2.two(0) + ":" + helpers2.two(0) + ":" + helpers2.two(0);
+                  }
+                } else {
+                  return "";
+                }
+              };
+              obj2.update = function(element, v) {
+                if (element.classList.contains("jcalendar-disabled")) {
+                } else {
+                  var elements = calendar2.querySelector(".jcalendar-selected");
+                  if (elements) {
+                    elements.classList.remove("jcalendar-selected");
+                  }
+                  element.classList.add("jcalendar-selected");
+                  if (element.classList.contains("jcalendar-set-month")) {
+                    obj2.date[1] = v;
+                    obj2.date[2] = 1;
+                  } else {
+                    obj2.date[2] = element.innerText;
+                  }
+                  if (!obj2.options.time) {
+                    obj2.close(null, true);
+                  } else {
+                    obj2.date[3] = calendarSelectHour.value;
+                    obj2.date[4] = calendarSelectMin.value;
+                  }
+                }
+                updateActions();
+              };
+              obj2.reset = function() {
+                obj2.setValue("");
+                obj2.date = null;
+                obj2.close(false, false);
+              };
+              obj2.getDays = function() {
+                obj2.options.mode = "days";
+                var date = /* @__PURE__ */ new Date();
+                var year = obj2.date && helpers2.isNumeric(obj2.date[0]) ? obj2.date[0] : parseInt(date.getFullYear());
+                var month = obj2.date && helpers2.isNumeric(obj2.date[1]) ? obj2.date[1] : parseInt(date.getMonth()) + 1;
+                var day = obj2.date && helpers2.isNumeric(obj2.date[2]) ? obj2.date[2] : parseInt(date.getDate());
+                var hour = obj2.date && helpers2.isNumeric(obj2.date[3]) ? obj2.date[3] : parseInt(date.getHours());
+                var min = obj2.date && helpers2.isNumeric(obj2.date[4]) ? obj2.date[4] : parseInt(date.getMinutes());
+                obj2.date = [year, month, day, hour, min, 0];
+                calendarLabelYear.innerHTML = year;
+                calendarLabelMonth.innerHTML = obj2.options.months[month - 1];
+                var isCurrentMonthAndYear = date.getMonth() == month - 1 && date.getFullYear() == year ? true : false;
+                var currentDay = date.getDate();
+                var date = new Date(year, month, 0, 0, 0);
+                var numberOfDays = date.getDate();
+                var date = new Date(year, month - 1, 0, 0, 0);
+                var firstDay = date.getDay() + 1;
+                var index = obj2.options.startingDay || 0;
+                firstDay = firstDay - index;
+                calendarBody.innerHTML = "";
+                var row = document.createElement("tr");
+                row.setAttribute("align", "center");
+                calendarBody.appendChild(row);
+                for (var i2 = 0; i2 < 7; i2++) {
+                  var cell = document.createElement("td");
+                  cell.classList.add("jcalendar-weekday");
+                  cell.innerHTML = obj2.options.weekdays[index].substr(0, 1);
+                  row.appendChild(cell);
+                  index++;
+                  if (index > 6) {
+                    index = 0;
+                  }
+                }
+                var index = 0;
+                var d = 0;
+                for (var j = 0; j < 6; j++) {
+                  var row = document.createElement("tr");
+                  row.setAttribute("align", "center");
+                  row.style.height = "34px";
+                  for (var i2 = 0; i2 < 7; i2++) {
+                    var cell = document.createElement("td");
+                    cell.classList.add("jcalendar-set-day");
+                    if (index >= firstDay && index < firstDay + numberOfDays) {
+                      d++;
+                      cell.innerHTML = d;
+                      if (d == day) {
+                        cell.classList.add("jcalendar-selected");
+                      }
+                      if (isCurrentMonthAndYear && currentDay == d) {
+                        cell.style.fontWeight = "bold";
+                      }
+                      var current = Component.now(new Date(year, month - 1, d), true);
+                      if (obj2.options.validRange) {
+                        if (!obj2.options.validRange[0] || current >= obj2.options.validRange[0]) {
+                          var test1 = true;
+                        } else {
+                          var test1 = false;
+                        }
+                        if (!obj2.options.validRange[1] || current <= obj2.options.validRange[1]) {
+                          var test2 = true;
+                        } else {
+                          var test2 = false;
+                        }
+                        if (!(test1 && test2)) {
+                          cell.classList.add("jcalendar-disabled");
+                        }
+                      }
+                    }
+                    row.appendChild(cell);
+                    index++;
+                  }
+                  calendarBody.appendChild(row);
+                }
+                if (obj2.options.time) {
+                  calendarControlsTime.style.display = "";
+                } else {
+                  calendarControlsTime.style.display = "none";
+                }
+                updateActions();
+              };
+              obj2.getMonths = function() {
+                obj2.options.mode = "months";
+                var months = obj2.options.months;
+                var value = obj2.options.value;
+                var date = /* @__PURE__ */ new Date();
+                var currentYear = parseInt(date.getFullYear());
+                var currentMonth = parseInt(date.getMonth()) + 1;
+                var selectedYear = obj2.date && helpers2.isNumeric(obj2.date[0]) ? obj2.date[0] : currentYear;
+                var selectedMonth = obj2.date && helpers2.isNumeric(obj2.date[1]) ? obj2.date[1] : currentMonth;
+                calendarLabelYear.innerHTML = obj2.date[0];
+                calendarLabelMonth.innerHTML = months[selectedMonth - 1];
+                var table = document.createElement("table");
+                table.setAttribute("width", "100%");
+                var row = null;
+                for (var i2 = 0; i2 < 12; i2++) {
+                  if (!(i2 % 4)) {
+                    var row = document.createElement("tr");
+                    row.setAttribute("align", "center");
+                    table.appendChild(row);
+                  }
+                  var cell = document.createElement("td");
+                  cell.classList.add("jcalendar-set-month");
+                  cell.setAttribute("data-value", i2 + 1);
+                  cell.innerText = months[i2];
+                  if (obj2.options.validRange) {
+                    var current = selectedYear + "-" + helpers2.two(i2 + 1);
+                    if (!obj2.options.validRange[0] || current >= obj2.options.validRange[0].substr(0, 7)) {
+                      var test1 = true;
+                    } else {
+                      var test1 = false;
+                    }
+                    if (!obj2.options.validRange[1] || current <= obj2.options.validRange[1].substr(0, 7)) {
+                      var test2 = true;
+                    } else {
+                      var test2 = false;
+                    }
+                    if (!(test1 && test2)) {
+                      cell.classList.add("jcalendar-disabled");
+                    }
+                  }
+                  if (i2 + 1 == selectedMonth) {
+                    cell.classList.add("jcalendar-selected");
+                  }
+                  if (currentYear == selectedYear && i2 + 1 == currentMonth) {
+                    cell.style.fontWeight = "bold";
+                  }
+                  row.appendChild(cell);
+                }
+                calendarBody.innerHTML = '<tr><td colspan="7"></td></tr>';
+                calendarBody.children[0].children[0].appendChild(table);
+                updateActions();
+              };
+              obj2.getYears = function() {
+                obj2.options.mode = "years";
+                var date = /* @__PURE__ */ new Date();
+                var currentYear = date.getFullYear();
+                var selectedYear = obj2.date && helpers2.isNumeric(obj2.date[0]) ? obj2.date[0] : parseInt(date.getFullYear());
+                var y2 = [];
+                for (var i2 = 0; i2 < 25; i2++) {
+                  y2[i2] = parseInt(obj2.date[0]) + (i2 - 12);
+                }
+                var table = document.createElement("table");
+                table.setAttribute("width", "100%");
+                for (var i2 = 0; i2 < 25; i2++) {
+                  if (!(i2 % 5)) {
+                    var row = document.createElement("tr");
+                    row.setAttribute("align", "center");
+                    table.appendChild(row);
+                  }
+                  var cell = document.createElement("td");
+                  cell.classList.add("jcalendar-set-year");
+                  cell.innerText = y2[i2];
+                  if (selectedYear == y2[i2]) {
+                    cell.classList.add("jcalendar-selected");
+                  }
+                  if (currentYear == y2[i2]) {
+                    cell.style.fontWeight = "bold";
+                  }
+                  row.appendChild(cell);
+                }
+                calendarBody.innerHTML = '<tr><td colspan="7"></td></tr>';
+                calendarBody.firstChild.firstChild.appendChild(table);
+                updateActions();
+              };
+              obj2.setLabel = function(value, mixed) {
+                return Component.getDateString(value, mixed);
+              };
+              obj2.fromFormatted = function(value, format) {
+                return Component.extractDateFromString(value, format);
+              };
+              var mouseUpControls2 = function(e) {
+                var element = helpers2.findElement(e.target, "jcalendar-container");
+                if (element) {
+                  var action = e.target.className;
+                  if (action == "jcalendar-prev") {
+                    obj2.prev();
+                  } else if (action == "jcalendar-next") {
+                    obj2.next();
+                  } else if (action == "jcalendar-month") {
+                    obj2.getMonths();
+                  } else if (action == "jcalendar-year") {
+                    obj2.getYears();
+                  } else if (action == "jcalendar-set-year") {
+                    obj2.date[0] = e.target.innerText;
+                    if (obj2.options.type == "year-month-picker") {
+                      obj2.getMonths();
+                    } else {
+                      obj2.getDays();
+                    }
+                  } else if (e.target.classList.contains("jcalendar-set-month")) {
+                    var month = parseInt(e.target.getAttribute("data-value"));
+                    if (obj2.options.type == "year-month-picker") {
+                      obj2.update(e.target, month);
+                    } else {
+                      obj2.date[1] = month;
+                      obj2.getDays();
+                    }
+                  } else if (action == "jcalendar-confirm" || action == "jcalendar-update" || action == "jcalendar-close") {
+                    obj2.close(null, true);
+                  } else if (action == "jcalendar-backdrop") {
+                    obj2.close(false, false);
+                  } else if (action == "jcalendar-reset") {
+                    obj2.reset();
+                  } else if (e.target.classList.contains("jcalendar-set-day") && e.target.innerText) {
+                    obj2.update(e.target);
+                  }
+                } else {
+                  obj2.close(false, false);
+                }
+              };
+              var keyUpControls = function(e) {
+                if (e.target.value && e.target.value.length > 3) {
+                  var test = Component.extractDateFromString(e.target.value, obj2.options.format);
+                  if (test) {
+                    obj2.setValue(test);
+                  }
+                }
+              };
+              var updateActions = function() {
+                var currentDay = calendar2.querySelector(".jcalendar-selected");
+                if (currentDay && currentDay.classList.contains("jcalendar-disabled")) {
+                  calendarControlsUpdateButton.setAttribute("disabled", "disabled");
+                  calendarSelectHour.setAttribute("disabled", "disabled");
+                  calendarSelectMin.setAttribute("disabled", "disabled");
+                } else {
+                  calendarControlsUpdateButton.removeAttribute("disabled");
+                  calendarSelectHour.removeAttribute("disabled");
+                  calendarSelectMin.removeAttribute("disabled");
+                }
+                if (typeof obj2.options.onupdate == "function") {
+                  obj2.options.onupdate(el, obj2.getValue());
+                }
+              };
+              var calendar2 = null;
+              var calendarReset = null;
+              var calendarConfirm = null;
+              var calendarContainer = null;
+              var calendarContent = null;
+              var calendarLabelYear = null;
+              var calendarLabelMonth = null;
+              var calendarTable = null;
+              var calendarBody = null;
+              var calendarControls = null;
+              var calendarControlsTime = null;
+              var calendarControlsUpdate = null;
+              var calendarControlsUpdateButton = null;
+              var calendarSelectHour = null;
+              var calendarSelectMin = null;
+              var init = function() {
+                if (el.tagName == "INPUT" && el.value) {
+                  options.value = el.value;
+                }
+                calendarReset = document.createElement("div");
+                calendarReset.className = "jcalendar-reset";
+                calendarConfirm = document.createElement("div");
+                calendarConfirm.className = "jcalendar-confirm";
+                calendarControls = document.createElement("div");
+                calendarControls.className = "jcalendar-controls";
+                calendarControls.style.borderBottom = "1px solid #ddd";
+                calendarControls.appendChild(calendarReset);
+                calendarControls.appendChild(calendarConfirm);
+                calendarContainer = document.createElement("div");
+                calendarContainer.className = "jcalendar-container";
+                calendarContent = document.createElement("div");
+                calendarContent.className = "jcalendar-content";
+                calendarContainer.appendChild(calendarContent);
+                if (el.tagName == "DIV") {
+                  calendar2 = el;
+                  calendar2.classList.add("jcalendar-inline");
+                } else {
+                  calendarContent.appendChild(calendarControls);
+                  calendar2 = document.createElement("div");
+                  calendar2.className = "jcalendar";
+                }
+                calendar2.classList.add("jcalendar-container");
+                calendar2.appendChild(calendarContainer);
+                var calendarTableContainer = document.createElement("div");
+                calendarTableContainer.className = "jcalendar-table";
+                calendarContent.appendChild(calendarTableContainer);
+                var calendarHeaderPrev = document.createElement("td");
+                calendarHeaderPrev.setAttribute("colspan", "2");
+                calendarHeaderPrev.className = "jcalendar-prev";
+                calendarLabelYear = document.createElement("span");
+                calendarLabelYear.className = "jcalendar-year";
+                calendarLabelMonth = document.createElement("span");
+                calendarLabelMonth.className = "jcalendar-month";
+                var calendarHeaderTitle = document.createElement("td");
+                calendarHeaderTitle.className = "jcalendar-header";
+                calendarHeaderTitle.setAttribute("colspan", "3");
+                calendarHeaderTitle.appendChild(calendarLabelMonth);
+                calendarHeaderTitle.appendChild(calendarLabelYear);
+                var calendarHeaderNext = document.createElement("td");
+                calendarHeaderNext.setAttribute("colspan", "2");
+                calendarHeaderNext.className = "jcalendar-next";
+                var calendarHeader = document.createElement("thead");
+                var calendarHeaderRow = document.createElement("tr");
+                calendarHeaderRow.appendChild(calendarHeaderPrev);
+                calendarHeaderRow.appendChild(calendarHeaderTitle);
+                calendarHeaderRow.appendChild(calendarHeaderNext);
+                calendarHeader.appendChild(calendarHeaderRow);
+                calendarTable = document.createElement("table");
+                calendarBody = document.createElement("tbody");
+                calendarTable.setAttribute("cellpadding", "0");
+                calendarTable.setAttribute("cellspacing", "0");
+                calendarTable.appendChild(calendarHeader);
+                calendarTable.appendChild(calendarBody);
+                calendarTableContainer.appendChild(calendarTable);
+                calendarSelectHour = document.createElement("select");
+                calendarSelectHour.className = "jcalendar-select";
+                calendarSelectHour.onchange = function() {
+                  obj2.date[3] = this.value;
+                  if (typeof obj2.options.onupdate == "function") {
+                    obj2.options.onupdate(el, obj2.getValue());
+                  }
+                };
+                for (var i2 = 0; i2 < 24; i2++) {
+                  var element = document.createElement("option");
+                  element.value = i2;
+                  element.innerHTML = helpers2.two(i2);
+                  calendarSelectHour.appendChild(element);
+                }
+                calendarSelectMin = document.createElement("select");
+                calendarSelectMin.className = "jcalendar-select";
+                calendarSelectMin.onchange = function() {
+                  obj2.date[4] = this.value;
+                  if (typeof obj2.options.onupdate == "function") {
+                    obj2.options.onupdate(el, obj2.getValue());
+                  }
+                };
+                for (var i2 = 0; i2 < 60; i2++) {
+                  var element = document.createElement("option");
+                  element.value = i2;
+                  element.innerHTML = helpers2.two(i2);
+                  calendarSelectMin.appendChild(element);
+                }
+                var calendarControlsFooter = document.createElement("div");
+                calendarControlsFooter.className = "jcalendar-controls";
+                calendarControlsTime = document.createElement("div");
+                calendarControlsTime.className = "jcalendar-time";
+                calendarControlsTime.style.maxWidth = "140px";
+                calendarControlsTime.appendChild(calendarSelectHour);
+                calendarControlsTime.appendChild(calendarSelectMin);
+                calendarControlsUpdateButton = document.createElement("button");
+                calendarControlsUpdateButton.setAttribute("type", "button");
+                calendarControlsUpdateButton.className = "jcalendar-update";
+                calendarControlsUpdate = document.createElement("div");
+                calendarControlsUpdate.style.flexGrow = "10";
+                calendarControlsUpdate.appendChild(calendarControlsUpdateButton);
+                calendarControlsFooter.appendChild(calendarControlsTime);
+                if (el.tagName == "INPUT") {
+                  calendarControlsFooter.appendChild(calendarControlsUpdate);
+                }
+                calendarContent.appendChild(calendarControlsFooter);
+                var calendarBackdrop = document.createElement("div");
+                calendarBackdrop.className = "jcalendar-backdrop";
+                calendar2.appendChild(calendarBackdrop);
+                el.addEventListener("keyup", keyUpControls);
+                calendar2.addEventListener("swipeleft", function(e) {
+                  animation.slideLeft(calendarTable, 0, function() {
+                    obj2.next();
+                    animation.slideRight(calendarTable, 1);
+                  });
+                  e.preventDefault();
+                  e.stopPropagation();
+                });
+                calendar2.addEventListener("swiperight", function(e) {
+                  animation.slideRight(calendarTable, 0, function() {
+                    obj2.prev();
+                    animation.slideLeft(calendarTable, 1);
+                  });
+                  e.preventDefault();
+                  e.stopPropagation();
+                });
+                if ("ontouchend" in document.documentElement === true) {
+                  calendar2.addEventListener("touchend", mouseUpControls2);
+                  el.addEventListener("touchend", obj2.open);
+                } else {
+                  calendar2.addEventListener("mouseup", mouseUpControls2);
+                  el.addEventListener("mouseup", obj2.open);
+                }
+                if (!Component.hasEvents) {
+                  Component.hasEvents = true;
+                  document.addEventListener("keydown", Component.keydown);
+                }
+                obj2.setOptions(options);
+                if (el.tagName == "INPUT") {
+                  el.parentNode.insertBefore(calendar2, el.nextSibling);
+                  el.setAttribute("autocomplete", "off");
+                  el.classList.add("jcalendar-input");
+                  el.value = obj2.setLabel(obj2.getValue(), obj2.options);
+                } else {
+                  obj2.getDays();
+                  if (obj2.options.time) {
+                    calendarSelectHour.value = obj2.date[3];
+                    calendarSelectMin.value = obj2.date[4];
+                  }
+                }
+                if (obj2.options.opened == true) {
+                  obj2.open();
+                }
+                if (obj2.options.controls == false) {
+                  calendarContainer.classList.add("jcalendar-hide-controls");
+                }
+                el.change = obj2.setValue;
+                el.val = function(val) {
+                  if (val === void 0) {
+                    return obj2.getValue();
+                  } else {
+                    obj2.setValue(val);
+                  }
+                };
+                el.calendar = calendar2.calendar = obj2;
+              };
+              init();
+              return obj2;
+            };
+            Component.keydown = function(e) {
+              var calendar2 = null;
+              if (calendar2 = Component.current) {
+                if (e.which == 13) {
+                  calendar2.close(false, true);
+                } else if (e.which == 27) {
+                  calendar2.close(false, false);
+                }
+              }
+            };
+            Component.prettify = function(d, texts) {
+              if (!texts) {
+                var texts = {
+                  justNow: "Just now",
+                  xMinutesAgo: "{0}m ago",
+                  xHoursAgo: "{0}h ago",
+                  xDaysAgo: "{0}d ago",
+                  xWeeksAgo: "{0}w ago",
+                  xMonthsAgo: "{0} mon ago",
+                  xYearsAgo: "{0}y ago"
+                };
+              }
+              if (d.indexOf("GMT") === -1 && d.indexOf("Z") === -1) {
+                d += " GMT";
+              }
+              var d1 = /* @__PURE__ */ new Date();
+              var d2 = new Date(d);
+              var total = parseInt((d1 - d2) / 1e3 / 60);
+              String.prototype.format = function(o) {
+                return this.replace("{0}", o);
+              };
+              if (total == 0) {
+                var text = texts.justNow;
+              } else if (total < 90) {
+                var text = texts.xMinutesAgo.format(total);
+              } else if (total < 1440) {
+                var text = texts.xHoursAgo.format(Math.round(total / 60));
+              } else if (total < 20160) {
+                var text = texts.xDaysAgo.format(Math.round(total / 1440));
+              } else if (total < 43200) {
+                var text = texts.xWeeksAgo.format(Math.round(total / 10080));
+              } else if (total < 1036800) {
+                var text = texts.xMonthsAgo.format(Math.round(total / 43200));
+              } else {
+                var text = texts.xYearsAgo.format(Math.round(total / 525600));
+              }
+              return text;
+            };
+            Component.prettifyAll = function() {
+              var elements = document.querySelectorAll(".prettydate");
+              for (var i2 = 0; i2 < elements.length; i2++) {
+                if (elements[i2].getAttribute("data-date")) {
+                  elements[i2].innerHTML = Component.prettify(elements[i2].getAttribute("data-date"));
+                } else {
+                  if (elements[i2].innerHTML) {
+                    elements[i2].setAttribute("title", elements[i2].innerHTML);
+                    elements[i2].setAttribute("data-date", elements[i2].innerHTML);
+                    elements[i2].innerHTML = Component.prettify(elements[i2].innerHTML);
+                  }
+                }
+              }
+            };
+            Component.now = helpers_date.now;
+            Component.toArray = helpers_date.toArray;
+            Component.dateToNum = helpers_date.dateToNum;
+            Component.numToDate = helpers_date.numToDate;
+            Component.weekdays = helpers_date.weekdays;
+            Component.months = helpers_date.months;
+            Component.weekdaysShort = helpers_date.weekdaysShort;
+            Component.monthsShort = helpers_date.monthsShort;
+            Component.extractDateFromString = mask.extractDateFromString;
+            Component.getDateString = mask.getDateString;
+            return Component;
+          }
+          var calendar = Calendar();
+          ;
+          function Palette() {
+            var palette2 = {
+              material: [
+                ["#ffebee", "#fce4ec", "#f3e5f5", "#e8eaf6", "#e3f2fd", "#e0f7fa", "#e0f2f1", "#e8f5e9", "#f1f8e9", "#f9fbe7", "#fffde7", "#fff8e1", "#fff3e0", "#fbe9e7", "#efebe9", "#fafafa", "#eceff1"],
+                ["#ffcdd2", "#f8bbd0", "#e1bee7", "#c5cae9", "#bbdefb", "#b2ebf2", "#b2dfdb", "#c8e6c9", "#dcedc8", "#f0f4c3", "#fff9c4", "#ffecb3", "#ffe0b2", "#ffccbc", "#d7ccc8", "#f5f5f5", "#cfd8dc"],
+                ["#ef9a9a", "#f48fb1", "#ce93d8", "#9fa8da", "#90caf9", "#80deea", "#80cbc4", "#a5d6a7", "#c5e1a5", "#e6ee9c", "#fff59d", "#ffe082", "#ffcc80", "#ffab91", "#bcaaa4", "#eeeeee", "#b0bec5"],
+                ["#e57373", "#f06292", "#ba68c8", "#7986cb", "#64b5f6", "#4dd0e1", "#4db6ac", "#81c784", "#aed581", "#dce775", "#fff176", "#ffd54f", "#ffb74d", "#ff8a65", "#a1887f", "#e0e0e0", "#90a4ae"],
+                ["#ef5350", "#ec407a", "#ab47bc", "#5c6bc0", "#42a5f5", "#26c6da", "#26a69a", "#66bb6a", "#9ccc65", "#d4e157", "#ffee58", "#ffca28", "#ffa726", "#ff7043", "#8d6e63", "#bdbdbd", "#78909c"],
+                ["#f44336", "#e91e63", "#9c27b0", "#3f51b5", "#2196f3", "#00bcd4", "#009688", "#4caf50", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#795548", "#9e9e9e", "#607d8b"],
+                ["#e53935", "#d81b60", "#8e24aa", "#3949ab", "#1e88e5", "#00acc1", "#00897b", "#43a047", "#7cb342", "#c0ca33", "#fdd835", "#ffb300", "#fb8c00", "#f4511e", "#6d4c41", "#757575", "#546e7a"],
+                ["#d32f2f", "#c2185b", "#7b1fa2", "#303f9f", "#1976d2", "#0097a7", "#00796b", "#388e3c", "#689f38", "#afb42b", "#fbc02d", "#ffa000", "#f57c00", "#e64a19", "#5d4037", "#616161", "#455a64"],
+                ["#c62828", "#ad1457", "#6a1b9a", "#283593", "#1565c0", "#00838f", "#00695c", "#2e7d32", "#558b2f", "#9e9d24", "#f9a825", "#ff8f00", "#ef6c00", "#d84315", "#4e342e", "#424242", "#37474f"],
+                ["#b71c1c", "#880e4f", "#4a148c", "#1a237e", "#0d47a1", "#006064", "#004d40", "#1b5e20", "#33691e", "#827717", "#f57f17", "#ff6f00", "#e65100", "#bf360c", "#3e2723", "#212121", "#263238"]
+              ],
+              fire: [
+                ["0b1a6d", "840f38", "b60718", "de030b", "ff0c0c", "fd491c", "fc7521", "faa331", "fbb535", "ffc73a"],
+                ["071147", "5f0b28", "930513", "be0309", "ef0000", "fa3403", "fb670b", "f9991b", "faad1e", "ffc123"],
+                ["03071e", "370617", "6a040f", "9d0208", "d00000", "dc2f02", "e85d04", "f48c06", "faa307", "ffba08"],
+                ["020619", "320615", "61040d", "8c0207", "bc0000", "c82a02", "d05203", "db7f06", "e19405", "efab00"],
+                ["020515", "2d0513", "58040c", "7f0206", "aa0000", "b62602", "b94903", "c57205", "ca8504", "d89b00"]
+              ],
+              baby: [
+                ["eddcd2", "fff1e6", "fde2e4", "fad2e1", "c5dedd", "dbe7e4", "f0efeb", "d6e2e9", "bcd4e6", "99c1de"],
+                ["e1c4b3", "ffd5b5", "fab6ba", "f5a8c4", "aacecd", "bfd5cf", "dbd9d0", "baceda", "9dc0db", "7eb1d5"],
+                ["daa990", "ffb787", "f88e95", "f282a9", "8fc4c3", "a3c8be", "cec9b3", "9dbcce", "82acd2", "649dcb"],
+                ["d69070", "ff9c5e", "f66770", "f05f8f", "74bbb9", "87bfae", "c5b993", "83aac3", "699bca", "4d89c2"],
+                ["c97d5d", "f58443", "eb4d57", "e54a7b", "66a9a7", "78ae9c", "b5a67e", "7599b1", "5c88b7", "4978aa"]
+              ],
+              chart: [
+                ["#C1D37F", "#4C5454", "#FFD275", "#66586F", "#D05D5B", "#C96480", "#95BF8F", "#6EA240", "#0F0F0E", "#EB8258", "#95A3B3", "#995D81"]
+              ]
+            };
+            var Component = function(o) {
+              if (palette2[o]) {
+                return palette2[o];
+              } else {
+                return palette2.material;
+              }
+            };
+            Component.get = function(o) {
+              if (palette2[o]) {
+                return palette2[o];
+              } else {
+                return palette2;
+              }
+            };
+            Component.set = function(o, v) {
+              palette2[o] = v;
+            };
+            return Component;
+          }
+          var palette = Palette();
+          ;
+          function Tabs(el, options) {
+            var obj2 = {};
+            obj2.options = {};
+            var defaults = {
+              data: [],
+              position: null,
+              allowCreate: false,
+              allowChangePosition: false,
+              onclick: null,
+              onload: null,
+              onchange: null,
+              oncreate: null,
+              ondelete: null,
+              onbeforecreate: null,
+              onchangeposition: null,
+              animation: false,
+              hideHeaders: false,
+              padding: null,
+              palette: null,
+              maxWidth: null
+            };
+            for (var property in defaults) {
+              if (options && options.hasOwnProperty(property)) {
+                obj2.options[property] = options[property];
+              } else {
+                obj2.options[property] = defaults[property];
+              }
+            }
+            el.classList.add("jtabs");
+            var prev = null;
+            var next = null;
+            var border = null;
+            const setBorder = function(index) {
+              if (obj2.options.animation) {
+                setTimeout(function() {
+                  let rect = obj2.headers.children[index].getBoundingClientRect();
+                  if (obj2.options.palette === "modern") {
+                    border.style.width = rect.width - 4 + "px";
+                    border.style.left = obj2.headers.children[index].offsetLeft + 2 + "px";
+                  } else {
+                    border.style.width = rect.width + "px";
+                    border.style.left = obj2.headers.children[index].offsetLeft + "px";
+                  }
+                  if (obj2.options.position === "bottom") {
+                    border.style.top = "0px";
+                  } else {
+                    border.style.bottom = "0px";
+                  }
+                }, 50);
+              }
+            };
+            var updateControls = function(x2) {
+              if (typeof obj2.headers.scrollTo == "function") {
+                obj2.headers.scrollTo({
+                  left: x2,
+                  behavior: "smooth"
+                });
+              } else {
+                obj2.headers.scrollLeft = x2;
+              }
+              if (x2 <= 1) {
+                prev.classList.add("disabled");
+              } else {
+                prev.classList.remove("disabled");
+              }
+              if (x2 >= obj2.headers.scrollWidth - obj2.headers.offsetWidth) {
+                next.classList.add("disabled");
+              } else {
+                next.classList.remove("disabled");
+              }
+              if (obj2.headers.scrollWidth <= obj2.headers.offsetWidth) {
+                prev.style.display = "none";
+                next.style.display = "none";
+              } else {
+                prev.style.display = "";
+                next.style.display = "";
+              }
+            };
+            obj2.setBorder = setBorder;
+            obj2.open = function(index) {
+              const items = Array.from(obj2.content.children);
+              if (!obj2.content.children[index]) {
+                return;
+              }
+              var previous = null;
+              for (var i3 = 0; i3 < obj2.headers.children.length; i3++) {
+                if (obj2.headers.children[i3].classList.contains("jtabs-selected")) {
+                  previous = i3;
+                }
+                obj2.headers.children[i3].classList.remove("jtabs-selected");
+                obj2.headers.children[i3].removeAttribute("aria-selected");
+                if (obj2.content.children[i3]) {
+                  obj2.content.children[i3].classList.remove("jtabs-selected");
+                }
+              }
+              obj2.headers.children[index].classList.add("jtabs-selected");
+              obj2.headers.children[index].setAttribute("aria-selected", "true");
+              if (obj2.content.children[index]) {
+                obj2.content.children[index].classList.add("jtabs-selected");
+              }
+              if (previous != index && typeof obj2.options.onchange == "function") {
+                if (obj2.content.children[index]) {
+                  obj2.options.onchange(el, obj2, index, obj2.headers.children[index], obj2.content.children[index]);
+                }
+              }
+              if (obj2.options.hideHeaders == true && (obj2.headers.children.length < 3 && obj2.options.allowCreate == false)) {
+                obj2.headers.parentNode.style.display = "none";
+              } else {
+                obj2.headers.parentNode.style.display = "";
+                var x1 = obj2.headers.children[index].offsetLeft;
+                var x2 = x1 + obj2.headers.children[index].offsetWidth;
+                var r1 = obj2.headers.scrollLeft;
+                var r2 = r1 + obj2.headers.offsetWidth;
+                if (!(r1 <= x1 && r2 >= x2)) {
+                  updateControls(x1 - 1);
+                }
+                setBorder(index);
+              }
+            };
+            obj2.selectIndex = function(a) {
+              var index = Array.prototype.indexOf.call(obj2.headers.children, a);
+              if (index >= 0) {
+                obj2.open(index);
+              }
+              return index;
+            };
+            obj2.rename = function(i3, title) {
+              if (!title) {
+                title = prompt("New title", obj2.headers.children[i3].innerText);
+              }
+              obj2.headers.children[i3].innerText = title;
+              setBorder(obj2.getActive());
+            };
+            obj2.create = function(title, url) {
+              if (typeof obj2.options.onbeforecreate == "function") {
+                var ret2 = obj2.options.onbeforecreate(el, title);
+                if (ret2 === false) {
+                  return false;
+                } else {
+                  title = ret2;
+                }
+              }
+              var div = obj2.appendElement(title);
+              if (typeof obj2.options.oncreate == "function") {
+                obj2.options.oncreate(el, div);
+              }
+              setBorder(obj2.getActive());
+              return div;
+            };
+            obj2.remove = function(index) {
+              return obj2.deleteElement(index);
+            };
+            obj2.nextNumber = function() {
+              var num = 0;
+              for (var i3 = 0; i3 < obj2.headers.children.length; i3++) {
+                var tmp = obj2.headers.children[i3].innerText.match(/[0-9].*/);
+                if (tmp > num) {
+                  num = parseInt(tmp);
+                }
+              }
+              if (!num) {
+                num = 1;
+              } else {
+                num++;
+              }
+              return num;
+            };
+            obj2.deleteElement = function(index) {
+              let current = obj2.getActive();
+              if (!obj2.headers.children[index]) {
+                return false;
+              } else {
+                obj2.headers.removeChild(obj2.headers.children[index]);
+                obj2.content.removeChild(obj2.content.children[index]);
+              }
+              if (current === index) {
+                obj2.open(0);
+              } else {
+                let current2 = obj2.getActive() || 0;
+                setBorder(current2);
+              }
+              if (typeof obj2.options.ondelete == "function") {
+                obj2.options.ondelete(el, index);
+              }
+            };
+            obj2.appendElement = function(title, cb, openTab, position) {
+              if (!title) {
+                var title = prompt("Title?", "");
+              }
+              if (title) {
+                let headerId = helpers2.guid();
+                let contentId = helpers2.guid();
+                var div = document.createElement("div");
+                div.setAttribute("id", contentId);
+                div.setAttribute("role", "tabpanel");
+                div.setAttribute("aria-labelledby", headerId);
+                var h = document.createElement("div");
+                h.setAttribute("id", headerId);
+                h.setAttribute("role", "tab");
+                h.setAttribute("aria-controls", contentId);
+                h.textContent = title;
+                h.content = div;
+                if (typeof position === "undefined") {
+                  obj2.content.appendChild(div);
+                  obj2.headers.insertBefore(h, obj2.headers.lastChild);
+                } else {
+                  let r = obj2.content.children[position];
+                  if (r) {
+                    obj2.content.insertBefore(div, r);
+                  } else {
+                    obj2.content.appendChild(div);
+                  }
+                  r = obj2.headers.children[position] || obj2.headers.lastChild;
+                  obj2.headers.insertBefore(h, r);
+                }
+                if (obj2.options.allowChangePosition) {
+                  h.setAttribute("draggable", "true");
+                }
+                if (openTab !== false) {
+                  obj2.selectIndex(h);
+                }
+                if (typeof cb == "function") {
+                  cb(div, h);
+                }
+                return div;
+              }
+            };
+            obj2.getActive = function() {
+              for (var i3 = 0; i3 < obj2.headers.children.length; i3++) {
+                if (obj2.headers.children[i3].classList.contains("jtabs-selected")) {
+                  return i3;
+                }
+              }
+              return false;
+            };
+            obj2.updateContent = function(position, newContent) {
+              if (typeof newContent !== "string") {
+                var contentItem = newContent;
+              } else {
+                var contentItem = document.createElement("div");
+                contentItem.innerHTML = newContent;
+              }
+              if (obj2.content.children[position].classList.contains("jtabs-selected")) {
+                newContent.classList.add("jtabs-selected");
+              }
+              obj2.content.replaceChild(newContent, obj2.content.children[position]);
+              setBorder();
+            };
+            obj2.updatePosition = function(f, t, ignoreEvents, openTab) {
+              if (f > t) {
+                obj2.content.insertBefore(obj2.content.children[f], obj2.content.children[t]);
+              } else {
+                obj2.content.insertBefore(obj2.content.children[f], obj2.content.children[t].nextSibling);
+              }
+              if (openTab !== false) {
+                obj2.open(t);
+              } else {
+                const activeIndex = obj2.getActive();
+                if (t < activeIndex) {
+                  obj2.setBorder(activeIndex);
+                }
+              }
+              if (!ignoreEvents && typeof obj2.options.onchangeposition == "function") {
+                obj2.options.onchangeposition(obj2.headers, f, t);
+              }
+            };
+            obj2.move = function(f, t, ignoreEvents, openTab) {
+              if (f > t) {
+                obj2.headers.insertBefore(obj2.headers.children[f], obj2.headers.children[t]);
+              } else {
+                obj2.headers.insertBefore(obj2.headers.children[f], obj2.headers.children[t].nextSibling);
+              }
+              obj2.updatePosition(f, t, ignoreEvents, openTab);
+            };
+            obj2.setBorder = setBorder;
+            obj2.init = function() {
+              el.textContent = "";
+              obj2.headers = document.createElement("div");
+              obj2.content = document.createElement("div");
+              obj2.headers.classList.add("jtabs-headers");
+              obj2.headers.setAttribute("role", "tablist");
+              obj2.content.classList.add("jtabs-content");
+              obj2.content.setAttribute("role", "region");
+              obj2.content.setAttribute("aria-label", "Tab Panels");
+              if (obj2.options.palette) {
+                el.classList.add("jtabs-modern");
+              } else {
+                el.classList.remove("jtabs-modern");
+              }
+              if (obj2.options.padding) {
+                obj2.content.style.padding = parseInt(obj2.options.padding) + "px";
+              }
+              var header = document.createElement("div");
+              header.className = "jtabs-headers-container";
+              header.appendChild(obj2.headers);
+              if (obj2.options.maxWidth) {
+                header.style.maxWidth = parseInt(obj2.options.maxWidth) + "px";
+              }
+              var controls = document.createElement("div");
+              controls.className = "jtabs-controls";
+              controls.setAttribute("draggable", "false");
+              header.appendChild(controls);
+              if (obj2.options.position == "bottom") {
+                el.appendChild(obj2.content);
+                el.appendChild(header);
+              } else {
+                el.appendChild(header);
+                el.appendChild(obj2.content);
+              }
+              if (obj2.options.allowCreate == true) {
+                var add = document.createElement("div");
+                add.className = "jtabs-add";
+                add.onclick = function() {
+                  obj2.create();
+                };
+                controls.appendChild(add);
+              }
+              prev = document.createElement("div");
+              prev.className = "jtabs-prev";
+              prev.onclick = function() {
+                updateControls(obj2.headers.scrollLeft - obj2.headers.offsetWidth);
+              };
+              controls.appendChild(prev);
+              next = document.createElement("div");
+              next.className = "jtabs-next";
+              next.onclick = function() {
+                updateControls(obj2.headers.scrollLeft + obj2.headers.offsetWidth);
+              };
+              controls.appendChild(next);
+              for (var i3 = 0; i3 < obj2.options.data.length; i3++) {
+                if (obj2.options.data[i3].titleElement) {
+                  var headerItem = obj2.options.data[i3].titleElement;
+                } else {
+                  var headerItem = document.createElement("div");
+                }
+                if (obj2.options.data[i3].icon) {
+                  var iconContainer = document.createElement("div");
+                  var icon = document.createElement("i");
+                  icon.classList.add("material-icons");
+                  icon.textContent = obj2.options.data[i3].icon;
+                  iconContainer.appendChild(icon);
+                  headerItem.appendChild(iconContainer);
+                }
+                if (obj2.options.data[i3].title) {
+                  var title = document.createTextNode(obj2.options.data[i3].title);
+                  headerItem.appendChild(title);
+                }
+                if (obj2.options.data[i3].width) {
+                  headerItem.style.width = obj2.options.data[i3].width;
+                }
+                if (obj2.options.data[i3].contentElement) {
+                  var contentItem = obj2.options.data[i3].contentElement;
+                } else {
+                  var contentItem = document.createElement("div");
+                  contentItem.innerHTML = obj2.options.data[i3].content;
+                }
+                obj2.headers.appendChild(headerItem);
+                obj2.content.appendChild(contentItem);
+              }
+              border = document.createElement("div");
+              border.className = "jtabs-border";
+              obj2.headers.appendChild(border);
+              if (obj2.options.animation) {
+                el.classList.add("jtabs-animation");
+              }
+              obj2.headers.addEventListener("click", function(e) {
+                if (e.target.parentNode.classList.contains("jtabs-headers")) {
+                  var target = e.target;
+                } else {
+                  if (e.target.tagName == "I") {
+                    var target = e.target.parentNode.parentNode;
+                  } else {
+                    var target = e.target.parentNode;
+                  }
+                }
+                var index = obj2.selectIndex(target);
+                if (typeof obj2.options.onclick == "function") {
+                  obj2.options.onclick(el, obj2, index, obj2.headers.children[index], obj2.content.children[index]);
+                }
+              });
+              obj2.headers.addEventListener("contextmenu", function(e) {
+                obj2.selectIndex(e.target);
+              });
+              if (obj2.headers.children.length) {
+                obj2.open(0);
+              }
+              updateControls(0);
+              if (obj2.options.allowChangePosition == true) {
+                Sorting(obj2.headers, {
+                  direction: 1,
+                  ondrop: function(a, b, c) {
+                    obj2.updatePosition(b, c);
+                  }
+                });
+              }
+              if (typeof obj2.options.onload == "function") {
+                obj2.options.onload(el, obj2);
+              }
+            };
+            if (el.children[0] && el.children[0].children.length) {
+              for (var i2 = 0; i2 < el.children[0].children.length; i2++) {
+                var item = obj2.options.data && obj2.options.data[i2] ? obj2.options.data[i2] : {};
+                if (el.children[1] && el.children[1].children[i2]) {
+                  item.titleElement = el.children[0].children[i2];
+                  item.contentElement = el.children[1].children[i2];
+                } else {
+                  item.contentElement = el.children[0].children[i2];
+                }
+                obj2.options.data[i2] = item;
+              }
+            }
+            var loadingRemoteData = false;
+            if (obj2.options.data) {
+              for (var i2 = 0; i2 < obj2.options.data.length; i2++) {
+                if (obj2.options.data[i2].url) {
+                  ajax({
+                    url: obj2.options.data[i2].url,
+                    type: "GET",
+                    dataType: "text/html",
+                    index: i2,
+                    success: function(result) {
+                      obj2.options.data[this.index].content = result;
+                    },
+                    complete: function() {
+                      obj2.init();
+                    }
+                  });
+                  loadingRemoteData = true;
+                }
+              }
+            }
+            if (!loadingRemoteData) {
+              obj2.init();
+            }
+            el.tabs = obj2;
+            return obj2;
+          }
+          ;
+          function Color(el, options) {
+            if (el.color) {
+              return el.color.setOptions(options, true);
+            }
+            var obj2 = { type: "color" };
+            obj2.options = {};
+            var container = null;
+            var backdrop = null;
+            var content = null;
+            var resetButton = null;
+            var closeButton = null;
+            var tabs = null;
+            var jsuitesTabs = null;
+            obj2.setOptions = function(options2, reset) {
+              var defaults = {
+                placeholder: "",
+                value: null,
+                onopen: null,
+                onclose: null,
+                onchange: null,
+                closeOnChange: true,
+                palette: null,
+                position: null,
+                doneLabel: "Done",
+                resetLabel: "Reset",
+                fullscreen: false,
+                opened: false
+              };
+              if (!options2) {
+                options2 = {};
+              }
+              if (options2 && !options2.palette) {
+                options2.palette = palette();
+              }
+              for (var property in defaults) {
+                if (options2 && options2.hasOwnProperty(property)) {
+                  obj2.options[property] = options2[property];
+                } else {
+                  if (typeof obj2.options[property] == "undefined" || reset === true) {
+                    obj2.options[property] = defaults[property];
+                  }
+                }
+              }
+              if (resetButton) {
+                resetButton.innerHTML = obj2.options.resetLabel;
+              }
+              if (closeButton) {
+                closeButton.innerHTML = obj2.options.doneLabel;
+              }
+              if (obj2.options.palette && jsuitesTabs) {
+                jsuitesTabs.updateContent(0, table());
+              }
+              if (typeof obj2.options.value === "string") {
+                el.value = obj2.options.value;
+                if (el.tagName === "INPUT") {
+                  el.style.color = el.value;
+                  el.style.backgroundColor = el.value;
+                }
+              }
+              if (obj2.options.placeholder) {
+                el.setAttribute("placeholder", obj2.options.placeholder);
+              } else {
+                if (el.getAttribute("placeholder")) {
+                  el.removeAttribute("placeholder");
+                }
+              }
+              return obj2;
+            };
+            obj2.select = function(color) {
+              var selected = container.querySelector(".jcolor-selected");
+              if (selected) {
+                selected.classList.remove("jcolor-selected");
+              }
+              if (obj2.values[color]) {
+                obj2.values[color].classList.add("jcolor-selected");
+              }
+              obj2.options.value = color;
+            };
+            obj2.open = function() {
+              if (!container.classList.contains("jcolor-focus")) {
+                tracking(obj2, true);
+                container.classList.add("jcolor-focus");
+                if (obj2.options.value) {
+                  obj2.select(obj2.options.value);
+                }
+                content.style.marginTop = "";
+                content.style.marginLeft = "";
+                var rectContent = content.getBoundingClientRect();
+                var availableWidth = helpers2.getWindowWidth();
+                var availableHeight = helpers2.getWindowHeight();
+                if (availableWidth < 800 || obj2.options.fullscreen == true) {
+                  content.classList.add("jcolor-fullscreen");
+                  animation.slideBottom(content, 1);
+                  backdrop.style.display = "block";
+                } else {
+                  if (content.classList.contains("jcolor-fullscreen")) {
+                    content.classList.remove("jcolor-fullscreen");
+                    backdrop.style.display = "";
+                  }
+                  if (obj2.options.position) {
+                    content.style.position = "fixed";
+                  } else {
+                    content.style.position = "";
+                  }
+                  if (rectContent.left + rectContent.width > availableWidth) {
+                    content.style.marginLeft = -1 * (rectContent.left + rectContent.width - (availableWidth - 20)) + "px";
+                  }
+                  if (rectContent.top + rectContent.height > availableHeight) {
+                    content.style.marginTop = -1 * (rectContent.top + rectContent.height - (availableHeight - 20)) + "px";
+                  }
+                }
+                if (typeof obj2.options.onopen == "function") {
+                  obj2.options.onopen(el, obj2);
+                }
+                jsuitesTabs.setBorder(jsuitesTabs.getActive());
+                if (obj2.options.value) {
+                  var rgb = HexToRgb(obj2.options.value);
+                  rgbInputs.forEach(function(rgbInput, index) {
+                    rgbInput.value = rgb[index];
+                    rgbInput.dispatchEvent(new Event("input"));
+                  });
+                }
+              }
+            };
+            obj2.close = function(ignoreEvents) {
+              if (container.classList.contains("jcolor-focus")) {
+                container.classList.remove("jcolor-focus");
+                backdrop.style.display = "";
+                if (!ignoreEvents && typeof obj2.options.onclose == "function") {
+                  obj2.options.onclose(el, obj2);
+                }
+                tracking(obj2, false);
+              }
+              return obj2.options.value;
+            };
+            obj2.setValue = function(color) {
+              if (!color) {
+                color = "";
+              }
+              if (color != obj2.options.value) {
+                obj2.options.value = color;
+                slidersResult = color;
+                obj2.select(color);
+                if (typeof obj2.options.onchange == "function") {
+                  obj2.options.onchange(el, color, obj2);
+                }
+                if (el.value != obj2.options.value) {
+                  el.value = obj2.options.value;
+                  if (el.tagName === "INPUT") {
+                    el.style.color = el.value;
+                    el.style.backgroundColor = el.value;
+                  }
+                  if (typeof el.oninput == "function") {
+                    el.oninput({
+                      type: "input",
+                      target: el,
+                      value: el.value
+                    });
+                  }
+                }
+                if (obj2.options.closeOnChange == true) {
+                  obj2.close();
+                }
+              }
+            };
+            obj2.getValue = function() {
+              return obj2.options.value;
+            };
+            var backdropClickControl = false;
+            var decToHex = function(num) {
+              var hex = num.toString(16);
+              return hex.length === 1 ? "0" + hex : hex;
+            };
+            var rgbToHex = function(r, g, b) {
+              return "#" + decToHex(r) + decToHex(g) + decToHex(b);
+            };
+            var hexToDec = function(hex) {
+              return parseInt("0x" + hex);
+            };
+            var HexToRgb = function(hex) {
+              return [hexToDec(hex.substr(1, 2)), hexToDec(hex.substr(3, 2)), hexToDec(hex.substr(5, 2))];
+            };
+            var table = function() {
+              var tableContainer = document.createElement("div");
+              tableContainer.className = "jcolor-grid";
+              obj2.values = [];
+              var t = document.createElement("table");
+              t.setAttribute("cellpadding", "7");
+              t.setAttribute("cellspacing", "0");
+              for (var j = 0; j < obj2.options.palette.length; j++) {
+                var tr = document.createElement("tr");
+                for (var i2 = 0; i2 < obj2.options.palette[j].length; i2++) {
+                  var td = document.createElement("td");
+                  var color = obj2.options.palette[j][i2];
+                  if (color.length < 7 && color.substr(0, 1) !== "#") {
+                    color = "#" + color;
+                  }
+                  td.style.backgroundColor = color;
+                  td.setAttribute("data-value", color);
+                  td.innerHTML = "";
+                  tr.appendChild(td);
+                  if (obj2.options.value == color) {
+                    td.classList.add("jcolor-selected");
+                  }
+                  obj2.values[color] = td;
+                }
+                t.appendChild(tr);
+              }
+              tableContainer.appendChild(t);
+              return tableContainer;
+            };
+            var canvas = document.createElement("canvas");
+            canvas.width = 200;
+            canvas.height = 160;
+            var context = canvas.getContext("2d");
+            var resizeCanvas = function() {
+              var m = tabs.firstChild.getBoundingClientRect();
+              canvas.width = m.width - 14;
+              gradient();
+            };
+            var gradient = function() {
+              var g = context.createLinearGradient(0, 0, canvas.width, 0);
+              g.addColorStop(0, "rgb(255,0,0)");
+              g.addColorStop(0.15, "rgb(255,0,255)");
+              g.addColorStop(0.33, "rgb(0,0,255)");
+              g.addColorStop(0.49, "rgb(0,255,255)");
+              g.addColorStop(0.67, "rgb(0,255,0)");
+              g.addColorStop(0.84, "rgb(255,255,0)");
+              g.addColorStop(1, "rgb(255,0,0)");
+              context.fillStyle = g;
+              context.fillRect(0, 0, canvas.width, canvas.height);
+              g = context.createLinearGradient(0, 0, 0, canvas.height);
+              g.addColorStop(0, "rgba(255,255,255,1)");
+              g.addColorStop(0.5, "rgba(255,255,255,0)");
+              g.addColorStop(0.5, "rgba(0,0,0,0)");
+              g.addColorStop(1, "rgba(0,0,0,1)");
+              context.fillStyle = g;
+              context.fillRect(0, 0, canvas.width, canvas.height);
+            };
+            var hsl = function() {
+              var element = document.createElement("div");
+              element.className = "jcolor-hsl";
+              var point = document.createElement("div");
+              point.className = "jcolor-point";
+              var div = document.createElement("div");
+              div.appendChild(canvas);
+              div.appendChild(point);
+              element.appendChild(div);
+              var update = function(buttons, x2, y2) {
+                if (buttons === 1) {
+                  var rect = element.getBoundingClientRect();
+                  var left2 = x2 - rect.left;
+                  var top = y2 - rect.top;
+                  if (left2 < 0) {
+                    left2 = 0;
+                  }
+                  if (top < 0) {
+                    top = 0;
+                  }
+                  if (left2 > rect.width) {
+                    left2 = rect.width;
+                  }
+                  if (top > rect.height) {
+                    top = rect.height;
+                  }
+                  point.style.left = left2 + "px";
+                  point.style.top = top + "px";
+                  var pixel = context.getImageData(left2, top, 1, 1).data;
+                  slidersResult = rgbToHex(pixel[0], pixel[1], pixel[2]);
+                }
+              };
+              element.addEventListener("mousedown", function(e) {
+                update(e.buttons, e.clientX, e.clientY);
+              });
+              element.addEventListener("mousemove", function(e) {
+                update(e.buttons, e.clientX, e.clientY);
+              });
+              element.addEventListener("touchmove", function(e) {
+                update(1, e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+              });
+              return element;
+            };
+            var slidersResult = "";
+            var rgbInputs = [];
+            var changeInputColors = function() {
+              if (slidersResult !== "") {
+                for (var j = 0; j < rgbInputs.length; j++) {
+                  var currentColor = HexToRgb(slidersResult);
+                  currentColor[j] = 0;
+                  var newGradient = "linear-gradient(90deg, rgb(";
+                  newGradient += currentColor.join(", ");
+                  newGradient += "), rgb(";
+                  currentColor[j] = 255;
+                  newGradient += currentColor.join(", ");
+                  newGradient += "))";
+                  rgbInputs[j].style.backgroundImage = newGradient;
+                }
+              }
+            };
+            var sliders = function() {
+              var slidersElement = document.createElement("div");
+              slidersElement.className = "jcolor-sliders";
+              var slidersBody = document.createElement("div");
+              var createSliderInput = function(name) {
+                var inputContainer = document.createElement("div");
+                inputContainer.className = "jcolor-sliders-input-container";
+                var label = document.createElement("label");
+                label.innerText = name;
+                var subContainer = document.createElement("div");
+                subContainer.className = "jcolor-sliders-input-subcontainer";
+                var input = document.createElement("input");
+                input.type = "range";
+                input.min = 0;
+                input.max = 255;
+                input.value = 0;
+                input.setAttribute("aria-label", "Color value");
+                input.setAttribute("aria-valuemin", "0");
+                input.setAttribute("aria-valuemax", "255");
+                input.setAttribute("aria-valuenow", "0");
+                inputContainer.appendChild(label);
+                subContainer.appendChild(input);
+                var value = document.createElement("div");
+                value.innerText = input.value;
+                input.addEventListener("input", function() {
+                  value.innerText = input.value;
+                });
+                subContainer.appendChild(value);
+                inputContainer.appendChild(subContainer);
+                slidersBody.appendChild(inputContainer);
+                return input;
+              };
+              rgbInputs = [
+                createSliderInput("Red"),
+                createSliderInput("Green"),
+                createSliderInput("Blue")
+              ];
+              slidersElement.appendChild(slidersBody);
+              var slidersResultColor = document.createElement("div");
+              slidersResultColor.className = "jcolor-sliders-final-color";
+              var resultElement = document.createElement("div");
+              resultElement.style.visibility = "hidden";
+              resultElement.innerText = "a";
+              slidersResultColor.appendChild(resultElement);
+              var updateResult2 = function() {
+                var resultColor = rgbToHex(parseInt(rgbInputs[0].value), parseInt(rgbInputs[1].value), parseInt(rgbInputs[2].value));
+                resultElement.innerText = resultColor;
+                resultElement.style.color = resultColor;
+                resultElement.style.removeProperty("visibility");
+                slidersResult = resultColor;
+              };
+              rgbInputs.forEach(function(rgbInput) {
+                rgbInput.addEventListener("input", function() {
+                  updateResult2();
+                  changeInputColors();
+                });
+              });
+              slidersElement.appendChild(slidersResultColor);
+              return slidersElement;
+            };
+            var init = function() {
+              obj2.setOptions(options);
+              if (el.tagName == "INPUT") {
+                el.classList.add("jcolor-input");
+                el.readOnly = true;
+              }
+              container = document.createElement("div");
+              container.className = "jcolor";
+              backdrop = document.createElement("div");
+              backdrop.className = "jcolor-backdrop";
+              container.appendChild(backdrop);
+              content = document.createElement("div");
+              content.className = "jcolor-content";
+              var controls = document.createElement("div");
+              controls.className = "jcolor-controls";
+              content.appendChild(controls);
+              resetButton = document.createElement("div");
+              resetButton.className = "jcolor-reset";
+              resetButton.innerHTML = obj2.options.resetLabel;
+              controls.appendChild(resetButton);
+              closeButton = document.createElement("div");
+              closeButton.className = "jcolor-close";
+              closeButton.innerHTML = obj2.options.doneLabel;
+              controls.appendChild(closeButton);
+              tabs = document.createElement("div");
+              content.appendChild(tabs);
+              jsuitesTabs = Tabs(tabs, {
+                animation: true,
+                data: [
+                  {
+                    title: "Grid",
+                    contentElement: table()
+                  },
+                  {
+                    title: "Spectrum",
+                    contentElement: hsl()
+                  },
+                  {
+                    title: "Sliders",
+                    contentElement: sliders()
+                  }
+                ],
+                onchange: function(element, instance, index) {
+                  if (index === 1) {
+                    resizeCanvas();
+                  } else {
+                    var color = slidersResult !== "" ? slidersResult : obj2.getValue();
+                    if (index === 2 && color) {
+                      var rgb = HexToRgb(color);
+                      rgbInputs.forEach(function(rgbInput, index2) {
+                        rgbInput.value = rgb[index2];
+                        rgbInput.dispatchEvent(new Event("input"));
+                      });
+                    }
+                  }
+                },
+                palette: "modern"
+              });
+              container.appendChild(content);
+              if (el.tagName == "INPUT") {
+                el.parentNode.insertBefore(container, el.nextSibling);
+              } else {
+                el.appendChild(container);
+              }
+              container.addEventListener("click", function(e) {
+                if (e.target.tagName == "TD") {
+                  var value = e.target.getAttribute("data-value");
+                  if (value) {
+                    obj2.setValue(value);
+                  }
+                } else if (e.target.classList.contains("jcolor-reset")) {
+                  obj2.setValue("");
+                  obj2.close();
+                } else if (e.target.classList.contains("jcolor-close")) {
+                  if (jsuitesTabs.getActive() > 0) {
+                    obj2.setValue(slidersResult);
+                  }
+                  obj2.close();
+                } else if (e.target.classList.contains("jcolor-backdrop")) {
+                  obj2.close();
+                } else {
+                  obj2.open();
+                }
+              });
+              el.addEventListener("mouseup", function(e) {
+                obj2.open();
+              });
+              window.addEventListener("resize", function() {
+                if (container.classList.contains("jcolor-focus") && jsuitesTabs.getActive() == 1) {
+                  resizeCanvas();
+                }
+              });
+              if (obj2.options.opened == true) {
+                obj2.open();
+              }
+              el.change = obj2.setValue;
+              el.val = function(val) {
+                if (val === void 0) {
+                  return obj2.getValue();
+                } else {
+                  obj2.setValue(val);
+                }
+              };
+              el.color = obj2;
+              container.color = obj2;
+            };
+            obj2.toHex = function(rgb) {
+              var hex = function(x2) {
+                return ("0" + parseInt(x2).toString(16)).slice(-2);
+              };
+              if (rgb) {
+                if (/^#[0-9A-F]{6}$/i.test(rgb)) {
+                  return rgb;
+                } else {
+                  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                  if (rgb && rgb.length) {
+                    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+                  } else {
+                    return "";
+                  }
+                }
+              }
+            };
+            init();
+            return obj2;
+          }
+          ;
+          function Contextmenu() {
+            var Component = function(el, options) {
+              var obj2 = { type: "contextmenu" };
+              obj2.options = {};
+              var defaults = {
+                items: null,
+                onclick: null
+              };
+              for (var property in defaults) {
+                if (options && options.hasOwnProperty(property)) {
+                  obj2.options[property] = options[property];
+                } else {
+                  obj2.options[property] = defaults[property];
+                }
+              }
+              el.classList.add("jcontextmenu");
+              obj2.open = function(e, items) {
+                if (items) {
+                  obj2.options.items = items;
+                  obj2.create(items);
+                }
+                if (Component.current) {
+                  Component.current.close();
+                }
+                tracking(obj2, true);
+                el.classList.add("jcontextmenu-focus");
+                Component.current = obj2;
+                if (obj2.options.items && obj2.options.items.length > 0 || el.children.length) {
+                  if (e.target) {
+                    if (e.changedTouches && e.changedTouches[0]) {
+                      x2 = e.changedTouches[0].clientX;
+                      y2 = e.changedTouches[0].clientY;
+                    } else {
+                      var x2 = e.clientX;
+                      var y2 = e.clientY;
+                    }
+                  } else {
+                    var x2 = e.x;
+                    var y2 = e.y;
+                  }
+                  var rect = el.getBoundingClientRect();
+                  if (window.innerHeight < y2 + rect.height) {
+                    var h = y2 - rect.height;
+                    if (h < 0) {
+                      h = 0;
+                    }
+                    el.style.top = h + "px";
+                  } else {
+                    el.style.top = y2 + "px";
+                  }
+                  if (window.innerWidth < x2 + rect.width) {
+                    if (x2 - rect.width > 0) {
+                      el.style.left = x2 - rect.width + "px";
+                    } else {
+                      el.style.left = "10px";
+                    }
+                  } else {
+                    el.style.left = x2 + "px";
+                  }
+                }
+              };
+              obj2.isOpened = function() {
+                return el.classList.contains("jcontextmenu-focus") ? true : false;
+              };
+              obj2.close = function() {
+                if (el.classList.contains("jcontextmenu-focus")) {
+                  el.classList.remove("jcontextmenu-focus");
+                }
+                tracking(obj2, false);
+              };
+              obj2.create = function(items) {
+                el.innerHTML = "";
+                var itemHeader = createHeader();
+                el.appendChild(itemHeader);
+                for (var i2 = 0; i2 < items.length; i2++) {
+                  var itemContainer = createItemElement(items[i2]);
+                  el.appendChild(itemContainer);
+                }
+              };
+              function createHeader() {
+                var header = document.createElement("div");
+                header.classList.add("header");
+                header.addEventListener("click", function(e) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                });
+                var title = document.createElement("a");
+                title.classList.add("title");
+                title.innerHTML = dictionary.translate("Menu");
+                header.appendChild(title);
+                var closeButton = document.createElement("a");
+                closeButton.classList.add("close");
+                closeButton.innerHTML = dictionary.translate("close");
+                closeButton.addEventListener("click", function(e) {
+                  obj2.close();
+                });
+                header.appendChild(closeButton);
+                return header;
+              }
+              function createItemElement(item) {
+                if (item.type && (item.type == "line" || item.type == "divisor")) {
+                  var itemContainer = document.createElement("hr");
+                } else {
+                  var itemContainer = document.createElement("div");
+                  var itemText = document.createElement("a");
+                  itemText.innerHTML = item.title;
+                  if (item.tooltip) {
+                    itemContainer.setAttribute("title", item.tooltip);
+                  }
+                  if (item.icon) {
+                    itemContainer.setAttribute("data-icon", item.icon);
+                  }
+                  if (item.id) {
+                    itemContainer.id = item.id;
+                  }
+                  if (item.disabled) {
+                    itemContainer.className = "jcontextmenu-disabled";
+                  } else if (item.onclick) {
+                    let method = item.onclick;
+                    itemContainer.addEventListener("mousedown", function(e) {
+                      e.preventDefault();
+                    });
+                    itemContainer.addEventListener("mouseup", function(e) {
+                      method(this, e);
+                    });
+                  }
+                  itemContainer.appendChild(itemText);
+                  if (item.submenu) {
+                    var itemIconSubmenu = document.createElement("span");
+                    itemIconSubmenu.innerHTML = "&#9658;";
+                    itemContainer.appendChild(itemIconSubmenu);
+                    itemContainer.classList.add("jcontexthassubmenu");
+                    var el_submenu = document.createElement("div");
+                    el_submenu.classList.add("jcontextmenu");
+                    el_submenu.setAttribute("tabindex", "900");
+                    var submenu = item.submenu;
+                    for (var i2 = 0; i2 < submenu.length; i2++) {
+                      var itemContainerSubMenu = createItemElement(submenu[i2]);
+                      el_submenu.appendChild(itemContainerSubMenu);
+                    }
+                    itemContainer.appendChild(el_submenu);
+                    itemContainer.addEventListener("mouseenter", function() {
+                      el_submenu.style.left = "";
+                      el_submenu.style.right = "";
+                      el_submenu.style.minWidth = itemContainer.offsetWidth + "px";
+                      el_submenu.style.display = "block";
+                      el_submenu.style.opacity = "0";
+                      el_submenu.style.pointerEvents = "none";
+                      var parentRect = itemContainer.getBoundingClientRect();
+                      var submenuRect = el_submenu.getBoundingClientRect();
+                      var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+                      var rightEdge = parentRect.right + submenuRect.width;
+                      var leftEdge = parentRect.left - submenuRect.width;
+                      if (rightEdge > viewportWidth && leftEdge >= 0) {
+                        el_submenu.style.left = "auto";
+                        el_submenu.style.right = "99%";
+                      } else if (rightEdge > viewportWidth && leftEdge < 0) {
+                        el_submenu.style.left = "32px";
+                        el_submenu.style.right = "auto";
+                        el_submenu.style.top = "100%";
+                      } else {
+                        el_submenu.style.left = "99%";
+                        el_submenu.style.right = "auto";
+                      }
+                      el_submenu.style.opacity = "";
+                      el_submenu.style.pointerEvents = "";
+                      el_submenu.style.display = "";
+                    });
+                    itemContainer.addEventListener("mouseleave", function() {
+                      el_submenu.style.left = "";
+                      el_submenu.style.right = "";
+                      el_submenu.style.minWidth = "";
+                    });
+                  } else if (item.shortcut) {
+                    var itemShortCut = document.createElement("span");
+                    itemShortCut.innerHTML = item.shortcut;
+                    itemContainer.appendChild(itemShortCut);
+                  }
+                }
+                return itemContainer;
+              }
+              if (typeof obj2.options.onclick == "function") {
+                el.addEventListener("click", function(e) {
+                  obj2.options.onclick(obj2, e);
+                });
+              }
+              if (obj2.options.items) {
+                obj2.create(obj2.options.items);
+              }
+              window.addEventListener("mousewheel", function() {
+                obj2.close();
+              });
+              el.contextmenu = obj2;
+              return obj2;
+            };
+            return Component;
+          }
+          var contextmenu = Contextmenu();
+          ;
+          function Dropdown() {
+            var Component = function(el, options) {
+              if (el.dropdown) {
+                return el.dropdown.setOptions(options, true);
+              }
+              var obj2 = { type: "dropdown" };
+              obj2.options = {};
+              var success = function(data, val) {
+                if (data && data.length) {
+                  if (obj2.options.sortResults !== false) {
+                    if (typeof obj2.options.sortResults == "function") {
+                      data.sort(obj2.options.sortResults);
+                    } else {
+                      data.sort(sortData);
+                    }
+                  }
+                  obj2.setData(data);
+                }
+                if (typeof obj2.options.onload == "function") {
+                  obj2.options.onload(el, obj2, data, val);
+                }
+                if (val) {
+                  applyValue(val);
+                }
+                if (val === void 0 || val === null) {
+                  obj2.options.value = "";
+                }
+                el.value = obj2.options.value;
+                if (obj2.options.opened == true) {
+                  obj2.open();
+                }
+              };
+              var sortData = function(itemA, itemB) {
+                var testA, testB;
+                if (typeof itemA == "string") {
+                  testA = itemA;
+                } else {
+                  if (itemA.text) {
+                    testA = itemA.text;
+                  } else if (itemA.name) {
+                    testA = itemA.name;
+                  }
+                }
+                if (typeof itemB == "string") {
+                  testB = itemB;
+                } else {
+                  if (itemB.text) {
+                    testB = itemB.text;
+                  } else if (itemB.name) {
+                    testB = itemB.name;
+                  }
+                }
+                if (typeof testA == "string" || typeof testB == "string") {
+                  if (typeof testA != "string") {
+                    testA = "" + testA;
+                  }
+                  if (typeof testB != "string") {
+                    testB = "" + testB;
+                  }
+                  return testA.localeCompare(testB);
+                } else {
+                  return testA - testB;
+                }
+              };
+              var resetValue = function() {
+                obj2.value = {};
+                for (var i2 = 0; i2 < obj2.items.length; i2++) {
+                  if (obj2.items[i2].selected == true) {
+                    if (obj2.items[i2].element) {
+                      obj2.items[i2].element.classList.remove("jdropdown-selected");
+                    }
+                    obj2.items[i2].selected = null;
+                  }
+                }
+                obj2.options.value = "";
+                el.value = "";
+              };
+              var applyValue = function(values) {
+                resetValue();
+                if (values !== null) {
+                  if (!values) {
+                    if (typeof obj2.value[""] !== "undefined") {
+                      obj2.value[""] = "";
+                    }
+                  } else {
+                    if (!Array.isArray(values)) {
+                      values = ("" + values).split(";");
+                    }
+                    for (var i2 = 0; i2 < values.length; i2++) {
+                      obj2.value[values[i2]] = "";
+                    }
+                  }
+                }
+                for (var i2 = 0; i2 < obj2.items.length; i2++) {
+                  if (typeof obj2.value[Value(i2)] !== "undefined") {
+                    if (obj2.items[i2].element) {
+                      obj2.items[i2].element.classList.add("jdropdown-selected");
+                    }
+                    obj2.items[i2].selected = true;
+                    obj2.value[Value(i2)] = Text(i2);
+                  }
+                }
+                obj2.options.value = Object.keys(obj2.value).join(";");
+                obj2.header.value = obj2.getText();
+              };
+              var Value = function(k, v) {
+                if (!obj2.options.format) {
+                  var property = "value";
+                } else {
+                  var property = "id";
+                }
+                if (obj2.items[k]) {
+                  if (v !== void 0) {
+                    return obj2.items[k].data[property] = v;
+                  } else {
+                    return obj2.items[k].data[property];
+                  }
+                }
+                return "";
+              };
+              var Text = function(k, v) {
+                if (!obj2.options.format) {
+                  var property = "text";
+                } else {
+                  var property = "name";
+                }
+                if (obj2.items[k]) {
+                  if (v !== void 0) {
+                    return obj2.items[k].data[property] = v;
+                  } else {
+                    return obj2.items[k].data[property];
+                  }
+                }
+                return "";
+              };
+              var getValue2 = function() {
+                return Object.keys(obj2.value);
+              };
+              var getText = function() {
+                var data = [];
+                var k = Object.keys(obj2.value);
+                for (var i2 = 0; i2 < k.length; i2++) {
+                  data.push(obj2.value[k[i2]]);
+                }
+                return data;
+              };
+              obj2.setOptions = function(options2, reset) {
+                if (!options2) {
+                  options2 = {};
+                }
+                var defaults = {
+                  url: null,
+                  data: [],
+                  format: 0,
+                  multiple: false,
+                  autocomplete: false,
+                  remoteSearch: false,
+                  lazyLoading: false,
+                  type: null,
+                  width: null,
+                  maxWidth: null,
+                  opened: false,
+                  value: null,
+                  placeholder: "",
+                  newOptions: false,
+                  position: false,
+                  onchange: null,
+                  onload: null,
+                  onopen: null,
+                  onclose: null,
+                  onfocus: null,
+                  onblur: null,
+                  oninsert: null,
+                  onbeforeinsert: null,
+                  onsearch: null,
+                  onbeforesearch: null,
+                  sortResults: false,
+                  autofocus: false,
+                  prompt: null,
+                  allowEmpty: true
+                };
+                for (var property in defaults) {
+                  if (options2 && options2.hasOwnProperty(property)) {
+                    obj2.options[property] = options2[property];
+                  } else {
+                    if (typeof obj2.options[property] == "undefined" || reset === true) {
+                      obj2.options[property] = defaults[property];
+                    }
+                  }
+                }
+                if (obj2.options.remoteSearch == true || obj2.options.type === "searchbar") {
+                  obj2.options.autocomplete = true;
+                }
+                if (obj2.options.newOptions == true) {
+                  obj2.header.classList.add("jdropdown-add");
+                } else {
+                  obj2.header.classList.remove("jdropdown-add");
+                }
+                if (obj2.options.autocomplete == true) {
+                  obj2.header.removeAttribute("readonly");
+                } else {
+                  obj2.header.setAttribute("readonly", "readonly");
+                }
+                if (obj2.options.placeholder) {
+                  obj2.header.setAttribute("placeholder", obj2.options.placeholder);
+                } else {
+                  obj2.header.removeAttribute("placeholder");
+                }
+                el.classList.remove("jdropdown-searchbar");
+                el.classList.remove("jdropdown-picker");
+                el.classList.remove("jdropdown-list");
+                if (obj2.options.type == "searchbar") {
+                  el.classList.add("jdropdown-searchbar");
+                } else if (obj2.options.type == "list") {
+                  el.classList.add("jdropdown-list");
+                } else if (obj2.options.type == "picker") {
+                  el.classList.add("jdropdown-picker");
+                } else {
+                  if (helpers2.getWindowWidth() < 800) {
+                    if (obj2.options.autocomplete) {
+                      el.classList.add("jdropdown-searchbar");
+                      obj2.options.type = "searchbar";
+                    } else {
+                      el.classList.add("jdropdown-picker");
+                      obj2.options.type = "picker";
+                    }
+                  } else {
+                    if (obj2.options.width) {
+                      el.style.width = obj2.options.width;
+                      el.style.minWidth = obj2.options.width;
+                    } else {
+                      el.style.removeProperty("width");
+                      el.style.removeProperty("min-width");
+                    }
+                    el.classList.add("jdropdown-default");
+                    obj2.options.type = "default";
+                  }
+                }
+                if (obj2.options.type == "searchbar") {
+                  containerHeader.appendChild(closeButton);
+                } else {
+                  container.insertBefore(closeButton, container.firstChild);
+                }
+                if (obj2.options.url && !options2.data) {
+                  ajax({
+                    url: obj2.options.url,
+                    method: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                      if (data) {
+                        success(data, obj2.options.value);
+                      }
+                    }
+                  });
+                } else {
+                  success(obj2.options.data, obj2.options.value);
+                }
+                return obj2;
+              };
+              var containerHeader = null;
+              var container = null;
+              var content = null;
+              var closeButton = null;
+              var resetButton = null;
+              var backdrop = null;
+              var keyTimer = null;
+              var init = function() {
+                if (!options) {
+                  options = {};
+                }
+                if (el.tagName == "SELECT") {
+                  var ret2 = Component.extractFromDom(el, options);
+                  el = ret2.el;
+                  options = ret2.options;
+                }
+                if (!options.placeholder && el.getAttribute("placeholder")) {
+                  options.placeholder = el.getAttribute("placeholder");
+                }
+                obj2.value = {};
+                obj2.items = [];
+                obj2.groups = [];
+                obj2.search = "";
+                obj2.results = null;
+                el.classList.add("jdropdown");
+                containerHeader = document.createElement("div");
+                containerHeader.className = "jdropdown-container-header";
+                obj2.header = document.createElement("input");
+                obj2.header.className = "jdropdown-header jss_object";
+                obj2.header.type = "text";
+                obj2.header.setAttribute("autocomplete", "off");
+                obj2.header.onfocus = function() {
+                  if (typeof obj2.options.onfocus == "function") {
+                    obj2.options.onfocus(el);
+                  }
+                };
+                obj2.header.onblur = function() {
+                  if (typeof obj2.options.onblur == "function") {
+                    obj2.options.onblur(el);
+                  }
+                };
+                obj2.header.onkeyup = function(e) {
+                  if (obj2.options.autocomplete == true && !keyTimer) {
+                    if (obj2.search != obj2.header.value.trim()) {
+                      keyTimer = setTimeout(function() {
+                        obj2.find(obj2.header.value.trim());
+                        keyTimer = null;
+                      }, 400);
+                    }
+                    if (!el.classList.contains("jdropdown-focus")) {
+                      obj2.open();
+                    }
+                  } else {
+                    if (!obj2.options.autocomplete) {
+                      obj2.next(e.key);
+                    }
+                  }
+                };
+                if (!Component.hasEvents) {
+                  Component.hasEvents = true;
+                  document.addEventListener("keydown", Component.keydown);
+                }
+                container = document.createElement("div");
+                container.className = "jdropdown-container";
+                content = document.createElement("div");
+                content.className = "jdropdown-content";
+                closeButton = document.createElement("div");
+                closeButton.className = "jdropdown-close";
+                closeButton.textContent = "Done";
+                resetButton = document.createElement("div");
+                resetButton.className = "jdropdown-reset";
+                resetButton.textContent = "x";
+                resetButton.onclick = function() {
+                  obj2.reset();
+                  obj2.close();
+                };
+                backdrop = document.createElement("div");
+                backdrop.className = "jdropdown-backdrop";
+                containerHeader.appendChild(obj2.header);
+                container.appendChild(content);
+                el.appendChild(containerHeader);
+                el.appendChild(container);
+                el.appendChild(backdrop);
+                obj2.setOptions(options);
+                if ("ontouchsend" in document.documentElement === true) {
+                  el.addEventListener("touchsend", Component.mouseup);
+                } else {
+                  el.addEventListener("mouseup", Component.mouseup);
+                }
+                if (obj2.options.lazyLoading == true) {
+                  LazyLoading(content, {
+                    loadUp: obj2.loadUp,
+                    loadDown: obj2.loadDown
+                  });
+                }
+                content.onwheel = function(e) {
+                  e.stopPropagation();
+                };
+                el.change = obj2.setValue;
+                el.val = function(val) {
+                  if (val === void 0) {
+                    return obj2.getValue(obj2.options.multiple ? true : false);
+                  } else {
+                    obj2.setValue(val);
+                  }
+                };
+                el.dropdown = obj2;
+              };
+              obj2.getUrl = function() {
+                return obj2.options.url;
+              };
+              obj2.setUrl = function(url, callback) {
+                obj2.options.url = url;
+                ajax({
+                  url: obj2.options.url,
+                  method: "GET",
+                  dataType: "json",
+                  success: function(data) {
+                    obj2.setData(data);
+                    if (typeof callback == "function") {
+                      callback(obj2);
+                    }
+                  }
+                });
+              };
+              obj2.setId = function(item, v) {
+                if (!obj2.options.format) {
+                  var property = "value";
+                } else {
+                  var property = "id";
+                }
+                if (typeof item == "object") {
+                  item[property] = v;
+                } else {
+                  obj2.items[item].data[property] = v;
+                }
+              };
+              const add = function(title, id) {
+                if (!title) {
+                  let current = obj2.options.autocomplete == true ? obj2.header.value : "";
+                  title = prompt(dictionary.translate("Add A New Option"), current);
+                  if (!title) {
+                    return false;
+                  }
+                }
+                if (!id) {
+                  id = helpers2.guid();
+                }
+                if (!obj2.options.format) {
+                  var item = {
+                    value: id,
+                    text: title
+                  };
+                } else {
+                  var item = {
+                    id,
+                    name: title
+                  };
+                }
+                if (typeof obj2.options.onbeforeinsert == "function") {
+                  let ret2 = obj2.options.onbeforeinsert(obj2, item);
+                  if (ret2 === false) {
+                    return false;
+                  } else if (ret2) {
+                    item = ret2;
+                  }
+                }
+                obj2.options.data.push(item);
+                var newItem = obj2.createItem(item);
+                content.appendChild(newItem.element);
+                if (typeof obj2.options.oninsert == "function") {
+                  obj2.options.oninsert(obj2, item, newItem);
+                }
+                if (content.style.display == "none") {
+                  content.style.display = "";
+                }
+                if (obj2.results) {
+                  obj2.results.push(newItem);
+                }
+                return item;
+              };
+              obj2.add = function(title, id) {
+                if (typeof obj2.options.prompt == "function") {
+                  return obj2.options.prompt.call(obj2, add);
+                }
+                return add(title, id);
+              };
+              obj2.createItem = function(data, group, groupName) {
+                if (!obj2.options.format) {
+                  if (!data.value && data.id !== void 0) {
+                    data.value = data.id;
+                  }
+                  if (!data.text && data.name !== void 0) {
+                    data.text = data.name;
+                  }
+                } else {
+                  if (!data.id && data.value !== void 0) {
+                    data.id = data.value;
+                  }
+                  if (!data.name && data.text !== void 0) {
+                    data.name = data.text;
+                  }
+                }
+                var item = {};
+                item.element = document.createElement("div");
+                item.element.className = "jdropdown-item";
+                item.element.indexValue = obj2.items.length;
+                item.data = data;
+                if (group) {
+                  item.group = group;
+                }
+                if (data.id) {
+                  item.element.setAttribute("id", data.id);
+                }
+                if (data.disabled == true) {
+                  item.element.setAttribute("data-disabled", true);
+                }
+                if (data.tooltip) {
+                  item.element.setAttribute("title", data.tooltip);
+                }
+                if (data.image) {
+                  var image = document.createElement("img");
+                  image.className = "jdropdown-image";
+                  image.src = data.image;
+                  if (!data.title) {
+                    image.classList.add("jdropdown-image-small");
+                  }
+                  item.element.appendChild(image);
+                } else if (data.icon) {
+                  var icon = document.createElement("span");
+                  icon.className = "jdropdown-icon material-icons";
+                  icon.innerText = data.icon;
+                  if (!data.title) {
+                    icon.classList.add("jdropdown-icon-small");
+                  }
+                  if (data.color) {
+                    icon.style.color = data.color;
+                  }
+                  item.element.appendChild(icon);
+                } else if (data.color) {
+                  var color = document.createElement("div");
+                  color.className = "jdropdown-color";
+                  color.style.backgroundColor = data.color;
+                  item.element.appendChild(color);
+                }
+                if (!obj2.options.format) {
+                  var text = data.text;
+                } else {
+                  var text = data.name;
+                }
+                var node = document.createElement("div");
+                node.className = "jdropdown-description";
+                node.textContent = text || "&nbsp;";
+                if (data.title) {
+                  var title = document.createElement("div");
+                  title.className = "jdropdown-title";
+                  title.innerText = data.title;
+                  node.appendChild(title);
+                }
+                if (!obj2.options.format) {
+                  var val = data.value;
+                } else {
+                  var val = data.id;
+                }
+                if (obj2.value[val]) {
+                  item.element.classList.add("jdropdown-selected");
+                  item.selected = true;
+                }
+                obj2.items.push(item);
+                item.element.appendChild(node);
+                return item;
+              };
+              obj2.appendData = function(data) {
+                if (data.length) {
+                  var items = [];
+                  var groups = [];
+                  for (var i2 = 0; i2 < data.length; i2++) {
+                    if (data[i2].group) {
+                      if (!groups[data[i2].group]) {
+                        groups[data[i2].group] = [];
+                      }
+                      groups[data[i2].group].push(i2);
+                    } else {
+                      items.push(i2);
+                    }
+                  }
+                  var counter = 0;
+                  var groupNames = Object.keys(groups);
+                  if (groupNames.length > 0) {
+                    for (var i2 = 0; i2 < groupNames.length; i2++) {
+                      var group = document.createElement("div");
+                      group.className = "jdropdown-group";
+                      var groupName = document.createElement("div");
+                      groupName.className = "jdropdown-group-name";
+                      groupName.textContent = groupNames[i2];
+                      var groupArrow = document.createElement("i");
+                      groupArrow.className = "jdropdown-group-arrow jdropdown-group-arrow-down";
+                      groupName.appendChild(groupArrow);
+                      var groupContent = document.createElement("div");
+                      groupContent.className = "jdropdown-group-items";
+                      for (var j = 0; j < groups[groupNames[i2]].length; j++) {
+                        var item = obj2.createItem(data[groups[groupNames[i2]][j]], group, groupNames[i2]);
+                        if (obj2.options.lazyLoading == false || counter < 200) {
+                          groupContent.appendChild(item.element);
+                          counter++;
+                        }
+                      }
+                      group.appendChild(groupName);
+                      group.appendChild(groupContent);
+                      obj2.groups.push(group);
+                      if (groupContent.children.length > 0) {
+                        content.appendChild(group);
+                      }
+                    }
+                  }
+                  if (items.length) {
+                    for (var i2 = 0; i2 < items.length; i2++) {
+                      var item = obj2.createItem(data[items[i2]]);
+                      if (obj2.options.lazyLoading == false || counter < 200) {
+                        content.appendChild(item.element);
+                        counter++;
+                      }
+                    }
+                  }
+                }
+              };
+              obj2.setData = function(data) {
+                resetValue();
+                content.textContent = "";
+                obj2.header.value = "";
+                obj2.items = [];
+                if (data && data.length) {
+                  for (var i2 = 0; i2 < data.length; i2++) {
+                    if (typeof data[i2] != "object") {
+                      if (!obj2.options.format) {
+                        data[i2] = {
+                          value: data[i2],
+                          text: data[i2]
+                        };
+                      } else {
+                        data[i2] = {
+                          id: data[i2],
+                          name: data[i2]
+                        };
+                      }
+                    }
+                  }
+                  obj2.appendData(data);
+                  obj2.options.data = data;
+                } else {
+                  obj2.options.data = [];
+                }
+                obj2.close();
+              };
+              obj2.getData = function() {
+                return obj2.options.data;
+              };
+              obj2.getPosition = function(val) {
+                for (var i2 = 0; i2 < obj2.items.length; i2++) {
+                  if (Value(i2) == val) {
+                    return i2;
+                  }
+                }
+                return false;
+              };
+              obj2.getText = function(asArray) {
+                var v = getText();
+                if (asArray) {
+                  return v;
+                } else {
+                  return v.join("; ");
+                }
+              };
+              obj2.getValue = function(asArray) {
+                var v = getValue2();
+                if (asArray) {
+                  return v;
+                } else {
+                  return v.join(";");
+                }
+              };
+              var change = function(oldValue) {
+                if (el.value != obj2.options.value) {
+                  el.value = obj2.options.value;
+                  if (typeof el.oninput == "function") {
+                    el.oninput({
+                      type: "input",
+                      target: el,
+                      value: el.value
+                    });
+                  }
+                }
+                if (typeof obj2.options.onchange == "function") {
+                  obj2.options.onchange(el, obj2, oldValue, obj2.options.value);
+                }
+              };
+              obj2.setValue = function(newValue) {
+                var oldValue = obj2.getValue();
+                if (Array.isArray(newValue)) {
+                  newValue = newValue.join(";");
+                }
+                if (oldValue !== newValue) {
+                  applyValue(newValue);
+                  change(oldValue);
+                }
+              };
+              obj2.resetSelected = function() {
+                obj2.setValue(null);
+              };
+              obj2.selectIndex = function(index, force) {
+                var index = parseInt(index);
+                if (obj2.items && obj2.items[index] && (force === true || obj2.items[index].data.disabled !== true)) {
+                  obj2.setCursor(index, false);
+                  if (!obj2.options.multiple) {
+                    if (obj2.items[index].selected) {
+                      if (obj2.options.allowEmpty !== false) {
+                        obj2.setValue(null);
+                      }
+                    } else {
+                      obj2.setValue(Value(index));
+                    }
+                    obj2.close();
+                  } else {
+                    var oldValue = obj2.options.value;
+                    if (obj2.items[index].selected) {
+                      obj2.items[index].element.classList.remove("jdropdown-selected");
+                      obj2.items[index].selected = false;
+                      delete obj2.value[Value(index)];
+                    } else {
+                      obj2.items[index].element.classList.add("jdropdown-selected");
+                      obj2.items[index].selected = true;
+                      obj2.value[Value(index)] = Text(index);
+                    }
+                    obj2.options.value = Object.keys(obj2.value).join(";");
+                    if (obj2.options.autocomplete == false) {
+                      obj2.header.value = getText().join("; ");
+                    }
+                    change(oldValue);
+                  }
+                }
+              };
+              obj2.selectItem = function(item) {
+                obj2.selectIndex(item.indexValue);
+              };
+              var exists = function(k, result) {
+                for (var j = 0; j < result.length; j++) {
+                  if (!obj2.options.format) {
+                    if (result[j].value == k) {
+                      return true;
+                    }
+                  } else {
+                    if (result[j].id == k) {
+                      return true;
+                    }
+                  }
+                }
+                return false;
+              };
+              obj2.find = function(str) {
+                if (obj2.search == str.trim()) {
+                  return false;
+                }
+                obj2.search = str;
+                obj2.setCursor();
+                if (obj2.groups.length) {
+                  for (var i2 = 0; i2 < obj2.groups.length; i2++) {
+                    obj2.groups[i2].lastChild.textContent = "";
+                  }
+                }
+                content.textContent = "";
+                if (obj2.options.remoteSearch == true) {
+                  obj2.results = null;
+                  var url = obj2.options.url;
+                  let o = {
+                    url,
+                    method: "GET",
+                    data: { q: str },
+                    dataType: "json",
+                    success: function(result) {
+                      obj2.items = [];
+                      var current = Object.keys(obj2.value);
+                      if (current.length) {
+                        for (var i3 = 0; i3 < current.length; i3++) {
+                          if (!exists(current[i3], result)) {
+                            if (!obj2.options.format) {
+                              result.unshift({ value: current[i3], text: obj2.value[current[i3]] });
+                            } else {
+                              result.unshift({ id: current[i3], name: obj2.value[current[i3]] });
+                            }
+                          }
+                        }
+                      }
+                      obj2.appendData(result);
+                      if (!result.length) {
+                        content.style.display = "none";
+                      } else {
+                        content.style.display = "";
+                      }
+                      if (typeof obj2.options.onsearch === "function") {
+                        obj2.options.onsearch(obj2, result);
+                      }
+                    }
+                  };
+                  if (typeof obj2.options.onbeforesearch === "function") {
+                    let ret2 = obj2.options.onbeforesearch(obj2, o);
+                    if (ret2 === false) {
+                      return;
+                    } else if (typeof ret2 === "object") {
+                      o = ret2;
+                    }
+                  }
+                  ajax(o);
+                } else {
+                  str = new RegExp(str, "gi");
+                  var results = [];
+                  for (var i2 = 0; i2 < obj2.items.length; i2++) {
+                    var label = Text(i2);
+                    var title = obj2.items[i2].data.title || "";
+                    var groupName = obj2.items[i2].data.group || "";
+                    var synonym = obj2.items[i2].data.synonym || "";
+                    if (synonym) {
+                      synonym = synonym.join(" ");
+                    }
+                    if (str == null || obj2.items[i2].selected == true || label.toString().match(str) || title.match(str) || groupName.match(str) || synonym.match(str)) {
+                      results.push(obj2.items[i2]);
+                    }
+                  }
+                  if (!results.length) {
+                    content.style.display = "none";
+                    obj2.results = null;
+                  } else {
+                    content.style.display = "";
+                    obj2.results = results;
+                    var number = results.length || 0;
+                    if (obj2.options.lazyLoading == true && number > 200) {
+                      number = 200;
+                    }
+                    for (var i2 = 0; i2 < number; i2++) {
+                      if (obj2.results[i2].group) {
+                        if (!obj2.results[i2].group.parentNode) {
+                          content.appendChild(obj2.results[i2].group);
+                        }
+                        obj2.results[i2].group.lastChild.appendChild(obj2.results[i2].element);
+                      } else {
+                        content.appendChild(obj2.results[i2].element);
+                      }
+                    }
+                  }
+                }
+                if (obj2.options.autofocus == true) {
+                  obj2.first();
+                }
+              };
+              obj2.open = function() {
+                if (!el.classList.contains("jdropdown-focus")) {
+                  Component.current = obj2;
+                  tracking(obj2, true);
+                  el.classList.add("jdropdown-focus");
+                  if (helpers2.getWindowWidth() < 800) {
+                    if (obj2.options.type == null || obj2.options.type == "picker") {
+                      animation.slideBottom(container, 1);
+                    }
+                  }
+                  if (obj2.options.autocomplete == true) {
+                    obj2.header.value = obj2.search;
+                    obj2.header.focus();
+                  }
+                  var k = getValue2();
+                  if (k[0]) {
+                    var cursor = obj2.getPosition(k[0]);
+                    if (cursor !== false) {
+                      obj2.setCursor(cursor);
+                    }
+                  }
+                  if (!obj2.options.type || obj2.options.type == "default") {
+                    var rect = el.getBoundingClientRect();
+                    var rectContainer = container.getBoundingClientRect();
+                    if (obj2.options.position) {
+                      container.style.position = "fixed";
+                      if (window.innerHeight < rect.bottom + rectContainer.height) {
+                        container.style.top = "";
+                        container.style.bottom = window.innerHeight - rect.top + 1 + "px";
+                      } else {
+                        container.style.top = rect.bottom + "px";
+                        container.style.bottom = "";
+                      }
+                      container.style.left = rect.left + "px";
+                    } else {
+                      if (window.innerHeight < rect.bottom + rectContainer.height) {
+                        container.style.top = "";
+                        container.style.bottom = rect.height + 1 + "px";
+                      } else {
+                        container.style.top = "";
+                        container.style.bottom = "";
+                      }
+                    }
+                    container.style.minWidth = rect.width + "px";
+                    if (obj2.options.maxWidth) {
+                      container.style.maxWidth = obj2.options.maxWidth;
+                    }
+                    if (!obj2.items.length && obj2.options.autocomplete == true) {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "";
+                    }
+                  }
+                }
+                if (typeof obj2.options.onopen == "function") {
+                  obj2.options.onopen(el);
+                }
+              };
+              obj2.close = function(ignoreEvents) {
+                if (el.classList.contains("jdropdown-focus")) {
+                  obj2.header.value = obj2.getText();
+                  obj2.setCursor();
+                  if (!ignoreEvents && typeof obj2.options.onclose == "function") {
+                    obj2.options.onclose(el);
+                  }
+                  if (obj2.header.blur) {
+                    obj2.header.blur();
+                  }
+                  el.classList.remove("jdropdown-focus");
+                  tracking(obj2, false);
+                  Component.current = null;
+                }
+                return obj2.getValue();
+              };
+              obj2.setCursor = function(index, setPosition) {
+                if (obj2.currentIndex != null) {
+                  if (obj2.items && obj2.items[obj2.currentIndex]) {
+                    obj2.items[obj2.currentIndex].element.classList.remove("jdropdown-cursor");
+                  }
+                }
+                if (index == void 0) {
+                  obj2.currentIndex = null;
+                } else {
+                  index = parseInt(index);
+                  if (obj2.items[index].element.parentNode) {
+                    obj2.items[index].element.classList.add("jdropdown-cursor");
+                    obj2.currentIndex = index;
+                    if (setPosition !== false && obj2.items[obj2.currentIndex].element) {
+                      var container2 = content.scrollTop;
+                      var element = obj2.items[obj2.currentIndex].element;
+                      content.scrollTop = element.offsetTop - element.scrollTop + element.clientTop - 95;
+                    }
+                  }
+                }
+              };
+              obj2.resetCursor = obj2.setCursor;
+              obj2.updateCursor = obj2.setCursor;
+              obj2.reset = function() {
+                obj2.setCursor();
+                obj2.setValue(null);
+              };
+              obj2.first = function() {
+                if (obj2.options.lazyLoading === true) {
+                  obj2.loadFirst();
+                }
+                var items = content.querySelectorAll(".jdropdown-item");
+                if (items.length) {
+                  var newIndex = items[0].indexValue;
+                  obj2.setCursor(newIndex);
+                }
+              };
+              obj2.last = function() {
+                if (obj2.options.lazyLoading === true) {
+                  obj2.loadLast();
+                }
+                var items = content.querySelectorAll(".jdropdown-item");
+                if (items.length) {
+                  var newIndex = items[items.length - 1].indexValue;
+                  obj2.setCursor(newIndex);
+                }
+              };
+              obj2.next = function(letter) {
+                var newIndex = null;
+                if (letter) {
+                  if (letter.length == 1) {
+                    var current = obj2.currentIndex || -1;
+                    letter = letter.toLowerCase();
+                    var e = null;
+                    var l = null;
+                    var items = content.querySelectorAll(".jdropdown-item");
+                    if (items.length) {
+                      for (var i2 = 0; i2 < items.length; i2++) {
+                        if (items[i2].indexValue > current) {
+                          if (e = obj2.items[items[i2].indexValue]) {
+                            if (l = e.element.innerText[0]) {
+                              l = l.toLowerCase();
+                              if (letter == l) {
+                                newIndex = items[i2].indexValue;
+                                break;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      obj2.setCursor(newIndex);
+                    }
+                  }
+                } else {
+                  if (obj2.currentIndex == void 0 || obj2.currentIndex == null) {
+                    obj2.first();
+                  } else {
+                    var element = obj2.items[obj2.currentIndex].element;
+                    var next = element.nextElementSibling;
+                    if (next) {
+                      if (next.classList.contains("jdropdown-group")) {
+                        next = next.lastChild.firstChild;
+                      }
+                      newIndex = next.indexValue;
+                    } else {
+                      if (element.parentNode.classList.contains("jdropdown-group-items")) {
+                        if (next = element.parentNode.parentNode.nextElementSibling) {
+                          if (next.classList.contains("jdropdown-group")) {
+                            next = next.lastChild.firstChild;
+                          } else if (next.classList.contains("jdropdown-item")) {
+                            newIndex = next.indexValue;
+                          } else {
+                            next = null;
+                          }
+                        }
+                        if (next) {
+                          newIndex = next.indexValue;
+                        }
+                      }
+                    }
+                    if (newIndex !== null) {
+                      obj2.setCursor(newIndex);
+                    }
+                  }
+                }
+              };
+              obj2.prev = function() {
+                var newIndex = null;
+                if (obj2.currentIndex === null) {
+                  obj2.first();
+                } else {
+                  var element = obj2.items[obj2.currentIndex].element;
+                  var prev = element.previousElementSibling;
+                  if (prev) {
+                    if (prev.classList.contains("jdropdown-group")) {
+                      prev = prev.lastChild.lastChild;
+                    }
+                    newIndex = prev.indexValue;
+                  } else {
+                    if (element.parentNode.classList.contains("jdropdown-group-items")) {
+                      if (prev = element.parentNode.parentNode.previousElementSibling) {
+                        if (prev.classList.contains("jdropdown-group")) {
+                          prev = prev.lastChild.lastChild;
+                        } else if (prev.classList.contains("jdropdown-item")) {
+                          newIndex = prev.indexValue;
+                        } else {
+                          prev = null;
+                        }
+                      }
+                      if (prev) {
+                        newIndex = prev.indexValue;
+                      }
+                    }
+                  }
+                }
+                if (newIndex !== null) {
+                  obj2.setCursor(newIndex);
+                }
+              };
+              obj2.loadFirst = function() {
+                if (obj2.results) {
+                  var results = obj2.results;
+                } else {
+                  var results = obj2.items;
+                }
+                var number = results.length || 0;
+                if (obj2.options.lazyLoading == true && number > 200) {
+                  number = 200;
+                }
+                content.textContent = "";
+                for (var i2 = 0; i2 < number; i2++) {
+                  if (results[i2].group) {
+                    if (!results[i2].group.parentNode) {
+                      content.appendChild(results[i2].group);
+                    }
+                    results[i2].group.lastChild.appendChild(results[i2].element);
+                  } else {
+                    content.appendChild(results[i2].element);
+                  }
+                }
+                content.scrollTop = 0;
+              };
+              obj2.loadLast = function() {
+                if (obj2.results) {
+                  var results = obj2.results;
+                } else {
+                  var results = obj2.items;
+                }
+                var number = results.length;
+                if (number > 200) {
+                  number = number - 200;
+                  content.textContent = "";
+                  for (var i2 = number; i2 < results.length; i2++) {
+                    if (results[i2].group) {
+                      if (!results[i2].group.parentNode) {
+                        content.appendChild(results[i2].group);
+                      }
+                      results[i2].group.lastChild.appendChild(results[i2].element);
+                    } else {
+                      content.appendChild(results[i2].element);
+                    }
+                  }
+                  content.scrollTop = content.scrollHeight;
+                }
+              };
+              obj2.loadUp = function() {
+                var test = false;
+                if (obj2.results) {
+                  var results = obj2.results;
+                } else {
+                  var results = obj2.items;
+                }
+                var items = content.querySelectorAll(".jdropdown-item");
+                var fistItem = items[0].indexValue;
+                fistItem = obj2.items[fistItem];
+                var index = results.indexOf(fistItem) - 1;
+                if (index > 0) {
+                  var number = 0;
+                  while (index > 0 && results[index] && number < 200) {
+                    if (results[index].group) {
+                      if (!results[index].group.parentNode) {
+                        content.insertBefore(results[index].group, content.firstChild);
+                      }
+                      results[index].group.lastChild.insertBefore(results[index].element, results[index].group.lastChild.firstChild);
+                    } else {
+                      content.insertBefore(results[index].element, content.firstChild);
+                    }
+                    index--;
+                    number++;
+                  }
+                  test = true;
+                }
+                return test;
+              };
+              obj2.loadDown = function() {
+                var test = false;
+                if (obj2.results) {
+                  var results = obj2.results;
+                } else {
+                  var results = obj2.items;
+                }
+                var items = content.querySelectorAll(".jdropdown-item");
+                var lastItem = items[items.length - 1].indexValue;
+                lastItem = obj2.items[lastItem];
+                var index = results.indexOf(lastItem) + 1;
+                if (index < results.length) {
+                  var number = 0;
+                  while (index < results.length && results[index] && number < 200) {
+                    if (results[index].group) {
+                      if (!results[index].group.parentNode) {
+                        content.appendChild(results[index].group);
+                      }
+                      results[index].group.lastChild.appendChild(results[index].element);
+                    } else {
+                      content.appendChild(results[index].element);
+                    }
+                    index++;
+                    number++;
+                  }
+                  test = true;
+                }
+                return test;
+              };
+              init();
+              return obj2;
+            };
+            Component.keydown = function(e) {
+              var dropdown2 = null;
+              if (dropdown2 = Component.current) {
+                if (e.which == 13 || e.which == 9) {
+                  if (dropdown2.header.value && dropdown2.currentIndex == null && dropdown2.options.newOptions) {
+                    dropdown2.add();
+                  } else {
+                    if (dropdown2.currentIndex == null && dropdown2.options.autocomplete == true && dropdown2.header.value != "") {
+                      dropdown2.find(dropdown2.header.value);
+                    }
+                    dropdown2.selectIndex(dropdown2.currentIndex);
+                  }
+                } else if (e.which == 38) {
+                  if (dropdown2.currentIndex == null) {
+                    dropdown2.first();
+                  } else if (dropdown2.currentIndex > 0) {
+                    dropdown2.prev();
+                  }
+                  e.preventDefault();
+                } else if (e.which == 40) {
+                  if (dropdown2.currentIndex == null) {
+                    dropdown2.first();
+                  } else if (dropdown2.currentIndex + 1 < dropdown2.items.length) {
+                    dropdown2.next();
+                  }
+                  e.preventDefault();
+                } else if (e.which == 36) {
+                  dropdown2.first();
+                  if (!e.target.classList.contains("jdropdown-header")) {
+                    e.preventDefault();
+                  }
+                } else if (e.which == 35) {
+                  dropdown2.last();
+                  if (!e.target.classList.contains("jdropdown-header")) {
+                    e.preventDefault();
+                  }
+                } else if (e.which == 27) {
+                  dropdown2.close();
+                } else if (e.which == 33) {
+                  if (dropdown2.currentIndex == null) {
+                    dropdown2.first();
+                  } else if (dropdown2.currentIndex > 0) {
+                    for (var i2 = 0; i2 < 7; i2++) {
+                      dropdown2.prev();
+                    }
+                  }
+                  e.preventDefault();
+                } else if (e.which == 34) {
+                  if (dropdown2.currentIndex == null) {
+                    dropdown2.first();
+                  } else if (dropdown2.currentIndex + 1 < dropdown2.items.length) {
+                    for (var i2 = 0; i2 < 7; i2++) {
+                      dropdown2.next();
+                    }
+                  }
+                  e.preventDefault();
+                }
+              }
+            };
+            Component.mouseup = function(e) {
+              var element = helpers2.findElement(e.target, "jdropdown");
+              if (element) {
+                var dropdown2 = element.dropdown;
+                if (e.target.classList.contains("jdropdown-header")) {
+                  if (element.classList.contains("jdropdown-focus") && element.classList.contains("jdropdown-default")) {
+                    var rect = element.getBoundingClientRect();
+                    if (e.changedTouches && e.changedTouches[0]) {
+                      var x2 = e.changedTouches[0].clientX;
+                      var y2 = e.changedTouches[0].clientY;
+                    } else {
+                      var x2 = e.clientX;
+                      var y2 = e.clientY;
+                    }
+                    if (rect.width - (x2 - rect.left) < 30) {
+                      if (e.target.classList.contains("jdropdown-add")) {
+                        dropdown2.add();
+                      } else {
+                        dropdown2.close();
+                      }
+                    } else {
+                      if (dropdown2.options.autocomplete == false) {
+                        dropdown2.close();
+                      }
+                    }
+                  } else {
+                    dropdown2.open();
+                  }
+                } else if (e.target.classList.contains("jdropdown-group-name")) {
+                  var items = e.target.nextSibling.children;
+                  if (e.target.nextSibling.style.display != "none") {
+                    for (var i2 = 0; i2 < items.length; i2++) {
+                      if (items[i2].style.display != "none") {
+                        dropdown2.selectItem(items[i2]);
+                      }
+                    }
+                  }
+                } else if (e.target.classList.contains("jdropdown-group-arrow")) {
+                  if (e.target.classList.contains("jdropdown-group-arrow-down")) {
+                    e.target.classList.remove("jdropdown-group-arrow-down");
+                    e.target.classList.add("jdropdown-group-arrow-up");
+                    e.target.parentNode.nextSibling.style.display = "none";
+                  } else {
+                    e.target.classList.remove("jdropdown-group-arrow-up");
+                    e.target.classList.add("jdropdown-group-arrow-down");
+                    e.target.parentNode.nextSibling.style.display = "";
+                  }
+                } else if (e.target.classList.contains("jdropdown-item")) {
+                  dropdown2.selectItem(e.target);
+                } else if (e.target.classList.contains("jdropdown-image")) {
+                  dropdown2.selectItem(e.target.parentNode);
+                } else if (e.target.classList.contains("jdropdown-description")) {
+                  dropdown2.selectItem(e.target.parentNode);
+                } else if (e.target.classList.contains("jdropdown-title")) {
+                  dropdown2.selectItem(e.target.parentNode.parentNode);
+                } else if (e.target.classList.contains("jdropdown-close") || e.target.classList.contains("jdropdown-backdrop")) {
+                  dropdown2.close();
+                }
+              }
+            };
+            Component.extractFromDom = function(el, options) {
+              var select = el;
+              if (!options) {
+                options = {};
+              }
+              if (el.getAttribute("multiple") && (!options || options.multiple == void 0)) {
+                options.multiple = true;
+              }
+              if (el.getAttribute("placeholder") && (!options || options.placeholder == void 0)) {
+                options.placeholder = el.getAttribute("placeholder");
+              }
+              if (el.getAttribute("data-autocomplete") && (!options || options.autocomplete == void 0)) {
+                options.autocomplete = true;
+              }
+              if (!options || options.width == void 0) {
+                options.width = el.offsetWidth;
+              }
+              if (el.value && (!options || options.value == void 0)) {
+                options.value = el.value;
+              }
+              if (!options || options.data == void 0) {
+                options.data = [];
+                for (var j = 0; j < el.children.length; j++) {
+                  if (el.children[j].tagName == "OPTGROUP") {
+                    for (var i2 = 0; i2 < el.children[j].children.length; i2++) {
+                      options.data.push({
+                        value: el.children[j].children[i2].value,
+                        text: el.children[j].children[i2].textContent,
+                        group: el.children[j].getAttribute("label")
+                      });
+                    }
+                  } else {
+                    options.data.push({
+                      value: el.children[j].value,
+                      text: el.children[j].textContent
+                    });
+                  }
+                }
+              }
+              if (!options || options.onchange == void 0) {
+                options.onchange = function(a, b, c, d) {
+                  if (options.multiple == true) {
+                    if (obj.items[b].classList.contains("jdropdown-selected")) {
+                      select.options[b].setAttribute("selected", "selected");
+                    } else {
+                      select.options[b].removeAttribute("selected");
+                    }
+                  } else {
+                    select.value = d;
+                  }
+                };
+              }
+              var div = document.createElement("div");
+              el.parentNode.insertBefore(div, el);
+              el.style.display = "none";
+              el = div;
+              return { el, options };
+            };
+            return Component;
+          }
+          var dropdown = Dropdown();
+          ;
+          function Picker(el, options) {
+            if (el.picker) {
+              return el.picker.setOptions(options, true);
+            }
+            var obj2 = { type: "picker" };
+            obj2.options = {};
+            var dropdownHeader = null;
+            var dropdownContent = null;
+            var isDOM = function(o) {
+              return o instanceof Element || o instanceof HTMLDocument;
+            };
+            var createContent = function() {
+              dropdownContent.innerHTML = "";
+              var keys = Object.keys(obj2.options.data);
+              for (var i2 = 0; i2 < keys.length; i2++) {
+                var dropdownItem = document.createElement("div");
+                dropdownItem.classList.add("jpicker-item");
+                dropdownItem.setAttribute("role", "option");
+                dropdownItem.k = keys[i2];
+                dropdownItem.v = obj2.options.data[keys[i2]];
+                var item = obj2.getLabel(keys[i2], dropdownItem);
+                if (isDOM(item)) {
+                  dropdownItem.appendChild(item);
+                } else {
+                  dropdownItem.innerHTML = item;
+                }
+                dropdownContent.appendChild(dropdownItem);
+              }
+            };
+            obj2.setOptions = function(options2, reset) {
+              var defaults = {
+                value: 0,
+                data: null,
+                render: null,
+                onchange: null,
+                onmouseover: null,
+                onselect: null,
+                onopen: null,
+                onclose: null,
+                onload: null,
+                width: null,
+                header: true,
+                right: false,
+                bottom: false,
+                content: false,
+                columns: null,
+                grid: null,
+                height: null
+              };
+              if (options2 && options2.options) {
+                options2.data = options2.options;
+              }
+              for (var property in defaults) {
+                if (options2 && options2.hasOwnProperty(property)) {
+                  obj2.options[property] = options2[property];
+                } else {
+                  if (typeof obj2.options[property] == "undefined" || reset === true) {
+                    obj2.options[property] = defaults[property];
+                  }
+                }
+              }
+              if (obj2.options.header === false) {
+                dropdownHeader.style.display = "none";
+              } else {
+                dropdownHeader.style.display = "";
+              }
+              if (obj2.options.width) {
+                dropdownHeader.style.width = parseInt(obj2.options.width) + "px";
+              } else {
+                dropdownHeader.style.width = "";
+              }
+              if (obj2.options.height) {
+                dropdownContent.style.maxHeight = obj2.options.height + "px";
+                dropdownContent.style.overflow = "scroll";
+              } else {
+                dropdownContent.style.overflow = "";
+              }
+              if (obj2.options.columns > 0) {
+                if (!obj2.options.grid) {
+                  dropdownContent.classList.add("jpicker-columns");
+                  dropdownContent.style.width = obj2.options.width ? obj2.options.width : 36 * obj2.options.columns + "px";
+                } else {
+                  dropdownContent.classList.add("jpicker-grid");
+                  dropdownContent.style.gridTemplateColumns = "repeat(" + obj2.options.grid + ", 1fr)";
+                }
+              }
+              if (isNaN(parseInt(obj2.options.value))) {
+                obj2.options.value = 0;
+              }
+              createContent();
+              obj2.setValue(obj2.options.value);
+              return obj2;
+            };
+            obj2.getValue = function() {
+              return obj2.options.value;
+            };
+            obj2.setValue = function(k, e) {
+              obj2.setLabel(k);
+              obj2.options.value = String(k);
+              if (el.value != obj2.options.value) {
+                el.value = obj2.options.value;
+                if (typeof el.oninput == "function") {
+                  el.oninput({
+                    type: "input",
+                    target: el,
+                    value: el.value
+                  });
+                }
+              }
+              if (dropdownContent.children[k] && dropdownContent.children[k].getAttribute("type") !== "generic") {
+                obj2.close();
+              }
+              if (e) {
+                if (typeof obj2.options.onchange == "function") {
+                  var v = obj2.options.data[k];
+                  obj2.options.onchange(el, obj2, v, v, k, e);
+                }
+              }
+            };
+            obj2.getLabel = function(v, item) {
+              var label = obj2.options.data[v] || null;
+              if (typeof obj2.options.render == "function") {
+                label = obj2.options.render(label, item);
+              }
+              return label;
+            };
+            obj2.setLabel = function(v) {
+              var item;
+              if (obj2.options.content) {
+                item = document.createElement("i");
+                item.textContent = obj2.options.content;
+                item.classList.add("material-icons");
+              } else {
+                item = obj2.getLabel(v, null);
+              }
+              if (isDOM(item)) {
+                dropdownHeader.textContent = "";
+                dropdownHeader.appendChild(item);
+              } else {
+                dropdownHeader.innerHTML = item;
+              }
+            };
+            obj2.open = function() {
+              if (!el.classList.contains("jpicker-focus")) {
+                tracking(obj2, true);
+                el.classList.add("jpicker-focus");
+                el.focus();
+                var top = 0;
+                var left2 = 0;
+                dropdownContent.style.marginLeft = "";
+                var rectHeader = dropdownHeader.getBoundingClientRect();
+                var rectContent = dropdownContent.getBoundingClientRect();
+                if (window.innerHeight < rectHeader.bottom + rectContent.height || obj2.options.bottom) {
+                  top = -1 * (rectContent.height + 4);
+                } else {
+                  top = rectHeader.height + 4;
+                }
+                if (obj2.options.right === true) {
+                  left2 = -1 * rectContent.width + rectHeader.width;
+                }
+                if (rectContent.left + left2 < 0) {
+                  left2 = left2 + rectContent.left + 10;
+                }
+                if (rectContent.left + rectContent.width > window.innerWidth) {
+                  left2 = -1 * (10 + rectContent.left + rectContent.width - window.innerWidth);
+                }
+                dropdownContent.style.marginTop = parseInt(top) + "px";
+                dropdownContent.style.marginLeft = parseInt(left2) + "px";
+                if (typeof obj2.options.onopen == "function") {
+                  obj2.options.onopen(el, obj2);
+                }
+              }
+            };
+            obj2.close = function() {
+              if (el.classList.contains("jpicker-focus")) {
+                el.classList.remove("jpicker-focus");
+                tracking(obj2, false);
+                if (typeof obj2.options.onclose == "function") {
+                  obj2.options.onclose(el, obj2);
+                }
+              }
+            };
+            var init = function() {
+              let id = helpers2.guid();
+              el.classList.add("jpicker");
+              el.setAttribute("role", "combobox");
+              el.setAttribute("aria-haspopup", "listbox");
+              el.setAttribute("aria-expanded", "false");
+              el.setAttribute("aria-controls", id);
+              el.setAttribute("tabindex", "0");
+              el.onmousedown = function(e) {
+                if (!el.classList.contains("jpicker-focus")) {
+                  obj2.open();
+                }
+              };
+              dropdownHeader = document.createElement("div");
+              dropdownHeader.classList.add("jpicker-header");
+              dropdownContent = document.createElement("div");
+              dropdownContent.setAttribute("id", id);
+              dropdownContent.setAttribute("role", "listbox");
+              dropdownContent.classList.add("jpicker-content");
+              dropdownContent.onclick = function(e) {
+                var item = helpers2.findElement(e.target, "jpicker-item");
+                if (item) {
+                  if (item.parentNode === dropdownContent) {
+                    obj2.setValue(item.k, e);
+                  }
+                }
+              };
+              el.appendChild(dropdownHeader);
+              el.appendChild(dropdownContent);
+              el.value = options.value || 0;
+              obj2.setOptions(options);
+              if (typeof obj2.options.onload == "function") {
+                obj2.options.onload(el, obj2);
+              }
+              el.change = obj2.setValue;
+              el.val = function(val) {
+                if (val === void 0) {
+                  return obj2.getValue();
+                } else {
+                  obj2.setValue(val);
+                }
+              };
+              el.picker = obj2;
+            };
+            init();
+            return obj2;
+          }
+          ;
+          function Toolbar(el, options) {
+            var obj2 = { type: "toolbar" };
+            obj2.options = {};
+            var defaults = {
+              app: null,
+              container: false,
+              badge: false,
+              title: false,
+              responsive: false,
+              maxWidth: null,
+              bottom: true,
+              items: []
+            };
+            for (var property in defaults) {
+              if (options && options.hasOwnProperty(property)) {
+                obj2.options[property] = options[property];
+              } else {
+                obj2.options[property] = defaults[property];
+              }
+            }
+            if (!el && options.app && options.app.el) {
+              el = document.createElement("div");
+              options.app.el.appendChild(el);
+            }
+            var toolbarArrow = document.createElement("div");
+            toolbarArrow.classList.add("jtoolbar-item");
+            toolbarArrow.classList.add("jtoolbar-arrow");
+            var toolbarFloating = document.createElement("div");
+            toolbarFloating.classList.add("jtoolbar-floating");
+            toolbarArrow.appendChild(toolbarFloating);
+            obj2.selectItem = function(element) {
+              var elements = toolbarContent.children;
+              for (var i2 = 0; i2 < elements.length; i2++) {
+                if (element != elements[i2]) {
+                  elements[i2].classList.remove("jtoolbar-selected");
+                }
+              }
+              element.classList.add("jtoolbar-selected");
+            };
+            obj2.hide = function() {
+              animation.slideBottom(el, 0, function() {
+                el.style.display = "none";
+              });
+            };
+            obj2.show = function() {
+              el.style.display = "";
+              animation.slideBottom(el, 1);
+            };
+            obj2.get = function() {
+              return el;
+            };
+            obj2.setBadge = function(index, value) {
+              toolbarContent.children[index].children[1].firstChild.innerHTML = value;
+            };
+            obj2.destroy = function() {
+              toolbar.remove();
+              el.innerHTML = "";
+            };
+            obj2.update = function(a, b) {
+              for (var i2 = 0; i2 < toolbarContent.children.length; i2++) {
+                var toolbarItem = toolbarContent.children[i2];
+                if (typeof toolbarItem.updateState == "function") {
+                  toolbarItem.updateState(el, obj2, toolbarItem, a, b);
+                }
+              }
+              for (var i2 = 0; i2 < toolbarFloating.children.length; i2++) {
+                var toolbarItem = toolbarFloating.children[i2];
+                if (typeof toolbarItem.updateState == "function") {
+                  toolbarItem.updateState(el, obj2, toolbarItem, a, b);
+                }
+              }
+            };
+            obj2.create = function(items) {
+              toolbarContent.innerHTML = "";
+              for (var i2 = 0; i2 < items.length; i2++) {
+                var toolbarItem = document.createElement("div");
+                toolbarItem.classList.add("jtoolbar-item");
+                if (items[i2].width) {
+                  toolbarItem.style.width = parseInt(items[i2].width) + "px";
+                }
+                if (items[i2].k) {
+                  toolbarItem.k = items[i2].k;
+                }
+                if (items[i2].tooltip) {
+                  toolbarItem.setAttribute("title", items[i2].tooltip);
+                  toolbarItem.setAttribute("aria-label", items[i2].tooltip);
+                }
+                if (items[i2].id) {
+                  toolbarItem.setAttribute("id", items[i2].id);
+                }
+                if (items[i2].updateState) {
+                  toolbarItem.updateState = items[i2].updateState;
+                }
+                if (items[i2].active) {
+                  toolbarItem.classList.add("jtoolbar-active");
+                }
+                if (items[i2].disabled) {
+                  toolbarItem.classList.add("jtoolbar-disabled");
+                }
+                if (items[i2].type == "select" || items[i2].type == "dropdown") {
+                  Picker(toolbarItem, items[i2]);
+                } else if (items[i2].type == "divisor") {
+                  toolbarItem.classList.add("jtoolbar-divisor");
+                } else if (items[i2].type == "label") {
+                  toolbarItem.classList.add("jtoolbar-label");
+                  toolbarItem.innerHTML = items[i2].content;
+                } else {
+                  var toolbarIcon = document.createElement("i");
+                  if (typeof items[i2].class === "undefined") {
+                    toolbarIcon.classList.add("material-icons");
+                  } else {
+                    var c = items[i2].class.split(" ");
+                    for (var j = 0; j < c.length; j++) {
+                      toolbarIcon.classList.add(c[j]);
+                    }
+                  }
+                  toolbarIcon.innerHTML = items[i2].content ? items[i2].content : "";
+                  toolbarItem.setAttribute("role", "button");
+                  toolbarItem.appendChild(toolbarIcon);
+                  if (obj2.options.badge == true) {
+                    var toolbarBadge = document.createElement("div");
+                    toolbarBadge.classList.add("jbadge");
+                    var toolbarBadgeContent = document.createElement("div");
+                    toolbarBadgeContent.innerHTML = items[i2].badge ? items[i2].badge : "";
+                    toolbarBadge.appendChild(toolbarBadgeContent);
+                    toolbarItem.appendChild(toolbarBadge);
+                  }
+                  if (items[i2].title) {
+                    if (obj2.options.title == true) {
+                      var toolbarTitle = document.createElement("span");
+                      toolbarTitle.innerHTML = items[i2].title;
+                      toolbarItem.appendChild(toolbarTitle);
+                    } else {
+                      toolbarItem.setAttribute("title", items[i2].title);
+                    }
+                  }
+                  if (obj2.options.app && items[i2].route) {
+                    toolbarItem.route = items[i2].route;
+                    toolbarItem.onclick = function() {
+                      obj2.options.app.pages(this.route);
+                    };
+                    obj2.options.app.pages(items[i2].route, {
+                      toolbarItem,
+                      closed: true
+                    });
+                  }
+                  if (typeof items[i2].render === "function") {
+                    items[i2].render(toolbarItem, items[i2]);
+                  }
+                }
+                if (items[i2].onclick) {
+                  toolbarItem.onclick = items[i2].onclick.bind(items[i2], el, obj2, toolbarItem);
+                }
+                toolbarContent.appendChild(toolbarItem);
+              }
+              setTimeout(function() {
+                obj2.refresh();
+              }, 0);
+            };
+            obj2.open = function() {
+              toolbarArrow.classList.add("jtoolbar-arrow-selected");
+              var rectElement = el.getBoundingClientRect();
+              var rect = toolbarFloating.getBoundingClientRect();
+              if (rect.bottom > window.innerHeight || obj2.options.bottom) {
+                toolbarFloating.style.bottom = "0";
+              } else {
+                toolbarFloating.style.removeProperty("bottom");
+              }
+              toolbarFloating.style.right = "0";
+              toolbarArrow.children[0].focus();
+              tracking(obj2, true);
+            };
+            obj2.close = function() {
+              toolbarArrow.classList.remove("jtoolbar-arrow-selected");
+              tracking(obj2, false);
+            };
+            obj2.refresh = function() {
+              if (obj2.options.responsive == true) {
+                var rect = el.parentNode.getBoundingClientRect();
+                if (!obj2.options.maxWidth) {
+                  obj2.options.maxWidth = rect.width;
+                }
+                var available = parseInt(obj2.options.maxWidth);
+                if (toolbarArrow.parentNode) {
+                  toolbarArrow.parentNode.removeChild(toolbarArrow);
+                }
+                while (toolbarFloating.firstChild) {
+                  toolbarContent.appendChild(toolbarFloating.firstChild);
+                }
+                if (available < toolbarContent.offsetWidth) {
+                  available -= 50;
+                  while (toolbarContent.lastChild && available < toolbarContent.offsetWidth) {
+                    toolbarFloating.insertBefore(toolbarContent.lastChild, toolbarFloating.firstChild);
+                  }
+                }
+                if (toolbarFloating.children.length > 0) {
+                  toolbarContent.appendChild(toolbarArrow);
+                }
+              }
+            };
+            obj2.setReadonly = function(state) {
+              state = state ? "add" : "remove";
+              el.classList[state]("jtoolbar-disabled");
+            };
+            el.onclick = function(e) {
+              var element = helpers2.findElement(e.target, "jtoolbar-item");
+              if (element) {
+                obj2.selectItem(element);
+              }
+              if (e.target.classList.contains("jtoolbar-arrow")) {
+                obj2.open();
+              }
+            };
+            window.addEventListener("resize", function() {
+              obj2.refresh();
+            });
+            el.classList.add("jtoolbar");
+            el.innerHTML = "";
+            if (obj2.options.container == true) {
+              el.classList.add("jtoolbar-container");
+            }
+            var toolbarContent = document.createElement("div");
+            el.appendChild(toolbarContent);
+            if (obj2.options.app) {
+              el.classList.add("jtoolbar-mobile");
+            }
+            obj2.create(obj2.options.items);
+            el.toolbar = obj2;
+            return obj2;
+          }
+          ;
+          const validTags = [
+            "html",
+            "body",
+            "address",
+            "span",
+            "div",
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "p",
+            "b",
+            "i",
+            "blockquote",
+            "strong",
+            "em",
+            "ul",
+            "ol",
+            "li",
+            "a",
+            "code",
+            "pre",
+            "hr",
+            "br",
+            "img",
+            "figure",
+            "picture",
+            "figcaption",
+            "iframe",
+            "table",
+            "thead",
+            "tbody",
+            "tfoot",
+            "tr",
+            "th",
+            "td",
+            "caption",
+            "u",
+            "del",
+            "ins",
+            "sub",
+            "sup",
+            "small",
+            "mark",
+            "input",
+            "textarea",
+            "select",
+            "option",
+            "button",
+            "label",
+            "fieldset",
+            "legend",
+            "audio",
+            "video",
+            "abbr",
+            "cite",
+            "kbd",
+            "section",
+            "article",
+            "nav",
+            "aside",
+            "header",
+            "footer",
+            "main",
+            "details",
+            "summary",
+            "svg",
+            "line",
+            "source"
+          ];
+          const validProperty = ["width", "height", "align", "border", "src", "tabindex"];
+          const validStyle = ["color", "font-weight", "font-size", "background", "background-color", "margin"];
+          const parse = function(element, img) {
+            if (element.tagName && validTags.indexOf(element.tagName.toLowerCase()) === -1) {
+              if (element.innerText) {
+                element.innerHTML = element.innerText;
+              }
+            }
+            if (element.attributes && element.attributes.length) {
+              let style = null;
+              let elementStyle = element.getAttribute("style");
+              if (elementStyle) {
+                style = [];
+                let t = elementStyle.split(";");
+                for (let j = 0; j < t.length; j++) {
+                  let v = t[j].trim().split(":");
+                  if (validStyle.indexOf(v[0].trim()) >= 0) {
+                    let k = v.shift();
+                    v = v.join(":");
+                    style.push(k + ":" + v);
+                  }
+                }
+              }
+              if (element.tagName.toUpperCase() === "IMG") {
+                if (!element.src) {
+                  element.parentNode.removeChild(element);
+                } else {
+                  element.setAttribute("tabindex", "900");
+                  img.push(element.src);
+                }
+              }
+              let attr = [];
+              for (let i2 = 0; i2 < element.attributes.length; i2++) {
+                attr.push(element.attributes[i2].name);
+              }
+              if (attr.length) {
+                attr.forEach(function(v) {
+                  if (validProperty.indexOf(v) === -1) {
+                    element.removeAttribute(v);
+                  } else {
+                    let at = element.getAttribute(v);
+                    if (at.indexOf("<") !== -1) {
+                      element.setAttribute(v, at.replace("<", "&#60;"));
+                    }
+                  }
+                });
+              }
+              element.style = "";
+              if (style && style.length) {
+                element.setAttribute("style", style.join(";"));
+              }
+            }
+            if (element.children.length) {
+              for (let i2 = element.children.length; i2 > 0; i2--) {
+                parse(element.children[i2 - 1], img);
+              }
+            }
+          };
+          const filter2 = function(data, img) {
+            if (data) {
+              data = data.replace(new RegExp("<!--(.*?)-->", "gsi"), "");
+            }
+            let parser = new DOMParser();
+            let d = parser.parseFromString(data, "text/html");
+            parse(d, img);
+            let div = document.createElement("div");
+            div.innerHTML = d.firstChild.innerHTML;
+            return div;
+          };
+          var utils_filter = filter2;
+          ;
+          function Editor() {
+            var Component = function(el, options) {
+              var obj2 = { type: "editor" };
+              obj2.options = {};
+              var defaults = {
+                // Load data from a remove location
+                url: null,
+                // Initial HTML content
+                value: "",
+                // Initial snippet
+                snippet: null,
+                // Add toolbar
+                toolbar: true,
+                toolbarOnTop: false,
+                // Website parser is to read websites and images from cross domain
+                remoteParser: null,
+                // Placeholder
+                placeholder: null,
+                // Parse URL
+                filterPaste: true,
+                // Accept drop files
+                dropZone: true,
+                dropAsSnippet: false,
+                acceptImages: true,
+                acceptFiles: false,
+                maxFileSize: 5e6,
+                allowImageResize: true,
+                // Style
+                maxHeight: null,
+                height: null,
+                focus: false,
+                // Events
+                onclick: null,
+                onfocus: null,
+                onblur: null,
+                onload: null,
+                onkeyup: null,
+                onkeydown: null,
+                onchange: null,
+                extensions: null,
+                type: null
+              };
+              for (var property in defaults) {
+                if (options && options.hasOwnProperty(property)) {
+                  obj2.options[property] = options[property];
+                } else {
+                  obj2.options[property] = defaults[property];
+                }
+              }
+              var editorTimer = null;
+              var editorAction = null;
+              var files = [];
+              obj2.el = el;
+              if (typeof obj2.options.onclick == "function") {
+                el.onclick = function(e) {
+                  obj2.options.onclick(el, obj2, e);
+                };
+              }
+              el.classList.add("jeditor-container");
+              var snippet = document.createElement("div");
+              snippet.className = "jsnippet";
+              snippet.setAttribute("contenteditable", false);
+              var toolbar2 = document.createElement("div");
+              toolbar2.className = "jeditor-toolbar";
+              obj2.editor = document.createElement("div");
+              obj2.editor.setAttribute("contenteditable", true);
+              obj2.editor.setAttribute("spellcheck", false);
+              obj2.editor.classList.add("jeditor");
+              if (obj2.options.placeholder) {
+                obj2.editor.setAttribute("data-placeholder", obj2.options.placeholder);
+              }
+              if (obj2.options.maxHeight || obj2.options.height) {
+                obj2.editor.style.overflowY = "auto";
+                if (obj2.options.maxHeight) {
+                  obj2.editor.style.maxHeight = obj2.options.maxHeight;
+                }
+                if (obj2.options.height) {
+                  obj2.editor.style.height = obj2.options.height;
+                }
+              }
+              if (obj2.options.url) {
+                ajax({
+                  url: obj2.options.url,
+                  dataType: "html",
+                  success: function(result) {
+                    obj2.editor.innerHTML = result;
+                    Component.setCursor(obj2.editor, obj2.options.focus == "initial" ? true : false);
+                  }
+                });
+              } else {
+                if (obj2.options.value) {
+                  obj2.editor.innerHTML = obj2.options.value;
+                } else {
+                  for (var i2 = 0; i2 < el.children.length; i2++) {
+                    obj2.editor.appendChild(el.children[i2]);
+                  }
+                }
+              }
+              el.innerHTML = "";
+              var change = function(e) {
+                if (typeof obj2.options.onchange == "function") {
+                  obj2.options.onchange(el, obj2, e);
+                }
+                obj2.options.value = obj2.getData();
+                if (el.value != obj2.options.value) {
+                  el.value = obj2.options.value;
+                  if (typeof el.oninput == "function") {
+                    el.oninput({
+                      type: "input",
+                      target: el,
+                      value: el.value
+                    });
+                  }
+                }
+              };
+              var extractImageFromHtml = function(html) {
+                let img = [];
+                var div = document.createElement("div");
+                utils_filter(html, img);
+                if (img.length) {
+                  for (var i3 = 0; i3 < img.length; i3++) {
+                    obj2.addImage(img[i3]);
+                  }
+                }
+              };
+              var insertNodeAtCaret = function(newNode) {
+                var sel, range;
+                if (window.getSelection) {
+                  sel = window.getSelection();
+                  if (sel.rangeCount) {
+                    range = sel.getRangeAt(0);
+                    var selectedText = range.toString();
+                    range.deleteContents();
+                    range.insertNode(newNode);
+                    range.setStartAfter(newNode);
+                    range.setEndAfter(newNode);
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                  }
+                }
+              };
+              var updateTotalImages = function() {
+                var o = null;
+                if (o = snippet.children[0]) {
+                  if (!o.classList.contains("jslider-grid")) {
+                    o.classList.add("jslider-grid");
+                  }
+                  var number = o.children.length;
+                  o.setAttribute("data-number", number > 4 ? 4 : number);
+                  if (number > 4) {
+                    o.setAttribute("data-total", number - 4);
+                  } else {
+                    o.removeAttribute("data-total");
+                  }
+                }
+              };
+              var appendImage = function(image) {
+                if (!snippet.innerHTML) {
+                  obj2.appendSnippet({});
+                }
+                snippet.children[0].appendChild(image);
+                updateTotalImages();
+              };
+              obj2.appendSnippet = function(data) {
+                snippet.innerHTML = "";
+                var a = ["image", "title", "description", "host", "url"];
+                for (var i3 = 0; i3 < a.length; i3++) {
+                  var div = document.createElement("div");
+                  div.className = "jsnippet-" + a[i3];
+                  div.setAttribute("data-k", a[i3]);
+                  snippet.appendChild(div);
+                  if (data[a[i3]]) {
+                    if (a[i3] == "image") {
+                      if (!Array.isArray(data.image)) {
+                        data.image = [data.image];
+                      }
+                      for (var j = 0; j < data.image.length; j++) {
+                        var img = document.createElement("img");
+                        img.src = data.image[j];
+                        div.appendChild(img);
+                      }
+                    } else {
+                      div.innerHTML = data[a[i3]];
+                    }
+                  }
+                }
+                obj2.editor.appendChild(document.createElement("br"));
+                obj2.editor.appendChild(snippet);
+              };
+              obj2.setData = function(o) {
+                if (typeof o == "object") {
+                  obj2.editor.innerHTML = o.content;
+                } else {
+                  obj2.editor.innerHTML = o;
+                }
+                if (obj2.options.focus) {
+                  Component.setCursor(obj2.editor, true);
+                }
+                files = [];
+              };
+              obj2.getFiles = function() {
+                var f = obj2.editor.querySelectorAll(".jfile");
+                var d = [];
+                for (var i3 = 0; i3 < f.length; i3++) {
+                  if (files[f[i3].src]) {
+                    d.push(files[f[i3].src]);
+                  }
+                }
+                return d;
+              };
+              obj2.getText = function() {
+                return obj2.editor.innerText;
+              };
+              obj2.getData = function(json) {
+                if (!json) {
+                  var data = obj2.editor.innerHTML;
+                } else {
+                  var data = {
+                    content: ""
+                  };
+                  if (snippet.innerHTML) {
+                    var index = 0;
+                    data.snippet = {};
+                    for (var i3 = 0; i3 < snippet.children.length; i3++) {
+                      var key = snippet.children[i3].getAttribute("data-k");
+                      if (key) {
+                        if (key == "image") {
+                          if (!data.snippet.image) {
+                            data.snippet.image = [];
+                          }
+                          for (var j = 0; j < snippet.children[i3].children.length; j++) {
+                            data.snippet.image.push(snippet.children[i3].children[j].getAttribute("src"));
+                          }
+                        } else {
+                          data.snippet[key] = snippet.children[i3].innerHTML;
+                        }
+                      }
+                    }
+                  }
+                  var f = Object.keys(files);
+                  if (f.length) {
+                    data.files = [];
+                    for (var i3 = 0; i3 < f.length; i3++) {
+                      data.files.push(files[f[i3]]);
+                    }
+                  }
+                  var d = document.createElement("div");
+                  d.innerHTML = obj2.editor.innerHTML;
+                  var s = d.querySelector(".jsnippet");
+                  if (s) {
+                    s.remove();
+                  }
+                  var text = d.innerHTML;
+                  text = text.replace(/<br>/g, "\n");
+                  text = text.replace(/<\/div>/g, "</div>\n");
+                  text = text.replace(/<(?:.|\n)*?>/gm, "");
+                  data.content = text.trim();
+                  processExtensions("getData", data);
+                }
+                return data;
+              };
+              obj2.reset = function() {
+                obj2.editor.innerHTML = "";
+                snippet.innerHTML = "";
+                files = [];
+              };
+              obj2.addPdf = function(data) {
+                if (data.result.substr(0, 4) != "data") {
+                  console.error("Invalid source");
+                } else {
+                  var canvas = document.createElement("canvas");
+                  canvas.width = 60;
+                  canvas.height = 60;
+                  var img = new Image();
+                  var ctx = canvas.getContext("2d");
+                  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                  canvas.toBlob(function(blob) {
+                    var newImage = document.createElement("img");
+                    newImage.src = window.URL.createObjectURL(blob);
+                    newImage.title = data.name;
+                    newImage.className = "jfile pdf";
+                    files[newImage.src] = {
+                      file: newImage.src,
+                      extension: "pdf",
+                      content: data.result
+                    };
+                    document.execCommand("insertHtml", false, newImage.outerHTML);
+                  });
+                }
+              };
+              obj2.addImage = function(src2, asSnippet) {
+                if (!obj2.options.acceptImages) {
+                  return;
+                }
+                if (!src2) {
+                  src2 = "";
+                }
+                if (src2.substr(0, 4) != "data" && !obj2.options.remoteParser) {
+                  console.error("remoteParser not defined in your initialization");
+                } else {
+                  if (src2.substr(0, 4) == "data") {
+                    var extension = src2.split(";");
+                    extension = extension[0].split("/");
+                    extension = extension[1];
+                  } else {
+                    var extension = src2.substr(src2.lastIndexOf(".") + 1);
+                    src2 = obj2.options.remoteParser + src2;
+                  }
+                  var img = new Image();
+                  img.onload = function onload() {
+                    var canvas = document.createElement("canvas");
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    var ctx = canvas.getContext("2d");
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    canvas.toBlob(function(blob) {
+                      var newImage = document.createElement("img");
+                      newImage.src = window.URL.createObjectURL(blob);
+                      newImage.classList.add("jfile");
+                      newImage.setAttribute("tabindex", "900");
+                      newImage.setAttribute("width", img.width);
+                      newImage.setAttribute("height", img.height);
+                      files[newImage.src] = {
+                        file: newImage.src,
+                        extension,
+                        content: canvas.toDataURL()
+                      };
+                      if (obj2.options.dropAsSnippet || asSnippet) {
+                        appendImage(newImage);
+                        files[newImage.src].snippet = true;
+                      } else {
+                        document.execCommand("insertHtml", false, newImage.outerHTML);
+                      }
+                      change();
+                    });
+                  };
+                  img.src = src2;
+                }
+              };
+              obj2.addFile = function(files2) {
+                var reader = [];
+                for (var i3 = 0; i3 < files2.length; i3++) {
+                  if (files2[i3].size > obj2.options.maxFileSize) {
+                    alert("The file is too big");
+                  } else {
+                    var type = files2[i3].type.split("/");
+                    if (type[0] == "image") {
+                      type = 1;
+                    } else if (type[1] == "pdf") {
+                      type = 2;
+                    } else {
+                      type = 0;
+                    }
+                    if (type) {
+                      reader[i3] = new FileReader();
+                      reader[i3].index = i3;
+                      reader[i3].type = type;
+                      reader[i3].name = files2[i3].name;
+                      reader[i3].date = files2[i3].lastModified;
+                      reader[i3].size = files2[i3].size;
+                      reader[i3].addEventListener("load", function(data) {
+                        if (data.target.type == 2) {
+                          if (obj2.options.acceptFiles == true) {
+                            obj2.addPdf(data.target);
+                          }
+                        } else {
+                          obj2.addImage(data.target.result);
+                        }
+                      }, false);
+                      reader[i3].readAsDataURL(files2[i3]);
+                    } else {
+                      alert("The extension is not allowed");
+                    }
+                  }
+                }
+              };
+              obj2.destroy = function() {
+                obj2.editor.removeEventListener("mouseup", editorMouseUp);
+                obj2.editor.removeEventListener("mousedown", editorMouseDown);
+                obj2.editor.removeEventListener("mousemove", editorMouseMove);
+                obj2.editor.removeEventListener("keyup", editorKeyUp);
+                obj2.editor.removeEventListener("keydown", editorKeyDown);
+                obj2.editor.removeEventListener("dragstart", editorDragStart);
+                obj2.editor.removeEventListener("dragenter", editorDragEnter);
+                obj2.editor.removeEventListener("dragover", editorDragOver);
+                obj2.editor.removeEventListener("drop", editorDrop);
+                obj2.editor.removeEventListener("paste", editorPaste);
+                obj2.editor.removeEventListener("blur", editorBlur);
+                obj2.editor.removeEventListener("focus", editorFocus);
+                el.editor = null;
+                el.classList.remove("jeditor-container");
+                toolbar2.remove();
+                snippet.remove();
+                obj2.editor.remove();
+              };
+              obj2.upload = function() {
+                helpers2.click(obj2.file);
+              };
+              var select = function(e) {
+                var s = window.getSelection();
+                var r = document.createRange();
+                r.selectNode(e);
+                s.addRange(r);
+              };
+              var editorPaste = function(e) {
+                if (obj2.options.filterPaste == true) {
+                  if (e.clipboardData || e.originalEvent.clipboardData) {
+                    var html = (e.originalEvent || e).clipboardData.getData("text/html");
+                    var text = (e.originalEvent || e).clipboardData.getData("text/plain");
+                    var file = (e.originalEvent || e).clipboardData.files;
+                  } else if (window.clipboardData) {
+                    var html = window.clipboardData.getData("Html");
+                    var text = window.clipboardData.getData("Text");
+                    var file = window.clipboardData.files;
+                  }
+                  if (file.length) {
+                    obj2.addFile(file);
+                  } else {
+                    if (!html) {
+                      html = text.split("\r\n");
+                      if (!e.target.innerText) {
+                        html.map(function(v) {
+                          var d2 = document.createElement("div");
+                          d2.innerText = v;
+                          obj2.editor.appendChild(d2);
+                        });
+                      } else {
+                        html = html.map(function(v) {
+                          return "<div>" + v + "</div>";
+                        });
+                        document.execCommand("insertText", false, html.join(""));
+                      }
+                    } else {
+                      let img = [];
+                      var d = utils_filter(html, img);
+                      if (img.length) {
+                        for (var i3 = 0; i3 < img.length; i3++) {
+                          obj2.addImage(img[i3]);
+                        }
+                      }
+                      document.execCommand("insertHtml", false, d.innerHTML);
+                    }
+                  }
+                  e.preventDefault();
+                }
+              };
+              var editorDragStart = function(e) {
+                if (editorAction && editorAction.e) {
+                  e.preventDefault();
+                }
+              };
+              var editorDragEnter = function(e) {
+                if (editorAction || obj2.options.dropZone == false) {
+                } else {
+                  el.classList.add("jeditor-dragging");
+                  e.preventDefault();
+                }
+              };
+              var editorDragOver = function(e) {
+                if (editorAction || obj2.options.dropZone == false) {
+                } else {
+                  if (editorTimer) {
+                    clearTimeout(editorTimer);
+                  }
+                  editorTimer = setTimeout(function() {
+                    el.classList.remove("jeditor-dragging");
+                  }, 100);
+                  e.preventDefault();
+                }
+              };
+              var editorDrop = function(e) {
+                if (editorAction || obj2.options.dropZone === false) {
+                } else {
+                  let range = null;
+                  if (document.caretRangeFromPoint) {
+                    range = document.caretRangeFromPoint(e.clientX, e.clientY);
+                  } else if (e.rangeParent) {
+                    range = document.createRange();
+                    range.setStart(e.rangeParent, e.rangeOffset);
+                  }
+                  let sel = window.getSelection();
+                  sel.removeAllRanges();
+                  sel.addRange(range);
+                  sel.anchorNode.parentNode.focus();
+                  let html = (e.originalEvent || e).dataTransfer.getData("text/html");
+                  let text = (e.originalEvent || e).dataTransfer.getData("text/plain");
+                  let file = (e.originalEvent || e).dataTransfer.files;
+                  if (file.length) {
+                    obj2.addFile(file);
+                  } else if (text) {
+                    extractImageFromHtml(html);
+                  }
+                  el.classList.remove("jeditor-dragging");
+                  e.preventDefault();
+                }
+              };
+              var editorBlur = function(e) {
+                processExtensions("onevent", e);
+                change(e);
+                if (typeof obj2.options.onblur == "function") {
+                  obj2.options.onblur(el, obj2, e);
+                }
+              };
+              var editorFocus = function(e) {
+                if (typeof obj2.options.onfocus == "function") {
+                  obj2.options.onfocus(el, obj2, e);
+                }
+              };
+              var editorKeyUp = function(e) {
+                if (!obj2.editor.innerHTML) {
+                  obj2.editor.innerHTML = "<div><br></div>";
+                }
+                if (typeof obj2.options.onkeyup == "function") {
+                  obj2.options.onkeyup(el, obj2, e);
+                }
+              };
+              var editorKeyDown = function(e) {
+                processExtensions("onevent", e);
+                if (e.key == "Delete") {
+                  if (e.target.tagName == "IMG") {
+                    var parent = e.target.parentNode;
+                    select(e.target);
+                    if (parent.classList.contains("jsnippet-image")) {
+                      updateTotalImages();
+                    }
+                  }
+                }
+                if (typeof obj2.options.onkeydown == "function") {
+                  obj2.options.onkeydown(el, obj2, e);
+                }
+              };
+              var editorMouseUp = function(e) {
+                if (editorAction && editorAction.e) {
+                  editorAction.e.classList.remove("resizing");
+                  if (editorAction.e.changed == true) {
+                    var image = editorAction.e.cloneNode();
+                    image.width = parseInt(editorAction.e.style.width) || editorAction.e.getAttribute("width");
+                    image.height = parseInt(editorAction.e.style.height) || editorAction.e.getAttribute("height");
+                    editorAction.e.style.width = "";
+                    editorAction.e.style.height = "";
+                    select(editorAction.e);
+                    document.execCommand("insertHtml", false, image.outerHTML);
+                  }
+                }
+                editorAction = false;
+              };
+              var editorMouseDown = function(e) {
+                var close = function(snippet2) {
+                  var rect2 = snippet2.getBoundingClientRect();
+                  if (rect2.width - (e.clientX - rect2.left) < 40 && e.clientY - rect2.top < 40) {
+                    snippet2.innerHTML = "";
+                    snippet2.remove();
+                  }
+                };
+                if (e.target.tagName == "IMG") {
+                  if (e.target.style.cursor) {
+                    var rect = e.target.getBoundingClientRect();
+                    editorAction = {
+                      e: e.target,
+                      x: e.clientX,
+                      y: e.clientY,
+                      w: rect.width,
+                      h: rect.height,
+                      d: e.target.style.cursor
+                    };
+                    if (!e.target.getAttribute("width")) {
+                      e.target.setAttribute("width", rect.width);
+                    }
+                    if (!e.target.getAttribute("height")) {
+                      e.target.setAttribute("height", rect.height);
+                    }
+                    var s = window.getSelection();
+                    if (s.rangeCount) {
+                      for (var i3 = 0; i3 < s.rangeCount; i3++) {
+                        s.removeRange(s.getRangeAt(i3));
+                      }
+                    }
+                    e.target.classList.add("resizing");
+                  } else {
+                    editorAction = true;
+                  }
+                } else {
+                  if (e.target.classList.contains("jsnippet")) {
+                    close(e.target);
+                  } else if (e.target.parentNode.classList.contains("jsnippet")) {
+                    close(e.target.parentNode);
+                  }
+                  editorAction = true;
+                }
+              };
+              var editorMouseMove = function(e) {
+                if (e.target.tagName == "IMG" && !e.target.parentNode.classList.contains("jsnippet-image") && obj2.options.allowImageResize == true) {
+                  if (e.target.getAttribute("tabindex")) {
+                    var rect = e.target.getBoundingClientRect();
+                    if (e.clientY - rect.top < 5) {
+                      if (rect.width - (e.clientX - rect.left) < 5) {
+                        e.target.style.cursor = "ne-resize";
+                      } else if (e.clientX - rect.left < 5) {
+                        e.target.style.cursor = "nw-resize";
+                      } else {
+                        e.target.style.cursor = "n-resize";
+                      }
+                    } else if (rect.height - (e.clientY - rect.top) < 5) {
+                      if (rect.width - (e.clientX - rect.left) < 5) {
+                        e.target.style.cursor = "se-resize";
+                      } else if (e.clientX - rect.left < 5) {
+                        e.target.style.cursor = "sw-resize";
+                      } else {
+                        e.target.style.cursor = "s-resize";
+                      }
+                    } else if (rect.width - (e.clientX - rect.left) < 5) {
+                      e.target.style.cursor = "e-resize";
+                    } else if (e.clientX - rect.left < 5) {
+                      e.target.style.cursor = "w-resize";
+                    } else {
+                      e.target.style.cursor = "";
+                    }
+                  }
+                }
+                if (e.which == 1 && editorAction && editorAction.d) {
+                  if (editorAction.d == "e-resize" || editorAction.d == "ne-resize" || editorAction.d == "se-resize") {
+                    editorAction.e.style.width = editorAction.w + (e.clientX - editorAction.x);
+                    if (e.shiftKey) {
+                      var newHeight = (e.clientX - editorAction.x) * (editorAction.h / editorAction.w);
+                      editorAction.e.style.height = editorAction.h + newHeight;
+                    } else {
+                      var newHeight = null;
+                    }
+                  }
+                  if (!newHeight) {
+                    if (editorAction.d == "s-resize" || editorAction.d == "se-resize" || editorAction.d == "sw-resize") {
+                      if (!e.shiftKey) {
+                        editorAction.e.style.height = editorAction.h + (e.clientY - editorAction.y);
+                      }
+                    }
+                  }
+                  editorAction.e.changed = true;
+                }
+              };
+              var processExtensions = function(method, data) {
+                if (obj2.options.extensions) {
+                  var ext = Object.keys(obj2.options.extensions);
+                  if (ext.length) {
+                    for (var i3 = 0; i3 < ext.length; i3++)
+                      if (obj2.options.extensions[ext[i3]] && typeof obj2.options.extensions[ext[i3]][method] == "function") {
+                        obj2.options.extensions[ext[i3]][method].call(obj2, data);
+                      }
+                  }
+                }
+              };
+              var loadExtensions = function() {
+                if (obj2.options.extensions) {
+                  var ext = Object.keys(obj2.options.extensions);
+                  if (ext.length) {
+                    for (var i3 = 0; i3 < ext.length; i3++) {
+                      if (obj2.options.extensions[ext[i3]] && typeof obj2.options.extensions[ext[i3]] == "function") {
+                        obj2.options.extensions[ext[i3]] = obj2.options.extensions[ext[i3]](el, obj2);
+                      }
+                    }
+                  }
+                }
+              };
+              document.addEventListener("mouseup", editorMouseUp);
+              document.addEventListener("mousemove", editorMouseMove);
+              obj2.editor.addEventListener("mousedown", editorMouseDown);
+              obj2.editor.addEventListener("keyup", editorKeyUp);
+              obj2.editor.addEventListener("keydown", editorKeyDown);
+              obj2.editor.addEventListener("dragstart", editorDragStart);
+              obj2.editor.addEventListener("dragenter", editorDragEnter);
+              obj2.editor.addEventListener("dragover", editorDragOver);
+              obj2.editor.addEventListener("drop", editorDrop);
+              obj2.editor.addEventListener("paste", editorPaste);
+              obj2.editor.addEventListener("focus", editorFocus);
+              obj2.editor.addEventListener("blur", editorBlur);
+              el.appendChild(obj2.editor);
+              if (obj2.options.snippet) {
+                obj2.appendSnippet(obj2.options.snippet);
+              }
+              if (obj2.options.toolbar) {
+                if (Array.isArray(obj2.options.toolbar)) {
+                  var toolbarOptions = {
+                    container: true,
+                    responsive: true,
+                    items: obj2.options.toolbar
+                  };
+                } else if (obj2.options.toolbar === true) {
+                  var toolbarOptions = {
+                    container: true,
+                    responsive: true,
+                    items: []
+                  };
+                } else {
+                  var toolbarOptions = obj2.options.toolbar;
+                }
+                if (!(toolbarOptions.items && toolbarOptions.items.length)) {
+                  toolbarOptions.items = Component.getDefaultToolbar(obj2);
+                }
+                if (obj2.options.toolbarOnTop) {
+                  el.classList.add("toolbar-on-top");
+                  el.insertBefore(toolbar2, el.firstChild);
+                } else {
+                  obj2.editor.style.padding = "15px";
+                  el.appendChild(toolbar2);
+                }
+                Toolbar(toolbar2, toolbarOptions);
+                toolbar2.addEventListener("click", function() {
+                  obj2.editor.focus();
+                });
+              }
+              obj2.file = document.createElement("input");
+              obj2.file.style.display = "none";
+              obj2.file.type = "file";
+              obj2.file.setAttribute("accept", "image/*");
+              obj2.file.onchange = function() {
+                obj2.addFile(this.files);
+              };
+              el.appendChild(obj2.file);
+              if (obj2.options.focus) {
+                Component.setCursor(obj2.editor, obj2.options.focus == "initial" ? true : false);
+              }
+              el.change = obj2.setData;
+              el.val = function(val) {
+                if (val === void 0) {
+                  var o = el.getAttribute("data-html") === "true" ? false : true;
+                  return obj2.getData(o);
+                } else {
+                  obj2.setData(val);
+                }
+              };
+              loadExtensions();
+              el.editor = obj2;
+              if (typeof obj2.options.onload == "function") {
+                obj2.options.onload(el, obj2, obj2.editor);
+              }
+              return obj2;
+            };
+            Component.setCursor = function(element, first2) {
+              element.focus();
+              document.execCommand("selectAll");
+              var sel = window.getSelection();
+              var range = sel.getRangeAt(0);
+              if (first2 == true) {
+                var node = range.startContainer;
+                var size = 0;
+              } else {
+                var node = range.endContainer;
+                var size = node.length;
+              }
+              range.setStart(node, size);
+              range.setEnd(node, size);
+              sel.removeAllRanges();
+              sel.addRange(range);
+            };
+            Component.getDefaultToolbar = function(obj2) {
+              var color = function(a, b, c) {
+                if (!c.color) {
+                  var t = null;
+                  var colorPicker = Color(c, {
+                    onchange: function(o, v) {
+                      if (c.k === "color") {
+                        document.execCommand("foreColor", false, v);
+                      } else {
+                        document.execCommand("backColor", false, v);
+                      }
+                    }
+                  });
+                  c.color.open();
+                }
+              };
+              var items = [];
+              items.push({
+                content: "undo",
+                onclick: function() {
+                  document.execCommand("undo");
+                }
+              });
+              items.push({
+                content: "redo",
+                onclick: function() {
+                  document.execCommand("redo");
+                }
+              });
+              items.push({
+                type: "divisor"
+              });
+              if (obj2.options.toolbarOnTop) {
+                items.push({
+                  type: "select",
+                  width: "140px",
+                  options: ["Default", "Verdana", "Arial", "Courier New"],
+                  render: function(e) {
+                    return '<span style="font-family:' + e + '">' + e + "</span>";
+                  },
+                  onchange: function(a, b, c, d, e) {
+                    document.execCommand("fontName", false, d);
+                  }
+                });
+                items.push({
+                  type: "select",
+                  content: "format_size",
+                  options: ["x-small", "small", "medium", "large", "x-large"],
+                  render: function(e) {
+                    return '<span style="font-size:' + e + '">' + e + "</span>";
+                  },
+                  onchange: function(a, b, c, d, e) {
+                    document.execCommand("fontSize", false, parseInt(e) + 1);
+                  }
+                });
+                items.push({
+                  type: "select",
+                  options: ["format_align_left", "format_align_center", "format_align_right", "format_align_justify"],
+                  render: function(e) {
+                    return '<i class="material-icons">' + e + "</i>";
+                  },
+                  onchange: function(a, b, c, d, e) {
+                    var options = ["JustifyLeft", "justifyCenter", "justifyRight", "justifyFull"];
+                    document.execCommand(options[e]);
+                  }
+                });
+                items.push({
+                  type: "divisor"
+                });
+                items.push({
+                  content: "format_color_text",
+                  k: "color",
+                  onclick: color
+                });
+                items.push({
+                  content: "format_color_fill",
+                  k: "background-color",
+                  onclick: color
+                });
+              }
+              items.push({
+                content: "format_bold",
+                onclick: function(a, b, c) {
+                  document.execCommand("bold");
+                  if (document.queryCommandState("bold")) {
+                    c.classList.add("selected");
+                  } else {
+                    c.classList.remove("selected");
+                  }
+                }
+              });
+              items.push({
+                content: "format_italic",
+                onclick: function(a, b, c) {
+                  document.execCommand("italic");
+                  if (document.queryCommandState("italic")) {
+                    c.classList.add("selected");
+                  } else {
+                    c.classList.remove("selected");
+                  }
+                }
+              });
+              items.push({
+                content: "format_underline",
+                onclick: function(a, b, c) {
+                  document.execCommand("underline");
+                  if (document.queryCommandState("underline")) {
+                    c.classList.add("selected");
+                  } else {
+                    c.classList.remove("selected");
+                  }
+                }
+              });
+              items.push({
+                type: "divisor"
+              });
+              items.push({
+                content: "format_list_bulleted",
+                onclick: function(a, b, c) {
+                  document.execCommand("insertUnorderedList");
+                  if (document.queryCommandState("insertUnorderedList")) {
+                    c.classList.add("selected");
+                  } else {
+                    c.classList.remove("selected");
+                  }
+                }
+              });
+              items.push({
+                content: "format_list_numbered",
+                onclick: function(a, b, c) {
+                  document.execCommand("insertOrderedList");
+                  if (document.queryCommandState("insertOrderedList")) {
+                    c.classList.add("selected");
+                  } else {
+                    c.classList.remove("selected");
+                  }
+                }
+              });
+              items.push({
+                content: "format_indent_increase",
+                onclick: function(a, b, c) {
+                  document.execCommand("indent", true, null);
+                  if (document.queryCommandState("indent")) {
+                    c.classList.add("selected");
+                  } else {
+                    c.classList.remove("selected");
+                  }
+                }
+              });
+              items.push({
+                content: "format_indent_decrease",
+                onclick: function(a, b, c) {
+                  document.execCommand("outdent");
+                  if (document.queryCommandState("outdent")) {
+                    c.classList.add("selected");
+                  } else {
+                    c.classList.remove("selected");
+                  }
+                }
+              });
+              if (obj2.options.toolbarOnTop) {
+                items.push({
+                  type: "divisor"
+                });
+                items.push({
+                  content: "photo",
+                  onclick: function() {
+                    obj2.upload();
+                  }
+                });
+                items.push({
+                  type: "select",
+                  content: "table_view",
+                  columns: 8,
+                  grid: 8,
+                  right: true,
+                  options: [
+                    "0x0",
+                    "1x0",
+                    "2x0",
+                    "3x0",
+                    "4x0",
+                    "5x0",
+                    "6x0",
+                    "7x0",
+                    "0x1",
+                    "1x1",
+                    "2x1",
+                    "3x1",
+                    "4x1",
+                    "5x1",
+                    "6x1",
+                    "7x1",
+                    "0x2",
+                    "1x2",
+                    "2x2",
+                    "3x2",
+                    "4x2",
+                    "5x2",
+                    "6x2",
+                    "7x2",
+                    "0x3",
+                    "1x3",
+                    "2x3",
+                    "3x3",
+                    "4x3",
+                    "5x3",
+                    "6x3",
+                    "7x3",
+                    "0x4",
+                    "1x4",
+                    "2x4",
+                    "3x4",
+                    "4x4",
+                    "5x4",
+                    "6x4",
+                    "7x4",
+                    "0x5",
+                    "1x5",
+                    "2x5",
+                    "3x5",
+                    "4x5",
+                    "5x5",
+                    "6x5",
+                    "7x5",
+                    "0x6",
+                    "1x6",
+                    "2x6",
+                    "3x6",
+                    "4x6",
+                    "5x6",
+                    "6x6",
+                    "7x6",
+                    "0x7",
+                    "1x7",
+                    "2x7",
+                    "3x7",
+                    "4x7",
+                    "5x7",
+                    "6x7",
+                    "7x7"
+                  ],
+                  render: function(e, item) {
+                    if (item) {
+                      item.onmouseover = this.onmouseover;
+                      e = e.split("x");
+                      item.setAttribute("data-x", e[0]);
+                      item.setAttribute("data-y", e[1]);
+                    }
+                    var element = document.createElement("div");
+                    item.style.margin = "1px";
+                    item.style.border = "1px solid #ddd";
+                    return element;
+                  },
+                  onmouseover: function(e) {
+                    var x2 = parseInt(e.target.getAttribute("data-x"));
+                    var y2 = parseInt(e.target.getAttribute("data-y"));
+                    for (var i2 = 0; i2 < e.target.parentNode.children.length; i2++) {
+                      var element = e.target.parentNode.children[i2];
+                      var ex = parseInt(element.getAttribute("data-x"));
+                      var ey = parseInt(element.getAttribute("data-y"));
+                      if (ex <= x2 && ey <= y2) {
+                        element.style.backgroundColor = "#cae1fc";
+                        element.style.borderColor = "#2977ff";
+                      } else {
+                        element.style.backgroundColor = "";
+                        element.style.borderColor = "#ddd";
+                      }
+                    }
+                  },
+                  onchange: function(a, b, c) {
+                    c = c.split("x");
+                    var table = document.createElement("table");
+                    var tbody = document.createElement("tbody");
+                    for (var y2 = 0; y2 <= c[1]; y2++) {
+                      var tr = document.createElement("tr");
+                      for (var x2 = 0; x2 <= c[0]; x2++) {
+                        var td = document.createElement("td");
+                        td.innerHTML = "";
+                        tr.appendChild(td);
+                      }
+                      tbody.appendChild(tr);
+                    }
+                    table.appendChild(tbody);
+                    table.setAttribute("width", "100%");
+                    table.setAttribute("cellpadding", "6");
+                    table.setAttribute("cellspacing", "0");
+                    document.execCommand("insertHTML", false, table.outerHTML);
+                  }
+                });
+              }
+              return items;
+            };
+            return Component;
+          }
+          var editor = Editor();
+          ;
+          function Floating() {
+            var Component = function(el, options) {
+              var obj2 = {};
+              obj2.options = {};
+              var defaults = {
+                type: "big",
+                title: "Untitled",
+                width: 510,
+                height: 472
+              };
+              for (var property in defaults) {
+                if (options && options.hasOwnProperty(property)) {
+                  obj2.options[property] = options[property];
+                } else {
+                  obj2.options[property] = defaults[property];
+                }
+              }
+              var setContent = function() {
+                var temp = document.createElement("div");
+                while (el.children[0]) {
+                  temp.appendChild(el.children[0]);
+                }
+                obj2.content = document.createElement("div");
+                obj2.content.className = "jfloating_content";
+                obj2.content.innerHTML = el.innerHTML;
+                while (temp.children[0]) {
+                  obj2.content.appendChild(temp.children[0]);
+                }
+                obj2.container = document.createElement("div");
+                obj2.container.className = "jfloating";
+                obj2.container.appendChild(obj2.content);
+                if (obj2.options.title) {
+                  obj2.container.setAttribute("title", obj2.options.title);
+                } else {
+                  obj2.container.classList.add("no-title");
+                }
+                if (obj2.options.width) {
+                  obj2.container.style.width = parseInt(obj2.options.width) + "px";
+                }
+                if (obj2.options.height) {
+                  obj2.container.style.height = parseInt(obj2.options.height) + "px";
+                }
+                el.innerHTML = "";
+                el.appendChild(obj2.container);
+              };
+              var setEvents2 = function() {
+                if (obj2.container) {
+                  obj2.container.addEventListener("click", function(e) {
+                    var rect = e.target.getBoundingClientRect();
+                    if (e.target.classList.contains("jfloating")) {
+                      if (e.changedTouches && e.changedTouches[0]) {
+                        var x2 = e.changedTouches[0].clientX;
+                        var y2 = e.changedTouches[0].clientY;
+                      } else {
+                        var x2 = e.clientX;
+                        var y2 = e.clientY;
+                      }
+                      if (rect.width - (x2 - rect.left) < 50 && y2 - rect.top < 50) {
+                        setTimeout(function() {
+                          obj2.close();
+                        }, 100);
+                      } else {
+                        obj2.setState();
+                      }
+                    }
+                  });
+                }
+              };
+              var setType = function() {
+                obj2.container.classList.add("jfloating-" + obj2.options.type);
+              };
+              obj2.state = {
+                isMinized: false
+              };
+              obj2.setState = function() {
+                if (obj2.state.isMinized) {
+                  obj2.container.classList.remove("jfloating-minimized");
+                } else {
+                  obj2.container.classList.add("jfloating-minimized");
+                }
+                obj2.state.isMinized = !obj2.state.isMinized;
+              };
+              obj2.close = function() {
+                Components.elements.splice(Component.elements.indexOf(obj2.container), 1);
+                obj2.updatePosition();
+                el.remove();
+              };
+              obj2.updatePosition = function() {
+                for (var i2 = 0; i2 < Component.elements.length; i2++) {
+                  var floating2 = Component.elements[i2];
+                  var prevFloating = Component.elements[i2 - 1];
+                  floating2.style.right = i2 * (prevFloating ? prevFloating.offsetWidth : floating2.offsetWidth) * 1.01 + "px";
+                }
+              };
+              obj2.init = function() {
+                setContent();
+                setEvents2();
+                setType();
+                Component.elements.push(obj2.container);
+                obj2.updatePosition();
+                el.floating = obj2;
+              };
+              obj2.init();
+              return obj2;
+            };
+            Component.elements = [];
+            return Component;
+          }
+          var floating = Floating();
+          ;
+          function Validations() {
+            const isNumeric = function(num) {
+              return !isNaN(num) && num !== null && (typeof num !== "string" || num.trim() !== "");
+            };
+            const numberCriterias = {
+              "between": function(value, range) {
+                return value >= range[0] && value <= range[1];
+              },
+              "not between": function(value, range) {
+                return value < range[0] || value > range[1];
+              },
+              "<": function(value, range) {
+                return value < range[0];
+              },
+              "<=": function(value, range) {
+                return value <= range[0];
+              },
+              ">": function(value, range) {
+                return value > range[0];
+              },
+              ">=": function(value, range) {
+                return value >= range[0];
+              },
+              "=": function(value, range) {
+                return value == range[0];
+              },
+              "!=": function(value, range) {
+                return value != range[0];
+              }
+            };
+            const dateCriterias = {
+              "valid date": function() {
+                return true;
+              },
+              "=": function(value, range) {
+                return value === range[0];
+              },
+              "!=": function(value, range) {
+                return value !== range[0];
+              },
+              "<": function(value, range) {
+                return value < range[0];
+              },
+              "<=": function(value, range) {
+                return value <= range[0];
+              },
+              ">": function(value, range) {
+                return value > range[0];
+              },
+              ">=": function(value, range) {
+                return value >= range[0];
+              },
+              "between": function(value, range) {
+                return value >= range[0] && value <= range[1];
+              },
+              "not between": function(value, range) {
+                return value < range[0] || value > range[1];
+              }
+            };
+            const textCriterias = {
+              "contains": function(value, range) {
+                return value.includes(range[0]);
+              },
+              "not contains": function(value, range) {
+                return !value.includes(range[0]);
+              },
+              "begins with": function(value, range) {
+                return value.startsWith(range[0]);
+              },
+              "ends with": function(value, range) {
+                return value.endsWith(range[0]);
+              },
+              "=": function(value, range) {
+                return value === range[0];
+              },
+              "!=": function(value, range) {
+                return value !== range[0];
+              },
+              "valid email": function(value) {
+                var pattern = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+                return pattern.test(value);
+              },
+              "valid url": function(value) {
+                var pattern = new RegExp(/(((https?:\/\/)|(www\.))[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|]+)/ig);
+                return pattern.test(value);
+              }
+            };
+            const component = function(value, options) {
+              if (typeof component[options.type] === "function") {
+                if (options.allowBlank && (typeof value === "undefined" || value === "" || value === null)) {
+                  return true;
+                }
+                return component[options.type].call(this, value, options);
+              }
+              return null;
+            };
+            component.url = function(data) {
+              var pattern = new RegExp(/(((https?:\/\/)|(www\.))[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|]+)/ig);
+              return pattern.test(data) ? true : false;
+            };
+            component.email = function(data) {
+              var pattern = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+              return data && pattern.test(data) ? true : false;
+            };
+            component.required = function(data) {
+              return data && data.trim() ? true : false;
+            };
+            component.empty = function(data) {
+              return typeof data === "undefined" || data === null || typeof data === "string" && !data.toString().trim();
+            };
+            component["not exist"] = component.empty;
+            component.notEmpty = function(data) {
+              return !component.empty(data);
+            };
+            component.exist = component.notEmpty;
+            component.number = function(data, options) {
+              if (!isNumeric(data)) {
+                return false;
+              }
+              if (!options || !options.criteria) {
+                return true;
+              }
+              if (!numberCriterias[options.criteria]) {
+                return false;
+              }
+              let values = options.value.map(function(num) {
+                return parseFloat(num);
+              });
+              return numberCriterias[options.criteria](data, values);
+            };
+            component.login = function(data) {
+              let pattern = new RegExp(/^[a-zA-Z0-9._-]+$/);
+              return data && pattern.test(data) ? true : false;
+            };
+            component.list = function(data, options) {
+              let dataType = typeof data;
+              if (dataType !== "string" && dataType !== "number") {
+                return false;
+              }
+              let list;
+              if (typeof options.value[0] === "string") {
+                if (options.source) {
+                  list = options.source;
+                } else {
+                  list = options.value[0].split(",");
+                }
+              } else {
+                list = options.value[0];
+              }
+              if (!Array.isArray(list)) {
+                return false;
+              } else {
+                let validOption = list.findIndex(function(item) {
+                  return item == data;
+                });
+                return validOption > -1;
+              }
+            };
+            const getCurrentDateWithoutTime = function() {
+              let date = /* @__PURE__ */ new Date();
+              date.setHours(0, 0, 0, 0);
+              return date;
+            };
+            const relativeDates = {
+              "one year ago": function() {
+                let date = getCurrentDateWithoutTime();
+                date.setFullYear(date.getFullYear() - 1);
+                return date;
+              },
+              "one month ago": function() {
+                let date = getCurrentDateWithoutTime();
+                date.setMonth(date.getMonth() - 1);
+                return date;
+              },
+              "one week ago": function() {
+                let date = getCurrentDateWithoutTime();
+                date.setDate(date.getDate() - 7);
+                return date;
+              },
+              yesterday: function() {
+                let date = getCurrentDateWithoutTime();
+                date.setDate(date.getDate() - 1);
+                return date;
+              },
+              today: getCurrentDateWithoutTime,
+              tomorrow: function() {
+                let date = getCurrentDateWithoutTime();
+                date.setDate(date.getDate() + 1);
+                return date;
+              }
+            };
+            component.date = function(data, options) {
+              if (isNumeric(data) && data > 0 && data < 1e6) {
+                data = helpers_date.numToDate(data);
+              }
+              if (new Date(data) == "Invalid Date") {
+                return false;
+              }
+              if (!options || !options.criteria) {
+                return true;
+              }
+              if (!dateCriterias[options.criteria]) {
+                return false;
+              }
+              let values = options.value.map(function(date) {
+                if (typeof date === "string" && relativeDates[date]) {
+                  return relativeDates[date]().getTime();
+                }
+                return new Date(date).getTime();
+              });
+              return dateCriterias[options.criteria](new Date(data).getTime(), values);
+            };
+            component.text = function(data, options) {
+              if (typeof data === "undefined" || data === null) {
+                data = "";
+              } else if (typeof data !== "string") {
+                return false;
+              }
+              if (!options || !options.criteria) {
+                return true;
+              }
+              if (!textCriterias[options.criteria]) {
+                return false;
+              }
+              return textCriterias[options.criteria](data, options.value);
+            };
+            component.textLength = function(data, options) {
+              let textLength;
+              if (typeof data === "string") {
+                textLength = data.length;
+              } else if (typeof data !== "undefined" && data !== null && typeof data.toString === "function") {
+                textLength = data.toString().length;
+              } else {
+                textLength = 0;
+              }
+              return component.number(textLength, options);
+            };
+            component.time = function(data, options) {
+              if (!isNumeric(data)) {
+                return false;
+              }
+              if (!options || !options.criteria) {
+                return true;
+              }
+              if (!numberCriterias[options.criteria]) {
+                return false;
+              }
+              let values = options.value.map(function(num) {
+                return parseInt(parseFloat(num) * 10 ** 17) / 10 ** 17;
+              });
+              return numberCriterias[options.criteria](parseInt(parseFloat(data) * 10 ** 17) / 10 ** 17, values);
+            };
+            return component;
+          }
+          var validations = Validations();
+          ;
+          function Form() {
+            var Component = function(el, options) {
+              var obj2 = {};
+              obj2.options = {};
+              var defaults = {
+                url: null,
+                message: "Are you sure? There are unsaved information in your form",
+                ignore: false,
+                currentHash: null,
+                submitButton: null,
+                validations: null,
+                onbeforeload: null,
+                onload: null,
+                onbeforesave: null,
+                onsave: null,
+                onbeforeremove: null,
+                onremove: null,
+                onerror: function(el2, message) {
+                  alert(message);
+                }
+              };
+              for (var property in defaults) {
+                if (options && options.hasOwnProperty(property)) {
+                  obj2.options[property] = options[property];
+                } else {
+                  obj2.options[property] = defaults[property];
+                }
+              }
+              if (!obj2.options.validations) {
+                obj2.options.validations = {};
+              }
+              if (!obj2.options.submitButton) {
+                obj2.options.submitButton = el.querySelector("input[type=submit]");
+              }
+              if (obj2.options.submitButton && obj2.options.url) {
+                obj2.options.submitButton.onclick = function() {
+                  obj2.save();
+                };
+              }
+              if (!obj2.options.validations.email) {
+                obj2.options.validations.email = validations.email;
+              }
+              if (!obj2.options.validations.length) {
+                obj2.options.validations.length = validations.length;
+              }
+              if (!obj2.options.validations.required) {
+                obj2.options.validations.required = validations.required;
+              }
+              obj2.setUrl = function(url) {
+                obj2.options.url = url;
+              };
+              obj2.load = function() {
+                ajax({
+                  url: obj2.options.url,
+                  method: "GET",
+                  dataType: "json",
+                  queue: true,
+                  success: function(data) {
+                    if (typeof obj2.options.onbeforeload == "function") {
+                      var ret2 = obj2.options.onbeforeload(el, data);
+                      if (ret2) {
+                        data = ret2;
+                      }
+                    }
+                    Component.setElements(el, data);
+                    if (typeof obj2.options.onload == "function") {
+                      obj2.options.onload(el, data);
+                    }
+                  }
+                });
+              };
+              obj2.save = function() {
+                var test = obj2.validate();
+                if (test) {
+                  obj2.options.onerror(el, test);
+                } else {
+                  var data = Component.getElements(el, true);
+                  if (typeof obj2.options.onbeforesave == "function") {
+                    var data = obj2.options.onbeforesave(el, data);
+                    if (data === false) {
+                      return;
+                    }
+                  }
+                  ajax({
+                    url: obj2.options.url,
+                    method: "POST",
+                    dataType: "json",
+                    data,
+                    success: function(result) {
+                      if (typeof obj2.options.onsave == "function") {
+                        obj2.options.onsave(el, data, result);
+                      }
+                    }
+                  });
+                }
+              };
+              obj2.remove = function() {
+                if (typeof obj2.options.onbeforeremove == "function") {
+                  var ret2 = obj2.options.onbeforeremove(el, obj2);
+                  if (ret2 === false) {
+                    return false;
+                  }
+                }
+                ajax({
+                  url: obj2.options.url,
+                  method: "DELETE",
+                  dataType: "json",
+                  success: function(result) {
+                    if (typeof obj2.options.onremove == "function") {
+                      obj2.options.onremove(el, obj2, result);
+                    }
+                    obj2.reset();
+                  }
+                });
+              };
+              var addError = function(element) {
+                element.classList.add("error");
+                if (obj2.options.submitButton) {
+                  obj2.options.submitButton.setAttribute("disabled", true);
+                }
+                var error = element.getAttribute("data-error") || "There is an error in the form";
+                element.setAttribute("title", error);
+                return error;
+              };
+              var delError = function(element) {
+                var error = false;
+                element.classList.remove("error");
+                element.removeAttribute("title");
+                var elements = el.querySelectorAll("input, select, textarea, div[name]");
+                for (var i2 = 0; i2 < elements.length; i2++) {
+                  if (elements[i2].getAttribute("data-validation")) {
+                    if (elements[i2].classList.contains("error")) {
+                      error = true;
+                    }
+                  }
+                }
+                if (obj2.options.submitButton) {
+                  if (error) {
+                    obj2.options.submitButton.setAttribute("disabled", true);
+                  } else {
+                    obj2.options.submitButton.removeAttribute("disabled");
+                  }
+                }
+              };
+              obj2.validateElement = function(element) {
+                var test = false;
+                var value = Component.getValue(element);
+                var validation = element.getAttribute("data-validation");
+                if (typeof obj2.options.validations[validation] == "function" && !obj2.options.validations[validation](value, element)) {
+                  test = addError(element);
+                } else {
+                  if (element.classList.contains("error")) {
+                    delError(element);
+                  }
+                }
+                return test;
+              };
+              obj2.reset = function() {
+                var name = null;
+                var elements = el.querySelectorAll("input, select, textarea, div[name]");
+                for (var i2 = 0; i2 < elements.length; i2++) {
+                  if (name = elements[i2].getAttribute("name")) {
+                    if (elements[i2].type == "checkbox" || elements[i2].type == "radio") {
+                      elements[i2].checked = false;
+                    } else {
+                      if (typeof elements[i2].val == "function") {
+                        elements[i2].val("");
+                      } else {
+                        elements[i2].value = "";
+                      }
+                    }
+                  }
+                }
+              };
+              obj2.validate = function() {
+                var test = [];
+                var elements = el.querySelectorAll("input, select, textarea, div[name]");
+                for (var i2 = 0; i2 < elements.length; i2++) {
+                  if (elements[i2].getAttribute("data-validation")) {
+                    var res2 = obj2.validateElement(elements[i2]);
+                    if (res2) {
+                      test.push(res2);
+                    }
+                  }
+                }
+                if (test.length > 0) {
+                  return test.join("<br>");
+                } else {
+                  return false;
+                }
+              };
+              obj2.getError = function() {
+                return obj2.validation() ? true : false;
+              };
+              obj2.setHash = function() {
+                return obj2.getHash(Component.getElements(el));
+              };
+              obj2.getHash = function(str) {
+                var hash = 0, i2, chr;
+                if (str.length === 0) {
+                  return hash;
+                } else {
+                  for (i2 = 0; i2 < str.length; i2++) {
+                    chr = str.charCodeAt(i2);
+                    hash = (hash << 5) - hash + chr;
+                    hash |= 0;
+                  }
+                }
+                return hash;
+              };
+              obj2.isChanged = function() {
+                var hash = obj2.setHash();
+                return obj2.options.currentHash != hash;
+              };
+              obj2.resetTracker = function() {
+                obj2.options.currentHash = obj2.setHash();
+                obj2.options.ignore = false;
+              };
+              obj2.setIgnore = function(ignoreFlag) {
+                obj2.options.ignore = ignoreFlag ? true : false;
+              };
+              setTimeout(function() {
+                obj2.options.currentHash = obj2.setHash();
+              }, 1e3);
+              el.addEventListener("keyup", function(e) {
+                if (e.target.getAttribute("data-validation")) {
+                  obj2.validateElement(e.target);
+                }
+              });
+              if (!Component.hasEvents) {
+                window.addEventListener("beforeunload", function(e) {
+                  if (obj2.isChanged() && obj2.options.ignore == false) {
+                    var confirmationMessage = obj2.options.message ? obj2.options.message : "o/";
+                    if (confirmationMessage) {
+                      if (typeof e == "undefined") {
+                        e = window.event;
+                      }
+                      if (e) {
+                        e.returnValue = confirmationMessage;
+                      }
+                      return confirmationMessage;
+                    } else {
+                      return void 0;
+                    }
+                  }
+                });
+                Component.hasEvents = true;
+              }
+              el.form = obj2;
+              return obj2;
+            };
+            Component.getValue = function(element) {
+              var value = null;
+              if (element.type == "checkbox") {
+                if (element.checked == true) {
+                  value = element.value || true;
+                }
+              } else if (element.type == "radio") {
+                if (element.checked == true) {
+                  value = element.value;
+                }
+              } else if (element.type == "file") {
+                value = element.files;
+              } else if (element.tagName == "select" && element.multiple == true) {
+                value = [];
+                var options = element.querySelectorAll("options[selected]");
+                for (var j = 0; j < options.length; j++) {
+                  value.push(options[j].value);
+                }
+              } else if (typeof element.val == "function") {
+                value = element.val();
+              } else {
+                value = element.value || "";
+              }
+              return value;
+            };
+            Component.getElements = function(el, asArray) {
+              var data = {};
+              var name = null;
+              var elements = el.querySelectorAll("input, select, textarea, div[name]");
+              for (var i2 = 0; i2 < elements.length; i2++) {
+                if (name = elements[i2].getAttribute("name")) {
+                  data[name] = Component.getValue(elements[i2]) || "";
+                }
+              }
+              return asArray == true ? data : JSON.stringify(data);
+            };
+            Component.setElements = function(el, data) {
+              var name = null;
+              var value = null;
+              var elements = el.querySelectorAll("input, select, textarea, div[name]");
+              for (var i2 = 0; i2 < elements.length; i2++) {
+                var type = elements[i2].getAttribute("type");
+                if (name = elements[i2].getAttribute("name")) {
+                  name = name.replace(new RegExp(/\[(.*?)\]/ig), ".$1");
+                  value = null;
+                  if (name.match(/\./)) {
+                    var tmp = Path.call(data, name) || "";
+                    if (typeof tmp !== "undefined") {
+                      value = tmp;
+                    }
+                  } else {
+                    if (typeof data[name] !== "undefined") {
+                      value = data[name];
+                    }
+                  }
+                  if (value !== null) {
+                    if (type == "checkbox" || type == "radio") {
+                      elements[i2].checked = value ? true : false;
+                    } else if (type == "file") {
+                    } else {
+                      if (typeof elements[i2].val == "function") {
+                        elements[i2].val(value);
+                      } else {
+                        elements[i2].value = value;
+                      }
+                    }
+                  }
+                }
+              }
+            };
+            return Component;
+          }
+          var plugins_form = Form();
+          ;
+          function Modal() {
+            var Events2 = function() {
+              var tracker = null;
+              var keyDown = function(e) {
+                if (e.which == 27) {
+                  var modals = document.querySelectorAll(".jmodal");
+                  for (var i2 = 0; i2 < modals.length; i2++) {
+                    modals[i2].parentNode.modal.close();
+                  }
+                }
+              };
+              var mouseUp = function(e) {
+                let element = e.composedPath();
+                var item = helpers2.findElement(element[0], "jmodal");
+                if (item) {
+                  var rect = item.getBoundingClientRect();
+                  if (e.changedTouches && e.changedTouches[0]) {
+                    var x2 = e.changedTouches[0].clientX;
+                    var y2 = e.changedTouches[0].clientY;
+                  } else {
+                    var x2 = e.clientX;
+                    var y2 = e.clientY;
+                  }
+                  if (rect.width - (x2 - rect.left) < 50 && y2 - rect.top < 50) {
+                    item.parentNode.modal.close();
+                  }
+                }
+                if (tracker) {
+                  tracker.element.style.cursor = "auto";
+                  tracker = null;
+                }
+              };
+              var mouseDown = function(e) {
+                let element = e.composedPath();
+                var item = helpers2.findElement(element[0], "jmodal");
+                if (item) {
+                  var rect = item.getBoundingClientRect();
+                  if (e.changedTouches && e.changedTouches[0]) {
+                    var x2 = e.changedTouches[0].clientX;
+                    var y2 = e.changedTouches[0].clientY;
+                  } else {
+                    var x2 = e.clientX;
+                    var y2 = e.clientY;
+                  }
+                  if (rect.width - (x2 - rect.left) < 50 && y2 - rect.top < 50) {
+                  } else {
+                    if (y2 - rect.top < 50) {
+                      if (document.selection) {
+                        document.selection.empty();
+                      } else if (window.getSelection) {
+                        window.getSelection().removeAllRanges();
+                      }
+                      tracker = {
+                        left: rect.left,
+                        top: rect.top,
+                        x: e.clientX,
+                        y: e.clientY,
+                        width: rect.width,
+                        height: rect.height,
+                        element: item
+                      };
+                    }
+                  }
+                }
+              };
+              var mouseMove = function(e) {
+                if (tracker) {
+                  e = e || window.event;
+                  if (e.buttons) {
+                    var mouseButton = e.buttons;
+                  } else if (e.button) {
+                    var mouseButton = e.button;
+                  } else {
+                    var mouseButton = e.which;
+                  }
+                  if (mouseButton) {
+                    tracker.element.style.top = tracker.top + (e.clientY - tracker.y) + tracker.height / 2 + "px";
+                    tracker.element.style.left = tracker.left + (e.clientX - tracker.x) + tracker.width / 2 + "px";
+                    tracker.element.style.cursor = "move";
+                  } else {
+                    tracker.element.style.cursor = "auto";
+                  }
+                }
+              };
+              document.addEventListener("keydown", keyDown);
+              document.addEventListener("mouseup", mouseUp);
+              document.addEventListener("mousedown", mouseDown);
+              document.addEventListener("mousemove", mouseMove);
+            };
+            var Component = function(el, options) {
+              var obj2 = {};
+              obj2.options = {};
+              var defaults = {
+                url: null,
+                onopen: null,
+                onclose: null,
+                onload: null,
+                closed: false,
+                width: null,
+                height: null,
+                title: null,
+                padding: null,
+                backdrop: true,
+                icon: null
+              };
+              for (var property in defaults) {
+                if (options && options.hasOwnProperty(property)) {
+                  obj2.options[property] = options[property];
+                } else {
+                  obj2.options[property] = defaults[property];
+                }
+              }
+              if (!obj2.options.title && el.getAttribute("title")) {
+                obj2.options.title = el.getAttribute("title");
+              }
+              var temp = document.createElement("div");
+              while (el.children[0]) {
+                temp.appendChild(el.children[0]);
+              }
+              obj2.title = document.createElement("div");
+              obj2.title.className = "jmodal_title";
+              if (obj2.options.icon) {
+                obj2.title.setAttribute("data-icon", obj2.options.icon);
+              }
+              obj2.content = document.createElement("div");
+              obj2.content.className = "jmodal_content";
+              obj2.content.innerHTML = el.innerHTML;
+              while (temp.children[0]) {
+                obj2.content.appendChild(temp.children[0]);
+              }
+              obj2.container = document.createElement("div");
+              obj2.container.className = "jmodal";
+              obj2.container.appendChild(obj2.title);
+              obj2.container.appendChild(obj2.content);
+              if (obj2.options.padding) {
+                obj2.content.style.padding = obj2.options.padding;
+              }
+              if (obj2.options.width) {
+                obj2.container.style.width = obj2.options.width;
+              }
+              if (obj2.options.height) {
+                obj2.container.style.height = obj2.options.height;
+              }
+              if (obj2.options.title) {
+                var title = document.createElement("h4");
+                title.innerText = obj2.options.title;
+                obj2.title.appendChild(title);
+              }
+              el.innerHTML = "";
+              el.style.display = "none";
+              el.appendChild(obj2.container);
+              if (obj2.options.backdrop) {
+                var backdrop = document.createElement("div");
+                backdrop.className = "jmodal_backdrop";
+                backdrop.onclick = function() {
+                  obj2.close();
+                };
+                el.appendChild(backdrop);
+              }
+              obj2.open = function() {
+                el.style.display = "block";
+                var rect = obj2.container.getBoundingClientRect();
+                if (helpers2.getWindowWidth() < rect.width) {
+                  obj2.container.style.top = "";
+                  obj2.container.style.left = "";
+                  obj2.container.classList.add("jmodal_fullscreen");
+                  animation.slideBottom(obj2.container, 1);
+                } else {
+                  if (obj2.options.backdrop) {
+                    backdrop.style.display = "block";
+                  }
+                }
+                if (typeof obj2.options.onopen == "function") {
+                  obj2.options.onopen(el, obj2);
+                }
+              };
+              obj2.resetPosition = function() {
+                obj2.container.style.top = "";
+                obj2.container.style.left = "";
+              };
+              obj2.isOpen = function() {
+                return el.style.display != "none" ? true : false;
+              };
+              obj2.close = function() {
+                if (obj2.isOpen()) {
+                  el.style.display = "none";
+                  if (obj2.options.backdrop) {
+                    backdrop.style.display = "";
+                  }
+                  obj2.container.classList.remove("jmodal_fullscreen");
+                  if (typeof obj2.options.onclose == "function") {
+                    obj2.options.onclose(el, obj2);
+                  }
+                }
+              };
+              if (obj2.options.url) {
+                ajax({
+                  url: obj2.options.url,
+                  method: "GET",
+                  dataType: "text/html",
+                  success: function(data) {
+                    obj2.content.innerHTML = data;
+                    if (!obj2.options.closed) {
+                      obj2.open();
+                    }
+                    if (typeof obj2.options.onload === "function") {
+                      obj2.options.onload(obj2);
+                    }
+                  }
+                });
+              } else {
+                if (!obj2.options.closed) {
+                  obj2.open();
+                }
+                if (typeof obj2.options.onload === "function") {
+                  obj2.options.onload(obj2);
+                }
+              }
+              el.modal = obj2;
+              Events2();
+              Events2 = function() {
+              };
+              return obj2;
+            };
+            return Component;
+          }
+          var modal = Modal();
+          ;
+          function Notification() {
+            var Component = function(options) {
+              var obj2 = {};
+              obj2.options = {};
+              var defaults = {
+                icon: null,
+                name: "Notification",
+                date: null,
+                error: null,
+                title: null,
+                message: null,
+                timeout: 4e3,
+                autoHide: true,
+                closeable: true
+              };
+              for (var property in defaults) {
+                if (options && options.hasOwnProperty(property)) {
+                  obj2.options[property] = options[property];
+                } else {
+                  obj2.options[property] = defaults[property];
+                }
+              }
+              var notification2 = document.createElement("div");
+              notification2.className = "jnotification";
+              if (obj2.options.error) {
+                notification2.classList.add("jnotification-error");
+              }
+              var notificationContainer = document.createElement("div");
+              notificationContainer.className = "jnotification-container";
+              notification2.appendChild(notificationContainer);
+              var notificationHeader = document.createElement("div");
+              notificationHeader.className = "jnotification-header";
+              notificationContainer.appendChild(notificationHeader);
+              var notificationImage = document.createElement("div");
+              notificationImage.className = "jnotification-image";
+              notificationHeader.appendChild(notificationImage);
+              if (obj2.options.icon) {
+                var notificationIcon = document.createElement("img");
+                notificationIcon.src = obj2.options.icon;
+                notificationImage.appendChild(notificationIcon);
+              }
+              var notificationName = document.createElement("div");
+              notificationName.className = "jnotification-name";
+              notificationName.innerHTML = obj2.options.name;
+              notificationHeader.appendChild(notificationName);
+              if (obj2.options.closeable == true) {
+                var notificationClose = document.createElement("div");
+                notificationClose.className = "jnotification-close";
+                notificationClose.onclick = function() {
+                  obj2.hide();
+                };
+                notificationHeader.appendChild(notificationClose);
+              }
+              var notificationDate = document.createElement("div");
+              notificationDate.className = "jnotification-date";
+              notificationHeader.appendChild(notificationDate);
+              var notificationContent = document.createElement("div");
+              notificationContent.className = "jnotification-content";
+              notificationContainer.appendChild(notificationContent);
+              if (obj2.options.title) {
+                var notificationTitle = document.createElement("div");
+                notificationTitle.className = "jnotification-title";
+                notificationTitle.innerHTML = obj2.options.title;
+                notificationContent.appendChild(notificationTitle);
+              }
+              var notificationMessage = document.createElement("div");
+              notificationMessage.className = "jnotification-message";
+              notificationMessage.innerHTML = obj2.options.message;
+              notificationContent.appendChild(notificationMessage);
+              obj2.show = function() {
+                document.body.appendChild(notification2);
+                if (helpers2.getWindowWidth() > 800) {
+                  animation.fadeIn(notification2);
+                } else {
+                  animation.slideTop(notification2, 1);
+                }
+              };
+              obj2.hide = function() {
+                if (helpers2.getWindowWidth() > 800) {
+                  animation.fadeOut(notification2, function() {
+                    if (notification2.parentNode) {
+                      notification2.parentNode.removeChild(notification2);
+                      if (notificationTimeout) {
+                        clearTimeout(notificationTimeout);
+                      }
+                    }
+                  });
+                } else {
+                  animation.slideTop(notification2, 0, function() {
+                    if (notification2.parentNode) {
+                      notification2.parentNode.removeChild(notification2);
+                      if (notificationTimeout) {
+                        clearTimeout(notificationTimeout);
+                      }
+                    }
+                  });
+                }
+              };
+              obj2.show();
+              if (obj2.options.autoHide == true) {
+                var notificationTimeout = setTimeout(function() {
+                  obj2.hide();
+                }, obj2.options.timeout);
+              }
+              if (helpers2.getWindowWidth() < 800) {
+                notification2.addEventListener("swipeup", function(e) {
+                  obj2.hide();
+                  e.preventDefault();
+                  e.stopPropagation();
+                });
+              }
+              return obj2;
+            };
+            Component.isVisible = function() {
+              var j = document.querySelector(".jnotification");
+              return j && j.parentNode ? true : false;
+            };
+            return Component;
+          }
+          var notification = Notification();
+          ;
+          function Progressbar(el, options) {
+            var obj2 = {};
+            obj2.options = {};
+            var defaults = {
+              value: 0,
+              onchange: null,
+              width: null
+            };
+            for (var property in defaults) {
+              if (options && options.hasOwnProperty(property)) {
+                obj2.options[property] = options[property];
+              } else {
+                obj2.options[property] = defaults[property];
+              }
+            }
+            el.classList.add("jprogressbar");
+            el.setAttribute("tabindex", 1);
+            el.setAttribute("data-value", obj2.options.value);
+            var bar = document.createElement("div");
+            bar.style.width = obj2.options.value + "%";
+            bar.style.color = "#fff";
+            el.appendChild(bar);
+            if (obj2.options.width) {
+              el.style.width = obj2.options.width;
+            }
+            obj2.setValue = function(value) {
+              value = parseInt(value);
+              obj2.options.value = value;
+              bar.style.width = value + "%";
+              el.setAttribute("data-value", value + "%");
+              if (value < 6) {
+                el.style.color = "#000";
+              } else {
+                el.style.color = "#fff";
+              }
+              obj2.options.value = value;
+              if (typeof obj2.options.onchange == "function") {
+                obj2.options.onchange(el, value);
+              }
+              if (el.value != obj2.options.value) {
+                el.value = obj2.options.value;
+                if (typeof el.oninput == "function") {
+                  el.oninput({
+                    type: "input",
+                    target: el,
+                    value: el.value
+                  });
+                }
+              }
+            };
+            obj2.getValue = function() {
+              return obj2.options.value;
+            };
+            var action = function(e) {
+              if (e.which) {
+                var rect = el.getBoundingClientRect();
+                if (e.changedTouches && e.changedTouches[0]) {
+                  var x2 = e.changedTouches[0].clientX;
+                  var y2 = e.changedTouches[0].clientY;
+                } else {
+                  var x2 = e.clientX;
+                  var y2 = e.clientY;
+                }
+                obj2.setValue(Math.round((x2 - rect.left) / rect.width * 100));
+              }
+            };
+            if ("touchstart" in document.documentElement === true) {
+              el.addEventListener("touchstart", action);
+              el.addEventListener("touchend", action);
+            } else {
+              el.addEventListener("mousedown", action);
+              el.addEventListener("mousemove", action);
+            }
+            el.change = obj2.setValue;
+            el.val = function(val) {
+              if (val === void 0) {
+                return obj2.getValue();
+              } else {
+                obj2.setValue(val);
+              }
+            };
+            el.progressbar = obj2;
+            return obj2;
+          }
+          ;
+          function Rating(el, options) {
+            if (el.rating) {
+              return el.rating.setOptions(options, true);
+            }
+            var obj2 = {};
+            obj2.options = {};
+            obj2.setOptions = function(options2, reset) {
+              var defaults = {
+                number: 5,
+                value: 0,
+                tooltip: ["Very bad", "Bad", "Average", "Good", "Very good"],
+                onchange: null
+              };
+              for (var property in defaults) {
+                if (options2 && options2.hasOwnProperty(property)) {
+                  obj2.options[property] = options2[property];
+                } else {
+                  if (typeof obj2.options[property] == "undefined" || reset === true) {
+                    obj2.options[property] = defaults[property];
+                  }
+                }
+              }
+              el.innerHTML = "";
+              for (var i2 = 0; i2 < obj2.options.number; i2++) {
+                var div = document.createElement("div");
+                div.setAttribute("data-index", i2 + 1);
+                div.setAttribute("title", obj2.options.tooltip[i2]);
+                el.appendChild(div);
+              }
+              if (obj2.options.value) {
+                for (var i2 = 0; i2 < obj2.options.number; i2++) {
+                  if (i2 < obj2.options.value) {
+                    el.children[i2].classList.add("jrating-selected");
+                  }
+                }
+              }
+              return obj2;
+            };
+            obj2.setValue = function(index) {
+              for (var i2 = 0; i2 < obj2.options.number; i2++) {
+                if (i2 < index) {
+                  el.children[i2].classList.add("jrating-selected");
+                } else {
+                  el.children[i2].classList.remove("jrating-over");
+                  el.children[i2].classList.remove("jrating-selected");
+                }
+              }
+              obj2.options.value = index;
+              if (typeof obj2.options.onchange == "function") {
+                obj2.options.onchange(el, index);
+              }
+              if (el.value != obj2.options.value) {
+                el.value = obj2.options.value;
+                if (typeof el.oninput == "function") {
+                  el.oninput({
+                    type: "input",
+                    target: el,
+                    value: el.value
+                  });
+                }
+              }
+            };
+            obj2.getValue = function() {
+              return obj2.options.value;
+            };
+            var init = function() {
+              obj2.setOptions(options);
+              el.classList.add("jrating");
+              el.addEventListener("click", function(e) {
+                var index = e.target.getAttribute("data-index");
+                if (index != void 0) {
+                  if (index == obj2.options.value) {
+                    obj2.setValue(0);
+                  } else {
+                    obj2.setValue(index);
+                  }
+                }
+              });
+              el.addEventListener("mouseover", function(e) {
+                var index = e.target.getAttribute("data-index");
+                for (var i2 = 0; i2 < obj2.options.number; i2++) {
+                  if (i2 < index) {
+                    el.children[i2].classList.add("jrating-over");
+                  } else {
+                    el.children[i2].classList.remove("jrating-over");
+                  }
+                }
+              });
+              el.addEventListener("mouseout", function(e) {
+                for (var i2 = 0; i2 < obj2.options.number; i2++) {
+                  el.children[i2].classList.remove("jrating-over");
+                }
+              });
+              el.change = obj2.setValue;
+              el.val = function(val) {
+                if (val === void 0) {
+                  return obj2.getValue();
+                } else {
+                  obj2.setValue(val);
+                }
+              };
+              el.rating = obj2;
+            };
+            init();
+            return obj2;
+          }
+          ;
+          function Search(el, options) {
+            if (el.search) {
+              return el.search;
+            }
+            var index = null;
+            var select = function(e) {
+              if (e.target.classList.contains("jsearch_item")) {
+                var element = e.target;
+              } else {
+                var element = e.target.parentNode;
+              }
+              obj2.selectIndex(element);
+              e.preventDefault();
+            };
+            var createList = function(data) {
+              if (typeof obj2.options.onsearch == "function") {
+                var ret2 = obj2.options.onsearch(obj2, data);
+                if (ret2) {
+                  data = ret2;
+                }
+              }
+              container.innerHTML = "";
+              if (!data.length) {
+                el.style.display = "";
+              } else {
+                el.style.display = "block";
+                var len = data.length < 11 ? data.length : 10;
+                for (var i2 = 0; i2 < len; i2++) {
+                  if (typeof data[i2] == "string") {
+                    var text = data[i2];
+                    var value = data[i2];
+                  } else {
+                    var text = data[i2].text;
+                    if (!text && data[i2].name) {
+                      text = data[i2].name;
+                    }
+                    var value = data[i2].value;
+                    if (!value && data[i2].id) {
+                      value = data[i2].id;
+                    }
+                  }
+                  var div = document.createElement("div");
+                  div.setAttribute("data-value", value);
+                  div.setAttribute("data-text", text);
+                  div.className = "jsearch_item";
+                  if (data[i2].id) {
+                    div.setAttribute("id", data[i2].id);
+                  }
+                  if (obj2.options.forceSelect && i2 == 0) {
+                    div.classList.add("selected");
+                  }
+                  var img = document.createElement("img");
+                  if (data[i2].image) {
+                    img.src = data[i2].image;
+                  } else {
+                    img.style.display = "none";
+                  }
+                  div.appendChild(img);
+                  var item = document.createElement("div");
+                  item.innerHTML = text;
+                  div.appendChild(item);
+                  container.appendChild(div);
+                }
+              }
+            };
+            var execute2 = function(str) {
+              if (str != obj2.terms) {
+                obj2.terms = str;
+                if (obj2.options.forceSelect) {
+                  index = 0;
+                } else {
+                  index = null;
+                }
+                if (Array.isArray(obj2.options.data)) {
+                  var test = function(o) {
+                    if (typeof o == "string") {
+                      if (("" + o).toLowerCase().search(str.toLowerCase()) >= 0) {
+                        return true;
+                      }
+                    } else {
+                      for (var key in o) {
+                        var value = o[key];
+                        if (("" + value).toLowerCase().search(str.toLowerCase()) >= 0) {
+                          return true;
+                        }
+                      }
+                    }
+                    return false;
+                  };
+                  var results = obj2.options.data.filter(function(item) {
+                    return test(item);
+                  });
+                  createList(results);
+                } else {
+                  ajax({
+                    url: obj2.options.data + str,
+                    method: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                      createList(data);
+                    }
+                  });
+                }
+              }
+            };
+            var timer = null;
+            var obj2 = function(str) {
+              if (timer) {
+                clearTimeout(timer);
+              }
+              timer = setTimeout(function() {
+                execute2(str);
+              }, 500);
+            };
+            if (options.forceSelect === null) {
+              options.forceSelect = true;
+            }
+            obj2.options = {
+              data: options.data || null,
+              input: options.input || null,
+              searchByNode: options.searchByNode || null,
+              onselect: options.onselect || null,
+              forceSelect: options.forceSelect,
+              onsearch: options.onsearch || null,
+              onbeforesearch: options.onbeforesearch || null
+            };
+            obj2.selectIndex = function(item) {
+              var id = item.getAttribute("id");
+              var text = item.getAttribute("data-text");
+              var value = item.getAttribute("data-value");
+              var image = item.children[0].src || "";
+              if (typeof obj2.options.onselect == "function") {
+                obj2.options.onselect(obj2, text, value, id, image);
+              }
+              obj2.close();
+            };
+            obj2.open = function() {
+              el.style.display = "block";
+            };
+            obj2.close = function() {
+              if (timer) {
+                clearTimeout(timer);
+              }
+              obj2.terms = "";
+              container.innerHTML = "";
+              el.style.display = "";
+            };
+            obj2.isOpened = function() {
+              return el.style.display ? true : false;
+            };
+            obj2.keydown = function(e) {
+              if (obj2.isOpened()) {
+                if (e.key == "Enter") {
+                  if (index !== null && container.children[index]) {
+                    obj2.selectIndex(container.children[index]);
+                    e.preventDefault();
+                  } else {
+                    obj2.close();
+                  }
+                } else if (e.key === "ArrowUp") {
+                  if (index !== null && container.children[0]) {
+                    container.children[index].classList.remove("selected");
+                    if (!obj2.options.forceSelect && index === 0) {
+                      index = null;
+                    } else {
+                      index = Math.max(0, index - 1);
+                      container.children[index].classList.add("selected");
+                    }
+                  }
+                  e.preventDefault();
+                } else if (e.key === "ArrowDown") {
+                  if (index == null) {
+                    index = -1;
+                  } else {
+                    container.children[index].classList.remove("selected");
+                  }
+                  if (index < 9 && container.children[index + 1]) {
+                    index++;
+                  }
+                  container.children[index].classList.add("selected");
+                  e.preventDefault();
+                }
+              }
+            };
+            obj2.keyup = function(e) {
+              if (!obj2.options.searchByNode && obj2.options.input) {
+                if (obj2.options.input.tagName === "DIV") {
+                  var terms = obj2.options.input.innerText;
+                } else {
+                  var terms = obj2.options.input.value;
+                }
+              } else {
+                var node = helpers2.getNode();
+                if (node) {
+                  var terms = node.innerText;
+                }
+              }
+              if (typeof obj2.options.onbeforesearch == "function") {
+                var ret2 = obj2.options.onbeforesearch(obj2, terms);
+                if (ret2) {
+                  terms = ret2;
+                } else {
+                  if (ret2 === false) {
+                    return;
+                  }
+                }
+              }
+              obj2(terms);
+            };
+            obj2.blur = function(e) {
+              obj2.close();
+            };
+            if (obj2.options.input) {
+              obj2.options.input.addEventListener("keyup", obj2.keyup);
+              obj2.options.input.addEventListener("keydown", obj2.keydown);
+              obj2.options.input.addEventListener("blur", obj2.blur);
+            }
+            var container = document.createElement("div");
+            container.classList.add("jsearch_container");
+            container.onmousedown = select;
+            el.appendChild(container);
+            el.classList.add("jsearch");
+            el.search = obj2;
+            return obj2;
+          }
+          ;
+          function Slider(el, options) {
+            var obj2 = {};
+            obj2.options = {};
+            obj2.currentImage = null;
+            if (options) {
+              obj2.options = options;
+            }
+            el.setAttribute("tabindex", "900");
+            obj2.options.items = [];
+            if (!el.classList.contains("jslider")) {
+              el.classList.add("jslider");
+              el.classList.add("unselectable");
+              if (obj2.options.height) {
+                el.style.minHeight = parseInt(obj2.options.height) + "px";
+              }
+              if (obj2.options.width) {
+                el.style.width = parseInt(obj2.options.width) + "px";
+              }
+              if (obj2.options.grid) {
+                el.classList.add("jslider-grid");
+                var number = el.children.length;
+                if (number > 4) {
+                  el.setAttribute("data-total", number - 4);
+                }
+                el.setAttribute("data-number", number > 4 ? 4 : number);
+              }
+              var counter = document.createElement("div");
+              counter.classList.add("jslider-counter");
+              if (el.children.length > 0) {
+                for (var i2 = 0; i2 < el.children.length; i2++) {
+                  obj2.options.items.push(el.children[i2]);
+                  var item = document.createElement("div");
+                  item.onclick = function() {
+                    var index = Array.prototype.slice.call(counter.children).indexOf(this);
+                    obj2.show(obj2.currentImage = obj2.options.items[index]);
+                  };
+                  counter.appendChild(item);
+                }
+              }
+              var caption = document.createElement("div");
+              caption.className = "jslider-caption";
+              var controls = document.createElement("div");
+              var close = document.createElement("div");
+              close.className = "jslider-close";
+              close.innerHTML = "";
+              close.onclick = function() {
+                obj2.close();
+              };
+              controls.appendChild(caption);
+              controls.appendChild(close);
+            }
+            obj2.updateCounter = function(index) {
+              for (var i3 = 0; i3 < counter.children.length; i3++) {
+                if (counter.children[i3].classList.contains("jslider-counter-focus")) {
+                  counter.children[i3].classList.remove("jslider-counter-focus");
+                  break;
+                }
+              }
+              counter.children[index].classList.add("jslider-counter-focus");
+            };
+            obj2.show = function(target) {
+              if (!target) {
+                var target = el.children[0];
+              }
+              el.classList.add("jslider-focus");
+              el.classList.remove("jslider-grid");
+              el.appendChild(controls);
+              el.appendChild(counter);
+              var index = obj2.options.items.indexOf(target);
+              obj2.updateCounter(index);
+              for (var i3 = 0; i3 < el.children.length; i3++) {
+                el.children[i3].style.display = "";
+              }
+              target.style.display = "block";
+              if (target.previousElementSibling) {
+                el.classList.add("jslider-left");
+              } else {
+                el.classList.remove("jslider-left");
+              }
+              if (target.nextElementSibling && target.nextElementSibling.tagName == "IMG") {
+                el.classList.add("jslider-right");
+              } else {
+                el.classList.remove("jslider-right");
+              }
+              obj2.currentImage = target;
+              if (obj2.currentImage.offsetHeight > obj2.currentImage.offsetWidth) {
+                obj2.currentImage.classList.add("jslider-vertical");
+              }
+              controls.children[0].innerText = obj2.currentImage.getAttribute("title");
+            };
+            obj2.open = function() {
+              obj2.show();
+              if (typeof obj2.options.onopen == "function") {
+                obj2.options.onopen(el);
+              }
+            };
+            obj2.close = function() {
+              el.classList.remove("jslider-focus");
+              el.classList.remove("jslider-left");
+              el.classList.remove("jslider-right");
+              if (obj2.options.grid) {
+                el.classList.add("jslider-grid");
+              }
+              for (var i3 = 0; i3 < el.children.length; i3++) {
+                el.children[i3].style.display = "";
+              }
+              counter.remove();
+              controls.remove();
+              obj2.currentImage = null;
+              if (typeof obj2.options.onclose == "function") {
+                obj2.options.onclose(el);
+              }
+            };
+            obj2.reset = function() {
+              el.innerHTML = "";
+            };
+            obj2.next = function() {
+              var nextImage = obj2.currentImage.nextElementSibling;
+              if (nextImage && nextImage.tagName === "IMG") {
+                obj2.show(obj2.currentImage.nextElementSibling);
+              }
+            };
+            obj2.prev = function() {
+              if (obj2.currentImage.previousElementSibling) {
+                obj2.show(obj2.currentImage.previousElementSibling);
+              }
+            };
+            var mouseUp = function(e) {
+              if (e.target.tagName == "IMG") {
+                obj2.show(e.target);
+              } else if (!e.target.classList.contains("jslider-close") && !(e.target.parentNode.classList.contains("jslider-counter") || e.target.classList.contains("jslider-counter"))) {
+                var offsetX = e.offsetX || e.changedTouches[0].clientX;
+                if (e.target.clientWidth - offsetX < 40) {
+                  obj2.next();
+                } else if (offsetX < 40) {
+                  obj2.prev();
+                }
+              }
+            };
+            if ("ontouchend" in document.documentElement === true) {
+              el.addEventListener("touchend", mouseUp);
+            } else {
+              el.addEventListener("mouseup", mouseUp);
+            }
+            el.addEventListener("swipeleft", function(e) {
+              obj2.next();
+              e.preventDefault();
+              e.stopPropagation();
+            });
+            el.addEventListener("swiperight", function(e) {
+              obj2.prev();
+              e.preventDefault();
+              e.stopPropagation();
+            });
+            el.addEventListener("keydown", function(e) {
+              if (e.which == 27) {
+                obj2.close();
+              }
+            });
+            el.slider = obj2;
+            return obj2;
+          }
+          ;
+          function Tags(el, options) {
+            if (el.tags) {
+              return el.tags.setOptions(options, true);
+            }
+            var obj2 = { type: "tags" };
+            obj2.options = {};
+            var limit = function() {
+              return obj2.options.limit && el.children.length >= obj2.options.limit ? true : false;
+            };
+            var search2 = null;
+            var searchContainer = null;
+            obj2.setOptions = function(options2, reset) {
+              var defaults = {
+                value: "",
+                limit: null,
+                search: null,
+                placeholder: null,
+                validation: null,
+                onbeforepaste: null,
+                onbeforechange: null,
+                onremoveitem: null,
+                onlimit: null,
+                onchange: null,
+                onfocus: null,
+                onblur: null,
+                onload: null
+              };
+              for (var property in defaults) {
+                if (options2 && options2.hasOwnProperty(property)) {
+                  obj2.options[property] = options2[property];
+                } else {
+                  if (typeof obj2.options[property] == "undefined" || reset === true) {
+                    obj2.options[property] = defaults[property];
+                  }
+                }
+              }
+              if (obj2.options.placeholder) {
+                el.setAttribute("data-placeholder", obj2.options.placeholder);
+              } else {
+                el.removeAttribute("data-placeholder");
+              }
+              el.placeholder = obj2.options.placeholder;
+              obj2.setValue(obj2.options.value);
+              filter3();
+              if (obj2.options.search) {
+                if (!searchContainer) {
+                  searchContainer = document.createElement("div");
+                  el.parentNode.insertBefore(searchContainer, el.nextSibling);
+                  search2 = Search(searchContainer, {
+                    data: obj2.options.search,
+                    onselect: function(a, b, c) {
+                      obj2.selectIndex(b, c);
+                    }
+                  });
+                }
+              } else {
+                if (searchContainer) {
+                  search2 = null;
+                  searchContainer.remove();
+                  searchContainer = null;
+                }
+              }
+              return obj2;
+            };
+            obj2.add = function(value, focus) {
+              if (typeof obj2.options.onbeforechange == "function") {
+                var ret2 = obj2.options.onbeforechange(el, obj2, obj2.options.value, value);
+                if (ret2 === false) {
+                  return false;
+                } else {
+                  if (ret2 != null) {
+                    value = ret2;
+                  }
+                }
+              }
+              if (search2) {
+                search2.close();
+              }
+              if (limit()) {
+                if (typeof obj2.options.onlimit == "function") {
+                  obj2.options.onlimit(obj2, obj2.options.limit);
+                } else {
+                  alert(dictionary.translate("You reach the limit number of entries") + " " + obj2.options.limit);
+                }
+              } else {
+                var node = helpers2.getNode();
+                if (node && node.parentNode && node.parentNode.classList.contains("jtags") && node.nextSibling && !(node.nextSibling.innerText && node.nextSibling.innerText.trim())) {
+                  div = node.nextSibling;
+                } else {
+                  if (el.lastChild) {
+                    if (!el.lastChild.innerText.trim()) {
+                      el.removeChild(el.lastChild);
+                    }
+                  }
+                  if (!value || typeof value == "string") {
+                    var div = createElement(value, value, node);
+                  } else {
+                    for (var i2 = 0; i2 <= value.length; i2++) {
+                      if (!limit()) {
+                        if (!value[i2] || typeof value[i2] == "string") {
+                          var t = value[i2] || "";
+                          var v = null;
+                        } else {
+                          var t = value[i2].text;
+                          var v = value[i2].value;
+                        }
+                        var div = createElement(t, v);
+                      }
+                    }
+                  }
+                  change();
+                }
+                if (focus) {
+                  setFocus(div);
+                }
+              }
+            };
+            obj2.setLimit = function(limit2) {
+              obj2.options.limit = limit2;
+              var n = el.children.length - limit2;
+              while (el.children.length > limit2) {
+                el.removeChild(el.lastChild);
+              }
+            };
+            obj2.remove = function(node) {
+              node.parentNode.removeChild(node);
+              if (!el.children.length) {
+                obj2.add("", true);
+              } else {
+                change();
+              }
+              if (typeof obj2.options.onremoveitem == "function") {
+                obj2.options.onremoveitem(el, obj2, node);
+              }
+            };
+            obj2.getData = function() {
+              var data = [];
+              for (var i2 = 0; i2 < el.children.length; i2++) {
+                var text = el.children[i2].innerText.replace("\n", "");
+                var value = el.children[i2].getAttribute("data-value");
+                if (!value) {
+                  value = text;
+                }
+                if (text || value) {
+                  data.push({ text, value });
+                }
+              }
+              return data;
+            };
+            obj2.getValue = function(index) {
+              var value = null;
+              if (index != null) {
+                value = el.children[index].getAttribute("data-value");
+                if (!value) {
+                  value = el.children[index].innerText.replace("\n", "");
+                }
+              } else {
+                var data = [];
+                for (var i2 = 0; i2 < el.children.length; i2++) {
+                  value = el.children[i2].innerText.replace("\n", "");
+                  if (value) {
+                    data.push(obj2.getValue(i2));
+                  }
+                }
+                value = data.join(",");
+              }
+              return value;
+            };
+            obj2.setValue = function(mixed) {
+              if (!mixed) {
+                obj2.reset();
+              } else {
+                if (el.value != mixed) {
+                  if (Array.isArray(mixed)) {
+                    obj2.add(mixed);
+                  } else {
+                    var text = ("" + mixed).trim();
+                    var data = extractTags(text);
+                    el.innerHTML = "";
+                    obj2.add(data);
+                  }
+                }
+              }
+            };
+            obj2.reset = function() {
+              el.classList.add("jtags-empty");
+              el.innerHTML = "<div></div>";
+              change();
+            };
+            obj2.isValid = function() {
+              var test = 0;
+              for (var i2 = 0; i2 < el.children.length; i2++) {
+                if (el.children[i2].classList.contains("jtags_error")) {
+                  test++;
+                }
+              }
+              return test == 0 ? true : false;
+            };
+            obj2.selectIndex = function(text, value) {
+              var node = helpers2.getNode();
+              if (node) {
+                node.innerText = text;
+                if (value) {
+                  node.setAttribute("data-value", value);
+                }
+                node.classList.remove("jtags_error");
+                if (!limit()) {
+                  obj2.add("", true);
+                }
+              }
+            };
+            obj2.search = function(node) {
+              var terms = node.innerText;
+            };
+            obj2.destroy = function() {
+              el.removeEventListener("mouseup", tagsMouseUp);
+              el.removeEventListener("keydown", tagsKeyDown);
+              el.removeEventListener("keyup", tagsKeyUp);
+              el.removeEventListener("paste", tagsPaste);
+              el.removeEventListener("focus", tagsFocus);
+              el.removeEventListener("blur", tagsBlur);
+              el.parentNode.removeChild(el);
+            };
+            var setFocus = function(node) {
+              if (el.children.length) {
+                var range = document.createRange();
+                var sel = window.getSelection();
+                if (!node) {
+                  var node = el.childNodes[el.childNodes.length - 1];
+                }
+                range.setStart(node, node.length);
+                range.collapse(true);
+                sel.removeAllRanges();
+                sel.addRange(range);
+                el.scrollLeft = el.scrollWidth;
+              }
+            };
+            var createElement = function(label, value, node) {
+              var div = document.createElement("div");
+              div.textContent = label ? label : "";
+              if (value) {
+                div.setAttribute("data-value", value);
+              }
+              if (node && node.parentNode.classList.contains("jtags")) {
+                el.insertBefore(div, node.nextSibling);
+              } else {
+                el.appendChild(div);
+              }
+              return div;
+            };
+            var change = function() {
+              var value = obj2.getValue();
+              if (value != obj2.options.value) {
+                obj2.options.value = value;
+                if (typeof obj2.options.onchange == "function") {
+                  obj2.options.onchange(el, obj2, obj2.options.value);
+                }
+                if (el.value != obj2.options.value) {
+                  el.value = obj2.options.value;
+                  if (typeof el.oninput == "function") {
+                    el.oninput({
+                      type: "input",
+                      target: el,
+                      value: el.value
+                    });
+                  }
+                }
+              }
+              filter3();
+            };
+            var filter3 = function() {
+              for (var i2 = 0; i2 < el.children.length; i2++) {
+                if (el.children[i2].tagName === "DIV") {
+                  if (!obj2.getValue(i2)) {
+                    el.children[i2].classList.remove("jtags_label");
+                  } else {
+                    el.children[i2].classList.add("jtags_label");
+                    if (typeof obj2.options.validation == "function") {
+                      if (obj2.getValue(i2)) {
+                        if (!obj2.options.validation(el.children[i2], el.children[i2].innerText, el.children[i2].getAttribute("data-value"))) {
+                          el.children[i2].classList.add("jtags_error");
+                        } else {
+                          el.children[i2].classList.remove("jtags_error");
+                        }
+                      } else {
+                        el.children[i2].classList.remove("jtags_error");
+                      }
+                    } else {
+                      el.children[i2].classList.remove("jtags_error");
+                    }
+                  }
+                }
+              }
+              isEmpty();
+            };
+            var isEmpty = function() {
+              if (!el.innerText.trim()) {
+                if (!el.children.length || el.children[0].tagName === "BR") {
+                  el.innerHTML = "";
+                  setFocus(createElement());
+                }
+              } else {
+                el.classList.remove("jtags-empty");
+              }
+            };
+            var extractTags = function(text) {
+              var data = [];
+              var word = "";
+              text = text.trim();
+              if (text) {
+                for (var i2 = 0; i2 < text.length; i2++) {
+                  if (text[i2] == "," || text[i2] == ";" || text[i2] == "\n") {
+                    if (word) {
+                      data.push(word.trim());
+                      word = "";
+                    }
+                  } else {
+                    word += text[i2];
+                  }
+                }
+                if (word) {
+                  data.push(word);
+                }
+              }
+              return data;
+            };
+            var anchorOffset = 0;
+            var tagsKeyDown = function(e) {
+              anchorOffset = window.getSelection().anchorOffset;
+              isEmpty();
+              if (e.key === "Tab" || e.key === ";" || e.key === ",") {
+                var n = window.getSelection().anchorOffset;
+                if (n > 1) {
+                  if (limit()) {
+                    if (typeof obj2.options.onlimit == "function") {
+                      obj2.options.onlimit(obj2, obj2.options.limit);
+                    }
+                  } else {
+                    obj2.add("", true);
+                  }
+                }
+                e.preventDefault();
+              } else if (e.key == "Enter") {
+                if (!search2 || !search2.isOpened()) {
+                  var n = window.getSelection().anchorOffset;
+                  if (n > 1) {
+                    if (!limit()) {
+                      obj2.add("", true);
+                    }
+                  }
+                  e.preventDefault();
+                }
+              } else if (e.key == "Backspace") {
+                if (el.children.length == 1 && window.getSelection().anchorOffset < 1) {
+                  e.preventDefault();
+                }
+              }
+              if (search2) {
+                search2.keydown(e);
+              }
+              isEmpty();
+            };
+            var tagsKeyUp = function(e) {
+              if (e.which == 39) {
+                var n = window.getSelection().anchorOffset;
+                if (n > 1 && n == anchorOffset) {
+                  obj2.add("", true);
+                }
+              } else if (e.which == 13 || e.which == 38 || e.which == 40) {
+                e.preventDefault();
+              } else {
+                if (search2) {
+                  search2.keyup(e);
+                }
+              }
+              filter3();
+            };
+            var tagsPaste = function(e) {
+              if (e.clipboardData || e.originalEvent.clipboardData) {
+                var text = (e.originalEvent || e).clipboardData.getData("text/plain");
+              } else if (window.clipboardData) {
+                var text = window.clipboardData.getData("Text");
+              }
+              var data = extractTags(text);
+              if (typeof obj2.options.onbeforepaste == "function") {
+                var ret2 = obj2.options.onbeforepaste(el, obj2, data);
+                if (ret2 === false) {
+                  e.preventDefault();
+                  return false;
+                } else {
+                  if (ret2) {
+                    data = ret2;
+                  }
+                }
+              }
+              if (data.length > 1) {
+                obj2.add(data, true);
+                e.preventDefault();
+              } else if (data[0]) {
+                document.execCommand("insertText", false, data[0]);
+                e.preventDefault();
+              }
+            };
+            var tagsMouseUp = function(e) {
+              if (e.target.parentNode && e.target.parentNode.classList.contains("jtags")) {
+                if (e.target.classList.contains("jtags_label") || e.target.classList.contains("jtags_error")) {
+                  var rect = e.target.getBoundingClientRect();
+                  if (rect.width - (e.clientX - rect.left) < 16) {
+                    obj2.remove(e.target);
+                  }
+                }
+              }
+              if (e.target == el) {
+                setFocus();
+              }
+            };
+            var tagsFocus = function() {
+              if (!el.classList.contains("jtags-focus")) {
+                if (!el.children.length || obj2.getValue(el.children.length - 1)) {
+                  if (!limit()) {
+                    createElement("");
+                  }
+                }
+                if (typeof obj2.options.onfocus == "function") {
+                  obj2.options.onfocus(el, obj2, obj2.getValue());
+                }
+                el.classList.add("jtags-focus");
+              }
+            };
+            var tagsBlur = function() {
+              if (el.classList.contains("jtags-focus")) {
+                if (search2) {
+                  search2.close();
+                }
+                for (var i2 = 0; i2 < el.children.length - 1; i2++) {
+                  if (!obj2.getValue(i2)) {
+                    el.removeChild(el.children[i2]);
+                  }
+                }
+                change();
+                el.classList.remove("jtags-focus");
+                if (typeof obj2.options.onblur == "function") {
+                  obj2.options.onblur(el, obj2, obj2.getValue());
+                }
+              }
+            };
+            var init = function() {
+              if ("touchend" in document.documentElement === true) {
+                el.addEventListener("touchend", tagsMouseUp);
+              } else {
+                el.addEventListener("mouseup", tagsMouseUp);
+              }
+              el.addEventListener("keydown", tagsKeyDown);
+              el.addEventListener("keyup", tagsKeyUp);
+              el.addEventListener("paste", tagsPaste);
+              el.addEventListener("focus", tagsFocus);
+              el.addEventListener("blur", tagsBlur);
+              el.setAttribute("contenteditable", true);
+              el.classList.add("jtags");
+              obj2.setOptions(options);
+              if (typeof obj2.options.onload == "function") {
+                obj2.options.onload(el, obj2);
+              }
+              el.change = obj2.setValue;
+              el.val = function(val) {
+                if (val === void 0) {
+                  return obj2.getValue();
+                } else {
+                  obj2.setValue(val);
+                }
+              };
+              el.tags = obj2;
+            };
+            init();
+            return obj2;
+          }
+          ;
+          function Upload(el, options) {
+            var obj2 = {};
+            obj2.options = {};
+            var defaults = {
+              type: "image",
+              extension: "*",
+              input: false,
+              minWidth: false,
+              maxWidth: null,
+              maxHeight: null,
+              maxJpegSizeBytes: null,
+              // For example, 350Kb would be 350000
+              onchange: null,
+              multiple: false,
+              remoteParser: null
+            };
+            for (var property in defaults) {
+              if (options && options.hasOwnProperty(property)) {
+                obj2.options[property] = options[property];
+              } else {
+                obj2.options[property] = defaults[property];
+              }
+            }
+            if (obj2.options.multiple == true) {
+              el.setAttribute("data-multiple", true);
+            }
+            el.content = [];
+            el.classList.add("jupload");
+            if (obj2.options.input == true) {
+              el.classList.add("input");
+            }
+            obj2.add = function(data) {
+              if (obj2.options.multiple == false) {
+                el.content = [];
+                el.innerText = "";
+              }
+              if (obj2.options.type == "image") {
+                var img = document.createElement("img");
+                img.setAttribute("src", data.file);
+                img.setAttribute("tabindex", -1);
+                if (!el.getAttribute("name")) {
+                  img.className = "jfile";
+                  img.content = data;
+                }
+                el.appendChild(img);
+              } else {
+                if (data.name) {
+                  var name = data.name;
+                } else {
+                  var name = data.file;
+                }
+                var div = document.createElement("div");
+                div.innerText = name || obj2.options.type;
+                div.classList.add("jupload-item");
+                div.setAttribute("tabindex", -1);
+                el.appendChild(div);
+              }
+              if (data.content) {
+                data.file = helpers2.guid();
+              }
+              el.content.push(data);
+              if (typeof obj2.options.onchange == "function") {
+                obj2.options.onchange(el, data);
+              }
+            };
+            obj2.addFromFile = function(file) {
+              var type = file.type.split("/");
+              if (type[0] == obj2.options.type) {
+                var readFile = new FileReader();
+                readFile.addEventListener("load", function(v) {
+                  var data = {
+                    file: v.srcElement.result,
+                    extension: file.name.substr(file.name.lastIndexOf(".") + 1),
+                    name: file.name,
+                    size: file.size,
+                    lastmodified: file.lastModified,
+                    content: v.srcElement.result
+                  };
+                  obj2.add(data);
+                });
+                readFile.readAsDataURL(file);
+              } else {
+                alert(dictionary.translate("This extension is not allowed"));
+              }
+            };
+            obj2.addFromUrl = function(src2) {
+              if (src2.substr(0, 4) != "data" && !obj2.options.remoteParser) {
+                console.error("remoteParser not defined in your initialization");
+              } else {
+                if (src2.substr(0, 4) == "data") {
+                  var extension = src2.split(";");
+                  extension = extension[0].split("/");
+                  var type = extension[0].replace("data:", "");
+                  if (type == obj2.options.type) {
+                    var data = {
+                      file: src2,
+                      name: "",
+                      extension: extension[1],
+                      content: src2
+                    };
+                    obj2.add(data);
+                  } else {
+                    alert(obj2.options.text.extensionNotAllowed);
+                  }
+                } else {
+                  var extension = src2.substr(src2.lastIndexOf(".") + 1);
+                  src2 = obj2.options.remoteParser + src2;
+                  ajax({
+                    url: src2,
+                    type: "GET",
+                    dataType: "blob",
+                    success: function(data2) {
+                    }
+                  });
+                }
+              }
+            };
+            var getDataURL = function(canvas, type) {
+              var compression = 0.92;
+              var lastContentLength = null;
+              var content = canvas.toDataURL(type, compression);
+              while (obj2.options.maxJpegSizeBytes && type === "image/jpeg" && content.length > obj2.options.maxJpegSizeBytes && content.length !== lastContentLength) {
+                compression *= 0.9;
+                lastContentLength = content.length;
+                content = canvas.toDataURL(type, compression);
+              }
+              return content;
+            };
+            var mime = obj2.options.type + "/" + obj2.options.extension;
+            var input = document.createElement("input");
+            input.type = "file";
+            input.setAttribute("accept", mime);
+            input.onchange = function() {
+              for (var i2 = 0; i2 < this.files.length; i2++) {
+                obj2.addFromFile(this.files[i2]);
+              }
+            };
+            if (obj2.options.multiple == true) {
+              input.setAttribute("multiple", true);
+            }
+            var current = null;
+            el.addEventListener("click", function(e) {
+              current = null;
+              if (!el.children.length || e.target === el) {
+                helpers2.click(input);
+              } else {
+                if (e.target.parentNode == el) {
+                  current = e.target;
+                }
+              }
+            });
+            el.addEventListener("dblclick", function(e) {
+              helpers2.click(input);
+            });
+            el.addEventListener("dragenter", function(e) {
+              el.style.border = "1px dashed #000";
+            });
+            el.addEventListener("dragleave", function(e) {
+              el.style.border = "1px solid #eee";
+            });
+            el.addEventListener("dragstop", function(e) {
+              el.style.border = "1px solid #eee";
+            });
+            el.addEventListener("dragover", function(e) {
+              e.preventDefault();
+            });
+            el.addEventListener("keydown", function(e) {
+              if (current && e.which == 46) {
+                var index = Array.prototype.indexOf.call(el.children, current);
+                if (index >= 0) {
+                  el.content.splice(index, 1);
+                  current.remove();
+                  current = null;
+                }
+              }
+            });
+            el.addEventListener("drop", function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var html = (e.originalEvent || e).dataTransfer.getData("text/html");
+              var file = (e.originalEvent || e).dataTransfer.files;
+              if (file.length) {
+                for (var i2 = 0; i2 < e.dataTransfer.files.length; i2++) {
+                  obj2.addFromFile(e.dataTransfer.files[i2]);
+                }
+              } else if (html) {
+                if (obj2.options.multiple == false) {
+                  el.innerText = "";
+                }
+                let img = [];
+                utils_filter(html, img);
+                if (img.length) {
+                  for (var i2 = 0; i2 < img.length; i2++) {
+                    obj2.addFromUrl(img[i2]);
+                  }
+                }
+              }
+              el.style.border = "1px solid #eee";
+              return false;
+            });
+            el.val = function(val) {
+              if (val === void 0) {
+                return el.content && el.content.length ? el.content : null;
+              } else {
+                el.innerText = "";
+                el.content = [];
+                if (val) {
+                  if (Array.isArray(val)) {
+                    for (var i2 = 0; i2 < val.length; i2++) {
+                      if (typeof val[i2] == "string") {
+                        obj2.add({ file: val[i2] });
+                      } else {
+                        obj2.add(val[i2]);
+                      }
+                    }
+                  } else if (typeof val == "string") {
+                    obj2.add({ file: val });
+                  }
+                }
+              }
+            };
+            el.upload = el.image = obj2;
+            return obj2;
+          }
+          var sha512 = __webpack_require__2(195);
+          var sha512_default = /* @__PURE__ */ __webpack_require__2.n(sha512);
+          ;
+          var jsuites_jSuites = {
+            // Helpers
+            ...dictionary,
+            ...helpers2,
+            /** Current version */
+            version: "5.13.3",
+            /** Bind new extensions to Jsuites */
+            setExtensions: function(o) {
+              if (typeof o == "object") {
+                var k = Object.keys(o);
+                for (var i2 = 0; i2 < k.length; i2++) {
+                  jsuites_jSuites[k[i2]] = o[k[i2]];
+                }
+              }
+            },
+            tracking,
+            path: Path,
+            sorting: Sorting,
+            lazyLoading: LazyLoading,
+            // Plugins
+            ajax,
+            animation,
+            calendar,
+            color: Color,
+            contextmenu,
+            dropdown,
+            editor,
+            floating,
+            form: plugins_form,
+            mask,
+            modal,
+            notification,
+            palette,
+            picker: Picker,
+            progressbar: Progressbar,
+            rating: Rating,
+            search: Search,
+            slider: Slider,
+            tabs: Tabs,
+            tags: Tags,
+            toolbar: Toolbar,
+            upload: Upload,
+            validations
+          };
+          jsuites_jSuites.image = Upload;
+          jsuites_jSuites.image.create = function(data) {
+            var img = document.createElement("img");
+            img.setAttribute("src", data.file);
+            img.className = "jfile";
+            img.setAttribute("tabindex", -1);
+            img.content = data;
+            return img;
+          };
+          jsuites_jSuites.tracker = plugins_form;
+          jsuites_jSuites.loading = animation.loading;
+          jsuites_jSuites.sha512 = sha512_default();
+          const Events = function() {
+            if (typeof window["jSuitesStateControl"] === "undefined") {
+              window["jSuitesStateControl"] = [];
+            } else {
+              return;
+            }
+            const find = function(DOMElement, component) {
+              if (DOMElement[component.type] && DOMElement[component.type] == component) {
+                return true;
+              }
+              if (DOMElement.component && DOMElement.component == component) {
+                return true;
+              }
+              if (DOMElement.parentNode) {
+                return find(DOMElement.parentNode, component);
+              }
+              return false;
+            };
+            const isOpened = function(e) {
+              let state2 = window["jSuitesStateControl"];
+              if (state2 && state2.length > 0) {
+                for (let i2 = 0; i2 < state2.length; i2++) {
+                  if (state2[i2] && !find(e, state2[i2])) {
+                    state2[i2].close();
+                  }
+                }
+              }
+            };
+            let cornerSize = 15;
+            let element = null;
+            let editorAction = false;
+            let state = {
+              x: null,
+              y: null
+            };
+            let tooltip = document.createElement("div");
+            tooltip.classList.add("jtooltip");
+            const isWebcomponent = function(e) {
+              return e && (e.shadowRoot || e.tagName && e.tagName.includes("-"));
+            };
+            const getElement2 = function(e) {
+              let d;
+              let element2;
+              let path = e.path || e.composedPath && e.composedPath();
+              if (path) {
+                element2 = path[0];
+                if (element2 && isWebcomponent(element2) && !element2.shadowRoot && e.toElement) {
+                  element2 = e.toElement;
+                }
+              } else {
+                if (e.target && isWebcomponent(e.target)) {
+                  d = e.target.shadowRoot;
+                } else {
+                  d = document;
+                }
+                element2 = d.elementFromPoint(x, y);
+              }
+              return element2;
+            };
+            const mouseDown = function(e) {
+              if (e.changedTouches && e.changedTouches[0]) {
+                var x2 = e.changedTouches[0].clientX;
+                var y2 = e.changedTouches[0].clientY;
+              } else {
+                var x2 = e.clientX;
+                var y2 = e.clientY;
+              }
+              let element2 = getElement2(e);
+              let editable = element2 && element2.tagName === "DIV" && element2.getAttribute("contentEditable");
+              let item = jsuites_jSuites.findElement(element2, "jpanel");
+              if (item && !item.classList.contains("readonly") && !editable) {
+                let rect = item.getBoundingClientRect();
+                let angle = 0;
+                if (item.style.rotate) {
+                  angle = parseFloat(item.style.rotate);
+                }
+                let action = "move";
+                if (element2.getAttribute("data-action")) {
+                  action = element2.getAttribute("data-action");
+                } else {
+                  if (item.style.cursor) {
+                    action = "resize";
+                  } else {
+                    item.style.cursor = "move";
+                  }
+                }
+                editorAction = {
+                  action,
+                  a: angle,
+                  e: item,
+                  x: x2,
+                  y: y2,
+                  l: rect.left,
+                  t: rect.top,
+                  b: rect.bottom,
+                  r: rect.right,
+                  w: rect.width,
+                  h: rect.height,
+                  d: item.style.cursor,
+                  actioned: false
+                };
+                if (!item.style.width) {
+                  item.style.width = rect.width + "px";
+                }
+                if (!item.style.height) {
+                  item.style.height = rect.height + "px";
+                }
+              } else {
+                editorAction = false;
+              }
+              isOpened(element2);
+              focus(e);
+            };
+            const calculateAngle = function(x1, y1, x2, y2, x3, y3) {
+              const dx1 = x2 - x1;
+              const dy1 = y2 - y1;
+              const dx2 = x3 - x1;
+              const dy2 = y3 - y1;
+              let angle1 = Math.atan2(dy1, dx1);
+              let angle2 = Math.atan2(dy2, dx2);
+              let angleDifference = angle2 - angle1;
+              angleDifference = angleDifference * (180 / Math.PI);
+              if (angleDifference < 0) {
+                angleDifference += 360;
+              }
+              return angleDifference;
+            };
+            const mouseUp = function(e) {
+              if (editorAction && editorAction.e) {
+                if (typeof editorAction.e.refresh == "function" && state.actioned) {
+                  editorAction.e.refresh();
+                }
+                editorAction.e.style.cursor = "";
+              }
+              state = {
+                x: null,
+                y: null
+              };
+              editorAction = false;
+            };
+            const mouseMove = function(e) {
+              if (editorAction) {
+                let x2 = e.clientX || e.pageX;
+                let y2 = e.clientY || e.pageY;
+                if (state.x == null && state.y == null) {
+                  state.x = x2;
+                  state.y = y2;
+                }
+                if (editorAction.action === "move") {
+                  var dx = x2 - state.x;
+                  var dy = y2 - state.y;
+                  var top = editorAction.e.offsetTop + dy;
+                  var left2 = editorAction.e.offsetLeft + dx;
+                  editorAction.e.style.top = top + "px";
+                  editorAction.e.style.left = left2 + "px";
+                  if (typeof editorAction.e.refresh == "function") {
+                    state.actioned = true;
+                    editorAction.e.refresh("position", top, left2);
+                  }
+                } else if (editorAction.action === "rotate") {
+                  let ox = editorAction.l + editorAction.w / 2;
+                  let oy = editorAction.t + editorAction.h / 2;
+                  let angle = calculateAngle(ox, oy, editorAction.x, editorAction.y, x2, y2);
+                  angle = angle + editorAction.a % 360;
+                  angle = Math.round(angle / 2) * 2;
+                  editorAction.e.style.rotate = `${angle}deg`;
+                  if (typeof editorAction.e.refresh == "function") {
+                    state.actioned = true;
+                    editorAction.e.refresh("rotate", angle);
+                  }
+                } else if (editorAction.action === "resize") {
+                  let top2 = null;
+                  let left3 = null;
+                  let width = null;
+                  let height = null;
+                  if (editorAction.d == "e-resize" || editorAction.d == "ne-resize" || editorAction.d == "se-resize") {
+                    width = editorAction.e.offsetWidth + (x2 - state.x);
+                    if (e.shiftKey) {
+                      height = editorAction.e.offsetHeight + (x2 - state.x) * (editorAction.e.offsetHeight / editorAction.e.offsetWidth);
+                    }
+                  } else if (editorAction.d === "w-resize" || editorAction.d == "nw-resize" || editorAction.d == "sw-resize") {
+                    left3 = editorAction.e.offsetLeft + (x2 - state.x);
+                    width = editorAction.e.offsetLeft + editorAction.e.offsetWidth - left3;
+                    if (e.shiftKey) {
+                      height = editorAction.e.offsetHeight - (x2 - state.x) * (editorAction.e.offsetHeight / editorAction.e.offsetWidth);
+                    }
+                  }
+                  if (editorAction.d == "s-resize" || editorAction.d == "se-resize" || editorAction.d == "sw-resize") {
+                    if (!height) {
+                      height = editorAction.e.offsetHeight + (y2 - state.y);
+                    }
+                  } else if (editorAction.d === "n-resize" || editorAction.d == "ne-resize" || editorAction.d == "nw-resize") {
+                    top2 = editorAction.e.offsetTop + (y2 - state.y);
+                    height = editorAction.e.offsetTop + editorAction.e.offsetHeight - top2;
+                  }
+                  if (top2) {
+                    editorAction.e.style.top = top2 + "px";
+                  }
+                  if (left3) {
+                    editorAction.e.style.left = left3 + "px";
+                  }
+                  if (width) {
+                    editorAction.e.style.width = width + "px";
+                  }
+                  if (height) {
+                    editorAction.e.style.height = height + "px";
+                  }
+                  if (typeof editorAction.e.refresh == "function") {
+                    state.actioned = true;
+                    editorAction.e.refresh("dimensions", width, height);
+                  }
+                }
+                state.x = x2;
+                state.y = y2;
+              } else {
+                let element2 = getElement2(e);
+                let item = jsuites_jSuites.findElement(element2, "jpanel");
+                if (item) {
+                  let controls = item.classList.contains("jpanel-controls");
+                  if (controls) {
+                    let position2 = element2.getAttribute("data-position");
+                    if (position2) {
+                      item.style.cursor = position2;
+                    } else {
+                      item.style.cursor = "";
+                    }
+                  } else if (item.getAttribute("tabindex")) {
+                    let rect = item.getBoundingClientRect();
+                    if (e.clientY - rect.top < cornerSize) {
+                      if (rect.width - (e.clientX - rect.left) < cornerSize) {
+                        item.style.cursor = "ne-resize";
+                      } else if (e.clientX - rect.left < cornerSize) {
+                        item.style.cursor = "nw-resize";
+                      } else {
+                        item.style.cursor = "n-resize";
+                      }
+                    } else if (rect.height - (e.clientY - rect.top) < cornerSize) {
+                      if (rect.width - (e.clientX - rect.left) < cornerSize) {
+                        item.style.cursor = "se-resize";
+                      } else if (e.clientX - rect.left < cornerSize) {
+                        item.style.cursor = "sw-resize";
+                      } else {
+                        item.style.cursor = "s-resize";
+                      }
+                    } else if (rect.width - (e.clientX - rect.left) < cornerSize) {
+                      item.style.cursor = "e-resize";
+                    } else if (e.clientX - rect.left < cornerSize) {
+                      item.style.cursor = "w-resize";
+                    } else {
+                      item.style.cursor = "";
+                    }
+                  }
+                }
+              }
+            };
+            let position = ["n", "ne", "e", "se", "s", "sw", "w", "nw", "rotate"];
+            position.forEach(function(v, k) {
+              position[k] = document.createElement("div");
+              position[k].classList.add("jpanel-action");
+              if (v === "rotate") {
+                position[k].setAttribute("data-action", "rotate");
+              } else {
+                position[k].setAttribute("data-action", "resize");
+                position[k].setAttribute("data-position", v + "-resize");
+              }
+            });
+            let currentElement;
+            const focus = function(e) {
+              let element2 = getElement2(e);
+              let item = jsuites_jSuites.findElement(element2, "jpanel");
+              if (item && !item.classList.contains("readonly") && item.classList.contains("jpanel-controls")) {
+                item.append(...position);
+                if (!item.classList.contains("jpanel-rotate")) {
+                  position[position.length - 1].remove();
+                }
+                currentElement = item;
+              } else {
+                blur(e);
+              }
+            };
+            const blur = function(e) {
+              if (currentElement) {
+                position.forEach(function(v) {
+                  v.remove();
+                });
+                currentElement = null;
+              }
+            };
+            const mouseOver = function(e) {
+              let element2 = getElement2(e);
+              var message = element2.getAttribute("data-tooltip");
+              if (message) {
+                tooltip.innerText = message;
+                if (e.changedTouches && e.changedTouches[0]) {
+                  var x2 = e.changedTouches[0].clientX;
+                  var y2 = e.changedTouches[0].clientY;
+                } else {
+                  var x2 = e.clientX;
+                  var y2 = e.clientY;
+                }
+                tooltip.style.top = y2 + "px";
+                tooltip.style.left = x2 + "px";
+                document.body.appendChild(tooltip);
+              } else if (tooltip.innerText) {
+                tooltip.innerText = "";
+                document.body.removeChild(tooltip);
+              }
+            };
+            const contextMenu = function(e) {
+              var item = document.activeElement;
+              if (item && typeof item.contextmenu == "function") {
+                item.contextmenu(e);
+                e.preventDefault();
+                e.stopImmediatePropagation();
+              } else {
+                item = jsuites_jSuites.findElement(e.target, function(o2) {
+                  return o2.tagName && o2.getAttribute("aria-contextmenu-id");
+                });
+                if (item) {
+                  var o = document.querySelector("#" + item);
+                  if (!o) {
+                    console.error("JSUITES: contextmenu id not found: " + item);
+                  } else {
+                    o.contextmenu.open(e);
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                  }
+                }
+              }
+            };
+            const keyDown = function(e) {
+              let item = document.activeElement;
+              if (item) {
+                if (e.key === "Delete" && typeof item.delete == "function") {
+                  item.delete();
+                  e.preventDefault();
+                  e.stopImmediatePropagation();
+                }
+              }
+              let state2 = window["jSuitesStateControl"];
+              if (state2 && state2.length > 0) {
+                item = state2[state2.length - 1];
+                if (item) {
+                  if (e.key === "Escape" && typeof item.isOpened == "function" && typeof item.close == "function") {
+                    if (item.isOpened()) {
+                      item.close();
+                      e.preventDefault();
+                      e.stopImmediatePropagation();
+                    }
+                  }
+                }
+              }
+            };
+            const input = function(e) {
+              if (e.target.getAttribute("data-mask") || e.target.mask) {
+                jsuites_jSuites.mask(e);
+              }
+            };
+            document.addEventListener("focusin", focus);
+            document.addEventListener("mouseup", mouseUp);
+            document.addEventListener("mousedown", mouseDown);
+            document.addEventListener("mousemove", mouseMove);
+            document.addEventListener("mouseover", mouseOver);
+            document.addEventListener("keydown", keyDown);
+            document.addEventListener("contextmenu", contextMenu);
+            document.addEventListener("input", input);
+          };
+          if (typeof document !== "undefined") {
+            Events();
+          }
+          var jsuites = jsuites_jSuites;
+        }();
+        jSuites2 = __webpack_exports__2["default"];
+      })();
+      return jSuites2;
+    });
+  }
+});
+
+// C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/@jspreadsheet/formula@2.0.2/node_modules/@jspreadsheet/formula/dist/index.js
+var require_dist = __commonJS({
+  "C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/@jspreadsheet/formula@2.0.2/node_modules/@jspreadsheet/formula/dist/index.js"(exports2, module2) {
+    (function(global, factory2) {
+      typeof exports2 === "object" && typeof module2 !== "undefined" ? module2.exports = factory2() : typeof define === "function" && define.amd ? define(factory2) : global.formula = factory2();
+    })(exports2, function() {
+      var Formula;
+      !function() {
+        var n = { 765: function(n2, t2) {
+          var r2;
+          r2 = function(n3) {
+            n3.version = "1.0.2";
+            var t3 = Math;
+            function r3(n4, t4) {
+              for (var r4 = 0, e3 = 0; r4 < n4.length; ++r4) e3 = t4 * e3 + n4[r4];
+              return e3;
+            }
+            function e2(n4, t4, r4, e3, o2) {
+              if (0 === t4) return r4;
+              if (1 === t4) return e3;
+              for (var i3 = 2 / n4, u2 = e3, a2 = 1; a2 < t4; ++a2) u2 = e3 * a2 * i3 + o2 * r4, r4 = e3, e3 = u2;
+              return u2;
+            }
+            function o(n4, t4, r4, o2, i3) {
+              return function(r5, u2) {
+                if (o2) {
+                  if (0 === r5) return 1 == o2 ? -1 / 0 : 1 / 0;
+                  if (r5 < 0) return NaN;
+                }
+                return 0 === u2 ? n4(r5) : 1 === u2 ? t4(r5) : u2 < 0 ? NaN : e2(r5, u2 |= 0, n4(r5), t4(r5), i3);
+              };
+            }
+            var i2, u, a, f, l, c, s, h, g, p, m, d, v, E = function() {
+              var n4 = 0.636619772, o2 = [57568490574, -13362590354, 6516196407e-1, -1121442418e-2, 77392.33017, -184.9052456].reverse(), i3 = [57568490411, 1029532985, 9494680718e-3, 59272.64853, 267.8532712, 1].reverse(), u2 = [1, -0.001098628627, 2734510407e-14, -2073370639e-15, 2093887211e-16].reverse(), a2 = [-0.01562499995, 1430488765e-13, -6911147651e-15, 7621095161e-16, -934935152e-16].reverse();
+              function f2(e3) {
+                var f3 = 0, l3 = 0, c3 = 0, s3 = e3 * e3;
+                if (e3 < 8) f3 = (l3 = r3(o2, s3)) / (c3 = r3(i3, s3));
+                else {
+                  var h3 = e3 - 0.785398164;
+                  l3 = r3(u2, s3 = 64 / s3), c3 = r3(a2, s3), f3 = t3.sqrt(n4 / e3) * (t3.cos(h3) * l3 - t3.sin(h3) * c3 * 8 / e3);
+                }
+                return f3;
+              }
+              var l2 = [72362614232, -7895059235, 2423968531e-1, -2972611439e-3, 15704.4826, -30.16036606].reverse(), c2 = [144725228442, 2300535178, 1858330474e-2, 99447.43394, 376.9991397, 1].reverse(), s2 = [1, 183105e-8, -3516396496e-14, 2457520174e-15, -240337019e-15].reverse(), h2 = [0.04687499995, -2002690873e-13, 8449199096e-15, -88228987e-14, 105787412e-15].reverse();
+              function g2(e3) {
+                var o3 = 0, i4 = 0, u3 = 0, a3 = e3 * e3, f3 = t3.abs(e3) - 2.356194491;
+                return Math.abs(e3) < 8 ? o3 = (i4 = e3 * r3(l2, a3)) / (u3 = r3(c2, a3)) : (i4 = r3(s2, a3 = 64 / a3), u3 = r3(h2, a3), o3 = t3.sqrt(n4 / t3.abs(e3)) * (t3.cos(f3) * i4 - t3.sin(f3) * u3 * 8 / t3.abs(e3)), e3 < 0 && (o3 = -o3)), o3;
+              }
+              return function n5(r4, o3) {
+                if (o3 = Math.round(o3), !isFinite(r4)) return isNaN(r4) ? r4 : 0;
+                if (o3 < 0) return (o3 % 2 ? -1 : 1) * n5(r4, -o3);
+                if (r4 < 0) return (o3 % 2 ? -1 : 1) * n5(-r4, o3);
+                if (0 === o3) return f2(r4);
+                if (1 === o3) return g2(r4);
+                if (0 === r4) return 0;
+                var i4 = 0;
+                if (r4 > o3) i4 = e2(r4, o3, f2(r4), g2(r4), -1);
+                else {
+                  for (var u3 = false, a3 = 0, l3 = 0, c3 = 1, s3 = 0, h3 = 2 / r4, p2 = 2 * t3.floor((o3 + t3.floor(t3.sqrt(40 * o3))) / 2); p2 > 0; p2--) s3 = p2 * h3 * c3 - a3, a3 = c3, c3 = s3, t3.abs(c3) > 1e10 && (c3 *= 1e-10, a3 *= 1e-10, i4 *= 1e-10, l3 *= 1e-10), u3 && (l3 += c3), u3 = !u3, p2 == o3 && (i4 = a3);
+                  i4 /= l3 = 2 * l3 - c3;
+                }
+                return i4;
+              };
+            }(), M = (i2 = 0.636619772, u = [-2957821389, 7062834065, -5123598036e-1, 1087988129e-2, -86327.92757, 228.4622733].reverse(), a = [40076544269, 7452499648e-1, 7189466438e-3, 47447.2647, 226.1030244, 1].reverse(), f = [1, -0.001098628627, 2734510407e-14, -2073370639e-15, 2093887211e-16].reverse(), l = [-0.01562499995, 1430488765e-13, -6911147651e-15, 7621095161e-16, -934945152e-16].reverse(), c = [-4900604943e3, 127527439e4, -51534381390, 7349264551e-1, -4237922726e-3, 8511.937935].reverse(), s = [249958057e5, 424441966400, 3733650367, 2245904002e-2, 102042.605, 354.9632885, 1].reverse(), h = [1, 183105e-8, -3516396496e-14, 2457520174e-15, -240337019e-15].reverse(), g = [0.04687499995, -2002690873e-13, 8449199096e-15, -88228987e-14, 105787412e-15].reverse(), o(function(n4) {
+              var e3 = 0, o2 = 0, c2 = 0, s2 = n4 * n4, h2 = n4 - 0.785398164;
+              return n4 < 8 ? e3 = (o2 = r3(u, s2)) / (c2 = r3(a, s2)) + i2 * E(n4, 0) * t3.log(n4) : (o2 = r3(f, s2 = 64 / s2), c2 = r3(l, s2), e3 = t3.sqrt(i2 / n4) * (t3.sin(h2) * o2 + t3.cos(h2) * c2 * 8 / n4)), e3;
+            }, function(n4) {
+              var e3 = 0, o2 = 0, u2 = 0, a2 = n4 * n4, f2 = n4 - 2.356194491;
+              return n4 < 8 ? e3 = (o2 = n4 * r3(c, a2)) / (u2 = r3(s, a2)) + i2 * (E(n4, 1) * t3.log(n4) - 1 / n4) : (o2 = r3(h, a2 = 64 / a2), u2 = r3(g, a2), e3 = t3.sqrt(i2 / n4) * (t3.sin(f2) * o2 + t3.cos(f2) * u2 * 8 / n4)), e3;
+            }, 0, 1, -1)), N = (p = [1, 3.5156229, 3.0899424, 1.2067492, 0.2659732, 0.0360768, 45813e-7].reverse(), m = [0.39894228, 0.01328592, 225319e-8, -157565e-8, 916281e-8, -0.02057706, 0.02635537, -0.01647633, 392377e-8].reverse(), d = [0.5, 0.87890594, 0.51498869, 0.15084934, 0.02658733, 301532e-8, 32411e-8].reverse(), v = [0.39894228, -0.03988024, -362018e-8, 163801e-8, -0.01031555, 0.02282967, -0.02895312, 0.01787654, -420059e-8].reverse(), function n4(e3, o2) {
+              if (0 === (o2 = Math.round(o2))) return function(n5) {
+                return n5 <= 3.75 ? r3(p, n5 * n5 / 14.0625) : t3.exp(t3.abs(n5)) / t3.sqrt(t3.abs(n5)) * r3(m, 3.75 / t3.abs(n5));
+              }(e3);
+              if (1 === o2) return function(n5) {
+                return n5 < 3.75 ? n5 * r3(d, n5 * n5 / 14.0625) : (n5 < 0 ? -1 : 1) * t3.exp(t3.abs(n5)) / t3.sqrt(t3.abs(n5)) * r3(v, 3.75 / t3.abs(n5));
+              }(e3);
+              if (o2 < 0) return NaN;
+              if (0 === t3.abs(e3)) return 0;
+              if (e3 == 1 / 0) return 1 / 0;
+              var i3, u2 = 0, a2 = 2 / t3.abs(e3), f2 = 0, l2 = 1, c2 = 0;
+              for (i3 = 2 * t3.round((o2 + t3.round(t3.sqrt(40 * o2))) / 2); i3 > 0; i3--) c2 = i3 * a2 * l2 + f2, f2 = l2, l2 = c2, t3.abs(l2) > 1e10 && (l2 *= 1e-10, f2 *= 1e-10, u2 *= 1e-10), i3 == o2 && (u2 = f2);
+              return u2 *= n4(e3, 0) / l2, e3 < 0 && o2 % 2 ? -u2 : u2;
+            }), w = function() {
+              var n4 = [-0.57721566, 0.4227842, 0.23069756, 0.0348859, 262698e-8, 1075e-7, 74e-7].reverse(), e3 = [1.25331414, -0.07832358, 0.02189568, -0.01062446, 587872e-8, -25154e-7, 53208e-8].reverse(), i3 = [1, 0.15443144, -0.67278579, -0.18156897, -0.01919402, -110404e-8, -4686e-8].reverse(), u2 = [1.25331414, 0.23498619, -0.0365562, 0.01504268, -780353e-8, 325614e-8, -68245e-8].reverse();
+              return o(function(o2) {
+                return o2 <= 2 ? -t3.log(o2 / 2) * N(o2, 0) + r3(n4, o2 * o2 / 4) : t3.exp(-o2) / t3.sqrt(o2) * r3(e3, 2 / o2);
+              }, function(n5) {
+                return n5 <= 2 ? t3.log(n5 / 2) * N(n5, 1) + 1 / n5 * r3(i3, n5 * n5 / 4) : t3.exp(-n5) / t3.sqrt(n5) * r3(u2, 2 / n5);
+              }, 0, 2, 1);
+            }();
+            n3.besselj = E, n3.bessely = M, n3.besseli = N, n3.besselk = w;
+          }, "undefined" == typeof DO_NOT_EXPORT_BESSEL ? r2(t2) : r2({});
+        }, 162: function(n2) {
+          var t2;
+          n2.exports = (t2 = function(n3, t3) {
+            var r2 = Array.prototype.concat, e2 = Array.prototype.slice, o = Object.prototype.toString;
+            function i2(t4, r3) {
+              var e3 = t4 > r3 ? t4 : r3;
+              return n3.pow(10, 17 - ~~(n3.log(e3 > 0 ? e3 : -e3) * n3.LOG10E));
+            }
+            var u = Array.isArray || function(n4) {
+              return "[object Array]" === o.call(n4);
+            };
+            function a(n4) {
+              return "[object Function]" === o.call(n4);
+            }
+            function f(n4) {
+              return "number" == typeof n4 && n4 - n4 == 0;
+            }
+            function l() {
+              return new l._init(arguments);
+            }
+            function c() {
+              return 0;
+            }
+            function s() {
+              return 1;
+            }
+            function h(n4, t4) {
+              return n4 === t4 ? 1 : 0;
+            }
+            l.fn = l.prototype, l._init = function(n4) {
+              if (u(n4[0])) if (u(n4[0][0])) {
+                a(n4[1]) && (n4[0] = l.map(n4[0], n4[1]));
+                for (var t4 = 0; t4 < n4[0].length; t4++) this[t4] = n4[0][t4];
+                this.length = n4[0].length;
+              } else this[0] = a(n4[1]) ? l.map(n4[0], n4[1]) : n4[0], this.length = 1;
+              else if (f(n4[0])) this[0] = l.seq.apply(null, n4), this.length = 1;
+              else {
+                if (n4[0] instanceof l) return l(n4[0].toArray());
+                this[0] = [], this.length = 1;
+              }
+              return this;
+            }, l._init.prototype = l.prototype, l._init.constructor = l, l.utils = { calcRdx: i2, isArray: u, isFunction: a, isNumber: f, toVector: function(n4) {
+              return r2.apply([], n4);
+            } }, l._random_fn = n3.random, l.setRandom = function(n4) {
+              if ("function" != typeof n4) throw new TypeError("fn is not a function");
+              l._random_fn = n4;
+            }, l.extend = function(n4) {
+              var t4, r3;
+              if (1 === arguments.length) {
+                for (r3 in n4) l[r3] = n4[r3];
+                return this;
+              }
+              for (t4 = 1; t4 < arguments.length; t4++) for (r3 in arguments[t4]) n4[r3] = arguments[t4][r3];
+              return n4;
+            }, l.rows = function(n4) {
+              return n4.length || 1;
+            }, l.cols = function(n4) {
+              return n4[0].length || 1;
+            }, l.dimensions = function(n4) {
+              return { rows: l.rows(n4), cols: l.cols(n4) };
+            }, l.row = function(n4, t4) {
+              return u(t4) ? t4.map(function(t5) {
+                return l.row(n4, t5);
+              }) : n4[t4];
+            }, l.rowa = function(n4, t4) {
+              return l.row(n4, t4);
+            }, l.col = function(n4, t4) {
+              if (u(t4)) {
+                var r3 = l.arange(n4.length).map(function() {
+                  return new Array(t4.length);
+                });
+                return t4.forEach(function(t5, e4) {
+                  l.arange(n4.length).forEach(function(o3) {
+                    r3[o3][e4] = n4[o3][t5];
+                  });
+                }), r3;
+              }
+              for (var e3 = new Array(n4.length), o2 = 0; o2 < n4.length; o2++) e3[o2] = [n4[o2][t4]];
+              return e3;
+            }, l.cola = function(n4, t4) {
+              return l.col(n4, t4).map(function(n5) {
+                return n5[0];
+              });
+            }, l.diag = function(n4) {
+              for (var t4 = l.rows(n4), r3 = new Array(t4), e3 = 0; e3 < t4; e3++) r3[e3] = [n4[e3][e3]];
+              return r3;
+            }, l.antidiag = function(n4) {
+              for (var t4 = l.rows(n4) - 1, r3 = new Array(t4), e3 = 0; t4 >= 0; t4--, e3++) r3[e3] = [n4[e3][t4]];
+              return r3;
+            }, l.transpose = function(n4) {
+              var t4, r3, e3, o2, i3, a2 = [];
+              for (u(n4[0]) || (n4 = [n4]), r3 = n4.length, e3 = n4[0].length, i3 = 0; i3 < e3; i3++) {
+                for (t4 = new Array(r3), o2 = 0; o2 < r3; o2++) t4[o2] = n4[o2][i3];
+                a2.push(t4);
+              }
+              return 1 === a2.length ? a2[0] : a2;
+            }, l.map = function(n4, t4, r3) {
+              var e3, o2, i3, a2, f2;
+              for (u(n4[0]) || (n4 = [n4]), o2 = n4.length, i3 = n4[0].length, a2 = r3 ? n4 : new Array(o2), e3 = 0; e3 < o2; e3++) for (a2[e3] || (a2[e3] = new Array(i3)), f2 = 0; f2 < i3; f2++) a2[e3][f2] = t4(n4[e3][f2], e3, f2);
+              return 1 === a2.length ? a2[0] : a2;
+            }, l.cumreduce = function(n4, t4, r3) {
+              var e3, o2, i3, a2, f2;
+              for (u(n4[0]) || (n4 = [n4]), o2 = n4.length, i3 = n4[0].length, a2 = r3 ? n4 : new Array(o2), e3 = 0; e3 < o2; e3++) for (a2[e3] || (a2[e3] = new Array(i3)), i3 > 0 && (a2[e3][0] = n4[e3][0]), f2 = 1; f2 < i3; f2++) a2[e3][f2] = t4(a2[e3][f2 - 1], n4[e3][f2]);
+              return 1 === a2.length ? a2[0] : a2;
+            }, l.alter = function(n4, t4) {
+              return l.map(n4, t4, true);
+            }, l.create = function(n4, t4, r3) {
+              var e3, o2, i3 = new Array(n4);
+              for (a(t4) && (r3 = t4, t4 = n4), e3 = 0; e3 < n4; e3++) for (i3[e3] = new Array(t4), o2 = 0; o2 < t4; o2++) i3[e3][o2] = r3(e3, o2);
+              return i3;
+            }, l.zeros = function(n4, t4) {
+              return f(t4) || (t4 = n4), l.create(n4, t4, c);
+            }, l.ones = function(n4, t4) {
+              return f(t4) || (t4 = n4), l.create(n4, t4, s);
+            }, l.rand = function(n4, t4) {
+              return f(t4) || (t4 = n4), l.create(n4, t4, l._random_fn);
+            }, l.identity = function(n4, t4) {
+              return f(t4) || (t4 = n4), l.create(n4, t4, h);
+            }, l.symmetric = function(n4) {
+              var t4, r3, e3 = n4.length;
+              if (n4.length !== n4[0].length) return false;
+              for (t4 = 0; t4 < e3; t4++) for (r3 = 0; r3 < e3; r3++) if (n4[r3][t4] !== n4[t4][r3]) return false;
+              return true;
+            }, l.clear = function(n4) {
+              return l.alter(n4, c);
+            }, l.seq = function(n4, t4, r3, e3) {
+              a(e3) || (e3 = false);
+              var o2, u2 = [], f2 = i2(n4, t4), l2 = (t4 * f2 - n4 * f2) / ((r3 - 1) * f2), c2 = n4;
+              for (o2 = 0; c2 <= t4 && o2 < r3; c2 = (n4 * f2 + l2 * f2 * ++o2) / f2) u2.push(e3 ? e3(c2, o2) : c2);
+              return u2;
+            }, l.arange = function(n4, r3, e3) {
+              var o2, i3 = [];
+              if (e3 = e3 || 1, r3 === t3 && (r3 = n4, n4 = 0), n4 === r3 || 0 === e3) return [];
+              if (n4 < r3 && e3 < 0) return [];
+              if (n4 > r3 && e3 > 0) return [];
+              if (e3 > 0) for (o2 = n4; o2 < r3; o2 += e3) i3.push(o2);
+              else for (o2 = n4; o2 > r3; o2 += e3) i3.push(o2);
+              return i3;
+            }, l.slice = /* @__PURE__ */ function() {
+              function n4(n5, r3, e3, o2) {
+                var i3, u2 = [], a2 = n5.length;
+                if (r3 === t3 && e3 === t3 && o2 === t3) return l.copy(n5);
+                if (o2 = o2 || 1, (r3 = (r3 = r3 || 0) >= 0 ? r3 : a2 + r3) === (e3 = (e3 = e3 || n5.length) >= 0 ? e3 : a2 + e3) || 0 === o2) return [];
+                if (r3 < e3 && o2 < 0) return [];
+                if (r3 > e3 && o2 > 0) return [];
+                if (o2 > 0) for (i3 = r3; i3 < e3; i3 += o2) u2.push(n5[i3]);
+                else for (i3 = r3; i3 > e3; i3 += o2) u2.push(n5[i3]);
+                return u2;
+              }
+              return function(t4, r3) {
+                var e3, o2;
+                return f((r3 = r3 || {}).row) ? f(r3.col) ? t4[r3.row][r3.col] : n4(l.rowa(t4, r3.row), (e3 = r3.col || {}).start, e3.end, e3.step) : f(r3.col) ? n4(l.cola(t4, r3.col), (o2 = r3.row || {}).start, o2.end, o2.step) : (o2 = r3.row || {}, e3 = r3.col || {}, n4(t4, o2.start, o2.end, o2.step).map(function(t5) {
+                  return n4(t5, e3.start, e3.end, e3.step);
+                }));
+              };
+            }(), l.sliceAssign = function(r3, e3, o2) {
+              var i3, u2;
+              if (f(e3.row)) {
+                if (f(e3.col)) return r3[e3.row][e3.col] = o2;
+                e3.col = e3.col || {}, e3.col.start = e3.col.start || 0, e3.col.end = e3.col.end || r3[0].length, e3.col.step = e3.col.step || 1, i3 = l.arange(e3.col.start, n3.min(r3.length, e3.col.end), e3.col.step);
+                var a2 = e3.row;
+                return i3.forEach(function(n4, t4) {
+                  r3[a2][n4] = o2[t4];
+                }), r3;
+              }
+              if (f(e3.col)) {
+                e3.row = e3.row || {}, e3.row.start = e3.row.start || 0, e3.row.end = e3.row.end || r3.length, e3.row.step = e3.row.step || 1, u2 = l.arange(e3.row.start, n3.min(r3[0].length, e3.row.end), e3.row.step);
+                var c2 = e3.col;
+                return u2.forEach(function(n4, t4) {
+                  r3[n4][c2] = o2[t4];
+                }), r3;
+              }
+              return o2[0].length === t3 && (o2 = [o2]), e3.row.start = e3.row.start || 0, e3.row.end = e3.row.end || r3.length, e3.row.step = e3.row.step || 1, e3.col.start = e3.col.start || 0, e3.col.end = e3.col.end || r3[0].length, e3.col.step = e3.col.step || 1, u2 = l.arange(e3.row.start, n3.min(r3.length, e3.row.end), e3.row.step), i3 = l.arange(e3.col.start, n3.min(r3[0].length, e3.col.end), e3.col.step), u2.forEach(function(n4, t4) {
+                i3.forEach(function(e4, i4) {
+                  r3[n4][e4] = o2[t4][i4];
+                });
+              }), r3;
+            }, l.diagonal = function(n4) {
+              var t4 = l.zeros(n4.length, n4.length);
+              return n4.forEach(function(n5, r3) {
+                t4[r3][r3] = n5;
+              }), t4;
+            }, l.copy = function(n4) {
+              return n4.map(function(n5) {
+                return f(n5) ? n5 : n5.map(function(n6) {
+                  return n6;
+                });
+              });
+            };
+            var g = l.prototype;
+            return g.length = 0, g.push = Array.prototype.push, g.sort = Array.prototype.sort, g.splice = Array.prototype.splice, g.slice = Array.prototype.slice, g.toArray = function() {
+              return this.length > 1 ? e2.call(this) : e2.call(this)[0];
+            }, g.map = function(n4, t4) {
+              return l(l.map(this, n4, t4));
+            }, g.cumreduce = function(n4, t4) {
+              return l(l.cumreduce(this, n4, t4));
+            }, g.alter = function(n4) {
+              return l.alter(this, n4), this;
+            }, function(n4) {
+              for (var t4 = 0; t4 < n4.length; t4++) !function(n5) {
+                g[n5] = function(t5) {
+                  var r3, e3 = this;
+                  return t5 ? (setTimeout(function() {
+                    t5.call(e3, g[n5].call(e3));
+                  }), this) : (r3 = l[n5](this), u(r3) ? l(r3) : r3);
+                };
+              }(n4[t4]);
+            }("transpose clear symmetric rows cols dimensions diag antidiag".split(" ")), function(n4) {
+              for (var t4 = 0; t4 < n4.length; t4++) !function(n5) {
+                g[n5] = function(t5, r3) {
+                  var e3 = this;
+                  return r3 ? (setTimeout(function() {
+                    r3.call(e3, g[n5].call(e3, t5));
+                  }), this) : l(l[n5](this, t5));
+                };
+              }(n4[t4]);
+            }("row col".split(" ")), function(n4) {
+              for (var t4 = 0; t4 < n4.length; t4++) !function(n5) {
+                g[n5] = function() {
+                  return l(l[n5].apply(null, arguments));
+                };
+              }(n4[t4]);
+            }("create zeros ones rand identity".split(" ")), l;
+          }(Math), function(n3, t3) {
+            var r2 = n3.utils.isFunction;
+            function e2(n4, t4) {
+              return n4 - t4;
+            }
+            function o(n4, r3, e3) {
+              return t3.max(r3, t3.min(n4, e3));
+            }
+            n3.sum = function(n4) {
+              for (var t4 = 0, r3 = n4.length; --r3 >= 0; ) t4 += n4[r3];
+              return t4;
+            }, n3.sumsqrd = function(n4) {
+              for (var t4 = 0, r3 = n4.length; --r3 >= 0; ) t4 += n4[r3] * n4[r3];
+              return t4;
+            }, n3.sumsqerr = function(t4) {
+              for (var r3, e3 = n3.mean(t4), o2 = 0, i3 = t4.length; --i3 >= 0; ) o2 += (r3 = t4[i3] - e3) * r3;
+              return o2;
+            }, n3.sumrow = function(n4) {
+              for (var t4 = 0, r3 = n4.length; --r3 >= 0; ) t4 += n4[r3];
+              return t4;
+            }, n3.product = function(n4) {
+              for (var t4 = 1, r3 = n4.length; --r3 >= 0; ) t4 *= n4[r3];
+              return t4;
+            }, n3.min = function(n4) {
+              for (var t4 = n4[0], r3 = 0; ++r3 < n4.length; ) n4[r3] < t4 && (t4 = n4[r3]);
+              return t4;
+            }, n3.max = function(n4) {
+              for (var t4 = n4[0], r3 = 0; ++r3 < n4.length; ) n4[r3] > t4 && (t4 = n4[r3]);
+              return t4;
+            }, n3.unique = function(n4) {
+              for (var t4 = {}, r3 = [], e3 = 0; e3 < n4.length; e3++) t4[n4[e3]] || (t4[n4[e3]] = true, r3.push(n4[e3]));
+              return r3;
+            }, n3.mean = function(t4) {
+              return n3.sum(t4) / t4.length;
+            }, n3.meansqerr = function(t4) {
+              return n3.sumsqerr(t4) / t4.length;
+            }, n3.geomean = function(r3) {
+              var e3 = r3.map(t3.log), o2 = n3.mean(e3);
+              return t3.exp(o2);
+            }, n3.median = function(n4) {
+              var t4 = n4.length, r3 = n4.slice().sort(e2);
+              return 1 & t4 ? r3[t4 / 2 | 0] : (r3[t4 / 2 - 1] + r3[t4 / 2]) / 2;
+            }, n3.cumsum = function(t4) {
+              return n3.cumreduce(t4, function(n4, t5) {
+                return n4 + t5;
+              });
+            }, n3.cumprod = function(t4) {
+              return n3.cumreduce(t4, function(n4, t5) {
+                return n4 * t5;
+              });
+            }, n3.diff = function(n4) {
+              var t4, r3 = [], e3 = n4.length;
+              for (t4 = 1; t4 < e3; t4++) r3.push(n4[t4] - n4[t4 - 1]);
+              return r3;
+            }, n3.rank = function(n4) {
+              var t4, r3 = [], o2 = {};
+              for (t4 = 0; t4 < n4.length; t4++) o2[f = n4[t4]] ? o2[f]++ : (o2[f] = 1, r3.push(f));
+              var i3 = r3.sort(e2), u = {}, a = 1;
+              for (t4 = 0; t4 < i3.length; t4++) {
+                var f, l = o2[f = i3[t4]], c = (a + (a + l - 1)) / 2;
+                u[f] = c, a += l;
+              }
+              return n4.map(function(n5) {
+                return u[n5];
+              });
+            }, n3.mode = function(n4) {
+              var t4, r3 = n4.length, o2 = n4.slice().sort(e2), i3 = 1, u = 0, a = 0, f = [];
+              for (t4 = 0; t4 < r3; t4++) o2[t4] === o2[t4 + 1] ? i3++ : (i3 > u ? (f = [o2[t4]], u = i3, a = 0) : i3 === u && (f.push(o2[t4]), a++), i3 = 1);
+              return 0 === a ? f[0] : f;
+            }, n3.range = function(t4) {
+              return n3.max(t4) - n3.min(t4);
+            }, n3.variance = function(t4, r3) {
+              return n3.sumsqerr(t4) / (t4.length - (r3 ? 1 : 0));
+            }, n3.pooledvariance = function(t4) {
+              return t4.reduce(function(t5, r3) {
+                return t5 + n3.sumsqerr(r3);
+              }, 0) / (t4.reduce(function(n4, t5) {
+                return n4 + t5.length;
+              }, 0) - t4.length);
+            }, n3.deviation = function(t4) {
+              for (var r3 = n3.mean(t4), e3 = t4.length, o2 = new Array(e3), i3 = 0; i3 < e3; i3++) o2[i3] = t4[i3] - r3;
+              return o2;
+            }, n3.stdev = function(r3, e3) {
+              return t3.sqrt(n3.variance(r3, e3));
+            }, n3.pooledstdev = function(r3) {
+              return t3.sqrt(n3.pooledvariance(r3));
+            }, n3.meandev = function(r3) {
+              for (var e3 = n3.mean(r3), o2 = [], i3 = r3.length - 1; i3 >= 0; i3--) o2.push(t3.abs(r3[i3] - e3));
+              return n3.mean(o2);
+            }, n3.meddev = function(r3) {
+              for (var e3 = n3.median(r3), o2 = [], i3 = r3.length - 1; i3 >= 0; i3--) o2.push(t3.abs(r3[i3] - e3));
+              return n3.median(o2);
+            }, n3.coeffvar = function(t4) {
+              return n3.stdev(t4) / n3.mean(t4);
+            }, n3.quartiles = function(n4) {
+              var r3 = n4.length, o2 = n4.slice().sort(e2);
+              return [o2[t3.round(r3 / 4) - 1], o2[t3.round(r3 / 2) - 1], o2[t3.round(3 * r3 / 4) - 1]];
+            }, n3.quantiles = function(n4, r3, i3, u) {
+              var a, f, l, c, s, h = n4.slice().sort(e2), g = [r3.length], p = n4.length;
+              for (void 0 === i3 && (i3 = 3 / 8), void 0 === u && (u = 3 / 8), a = 0; a < r3.length; a++) l = p * (f = r3[a]) + (i3 + f * (1 - i3 - u)), c = t3.floor(o(l, 1, p - 1)), s = o(l - c, 0, 1), g[a] = (1 - s) * h[c - 1] + s * h[c];
+              return g;
+            }, n3.percentile = function(n4, t4, r3) {
+              var o2 = n4.slice().sort(e2), i3 = t4 * (o2.length + (r3 ? 1 : -1)) + (r3 ? 0 : 1), u = parseInt(i3), a = i3 - u;
+              return u + 1 < o2.length ? o2[u - 1] + a * (o2[u] - o2[u - 1]) : o2[u - 1];
+            }, n3.percentileOfScore = function(n4, t4, r3) {
+              var e3, o2, i3 = 0, u = n4.length, a = false;
+              for ("strict" === r3 && (a = true), o2 = 0; o2 < u; o2++) e3 = n4[o2], (a && e3 < t4 || !a && e3 <= t4) && i3++;
+              return i3 / u;
+            }, n3.histogram = function(r3, e3) {
+              e3 = e3 || 4;
+              var o2, i3 = n3.min(r3), u = (n3.max(r3) - i3) / e3, a = r3.length, f = [];
+              for (o2 = 0; o2 < e3; o2++) f[o2] = 0;
+              for (o2 = 0; o2 < a; o2++) f[t3.min(t3.floor((r3[o2] - i3) / u), e3 - 1)] += 1;
+              return f;
+            }, n3.covariance = function(t4, r3) {
+              var e3, o2 = n3.mean(t4), i3 = n3.mean(r3), u = t4.length, a = new Array(u);
+              for (e3 = 0; e3 < u; e3++) a[e3] = (t4[e3] - o2) * (r3[e3] - i3);
+              return n3.sum(a) / (u - 1);
+            }, n3.corrcoeff = function(t4, r3) {
+              return n3.covariance(t4, r3) / n3.stdev(t4, 1) / n3.stdev(r3, 1);
+            }, n3.spearmancoeff = function(t4, r3) {
+              return t4 = n3.rank(t4), r3 = n3.rank(r3), n3.corrcoeff(t4, r3);
+            }, n3.stanMoment = function(r3, e3) {
+              for (var o2 = n3.mean(r3), i3 = n3.stdev(r3), u = r3.length, a = 0, f = 0; f < u; f++) a += t3.pow((r3[f] - o2) / i3, e3);
+              return a / r3.length;
+            }, n3.skewness = function(t4) {
+              return n3.stanMoment(t4, 3);
+            }, n3.kurtosis = function(t4) {
+              return n3.stanMoment(t4, 4) - 3;
+            };
+            var i2 = n3.prototype;
+            !function(t4) {
+              for (var e3 = 0; e3 < t4.length; e3++) !function(t5) {
+                i2[t5] = function(e4, o2) {
+                  var u = [], a = 0, f = this;
+                  if (r2(e4) && (o2 = e4, e4 = false), o2) return setTimeout(function() {
+                    o2.call(f, i2[t5].call(f, e4));
+                  }), this;
+                  if (this.length > 1) {
+                    for (f = true === e4 ? this : this.transpose(); a < f.length; a++) u[a] = n3[t5](f[a]);
+                    return u;
+                  }
+                  return n3[t5](this[0], e4);
+                };
+              }(t4[e3]);
+            }("cumsum cumprod".split(" ")), function(t4) {
+              for (var e3 = 0; e3 < t4.length; e3++) !function(t5) {
+                i2[t5] = function(e4, o2) {
+                  var u = [], a = 0, f = this;
+                  if (r2(e4) && (o2 = e4, e4 = false), o2) return setTimeout(function() {
+                    o2.call(f, i2[t5].call(f, e4));
+                  }), this;
+                  if (this.length > 1) {
+                    for ("sumrow" !== t5 && (f = true === e4 ? this : this.transpose()); a < f.length; a++) u[a] = n3[t5](f[a]);
+                    return true === e4 ? n3[t5](n3.utils.toVector(u)) : u;
+                  }
+                  return n3[t5](this[0], e4);
+                };
+              }(t4[e3]);
+            }("sum sumsqrd sumsqerr sumrow product min max unique mean meansqerr geomean median diff rank mode range variance deviation stdev meandev meddev coeffvar quartiles histogram skewness kurtosis".split(" ")), function(t4) {
+              for (var e3 = 0; e3 < t4.length; e3++) !function(t5) {
+                i2[t5] = function() {
+                  var e4, o2 = [], u = 0, a = this, f = Array.prototype.slice.call(arguments);
+                  if (r2(f[f.length - 1])) {
+                    e4 = f[f.length - 1];
+                    var l = f.slice(0, f.length - 1);
+                    return setTimeout(function() {
+                      e4.call(a, i2[t5].apply(a, l));
+                    }), this;
+                  }
+                  e4 = void 0;
+                  var c = function(r3) {
+                    return n3[t5].apply(a, [r3].concat(f));
+                  };
+                  if (this.length > 1) {
+                    for (a = a.transpose(); u < a.length; u++) o2[u] = c(a[u]);
+                    return o2;
+                  }
+                  return c(this[0]);
+                };
+              }(t4[e3]);
+            }("quantiles percentileOfScore".split(" "));
+          }(t2, Math), function(n3, t3) {
+            n3.gammaln = function(n4) {
+              var r2, e2, o, i2 = 0, u = [76.18009172947146, -86.50532032941678, 24.01409824083091, -1.231739572450155, 0.001208650973866179, -5395239384953e-18], a = 1.000000000190015;
+              for (o = (e2 = r2 = n4) + 5.5, o -= (r2 + 0.5) * t3.log(o); i2 < 6; i2++) a += u[i2] / ++e2;
+              return t3.log(2.5066282746310007 * a / r2) - o;
+            }, n3.loggam = function(n4) {
+              var r2, e2, o, i2, u, a, f, l = [0.08333333333333333, -0.002777777777777778, 7936507936507937e-19, -5952380952380952e-19, 8417508417508418e-19, -0.001917526917526918, 0.00641025641025641, -0.02955065359477124, 0.1796443723688307, -1.3924322169059];
+              if (r2 = n4, f = 0, 1 == n4 || 2 == n4) return 0;
+              for (n4 <= 7 && (r2 = n4 + (f = t3.floor(7 - n4))), e2 = 1 / (r2 * r2), o = 2 * t3.PI, u = l[9], a = 8; a >= 0; a--) u *= e2, u += l[a];
+              if (i2 = u / r2 + 0.5 * t3.log(o) + (r2 - 0.5) * t3.log(r2) - r2, n4 <= 7) for (a = 1; a <= f; a++) i2 -= t3.log(r2 - 1), r2 -= 1;
+              return i2;
+            }, n3.gammafn = function(n4) {
+              var r2, e2, o, i2, u = [-1.716185138865495, 24.76565080557592, -379.80425647094563, 629.3311553128184, 866.9662027904133, -31451.272968848367, -36144.413418691176, 66456.14382024054], a = [-30.8402300119739, 315.35062697960416, -1015.1563674902192, -3107.771671572311, 22538.11842098015, 4755.846277527881, -134659.9598649693, -115132.2596755535], f = false, l = 0, c = 0, s = 0, h = n4;
+              if (n4 > 171.6243769536076) return 1 / 0;
+              if (h <= 0) {
+                if (!(i2 = h % 1 + 36e-17)) return 1 / 0;
+                f = (1 & h ? -1 : 1) * t3.PI / t3.sin(t3.PI * i2), h = 1 - h;
+              }
+              for (o = h, e2 = h < 1 ? h++ : (h -= l = (0 | h) - 1) - 1, r2 = 0; r2 < 8; ++r2) s = (s + u[r2]) * e2, c = c * e2 + a[r2];
+              if (i2 = s / c + 1, o < h) i2 /= o;
+              else if (o > h) for (r2 = 0; r2 < l; ++r2) i2 *= h, h++;
+              return f && (i2 = f / i2), i2;
+            }, n3.gammap = function(t4, r2) {
+              return n3.lowRegGamma(t4, r2) * n3.gammafn(t4);
+            }, n3.lowRegGamma = function(r2, e2) {
+              var o, i2 = n3.gammaln(r2), u = r2, a = 1 / r2, f = a, l = e2 + 1 - r2, c = 1 / 1e-30, s = 1 / l, h = s, g = 1, p = -~(8.5 * t3.log(r2 >= 1 ? r2 : 1 / r2) + 0.4 * r2 + 17);
+              if (e2 < 0 || r2 <= 0) return NaN;
+              if (e2 < r2 + 1) {
+                for (; g <= p; g++) a += f *= e2 / ++u;
+                return a * t3.exp(-e2 + r2 * t3.log(e2) - i2);
+              }
+              for (; g <= p; g++) h *= (s = 1 / (s = (o = -g * (g - r2)) * s + (l += 2))) * (c = l + o / c);
+              return 1 - h * t3.exp(-e2 + r2 * t3.log(e2) - i2);
+            }, n3.factorialln = function(t4) {
+              return t4 < 0 ? NaN : n3.gammaln(t4 + 1);
+            }, n3.factorial = function(t4) {
+              return t4 < 0 ? NaN : n3.gammafn(t4 + 1);
+            }, n3.combination = function(r2, e2) {
+              return r2 > 170 || e2 > 170 ? t3.exp(n3.combinationln(r2, e2)) : n3.factorial(r2) / n3.factorial(e2) / n3.factorial(r2 - e2);
+            }, n3.combinationln = function(t4, r2) {
+              return n3.factorialln(t4) - n3.factorialln(r2) - n3.factorialln(t4 - r2);
+            }, n3.permutation = function(t4, r2) {
+              return n3.factorial(t4) / n3.factorial(t4 - r2);
+            }, n3.betafn = function(r2, e2) {
+              if (!(r2 <= 0 || e2 <= 0)) return r2 + e2 > 170 ? t3.exp(n3.betaln(r2, e2)) : n3.gammafn(r2) * n3.gammafn(e2) / n3.gammafn(r2 + e2);
+            }, n3.betaln = function(t4, r2) {
+              return n3.gammaln(t4) + n3.gammaln(r2) - n3.gammaln(t4 + r2);
+            }, n3.betacf = function(n4, r2, e2) {
+              var o, i2, u, a, f = 1e-30, l = 1, c = r2 + e2, s = r2 + 1, h = r2 - 1, g = 1, p = 1 - c * n4 / s;
+              for (t3.abs(p) < f && (p = f), a = p = 1 / p; l <= 100 && (p = 1 + (i2 = l * (e2 - l) * n4 / ((h + (o = 2 * l)) * (r2 + o))) * p, t3.abs(p) < f && (p = f), g = 1 + i2 / g, t3.abs(g) < f && (g = f), a *= (p = 1 / p) * g, p = 1 + (i2 = -(r2 + l) * (c + l) * n4 / ((r2 + o) * (s + o))) * p, t3.abs(p) < f && (p = f), g = 1 + i2 / g, t3.abs(g) < f && (g = f), a *= u = (p = 1 / p) * g, !(t3.abs(u - 1) < 3e-7)); l++) ;
+              return a;
+            }, n3.gammapinv = function(r2, e2) {
+              var o, i2, u, a, f, l, c = 0, s = e2 - 1, h = n3.gammaln(e2);
+              if (r2 >= 1) return t3.max(100, e2 + 100 * t3.sqrt(e2));
+              if (r2 <= 0) return 0;
+              for (e2 > 1 ? (f = t3.log(s), l = t3.exp(s * (f - 1) - h), a = r2 < 0.5 ? r2 : 1 - r2, o = (2.30753 + 0.27061 * (i2 = t3.sqrt(-2 * t3.log(a)))) / (1 + i2 * (0.99229 + 0.04481 * i2)) - i2, r2 < 0.5 && (o = -o), o = t3.max(1e-3, e2 * t3.pow(1 - 1 / (9 * e2) - o / (3 * t3.sqrt(e2)), 3))) : o = r2 < (i2 = 1 - e2 * (0.253 + 0.12 * e2)) ? t3.pow(r2 / i2, 1 / e2) : 1 - t3.log(1 - (r2 - i2) / (1 - i2)); c < 12; c++) {
+                if (o <= 0) return 0;
+                if ((o -= i2 = (u = (n3.lowRegGamma(e2, o) - r2) / (i2 = e2 > 1 ? l * t3.exp(-(o - s) + s * (t3.log(o) - f)) : t3.exp(-o + s * t3.log(o) - h))) / (1 - 0.5 * t3.min(1, u * ((e2 - 1) / o - 1)))) <= 0 && (o = 0.5 * (o + i2)), t3.abs(i2) < 1e-8 * o) break;
+              }
+              return o;
+            }, n3.erf = function(n4) {
+              var r2, e2, o, i2, u = [-1.3026537197817094, 0.6419697923564902, 0.019476473204185836, -0.00956151478680863, -946595344482036e-18, 366839497852761e-18, 42523324806907e-18, -20278578112534e-18, -1624290004647e-18, 130365583558e-17, 15626441722e-18, -85238095915e-18, 6529054439e-18, 5059343495e-18, -991364156e-18, -227365122e-18, 96467911e-18, 2394038e-18, -6886027e-18, 894487e-18, 313092e-18, -112708e-18, 381e-18, 7106e-18, -1523e-18, -94e-18, 121e-18, -28e-18], a = u.length - 1, f = false, l = 0, c = 0;
+              for (n4 < 0 && (n4 = -n4, f = true), e2 = 4 * (r2 = 2 / (2 + n4)) - 2; a > 0; a--) o = l, l = e2 * l - c + u[a], c = o;
+              return i2 = r2 * t3.exp(-n4 * n4 + 0.5 * (u[0] + e2 * l) - c), f ? i2 - 1 : 1 - i2;
+            }, n3.erfc = function(t4) {
+              return 1 - n3.erf(t4);
+            }, n3.erfcinv = function(r2) {
+              var e2, o, i2, u, a = 0;
+              if (r2 >= 2) return -100;
+              if (r2 <= 0) return 100;
+              for (u = r2 < 1 ? r2 : 2 - r2, e2 = -0.70711 * ((2.30753 + 0.27061 * (i2 = t3.sqrt(-2 * t3.log(u / 2)))) / (1 + i2 * (0.99229 + 0.04481 * i2)) - i2); a < 2; a++) e2 += (o = n3.erfc(e2) - u) / (1.1283791670955126 * t3.exp(-e2 * e2) - e2 * o);
+              return r2 < 1 ? e2 : -e2;
+            }, n3.ibetainv = function(r2, e2, o) {
+              var i2, u, a, f, l, c, s, h, g, p, m = e2 - 1, d = o - 1, v = 0;
+              if (r2 <= 0) return 0;
+              if (r2 >= 1) return 1;
+              for (e2 >= 1 && o >= 1 ? (a = r2 < 0.5 ? r2 : 1 - r2, c = (2.30753 + 0.27061 * (f = t3.sqrt(-2 * t3.log(a)))) / (1 + f * (0.99229 + 0.04481 * f)) - f, r2 < 0.5 && (c = -c), s = (c * c - 3) / 6, h = 2 / (1 / (2 * e2 - 1) + 1 / (2 * o - 1)), g = c * t3.sqrt(s + h) / h - (1 / (2 * o - 1) - 1 / (2 * e2 - 1)) * (s + 5 / 6 - 2 / (3 * h)), c = e2 / (e2 + o * t3.exp(2 * g))) : (i2 = t3.log(e2 / (e2 + o)), u = t3.log(o / (e2 + o)), c = r2 < (f = t3.exp(e2 * i2) / e2) / (g = f + (l = t3.exp(o * u) / o)) ? t3.pow(e2 * g * r2, 1 / e2) : 1 - t3.pow(o * g * (1 - r2), 1 / o)), p = -n3.gammaln(e2) - n3.gammaln(o) + n3.gammaln(e2 + o); v < 10; v++) {
+                if (0 === c || 1 === c) return c;
+                if ((c -= f = (l = (n3.ibeta(c, e2, o) - r2) / (f = t3.exp(m * t3.log(c) + d * t3.log(1 - c) + p))) / (1 - 0.5 * t3.min(1, l * (m / c - d / (1 - c))))) <= 0 && (c = 0.5 * (c + f)), c >= 1 && (c = 0.5 * (c + f + 1)), t3.abs(f) < 1e-8 * c && v > 0) break;
+              }
+              return c;
+            }, n3.ibeta = function(r2, e2, o) {
+              var i2 = 0 === r2 || 1 === r2 ? 0 : t3.exp(n3.gammaln(e2 + o) - n3.gammaln(e2) - n3.gammaln(o) + e2 * t3.log(r2) + o * t3.log(1 - r2));
+              return !(r2 < 0 || r2 > 1) && (r2 < (e2 + 1) / (e2 + o + 2) ? i2 * n3.betacf(r2, e2, o) / e2 : 1 - i2 * n3.betacf(1 - r2, o, e2) / o);
+            }, n3.randn = function(r2, e2) {
+              var o, i2, u, a, f;
+              if (e2 || (e2 = r2), r2) return n3.create(r2, e2, function() {
+                return n3.randn();
+              });
+              do {
+                o = n3._random_fn(), i2 = 1.7156 * (n3._random_fn() - 0.5), f = (u = o - 0.449871) * u + (a = t3.abs(i2) + 0.386595) * (0.196 * a - 0.25472 * u);
+              } while (f > 0.27597 && (f > 0.27846 || i2 * i2 > -4 * t3.log(o) * o * o));
+              return i2 / o;
+            }, n3.randg = function(r2, e2, o) {
+              var i2, u, a, f, l, c, s = r2;
+              if (o || (o = e2), r2 || (r2 = 1), e2) return (c = n3.zeros(e2, o)).alter(function() {
+                return n3.randg(r2);
+              }), c;
+              r2 < 1 && (r2 += 1), i2 = r2 - 1 / 3, u = 1 / t3.sqrt(9 * i2);
+              do {
+                do {
+                  f = 1 + u * (l = n3.randn());
+                } while (f <= 0);
+                f *= f * f, a = n3._random_fn();
+              } while (a > 1 - 0.331 * t3.pow(l, 4) && t3.log(a) > 0.5 * l * l + i2 * (1 - f + t3.log(f)));
+              if (r2 == s) return i2 * f;
+              do {
+                a = n3._random_fn();
+              } while (0 === a);
+              return t3.pow(a, 1 / s) * i2 * f;
+            }, function(t4) {
+              for (var r2 = 0; r2 < t4.length; r2++) !function(t5) {
+                n3.fn[t5] = function() {
+                  return n3(n3.map(this, function(r3) {
+                    return n3[t5](r3);
+                  }));
+                };
+              }(t4[r2]);
+            }("gammaln gammafn factorial factorialln".split(" ")), function(t4) {
+              for (var r2 = 0; r2 < t4.length; r2++) !function(t5) {
+                n3.fn[t5] = function() {
+                  return n3(n3[t5].apply(null, arguments));
+                };
+              }(t4[r2]);
+            }("randn".split(" "));
+          }(t2, Math), function(n3, t3) {
+            function r2(n4, r3, e3, o) {
+              for (var i2, u = 0, a = 1, f = 1, l = 1, c = 0, s = 0; t3.abs((f - s) / f) > o; ) s = f, a = l + (i2 = -(r3 + c) * (r3 + e3 + c) * n4 / (r3 + 2 * c) / (r3 + 2 * c + 1)) * a, f = (u = f + i2 * u) + (i2 = (c += 1) * (e3 - c) * n4 / (r3 + 2 * c - 1) / (r3 + 2 * c)) * f, u /= l = a + i2 * l, a /= l, f /= l, l = 1;
+              return f / r3;
+            }
+            function e2(r3, e3, o) {
+              var i2 = [0.9815606342467192, 0.9041172563704749, 0.7699026741943047, 0.5873179542866175, 0.3678314989981802, 0.1252334085114689], u = [0.04717533638651183, 0.10693932599531843, 0.16007832854334622, 0.20316742672306592, 0.2334925365383548, 0.24914704581340277], a = 0.5 * r3;
+              if (a >= 8) return 1;
+              var f, l = 2 * n3.normal.cdf(a, 0, 1, 1, 0) - 1;
+              l = l >= t3.exp(-50 / o) ? t3.pow(l, o) : 0;
+              for (var c = a, s = (8 - a) / (f = r3 > 3 ? 2 : 3), h = c + s, g = 0, p = o - 1, m = 1; m <= f; m++) {
+                for (var d = 0, v = 0.5 * (h + c), E = 0.5 * (h - c), M = 1; M <= 12; M++) {
+                  var N, w = v + E * (6 < M ? i2[(N = 12 - M + 1) - 1] : -i2[(N = M) - 1]), y2 = w * w;
+                  if (y2 > 60) break;
+                  var I = 2 * n3.normal.cdf(w, 0, 1, 1, 0) * 0.5 - 2 * n3.normal.cdf(w, r3, 1, 1, 0) * 0.5;
+                  I >= t3.exp(-30 / p) && (d += I = u[N - 1] * t3.exp(-0.5 * y2) * t3.pow(I, p));
+                }
+                g += d *= 2 * E * o / t3.sqrt(2 * t3.PI), c = h, h += s;
+              }
+              return (l += g) <= t3.exp(-30 / e3) ? 0 : (l = t3.pow(l, e3)) >= 1 ? 1 : l;
+            }
+            !function(t4) {
+              for (var r3 = 0; r3 < t4.length; r3++) !function(t5) {
+                n3[t5] = function n4(t6, r4, e3) {
+                  return this instanceof n4 ? (this._a = t6, this._b = r4, this._c = e3, this) : new n4(t6, r4, e3);
+                }, n3.fn[t5] = function(r4, e3, o) {
+                  var i2 = n3[t5](r4, e3, o);
+                  return i2.data = this, i2;
+                }, n3[t5].prototype.sample = function(r4) {
+                  var e3 = this._a, o = this._b, i2 = this._c;
+                  return r4 ? n3.alter(r4, function() {
+                    return n3[t5].sample(e3, o, i2);
+                  }) : n3[t5].sample(e3, o, i2);
+                }, function(r4) {
+                  for (var e3 = 0; e3 < r4.length; e3++) !function(r5) {
+                    n3[t5].prototype[r5] = function(e4) {
+                      var o = this._a, i2 = this._b, u = this._c;
+                      return e4 || 0 === e4 || (e4 = this.data), "number" != typeof e4 ? n3.fn.map.call(e4, function(e5) {
+                        return n3[t5][r5](e5, o, i2, u);
+                      }) : n3[t5][r5](e4, o, i2, u);
+                    };
+                  }(r4[e3]);
+                }("pdf cdf inv".split(" ")), function(r4) {
+                  for (var e3 = 0; e3 < r4.length; e3++) !function(r5) {
+                    n3[t5].prototype[r5] = function() {
+                      return n3[t5][r5](this._a, this._b, this._c);
+                    };
+                  }(r4[e3]);
+                }("mean median mode variance".split(" "));
+              }(t4[r3]);
+            }("beta centralF cauchy chisquare exponential gamma invgamma kumaraswamy laplace lognormal noncentralt normal pareto studentt weibull uniform binomial negbin hypgeom poisson triangular tukey arcsine".split(" ")), n3.extend(n3.beta, { pdf: function(r3, e3, o) {
+              return r3 > 1 || r3 < 0 ? 0 : 1 == e3 && 1 == o ? 1 : e3 < 512 && o < 512 ? t3.pow(r3, e3 - 1) * t3.pow(1 - r3, o - 1) / n3.betafn(e3, o) : t3.exp((e3 - 1) * t3.log(r3) + (o - 1) * t3.log(1 - r3) - n3.betaln(e3, o));
+            }, cdf: function(t4, r3, e3) {
+              return t4 > 1 || t4 < 0 ? 1 * (t4 > 1) : n3.ibeta(t4, r3, e3);
+            }, inv: function(t4, r3, e3) {
+              return n3.ibetainv(t4, r3, e3);
+            }, mean: function(n4, t4) {
+              return n4 / (n4 + t4);
+            }, median: function(t4, r3) {
+              return n3.ibetainv(0.5, t4, r3);
+            }, mode: function(n4, t4) {
+              return (n4 - 1) / (n4 + t4 - 2);
+            }, sample: function(t4, r3) {
+              var e3 = n3.randg(t4);
+              return e3 / (e3 + n3.randg(r3));
+            }, variance: function(n4, r3) {
+              return n4 * r3 / (t3.pow(n4 + r3, 2) * (n4 + r3 + 1));
+            } }), n3.extend(n3.centralF, { pdf: function(r3, e3, o) {
+              var i2;
+              return r3 < 0 ? 0 : e3 <= 2 ? 0 === r3 && e3 < 2 ? 1 / 0 : 0 === r3 && 2 === e3 ? 1 : 1 / n3.betafn(e3 / 2, o / 2) * t3.pow(e3 / o, e3 / 2) * t3.pow(r3, e3 / 2 - 1) * t3.pow(1 + e3 / o * r3, -(e3 + o) / 2) : (i2 = e3 * r3 / (o + r3 * e3), e3 * (o / (o + r3 * e3)) / 2 * n3.binomial.pdf((e3 - 2) / 2, (e3 + o - 2) / 2, i2));
+            }, cdf: function(t4, r3, e3) {
+              return t4 < 0 ? 0 : n3.ibeta(r3 * t4 / (r3 * t4 + e3), r3 / 2, e3 / 2);
+            }, inv: function(t4, r3, e3) {
+              return e3 / (r3 * (1 / n3.ibetainv(t4, r3 / 2, e3 / 2) - 1));
+            }, mean: function(n4, t4) {
+              return t4 > 2 ? t4 / (t4 - 2) : void 0;
+            }, mode: function(n4, t4) {
+              return n4 > 2 ? t4 * (n4 - 2) / (n4 * (t4 + 2)) : void 0;
+            }, sample: function(t4, r3) {
+              return 2 * n3.randg(t4 / 2) / t4 / (2 * n3.randg(r3 / 2) / r3);
+            }, variance: function(n4, t4) {
+              if (!(t4 <= 4)) return 2 * t4 * t4 * (n4 + t4 - 2) / (n4 * (t4 - 2) * (t4 - 2) * (t4 - 4));
+            } }), n3.extend(n3.cauchy, { pdf: function(n4, r3, e3) {
+              return e3 < 0 ? 0 : e3 / (t3.pow(n4 - r3, 2) + t3.pow(e3, 2)) / t3.PI;
+            }, cdf: function(n4, r3, e3) {
+              return t3.atan((n4 - r3) / e3) / t3.PI + 0.5;
+            }, inv: function(n4, r3, e3) {
+              return r3 + e3 * t3.tan(t3.PI * (n4 - 0.5));
+            }, median: function(n4) {
+              return n4;
+            }, mode: function(n4) {
+              return n4;
+            }, sample: function(r3, e3) {
+              return n3.randn() * t3.sqrt(1 / (2 * n3.randg(0.5))) * e3 + r3;
+            } }), n3.extend(n3.chisquare, { pdf: function(r3, e3) {
+              return r3 < 0 ? 0 : 0 === r3 && 2 === e3 ? 0.5 : t3.exp((e3 / 2 - 1) * t3.log(r3) - r3 / 2 - e3 / 2 * t3.log(2) - n3.gammaln(e3 / 2));
+            }, cdf: function(t4, r3) {
+              return t4 < 0 ? 0 : n3.lowRegGamma(r3 / 2, t4 / 2);
+            }, inv: function(t4, r3) {
+              return 2 * n3.gammapinv(t4, 0.5 * r3);
+            }, mean: function(n4) {
+              return n4;
+            }, median: function(n4) {
+              return n4 * t3.pow(1 - 2 / (9 * n4), 3);
+            }, mode: function(n4) {
+              return n4 - 2 > 0 ? n4 - 2 : 0;
+            }, sample: function(t4) {
+              return 2 * n3.randg(t4 / 2);
+            }, variance: function(n4) {
+              return 2 * n4;
+            } }), n3.extend(n3.exponential, { pdf: function(n4, r3) {
+              return n4 < 0 ? 0 : r3 * t3.exp(-r3 * n4);
+            }, cdf: function(n4, r3) {
+              return n4 < 0 ? 0 : 1 - t3.exp(-r3 * n4);
+            }, inv: function(n4, r3) {
+              return -t3.log(1 - n4) / r3;
+            }, mean: function(n4) {
+              return 1 / n4;
+            }, median: function(n4) {
+              return 1 / n4 * t3.log(2);
+            }, mode: function() {
+              return 0;
+            }, sample: function(r3) {
+              return -1 / r3 * t3.log(n3._random_fn());
+            }, variance: function(n4) {
+              return t3.pow(n4, -2);
+            } }), n3.extend(n3.gamma, { pdf: function(r3, e3, o) {
+              return r3 < 0 ? 0 : 0 === r3 && 1 === e3 ? 1 / o : t3.exp((e3 - 1) * t3.log(r3) - r3 / o - n3.gammaln(e3) - e3 * t3.log(o));
+            }, cdf: function(t4, r3, e3) {
+              return t4 < 0 ? 0 : n3.lowRegGamma(r3, t4 / e3);
+            }, inv: function(t4, r3, e3) {
+              return n3.gammapinv(t4, r3) * e3;
+            }, mean: function(n4, t4) {
+              return n4 * t4;
+            }, mode: function(n4, t4) {
+              if (n4 > 1) return (n4 - 1) * t4;
+            }, sample: function(t4, r3) {
+              return n3.randg(t4) * r3;
+            }, variance: function(n4, t4) {
+              return n4 * t4 * t4;
+            } }), n3.extend(n3.invgamma, { pdf: function(r3, e3, o) {
+              return r3 <= 0 ? 0 : t3.exp(-(e3 + 1) * t3.log(r3) - o / r3 - n3.gammaln(e3) + e3 * t3.log(o));
+            }, cdf: function(t4, r3, e3) {
+              return t4 <= 0 ? 0 : 1 - n3.lowRegGamma(r3, e3 / t4);
+            }, inv: function(t4, r3, e3) {
+              return e3 / n3.gammapinv(1 - t4, r3);
+            }, mean: function(n4, t4) {
+              return n4 > 1 ? t4 / (n4 - 1) : void 0;
+            }, mode: function(n4, t4) {
+              return t4 / (n4 + 1);
+            }, sample: function(t4, r3) {
+              return r3 / n3.randg(t4);
+            }, variance: function(n4, t4) {
+              if (!(n4 <= 2)) return t4 * t4 / ((n4 - 1) * (n4 - 1) * (n4 - 2));
+            } }), n3.extend(n3.kumaraswamy, { pdf: function(n4, r3, e3) {
+              return 0 === n4 && 1 === r3 ? e3 : 1 === n4 && 1 === e3 ? r3 : t3.exp(t3.log(r3) + t3.log(e3) + (r3 - 1) * t3.log(n4) + (e3 - 1) * t3.log(1 - t3.pow(n4, r3)));
+            }, cdf: function(n4, r3, e3) {
+              return n4 < 0 ? 0 : n4 > 1 ? 1 : 1 - t3.pow(1 - t3.pow(n4, r3), e3);
+            }, inv: function(n4, r3, e3) {
+              return t3.pow(1 - t3.pow(1 - n4, 1 / e3), 1 / r3);
+            }, mean: function(t4, r3) {
+              return r3 * n3.gammafn(1 + 1 / t4) * n3.gammafn(r3) / n3.gammafn(1 + 1 / t4 + r3);
+            }, median: function(n4, r3) {
+              return t3.pow(1 - t3.pow(2, -1 / r3), 1 / n4);
+            }, mode: function(n4, r3) {
+              if (n4 >= 1 && r3 >= 1 && 1 !== n4 && 1 !== r3) return t3.pow((n4 - 1) / (n4 * r3 - 1), 1 / n4);
+            }, variance: function() {
+              throw new Error("variance not yet implemented");
+            } }), n3.extend(n3.lognormal, { pdf: function(n4, r3, e3) {
+              return n4 <= 0 ? 0 : t3.exp(-t3.log(n4) - 0.5 * t3.log(2 * t3.PI) - t3.log(e3) - t3.pow(t3.log(n4) - r3, 2) / (2 * e3 * e3));
+            }, cdf: function(r3, e3, o) {
+              return r3 < 0 ? 0 : 0.5 + 0.5 * n3.erf((t3.log(r3) - e3) / t3.sqrt(2 * o * o));
+            }, inv: function(r3, e3, o) {
+              return t3.exp(-1.4142135623730951 * o * n3.erfcinv(2 * r3) + e3);
+            }, mean: function(n4, r3) {
+              return t3.exp(n4 + r3 * r3 / 2);
+            }, median: function(n4) {
+              return t3.exp(n4);
+            }, mode: function(n4, r3) {
+              return t3.exp(n4 - r3 * r3);
+            }, sample: function(r3, e3) {
+              return t3.exp(n3.randn() * e3 + r3);
+            }, variance: function(n4, r3) {
+              return (t3.exp(r3 * r3) - 1) * t3.exp(2 * n4 + r3 * r3);
+            } }), n3.extend(n3.noncentralt, { pdf: function(r3, e3, o) {
+              return t3.abs(o) < 1e-14 ? n3.studentt.pdf(r3, e3) : t3.abs(r3) < 1e-14 ? t3.exp(n3.gammaln((e3 + 1) / 2) - o * o / 2 - 0.5 * t3.log(t3.PI * e3) - n3.gammaln(e3 / 2)) : e3 / r3 * (n3.noncentralt.cdf(r3 * t3.sqrt(1 + 2 / e3), e3 + 2, o) - n3.noncentralt.cdf(r3, e3, o));
+            }, cdf: function(r3, e3, o) {
+              var i2 = 1e-14;
+              if (t3.abs(o) < i2) return n3.studentt.cdf(r3, e3);
+              var u = false;
+              r3 < 0 && (u = true, o = -o);
+              for (var a = n3.normal.cdf(-o, 0, 1), f = i2 + 1, l = f, c = r3 * r3 / (r3 * r3 + e3), s = 0, h = t3.exp(-o * o / 2), g = t3.exp(-o * o / 2 - 0.5 * t3.log(2) - n3.gammaln(1.5)) * o; s < 200 || l > i2 || f > i2; ) l = f, s > 0 && (h *= o * o / (2 * s), g *= o * o / (2 * (s + 0.5))), a += 0.5 * (f = h * n3.beta.cdf(c, s + 0.5, e3 / 2) + g * n3.beta.cdf(c, s + 1, e3 / 2)), s++;
+              return u ? 1 - a : a;
+            } }), n3.extend(n3.normal, { pdf: function(n4, r3, e3) {
+              return t3.exp(-0.5 * t3.log(2 * t3.PI) - t3.log(e3) - t3.pow(n4 - r3, 2) / (2 * e3 * e3));
+            }, cdf: function(r3, e3, o) {
+              return 0.5 * (1 + n3.erf((r3 - e3) / t3.sqrt(2 * o * o)));
+            }, inv: function(t4, r3, e3) {
+              return -1.4142135623730951 * e3 * n3.erfcinv(2 * t4) + r3;
+            }, mean: function(n4) {
+              return n4;
+            }, median: function(n4) {
+              return n4;
+            }, mode: function(n4) {
+              return n4;
+            }, sample: function(t4, r3) {
+              return n3.randn() * r3 + t4;
+            }, variance: function(n4, t4) {
+              return t4 * t4;
+            } }), n3.extend(n3.pareto, { pdf: function(n4, r3, e3) {
+              return n4 < r3 ? 0 : e3 * t3.pow(r3, e3) / t3.pow(n4, e3 + 1);
+            }, cdf: function(n4, r3, e3) {
+              return n4 < r3 ? 0 : 1 - t3.pow(r3 / n4, e3);
+            }, inv: function(n4, r3, e3) {
+              return r3 / t3.pow(1 - n4, 1 / e3);
+            }, mean: function(n4, r3) {
+              if (!(r3 <= 1)) return r3 * t3.pow(n4, r3) / (r3 - 1);
+            }, median: function(n4, r3) {
+              return n4 * (r3 * t3.SQRT2);
+            }, mode: function(n4) {
+              return n4;
+            }, variance: function(n4, r3) {
+              if (!(r3 <= 2)) return n4 * n4 * r3 / (t3.pow(r3 - 1, 2) * (r3 - 2));
+            } }), n3.extend(n3.studentt, { pdf: function(r3, e3) {
+              return e3 = e3 > 1e100 ? 1e100 : e3, 1 / (t3.sqrt(e3) * n3.betafn(0.5, e3 / 2)) * t3.pow(1 + r3 * r3 / e3, -(e3 + 1) / 2);
+            }, cdf: function(r3, e3) {
+              var o = e3 / 2;
+              return n3.ibeta((r3 + t3.sqrt(r3 * r3 + e3)) / (2 * t3.sqrt(r3 * r3 + e3)), o, o);
+            }, inv: function(r3, e3) {
+              var o = n3.ibetainv(2 * t3.min(r3, 1 - r3), 0.5 * e3, 0.5);
+              return o = t3.sqrt(e3 * (1 - o) / o), r3 > 0.5 ? o : -o;
+            }, mean: function(n4) {
+              return n4 > 1 ? 0 : void 0;
+            }, median: function() {
+              return 0;
+            }, mode: function() {
+              return 0;
+            }, sample: function(r3) {
+              return n3.randn() * t3.sqrt(r3 / (2 * n3.randg(r3 / 2)));
+            }, variance: function(n4) {
+              return n4 > 2 ? n4 / (n4 - 2) : n4 > 1 ? 1 / 0 : void 0;
+            } }), n3.extend(n3.weibull, { pdf: function(n4, r3, e3) {
+              return n4 < 0 || r3 < 0 || e3 < 0 ? 0 : e3 / r3 * t3.pow(n4 / r3, e3 - 1) * t3.exp(-t3.pow(n4 / r3, e3));
+            }, cdf: function(n4, r3, e3) {
+              return n4 < 0 ? 0 : 1 - t3.exp(-t3.pow(n4 / r3, e3));
+            }, inv: function(n4, r3, e3) {
+              return r3 * t3.pow(-t3.log(1 - n4), 1 / e3);
+            }, mean: function(t4, r3) {
+              return t4 * n3.gammafn(1 + 1 / r3);
+            }, median: function(n4, r3) {
+              return n4 * t3.pow(t3.log(2), 1 / r3);
+            }, mode: function(n4, r3) {
+              return r3 <= 1 ? 0 : n4 * t3.pow((r3 - 1) / r3, 1 / r3);
+            }, sample: function(r3, e3) {
+              return r3 * t3.pow(-t3.log(n3._random_fn()), 1 / e3);
+            }, variance: function(r3, e3) {
+              return r3 * r3 * n3.gammafn(1 + 2 / e3) - t3.pow(n3.weibull.mean(r3, e3), 2);
+            } }), n3.extend(n3.uniform, { pdf: function(n4, t4, r3) {
+              return n4 < t4 || n4 > r3 ? 0 : 1 / (r3 - t4);
+            }, cdf: function(n4, t4, r3) {
+              return n4 < t4 ? 0 : n4 < r3 ? (n4 - t4) / (r3 - t4) : 1;
+            }, inv: function(n4, t4, r3) {
+              return t4 + n4 * (r3 - t4);
+            }, mean: function(n4, t4) {
+              return 0.5 * (n4 + t4);
+            }, median: function(t4, r3) {
+              return n3.mean(t4, r3);
+            }, mode: function() {
+              throw new Error("mode is not yet implemented");
+            }, sample: function(t4, r3) {
+              return t4 / 2 + r3 / 2 + (r3 / 2 - t4 / 2) * (2 * n3._random_fn() - 1);
+            }, variance: function(n4, r3) {
+              return t3.pow(r3 - n4, 2) / 12;
+            } }), n3.extend(n3.binomial, { pdf: function(r3, e3, o) {
+              return 0 === o || 1 === o ? e3 * o === r3 ? 1 : 0 : n3.combination(e3, r3) * t3.pow(o, r3) * t3.pow(1 - o, e3 - r3);
+            }, cdf: function(e3, o, i2) {
+              var u, a = 1e-10;
+              if (e3 < 0) return 0;
+              if (e3 >= o) return 1;
+              if (i2 < 0 || i2 > 1 || o <= 0) return NaN;
+              var f = i2, l = (e3 = t3.floor(e3)) + 1, c = o - e3, s = l + c, h = t3.exp(n3.gammaln(s) - n3.gammaln(c) - n3.gammaln(l) + l * t3.log(f) + c * t3.log(1 - f));
+              return u = f < (l + 1) / (s + 2) ? h * r2(f, l, c, a) : 1 - h * r2(1 - f, c, l, a), t3.round(1 / a * (1 - u)) / (1 / a);
+            } }), n3.extend(n3.negbin, { pdf: function(r3, e3, o) {
+              return r3 === r3 >>> 0 && (r3 < 0 ? 0 : n3.combination(r3 + e3 - 1, e3 - 1) * t3.pow(1 - o, r3) * t3.pow(o, e3));
+            }, cdf: function(t4, r3, e3) {
+              var o = 0, i2 = 0;
+              if (t4 < 0) return 0;
+              for (; i2 <= t4; i2++) o += n3.negbin.pdf(i2, r3, e3);
+              return o;
+            } }), n3.extend(n3.hypgeom, { pdf: function(r3, e3, o, i2) {
+              if (r3 != r3 | 0) return false;
+              if (r3 < 0 || r3 < o - (e3 - i2)) return 0;
+              if (r3 > i2 || r3 > o) return 0;
+              if (2 * o > e3) return 2 * i2 > e3 ? n3.hypgeom.pdf(e3 - o - i2 + r3, e3, e3 - o, e3 - i2) : n3.hypgeom.pdf(i2 - r3, e3, e3 - o, i2);
+              if (2 * i2 > e3) return n3.hypgeom.pdf(o - r3, e3, o, e3 - i2);
+              if (o < i2) return n3.hypgeom.pdf(r3, e3, i2, o);
+              for (var u = 1, a = 0, f = 0; f < r3; f++) {
+                for (; u > 1 && a < i2; ) u *= 1 - o / (e3 - a), a++;
+                u *= (i2 - f) * (o - f) / ((f + 1) * (e3 - o - i2 + f + 1));
+              }
+              for (; a < i2; a++) u *= 1 - o / (e3 - a);
+              return t3.min(1, t3.max(0, u));
+            }, cdf: function(r3, e3, o, i2) {
+              if (r3 < 0 || r3 < o - (e3 - i2)) return 0;
+              if (r3 >= i2 || r3 >= o) return 1;
+              if (2 * o > e3) return 2 * i2 > e3 ? n3.hypgeom.cdf(e3 - o - i2 + r3, e3, e3 - o, e3 - i2) : 1 - n3.hypgeom.cdf(i2 - r3 - 1, e3, e3 - o, i2);
+              if (2 * i2 > e3) return 1 - n3.hypgeom.cdf(o - r3 - 1, e3, o, e3 - i2);
+              if (o < i2) return n3.hypgeom.cdf(r3, e3, i2, o);
+              for (var u = 1, a = 1, f = 0, l = 0; l < r3; l++) {
+                for (; u > 1 && f < i2; ) {
+                  var c = 1 - o / (e3 - f);
+                  a *= c, u *= c, f++;
+                }
+                u += a *= (i2 - l) * (o - l) / ((l + 1) * (e3 - o - i2 + l + 1));
+              }
+              for (; f < i2; f++) u *= 1 - o / (e3 - f);
+              return t3.min(1, t3.max(0, u));
+            } }), n3.extend(n3.poisson, { pdf: function(r3, e3) {
+              return e3 < 0 || r3 % 1 != 0 || r3 < 0 ? 0 : t3.pow(e3, r3) * t3.exp(-e3) / n3.factorial(r3);
+            }, cdf: function(t4, r3) {
+              var e3 = [], o = 0;
+              if (t4 < 0) return 0;
+              for (; o <= t4; o++) e3.push(n3.poisson.pdf(o, r3));
+              return n3.sum(e3);
+            }, mean: function(n4) {
+              return n4;
+            }, variance: function(n4) {
+              return n4;
+            }, sampleSmall: function(r3) {
+              var e3 = 1, o = 0, i2 = t3.exp(-r3);
+              do {
+                o++, e3 *= n3._random_fn();
+              } while (e3 > i2);
+              return o - 1;
+            }, sampleLarge: function(r3) {
+              var e3, o, i2, u, a, f, l, c, s, h, g = r3;
+              for (u = t3.sqrt(g), a = t3.log(g), f = 0.02483 * (l = 0.931 + 2.53 * u) - 0.059, c = 1.1239 + 1.1328 / (l - 3.4), s = 0.9277 - 3.6224 / (l - 2); ; ) {
+                if (o = t3.random() - 0.5, i2 = t3.random(), h = 0.5 - t3.abs(o), e3 = t3.floor((2 * f / h + l) * o + g + 0.43), h >= 0.07 && i2 <= s) return e3;
+                if (!(e3 < 0 || h < 0.013 && i2 > h) && t3.log(i2) + t3.log(c) - t3.log(f / (h * h) + l) <= e3 * a - g - n3.loggam(e3 + 1)) return e3;
+              }
+            }, sample: function(n4) {
+              return n4 < 10 ? this.sampleSmall(n4) : this.sampleLarge(n4);
+            } }), n3.extend(n3.triangular, { pdf: function(n4, t4, r3, e3) {
+              return r3 <= t4 || e3 < t4 || e3 > r3 ? NaN : n4 < t4 || n4 > r3 ? 0 : n4 < e3 ? 2 * (n4 - t4) / ((r3 - t4) * (e3 - t4)) : n4 === e3 ? 2 / (r3 - t4) : 2 * (r3 - n4) / ((r3 - t4) * (r3 - e3));
+            }, cdf: function(n4, r3, e3, o) {
+              return e3 <= r3 || o < r3 || o > e3 ? NaN : n4 <= r3 ? 0 : n4 >= e3 ? 1 : n4 <= o ? t3.pow(n4 - r3, 2) / ((e3 - r3) * (o - r3)) : 1 - t3.pow(e3 - n4, 2) / ((e3 - r3) * (e3 - o));
+            }, inv: function(n4, r3, e3, o) {
+              return e3 <= r3 || o < r3 || o > e3 ? NaN : n4 <= (o - r3) / (e3 - r3) ? r3 + (e3 - r3) * t3.sqrt(n4 * ((o - r3) / (e3 - r3))) : r3 + (e3 - r3) * (1 - t3.sqrt((1 - n4) * (1 - (o - r3) / (e3 - r3))));
+            }, mean: function(n4, t4, r3) {
+              return (n4 + t4 + r3) / 3;
+            }, median: function(n4, r3, e3) {
+              return e3 <= (n4 + r3) / 2 ? r3 - t3.sqrt((r3 - n4) * (r3 - e3)) / t3.sqrt(2) : e3 > (n4 + r3) / 2 ? n4 + t3.sqrt((r3 - n4) * (e3 - n4)) / t3.sqrt(2) : void 0;
+            }, mode: function(n4, t4, r3) {
+              return r3;
+            }, sample: function(r3, e3, o) {
+              var i2 = n3._random_fn();
+              return i2 < (o - r3) / (e3 - r3) ? r3 + t3.sqrt(i2 * (e3 - r3) * (o - r3)) : e3 - t3.sqrt((1 - i2) * (e3 - r3) * (e3 - o));
+            }, variance: function(n4, t4, r3) {
+              return (n4 * n4 + t4 * t4 + r3 * r3 - n4 * t4 - n4 * r3 - t4 * r3) / 18;
+            } }), n3.extend(n3.arcsine, { pdf: function(n4, r3, e3) {
+              return e3 <= r3 ? NaN : n4 <= r3 || n4 >= e3 ? 0 : 2 / t3.PI * t3.pow(t3.pow(e3 - r3, 2) - t3.pow(2 * n4 - r3 - e3, 2), -0.5);
+            }, cdf: function(n4, r3, e3) {
+              return n4 < r3 ? 0 : n4 < e3 ? 2 / t3.PI * t3.asin(t3.sqrt((n4 - r3) / (e3 - r3))) : 1;
+            }, inv: function(n4, r3, e3) {
+              return r3 + (0.5 - 0.5 * t3.cos(t3.PI * n4)) * (e3 - r3);
+            }, mean: function(n4, t4) {
+              return t4 <= n4 ? NaN : (n4 + t4) / 2;
+            }, median: function(n4, t4) {
+              return t4 <= n4 ? NaN : (n4 + t4) / 2;
+            }, mode: function() {
+              throw new Error("mode is not yet implemented");
+            }, sample: function(r3, e3) {
+              return (r3 + e3) / 2 + (e3 - r3) / 2 * t3.sin(2 * t3.PI * n3.uniform.sample(0, 1));
+            }, variance: function(n4, r3) {
+              return r3 <= n4 ? NaN : t3.pow(r3 - n4, 2) / 8;
+            } }), n3.extend(n3.laplace, { pdf: function(n4, r3, e3) {
+              return e3 <= 0 ? 0 : t3.exp(-t3.abs(n4 - r3) / e3) / (2 * e3);
+            }, cdf: function(n4, r3, e3) {
+              return e3 <= 0 ? 0 : n4 < r3 ? 0.5 * t3.exp((n4 - r3) / e3) : 1 - 0.5 * t3.exp(-(n4 - r3) / e3);
+            }, mean: function(n4) {
+              return n4;
+            }, median: function(n4) {
+              return n4;
+            }, mode: function(n4) {
+              return n4;
+            }, variance: function(n4, t4) {
+              return 2 * t4 * t4;
+            }, sample: function(r3, e3) {
+              var o, i2 = n3._random_fn() - 0.5;
+              return r3 - e3 * ((o = i2) / t3.abs(o)) * t3.log(1 - 2 * t3.abs(i2));
+            } }), n3.extend(n3.tukey, { cdf: function(r3, o, i2) {
+              var u = o, a = [0.9894009349916499, 0.9445750230732326, 0.8656312023878318, 0.755404408355003, 0.6178762444026438, 0.45801677765722737, 0.2816035507792589, 0.09501250983763744], f = [0.027152459411754096, 0.062253523938647894, 0.09515851168249279, 0.12462897125553388, 0.14959598881657674, 0.16915651939500254, 0.18260341504492358, 0.1894506104550685];
+              if (r3 <= 0) return 0;
+              if (i2 < 2 || u < 2) return NaN;
+              if (!Number.isFinite(r3)) return 1;
+              if (i2 > 25e3) return e2(r3, 1, u);
+              var l, c = 0.5 * i2, s = c * t3.log(i2) - i2 * t3.log(2) - n3.gammaln(c), h = c - 1, g = 0.25 * i2;
+              l = i2 <= 100 ? 1 : i2 <= 800 ? 0.5 : i2 <= 5e3 ? 0.25 : 0.125, s += t3.log(l);
+              for (var p = 0, m = 1; m <= 50; m++) {
+                for (var d = 0, v = (2 * m - 1) * l, E = 1; E <= 16; E++) {
+                  var M, N;
+                  8 < E ? (M = E - 8 - 1, N = s + h * t3.log(v + a[M] * l) - (a[M] * l + v) * g) : (M = E - 1, N = s + h * t3.log(v - a[M] * l) + (a[M] * l - v) * g), N >= -30 && (d += e2(8 < E ? r3 * t3.sqrt(0.5 * (a[M] * l + v)) : r3 * t3.sqrt(0.5 * (-a[M] * l + v)), 1, u) * f[M] * t3.exp(N));
+                }
+                if (m * l >= 1 && d <= 1e-14) break;
+                p += d;
+              }
+              if (d > 1e-14) throw new Error("tukey.cdf failed to converge");
+              return p > 1 && (p = 1), p;
+            }, inv: function(r3, e3, o) {
+              if (o < 2 || e3 < 2) return NaN;
+              if (r3 < 0 || r3 > 1) return NaN;
+              if (0 === r3) return 0;
+              if (1 === r3) return 1 / 0;
+              var i2, u = function(n4, r4, e4) {
+                var o2 = 0.5 - 0.5 * n4, i3 = t3.sqrt(t3.log(1 / (o2 * o2))), u2 = i3 + ((((-453642210148e-16 * i3 - 0.204231210125) * i3 - 0.342242088547) * i3 - 1) * i3 + 0.322232421088) / ((((0.0038560700634 * i3 + 0.10353775285) * i3 + 0.531103462366) * i3 + 0.588581570495) * i3 + 0.099348462606);
+                e4 < 120 && (u2 += (u2 * u2 * u2 + u2) / e4 / 4);
+                var a2 = 0.8832 - 0.2368 * u2;
+                return e4 < 120 && (a2 += -1.214 / e4 + 1.208 * u2 / e4), u2 * (a2 * t3.log(r4 - 1) + 1.4142);
+              }(r3, e3, o), a = n3.tukey.cdf(u, e3, o) - r3;
+              i2 = a > 0 ? t3.max(0, u - 1) : u + 1;
+              for (var f, l = n3.tukey.cdf(i2, e3, o) - r3, c = 1; c < 50; c++) if (f = i2 - l * (i2 - u) / (l - a), a = l, u = i2, f < 0 && (f = 0, l = -r3), l = n3.tukey.cdf(f, e3, o) - r3, i2 = f, t3.abs(i2 - u) < 1e-4) return f;
+              throw new Error("tukey.inv failed to converge");
+            } });
+          }(t2, Math), function(n3, t3) {
+            var r2, e2, o = Array.prototype.push, i2 = n3.utils.isArray;
+            function u(t4) {
+              return i2(t4) || t4 instanceof n3;
+            }
+            n3.extend({ add: function(t4, r3) {
+              return u(r3) ? (u(r3[0]) || (r3 = [r3]), n3.map(t4, function(n4, t5, e3) {
+                return n4 + r3[t5][e3];
+              })) : n3.map(t4, function(n4) {
+                return n4 + r3;
+              });
+            }, subtract: function(t4, r3) {
+              return u(r3) ? (u(r3[0]) || (r3 = [r3]), n3.map(t4, function(n4, t5, e3) {
+                return n4 - r3[t5][e3] || 0;
+              })) : n3.map(t4, function(n4) {
+                return n4 - r3;
+              });
+            }, divide: function(t4, r3) {
+              return u(r3) ? (u(r3[0]) || (r3 = [r3]), n3.multiply(t4, n3.inv(r3))) : n3.map(t4, function(n4) {
+                return n4 / r3;
+              });
+            }, multiply: function(t4, r3) {
+              var e3, o2, i3, a, f, l, c, s;
+              if (void 0 === t4.length && void 0 === r3.length) return t4 * r3;
+              if (f = t4.length, l = t4[0].length, c = n3.zeros(f, i3 = u(r3) ? r3[0].length : l), s = 0, u(r3)) {
+                for (; s < i3; s++) for (e3 = 0; e3 < f; e3++) {
+                  for (a = 0, o2 = 0; o2 < l; o2++) a += t4[e3][o2] * r3[o2][s];
+                  c[e3][s] = a;
+                }
+                return 1 === f && 1 === s ? c[0][0] : c;
+              }
+              return n3.map(t4, function(n4) {
+                return n4 * r3;
+              });
+            }, outer: function(t4, r3) {
+              return n3.multiply(t4.map(function(n4) {
+                return [n4];
+              }), [r3]);
+            }, dot: function(t4, r3) {
+              u(t4[0]) || (t4 = [t4]), u(r3[0]) || (r3 = [r3]);
+              for (var e3, o2, i3 = 1 === t4[0].length && 1 !== t4.length ? n3.transpose(t4) : t4, a = 1 === r3[0].length && 1 !== r3.length ? n3.transpose(r3) : r3, f = [], l = 0, c = i3.length, s = i3[0].length; l < c; l++) {
+                for (f[l] = [], e3 = 0, o2 = 0; o2 < s; o2++) e3 += i3[l][o2] * a[l][o2];
+                f[l] = e3;
+              }
+              return 1 === f.length ? f[0] : f;
+            }, pow: function(r3, e3) {
+              return n3.map(r3, function(n4) {
+                return t3.pow(n4, e3);
+              });
+            }, exp: function(r3) {
+              return n3.map(r3, function(n4) {
+                return t3.exp(n4);
+              });
+            }, log: function(r3) {
+              return n3.map(r3, function(n4) {
+                return t3.log(n4);
+              });
+            }, abs: function(r3) {
+              return n3.map(r3, function(n4) {
+                return t3.abs(n4);
+              });
+            }, norm: function(n4, r3) {
+              var e3 = 0, o2 = 0;
+              for (isNaN(r3) && (r3 = 2), u(n4[0]) && (n4 = n4[0]); o2 < n4.length; o2++) e3 += t3.pow(t3.abs(n4[o2]), r3);
+              return t3.pow(e3, 1 / r3);
+            }, angle: function(r3, e3) {
+              return t3.acos(n3.dot(r3, e3) / (n3.norm(r3) * n3.norm(e3)));
+            }, aug: function(n4, t4) {
+              var r3, e3 = [];
+              for (r3 = 0; r3 < n4.length; r3++) e3.push(n4[r3].slice());
+              for (r3 = 0; r3 < e3.length; r3++) o.apply(e3[r3], t4[r3]);
+              return e3;
+            }, inv: function(t4) {
+              for (var r3, e3 = t4.length, o2 = t4[0].length, i3 = n3.identity(e3, o2), u2 = n3.gauss_jordan(t4, i3), a = [], f = 0; f < e3; f++) for (a[f] = [], r3 = o2; r3 < u2[0].length; r3++) a[f][r3 - o2] = u2[f][r3];
+              return a;
+            }, det: function n4(t4) {
+              if (2 === t4.length) return t4[0][0] * t4[1][1] - t4[0][1] * t4[1][0];
+              for (var r3 = 0, e3 = 0; e3 < t4.length; e3++) {
+                for (var o2 = [], i3 = 1; i3 < t4.length; i3++) {
+                  o2[i3 - 1] = [];
+                  for (var u2 = 0; u2 < t4.length; u2++) u2 < e3 ? o2[i3 - 1][u2] = t4[i3][u2] : u2 > e3 && (o2[i3 - 1][u2 - 1] = t4[i3][u2]);
+                }
+                var a = e3 % 2 ? -1 : 1;
+                r3 += n4(o2) * t4[0][e3] * a;
+              }
+              return r3;
+            }, gauss_elimination: function(r3, e3) {
+              var o2, i3, u2, a, f = 0, l = 0, c = r3.length, s = r3[0].length, h = 1, g = 0, p = [];
+              for (o2 = (r3 = n3.aug(r3, e3))[0].length, f = 0; f < c; f++) {
+                for (i3 = r3[f][f], l = f, a = f + 1; a < s; a++) i3 < t3.abs(r3[a][f]) && (i3 = r3[a][f], l = a);
+                if (l != f) for (a = 0; a < o2; a++) u2 = r3[f][a], r3[f][a] = r3[l][a], r3[l][a] = u2;
+                for (l = f + 1; l < c; l++) for (h = r3[l][f] / r3[f][f], a = f; a < o2; a++) r3[l][a] = r3[l][a] - h * r3[f][a];
+              }
+              for (f = c - 1; f >= 0; f--) {
+                for (g = 0, l = f + 1; l <= c - 1; l++) g += p[l] * r3[f][l];
+                p[f] = (r3[f][o2 - 1] - g) / r3[f][f];
+              }
+              return p;
+            }, gauss_jordan: function(r3, e3) {
+              var o2, i3, u2, a = n3.aug(r3, e3), f = a.length, l = a[0].length, c = 0;
+              for (i3 = 0; i3 < f; i3++) {
+                var s = i3;
+                for (u2 = i3 + 1; u2 < f; u2++) t3.abs(a[u2][i3]) > t3.abs(a[s][i3]) && (s = u2);
+                var h = a[i3];
+                for (a[i3] = a[s], a[s] = h, u2 = i3 + 1; u2 < f; u2++) for (c = a[u2][i3] / a[i3][i3], o2 = i3; o2 < l; o2++) a[u2][o2] -= a[i3][o2] * c;
+              }
+              for (i3 = f - 1; i3 >= 0; i3--) {
+                for (c = a[i3][i3], u2 = 0; u2 < i3; u2++) for (o2 = l - 1; o2 > i3 - 1; o2--) a[u2][o2] -= a[i3][o2] * a[u2][i3] / c;
+                for (a[i3][i3] /= c, o2 = f; o2 < l; o2++) a[i3][o2] /= c;
+              }
+              return a;
+            }, triaUpSolve: function(t4, r3) {
+              var e3, o2 = t4[0].length, i3 = n3.zeros(1, o2)[0], u2 = false;
+              return null != r3[0].length && (r3 = r3.map(function(n4) {
+                return n4[0];
+              }), u2 = true), n3.arange(o2 - 1, -1, -1).forEach(function(u3) {
+                e3 = n3.arange(u3 + 1, o2).map(function(n4) {
+                  return i3[n4] * t4[u3][n4];
+                }), i3[u3] = (r3[u3] - n3.sum(e3)) / t4[u3][u3];
+              }), u2 ? i3.map(function(n4) {
+                return [n4];
+              }) : i3;
+            }, triaLowSolve: function(t4, r3) {
+              var e3, o2 = t4[0].length, i3 = n3.zeros(1, o2)[0], u2 = false;
+              return null != r3[0].length && (r3 = r3.map(function(n4) {
+                return n4[0];
+              }), u2 = true), n3.arange(o2).forEach(function(o3) {
+                e3 = n3.arange(o3).map(function(n4) {
+                  return t4[o3][n4] * i3[n4];
+                }), i3[o3] = (r3[o3] - n3.sum(e3)) / t4[o3][o3];
+              }), u2 ? i3.map(function(n4) {
+                return [n4];
+              }) : i3;
+            }, lu: function(t4) {
+              var r3, e3 = t4.length, o2 = n3.identity(e3), i3 = n3.zeros(t4.length, t4[0].length);
+              return n3.arange(e3).forEach(function(n4) {
+                i3[0][n4] = t4[0][n4];
+              }), n3.arange(1, e3).forEach(function(u2) {
+                n3.arange(u2).forEach(function(e4) {
+                  r3 = n3.arange(e4).map(function(n4) {
+                    return o2[u2][n4] * i3[n4][e4];
+                  }), o2[u2][e4] = (t4[u2][e4] - n3.sum(r3)) / i3[e4][e4];
+                }), n3.arange(u2, e3).forEach(function(e4) {
+                  r3 = n3.arange(u2).map(function(n4) {
+                    return o2[u2][n4] * i3[n4][e4];
+                  }), i3[u2][e4] = t4[r3.length][e4] - n3.sum(r3);
+                });
+              }), [o2, i3];
+            }, cholesky: function(r3) {
+              var e3, o2 = r3.length, i3 = n3.zeros(r3.length, r3[0].length);
+              return n3.arange(o2).forEach(function(u2) {
+                e3 = n3.arange(u2).map(function(n4) {
+                  return t3.pow(i3[u2][n4], 2);
+                }), i3[u2][u2] = t3.sqrt(r3[u2][u2] - n3.sum(e3)), n3.arange(u2 + 1, o2).forEach(function(t4) {
+                  e3 = n3.arange(u2).map(function(n4) {
+                    return i3[u2][n4] * i3[t4][n4];
+                  }), i3[t4][u2] = (r3[u2][t4] - n3.sum(e3)) / i3[u2][u2];
+                });
+              }), i3;
+            }, gauss_jacobi: function(r3, e3, o2, i3) {
+              for (var u2, a, f, l, c = 0, s = 0, h = r3.length, g = [], p = [], m = []; c < h; c++) for (g[c] = [], p[c] = [], m[c] = [], s = 0; s < h; s++) c > s ? (g[c][s] = r3[c][s], p[c][s] = m[c][s] = 0) : c < s ? (p[c][s] = r3[c][s], g[c][s] = m[c][s] = 0) : (m[c][s] = r3[c][s], g[c][s] = p[c][s] = 0);
+              for (f = n3.multiply(n3.multiply(n3.inv(m), n3.add(g, p)), -1), a = n3.multiply(n3.inv(m), e3), u2 = o2, l = n3.add(n3.multiply(f, o2), a), c = 2; t3.abs(n3.norm(n3.subtract(l, u2))) > i3; ) u2 = l, l = n3.add(n3.multiply(f, u2), a), c++;
+              return l;
+            }, gauss_seidel: function(r3, e3, o2, i3) {
+              for (var u2, a, f, l, c, s = 0, h = r3.length, g = [], p = [], m = []; s < h; s++) for (g[s] = [], p[s] = [], m[s] = [], u2 = 0; u2 < h; u2++) s > u2 ? (g[s][u2] = r3[s][u2], p[s][u2] = m[s][u2] = 0) : s < u2 ? (p[s][u2] = r3[s][u2], g[s][u2] = m[s][u2] = 0) : (m[s][u2] = r3[s][u2], g[s][u2] = p[s][u2] = 0);
+              for (l = n3.multiply(n3.multiply(n3.inv(n3.add(m, g)), p), -1), f = n3.multiply(n3.inv(n3.add(m, g)), e3), a = o2, c = n3.add(n3.multiply(l, o2), f), s = 2; t3.abs(n3.norm(n3.subtract(c, a))) > i3; ) a = c, c = n3.add(n3.multiply(l, a), f), s += 1;
+              return c;
+            }, SOR: function(r3, e3, o2, i3, u2) {
+              for (var a, f, l, c, s, h = 0, g = r3.length, p = [], m = [], d = []; h < g; h++) for (p[h] = [], m[h] = [], d[h] = [], a = 0; a < g; a++) h > a ? (p[h][a] = r3[h][a], m[h][a] = d[h][a] = 0) : h < a ? (m[h][a] = r3[h][a], p[h][a] = d[h][a] = 0) : (d[h][a] = r3[h][a], p[h][a] = m[h][a] = 0);
+              for (c = n3.multiply(n3.inv(n3.add(d, n3.multiply(p, u2))), n3.subtract(n3.multiply(d, 1 - u2), n3.multiply(m, u2))), l = n3.multiply(n3.multiply(n3.inv(n3.add(d, n3.multiply(p, u2))), e3), u2), f = o2, s = n3.add(n3.multiply(c, o2), l), h = 2; t3.abs(n3.norm(n3.subtract(s, f))) > i3; ) f = s, s = n3.add(n3.multiply(c, f), l), h++;
+              return s;
+            }, householder: function(r3) {
+              for (var e3, o2, i3, u2, a = r3.length, f = r3[0].length, l = 0, c = [], s = []; l < a - 1; l++) {
+                for (e3 = 0, u2 = l + 1; u2 < f; u2++) e3 += r3[u2][l] * r3[u2][l];
+                for (e3 = (r3[l + 1][l] > 0 ? -1 : 1) * t3.sqrt(e3), o2 = t3.sqrt((e3 * e3 - r3[l + 1][l] * e3) / 2), (c = n3.zeros(a, 1))[l + 1][0] = (r3[l + 1][l] - e3) / (2 * o2), i3 = l + 2; i3 < a; i3++) c[i3][0] = r3[i3][l] / (2 * o2);
+                s = n3.subtract(n3.identity(a, f), n3.multiply(n3.multiply(c, n3.transpose(c)), 2)), r3 = n3.multiply(s, n3.multiply(r3, s));
+              }
+              return r3;
+            }, QR: (r2 = n3.sum, e2 = n3.arange, function(o2) {
+              var i3, u2, a, f = o2.length, l = o2[0].length, c = n3.zeros(l, l);
+              for (o2 = n3.copy(o2), u2 = 0; u2 < l; u2++) {
+                for (c[u2][u2] = t3.sqrt(r2(e2(f).map(function(n4) {
+                  return o2[n4][u2] * o2[n4][u2];
+                }))), i3 = 0; i3 < f; i3++) o2[i3][u2] = o2[i3][u2] / c[u2][u2];
+                for (a = u2 + 1; a < l; a++) for (c[u2][a] = r2(e2(f).map(function(n4) {
+                  return o2[n4][u2] * o2[n4][a];
+                })), i3 = 0; i3 < f; i3++) o2[i3][a] = o2[i3][a] - o2[i3][u2] * c[u2][a];
+              }
+              return [o2, c];
+            }), lstsq: function(t4, r3) {
+              var e3 = false;
+              void 0 === r3[0].length && (r3 = r3.map(function(n4) {
+                return [n4];
+              }), e3 = true);
+              var o2 = n3.QR(t4), i3 = o2[0], u2 = o2[1], a = t4[0].length, f = n3.slice(i3, { col: { end: a } }), l = function(t5) {
+                var r4 = (t5 = n3.copy(t5)).length, e4 = n3.identity(r4);
+                return n3.arange(r4 - 1, -1, -1).forEach(function(r5) {
+                  n3.sliceAssign(e4, { row: r5 }, n3.divide(n3.slice(e4, { row: r5 }), t5[r5][r5])), n3.sliceAssign(t5, { row: r5 }, n3.divide(n3.slice(t5, { row: r5 }), t5[r5][r5])), n3.arange(r5).forEach(function(o3) {
+                    var i4 = n3.multiply(t5[o3][r5], -1), u3 = n3.slice(t5, { row: o3 }), a2 = n3.multiply(n3.slice(t5, { row: r5 }), i4);
+                    n3.sliceAssign(t5, { row: o3 }, n3.add(u3, a2));
+                    var f2 = n3.slice(e4, { row: o3 }), l2 = n3.multiply(n3.slice(e4, { row: r5 }), i4);
+                    n3.sliceAssign(e4, { row: o3 }, n3.add(f2, l2));
+                  });
+                }), e4;
+              }(n3.slice(u2, { row: { end: a } })), c = n3.transpose(f);
+              void 0 === c[0].length && (c = [c]);
+              var s = n3.multiply(n3.multiply(l, c), r3);
+              return void 0 === s.length && (s = [[s]]), e3 ? s.map(function(n4) {
+                return n4[0];
+              }) : s;
+            }, jacobi: function(r3) {
+              for (var e3, o2, i3, u2, a, f, l, c = 1, s = r3.length, h = n3.identity(s, s), g = []; 1 === c; ) {
+                for (a = r3[0][1], i3 = 0, u2 = 1, e3 = 0; e3 < s; e3++) for (o2 = 0; o2 < s; o2++) e3 != o2 && a < t3.abs(r3[e3][o2]) && (a = t3.abs(r3[e3][o2]), i3 = e3, u2 = o2);
+                for (f = r3[i3][i3] === r3[u2][u2] ? r3[i3][u2] > 0 ? t3.PI / 4 : -t3.PI / 4 : t3.atan(2 * r3[i3][u2] / (r3[i3][i3] - r3[u2][u2])) / 2, (l = n3.identity(s, s))[i3][i3] = t3.cos(f), l[i3][u2] = -t3.sin(f), l[u2][i3] = t3.sin(f), l[u2][u2] = t3.cos(f), h = n3.multiply(h, l), r3 = n3.multiply(n3.multiply(n3.inv(l), r3), l), c = 0, e3 = 1; e3 < s; e3++) for (o2 = 1; o2 < s; o2++) e3 != o2 && t3.abs(r3[e3][o2]) > 1e-3 && (c = 1);
+              }
+              for (e3 = 0; e3 < s; e3++) g.push(r3[e3][e3]);
+              return [h, g];
+            }, rungekutta: function(n4, t4, r3, e3, o2, i3) {
+              var u2, a, f;
+              if (2 === i3) for (; e3 <= r3; ) o2 += ((u2 = t4 * n4(e3, o2)) + (a = t4 * n4(e3 + t4, o2 + u2))) / 2, e3 += t4;
+              if (4 === i3) for (; e3 <= r3; ) o2 += ((u2 = t4 * n4(e3, o2)) + 2 * (a = t4 * n4(e3 + t4 / 2, o2 + u2 / 2)) + 2 * (f = t4 * n4(e3 + t4 / 2, o2 + a / 2)) + t4 * n4(e3 + t4, o2 + f)) / 6, e3 += t4;
+              return o2;
+            }, romberg: function(n4, r3, e3, o2) {
+              for (var i3, u2, a, f, l, c = 0, s = (e3 - r3) / 2, h = [], g = [], p = []; c < o2 / 2; ) {
+                for (l = n4(r3), a = r3, f = 0; a <= e3; a += s, f++) h[f] = a;
+                for (i3 = h.length, a = 1; a < i3 - 1; a++) l += (a % 2 != 0 ? 4 : 2) * n4(h[a]);
+                l = s / 3 * (l + n4(e3)), p[c] = l, s /= 2, c++;
+              }
+              for (u2 = p.length, i3 = 1; 1 !== u2; ) {
+                for (a = 0; a < u2 - 1; a++) g[a] = (t3.pow(4, i3) * p[a + 1] - p[a]) / (t3.pow(4, i3) - 1);
+                u2 = g.length, p = g, g = [], i3++;
+              }
+              return p;
+            }, richardson: function(n4, r3, e3, o2) {
+              function i3(n5, t4) {
+                for (var r4, e4 = 0, o3 = n5.length; e4 < o3; e4++) n5[e4] === t4 && (r4 = e4);
+                return r4;
+              }
+              for (var u2, a, f, l, c, s = t3.abs(e3 - n4[i3(n4, e3) + 1]), h = 0, g = [], p = []; o2 >= s; ) u2 = i3(n4, e3 + o2), a = i3(n4, e3), g[h] = (r3[u2] - 2 * r3[a] + r3[2 * a - u2]) / (o2 * o2), o2 /= 2, h++;
+              for (l = g.length, f = 1; 1 != l; ) {
+                for (c = 0; c < l - 1; c++) p[c] = (t3.pow(4, f) * g[c + 1] - g[c]) / (t3.pow(4, f) - 1);
+                l = p.length, g = p, p = [], f++;
+              }
+              return g;
+            }, simpson: function(n4, t4, r3, e3) {
+              for (var o2, i3 = (r3 - t4) / e3, u2 = n4(t4), a = [], f = t4, l = 0, c = 1; f <= r3; f += i3, l++) a[l] = f;
+              for (o2 = a.length; c < o2 - 1; c++) u2 += (c % 2 != 0 ? 4 : 2) * n4(a[c]);
+              return i3 / 3 * (u2 + n4(r3));
+            }, hermite: function(n4, t4, r3, e3) {
+              for (var o2, i3 = n4.length, u2 = 0, a = 0, f = [], l = [], c = [], s = []; a < i3; a++) {
+                for (f[a] = 1, o2 = 0; o2 < i3; o2++) a != o2 && (f[a] *= (e3 - n4[o2]) / (n4[a] - n4[o2]));
+                for (l[a] = 0, o2 = 0; o2 < i3; o2++) a != o2 && (l[a] += 1 / (n4[a] - n4[o2]));
+                c[a] = (1 - 2 * (e3 - n4[a]) * l[a]) * (f[a] * f[a]), s[a] = (e3 - n4[a]) * (f[a] * f[a]), u2 += c[a] * t4[a] + s[a] * r3[a];
+              }
+              return u2;
+            }, lagrange: function(n4, t4, r3) {
+              for (var e3, o2, i3 = 0, u2 = 0, a = n4.length; u2 < a; u2++) {
+                for (o2 = t4[u2], e3 = 0; e3 < a; e3++) u2 != e3 && (o2 *= (r3 - n4[e3]) / (n4[u2] - n4[e3]));
+                i3 += o2;
+              }
+              return i3;
+            }, cubic_spline: function(t4, r3, e3) {
+              for (var o2, i3, u2 = t4.length, a = 0, f = [], l = [], c = [], s = [], h = [], g = []; a < u2 - 1; a++) s[a] = t4[a + 1] - t4[a];
+              for (c[0] = 0, a = 1; a < u2 - 1; a++) c[a] = 3 / s[a] * (r3[a + 1] - r3[a]) - 3 / s[a - 1] * (r3[a] - r3[a - 1]);
+              for (a = 1; a < u2 - 1; a++) f[a] = [], l[a] = [], f[a][a - 1] = s[a - 1], f[a][a] = 2 * (s[a - 1] + s[a]), f[a][a + 1] = s[a], l[a][0] = c[a];
+              for (i3 = n3.multiply(n3.inv(f), l), o2 = 0; o2 < u2 - 1; o2++) h[o2] = (r3[o2 + 1] - r3[o2]) / s[o2] - s[o2] * (i3[o2 + 1][0] + 2 * i3[o2][0]) / 3, g[o2] = (i3[o2 + 1][0] - i3[o2][0]) / (3 * s[o2]);
+              for (o2 = 0; o2 < u2 && !(t4[o2] > e3); o2++) ;
+              return r3[o2 -= 1] + (e3 - t4[o2]) * h[o2] + n3.sq(e3 - t4[o2]) * i3[o2] + (e3 - t4[o2]) * n3.sq(e3 - t4[o2]) * g[o2];
+            }, gauss_quadrature: function() {
+              throw new Error("gauss_quadrature not yet implemented");
+            }, PCA: function(t4) {
+              var r3, e3, o2, i3, u2, a = t4.length, f = t4[0].length, l = 0, c = [], s = [], h = [], g = [], p = [], m = [], d = [];
+              for (l = 0; l < a; l++) c[l] = n3.sum(t4[l]) / f;
+              for (l = 0; l < f; l++) for (p[l] = [], r3 = 0; r3 < a; r3++) p[l][r3] = t4[r3][l] - c[r3];
+              for (p = n3.transpose(p), l = 0; l < a; l++) for (m[l] = [], r3 = 0; r3 < a; r3++) m[l][r3] = n3.dot([p[l]], [p[r3]]) / (f - 1);
+              for (u2 = (o2 = n3.jacobi(m))[0], s = o2[1], d = n3.transpose(u2), l = 0; l < s.length; l++) for (r3 = l; r3 < s.length; r3++) s[l] < s[r3] && (e3 = s[l], s[l] = s[r3], s[r3] = e3, h = d[l], d[l] = d[r3], d[r3] = h);
+              for (i3 = n3.transpose(p), l = 0; l < a; l++) for (g[l] = [], r3 = 0; r3 < i3.length; r3++) g[l][r3] = n3.dot([d[l]], [i3[r3]]);
+              return [t4, s, d, g];
+            } }), function(t4) {
+              for (var r3 = 0; r3 < t4.length; r3++) !function(t5) {
+                n3.fn[t5] = function(r4, e3) {
+                  var o2 = this;
+                  return e3 ? (setTimeout(function() {
+                    e3.call(o2, n3.fn[t5].call(o2, r4));
+                  }, 15), this) : "number" == typeof n3[t5](this, r4) ? n3[t5](this, r4) : n3(n3[t5](this, r4));
+                };
+              }(t4[r3]);
+            }("add divide multiply subtract dot pow exp log abs norm angle".split(" "));
+          }(t2, Math), function(n3, t3) {
+            var r2 = [].slice, e2 = n3.utils.isNumber, o = n3.utils.isArray;
+            function i2(n4, r3, e3, o2) {
+              if (n4 > 1 || e3 > 1 || n4 <= 0 || e3 <= 0) throw new Error("Proportions should be greater than 0 and less than 1");
+              var i3 = (n4 * r3 + e3 * o2) / (r3 + o2);
+              return (n4 - e3) / t3.sqrt(i3 * (1 - i3) * (1 / r3 + 1 / o2));
+            }
+            n3.extend({ zscore: function() {
+              var t4 = r2.call(arguments);
+              return e2(t4[1]) ? (t4[0] - t4[1]) / t4[2] : (t4[0] - n3.mean(t4[1])) / n3.stdev(t4[1], t4[2]);
+            }, ztest: function() {
+              var e3, i3 = r2.call(arguments);
+              return o(i3[1]) ? (e3 = n3.zscore(i3[0], i3[1], i3[3]), 1 === i3[2] ? n3.normal.cdf(-t3.abs(e3), 0, 1) : 2 * n3.normal.cdf(-t3.abs(e3), 0, 1)) : i3.length > 2 ? (e3 = n3.zscore(i3[0], i3[1], i3[2]), 1 === i3[3] ? n3.normal.cdf(-t3.abs(e3), 0, 1) : 2 * n3.normal.cdf(-t3.abs(e3), 0, 1)) : (e3 = i3[0], 1 === i3[1] ? n3.normal.cdf(-t3.abs(e3), 0, 1) : 2 * n3.normal.cdf(-t3.abs(e3), 0, 1));
+            } }), n3.extend(n3.fn, { zscore: function(n4, t4) {
+              return (n4 - this.mean()) / this.stdev(t4);
+            }, ztest: function(r3, e3, o2) {
+              var i3 = t3.abs(this.zscore(r3, o2));
+              return 1 === e3 ? n3.normal.cdf(-i3, 0, 1) : 2 * n3.normal.cdf(-i3, 0, 1);
+            } }), n3.extend({ tscore: function() {
+              var e3 = r2.call(arguments);
+              return 4 === e3.length ? (e3[0] - e3[1]) / (e3[2] / t3.sqrt(e3[3])) : (e3[0] - n3.mean(e3[1])) / (n3.stdev(e3[1], true) / t3.sqrt(e3[1].length));
+            }, ttest: function() {
+              var o2, i3 = r2.call(arguments);
+              return 5 === i3.length ? (o2 = t3.abs(n3.tscore(i3[0], i3[1], i3[2], i3[3])), 1 === i3[4] ? n3.studentt.cdf(-o2, i3[3] - 1) : 2 * n3.studentt.cdf(-o2, i3[3] - 1)) : e2(i3[1]) ? (o2 = t3.abs(i3[0]), 1 == i3[2] ? n3.studentt.cdf(-o2, i3[1] - 1) : 2 * n3.studentt.cdf(-o2, i3[1] - 1)) : (o2 = t3.abs(n3.tscore(i3[0], i3[1])), 1 == i3[2] ? n3.studentt.cdf(-o2, i3[1].length - 1) : 2 * n3.studentt.cdf(-o2, i3[1].length - 1));
+            } }), n3.extend(n3.fn, { tscore: function(n4) {
+              return (n4 - this.mean()) / (this.stdev(true) / t3.sqrt(this.cols()));
+            }, ttest: function(r3, e3) {
+              return 1 === e3 ? 1 - n3.studentt.cdf(t3.abs(this.tscore(r3)), this.cols() - 1) : 2 * n3.studentt.cdf(-t3.abs(this.tscore(r3)), this.cols() - 1);
+            } }), n3.extend({ anovafscore: function() {
+              var e3, o2, i3, u, a, f, l, c, s = r2.call(arguments);
+              if (1 === s.length) {
+                for (a = new Array(s[0].length), l = 0; l < s[0].length; l++) a[l] = s[0][l];
+                s = a;
+              }
+              for (o2 = new Array(), l = 0; l < s.length; l++) o2 = o2.concat(s[l]);
+              for (i3 = n3.mean(o2), e3 = 0, l = 0; l < s.length; l++) e3 += s[l].length * t3.pow(n3.mean(s[l]) - i3, 2);
+              for (e3 /= s.length - 1, f = 0, l = 0; l < s.length; l++) for (u = n3.mean(s[l]), c = 0; c < s[l].length; c++) f += t3.pow(s[l][c] - u, 2);
+              return e3 / (f / (o2.length - s.length));
+            }, anovaftest: function() {
+              var t4, o2, i3, u, a = r2.call(arguments);
+              if (e2(a[0])) return 1 - n3.centralF.cdf(a[0], a[1], a[2]);
+              var f = n3.anovafscore(a);
+              for (t4 = a.length - 1, i3 = 0, u = 0; u < a.length; u++) i3 += a[u].length;
+              return o2 = i3 - t4 - 1, 1 - n3.centralF.cdf(f, t4, o2);
+            }, ftest: function(t4, r3, e3) {
+              return 1 - n3.centralF.cdf(t4, r3, e3);
+            } }), n3.extend(n3.fn, { anovafscore: function() {
+              return n3.anovafscore(this.toArray());
+            }, anovaftes: function() {
+              var t4, r3 = 0;
+              for (t4 = 0; t4 < this.length; t4++) r3 += this[t4].length;
+              return n3.ftest(this.anovafscore(), this.length - 1, r3 - this.length);
+            } }), n3.extend({ qscore: function() {
+              var o2, i3, u, a, f, l = r2.call(arguments);
+              return e2(l[0]) ? (o2 = l[0], i3 = l[1], u = l[2], a = l[3], f = l[4]) : (o2 = n3.mean(l[0]), i3 = n3.mean(l[1]), u = l[0].length, a = l[1].length, f = l[2]), t3.abs(o2 - i3) / (f * t3.sqrt((1 / u + 1 / a) / 2));
+            }, qtest: function() {
+              var t4, e3 = r2.call(arguments);
+              3 === e3.length ? (t4 = e3[0], e3 = e3.slice(1)) : 7 === e3.length ? (t4 = n3.qscore(e3[0], e3[1], e3[2], e3[3], e3[4]), e3 = e3.slice(5)) : (t4 = n3.qscore(e3[0], e3[1], e3[2]), e3 = e3.slice(3));
+              var o2 = e3[0], i3 = e3[1];
+              return 1 - n3.tukey.cdf(t4, i3, o2 - i3);
+            }, tukeyhsd: function(t4) {
+              for (var r3 = n3.pooledstdev(t4), e3 = t4.map(function(t5) {
+                return n3.mean(t5);
+              }), o2 = t4.reduce(function(n4, t5) {
+                return n4 + t5.length;
+              }, 0), i3 = [], u = 0; u < t4.length; ++u) for (var a = u + 1; a < t4.length; ++a) {
+                var f = n3.qtest(e3[u], e3[a], t4[u].length, t4[a].length, r3, o2, t4.length);
+                i3.push([[u, a], f]);
+              }
+              return i3;
+            } }), n3.extend({ normalci: function() {
+              var e3, o2 = r2.call(arguments), i3 = new Array(2);
+              return e3 = 4 === o2.length ? t3.abs(n3.normal.inv(o2[1] / 2, 0, 1) * o2[2] / t3.sqrt(o2[3])) : t3.abs(n3.normal.inv(o2[1] / 2, 0, 1) * n3.stdev(o2[2]) / t3.sqrt(o2[2].length)), i3[0] = o2[0] - e3, i3[1] = o2[0] + e3, i3;
+            }, tci: function() {
+              var e3, o2 = r2.call(arguments), i3 = new Array(2);
+              return e3 = 4 === o2.length ? t3.abs(n3.studentt.inv(o2[1] / 2, o2[3] - 1) * o2[2] / t3.sqrt(o2[3])) : t3.abs(n3.studentt.inv(o2[1] / 2, o2[2].length - 1) * n3.stdev(o2[2], true) / t3.sqrt(o2[2].length)), i3[0] = o2[0] - e3, i3[1] = o2[0] + e3, i3;
+            }, significant: function(n4, t4) {
+              return n4 < t4;
+            } }), n3.extend(n3.fn, { normalci: function(t4, r3) {
+              return n3.normalci(t4, r3, this.toArray());
+            }, tci: function(t4, r3) {
+              return n3.tci(t4, r3, this.toArray());
+            } }), n3.extend(n3.fn, { oneSidedDifferenceOfProportions: function(t4, r3, e3, o2) {
+              var u = i2(t4, r3, e3, o2);
+              return n3.ztest(u, 1);
+            }, twoSidedDifferenceOfProportions: function(t4, r3, e3, o2) {
+              var u = i2(t4, r3, e3, o2);
+              return n3.ztest(u, 2);
+            } });
+          }(t2, Math), t2.models = /* @__PURE__ */ function() {
+            function n3(n4, r3) {
+              var e2 = n4.length, o = r3[0].length - 1, i2 = e2 - o - 1, u = t2.lstsq(r3, n4), a = t2.multiply(r3, u.map(function(n5) {
+                return [n5];
+              })).map(function(n5) {
+                return n5[0];
+              }), f = t2.subtract(n4, a), l = t2.mean(n4), c = t2.sum(a.map(function(n5) {
+                return Math.pow(n5 - l, 2);
+              })), s = t2.sum(n4.map(function(n5, t3) {
+                return Math.pow(n5 - a[t3], 2);
+              })), h = c + s;
+              return { exog: r3, endog: n4, nobs: e2, df_model: o, df_resid: i2, coef: u, predict: a, resid: f, ybar: l, SST: h, SSE: c, SSR: s, R2: c / h };
+            }
+            function r2(r3) {
+              var e2, o, i2 = (e2 = r3.exog, o = e2[0].length, t2.arange(o).map(function(r4) {
+                var i3 = t2.arange(o).filter(function(n4) {
+                  return n4 !== r4;
+                });
+                return n3(t2.col(e2, r4).map(function(n4) {
+                  return n4[0];
+                }), t2.col(e2, i3));
+              })), u = Math.sqrt(r3.SSR / r3.df_resid), a = i2.map(function(n4) {
+                var t3 = n4.SST, r4 = n4.R2;
+                return u / Math.sqrt(t3 * (1 - r4));
+              }), f = r3.coef.map(function(n4, t3) {
+                return (n4 - 0) / a[t3];
+              }), l = f.map(function(n4) {
+                var e3 = t2.studentt.cdf(n4, r3.df_resid);
+                return 2 * (e3 > 0.5 ? 1 - e3 : e3);
+              }), c = t2.studentt.inv(0.975, r3.df_resid), s = r3.coef.map(function(n4, t3) {
+                var r4 = c * a[t3];
+                return [n4 - r4, n4 + r4];
+              });
+              return { se: a, t: f, p: l, sigmaHat: u, interval95: s };
+            }
+            return { ols: function(e2, o) {
+              var i2 = n3(e2, o), u = r2(i2), a = function(n4) {
+                var r3, e3, o2, i3 = n4.R2 / n4.df_model / ((1 - n4.R2) / n4.df_resid);
+                return { F_statistic: i3, pvalue: 1 - (r3 = i3, e3 = n4.df_model, o2 = n4.df_resid, t2.beta.cdf(r3 / (o2 / e3 + r3), e3 / 2, o2 / 2)) };
+              }(i2), f = 1 - (1 - i2.R2) * ((i2.nobs - 1) / i2.df_resid);
+              return i2.t = u, i2.f = a, i2.adjust_R2 = f, i2;
+            } };
+          }(), t2.extend({ buildxmatrix: function() {
+            for (var n3 = new Array(arguments.length), r2 = 0; r2 < arguments.length; r2++) {
+              n3[r2] = [1].concat(arguments[r2]);
+            }
+            return t2(n3);
+          }, builddxmatrix: function() {
+            for (var n3 = new Array(arguments[0].length), r2 = 0; r2 < arguments[0].length; r2++) {
+              n3[r2] = [1].concat(arguments[0][r2]);
+            }
+            return t2(n3);
+          }, buildjxmatrix: function(n3) {
+            for (var r2 = new Array(n3.length), e2 = 0; e2 < n3.length; e2++) r2[e2] = n3[e2];
+            return t2.builddxmatrix(r2);
+          }, buildymatrix: function(n3) {
+            return t2(n3).transpose();
+          }, buildjymatrix: function(n3) {
+            return n3.transpose();
+          }, matrixmult: function(n3, r2) {
+            var e2, o, i2, u, a;
+            if (n3.cols() == r2.rows()) {
+              if (r2.rows() > 1) {
+                for (u = [], e2 = 0; e2 < n3.rows(); e2++) for (u[e2] = [], o = 0; o < r2.cols(); o++) {
+                  for (a = 0, i2 = 0; i2 < n3.cols(); i2++) a += n3.toArray()[e2][i2] * r2.toArray()[i2][o];
+                  u[e2][o] = a;
+                }
+                return t2(u);
+              }
+              for (u = [], e2 = 0; e2 < n3.rows(); e2++) for (u[e2] = [], o = 0; o < r2.cols(); o++) {
+                for (a = 0, i2 = 0; i2 < n3.cols(); i2++) a += n3.toArray()[e2][i2] * r2.toArray()[o];
+                u[e2][o] = a;
+              }
+              return t2(u);
+            }
+          }, regress: function(n3, r2) {
+            var e2 = t2.xtranspxinv(n3), o = n3.transpose(), i2 = t2.matrixmult(t2(e2), o);
+            return t2.matrixmult(i2, r2);
+          }, regresst: function(n3, r2, e2) {
+            var o = t2.regress(n3, r2), i2 = { anova: {} }, u = t2.jMatYBar(n3, o);
+            i2.yBar = u;
+            var a = r2.mean();
+            i2.anova.residuals = t2.residuals(r2, u), i2.anova.ssr = t2.ssr(u, a), i2.anova.msr = i2.anova.ssr / (n3[0].length - 1), i2.anova.sse = t2.sse(r2, u), i2.anova.mse = i2.anova.sse / (r2.length - (n3[0].length - 1) - 1), i2.anova.sst = t2.sst(r2, a), i2.anova.mst = i2.anova.sst / (r2.length - 1), i2.anova.r2 = 1 - i2.anova.sse / i2.anova.sst, i2.anova.r2 < 0 && (i2.anova.r2 = 0), i2.anova.fratio = i2.anova.msr / i2.anova.mse, i2.anova.pvalue = t2.anovaftest(i2.anova.fratio, n3[0].length - 1, r2.length - (n3[0].length - 1) - 1), i2.anova.rmse = Math.sqrt(i2.anova.mse), i2.anova.r2adj = 1 - i2.anova.mse / i2.anova.mst, i2.anova.r2adj < 0 && (i2.anova.r2adj = 0), i2.stats = new Array(n3[0].length);
+            for (var f, l, c, s = t2.xtranspxinv(n3), h = 0; h < o.length; h++) f = Math.sqrt(i2.anova.mse * Math.abs(s[h][h])), l = Math.abs(o[h] / f), c = t2.ttest(l, r2.length - n3[0].length - 1, e2), i2.stats[h] = [o[h], f, l, c];
+            return i2.regress = o, i2;
+          }, xtranspx: function(n3) {
+            return t2.matrixmult(n3.transpose(), n3);
+          }, xtranspxinv: function(n3) {
+            var r2 = t2.matrixmult(n3.transpose(), n3);
+            return t2.inv(r2);
+          }, jMatYBar: function(n3, r2) {
+            var e2 = t2.matrixmult(n3, r2);
+            return new t2(e2);
+          }, residuals: function(n3, r2) {
+            return t2.matrixsubtract(n3, r2);
+          }, ssr: function(n3, t3) {
+            for (var r2 = 0, e2 = 0; e2 < n3.length; e2++) r2 += Math.pow(n3[e2] - t3, 2);
+            return r2;
+          }, sse: function(n3, t3) {
+            for (var r2 = 0, e2 = 0; e2 < n3.length; e2++) r2 += Math.pow(n3[e2] - t3[e2], 2);
+            return r2;
+          }, sst: function(n3, t3) {
+            for (var r2 = 0, e2 = 0; e2 < n3.length; e2++) r2 += Math.pow(n3[e2] - t3, 2);
+            return r2;
+          }, matrixsubtract: function(n3, r2) {
+            for (var e2 = new Array(n3.length), o = 0; o < n3.length; o++) {
+              e2[o] = new Array(n3[o].length);
+              for (var i2 = 0; i2 < n3[o].length; i2++) e2[o][i2] = n3[o][i2] - r2[o][i2];
+            }
+            return t2(e2);
+          } }), t2.jStat = t2, t2);
+        }, 960: function(n2, t2, r2) {
+          const e2 = r2(592);
+          n2.exports = function(n3) {
+            function t3(n4, t4) {
+              const r4 = t4.split(".");
+              let e3 = n4;
+              for (const n5 of r4) {
+                if (null == e3) return;
+                e3 = e3[n5];
+              }
+              return e3;
+            }
+            for (let r4 = 0; r4 < Object.keys(e2).length; r4++) {
+              let o2, i3 = Object.keys(e2)[r4], u2 = [];
+              if ("object" == typeof e2[i3]) {
+                u2 = Object.keys(e2[i3]), o2 = Object.values(e2[i3]);
+                for (let n4 = 0; n4 < o2.length; n4++) if ("object" == typeof o2[n4]) {
+                  let t4 = u2[n4];
+                  e2[i3][t4] && (u2 = [...u2, ...Object.keys(e2[i3][t4]).map((n5) => t4 + "." + n5)], u2.splice(u2.indexOf(t4), 1));
+                }
+              }
+              if (u2.length < 1) n3[i3] = e2[i3];
+              else for (let r5 = 0; r5 < u2.length; r5++) "function" == typeof t3(e2[i3], u2[r5]) && (n3[i3] = t3(e2[i3], u2[r5]));
+            }
+            let r3 = function(n4) {
+              return "number" == typeof n4 && (n4 = parseInt(n4)), n4;
+            }, o = null, i2 = null, u = null;
+            n3.TABLE = function() {
+              return u;
+            }, n3.COLUMN = n3.COL = function() {
+              return u.tracking && u.tracking.push(l.getColumnNameFromCoords(r3(o), r3(i2))), r3(o) + 1;
+            }, n3.ROW = function() {
+              return u.tracking && u.tracking.push(l.getColumnNameFromCoords(r3(o), r3(i2))), r3(i2) + 1;
+            }, n3.CELL = function() {
+              return l.getColumnNameFromCoords(o, i2);
+            }, n3.VALUE = function(n4, t4, e3) {
+              return u.getValueFromCoords(r3(n4) - 1, r3(t4) - 1, e3);
+            }, n3.THISROWCELL = function(n4) {
+              return u.getValueFromCoords(r3(n4) - 1, r3(i2));
+            };
+            const a = function(n4, t4) {
+              for (let r4 = 0; r4 < n4.length; r4++) {
+                let e3 = l.getTokensFromRange(n4[r4]);
+                t4 = t4.replace(n4[r4], "[" + e3.join(",") + "]");
+              }
+              return t4;
+            }, f = function(n4) {
+              return "string" == typeof n4 && (n4 = n4.trim()), !isNaN(n4) && null !== n4 && "" !== n4;
+            }, l = function(n4, t4, r4, e3, l2) {
+              u = l2, o = r4, i2 = e3;
+              let c = "", s = {};
+              if (t4) if (t4.size) {
+                let n5, r5 = null;
+                t4.forEach(function(t5, r6) {
+                  n5 = r6.replace(/!/g, "."), -1 !== n5.indexOf(".") && (n5 = n5.split("."), s[n5[0]] = true);
+                }), n5 = Object.keys(s);
+                for (let t5 = 0; t5 < n5.length; t5++) c += "var " + n5[t5] + " = {};";
+                t4.forEach(function(e4, o2) {
+                  n5 = o2.replace(/!/g, "."), null === e4 || f(e4) || (r5 = e4.match(/(('.*?'!)|(\w*!))?(\$?[A-Z]+\$?[0-9]*):(\$?[A-Z]+\$?[0-9]*)?/g), r5 && r5.length && (e4 = updateRanges(r5, e4))), n5.indexOf(".") > 0 ? c += n5 + " = " + t4.get(o2) + ";\n" : c += "var " + n5 + " = " + e4 + ";\n";
+                });
+              } else {
+                let n5 = Object.keys(t4);
+                if (n5.length) {
+                  let r5, e4 = {};
+                  for (let t5 = 0; t5 < n5.length; t5++) if (r5 = n5[t5].replace(/\!/g, "."), r5.indexOf(".") > 0) {
+                    let n6 = n6.split(".");
+                    e4[n6[0]] = {};
+                  }
+                  r5 = Object.keys(e4);
+                  for (let n6 = 0; n6 < r5.length; n6++) c += "var " + r5[n6] + " = {};";
+                  for (let e5 = 0; e5 < n5.length; e5++) {
+                    if (r5 = n5[e5].replace(/!/g, "."), null !== t4[n5[e5]] && !f(t4[n5[e5]])) {
+                      let r6 = t4[n5[e5]].match(/(('.*?'!)|(\w*!))?(\$?[A-Z]+\$?[0-9]*):(\$?[A-Z]+\$?[0-9]*)?/g);
+                      r6 && r6.length && (t4[n5[e5]] = a(r6, t4[n5[e5]]));
+                    }
+                    r5.indexOf(".") > 0 ? c += r5 + " = " + t4[n5[e5]] + ";\n" : c += "var " + r5 + " = " + t4[n5[e5]] + ";\n";
+                  }
+                }
+              }
+              let h = (n4 = function(n5, t5) {
+                let r5 = "", e4 = 0, o2 = ["=", "!", ">", "<"];
+                for (let i3 = 0; i3 < n5.length; i3++) '"' === n5[i3] && (e4 = 0 === e4 ? 1 : 0), 1 === e4 ? r5 += n5[i3] : (r5 += n5[i3].toUpperCase(), true === t5 && i3 > 0 && "=" === n5[i3] && -1 === o2.indexOf(n5[i3 - 1]) && -1 === o2.indexOf(n5[i3 + 1]) && (r5 += "="));
+                return r5 = r5.replace(/\^/g, "**"), r5 = r5.replace(/<>/g, "!="), r5 = r5.replace(/&/g, "+"), r5 = r5.replace(/\$/g, ""), r5;
+              }(n4 = (n4 = n4.replace(/\$/g, "")).replace(/!/g, "."), true)).match(/(('.*?'!)|(\w*!))?(\$?[A-Z]+\$?[0-9]*):(\$?[A-Z]+\$?[0-9]*)?/g);
+              h && h.length && (n4 = a(h, n4));
+              let g = new Function(c + "; return " + n4)();
+              return null === g && (g = 0), g;
+            };
+            return l.getColumnNameFromCoords = function(n4, t4) {
+              return r4 = parseInt(n4), e3 = "", r4 > 701 ? (e3 += String.fromCharCode(64 + parseInt(r4 / 676)), e3 += String.fromCharCode(64 + parseInt(r4 % 676 / 26))) : r4 > 25 && (e3 += String.fromCharCode(64 + parseInt(r4 / 26))), e3 + String.fromCharCode(65 + r4 % 26) + (parseInt(t4) + 1);
+              var r4, e3;
+            }, l.getCoordsFromColumnName = function(n4) {
+              var t4 = /^[a-zA-Z]+/.exec(n4);
+              if (t4) {
+                for (var r4 = 0, e3 = 0; e3 < t4[0].length; e3++) r4 += parseInt(t4[0].charCodeAt(e3) - 64) * Math.pow(26, t4[0].length - 1 - e3);
+                --r4 < 0 && (r4 = 0);
+                var o2 = parseInt(/[0-9]+$/.exec(n4)) || null;
+                return o2 > 0 && o2--, [r4, o2];
+              }
+            }, l.getRangeFromTokens = function(n4) {
+              n4 = n4.filter(function(n5) {
+                return "#REF!" != n5;
+              });
+              for (var t4 = "", r4 = "", e3 = 0; e3 < n4.length; e3++) n4[e3].indexOf(".") >= 0 ? t4 = "." : n4[e3].indexOf("!") >= 0 && (t4 = "!"), t4 && (r4 = n4[e3].split(t4), n4[e3] = r4[1], r4 = r4[0] + t4);
+              return n4.sort(function(n5, t5) {
+                var r5 = Helpers.getCoordsFromColumnName(n5), e4 = Helpers.getCoordsFromColumnName(t5);
+                return r5[1] > e4[1] ? 1 : r5[1] < e4[1] ? -1 : r5[0] > e4[0] ? 1 : r5[0] < e4[0] ? -1 : 0;
+              }), n4.length ? r4 + (n4[0] + ":") + n4[n4.length - 1] : "#REF!";
+            }, l.getTokensFromRange = function(n4) {
+              if (n4.indexOf(".") > 0) {
+                var t4 = n4.split(".");
+                n4 = t4[1], t4 = t4[0] + ".";
+              } else n4.indexOf("!") > 0 ? (t4 = n4.split("!"), n4 = t4[1], t4 = t4[0] + "!") : t4 = "";
+              n4 = n4.split(":");
+              var r4 = l.getCoordsFromColumnName(n4[0]), e3 = l.getCoordsFromColumnName(n4[1]);
+              if (r4[0] <= e3[0]) var o2 = r4[0], i3 = e3[0];
+              else o2 = e3[0], i3 = r4[0];
+              if (null === r4[1] && null == e3[1]) for (var u2 = null, a2 = null, f2 = Object.keys(vars), c = 0; c < f2.length; c++) {
+                var s = l.getCoordsFromColumnName(f2[c]);
+                s[0] === r4[0] && (null === u2 || s[1] < u2) && (u2 = s[1]), s[0] === e3[0] && (null === a2 || s[1] > a2) && (a2 = s[1]);
+              }
+              else r4[1] <= e3[1] ? (u2 = r4[1], a2 = e3[1]) : (u2 = e3[1], a2 = r4[1]);
+              for (var h = [], g = u2; g <= a2; g++) {
+                var p = [];
+                for (c = o2; c <= i3; c++) p.push(t4 + l.getColumnNameFromCoords(c, g));
+                h.push(p);
+              }
+              return h;
+            }, l.setFormula = function(t4) {
+              let r4 = Object.keys(t4);
+              for (let e3 = 0; e3 < r4.length; e3++) "function" == typeof t4[r4[e3]] && (n3[r4[e3]] = t4[r4[e3]]);
+            }, l.basic = true, l;
+          }("undefined" == typeof window ? r2.g : window);
+        }, 592: function(n2, t2, r2) {
+          "use strict";
+          var e2 = r2(162), o = r2(765);
+          const i2 = new Error("#NULL!"), u = new Error("#DIV/0!"), a = new Error("#VALUE!"), f = new Error("#REF!"), l = new Error("#NAME?"), c = new Error("#NUM!"), s = new Error("#N/A"), h = new Error("#ERROR!"), g = new Error("#GETTING_DATA");
+          var p = Object.freeze({ __proto__: null, data: g, div0: u, error: h, na: s, name: l, nil: i2, num: c, ref: f, value: a });
+          function m(n3) {
+            const t3 = [];
+            return d(n3, (n4) => {
+              t3.push(n4);
+            }), t3;
+          }
+          function d(n3, t3) {
+            let r3 = -1;
+            const e3 = n3.length;
+            for (; ++r3 < e3 && false !== t3(n3[r3], r3, n3); ) ;
+            return n3;
+          }
+          function v(n3) {
+            let t3, r3 = n3.length;
+            for (; r3--; ) if (t3 = n3[r3], "number" != typeof t3) if (true !== t3) if (false !== t3) {
+              if ("string" == typeof t3) {
+                const e3 = R(t3);
+                n3[r3] = e3 instanceof Error ? 0 : e3;
+              }
+            } else n3[r3] = 0;
+            else n3[r3] = 1;
+            return n3;
+          }
+          function E(n3, t3) {
+            if (!n3) return a;
+            n3.every((n4) => Array.isArray(n4)) && 0 !== n3.length || (n3 = [[...n3]]), n3.map((t4, r4) => {
+              t4.map((t5, e4) => {
+                t5 || (n3[r4][e4] = 0);
+              });
+            });
+            const r3 = n3.reduce((t4, r4, e4) => r4.length > n3[t4].length ? e4 : t4, 0), e3 = n3[r3].length;
+            return n3.map((n4) => [...n4, ...Array(e3 - n4.length).fill(t3 || 0)]);
+          }
+          function M() {
+            let n3;
+            if (1 === arguments.length) {
+              const r3 = arguments[0];
+              n3 = null != (t3 = r3) && "number" == typeof t3.length && "string" != typeof t3 ? m.apply(null, arguments) : [r3];
+            } else n3 = Array.from(arguments);
+            for (var t3; !w(n3); ) n3 = N(n3);
+            return n3;
+          }
+          function N(n3) {
+            return n3 && n3.reduce ? n3.reduce((n4, t3) => {
+              const r3 = Array.isArray(n4), e3 = Array.isArray(t3);
+              return r3 && e3 ? n4.concat(t3) : r3 ? (n4.push(t3), n4) : e3 ? [n4].concat(t3) : [n4, t3];
+            }) : [n3];
+          }
+          function w(n3) {
+            if (!n3) return false;
+            for (let t3 = 0; t3 < n3.length; ++t3) if (Array.isArray(n3[t3])) return false;
+            return true;
+          }
+          function y2(n3, t3) {
+            return t3 = t3 || 1, n3 && "function" == typeof n3.slice ? n3.slice(t3) : n3;
+          }
+          function I(n3) {
+            return n3 ? n3[0].map((t3, r3) => n3.map((n4) => n4[r3])) : a;
+          }
+          function b(n3, t3) {
+            let r3 = null;
+            return d(n3, (n4, e3) => {
+              if (n4[0] === t3) return r3 = e3, false;
+            }), null == r3 ? a : r3;
+          }
+          function T() {
+            for (let n3 = 0; n3 < arguments.length; n3++) if (arguments[n3] instanceof Error) return arguments[n3];
+          }
+          function S() {
+            let n3 = arguments.length;
+            for (; n3--; ) if (arguments[n3] instanceof Error) return true;
+            return false;
+          }
+          function A(n3) {
+            const t3 = 1e14;
+            return Math.round(n3 * t3) / t3;
+          }
+          function C() {
+            return M.apply(null, arguments).filter((n3) => "number" == typeof n3);
+          }
+          function D(n3) {
+            if ("boolean" == typeof n3) return n3;
+            if (n3 instanceof Error) return n3;
+            if ("number" == typeof n3) return 0 !== n3;
+            if ("string" == typeof n3) {
+              const t3 = n3.toUpperCase();
+              if ("TRUE" === t3) return true;
+              if ("FALSE" === t3) return false;
+            }
+            return n3 instanceof Date && !isNaN(n3) || a;
+          }
+          function O(n3) {
+            if (!isNaN(n3)) {
+              if (n3 instanceof Date) return new Date(n3);
+              const t3 = parseFloat(n3);
+              return t3 < 0 || t3 >= 2958466 ? c : function(n4) {
+                n4 < 60 && (n4 += 1);
+                const t4 = Math.floor(n4 - 25569), r3 = new Date(86400 * t4 * 1e3), e3 = n4 - Math.floor(n4) + 1e-7;
+                let o2 = Math.floor(86400 * e3);
+                const i3 = o2 % 60;
+                o2 -= i3;
+                const u2 = Math.floor(o2 / 3600), a2 = Math.floor(o2 / 60) % 60;
+                let f2 = r3.getUTCDate(), l2 = r3.getUTCMonth();
+                return n4 >= 60 && n4 < 61 && (f2 = 29, l2 = 1), new Date(r3.getUTCFullYear(), l2, f2, u2, a2, i3);
+              }(t3);
+            }
+            return "string" != typeof n3 || (n3 = /(\d{4})-(\d\d?)-(\d\d?)$/.test(n3) ? /* @__PURE__ */ new Date(n3 + "T00:00:00.000") : new Date(n3), isNaN(n3)) ? a : n3;
+          }
+          function x2(n3) {
+            let t3, r3 = n3.length;
+            for (; r3--; ) {
+              if (t3 = O(n3[r3]), t3 === a) return t3;
+              n3[r3] = t3;
+            }
+            return n3;
+          }
+          function R(n3) {
+            return n3 instanceof Error ? n3 : null == n3 ? 0 : ("boolean" == typeof n3 && (n3 = +n3), isNaN(n3) || "" === n3 ? a : parseFloat(n3));
+          }
+          function P(n3) {
+            let t3, r3;
+            if (!n3 || 0 === (t3 = n3.length)) return a;
+            for (; t3--; ) {
+              if (n3[t3] instanceof Error) return n3[t3];
+              if (r3 = R(n3[t3]), r3 instanceof Error) return r3;
+              n3[t3] = r3;
+            }
+            return n3;
+          }
+          function L(n3) {
+            return n3 instanceof Error ? n3 : null == n3 ? "" : n3.toString();
+          }
+          function F() {
+            let n3 = arguments.length;
+            for (; n3--; ) if ("string" == typeof arguments[n3]) return true;
+            return false;
+          }
+          function q(n3) {
+            return null != n3;
+          }
+          const U = "=", _ = [">", ">=", "<", "<=", "=", "<>"], V = "operator", k = "literal", j = [V, k], Y = V, G = k;
+          function H(n3, t3) {
+            if (-1 === j.indexOf(t3)) throw new Error("Unsupported token type: " + t3);
+            return { value: n3, type: t3 };
+          }
+          function X(n3) {
+            return function(n4) {
+              let t3 = "";
+              const r3 = [];
+              for (let e3 = 0; e3 < n4.length; e3++) {
+                const o2 = n4[e3];
+                0 === e3 && _.indexOf(o2) >= 0 ? r3.push(H(o2, Y)) : t3 += o2;
+              }
+              return t3.length > 0 && r3.push(H(function(n5) {
+                return "string" != typeof n5 || /^\d+(\.\d+)?$/.test(n5) && (n5 = -1 === n5.indexOf(".") ? parseInt(n5, 10) : parseFloat(n5)), n5;
+              }(t3), G)), r3.length > 0 && r3[0].type !== Y && r3.unshift(H(U, Y)), r3;
+            }(function(n4) {
+              const t3 = n4.length, r3 = [];
+              let e3 = 0, o2 = "", i3 = "";
+              for (; e3 < t3; ) {
+                const t4 = n4.charAt(e3);
+                switch (t4) {
+                  case ">":
+                  case "<":
+                  case "=":
+                    i3 += t4, o2.length > 0 && (r3.push(o2), o2 = "");
+                    break;
+                  default:
+                    i3.length > 0 && (r3.push(i3), i3 = ""), o2 += t4;
+                }
+                e3++;
+              }
+              return o2.length > 0 && r3.push(o2), i3.length > 0 && r3.push(i3), r3;
+            }(n3));
+          }
+          const B = function(n3) {
+            const t3 = [];
+            let r3;
+            for (let e3 = 0; e3 < n3.length; e3++) {
+              const o2 = n3[e3];
+              switch (o2.type) {
+                case Y:
+                  r3 = o2.value;
+                  break;
+                case G:
+                  t3.push(o2.value);
+              }
+            }
+            return function(n4, t4) {
+              let r4 = false;
+              switch (t4) {
+                case ">":
+                  r4 = n4[0] > n4[1];
+                  break;
+                case ">=":
+                  r4 = n4[0] >= n4[1];
+                  break;
+                case "<":
+                  r4 = n4[0] < n4[1];
+                  break;
+                case "<=":
+                  r4 = n4[0] <= n4[1];
+                  break;
+                case "=":
+                  r4 = n4[0] == n4[1];
+                  break;
+                case "<>":
+                  r4 = n4[0] != n4[1];
+              }
+              return r4;
+            }(t3, r3);
+          }, $2 = {};
+          function z(n3) {
+            return [a, f, u, c, l, i2].indexOf(n3) >= 0 || "number" == typeof n3 && (isNaN(n3) || !isFinite(n3));
+          }
+          function W(n3) {
+            return z(n3) || n3 === s;
+          }
+          function K(n3) {
+            return true === n3 || false === n3;
+          }
+          function Q(n3) {
+            return "number" == typeof n3 && !isNaN(n3) && isFinite(n3);
+          }
+          function Z(n3) {
+            return "string" == typeof n3;
+          }
+          function J() {
+            const n3 = [];
+            for (let t3 = 0; t3 < arguments.length; ++t3) {
+              let r3 = false;
+              const e3 = arguments[t3];
+              for (let t4 = 0; t4 < n3.length && (r3 = n3[t4] === e3, !r3); ++t4) ;
+              r3 || n3.push(e3);
+            }
+            return n3;
+          }
+          function nn(n3, t3, r3, e3) {
+            if (!t3 || !r3) return s;
+            e3 = !(0 === e3 || false === e3);
+            let o2 = s;
+            const i3 = "number" == typeof n3;
+            let u2 = false;
+            for (let a2 = 0; a2 < t3.length; a2++) {
+              const l2 = t3[a2];
+              if (l2[0] === n3) {
+                o2 = r3 < l2.length + 1 ? l2[r3 - 1] : f;
+                break;
+              }
+              !u2 && (i3 && e3 && l2[0] <= n3 || e3 && "string" == typeof l2[0] && l2[0].localeCompare(n3) < 0) && (o2 = r3 < l2.length + 1 ? l2[r3 - 1] : f), i3 && l2[0] > n3 && (u2 = true);
+            }
+            return o2;
+          }
+          function tn() {
+            const n3 = M(arguments).filter(q);
+            if (0 === n3.length) return u;
+            const t3 = T.apply(void 0, n3);
+            if (t3) return t3;
+            const r3 = C(n3), e3 = r3.length;
+            let o2, i3 = 0, a2 = 0;
+            for (let n4 = 0; n4 < e3; n4++) i3 += r3[n4], a2 += 1;
+            return o2 = i3 / a2, isNaN(o2) && (o2 = c), o2;
+          }
+          function rn() {
+            const n3 = M(arguments).filter(q);
+            if (0 === n3.length) return u;
+            const t3 = T.apply(void 0, n3);
+            if (t3) return t3;
+            const r3 = n3, e3 = r3.length;
+            let o2, i3 = 0, a2 = 0;
+            for (let n4 = 0; n4 < e3; n4++) {
+              const t4 = r3[n4];
+              "number" == typeof t4 && (i3 += t4), true === t4 && i3++, null !== t4 && a2++;
+            }
+            return o2 = i3 / a2, isNaN(o2) && (o2 = c), o2;
+          }
+          $2.TYPE = (n3) => {
+            switch (n3) {
+              case i2:
+                return 1;
+              case u:
+                return 2;
+              case a:
+                return 3;
+              case f:
+                return 4;
+              case l:
+                return 5;
+              case c:
+                return 6;
+              case s:
+                return 7;
+              case g:
+                return 8;
+            }
+            return s;
+          };
+          const en = { DIST: function(n3, t3, r3, o2, i3, u2) {
+            return arguments.length < 4 ? a : (i3 = void 0 === i3 ? 0 : i3, u2 = void 0 === u2 ? 1 : u2, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), i3 = R(i3), u2 = R(u2)) ? a : (n3 = (n3 - i3) / (u2 - i3), o2 ? e2.beta.cdf(n3, t3, r3) : e2.beta.pdf(n3, t3, r3)));
+          }, INV: (n3, t3, r3, o2, i3) => (o2 = void 0 === o2 ? 0 : o2, i3 = void 0 === i3 ? 1 : i3, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), o2 = R(o2), i3 = R(i3)) ? a : e2.beta.inv(n3, t3, r3) * (i3 - o2) + o2) }, on = { DIST: (n3, t3, r3, o2) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3), o2 = R(o2)) ? a : o2 ? e2.binomial.cdf(n3, t3, r3) : e2.binomial.pdf(n3, t3, r3) };
+          on.DIST.RANGE = (n3, t3, r3, e3) => {
+            if (e3 = void 0 === e3 ? r3 : e3, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3))) return a;
+            let o2 = 0;
+            for (let i3 = r3; i3 <= e3; i3++) o2 += Gn(n3, i3) * Math.pow(t3, i3) * Math.pow(1 - t3, n3 - i3);
+            return o2;
+          }, on.INV = (n3, t3, r3) => {
+            if (S(n3 = R(n3), t3 = R(t3), r3 = R(r3))) return a;
+            let o2 = 0;
+            for (; o2 <= n3; ) {
+              if (e2.binomial.cdf(o2, n3, t3) >= r3) return o2;
+              o2++;
+            }
+          };
+          const un = { DIST: (n3, t3, r3) => S(n3 = R(n3), t3 = R(t3)) ? a : r3 ? e2.chisquare.cdf(n3, t3) : e2.chisquare.pdf(n3, t3) };
+          un.DIST.RT = (n3, t3) => !n3 | !t3 ? s : n3 < 1 || t3 > Math.pow(10, 10) ? c : "number" != typeof n3 || "number" != typeof t3 ? a : 1 - e2.chisquare.cdf(n3, t3), un.INV = (n3, t3) => S(n3 = R(n3), t3 = R(t3)) ? a : e2.chisquare.inv(n3, t3), un.INV.RT = (n3, t3) => !n3 | !t3 ? s : n3 < 0 || n3 > 1 || t3 < 1 || t3 > Math.pow(10, 10) ? c : "number" != typeof n3 || "number" != typeof t3 ? a : e2.chisquare.inv(1 - n3, t3), un.TEST = function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            if (!(n3 instanceof Array && t3 instanceof Array)) return a;
+            if (n3.length !== t3.length) return a;
+            if (n3[0] && t3[0] && n3[0].length !== t3[0].length) return a;
+            const r3 = n3.length;
+            let e3, o2, i3;
+            for (o2 = 0; o2 < r3; o2++) n3[o2] instanceof Array || (e3 = n3[o2], n3[o2] = [], n3[o2].push(e3)), t3[o2] instanceof Array || (e3 = t3[o2], t3[o2] = [], t3[o2].push(e3));
+            const u2 = n3[0].length, f2 = 1 === u2 ? r3 - 1 : (r3 - 1) * (u2 - 1);
+            let l2 = 0;
+            const c2 = Math.PI;
+            for (o2 = 0; o2 < r3; o2++) for (i3 = 0; i3 < u2; i3++) l2 += Math.pow(n3[o2][i3] - t3[o2][i3], 2) / t3[o2][i3];
+            return Math.round(1e6 * function(n4, t4) {
+              let r4 = Math.exp(-0.5 * n4);
+              t4 % 2 == 1 && (r4 *= Math.sqrt(2 * n4 / c2));
+              let e4 = t4;
+              for (; e4 >= 2; ) r4 = r4 * n4 / e4, e4 -= 2;
+              let o3 = r4, i4 = t4;
+              for (; o3 > 1e-10 * r4; ) i4 += 2, o3 = o3 * n4 / i4, r4 += o3;
+              return 1 - r4;
+            }(l2, f2)) / 1e6;
+          };
+          const an = {};
+          function fn() {
+            return C(M(arguments)).length;
+          }
+          function ln() {
+            const n3 = M(arguments);
+            return n3.length - cn(n3);
+          }
+          function cn() {
+            const n3 = M(arguments);
+            let t3, r3 = 0;
+            for (let e3 = 0; e3 < n3.length; e3++) t3 = n3[e3], null != t3 && "" !== t3 || r3++;
+            return r3;
+          }
+          an.NORM = (n3, t3, r3) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : e2.normalci(1, n3, t3, r3)[1] - 1, an.T = (n3, t3, r3) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : e2.tci(1, n3, t3, r3)[1] - 1;
+          const sn = { P: (n3, t3) => {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            const r3 = e2.mean(n3), o2 = e2.mean(t3);
+            let i3 = 0;
+            const u2 = n3.length;
+            for (let e3 = 0; e3 < u2; e3++) i3 += (n3[e3] - r3) * (t3[e3] - o2);
+            return i3 / u2;
+          }, S: (n3, t3) => S(n3 = P(M(n3)), t3 = P(M(t3))) ? a : e2.covariance(n3, t3) }, hn = { DIST: (n3, t3, r3) => S(n3 = R(n3), t3 = R(t3)) ? a : r3 ? e2.exponential.cdf(n3, t3) : e2.exponential.pdf(n3, t3) }, gn = {};
+          function pn(n3, t3, r3) {
+            if (S(n3 = R(n3), t3 = P(M(t3)), r3 = P(M(r3)))) return a;
+            const o2 = e2.mean(r3), i3 = e2.mean(t3), u2 = r3.length;
+            let f2 = 0, l2 = 0;
+            for (let n4 = 0; n4 < u2; n4++) f2 += (r3[n4] - o2) * (t3[n4] - i3), l2 += Math.pow(r3[n4] - o2, 2);
+            const c2 = f2 / l2;
+            return i3 - c2 * o2 + c2 * n3;
+          }
+          function mn(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 0 === n3 || parseInt(n3, 10) === n3 && n3 < 0 ? c : e2.gammafn(n3);
+          }
+          function dn(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : e2.gammaln(n3);
+          }
+          gn.DIST = (n3, t3, r3, o2) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : o2 ? e2.centralF.cdf(n3, t3, r3) : e2.centralF.pdf(n3, t3, r3), gn.DIST.RT = function(n3, t3, r3) {
+            return 3 !== arguments.length ? s : n3 < 0 || t3 < 1 || r3 < 1 ? c : "number" != typeof n3 || "number" != typeof t3 || "number" != typeof r3 ? a : 1 - e2.centralF.cdf(n3, t3, r3);
+          }, gn.INV = (n3, t3, r3) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : n3 <= 0 || n3 > 1 ? c : e2.centralF.inv(n3, t3, r3), gn.INV.RT = function(n3, t3, r3) {
+            return 3 !== arguments.length ? s : n3 < 0 || n3 > 1 || t3 < 1 || t3 > Math.pow(10, 10) || r3 < 1 || r3 > Math.pow(10, 10) ? c : "number" != typeof n3 || "number" != typeof t3 || "number" != typeof r3 ? a : e2.centralF.inv(1 - n3, t3, r3);
+          }, gn.TEST = (n3, t3) => {
+            if (!n3 || !t3) return s;
+            if (!(n3 instanceof Array && t3 instanceof Array)) return s;
+            if (n3.length < 2 || t3.length < 2) return u;
+            const r3 = (n4, t4) => {
+              let r4 = 0;
+              for (let e4 = 0; e4 < n4.length; e4++) r4 += Math.pow(n4[e4] - t4, 2);
+              return r4;
+            }, e3 = Qn(n3) / n3.length, o2 = Qn(t3) / t3.length;
+            return r3(n3, e3) / (n3.length - 1) / (r3(t3, o2) / (t3.length - 1));
+          }, mn.DIST = function(n3, t3, r3, o2) {
+            return 4 !== arguments.length ? s : n3 < 0 || t3 <= 0 || r3 <= 0 || "number" != typeof n3 || "number" != typeof t3 || "number" != typeof r3 ? a : o2 ? e2.gamma.cdf(n3, t3, r3, true) : e2.gamma.pdf(n3, t3, r3, false);
+          }, mn.INV = function(n3, t3, r3) {
+            return 3 !== arguments.length ? s : n3 < 0 || n3 > 1 || t3 <= 0 || r3 <= 0 ? c : "number" != typeof n3 || "number" != typeof t3 || "number" != typeof r3 ? a : e2.gamma.inv(n3, t3, r3);
+          }, dn.PRECISE = function(n3) {
+            return 1 !== arguments.length ? s : n3 <= 0 ? c : "number" != typeof n3 ? a : e2.gammaln(n3);
+          };
+          const vn = {};
+          function En(n3, t3) {
+            return S(n3 = P(M(n3)), t3 = R(t3)) ? n3 : t3 < 0 || n3.length < t3 ? a : n3.sort((n4, t4) => t4 - n4)[t3 - 1];
+          }
+          function Mn(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            const r3 = e2.mean(n3), o2 = e2.mean(t3), i3 = t3.length;
+            let u2 = 0, f2 = 0;
+            for (let e3 = 0; e3 < i3; e3++) u2 += (t3[e3] - o2) * (n3[e3] - r3), f2 += Math.pow(t3[e3] - o2, 2);
+            const l2 = u2 / f2;
+            return [l2, r3 - l2 * o2];
+          }
+          vn.DIST = (n3, t3, r3, e3, o2) => {
+            if (S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3))) return a;
+            function i3(n4, t4, r4, e4) {
+              return Gn(r4, n4) * Gn(e4 - r4, t4 - n4) / Gn(e4, t4);
+            }
+            return o2 ? function(n4, t4, r4, e4) {
+              let o3 = 0;
+              for (let u2 = 0; u2 <= n4; u2++) o3 += i3(u2, t4, r4, e4);
+              return o3;
+            }(n3, t3, r3, e3) : i3(n3, t3, r3, e3);
+          };
+          const Nn = {};
+          function wn() {
+            const n3 = M(arguments), t3 = T.apply(void 0, n3);
+            if (t3) return t3;
+            const r3 = C(n3);
+            return 0 === r3.length ? 0 : Math.max.apply(Math, r3);
+          }
+          function yn() {
+            const n3 = M(arguments), t3 = T.apply(void 0, n3);
+            if (t3) return t3;
+            const r3 = v(n3);
+            let o2 = e2.median(r3);
+            return isNaN(o2) && (o2 = c), o2;
+          }
+          function In() {
+            const n3 = M(arguments), t3 = T.apply(void 0, n3);
+            if (t3) return t3;
+            const r3 = C(n3);
+            return 0 === r3.length ? 0 : Math.min.apply(Math, r3);
+          }
+          Nn.DIST = (n3, t3, r3, o2) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : o2 ? e2.lognormal.cdf(n3, t3, r3) : e2.lognormal.pdf(n3, t3, r3), Nn.INV = (n3, t3, r3) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : e2.lognormal.inv(n3, t3, r3);
+          const bn = { MULT: function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            const t3 = n3.length, r3 = {};
+            let e3, o2 = [], i3 = 0;
+            for (let u2 = 0; u2 < t3; u2++) e3 = n3[u2], r3[e3] = r3[e3] ? r3[e3] + 1 : 1, r3[e3] > i3 && (i3 = r3[e3], o2 = []), r3[e3] === i3 && (o2[o2.length] = e3);
+            return o2;
+          }, SNGL: function() {
+            const n3 = P(M(arguments));
+            return n3 instanceof Error ? n3 : bn.MULT(n3).sort((n4, t3) => n4 - t3)[0];
+          } }, Tn = { DIST: (n3, t3, r3, o2) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : o2 ? e2.negbin.cdf(n3, t3, r3) : e2.negbin.pdf(n3, t3, r3) }, Sn = {};
+          function An(n3, t3) {
+            if (S(t3 = P(M(t3)), n3 = P(M(n3)))) return a;
+            const r3 = e2.mean(n3), o2 = e2.mean(t3), i3 = n3.length;
+            let u2 = 0, f2 = 0, l2 = 0;
+            for (let e3 = 0; e3 < i3; e3++) u2 += (n3[e3] - r3) * (t3[e3] - o2), f2 += Math.pow(n3[e3] - r3, 2), l2 += Math.pow(t3[e3] - o2, 2);
+            return u2 / Math.sqrt(f2 * l2);
+          }
+          Sn.DIST = (n3, t3, r3, o2) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : r3 <= 0 ? c : o2 ? e2.normal.cdf(n3, t3, r3) : e2.normal.pdf(n3, t3, r3), Sn.INV = (n3, t3, r3) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : e2.normal.inv(n3, t3, r3), Sn.S = {}, Sn.S.DIST = (n3, t3) => (n3 = R(n3)) instanceof Error ? a : t3 ? e2.normal.cdf(n3, 0, 1) : e2.normal.pdf(n3, 0, 1), Sn.S.INV = (n3) => (n3 = R(n3)) instanceof Error ? a : e2.normal.inv(n3, 0, 1);
+          const Cn = { EXC: (n3, t3) => {
+            if (S(n3 = P(M(n3)), t3 = R(t3))) return a;
+            const r3 = (n3 = n3.sort((n4, t4) => n4 - t4)).length;
+            if (t3 < 1 / (r3 + 1) || t3 > 1 - 1 / (r3 + 1)) return c;
+            const e3 = t3 * (r3 + 1) - 1, o2 = Math.floor(e3);
+            return A(e3 === o2 ? n3[e3] : n3[o2] + (e3 - o2) * (n3[o2 + 1] - n3[o2]));
+          }, INC: (n3, t3) => {
+            if (S(n3 = P(M(n3)), t3 = R(t3))) return a;
+            const r3 = t3 * ((n3 = n3.sort((n4, t4) => n4 - t4)).length - 1), e3 = Math.floor(r3);
+            return A(r3 === e3 ? n3[r3] : n3[e3] + (r3 - e3) * (n3[e3 + 1] - n3[e3]));
+          } }, Dn = { EXC: (n3, t3, r3) => {
+            if (r3 = void 0 === r3 ? 3 : r3, S(n3 = P(M(n3)), t3 = R(t3), r3 = R(r3))) return a;
+            n3 = n3.sort((n4, t4) => n4 - t4);
+            const e3 = J.apply(null, n3), o2 = n3.length, i3 = e3.length, u2 = Math.pow(10, r3);
+            let f2 = 0, l2 = false, c2 = 0;
+            for (; !l2 && c2 < i3; ) t3 === e3[c2] ? (f2 = (n3.indexOf(e3[c2]) + 1) / (o2 + 1), l2 = true) : t3 >= e3[c2] && (t3 < e3[c2 + 1] || c2 === i3 - 1) && (f2 = (n3.indexOf(e3[c2]) + 1 + (t3 - e3[c2]) / (e3[c2 + 1] - e3[c2])) / (o2 + 1), l2 = true), c2++;
+            return Math.floor(f2 * u2) / u2;
+          }, INC: (n3, t3, r3) => {
+            if (r3 = void 0 === r3 ? 3 : r3, S(n3 = P(M(n3)), t3 = R(t3), r3 = R(r3))) return a;
+            n3 = n3.sort((n4, t4) => n4 - t4);
+            const e3 = J.apply(null, n3), o2 = n3.length, i3 = e3.length, u2 = Math.pow(10, r3);
+            let f2 = 0, l2 = false, c2 = 0;
+            for (; !l2 && c2 < i3; ) t3 === e3[c2] ? (f2 = n3.indexOf(e3[c2]) / (o2 - 1), l2 = true) : t3 >= e3[c2] && (t3 < e3[c2 + 1] || c2 === i3 - 1) && (f2 = (n3.indexOf(e3[c2]) + (t3 - e3[c2]) / (e3[c2 + 1] - e3[c2])) / (o2 - 1), l2 = true), c2++;
+            return Math.floor(f2 * u2) / u2;
+          } }, On = { DIST: (n3, t3, r3) => S(n3 = R(n3), t3 = R(t3)) ? a : r3 ? e2.poisson.cdf(n3, t3) : e2.poisson.pdf(n3, t3) }, xn = { EXC: (n3, t3) => {
+            if (S(n3 = P(M(n3)), t3 = R(t3))) return a;
+            switch (t3) {
+              case 1:
+                return Cn.EXC(n3, 0.25);
+              case 2:
+                return Cn.EXC(n3, 0.5);
+              case 3:
+                return Cn.EXC(n3, 0.75);
+              default:
+                return c;
+            }
+          }, INC: (n3, t3) => {
+            if (S(n3 = P(M(n3)), t3 = R(t3))) return a;
+            switch (t3) {
+              case 1:
+                return Cn.INC(n3, 0.25);
+              case 2:
+                return Cn.INC(n3, 0.5);
+              case 3:
+                return Cn.INC(n3, 0.75);
+              default:
+                return c;
+            }
+          } }, Rn = {};
+          function Pn() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            const t3 = e2.mean(n3), r3 = n3.length;
+            let o2 = 0;
+            for (let e3 = 0; e3 < r3; e3++) o2 += Math.pow(n3[e3] - t3, 3);
+            return r3 * o2 / ((r3 - 1) * (r3 - 2) * Math.pow(e2.stdev(n3, true), 3));
+          }
+          function Ln(n3, t3) {
+            return S(n3 = P(M(n3)), t3 = R(t3)) ? n3 : n3.sort((n4, t4) => n4 - t4)[t3 - 1];
+          }
+          Rn.AVG = (n3, t3, r3) => {
+            if (S(n3 = R(n3), t3 = P(M(t3)))) return a;
+            const e3 = (r3 = r3 || false) ? (n4, t4) => n4 - t4 : (n4, t4) => t4 - n4, o2 = (t3 = (t3 = M(t3)).sort(e3)).length;
+            let i3 = 0;
+            for (let r4 = 0; r4 < o2; r4++) t3[r4] === n3 && i3++;
+            return i3 > 1 ? (2 * t3.indexOf(n3) + i3 + 1) / 2 : t3.indexOf(n3) + 1;
+          }, Rn.EQ = (n3, t3, r3) => {
+            if (S(n3 = R(n3), t3 = P(M(t3)))) return a;
+            const e3 = (r3 = r3 || false) ? (n4, t4) => n4 - t4 : (n4, t4) => t4 - n4;
+            return (t3 = t3.sort(e3)).indexOf(n3) + 1;
+          }, Pn.P = function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            const t3 = e2.mean(n3), r3 = n3.length;
+            let o2 = 0, i3 = 0;
+            for (let e3 = 0; e3 < r3; e3++) i3 += Math.pow(n3[e3] - t3, 3), o2 += Math.pow(n3[e3] - t3, 2);
+            return i3 /= r3, o2 /= r3, i3 / Math.pow(o2, 1.5);
+          };
+          const Fn = { P: function() {
+            const n3 = Un.P.apply(this, arguments);
+            let t3 = Math.sqrt(n3);
+            return isNaN(t3) && (t3 = c), t3;
+          }, S: function() {
+            const n3 = Un.S.apply(this, arguments);
+            return Math.sqrt(n3);
+          } }, qn = { DIST: (n3, t3, r3) => 1 !== r3 && 2 !== r3 ? c : 1 === r3 ? qn.DIST.RT(n3, t3) : qn.DIST["2T"](n3, t3) };
+          qn.DIST["2T"] = function(n3, t3) {
+            return 2 !== arguments.length ? s : n3 < 0 || t3 < 1 ? c : "number" != typeof n3 || "number" != typeof t3 ? a : 2 * (1 - e2.studentt.cdf(n3, t3));
+          }, qn.DIST.RT = function(n3, t3) {
+            return 2 !== arguments.length ? s : n3 < 0 || t3 < 1 ? c : "number" != typeof n3 || "number" != typeof t3 ? a : 1 - e2.studentt.cdf(n3, t3);
+          }, qn.INV = (n3, t3) => S(n3 = R(n3), t3 = R(t3)) ? a : e2.studentt.inv(n3, t3), qn.INV["2T"] = (n3, t3) => (n3 = R(n3), t3 = R(t3), n3 <= 0 || n3 > 1 || t3 < 1 ? c : S(n3, t3) ? a : Math.abs(e2.studentt.inv(n3 / 2, t3))), qn.TEST = (n3, t3) => {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            const r3 = e2.mean(n3), o2 = e2.mean(t3);
+            let i3, u2 = 0, f2 = 0;
+            for (i3 = 0; i3 < n3.length; i3++) u2 += Math.pow(n3[i3] - r3, 2);
+            for (i3 = 0; i3 < t3.length; i3++) f2 += Math.pow(t3[i3] - o2, 2);
+            u2 /= n3.length - 1, f2 /= t3.length - 1;
+            const l2 = Math.abs(r3 - o2) / Math.sqrt(u2 / n3.length + f2 / t3.length);
+            return qn.DIST["2T"](l2, n3.length + t3.length - 2);
+          };
+          const Un = {};
+          function _n() {
+            const n3 = M(arguments), t3 = n3.length;
+            let r3 = 0, e3 = 0;
+            const o2 = rn(n3);
+            for (let i3 = 0; i3 < t3; i3++) {
+              const t4 = n3[i3];
+              r3 += "number" == typeof t4 ? Math.pow(t4 - o2, 2) : true === t4 ? Math.pow(1 - o2, 2) : Math.pow(0 - o2, 2), null !== t4 && e3++;
+            }
+            return r3 / (e3 - 1);
+          }
+          function Vn() {
+            const n3 = M(arguments), t3 = n3.length;
+            let r3 = 0, e3 = 0;
+            const o2 = rn(n3);
+            let i3;
+            for (let i4 = 0; i4 < t3; i4++) {
+              const t4 = n3[i4];
+              r3 += "number" == typeof t4 ? Math.pow(t4 - o2, 2) : true === t4 ? Math.pow(1 - o2, 2) : Math.pow(0 - o2, 2), null !== t4 && e3++;
+            }
+            return i3 = r3 / e3, isNaN(i3) && (i3 = c), i3;
+          }
+          Un.P = function() {
+            const n3 = C(M(arguments)), t3 = n3.length;
+            let r3 = 0;
+            const e3 = tn(n3);
+            let o2;
+            for (let o3 = 0; o3 < t3; o3++) r3 += Math.pow(n3[o3] - e3, 2);
+            return o2 = r3 / t3, isNaN(o2) && (o2 = c), o2;
+          }, Un.S = function() {
+            const n3 = C(M(arguments)), t3 = n3.length;
+            let r3 = 0;
+            const e3 = tn(n3);
+            for (let o2 = 0; o2 < t3; o2++) r3 += Math.pow(n3[o2] - e3, 2);
+            return r3 / (t3 - 1);
+          };
+          const kn = { DIST: (n3, t3, r3, e3) => S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : e3 ? 1 - Math.exp(-Math.pow(n3 / r3, t3)) : Math.pow(n3, t3 - 1) * Math.exp(-Math.pow(n3 / r3, t3)) * t3 / Math.pow(r3, t3) }, jn = {};
+          function Yn(n3, t3, r3) {
+            const e3 = T(n3 = R(n3), t3 = R(t3), r3 = R(r3));
+            if (e3) return e3;
+            if (0 === t3) return 0;
+            t3 = Math.abs(t3);
+            const o2 = -Math.floor(Math.log(t3) / Math.log(10));
+            return n3 >= 0 ? Kn(Math.ceil(n3 / t3) * t3, o2) : 0 === r3 ? -Kn(Math.floor(Math.abs(n3) / t3) * t3, o2) : -Kn(Math.ceil(Math.abs(n3) / t3) * t3, o2);
+          }
+          function Gn(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || (n3 < t3 ? c : Xn(n3) / (Xn(t3) * Xn(n3 - t3)));
+          }
+          jn.TEST = (n3, t3, r3) => {
+            if (S(n3 = P(M(n3)), t3 = R(t3))) return a;
+            r3 = r3 || Fn.S(n3);
+            const e3 = n3.length;
+            return 1 - Sn.S.DIST((tn(n3) - t3) / (r3 / Math.sqrt(e3)), true);
+          }, Yn.MATH = Yn, Yn.PRECISE = Yn;
+          const Hn = [];
+          function Xn(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            const t3 = Math.floor(n3);
+            return 0 === t3 || 1 === t3 ? 1 : (Hn[t3] > 0 || (Hn[t3] = Xn(t3 - 1) * t3), Hn[t3]);
+          }
+          function Bn(n3, t3) {
+            const r3 = T(n3 = R(n3), t3 = R(t3));
+            if (r3) return r3;
+            if (0 === t3) return 0;
+            if (!(n3 >= 0 && t3 > 0 || n3 <= 0 && t3 < 0)) return c;
+            t3 = Math.abs(t3);
+            const e3 = -Math.floor(Math.log(t3) / Math.log(10));
+            return n3 >= 0 ? Kn(Math.floor(n3 / t3) * t3, e3) : -Kn(Math.ceil(Math.abs(n3) / t3), e3);
+          }
+          Bn.MATH = (n3, t3, r3) => {
+            if (t3 instanceof Error) return t3;
+            t3 = void 0 === t3 ? 0 : t3;
+            const e3 = T(n3 = R(n3), t3 = R(t3), r3 = R(r3));
+            if (e3) return e3;
+            if (0 === t3) return 0;
+            t3 = t3 ? Math.abs(t3) : 1;
+            const o2 = -Math.floor(Math.log(t3) / Math.log(10));
+            return n3 >= 0 ? Kn(Math.floor(n3 / t3) * t3, o2) : 0 === r3 || void 0 === r3 ? -Kn(Math.ceil(Math.abs(n3) / t3) * t3, o2) : -Kn(Math.floor(Math.abs(n3) / t3) * t3, o2);
+          }, Bn.PRECISE = Bn.MATH;
+          const $n = { CEILING: Yn };
+          function zn(n3, t3) {
+            const r3 = T(n3 = R(n3), t3 = R(t3));
+            if (r3) return r3;
+            if (0 === n3 && 0 === t3) return c;
+            const e3 = Math.pow(n3, t3);
+            return isNaN(e3) ? c : e3;
+          }
+          function Wn() {
+            const n3 = M(arguments).filter((n4) => null != n4);
+            if (0 === n3.length) return 0;
+            const t3 = P(n3);
+            if (t3 instanceof Error) return t3;
+            let r3 = 1;
+            for (let n4 = 0; n4 < t3.length; n4++) r3 *= t3[n4];
+            return r3;
+          }
+          function Kn(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || Number(Math.round(Number(n3 + "e" + t3)) + "e" + -1 * t3);
+          }
+          function Qn() {
+            let n3 = 0;
+            return d(m(arguments), (t3) => {
+              if (n3 instanceof Error) return false;
+              if (t3 instanceof Error) n3 = t3;
+              else if ("number" == typeof t3) n3 += t3;
+              else if ("string" == typeof t3) {
+                const r3 = parseFloat(t3);
+                !isNaN(r3) && (n3 += r3);
+              } else if (Array.isArray(t3)) {
+                const r3 = Qn.apply(null, t3);
+                r3 instanceof Error ? n3 = r3 : n3 += r3;
+              }
+            }), n3;
+          }
+          var Zn = Object.freeze({ __proto__: null, ADD: function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            return T(n3 = R(n3), t3 = R(t3)) || n3 + t3;
+          }, DIVIDE: function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            return T(n3 = R(n3), t3 = R(t3)) || (0 === t3 ? u : n3 / t3);
+          }, EQ: function(n3, t3) {
+            return 2 !== arguments.length ? s : n3 instanceof Error ? n3 : t3 instanceof Error ? t3 : (null === n3 && (n3 = void 0), null === t3 && (t3 = void 0), n3 === t3);
+          }, GT: function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            if (n3 instanceof Error) return n3;
+            if (t3 instanceof Error) return t3;
+            F(n3, t3) ? (n3 = L(n3), t3 = L(t3)) : (n3 = R(n3), t3 = R(t3));
+            return T(n3, t3) || n3 > t3;
+          }, GTE: function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            F(n3, t3) ? (n3 = L(n3), t3 = L(t3)) : (n3 = R(n3), t3 = R(t3));
+            return T(n3, t3) || n3 >= t3;
+          }, LT: function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            F(n3, t3) ? (n3 = L(n3), t3 = L(t3)) : (n3 = R(n3), t3 = R(t3));
+            return T(n3, t3) || n3 < t3;
+          }, LTE: function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            F(n3, t3) ? (n3 = L(n3), t3 = L(t3)) : (n3 = R(n3), t3 = R(t3));
+            return T(n3, t3) || n3 <= t3;
+          }, MINUS: function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            return T(n3 = R(n3), t3 = R(t3)) || n3 - t3;
+          }, MULTIPLY: function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            return T(n3 = R(n3), t3 = R(t3)) || n3 * t3;
+          }, NE: function(n3, t3) {
+            return 2 !== arguments.length ? s : n3 instanceof Error ? n3 : t3 instanceof Error ? t3 : (null === n3 && (n3 = void 0), null === t3 && (t3 = void 0), n3 !== t3);
+          }, POW: function(n3, t3) {
+            return 2 !== arguments.length ? s : zn(n3, t3);
+          } });
+          const Jn = new Date(Date.UTC(1900, 0, 1)), nt = [void 0, 0, 1, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, 1, 2, 3, 4, 5, 6, 0], tt = [[], [1, 2, 3, 4, 5, 6, 7], [7, 1, 2, 3, 4, 5, 6], [6, 0, 1, 2, 3, 4, 5], [], [], [], [], [], [], [], [7, 1, 2, 3, 4, 5, 6], [6, 7, 1, 2, 3, 4, 5], [5, 6, 7, 1, 2, 3, 4], [4, 5, 6, 7, 1, 2, 3], [3, 4, 5, 6, 7, 1, 2], [2, 3, 4, 5, 6, 7, 1], [1, 2, 3, 4, 5, 6, 7]], rt = [[], [6, 0], [0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], void 0, void 0, void 0, [0, 0], [1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6]];
+          function et(n3, t3, r3) {
+            r3 = r3.toUpperCase(), n3 = O(n3), t3 = O(t3);
+            const e3 = n3.getFullYear(), o2 = n3.getMonth(), i3 = n3.getDate(), u2 = t3.getFullYear(), a2 = t3.getMonth(), f2 = t3.getDate();
+            let l2;
+            switch (r3) {
+              case "Y":
+                l2 = Math.floor(ht(n3, t3));
+                break;
+              case "D":
+                l2 = it(t3, n3);
+                break;
+              case "M":
+                l2 = a2 - o2 + 12 * (u2 - e3), f2 < i3 && l2--;
+                break;
+              case "MD":
+                i3 <= f2 ? l2 = f2 - i3 : (0 === a2 ? (n3.setFullYear(u2 - 1), n3.setMonth(12)) : (n3.setFullYear(u2), n3.setMonth(a2 - 1)), l2 = it(t3, n3));
+                break;
+              case "YM":
+                l2 = a2 - o2 + 12 * (u2 - e3), f2 < i3 && l2--, l2 %= 12;
+                break;
+              case "YD":
+                a2 > o2 || a2 === o2 && f2 < i3 ? n3.setFullYear(u2) : n3.setFullYear(u2 - 1), l2 = it(t3, n3);
+            }
+            return l2;
+          }
+          function ot(n3) {
+            const t3 = new Date(n3);
+            return t3.setHours(0, 0, 0, 0), t3;
+          }
+          function it(n3, t3) {
+            return n3 = O(n3), t3 = O(t3), n3 instanceof Error ? n3 : t3 instanceof Error ? t3 : gt(ot(n3)) - gt(ot(t3));
+          }
+          function ut(n3, t3, r3) {
+            if (r3 = D(r3 || "false"), n3 = O(n3), t3 = O(t3), n3 instanceof Error) return n3;
+            if (t3 instanceof Error) return t3;
+            if (r3 instanceof Error) return r3;
+            const e3 = n3.getMonth();
+            let o2, i3, u2 = t3.getMonth();
+            if (r3) o2 = 31 === n3.getDate() ? 30 : n3.getDate(), i3 = 31 === t3.getDate() ? 30 : t3.getDate();
+            else {
+              const r4 = new Date(n3.getFullYear(), e3 + 1, 0).getDate(), a2 = new Date(t3.getFullYear(), u2 + 1, 0).getDate();
+              o2 = n3.getDate() === r4 ? 30 : n3.getDate(), t3.getDate() === a2 ? o2 < 30 ? (u2++, i3 = 1) : i3 = 30 : i3 = t3.getDate();
+            }
+            return 360 * (t3.getFullYear() - n3.getFullYear()) + 30 * (u2 - e3) + (i3 - o2);
+          }
+          function at(n3) {
+            if ((n3 = O(n3)) instanceof Error) return n3;
+            (n3 = ot(n3)).setDate(n3.getDate() + 4 - (n3.getDay() || 7));
+            const t3 = new Date(n3.getFullYear(), 0, 1);
+            return Math.ceil(((n3 - t3) / 864e5 + 1) / 7);
+          }
+          function ft(n3, t3, r3) {
+            return ft.INTL(n3, t3, 1, r3);
+          }
+          function lt(n3, t3, r3) {
+            return lt.INTL(n3, t3, 1, r3);
+          }
+          function ct(n3) {
+            return 1 === new Date(n3, 1, 29).getMonth();
+          }
+          function st(n3, t3) {
+            return Math.ceil((t3 - n3) / 1e3 / 60 / 60 / 24);
+          }
+          function ht(n3, t3, r3) {
+            if ((n3 = O(n3)) instanceof Error) return n3;
+            if ((t3 = O(t3)) instanceof Error) return t3;
+            r3 = r3 || 0;
+            let e3 = n3.getDate();
+            const o2 = n3.getMonth() + 1, i3 = n3.getFullYear();
+            let u2 = t3.getDate();
+            const a2 = t3.getMonth() + 1, f2 = t3.getFullYear();
+            switch (r3) {
+              case 0:
+                return 31 === e3 && 31 === u2 ? (e3 = 30, u2 = 30) : 31 === e3 ? e3 = 30 : 30 === e3 && 31 === u2 && (u2 = 30), (u2 + 30 * a2 + 360 * f2 - (e3 + 30 * o2 + 360 * i3)) / 360;
+              case 1: {
+                const r4 = (n4, t4) => {
+                  const r5 = n4.getFullYear(), e4 = new Date(r5, 2, 1);
+                  if (ct(r5) && n4 < e4 && t4 >= e4) return true;
+                  const o3 = t4.getFullYear(), i4 = new Date(o3, 2, 1);
+                  return ct(o3) && t4 >= i4 && n4 < i4;
+                };
+                let l2 = 365;
+                if (i3 === f2 || i3 + 1 === f2 && (o2 > a2 || o2 === a2 && e3 >= u2)) return (i3 === f2 && ct(i3) || r4(n3, t3) || 1 === a2 && 29 === u2) && (l2 = 366), st(n3, t3) / l2;
+                const c2 = f2 - i3 + 1, s2 = (new Date(f2 + 1, 0, 1) - new Date(i3, 0, 1)) / 1e3 / 60 / 60 / 24 / c2;
+                return st(n3, t3) / s2;
+              }
+              case 2:
+                return st(n3, t3) / 360;
+              case 3:
+                return st(n3, t3) / 365;
+              case 4:
+                return (u2 + 30 * a2 + 360 * f2 - (e3 + 30 * o2 + 360 * i3)) / 360;
+            }
+          }
+          function gt(n3) {
+            const t3 = n3 > -22038912e5 ? 2 : 1;
+            return Math.ceil((n3 - Jn) / 864e5) + t3;
+          }
+          function pt(n3) {
+            return 0 === (n3 = R(n3)) ? a : n3 instanceof Error ? n3 : String.fromCharCode(n3);
+          }
+          function mt(n3) {
+            if (S(n3)) return n3;
+            let t3 = (n3 = n3 || "").charCodeAt(0);
+            return isNaN(t3) && (t3 = a), t3;
+          }
+          function dt() {
+            const n3 = M(arguments), t3 = T.apply(void 0, n3);
+            if (t3) return t3;
+            let r3 = 0;
+            for (; (r3 = n3.indexOf(true)) > -1; ) n3[r3] = "TRUE";
+            let e3 = 0;
+            for (; (e3 = n3.indexOf(false)) > -1; ) n3[e3] = "FALSE";
+            return n3.join("");
+          }
+          ft.INTL = (n3, t3, r3, e3) => {
+            if ((n3 = O(n3)) instanceof Error) return n3;
+            if ((t3 = O(t3)) instanceof Error) return t3;
+            let o2 = false;
+            const i3 = [], u2 = [1, 2, 3, 4, 5, 6, 0], f2 = new RegExp("^[0|1]{7}$");
+            if (void 0 === r3) r3 = rt[1];
+            else if ("string" == typeof r3 && f2.test(r3)) {
+              o2 = true, r3 = r3.split("");
+              for (let n4 = 0; n4 < r3.length; n4++) "1" === r3[n4] && i3.push(u2[n4]);
+            } else r3 = rt[r3];
+            if (!(r3 instanceof Array)) return a;
+            void 0 === e3 ? e3 = [] : e3 instanceof Array || (e3 = [e3]);
+            for (let n4 = 0; n4 < e3.length; n4++) {
+              const t4 = O(e3[n4]);
+              if (t4 instanceof Error) return t4;
+              e3[n4] = t4;
+            }
+            const l2 = Math.round((t3 - n3) / 864e5) + 1;
+            let c2 = l2;
+            const s2 = n3;
+            for (let n4 = 0; n4 < l2; n4++) {
+              const n5 = (/* @__PURE__ */ new Date()).getTimezoneOffset() > 0 ? s2.getUTCDay() : s2.getDay();
+              let t4 = o2 ? i3.includes(n5) : n5 === r3[0] || n5 === r3[1];
+              for (let n6 = 0; n6 < e3.length; n6++) {
+                const r4 = e3[n6];
+                if (r4.getDate() === s2.getDate() && r4.getMonth() === s2.getMonth() && r4.getFullYear() === s2.getFullYear()) {
+                  t4 = true;
+                  break;
+                }
+              }
+              t4 && c2--, s2.setDate(s2.getDate() + 1);
+            }
+            return c2;
+          }, lt.INTL = (n3, t3, r3, e3) => {
+            if ((n3 = O(n3)) instanceof Error) return n3;
+            if ((t3 = R(t3)) instanceof Error) return t3;
+            if (t3 < 0) return c;
+            if (!((r3 = void 0 === r3 ? rt[1] : rt[r3]) instanceof Array)) return a;
+            void 0 === e3 ? e3 = [] : e3 instanceof Array || (e3 = [e3]);
+            for (let n4 = 0; n4 < e3.length; n4++) {
+              const t4 = O(e3[n4]);
+              if (t4 instanceof Error) return t4;
+              e3[n4] = t4;
+            }
+            let o2 = 0;
+            for (; o2 < t3; ) {
+              n3.setDate(n3.getDate() + 1);
+              const t4 = n3.getDay();
+              if (t4 !== r3[0] && t4 !== r3[1]) {
+                for (let t5 = 0; t5 < e3.length; t5++) {
+                  const r4 = e3[t5];
+                  if (r4.getDate() === n3.getDate() && r4.getMonth() === n3.getMonth() && r4.getFullYear() === n3.getFullYear()) {
+                    o2--;
+                    break;
+                  }
+                }
+                o2++;
+              }
+            }
+            return n3;
+          };
+          const vt = dt;
+          function Et(n3, t3 = 2, r3 = false) {
+            if (n3 = R(n3), isNaN(n3)) return a;
+            if (t3 = R(t3), isNaN(t3)) return a;
+            if (t3 < 0) {
+              const r4 = Math.pow(10, -t3);
+              n3 = Math.round(n3 / r4) * r4;
+            } else n3 = n3.toFixed(t3);
+            if (r3) n3 = n3.toString().replace(/,/g, "");
+            else {
+              const t4 = n3.toString().split(".");
+              t4[0] = t4[0].replace(/\B(?=(\d{3})+$)/g, ","), n3 = t4.join(".");
+            }
+            return n3;
+          }
+          function Mt(n3, t3) {
+            return T(n3, t3) || (n3 = L(n3), (t3 = R(t3)) instanceof Error ? t3 : new Array(t3 + 1).join(n3));
+          }
+          const Nt = pt, wt = mt;
+          function yt(n3) {
+            return /^[01]{1,10}$/.test(n3);
+          }
+          function It(n3, t3, r3) {
+            if (S(n3 = R(n3), t3 = R(t3))) return n3;
+            if ("i" !== (r3 = void 0 === r3 ? "i" : r3) && "j" !== r3) return a;
+            if (0 === n3 && 0 === t3) return 0;
+            if (0 === n3) return 1 === t3 ? r3 : t3.toString() + r3;
+            if (0 === t3) return n3.toString();
+            {
+              const e3 = t3 > 0 ? "+" : "";
+              return n3.toString() + e3 + (1 === t3 ? r3 : t3.toString() + r3);
+            }
+          }
+          function bt(n3, t3) {
+            return t3 = void 0 === t3 ? 0 : t3, S(n3 = R(n3), t3 = R(t3)) ? a : e2.erf(n3);
+          }
+          function Tt(n3) {
+            return isNaN(n3) ? a : e2.erfc(n3);
+          }
+          function St(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            return S(t3, r3) ? a : Math.sqrt(Math.pow(t3, 2) + Math.pow(r3, 2));
+          }
+          function At(n3) {
+            if (void 0 === n3 || true === n3 || false === n3) return a;
+            if (0 === n3 || "0" === n3) return 0;
+            if (["i", "j"].indexOf(n3) >= 0) return 1;
+            let t3 = (n3 = (n3 += "").replace("+i", "+1i").replace("-i", "-1i").replace("+j", "+1j").replace("-j", "-1j")).indexOf("+"), r3 = n3.indexOf("-");
+            0 === t3 && (t3 = n3.indexOf("+", 1)), 0 === r3 && (r3 = n3.indexOf("-", 1));
+            const e3 = n3.substring(n3.length - 1, n3.length), o2 = "i" === e3 || "j" === e3;
+            return t3 >= 0 || r3 >= 0 ? o2 ? t3 >= 0 ? isNaN(n3.substring(0, t3)) || isNaN(n3.substring(t3 + 1, n3.length - 1)) ? c : Number(n3.substring(t3 + 1, n3.length - 1)) : isNaN(n3.substring(0, r3)) || isNaN(n3.substring(r3 + 1, n3.length - 1)) ? c : -Number(n3.substring(r3 + 1, n3.length - 1)) : c : o2 ? isNaN(n3.substring(0, n3.length - 1)) ? c : n3.substring(0, n3.length - 1) : isNaN(n3) ? c : 0;
+          }
+          function Ct(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            return S(t3, r3) ? a : 0 === t3 && 0 === r3 ? u : 0 === t3 && r3 > 0 ? Math.PI / 2 : 0 === t3 && r3 < 0 ? -Math.PI / 2 : 0 === r3 && t3 > 0 ? 0 : 0 === r3 && t3 < 0 ? -Math.PI : t3 > 0 ? Math.atan(r3 / t3) : t3 < 0 && r3 >= 0 ? Math.atan(r3 / t3) + Math.PI : Math.atan(r3 / t3) - Math.PI;
+          }
+          function Dt(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            return e3 = "i" === e3 || "j" === e3 ? e3 : "i", It(Math.cos(t3) * (Math.exp(r3) + Math.exp(-r3)) / 2, -Math.sin(t3) * (Math.exp(r3) - Math.exp(-r3)) / 2, e3);
+          }
+          function Ot(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            return e3 = "i" === e3 || "j" === e3 ? e3 : "i", It(Math.cos(r3) * (Math.exp(t3) + Math.exp(-t3)) / 2, Math.sin(r3) * (Math.exp(t3) - Math.exp(-t3)) / 2, e3);
+          }
+          function xt(n3, t3) {
+            const r3 = Rt(n3), e3 = At(n3), o2 = Rt(t3), i3 = At(t3);
+            if (S(r3, e3, o2, i3)) return a;
+            const u2 = n3.substring(n3.length - 1), f2 = t3.substring(t3.length - 1);
+            let l2 = "i";
+            if (("j" === u2 || "j" === f2) && (l2 = "j"), 0 === o2 && 0 === i3) return c;
+            const s2 = o2 * o2 + i3 * i3;
+            return It((r3 * o2 + e3 * i3) / s2, (e3 * o2 - r3 * i3) / s2, l2);
+          }
+          function Rt(n3) {
+            if (void 0 === n3 || true === n3 || false === n3) return a;
+            if (0 === n3 || "0" === n3) return 0;
+            if (["i", "+i", "1i", "+1i", "-i", "-1i", "j", "+j", "1j", "+1j", "-j", "-1j"].indexOf(n3) >= 0) return 0;
+            let t3 = (n3 += "").indexOf("+"), r3 = n3.indexOf("-");
+            0 === t3 && (t3 = n3.indexOf("+", 1)), 0 === r3 && (r3 = n3.indexOf("-", 1));
+            const e3 = n3.substring(n3.length - 1, n3.length), o2 = "i" === e3 || "j" === e3;
+            return t3 >= 0 || r3 >= 0 ? o2 ? t3 >= 0 ? isNaN(n3.substring(0, t3)) || isNaN(n3.substring(t3 + 1, n3.length - 1)) ? c : Number(n3.substring(0, t3)) : isNaN(n3.substring(0, r3)) || isNaN(n3.substring(r3 + 1, n3.length - 1)) ? c : Number(n3.substring(0, r3)) : c : o2 ? isNaN(n3.substring(0, n3.length - 1)) ? c : 0 : isNaN(n3) ? c : n3;
+          }
+          function Pt(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            return e3 = "i" === e3 || "j" === e3 ? e3 : "i", It(Math.sin(t3) * (Math.exp(r3) + Math.exp(-r3)) / 2, Math.cos(t3) * (Math.exp(r3) - Math.exp(-r3)) / 2, e3);
+          }
+          function Lt(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            return e3 = "i" === e3 || "j" === e3 ? e3 : "i", It(Math.cos(r3) * (Math.exp(t3) - Math.exp(-t3)) / 2, Math.sin(r3) * (Math.exp(t3) + Math.exp(-t3)) / 2, e3);
+          }
+          bt.PRECISE = () => {
+            throw new Error("ERF.PRECISE is not implemented");
+          }, Tt.PRECISE = () => {
+            throw new Error("ERFC.PRECISE is not implemented");
+          };
+          const Ft = en.DIST, qt = en.INV, Ut = on.DIST, _t = Yn.MATH, Vt = Yn.PRECISE, kt = un.DIST, jt = un.DIST.RT, Yt = un.INV, Gt = un.INV.RT, Ht = un.TEST, Xt = sn.P, Bt = sn.P, $t = sn.S, zt = on.INV, Wt = Tt.PRECISE, Kt = bt.PRECISE, Qt = hn.DIST, Zt = gn.DIST, Jt = gn.DIST.RT, nr = gn.INV, tr = gn.INV.RT, rr = Bn.MATH, er = Bn.PRECISE, or = gn.TEST, ir = mn.DIST, ur = mn.INV, ar = dn.PRECISE, fr = vn.DIST, lr = Nn.INV, cr = Nn.DIST, sr = Nn.INV, hr = bn.MULT, gr = bn.SNGL, pr = Tn.DIST, mr = ft.INTL, dr = Sn.DIST, vr = Sn.INV, Er = Sn.S.DIST, Mr = Sn.S.INV, Nr = Cn.EXC, wr = Cn.INC, yr = Dn.EXC, Ir = Dn.INC, br = On.DIST, Tr = xn.EXC, Sr = xn.INC, Ar = Rn.AVG, Cr = Rn.EQ, Dr = Pn.P, Or = Fn.P, xr = Fn.S, Rr = qn.DIST, Pr = qn.DIST.RT, Lr = qn.INV, Fr = qn.TEST, qr = Un.P, Ur = Un.S, _r = kn.DIST, Vr = lt.INTL, kr = jn.TEST;
+          function jr(n3) {
+            const t3 = [];
+            return d(n3, (n4) => {
+              n4 && t3.push(n4);
+            }), t3;
+          }
+          function Yr(n3, t3) {
+            const r3 = {};
+            for (let t4 = 1; t4 < n3[0].length; ++t4) r3[t4] = true;
+            let e3 = t3[0].length;
+            for (let n4 = 1; n4 < t3.length; ++n4) t3[n4].length > e3 && (e3 = t3[n4].length);
+            for (let o3 = 1; o3 < n3.length; ++o3) for (let i3 = 1; i3 < n3[o3].length; ++i3) {
+              let u2 = false, a2 = false;
+              for (let r4 = 0; r4 < t3.length; ++r4) {
+                const f2 = t3[r4];
+                if (f2.length < e3) continue;
+                const l2 = f2[0];
+                if (n3[o3][0] === l2) {
+                  a2 = true;
+                  for (let t4 = 1; t4 < f2.length; ++t4) if (!u2) if (void 0 === f2[t4] || "*" === f2[t4]) u2 = true;
+                  else {
+                    const r5 = X(f2[t4] + ""), e4 = [H(n3[o3][i3], G)].concat(r5);
+                    u2 = B(e4);
+                  }
+                }
+              }
+              a2 && (r3[i3] = r3[i3] && u2);
+            }
+            const o2 = [];
+            for (let t4 = 0; t4 < n3[0].length; ++t4) r3[t4] && o2.push(t4 - 1);
+            return o2;
+          }
+          function Gr(n3) {
+            return n3 && n3.getTime && !isNaN(n3.getTime());
+          }
+          function Hr(n3) {
+            return n3 instanceof Date ? n3 : new Date(n3);
+          }
+          function Xr(n3, t3, r3, e3, o2) {
+            if (e3 = e3 || 0, o2 = o2 || 0, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3), o2 = R(o2))) return a;
+            let i3;
+            if (0 === n3) i3 = e3 + r3 * t3;
+            else {
+              const u2 = Math.pow(1 + n3, t3);
+              i3 = 1 === o2 ? e3 * u2 + r3 * (1 + n3) * (u2 - 1) / n3 : e3 * u2 + r3 * (u2 - 1) / n3;
+            }
+            return -i3;
+          }
+          function Br(n3, t3, r3, e3, o2, i3) {
+            if (o2 = o2 || 0, i3 = i3 || 0, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3), o2 = R(o2), i3 = R(i3))) return a;
+            const u2 = zr(n3, r3, e3, o2, i3);
+            return (1 === t3 ? 1 === i3 ? 0 : -e3 : 1 === i3 ? Xr(n3, t3 - 2, u2, e3, 1) - u2 : Xr(n3, t3 - 1, u2, e3, 0)) * n3;
+          }
+          function $r() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            const t3 = n3[0];
+            let r3 = 0;
+            for (let e3 = 1; e3 < n3.length; e3++) r3 += n3[e3] / Math.pow(1 + t3, e3);
+            return r3;
+          }
+          function zr(n3, t3, r3, e3, o2) {
+            if (e3 = e3 || 0, o2 = o2 || 0, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3), o2 = R(o2))) return a;
+            let i3;
+            if (0 === n3) i3 = (r3 + e3) / t3;
+            else {
+              const u2 = Math.pow(1 + n3, t3);
+              i3 = 1 === o2 ? (e3 * n3 / (u2 - 1) + r3 * n3 / (1 - 1 / u2)) / (1 + n3) : e3 * n3 / (u2 - 1) + r3 * n3 / (1 - 1 / u2);
+            }
+            return -i3;
+          }
+          const Wr = { errors: p, symbols: Zn };
+          t2.ABS = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.abs(n3);
+          }, t2.ACCRINT = function(n3, t3, r3, e3, o2, i3, u2) {
+            return n3 = Hr(n3), t3 = Hr(t3), r3 = Hr(r3), Gr(n3) && Gr(t3) && Gr(r3) ? e3 <= 0 || o2 <= 0 || -1 === [1, 2, 4].indexOf(i3) || -1 === [0, 1, 2, 3, 4].indexOf(u2) || r3 <= n3 ? c : (o2 = o2 || 0) * e3 * ht(n3, r3, u2 = u2 || 0) : a;
+          }, t2.ACCRINTM = function() {
+            throw new Error("ACCRINTM is not implemented");
+          }, t2.ACOS = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            let t3 = Math.acos(n3);
+            return isNaN(t3) && (t3 = c), t3;
+          }, t2.ACOSH = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            let t3 = Math.log(n3 + Math.sqrt(n3 * n3 - 1));
+            return isNaN(t3) && (t3 = c), t3;
+          }, t2.ACOT = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.atan(1 / n3);
+          }, t2.ACOTH = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            let t3 = 0.5 * Math.log((n3 + 1) / (n3 - 1));
+            return isNaN(t3) && (t3 = c), t3;
+          }, t2.AGGREGATE = function(n3, t3, r3, e3) {
+            if (S(n3 = R(n3), R(n3))) return a;
+            switch (n3) {
+              case 1:
+                return tn(r3);
+              case 2:
+                return fn(r3);
+              case 3:
+                return ln(r3);
+              case 4:
+                return wn(r3);
+              case 5:
+                return In(r3);
+              case 6:
+                return Wn(r3);
+              case 7:
+                return Fn.S(r3);
+              case 8:
+                return Fn.P(r3);
+              case 9:
+                return Qn(r3);
+              case 10:
+                return Un.S(r3);
+              case 11:
+                return Un.P(r3);
+              case 12:
+                return yn(r3);
+              case 13:
+                return bn.SNGL(r3);
+              case 14:
+                return En(r3, e3);
+              case 15:
+                return Ln(r3, e3);
+              case 16:
+                return Cn.INC(r3, e3);
+              case 17:
+                return xn.INC(r3, e3);
+              case 18:
+                return Cn.EXC(r3, e3);
+              case 19:
+                return xn.EXC(r3, e3);
+            }
+          }, t2.AMORDEGRC = function() {
+            throw new Error("AMORDEGRC is not implemented");
+          }, t2.AMORLINC = function() {
+            throw new Error("AMORLINC is not implemented");
+          }, t2.AND = function() {
+            const n3 = M(arguments);
+            let t3 = a;
+            for (let r3 = 0; r3 < n3.length; r3++) {
+              if (n3[r3] instanceof Error) return n3[r3];
+              void 0 !== n3[r3] && null !== n3[r3] && "string" != typeof n3[r3] && (t3 === a && (t3 = true), n3[r3] || (t3 = false));
+            }
+            return t3;
+          }, t2.ARABIC = function(n3) {
+            if (null == n3) return 0;
+            if (n3 instanceof Error) return n3;
+            if (!/^M*(?:D?C{0,3}|C[MD])(?:L?X{0,3}|X[CL])(?:V?I{0,3}|I[XV])$/.test(n3)) return a;
+            let t3 = 0;
+            return n3.replace(/[MDLV]|C[MD]?|X[CL]?|I[XV]?/g, (n4) => {
+              t3 += { M: 1e3, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 }[n4];
+            }), t3;
+          }, t2.ASC = function() {
+            throw new Error("ASC is not implemented");
+          }, t2.ASIN = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            let t3 = Math.asin(n3);
+            return isNaN(t3) && (t3 = c), t3;
+          }, t2.ASINH = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.log(n3 + Math.sqrt(n3 * n3 + 1));
+          }, t2.ATAN = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.atan(n3);
+          }, t2.ATAN2 = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || Math.atan2(n3, t3);
+          }, t2.ATANH = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            let t3 = Math.log((1 + n3) / (1 - n3)) / 2;
+            return isNaN(t3) && (t3 = c), t3;
+          }, t2.AVEDEV = function() {
+            const n3 = M(arguments).filter(q);
+            if (0 === n3.length) return c;
+            const t3 = P(n3);
+            return t3 instanceof Error ? t3 : e2.sum(e2(t3).subtract(e2.mean(t3)).abs()[0]) / t3.length;
+          }, t2.AVERAGE = tn, t2.AVERAGEA = rn, t2.AVERAGEIF = function(n3, t3, r3) {
+            if (arguments.length <= 1) return s;
+            if (r3 = P(M(r3 = r3 || n3).filter(q)), n3 = M(n3), r3 instanceof Error) return r3;
+            let e3 = 0, o2 = 0;
+            const i3 = void 0 === t3 || "*" === t3, u2 = i3 ? null : X(t3 + "");
+            for (let t4 = 0; t4 < n3.length; t4++) {
+              const a2 = n3[t4];
+              if (i3) o2 += r3[t4], e3++;
+              else {
+                const n4 = [H(a2, G)].concat(u2);
+                B(n4) && (o2 += r3[t4], e3++);
+              }
+            }
+            return o2 / e3;
+          }, t2.AVERAGEIFS = function() {
+            const n3 = m(arguments), t3 = (n3.length - 1) / 2, r3 = M(n3[0]);
+            let e3 = 0, o2 = 0;
+            for (let i4 = 0; i4 < r3.length; i4++) {
+              let u2 = false;
+              for (let r4 = 0; r4 < t3; r4++) {
+                const t4 = n3[2 * r4 + 1][i4], e4 = n3[2 * r4 + 2];
+                let o3 = false;
+                if (void 0 === e4 || "*" === e4) o3 = true;
+                else {
+                  const n4 = X(e4 + ""), r5 = [H(t4, G)].concat(n4);
+                  o3 = B(r5);
+                }
+                if (!o3) {
+                  u2 = false;
+                  break;
+                }
+                u2 = true;
+              }
+              u2 && (o2 += r3[i4], e3++);
+            }
+            const i3 = o2 / e3;
+            return isNaN(i3) ? 0 : i3;
+          }, t2.BAHTTEXT = function() {
+            throw new Error("BAHTTEXT is not implemented");
+          }, t2.BASE = function(n3, t3, r3) {
+            const e3 = T(n3 = R(n3), t3 = R(t3), r3 = R(r3));
+            if (e3) return e3;
+            if (0 === t3) return c;
+            const o2 = n3.toString(t3);
+            return new Array(Math.max(r3 + 1 - o2.length, 0)).join("0") + o2;
+          }, t2.BESSELI = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : o.besseli(n3, t3);
+          }, t2.BESSELJ = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : o.besselj(n3, t3);
+          }, t2.BESSELK = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : o.besselk(n3, t3);
+          }, t2.BESSELY = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : o.bessely(n3, t3);
+          }, t2.BETA = en, t2.BETADIST = Ft, t2.BETAINV = qt, t2.BIN2DEC = function(n3) {
+            if (!yt(n3)) return c;
+            const t3 = parseInt(n3, 2), r3 = n3.toString();
+            return 10 === r3.length && "1" === r3.substring(0, 1) ? parseInt(r3.substring(1), 2) - 512 : t3;
+          }, t2.BIN2HEX = function(n3, t3) {
+            if (!yt(n3)) return c;
+            const r3 = n3.toString();
+            if (10 === r3.length && "1" === r3.substring(0, 1)) return (1099511627264 + parseInt(r3.substring(1), 2)).toString(16);
+            const e3 = parseInt(n3, 2).toString(16);
+            return void 0 === t3 ? e3 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= e3.length ? Mt("0", t3 - e3.length) + e3 : c;
+          }, t2.BIN2OCT = function(n3, t3) {
+            if (!yt(n3)) return c;
+            const r3 = n3.toString();
+            if (10 === r3.length && "1" === r3.substring(0, 1)) return (1073741312 + parseInt(r3.substring(1), 2)).toString(8);
+            const e3 = parseInt(n3, 2).toString(8);
+            return void 0 === t3 ? e3 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= e3.length ? Mt("0", t3 - e3.length) + e3 : c;
+          }, t2.BINOM = on, t2.BINOMDIST = Ut, t2.BITAND = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : n3 < 0 || t3 < 0 || Math.floor(n3) !== n3 || Math.floor(t3) !== t3 || n3 > 281474976710655 || t3 > 281474976710655 ? c : n3 & t3;
+          }, t2.BITLSHIFT = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : n3 < 0 || Math.floor(n3) !== n3 || n3 > 281474976710655 || Math.abs(t3) > 53 ? c : t3 >= 0 ? n3 << t3 : n3 >> -t3;
+          }, t2.BITOR = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : n3 < 0 || t3 < 0 || Math.floor(n3) !== n3 || Math.floor(t3) !== t3 || n3 > 281474976710655 || t3 > 281474976710655 ? c : n3 | t3;
+          }, t2.BITRSHIFT = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : n3 < 0 || Math.floor(n3) !== n3 || n3 > 281474976710655 || Math.abs(t3) > 53 ? c : t3 >= 0 ? n3 >> t3 : n3 << -t3;
+          }, t2.BITXOR = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : n3 < 0 || t3 < 0 || Math.floor(n3) !== n3 || Math.floor(t3) !== t3 || n3 > 281474976710655 || t3 > 281474976710655 ? c : n3 ^ t3;
+          }, t2.CEILING = Yn, t2.CEILINGMATH = _t, t2.CEILINGPRECISE = Vt, t2.CELL = function() {
+            throw new Error("CELL is not implemented");
+          }, t2.CHAR = pt, t2.CHIDIST = kt, t2.CHIDISTRT = jt, t2.CHIINV = Yt, t2.CHIINVRT = Gt, t2.CHISQ = un, t2.CHITEST = Ht, t2.CHOOSE = function() {
+            if (arguments.length < 2) return s;
+            const n3 = arguments[0];
+            return n3 < 1 || n3 > 254 || arguments.length < n3 + 1 ? a : arguments[n3];
+          }, t2.CLEAN = function(n3) {
+            return S(n3) ? n3 : (n3 = n3 || "").replace(/[\0-\x1F]/g, "");
+          }, t2.CODE = mt, t2.COLUMN = function(n3, t3) {
+            return 2 !== arguments.length ? s : t3 < 0 ? c : n3 instanceof Array && "number" == typeof t3 ? 0 !== n3.length ? e2.col(n3, t3) : void 0 : a;
+          }, t2.COLUMNS = function(n3) {
+            return 1 !== arguments.length ? s : n3 instanceof Array ? 0 === n3.length ? 0 : e2.cols(n3) : a;
+          }, t2.COMBIN = Gn, t2.COMBINA = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || (n3 < t3 ? c : 0 === n3 && 0 === t3 ? 1 : Gn(n3 + t3 - 1, n3 - 1));
+          }, t2.COMPLEX = It, t2.CONCAT = vt, t2.CONCATENATE = dt, t2.CONFIDENCE = an, t2.CONVERT = function(n3, t3, r3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            const e3 = [["a.u. of action", "?", null, "action", false, false, 105457168181818e-48], ["a.u. of charge", "e", null, "electric_charge", false, false, 160217653141414e-33], ["a.u. of energy", "Eh", null, "energy", false, false, 435974417757576e-32], ["a.u. of length", "a?", null, "length", false, false, 529177210818182e-25], ["a.u. of mass", "m?", null, "mass", false, false, 910938261616162e-45], ["a.u. of time", "?/Eh", null, "time", false, false, 241888432650516e-31], ["admiralty knot", "admkn", null, "speed", false, true, 0.514773333], ["ampere", "A", null, "electric_current", true, false, 1], ["ampere per meter", "A/m", null, "magnetic_field_intensity", true, false, 1], ["\xE5ngstr\xF6m", "\xC5", ["ang"], "length", false, true, 1e-10], ["are", "ar", null, "area", false, true, 100], ["astronomical unit", "ua", null, "length", false, false, 149597870691667e-25], ["bar", "bar", null, "pressure", false, false, 1e5], ["barn", "b", null, "area", false, false, 1e-28], ["becquerel", "Bq", null, "radioactivity", true, false, 1], ["bit", "bit", ["b"], "information", false, true, 1], ["btu", "BTU", ["btu"], "energy", false, true, 1055.05585262], ["byte", "byte", null, "information", false, true, 8], ["candela", "cd", null, "luminous_intensity", true, false, 1], ["candela per square metre", "cd/m?", null, "luminance", true, false, 1], ["coulomb", "C", null, "electric_charge", true, false, 1], ["cubic \xE5ngstr\xF6m", "ang3", ["ang^3"], "volume", false, true, 1e-30], ["cubic foot", "ft3", ["ft^3"], "volume", false, true, 0.028316846592], ["cubic inch", "in3", ["in^3"], "volume", false, true, 16387064e-12], ["cubic light-year", "ly3", ["ly^3"], "volume", false, true, 846786664623715e-61], ["cubic metre", "m?", null, "volume", true, true, 1], ["cubic mile", "mi3", ["mi^3"], "volume", false, true, 416818182544058e-5], ["cubic nautical mile", "Nmi3", ["Nmi^3"], "volume", false, true, 6352182208], ["cubic Pica", "Pica3", ["Picapt3", "Pica^3", "Picapt^3"], "volume", false, true, 758660370370369e-22], ["cubic yard", "yd3", ["yd^3"], "volume", false, true, 0.764554857984], ["cup", "cup", null, "volume", false, true, 2365882365e-13], ["dalton", "Da", ["u"], "mass", false, false, 166053886282828e-41], ["day", "d", ["day"], "time", false, true, 86400], ["degree", "\xB0", null, "angle", false, false, 0.0174532925199433], ["degrees Rankine", "Rank", null, "temperature", false, true, 0.555555555555556], ["dyne", "dyn", ["dy"], "force", false, true, 1e-5], ["electronvolt", "eV", ["ev"], "energy", false, true, 1.60217656514141], ["ell", "ell", null, "length", false, true, 1.143], ["erg", "erg", ["e"], "energy", false, true, 1e-7], ["farad", "F", null, "electric_capacitance", true, false, 1], ["fluid ounce", "oz", null, "volume", false, true, 295735295625e-16], ["foot", "ft", null, "length", false, true, 0.3048], ["foot-pound", "flb", null, "energy", false, true, 1.3558179483314], ["gal", "Gal", null, "acceleration", false, false, 0.01], ["gallon", "gal", null, "volume", false, true, 0.003785411784], ["gauss", "G", ["ga"], "magnetic_flux_density", false, true, 1], ["grain", "grain", null, "mass", false, true, 647989e-10], ["gram", "g", null, "mass", false, true, 1e-3], ["gray", "Gy", null, "absorbed_dose", true, false, 1], ["gross registered ton", "GRT", ["regton"], "volume", false, true, 2.8316846592], ["hectare", "ha", null, "area", false, true, 1e4], ["henry", "H", null, "inductance", true, false, 1], ["hertz", "Hz", null, "frequency", true, false, 1], ["horsepower", "HP", ["h"], "power", false, true, 745.69987158227], ["horsepower-hour", "HPh", ["hh", "hph"], "energy", false, true, 2684519538e-3], ["hour", "h", ["hr"], "time", false, true, 3600], ["imperial gallon (U.K.)", "uk_gal", null, "volume", false, true, 454609e-8], ["imperial hundredweight", "lcwt", ["uk_cwt", "hweight"], "mass", false, true, 50.802345], ["imperial quart (U.K)", "uk_qt", null, "volume", false, true, 0.0011365225], ["imperial ton", "brton", ["uk_ton", "LTON"], "mass", false, true, 1016.046909], ["inch", "in", null, "length", false, true, 0.0254], ["international acre", "uk_acre", null, "area", false, true, 4046.8564224], ["IT calorie", "cal", null, "energy", false, true, 4.1868], ["joule", "J", null, "energy", true, true, 1], ["katal", "kat", null, "catalytic_activity", true, false, 1], ["kelvin", "K", ["kel"], "temperature", true, true, 1], ["kilogram", "kg", null, "mass", true, true, 1], ["knot", "kn", null, "speed", false, true, 0.514444444444444], ["light-year", "ly", null, "length", false, true, 9460730472580800], ["litre", "L", ["l", "lt"], "volume", false, true, 1e-3], ["lumen", "lm", null, "luminous_flux", true, false, 1], ["lux", "lx", null, "illuminance", true, false, 1], ["maxwell", "Mx", null, "magnetic_flux", false, false, 1e-18], ["measurement ton", "MTON", null, "volume", false, true, 1.13267386368], ["meter per hour", "m/h", ["m/hr"], "speed", false, true, 27777777777778e-17], ["meter per second", "m/s", ["m/sec"], "speed", true, true, 1], ["meter per second squared", "m?s??", null, "acceleration", true, false, 1], ["parsec", "pc", ["parsec"], "length", false, true, 30856775814671900], ["meter squared per second", "m?/s", null, "kinematic_viscosity", true, false, 1], ["metre", "m", null, "length", true, true, 1], ["miles per hour", "mph", null, "speed", false, true, 0.44704], ["millimetre of mercury", "mmHg", null, "pressure", false, false, 133.322], ["minute", "?", null, "angle", false, false, 290888208665722e-18], ["minute", "min", ["mn"], "time", false, true, 60], ["modern teaspoon", "tspm", null, "volume", false, true, 5e-6], ["mole", "mol", null, "amount_of_substance", true, false, 1], ["morgen", "Morgen", null, "area", false, true, 2500], ["n.u. of action", "?", null, "action", false, false, 105457168181818e-48], ["n.u. of mass", "m?", null, "mass", false, false, 910938261616162e-45], ["n.u. of speed", "c?", null, "speed", false, false, 299792458], ["n.u. of time", "?/(me?c??)", null, "time", false, false, 128808866778687e-35], ["nautical mile", "M", ["Nmi"], "length", false, true, 1852], ["newton", "N", null, "force", true, true, 1], ["\u0153rsted", "Oe ", null, "magnetic_field_intensity", false, false, 79.5774715459477], ["ohm", "\u03A9", null, "electric_resistance", true, false, 1], ["ounce mass", "ozm", null, "mass", false, true, 0.028349523125], ["pascal", "Pa", null, "pressure", true, false, 1], ["pascal second", "Pa?s", null, "dynamic_viscosity", true, false, 1], ["pferdest\xE4rke", "PS", null, "power", false, true, 735.49875], ["phot", "ph", null, "illuminance", false, false, 1e-4], ["pica (1/6 inch)", "pica", null, "length", false, true, 35277777777778e-17], ["pica (1/72 inch)", "Pica", ["Picapt"], "length", false, true, 0.00423333333333333], ["poise", "P", null, "dynamic_viscosity", false, false, 0.1], ["pond", "pond", null, "force", false, true, 980665e-8], ["pound force", "lbf", null, "force", false, true, 4.4482216152605], ["pound mass", "lbm", null, "mass", false, true, 0.45359237], ["quart", "qt", null, "volume", false, true, 946352946e-12], ["radian", "rad", null, "angle", true, false, 1], ["second", "?", null, "angle", false, false, 484813681109536e-20], ["second", "s", ["sec"], "time", true, true, 1], ["short hundredweight", "cwt", ["shweight"], "mass", false, true, 45.359237], ["siemens", "S", null, "electrical_conductance", true, false, 1], ["sievert", "Sv", null, "equivalent_dose", true, false, 1], ["slug", "sg", null, "mass", false, true, 14.59390294], ["square \xE5ngstr\xF6m", "ang2", ["ang^2"], "area", false, true, 1e-20], ["square foot", "ft2", ["ft^2"], "area", false, true, 0.09290304], ["square inch", "in2", ["in^2"], "area", false, true, 64516e-8], ["square light-year", "ly2", ["ly^2"], "area", false, true, 895054210748189e17], ["square meter", "m?", null, "area", true, true, 1], ["square mile", "mi2", ["mi^2"], "area", false, true, 2589988110336e-6], ["square nautical mile", "Nmi2", ["Nmi^2"], "area", false, true, 3429904], ["square Pica", "Pica2", ["Picapt2", "Pica^2", "Picapt^2"], "area", false, true, 1792111111111e-17], ["square yard", "yd2", ["yd^2"], "area", false, true, 0.83612736], ["statute mile", "mi", null, "length", false, true, 1609.344], ["steradian", "sr", null, "solid_angle", true, false, 1], ["stilb", "sb", null, "luminance", false, false, 1e-4], ["stokes", "St", null, "kinematic_viscosity", false, false, 1e-4], ["stone", "stone", null, "mass", false, true, 6.35029318], ["tablespoon", "tbs", null, "volume", false, true, 147868e-10], ["teaspoon", "tsp", null, "volume", false, true, 492892e-11], ["tesla", "T", null, "magnetic_flux_density", true, true, 1], ["thermodynamic calorie", "c", null, "energy", false, true, 4.184], ["ton", "ton", null, "mass", false, true, 907.18474], ["tonne", "t", null, "mass", false, false, 1e3], ["U.K. pint", "uk_pt", null, "volume", false, true, 56826125e-11], ["U.S. bushel", "bushel", null, "volume", false, true, 0.03523907], ["U.S. oil barrel", "barrel", null, "volume", false, true, 0.158987295], ["U.S. pint", "pt", ["us_pt"], "volume", false, true, 473176473e-12], ["U.S. survey mile", "survey_mi", null, "length", false, true, 1609.347219], ["U.S. survey/statute acre", "us_acre", null, "area", false, true, 4046.87261], ["volt", "V", null, "voltage", true, false, 1], ["watt", "W", null, "power", true, true, 1], ["watt-hour", "Wh", ["wh"], "energy", false, true, 3600], ["weber", "Wb", null, "magnetic_flux", true, false, 1], ["yard", "yd", null, "length", false, true, 0.9144], ["year", "yr", null, "time", false, true, 31557600]], o2 = { Yi: ["yobi", 80, 12089258196146292e8, "Yi", "yotta"], Zi: ["zebi", 70, 11805916207174113e5, "Zi", "zetta"], Ei: ["exbi", 60, 1152921504606847e3, "Ei", "exa"], Pi: ["pebi", 50, 1125899906842624, "Pi", "peta"], Ti: ["tebi", 40, 1099511627776, "Ti", "tera"], Gi: ["gibi", 30, 1073741824, "Gi", "giga"], Mi: ["mebi", 20, 1048576, "Mi", "mega"], ki: ["kibi", 10, 1024, "ki", "kilo"] }, i3 = { Y: ["yotta", 1e24, "Y"], Z: ["zetta", 1e21, "Z"], E: ["exa", 1e18, "E"], P: ["peta", 1e15, "P"], T: ["tera", 1e12, "T"], G: ["giga", 1e9, "G"], M: ["mega", 1e6, "M"], k: ["kilo", 1e3, "k"], h: ["hecto", 100, "h"], e: ["dekao", 10, "e"], d: ["deci", 0.1, "d"], c: ["centi", 0.01, "c"], m: ["milli", 1e-3, "m"], u: ["micro", 1e-6, "u"], n: ["nano", 1e-9, "n"], p: ["pico", 1e-12, "p"], f: ["femto", 1e-15, "f"], a: ["atto", 1e-18, "a"], z: ["zepto", 1e-21, "z"], y: ["yocto", 1e-24, "y"] };
+            let u2, a2 = null, f2 = null, l2 = t3, c2 = r3, h2 = 1, g2 = 1;
+            for (let n4 = 0; n4 < e3.length; n4++) u2 = null === e3[n4][2] ? [] : e3[n4][2], (e3[n4][1] === l2 || u2.indexOf(l2) >= 0) && (a2 = e3[n4]), (e3[n4][1] === c2 || u2.indexOf(c2) >= 0) && (f2 = e3[n4]);
+            if (null === a2) {
+              const n4 = o2[t3.substring(0, 2)];
+              let r4 = i3[t3.substring(0, 1)];
+              "da" === t3.substring(0, 2) && (r4 = ["dekao", 10, "da"]), n4 ? (h2 = n4[2], l2 = t3.substring(2)) : r4 && (h2 = r4[1], l2 = t3.substring(r4[2].length));
+              for (let n5 = 0; n5 < e3.length; n5++) u2 = null === e3[n5][2] ? [] : e3[n5][2], (e3[n5][1] === l2 || u2.indexOf(l2) >= 0) && (a2 = e3[n5]);
+            }
+            if (null === f2) {
+              const n4 = o2[r3.substring(0, 2)];
+              let t4 = i3[r3.substring(0, 1)];
+              "da" === r3.substring(0, 2) && (t4 = ["dekao", 10, "da"]), n4 ? (g2 = n4[2], c2 = r3.substring(2)) : t4 && (g2 = t4[1], c2 = r3.substring(t4[2].length));
+              for (let n5 = 0; n5 < e3.length; n5++) u2 = null === e3[n5][2] ? [] : e3[n5][2], (e3[n5][1] === c2 || u2.indexOf(c2) >= 0) && (f2 = e3[n5]);
+            }
+            return null === a2 || null === f2 || a2[3] !== f2[3] ? s : n3 * a2[6] * h2 / (f2[6] * g2);
+          }, t2.CORREL = function(n3, t3) {
+            return S(n3 = P(M(n3)), t3 = P(M(t3))) ? a : e2.corrcoeff(n3, t3);
+          }, t2.COS = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.cos(n3);
+          }, t2.COSH = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : (Math.exp(n3) + Math.exp(-n3)) / 2;
+          }, t2.COT = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 0 === n3 ? u : 1 / Math.tan(n3);
+          }, t2.COTH = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            if (0 === n3) return u;
+            const t3 = Math.exp(2 * n3);
+            return (t3 + 1) / (t3 - 1);
+          }, t2.COUNT = fn, t2.COUNTA = ln, t2.COUNTBLANK = cn, t2.COUNTIF = function(n3, t3) {
+            if (n3 = M(n3), void 0 === t3 || "*" === t3) return n3.length;
+            let r3 = 0;
+            const e3 = X(t3 + "");
+            for (let t4 = 0; t4 < n3.length; t4++) {
+              const o2 = [H(n3[t4], G)].concat(e3);
+              B(o2) && r3++;
+            }
+            return r3;
+          }, t2.COUNTIFS = function() {
+            const n3 = m(arguments), t3 = new Array(M(n3[0]).length);
+            for (let n4 = 0; n4 < t3.length; n4++) t3[n4] = true;
+            for (let r4 = 0; r4 < n3.length; r4 += 2) {
+              const e3 = M(n3[r4]), o2 = n3[r4 + 1];
+              if (void 0 !== o2 && "*" !== o2) {
+                const n4 = X(o2 + "");
+                for (let r5 = 0; r5 < e3.length; r5++) {
+                  const o3 = [H(e3[r5], G)].concat(n4);
+                  t3[r5] = t3[r5] && B(o3);
+                }
+              }
+            }
+            let r3 = 0;
+            for (let n4 = 0; n4 < t3.length; n4++) t3[n4] && r3++;
+            return r3;
+          }, t2.COUPDAYBS = function() {
+            throw new Error("COUPDAYBS is not implemented");
+          }, t2.COUPDAYS = function() {
+            throw new Error("COUPDAYS is not implemented");
+          }, t2.COUPDAYSNC = function() {
+            throw new Error("COUPDAYSNC is not implemented");
+          }, t2.COUPNCD = function() {
+            throw new Error("COUPNCD is not implemented");
+          }, t2.COUPNUM = function() {
+            throw new Error("COUPNUM is not implemented");
+          }, t2.COUPPCD = function() {
+            throw new Error("COUPPCD is not implemented");
+          }, t2.COVAR = Xt, t2.COVARIANCE = sn, t2.COVARIANCEP = Bt, t2.COVARIANCES = $t, t2.CRITBINOM = zt, t2.CSC = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 0 === n3 ? u : 1 / Math.sin(n3);
+          }, t2.CSCH = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 0 === n3 ? u : 2 / (Math.exp(n3) - Math.exp(-n3));
+          }, t2.CUMIPMT = function(n3, t3, r3, e3, o2, i3) {
+            if (S(n3 = R(n3), t3 = R(t3), r3 = R(r3))) return a;
+            if (n3 <= 0 || t3 <= 0 || r3 <= 0) return c;
+            if (e3 < 1 || o2 < 1 || e3 > o2) return c;
+            if (0 !== i3 && 1 !== i3) return c;
+            const u2 = zr(n3, t3, r3, 0, i3);
+            let f2 = 0;
+            1 === e3 && (0 === i3 && (f2 = -r3), e3++);
+            for (let t4 = e3; t4 <= o2; t4++) f2 += 1 === i3 ? Xr(n3, t4 - 2, u2, r3, 1) - u2 : Xr(n3, t4 - 1, u2, r3, 0);
+            return f2 *= n3, f2;
+          }, t2.CUMPRINC = function(n3, t3, r3, e3, o2, i3) {
+            if (S(n3 = R(n3), t3 = R(t3), r3 = R(r3))) return a;
+            if (n3 <= 0 || t3 <= 0 || r3 <= 0) return c;
+            if (e3 < 1 || o2 < 1 || e3 > o2) return c;
+            if (0 !== i3 && 1 !== i3) return c;
+            const u2 = zr(n3, t3, r3, 0, i3);
+            let f2 = 0;
+            1 === e3 && (f2 = 0 === i3 ? u2 + r3 * n3 : u2, e3++);
+            for (let t4 = e3; t4 <= o2; t4++) f2 += i3 > 0 ? u2 - (Xr(n3, t4 - 2, u2, r3, 1) - u2) * n3 : u2 - Xr(n3, t4 - 1, u2, r3, 0) * n3;
+            return f2;
+          }, t2.DATE = function(n3, t3, r3) {
+            let e3;
+            return S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? e3 = a : (e3 = new Date(n3, t3 - 1, r3), e3.getFullYear() < 0 && (e3 = c)), e3;
+          }, t2.DATEDIF = et, t2.DATEVALUE = function(n3) {
+            if ("string" != typeof n3) return a;
+            const t3 = Date.parse(n3);
+            return isNaN(t3) ? a : new Date(n3);
+          }, t2.DAVERAGE = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            let i3 = 0;
+            return d(e3, (n4) => {
+              i3 += o2[n4];
+            }), 0 === e3.length ? u : i3 / e3.length;
+          }, t2.DAY = function(n3) {
+            const t3 = O(n3);
+            return t3 instanceof Error ? t3 : t3.getDate();
+          }, t2.DAYS = it, t2.DAYS360 = ut, t2.DB = function(n3, t3, r3, e3, o2) {
+            if (o2 = void 0 === o2 ? 12 : o2, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3), o2 = R(o2))) return a;
+            if (n3 < 0 || t3 < 0 || r3 < 0 || e3 < 0) return c;
+            if (-1 === [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].indexOf(o2)) return c;
+            if (e3 > r3) return c;
+            if (t3 >= n3) return 0;
+            const i3 = (1 - Math.pow(t3 / n3, 1 / r3)).toFixed(3), u2 = n3 * i3 * o2 / 12;
+            let f2 = u2, l2 = 0;
+            const s2 = e3 === r3 ? r3 - 1 : e3;
+            for (let t4 = 2; t4 <= s2; t4++) l2 = (n3 - f2) * i3, f2 += l2;
+            return 1 === e3 ? u2 : e3 === r3 ? (n3 - f2) * i3 : l2;
+          }, t2.DBCS = function() {
+            throw new Error("DBCS is not implemented");
+          }, t2.DCOUNT = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            const i3 = [];
+            return d(e3, (n4) => {
+              i3.push(o2[n4]);
+            }), fn(i3);
+          }, t2.DCOUNTA = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            const i3 = [];
+            return d(e3, (n4) => {
+              i3.push(o2[n4]);
+            }), ln(i3);
+          }, t2.DDB = function(n3, t3, r3, e3, o2) {
+            if (o2 = void 0 === o2 ? 2 : o2, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3), o2 = R(o2))) return a;
+            if (n3 < 0 || t3 < 0 || r3 < 0 || e3 < 0 || o2 <= 0) return c;
+            if (e3 > r3) return c;
+            if (t3 >= n3) return 0;
+            let i3 = 0, u2 = 0;
+            for (let a2 = 1; a2 <= e3; a2++) u2 = Math.min(o2 / r3 * (n3 - i3), n3 - t3 - i3), i3 += u2;
+            return u2;
+          }, t2.DEC2BIN = function(n3, t3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            if (!/^-?[0-9]{1,3}$/.test(n3) || n3 < -512 || n3 > 511) return c;
+            if (n3 < 0) return "1" + Mt("0", 9 - (512 + n3).toString(2).length) + (512 + n3).toString(2);
+            const r3 = parseInt(n3, 10).toString(2);
+            return void 0 === t3 ? r3 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= r3.length ? Mt("0", t3 - r3.length) + r3 : c;
+          }, t2.DEC2HEX = function(n3, t3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            if (!/^-?[0-9]{1,12}$/.test(n3) || n3 < -549755813888 || n3 > 549755813887) return c;
+            if (n3 < 0) return (1099511627776 + n3).toString(16);
+            const r3 = parseInt(n3, 10).toString(16);
+            return void 0 === t3 ? r3 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= r3.length ? Mt("0", t3 - r3.length) + r3 : c;
+          }, t2.DEC2OCT = function(n3, t3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            if (!/^-?[0-9]{1,9}$/.test(n3) || n3 < -536870912 || n3 > 536870911) return c;
+            if (n3 < 0) return (1073741824 + n3).toString(8);
+            const r3 = parseInt(n3, 10).toString(8);
+            return void 0 === t3 ? r3 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= r3.length ? Mt("0", t3 - r3.length) + r3 : c;
+          }, t2.DECIMAL = function(n3, t3) {
+            if (arguments.length < 1) return a;
+            return T(n3 = R(n3), t3 = R(t3)) || (0 === t3 ? c : parseInt(n3, t3));
+          }, t2.DEGREES = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 180 * n3 / Math.PI;
+          }, t2.DELTA = function(n3, t3) {
+            return t3 = void 0 === t3 ? 0 : t3, S(n3 = R(n3), t3 = R(t3)) ? a : n3 === t3 ? 1 : 0;
+          }, t2.DEVSQ = function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            const t3 = e2.mean(n3);
+            let r3 = 0;
+            for (let e3 = 0; e3 < n3.length; e3++) r3 += Math.pow(n3[e3] - t3, 2);
+            return r3;
+          }, t2.DGET = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            return o2 = y2("string" == typeof t3 ? n3[b(n3, t3)] : n3[t3]), 0 === e3.length ? a : e3.length > 1 ? c : o2[e3[0]];
+          }, t2.DISC = function(n3, t3, r3, e3, o2) {
+            if (S(n3 = O(n3), t3 = O(t3), r3 = R(r3), e3 = R(e3), o2 = (o2 = R(o2)) || 0)) return a;
+            if (r3 <= 0 || e3 <= 0) return c;
+            if (n3 >= t3) return a;
+            let i3, u2;
+            switch (o2) {
+              case 0:
+                i3 = 360, u2 = ut(n3, t3, false);
+                break;
+              case 1:
+              case 3:
+                i3 = 365, u2 = et(n3, t3, "D");
+                break;
+              case 2:
+                i3 = 360, u2 = et(n3, t3, "D");
+                break;
+              case 4:
+                i3 = 360, u2 = ut(n3, t3, true);
+                break;
+              default:
+                return c;
+            }
+            return (e3 - r3) / e3 * i3 / u2;
+          }, t2.DMAX = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            let i3 = o2[e3[0]];
+            return d(e3, (n4) => {
+              i3 < o2[n4] && (i3 = o2[n4]);
+            }), i3;
+          }, t2.DMIN = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            let i3 = o2[e3[0]];
+            return d(e3, (n4) => {
+              i3 > o2[n4] && (i3 = o2[n4]);
+            }), i3;
+          }, t2.DOLLAR = function(n3, t3 = 2) {
+            if (n3 = R(n3), isNaN(n3)) return a;
+            const r3 = { style: "currency", currency: "USD", minimumFractionDigits: t3 >= 0 ? t3 : 0, maximumFractionDigits: t3 >= 0 ? t3 : 0 }, e3 = (n3 = Kn(n3, t3)).toLocaleString("en-US", r3);
+            return n3 < 0 ? "$(" + e3.slice(2) + ")" : e3;
+          }, t2.DOLLARDE = function(n3, t3) {
+            if (S(n3 = R(n3), t3 = R(t3))) return a;
+            if (t3 < 0) return c;
+            if (t3 >= 0 && t3 < 1) return u;
+            t3 = parseInt(t3, 10);
+            let r3 = parseInt(n3, 10);
+            r3 += n3 % 1 * Math.pow(10, Math.ceil(Math.log(t3) / Math.LN10)) / t3;
+            const e3 = Math.pow(10, Math.ceil(Math.log(t3) / Math.LN2) + 1);
+            return r3 = Math.round(r3 * e3) / e3, r3;
+          }, t2.DOLLARFR = function(n3, t3) {
+            if (S(n3 = R(n3), t3 = R(t3))) return a;
+            if (t3 < 0) return c;
+            if (t3 >= 0 && t3 < 1) return u;
+            t3 = parseInt(t3, 10);
+            let r3 = parseInt(n3, 10);
+            return r3 += n3 % 1 * Math.pow(10, -Math.ceil(Math.log(t3) / Math.LN10)) * t3, r3;
+          }, t2.DPRODUCT = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            let i3 = [];
+            d(e3, (n4) => {
+              i3.push(o2[n4]);
+            }), i3 = jr(i3);
+            let u2 = 1;
+            return d(i3, (n4) => {
+              u2 *= n4;
+            }), u2;
+          }, t2.DSTDEV = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            let i3 = [];
+            return d(e3, (n4) => {
+              i3.push(o2[n4]);
+            }), i3 = jr(i3), Fn.S(i3);
+          }, t2.DSTDEVP = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            let i3 = [];
+            return d(e3, (n4) => {
+              i3.push(o2[n4]);
+            }), i3 = jr(i3), Fn.P(i3);
+          }, t2.DSUM = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            const i3 = [];
+            return d(e3, (n4) => {
+              i3.push(o2[n4]);
+            }), Qn(i3);
+          }, t2.DURATION = function() {
+            throw new Error("DURATION is not implemented");
+          }, t2.DVAR = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            const i3 = [];
+            return d(e3, (n4) => {
+              i3.push(o2[n4]);
+            }), Un.S(i3);
+          }, t2.DVARP = function(n3, t3, r3) {
+            if (isNaN(t3) && "string" != typeof t3) return a;
+            const e3 = Yr(n3, r3);
+            let o2 = [];
+            if ("string" == typeof t3) {
+              const r4 = b(n3, t3);
+              o2 = y2(n3[r4]);
+            } else o2 = y2(n3[t3]);
+            const i3 = [];
+            return d(e3, (n4) => {
+              i3.push(o2[n4]);
+            }), Un.P(i3);
+          }, t2.EDATE = function(n3, t3) {
+            return (n3 = O(n3)) instanceof Error ? n3 : isNaN(t3) ? a : (t3 = parseInt(t3, 10), n3.setMonth(n3.getMonth() + t3), n3);
+          }, t2.EFFECT = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : n3 <= 0 || t3 < 1 ? c : (t3 = parseInt(t3, 10), Math.pow(1 + n3 / t3, t3) - 1);
+          }, t2.EOMONTH = function(n3, t3) {
+            return (n3 = O(n3)) instanceof Error ? n3 : isNaN(t3) ? a : (t3 = parseInt(t3, 10), new Date(n3.getFullYear(), n3.getMonth() + t3 + 1, 0));
+          }, t2.ERF = bt, t2.ERFC = Tt, t2.ERFCPRECISE = Wt, t2.ERFPRECISE = Kt, t2.ERROR = $2, t2.EVEN = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Yn(n3, -2, -1);
+          }, t2.EXACT = function(n3, t3) {
+            if (2 !== arguments.length) return s;
+            return T(n3, t3) || (n3 = L(n3)) === L(t3);
+          }, t2.EXP = function(n3) {
+            return arguments.length < 1 ? s : arguments.length > 1 ? h : (n3 = R(n3)) instanceof Error ? n3 : n3 = Math.exp(n3);
+          }, t2.EXPON = hn, t2.EXPONDIST = Qt, t2.F = gn, t2.FACT = Xn, t2.FACTDOUBLE = function n3(t3) {
+            if ((t3 = R(t3)) instanceof Error) return t3;
+            const r3 = Math.floor(t3);
+            return r3 <= 0 ? 1 : r3 * n3(r3 - 2);
+          }, t2.FALSE = function() {
+            return false;
+          }, t2.FDIST = Zt, t2.FDISTRT = Jt, t2.FIND = function(n3, t3, r3) {
+            if (arguments.length < 2) return s;
+            n3 = L(n3), r3 = void 0 === r3 ? 0 : r3;
+            const e3 = (t3 = L(t3)).indexOf(n3, r3 - 1);
+            return -1 === e3 ? a : e3 + 1;
+          }, t2.FINV = nr, t2.FINVRT = tr, t2.FISHER = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.log((1 + n3) / (1 - n3)) / 2;
+          }, t2.FISHERINV = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            const t3 = Math.exp(2 * n3);
+            return (t3 - 1) / (t3 + 1);
+          }, t2.FIXED = Et, t2.FLOOR = Bn, t2.FLOORMATH = rr, t2.FLOORPRECISE = er, t2.FORECAST = pn, t2.FREQUENCY = function(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            const r3 = n3.length, e3 = t3.length, o2 = [];
+            for (let i3 = 0; i3 <= e3; i3++) {
+              o2[i3] = 0;
+              for (let u2 = 0; u2 < r3; u2++) 0 === i3 ? n3[u2] <= t3[0] && (o2[0] += 1) : i3 < e3 ? n3[u2] > t3[i3 - 1] && n3[u2] <= t3[i3] && (o2[i3] += 1) : i3 === e3 && n3[u2] > t3[e3 - 1] && (o2[e3] += 1);
+            }
+            return o2;
+          }, t2.FTEST = or, t2.FV = Xr, t2.FVSCHEDULE = function(n3, t3) {
+            if (S(n3 = R(n3), t3 = P(M(t3)))) return a;
+            const r3 = t3.length;
+            let e3 = n3;
+            for (let n4 = 0; n4 < r3; n4++) e3 *= 1 + t3[n4];
+            return e3;
+          }, t2.GAMMA = mn, t2.GAMMADIST = ir, t2.GAMMAINV = ur, t2.GAMMALN = dn, t2.GAMMALNPRECISE = ar, t2.GAUSS = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : e2.normal.cdf(n3, 0, 1) - 0.5;
+          }, t2.GCD = function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            const t3 = n3.length, r3 = n3[0];
+            let e3 = r3 < 0 ? -r3 : r3;
+            for (let r4 = 1; r4 < t3; r4++) {
+              const t4 = n3[r4];
+              let o2 = t4 < 0 ? -t4 : t4;
+              for (; e3 && o2; ) e3 > o2 ? e3 %= o2 : o2 %= e3;
+              e3 += o2;
+            }
+            return e3;
+          }, t2.GEOMEAN = function() {
+            const n3 = P(M(arguments));
+            return n3 instanceof Error ? n3 : e2.geomean(n3);
+          }, t2.GESTEP = function(n3, t3) {
+            return S(t3 = t3 || 0, n3 = R(n3)) ? n3 : n3 >= t3 ? 1 : 0;
+          }, t2.GROWTH = function(n3, t3, r3, e3) {
+            if ((n3 = P(n3)) instanceof Error) return n3;
+            let o2;
+            if (void 0 === t3) for (t3 = [], o2 = 1; o2 <= n3.length; o2++) t3.push(o2);
+            if (void 0 === r3) for (r3 = [], o2 = 1; o2 <= n3.length; o2++) r3.push(o2);
+            if (S(t3 = P(t3), r3 = P(r3))) return a;
+            void 0 === e3 && (e3 = true);
+            const i3 = n3.length;
+            let u2, f2, l2 = 0, c2 = 0, s2 = 0, h2 = 0;
+            for (o2 = 0; o2 < i3; o2++) {
+              const r4 = t3[o2], e4 = Math.log(n3[o2]);
+              l2 += r4, c2 += e4, s2 += r4 * e4, h2 += r4 * r4;
+            }
+            l2 /= i3, c2 /= i3, s2 /= i3, h2 /= i3, e3 ? (u2 = (s2 - l2 * c2) / (h2 - l2 * l2), f2 = c2 - u2 * l2) : (u2 = s2 / h2, f2 = 0);
+            const g2 = [];
+            for (o2 = 0; o2 < r3.length; o2++) g2.push(Math.exp(f2 + u2 * r3[o2]));
+            return g2;
+          }, t2.HARMEAN = function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            const t3 = n3.length;
+            let r3 = 0;
+            for (let e3 = 0; e3 < t3; e3++) r3 += 1 / n3[e3];
+            return t3 / r3;
+          }, t2.HEX2BIN = function(n3, t3) {
+            if (!/^[0-9A-Fa-f]{1,10}$/.test(n3)) return c;
+            const r3 = !(10 !== n3.length || "f" !== n3.substring(0, 1).toLowerCase()), e3 = r3 ? parseInt(n3, 16) - 1099511627776 : parseInt(n3, 16);
+            if (e3 < -512 || e3 > 511) return c;
+            if (r3) return "1" + Mt("0", 9 - (512 + e3).toString(2).length) + (512 + e3).toString(2);
+            const o2 = e3.toString(2);
+            return void 0 === t3 ? o2 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= o2.length ? Mt("0", t3 - o2.length) + o2 : c;
+          }, t2.HEX2DEC = function(n3) {
+            if (!/^[0-9A-Fa-f]{1,10}$/.test(n3)) return c;
+            const t3 = parseInt(n3, 16);
+            return t3 >= 549755813888 ? t3 - 1099511627776 : t3;
+          }, t2.HEX2OCT = function(n3, t3) {
+            if (!/^[0-9A-Fa-f]{1,10}$/.test(n3)) return c;
+            const r3 = parseInt(n3, 16);
+            if (r3 > 536870911 && r3 < 1098974756864) return c;
+            if (r3 >= 1098974756864) return (r3 - 1098437885952).toString(8);
+            const e3 = r3.toString(8);
+            return void 0 === t3 ? e3 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= e3.length ? Mt("0", t3 - e3.length) + e3 : c;
+          }, t2.HLOOKUP = function(n3, t3, r3, e3) {
+            return nn(n3, I(t3), r3, e3);
+          }, t2.HOUR = function(n3) {
+            return (n3 = O(n3)) instanceof Error ? n3 : n3.getHours();
+          }, t2.HYPGEOM = vn, t2.HYPGEOMDIST = fr, t2.IF = function(n3, t3, r3) {
+            return n3 instanceof Error ? n3 : (null == (t3 = !(arguments.length >= 2) || t3) && (t3 = 0), null == (r3 = 3 === arguments.length && r3) && (r3 = 0), n3 ? t3 : r3);
+          }, t2.IFERROR = function(n3, t3) {
+            return W(n3) ? t3 : n3;
+          }, t2.IFNA = function(n3, t3) {
+            return n3 === s ? t3 : n3;
+          }, t2.IFS = function() {
+            for (let n3 = 0; n3 < arguments.length / 2; n3++) if (arguments[2 * n3]) return arguments[2 * n3 + 1];
+            return s;
+          }, t2.IMABS = St, t2.IMAGINARY = At, t2.IMARGUMENT = Ct, t2.IMCONJUGATE = function(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            return e3 = "i" === e3 || "j" === e3 ? e3 : "i", 0 !== r3 ? It(t3, -r3, e3) : n3;
+          }, t2.IMCOS = Dt, t2.IMCOSH = Ot, t2.IMCOT = function(n3) {
+            return S(Rt(n3), At(n3)) ? a : xt(Dt(n3), Pt(n3));
+          }, t2.IMCSC = function(n3) {
+            return true === n3 || false === n3 ? a : S(Rt(n3), At(n3)) ? c : xt("1", Pt(n3));
+          }, t2.IMCSCH = function(n3) {
+            return true === n3 || false === n3 ? a : S(Rt(n3), At(n3)) ? c : xt("1", Lt(n3));
+          }, t2.IMDIV = xt, t2.IMEXP = function(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            e3 = "i" === e3 || "j" === e3 ? e3 : "i";
+            const o2 = Math.exp(t3);
+            return It(o2 * Math.cos(r3), o2 * Math.sin(r3), e3);
+          }, t2.IMLN = function(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            return e3 = "i" === e3 || "j" === e3 ? e3 : "i", It(Math.log(Math.sqrt(t3 * t3 + r3 * r3)), Math.atan(r3 / t3), e3);
+          }, t2.IMLOG10 = function(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            return e3 = "i" === e3 || "j" === e3 ? e3 : "i", It(Math.log(Math.sqrt(t3 * t3 + r3 * r3)) / Math.log(10), Math.atan(r3 / t3) / Math.log(10), e3);
+          }, t2.IMLOG2 = function(n3) {
+            const t3 = Rt(n3), r3 = At(n3);
+            if (S(t3, r3)) return a;
+            let e3 = n3.substring(n3.length - 1);
+            return e3 = "i" === e3 || "j" === e3 ? e3 : "i", It(Math.log(Math.sqrt(t3 * t3 + r3 * r3)) / Math.log(2), Math.atan(r3 / t3) / Math.log(2), e3);
+          }, t2.IMPOWER = function(n3, t3) {
+            if (S(t3 = R(t3), Rt(n3), At(n3))) return a;
+            let r3 = n3.substring(n3.length - 1);
+            r3 = "i" === r3 || "j" === r3 ? r3 : "i";
+            const e3 = Math.pow(St(n3), t3), o2 = Ct(n3);
+            return It(e3 * Math.cos(t3 * o2), e3 * Math.sin(t3 * o2), r3);
+          }, t2.IMPRODUCT = function() {
+            let n3 = arguments[0];
+            if (!arguments.length) return a;
+            for (let t3 = 1; t3 < arguments.length; t3++) {
+              const r3 = Rt(n3), e3 = At(n3), o2 = Rt(arguments[t3]), i3 = At(arguments[t3]);
+              if (S(r3, e3, o2, i3)) return a;
+              n3 = It(r3 * o2 - e3 * i3, r3 * i3 + e3 * o2);
+            }
+            return n3;
+          }, t2.IMREAL = Rt, t2.IMSEC = function(n3) {
+            return true === n3 || false === n3 || S(Rt(n3), At(n3)) ? a : xt("1", Dt(n3));
+          }, t2.IMSECH = function(n3) {
+            return S(Rt(n3), At(n3)) ? a : xt("1", Ot(n3));
+          }, t2.IMSIN = Pt, t2.IMSINH = Lt, t2.IMSQRT = function(n3) {
+            if (S(Rt(n3), At(n3))) return a;
+            let t3 = n3.substring(n3.length - 1);
+            t3 = "i" === t3 || "j" === t3 ? t3 : "i";
+            const r3 = Math.sqrt(St(n3)), e3 = Ct(n3);
+            return It(r3 * Math.cos(e3 / 2), r3 * Math.sin(e3 / 2), t3);
+          }, t2.IMSUB = function(n3, t3) {
+            const r3 = Rt(n3), e3 = At(n3), o2 = Rt(t3), i3 = At(t3);
+            if (S(r3, e3, o2, i3)) return a;
+            const u2 = n3.substring(n3.length - 1), f2 = t3.substring(t3.length - 1);
+            let l2 = "i";
+            return ("j" === u2 || "j" === f2) && (l2 = "j"), It(r3 - o2, e3 - i3, l2);
+          }, t2.IMSUM = function() {
+            if (!arguments.length) return a;
+            const n3 = M(arguments);
+            let t3 = n3[0];
+            for (let r3 = 1; r3 < n3.length; r3++) {
+              const e3 = Rt(t3), o2 = At(t3), i3 = Rt(n3[r3]), u2 = At(n3[r3]);
+              if (S(e3, o2, i3, u2)) return a;
+              t3 = It(e3 + i3, o2 + u2);
+            }
+            return t3;
+          }, t2.IMTAN = function(n3) {
+            return true === n3 || false === n3 || S(Rt(n3), At(n3)) ? a : xt(Pt(n3), Dt(n3));
+          }, t2.INDEX = function(n3, t3, r3) {
+            const e3 = T(n3, t3, r3);
+            if (e3) return e3;
+            if (!Array.isArray(n3)) return a;
+            const o2 = n3.length > 0 && !Array.isArray(n3[0]);
+            return o2 && !r3 ? (r3 = t3, t3 = 1) : (r3 = r3 || 1, t3 = t3 || 1), r3 < 0 || t3 < 0 ? a : o2 && 1 === t3 && r3 <= n3.length ? n3[r3 - 1] : t3 <= n3.length && r3 <= n3[t3 - 1].length ? n3[t3 - 1][r3 - 1] : f;
+          }, t2.INFO = function() {
+            throw new Error("INFO is not implemented");
+          }, t2.INT = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.floor(n3);
+          }, t2.INTERCEPT = function(n3, t3) {
+            return S(n3 = P(n3), t3 = P(t3)) ? a : n3.length !== t3.length ? s : pn(0, n3, t3);
+          }, t2.INTRATE = function() {
+            throw new Error("INTRATE is not implemented");
+          }, t2.IPMT = Br, t2.IRR = function(n3, t3) {
+            if (t3 = t3 || 0, S(n3 = P(M(n3)), t3 = R(t3))) return a;
+            const r3 = (n4, t4, r4) => {
+              const e4 = r4 + 1;
+              let o3 = n4[0];
+              for (let r5 = 1; r5 < n4.length; r5++) o3 += n4[r5] / Math.pow(e4, (t4[r5] - t4[0]) / 365);
+              return o3;
+            }, e3 = (n4, t4, r4) => {
+              const e4 = r4 + 1;
+              let o3 = 0;
+              for (let r5 = 1; r5 < n4.length; r5++) {
+                const i4 = (t4[r5] - t4[0]) / 365;
+                o3 -= i4 * n4[r5] / Math.pow(e4, i4 + 1);
+              }
+              return o3;
+            }, o2 = [];
+            let i3 = false, u2 = false;
+            for (let t4 = 0; t4 < n3.length; t4++) o2[t4] = 0 === t4 ? 0 : o2[t4 - 1] + 365, n3[t4] > 0 && (i3 = true), n3[t4] < 0 && (u2 = true);
+            if (!i3 || !u2) return c;
+            let f2, l2, s2, h2 = t3 = void 0 === t3 ? 0.1 : t3, g2 = true;
+            do {
+              s2 = r3(n3, o2, h2), f2 = h2 - s2 / e3(n3, o2, h2), l2 = Math.abs(f2 - h2), h2 = f2, g2 = l2 > 1e-10 && Math.abs(s2) > 1e-10;
+            } while (g2);
+            return h2;
+          }, t2.ISBLANK = function(n3) {
+            return null === n3;
+          }, t2.ISERR = z, t2.ISERROR = W, t2.ISEVEN = function(n3) {
+            return !(1 & Math.floor(Math.abs(n3)));
+          }, t2.ISFORMULA = function() {
+            throw new Error("ISFORMULA is not implemented");
+          }, t2.ISLOGICAL = K, t2.ISNA = function(n3) {
+            return n3 === s;
+          }, t2.ISNONTEXT = function(n3) {
+            return "string" != typeof n3;
+          }, t2.ISNUMBER = Q, t2.ISO = $n, t2.ISODD = function(n3) {
+            return !!(1 & Math.floor(Math.abs(n3)));
+          }, t2.ISOWEEKNUM = at, t2.ISPMT = function(n3, t3, r3, e3) {
+            return S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3)) ? a : e3 * n3 * (t3 / r3 - 1);
+          }, t2.ISREF = function() {
+            throw new Error("ISREF is not implemented");
+          }, t2.ISTEXT = Z, t2.KURT = function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            const t3 = e2.mean(n3), r3 = n3.length;
+            let o2 = 0;
+            for (let e3 = 0; e3 < r3; e3++) o2 += Math.pow(n3[e3] - t3, 4);
+            return o2 /= Math.pow(e2.stdev(n3, true), 4), r3 * (r3 + 1) / ((r3 - 1) * (r3 - 2) * (r3 - 3)) * o2 - 3 * (r3 - 1) * (r3 - 1) / ((r3 - 2) * (r3 - 3));
+          }, t2.LARGE = En, t2.LCM = function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            for (var t3, r3, e3, o2, i3 = 1; void 0 !== (e3 = n3.pop()); ) {
+              if (0 === e3) return 0;
+              for (; e3 > 1; ) {
+                if (e3 % 2) {
+                  for (t3 = 3, r3 = Math.floor(Math.sqrt(e3)); t3 <= r3 && e3 % t3; t3 += 2) ;
+                  o2 = t3 <= r3 ? t3 : e3;
+                } else o2 = 2;
+                for (e3 /= o2, i3 *= o2, t3 = n3.length; t3; n3[--t3] % o2 == 0 && 1 == (n3[t3] /= o2) && n3.splice(t3, 1)) ;
+              }
+            }
+            return i3;
+          }, t2.LEFT = function(n3, t3) {
+            return T(n3, t3) || (n3 = L(n3), (t3 = R(t3 = void 0 === t3 ? 1 : t3)) instanceof Error || "string" != typeof n3 ? a : n3.substring(0, t3));
+          }, t2.LEN = function(n3) {
+            return 0 === arguments.length ? h : n3 instanceof Error ? n3 : Array.isArray(n3) ? a : L(n3).length;
+          }, t2.LINEST = Mn, t2.LN = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 0 === n3 ? c : Math.log(n3);
+          }, t2.LOG = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || (0 === n3 || 0 === t3 ? c : Math.log(n3) / Math.log(t3));
+          }, t2.LOG10 = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 0 === n3 ? c : Math.log(n3) / Math.log(10);
+          }, t2.LOGEST = function(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            if (n3.length !== t3.length) return a;
+            for (let t4 = 0; t4 < n3.length; t4++) n3[t4] = Math.log(n3[t4]);
+            const r3 = Mn(n3, t3);
+            return r3[0] = Math.round(1e6 * Math.exp(r3[0])) / 1e6, r3[1] = Math.round(1e6 * Math.exp(r3[1])) / 1e6, r3;
+          }, t2.LOGINV = lr, t2.LOGNORM = Nn, t2.LOGNORMDIST = cr, t2.LOGNORMINV = sr, t2.LOOKUP = function(n3, t3, r3) {
+            t3 = M(t3), r3 = r3 ? M(r3) : t3;
+            const e3 = "number" == typeof n3;
+            let o2 = s;
+            for (let i3 = 0; i3 < t3.length; i3++) {
+              if (t3[i3] === n3) return r3[i3];
+              if (e3 && t3[i3] <= n3 || "string" == typeof t3[i3] && t3[i3].localeCompare(n3) < 0) o2 = r3[i3];
+              else if (e3 && t3[i3] > n3) return o2;
+            }
+            return o2;
+          }, t2.LOWER = function(n3) {
+            return 1 !== arguments.length ? a : S(n3 = L(n3)) ? n3 : n3.toLowerCase();
+          }, t2.MATCH = function(n3, t3, r3) {
+            if (!n3 || !t3) return s;
+            if (2 === arguments.length && (r3 = 1), !((t3 = M(t3)) instanceof Array)) return s;
+            if (-1 !== r3 && 0 !== r3 && 1 !== r3) return s;
+            let e3, o2;
+            for (let i3 = 0; i3 < t3.length; i3++) if (1 === r3) {
+              if (t3[i3] === n3) return i3 + 1;
+              t3[i3] < n3 && (o2 ? t3[i3] > o2 && (e3 = i3 + 1, o2 = t3[i3]) : (e3 = i3 + 1, o2 = t3[i3]));
+            } else if (0 === r3) {
+              if ("string" == typeof n3 && "string" == typeof t3[i3]) {
+                const r4 = n3.toLowerCase().replace(/\?/g, ".").replace(/\*/g, ".*").replace(/~/g, "\\");
+                if (new RegExp("^" + r4 + "$").test(t3[i3].toLowerCase())) return i3 + 1;
+              } else if (t3[i3] === n3) return i3 + 1;
+            } else if (-1 === r3) {
+              if (t3[i3] === n3) return i3 + 1;
+              t3[i3] > n3 && (o2 ? t3[i3] < o2 && (e3 = i3 + 1, o2 = t3[i3]) : (e3 = i3 + 1, o2 = t3[i3]));
+            }
+            return e3 || s;
+          }, t2.MAX = wn, t2.MAXA = function() {
+            const n3 = M(arguments), t3 = T.apply(void 0, n3);
+            if (t3) return t3;
+            let r3 = v(n3);
+            return r3 = r3.map((n4) => null == n4 ? 0 : n4), 0 === r3.length ? 0 : Math.max.apply(Math, r3);
+          }, t2.MDURATION = function() {
+            throw new Error("MDURATION is not implemented");
+          }, t2.MEDIAN = yn, t2.MID = function(n3, t3, r3) {
+            if (null == t3) return a;
+            if (S(t3 = R(t3), r3 = R(r3)) || "string" != typeof n3) return r3;
+            const e3 = t3 - 1, o2 = e3 + r3;
+            return n3.substring(e3, o2);
+          }, t2.MIN = In, t2.MINA = function() {
+            const n3 = M(arguments), t3 = T.apply(void 0, n3);
+            if (t3) return t3;
+            let r3 = v(n3);
+            return r3 = r3.map((n4) => null == n4 ? 0 : n4), 0 === r3.length ? 0 : Math.min.apply(Math, r3);
+          }, t2.MINUTE = function(n3) {
+            return (n3 = O(n3)) instanceof Error ? n3 : n3.getMinutes();
+          }, t2.MIRR = function(n3, t3, r3) {
+            if (S(n3 = P(M(n3)), t3 = R(t3), r3 = R(r3))) return a;
+            const e3 = n3.length, o2 = [], i3 = [];
+            for (let t4 = 0; t4 < e3; t4++) n3[t4] < 0 ? o2.push(n3[t4]) : i3.push(n3[t4]);
+            const u2 = -$r(r3, i3) * Math.pow(1 + r3, e3 - 1), f2 = $r(t3, o2) * (1 + t3);
+            return Math.pow(u2 / f2, 1 / (e3 - 1)) - 1;
+          }, t2.MMULT = function(n3, t3) {
+            return !Array.isArray(n3) || !Array.isArray(t3) || n3.some((n4) => !n4.length) || t3.some((n4) => !n4.length) || N(n3).some((n4) => "number" != typeof n4) || N(t3).some((n4) => "number" != typeof n4) || n3[0].length !== t3.length ? a : Array(n3.length).fill(0).map(() => Array(t3[0].length).fill(0)).map((r3, e3) => r3.map((r4, o2) => n3[e3].reduce((n4, r5, e4) => n4 + r5 * t3[e4][o2], 0)));
+          }, t2.MOD = function(n3, t3) {
+            const r3 = T(n3 = R(n3), t3 = R(t3));
+            if (r3) return r3;
+            if (0 === t3) return u;
+            let e3 = Math.abs(n3 % t3);
+            return e3 = n3 < 0 ? t3 - e3 : e3, t3 > 0 ? e3 : -e3;
+          }, t2.MODE = bn, t2.MODEMULT = hr, t2.MODESNGL = gr, t2.MONTH = function(n3) {
+            return (n3 = O(n3)) instanceof Error ? n3 : n3.getMonth() + 1;
+          }, t2.MROUND = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || (n3 * t3 == 0 ? 0 : n3 * t3 < 0 ? c : Math.round(n3 / t3) * t3);
+          }, t2.MULTINOMIAL = function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            let t3 = 0, r3 = 1;
+            for (let e3 = 0; e3 < n3.length; e3++) t3 += n3[e3], r3 *= Xn(n3[e3]);
+            return Xn(t3) / r3;
+          }, t2.MUNIT = function(n3) {
+            return arguments.length > 1 ? s : !(n3 = parseInt(n3)) || n3 <= 0 ? a : Array(n3).fill(0).map(() => Array(n3).fill(0)).map((n4, t3) => (n4[t3] = 1, n4));
+          }, t2.N = function(n3) {
+            return Q(n3) ? n3 : n3 instanceof Date ? n3.getTime() : true === n3 ? 1 : false === n3 ? 0 : W(n3) ? n3 : 0;
+          }, t2.NA = function() {
+            return s;
+          }, t2.NEGBINOM = Tn, t2.NEGBINOMDIST = pr, t2.NETWORKDAYS = ft, t2.NETWORKDAYSINTL = mr, t2.NOMINAL = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : n3 <= 0 || t3 < 1 ? c : (t3 = parseInt(t3, 10), (Math.pow(n3 + 1, 1 / t3) - 1) * t3);
+          }, t2.NORM = Sn, t2.NORMDIST = dr, t2.NORMINV = vr, t2.NORMSDIST = Er, t2.NORMSINV = Mr, t2.NOT = function(n3) {
+            return "string" == typeof n3 ? a : n3 instanceof Error ? n3 : !n3;
+          }, t2.NOW = function() {
+            return /* @__PURE__ */ new Date();
+          }, t2.NPER = function(n3, t3, r3, e3, o2) {
+            if (o2 = void 0 === o2 ? 0 : o2, e3 = void 0 === e3 ? 0 : e3, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3), o2 = R(o2))) return a;
+            if (0 === n3) return -(r3 + e3) / t3;
+            {
+              const i3 = t3 * (1 + n3 * o2) - e3 * n3, u2 = r3 * n3 + t3 * (1 + n3 * o2);
+              return Math.log(i3 / u2) / Math.log(1 + n3);
+            }
+          }, t2.NPV = $r, t2.NUMBERVALUE = function(n3, t3, r3) {
+            return "number" == typeof (n3 = q(n3) ? n3 : "") ? n3 : "string" != typeof n3 ? s : (t3 = void 0 === t3 ? "." : t3, r3 = void 0 === r3 ? "," : r3, Number(n3.replace(t3, ".").replace(r3, "")));
+          }, t2.OCT2BIN = function(n3, t3) {
+            if (!/^[0-7]{1,10}$/.test(n3)) return c;
+            const r3 = !(10 !== n3.length || "7" !== n3.substring(0, 1)), e3 = r3 ? parseInt(n3, 8) - 1073741824 : parseInt(n3, 8);
+            if (e3 < -512 || e3 > 511) return c;
+            if (r3) return "1" + Mt("0", 9 - (512 + e3).toString(2).length) + (512 + e3).toString(2);
+            const o2 = e3.toString(2);
+            return void 0 === t3 ? o2 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= o2.length ? Mt("0", t3 - o2.length) + o2 : c;
+          }, t2.OCT2DEC = function(n3) {
+            if (!/^[0-7]{1,10}$/.test(n3)) return c;
+            const t3 = parseInt(n3, 8);
+            return t3 >= 536870912 ? t3 - 1073741824 : t3;
+          }, t2.OCT2HEX = function(n3, t3) {
+            if (!/^[0-7]{1,10}$/.test(n3)) return c;
+            const r3 = parseInt(n3, 8);
+            if (r3 >= 536870912) return "ff" + (r3 + 3221225472).toString(16);
+            const e3 = r3.toString(16);
+            return void 0 === t3 ? e3 : isNaN(t3) ? a : t3 < 0 ? c : (t3 = Math.floor(t3)) >= e3.length ? Mt("0", t3 - e3.length) + e3 : c;
+          }, t2.ODD = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            let t3 = Math.ceil(Math.abs(n3));
+            return t3 = 1 & t3 ? t3 : t3 + 1, n3 >= 0 ? t3 : -t3;
+          }, t2.ODDFPRICE = function() {
+            throw new Error("ODDFPRICE is not implemented");
+          }, t2.ODDFYIELD = function() {
+            throw new Error("ODDFYIELD is not implemented");
+          }, t2.ODDLPRICE = function() {
+            throw new Error("ODDLPRICE is not implemented");
+          }, t2.ODDLYIELD = function() {
+            throw new Error("ODDLYIELD is not implemented");
+          }, t2.OR = function() {
+            const n3 = M(arguments);
+            let t3 = a;
+            for (let r3 = 0; r3 < n3.length; r3++) {
+              if (n3[r3] instanceof Error) return n3[r3];
+              void 0 !== n3[r3] && null !== n3[r3] && "string" != typeof n3[r3] && (t3 === a && (t3 = false), n3[r3] && (t3 = true));
+            }
+            return t3;
+          }, t2.PDURATION = function(n3, t3, r3) {
+            return S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : n3 <= 0 ? c : (Math.log(r3) - Math.log(t3)) / Math.log(1 + n3);
+          }, t2.PEARSON = An, t2.PERCENTILE = Cn, t2.PERCENTILEEXC = Nr, t2.PERCENTILEINC = wr, t2.PERCENTRANK = Dn, t2.PERCENTRANKEXC = yr, t2.PERCENTRANKINC = Ir, t2.PERMUT = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : Xn(n3) / Xn(n3 - t3);
+          }, t2.PERMUTATIONA = function(n3, t3) {
+            return S(n3 = R(n3), t3 = R(t3)) ? a : Math.pow(n3, t3);
+          }, t2.PHI = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? a : Math.exp(-0.5 * n3 * n3) / 2.5066282746310002;
+          }, t2.PI = function() {
+            return Math.PI;
+          }, t2.PMT = zr, t2.POISSON = On, t2.POISSONDIST = br, t2.POWER = zn, t2.PPMT = function(n3, t3, r3, e3, o2, i3) {
+            return o2 = o2 || 0, i3 = i3 || 0, S(n3 = R(n3), r3 = R(r3), e3 = R(e3), o2 = R(o2), i3 = R(i3)) ? a : zr(n3, r3, e3, o2, i3) - Br(n3, t3, r3, e3, o2, i3);
+          }, t2.PRICE = function() {
+            throw new Error("PRICE is not implemented");
+          }, t2.PRICEDISC = function(n3, t3, r3, e3, o2) {
+            if (S(n3 = O(n3), t3 = O(t3), r3 = R(r3), e3 = R(e3), o2 = (o2 = R(o2)) || 0)) return a;
+            if (r3 <= 0 || e3 <= 0) return c;
+            if (n3 >= t3) return a;
+            let i3, u2;
+            switch (o2) {
+              case 0:
+                i3 = 360, u2 = ut(n3, t3, false);
+                break;
+              case 1:
+              case 3:
+                i3 = 365, u2 = et(n3, t3, "D");
+                break;
+              case 2:
+                i3 = 360, u2 = et(n3, t3, "D");
+                break;
+              case 4:
+                i3 = 360, u2 = ut(n3, t3, true);
+                break;
+              default:
+                return c;
+            }
+            return e3 - r3 * e3 * u2 / i3;
+          }, t2.PRICEMAT = function() {
+            throw new Error("PRICEMAT is not implemented");
+          }, t2.PROB = function(n3, t3, r3, e3) {
+            if (void 0 === r3) return 0;
+            if (e3 = void 0 === e3 ? r3 : e3, S(n3 = P(M(n3)), t3 = P(M(t3)), r3 = R(r3), e3 = R(e3))) return a;
+            if (r3 === e3) return n3.indexOf(r3) >= 0 ? t3[n3.indexOf(r3)] : 0;
+            const o2 = n3.sort((n4, t4) => n4 - t4), i3 = o2.length;
+            let u2 = 0;
+            for (let a2 = 0; a2 < i3; a2++) o2[a2] >= r3 && o2[a2] <= e3 && (u2 += t3[n3.indexOf(o2[a2])]);
+            return u2;
+          }, t2.PRODUCT = Wn, t2.PRONETIC = function() {
+            throw new Error("PRONETIC is not implemented");
+          }, t2.PROPER = function(n3) {
+            return S(n3) ? n3 : isNaN(n3) && "number" == typeof n3 ? a : (n3 = L(n3)).replace(/\w\S*/g, (n4) => n4.charAt(0).toUpperCase() + n4.substr(1).toLowerCase());
+          }, t2.PV = function(n3, t3, r3, e3, o2) {
+            return e3 = e3 || 0, o2 = o2 || 0, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3), o2 = R(o2)) ? a : 0 === n3 ? -r3 * t3 - e3 : ((1 - Math.pow(1 + n3, t3)) / n3 * r3 * (1 + n3 * o2) - e3) / Math.pow(1 + n3, t3);
+          }, t2.QUARTILE = xn, t2.QUARTILEEXC = Tr, t2.QUARTILEINC = Sr, t2.QUOTIENT = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || parseInt(n3 / t3, 10);
+          }, t2.RADIANS = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : n3 * Math.PI / 180;
+          }, t2.RAND = function() {
+            return Math.random();
+          }, t2.RANDBETWEEN = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || n3 + Math.ceil((t3 - n3 + 1) * Math.random()) - 1;
+          }, t2.RANK = Rn, t2.RANKAVG = Ar, t2.RANKEQ = Cr, t2.RATE = function(n3, t3, r3, e3, o2, i3) {
+            if (i3 = void 0 === i3 ? 0.01 : i3, e3 = void 0 === e3 ? 0 : e3, o2 = void 0 === o2 ? 0 : o2, S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3), o2 = R(o2), i3 = R(i3))) return a;
+            const u2 = 1e-10;
+            let f2 = i3;
+            o2 = o2 ? 1 : 0;
+            for (let i4 = 0; i4 < 20; i4++) {
+              if (f2 <= -1) return c;
+              let i5, a2, l2;
+              if (Math.abs(f2) < u2 ? i5 = r3 * (1 + n3 * f2) + t3 * (1 + f2 * o2) * n3 + e3 : (a2 = Math.pow(1 + f2, n3), i5 = r3 * a2 + t3 * (1 / f2 + o2) * (a2 - 1) + e3), Math.abs(i5) < u2) return f2;
+              if (Math.abs(f2) < u2) l2 = r3 * n3 + t3 * o2 * n3;
+              else {
+                a2 = Math.pow(1 + f2, n3);
+                const e4 = n3 * Math.pow(1 + f2, n3 - 1);
+                l2 = r3 * e4 + t3 * (1 / f2 + o2) * e4 + t3 * (-1 / (f2 * f2)) * (a2 - 1);
+              }
+              f2 -= i5 / l2;
+            }
+            return f2;
+          }, t2.RECEIVED = function() {
+            throw new Error("RECEIVED is not implemented");
+          }, t2.REPLACE = function(n3, t3, r3, e3) {
+            return S(t3 = R(t3), r3 = R(r3)) || "string" != typeof n3 || "string" != typeof e3 ? a : n3.substr(0, t3 - 1) + e3 + n3.substr(t3 - 1 + r3);
+          }, t2.REPT = Mt, t2.RIGHT = function(n3, t3) {
+            return T(n3, t3) || (n3 = L(n3), (t3 = R(t3 = void 0 === t3 ? 1 : t3)) instanceof Error ? t3 : n3.substring(n3.length - t3));
+          }, t2.ROMAN = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            const t3 = String(n3).split(""), r3 = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+            let e3 = "", o2 = 3;
+            for (; o2--; ) e3 = (r3[+t3.pop() + 10 * o2] || "") + e3;
+            return new Array(+t3.join("") + 1).join("M") + e3;
+          }, t2.ROUND = Kn, t2.ROUNDDOWN = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || (n3 > 0 ? 1 : -1) * Math.floor(Math.abs(n3) * Math.pow(10, t3)) / Math.pow(10, t3);
+          }, t2.ROUNDUP = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || (n3 > 0 ? 1 : -1) * Math.ceil(Math.abs(n3) * Math.pow(10, t3)) / Math.pow(10, t3);
+          }, t2.ROW = function(n3, t3) {
+            return 2 !== arguments.length ? s : t3 < 0 ? c : n3 instanceof Array && "number" == typeof t3 ? 0 !== n3.length ? e2.row(n3, t3) : void 0 : a;
+          }, t2.ROWS = function(n3) {
+            return 1 !== arguments.length ? s : n3 instanceof Array ? 0 === n3.length ? 0 : e2.rows(n3) : a;
+          }, t2.RRI = function(n3, t3, r3) {
+            return S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : 0 === n3 || 0 === t3 ? c : Math.pow(r3 / t3, 1 / n3) - 1;
+          }, t2.RSQ = function(n3, t3) {
+            return S(n3 = P(M(n3)), t3 = P(M(t3))) ? a : Math.pow(An(n3, t3), 2);
+          }, t2.SEARCH = function(n3, t3, r3) {
+            let e3;
+            return "string" != typeof n3 || "string" != typeof t3 ? a : (r3 = void 0 === r3 ? 0 : r3, e3 = t3.toLowerCase().indexOf(n3.toLowerCase(), r3 - 1) + 1, 0 === e3 ? a : e3);
+          }, t2.SEC = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 1 / Math.cos(n3);
+          }, t2.SECH = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : 2 / (Math.exp(n3) + Math.exp(-n3));
+          }, t2.SECOND = function(n3) {
+            return (n3 = O(n3)) instanceof Error ? n3 : n3.getSeconds();
+          }, t2.SERIESSUM = function(n3, t3, r3, e3) {
+            if (S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = P(e3))) return a;
+            let o2 = e3[0] * Math.pow(n3, t3);
+            for (let i3 = 1; i3 < e3.length; i3++) o2 += e3[i3] * Math.pow(n3, t3 + i3 * r3);
+            return o2;
+          }, t2.SHEET = function() {
+            throw new Error("SHEET is not implemented");
+          }, t2.SHEETS = function() {
+            throw new Error("SHEETS is not implemented");
+          }, t2.SIGN = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : n3 < 0 ? -1 : 0 === n3 ? 0 : 1;
+          }, t2.SIN = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.sin(n3);
+          }, t2.SINH = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : (Math.exp(n3) - Math.exp(-n3)) / 2;
+          }, t2.SKEW = Pn, t2.SKEWP = Dr, t2.SLN = function(n3, t3, r3) {
+            return S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : 0 === r3 ? c : (n3 - t3) / r3;
+          }, t2.SLOPE = function(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            const r3 = e2.mean(t3), o2 = e2.mean(n3), i3 = t3.length;
+            let u2 = 0, f2 = 0;
+            for (let e3 = 0; e3 < i3; e3++) u2 += (t3[e3] - r3) * (n3[e3] - o2), f2 += Math.pow(t3[e3] - r3, 2);
+            return u2 / f2;
+          }, t2.SMALL = Ln, t2.SORT = function(n3, t3 = 1, r3 = 1, e3 = false) {
+            if (!n3 || !Array.isArray(n3)) return s;
+            if (0 === n3.length) return 0;
+            if (!(t3 = R(t3)) || t3 < 1) return a;
+            if (1 !== (r3 = R(r3)) && -1 !== r3) return a;
+            if ("boolean" != typeof (e3 = D(e3))) return l;
+            const o2 = (n4) => n4.sort((n5, e4) => (n5 = L(n5[t3 - 1]), e4 = L(e4[t3 - 1]), 1 === r3 ? n5 < e4 ? -1 * r3 : r3 : n5 > e4 ? r3 : -1 * r3)), i3 = E(n3), u2 = e3 ? I(i3) : i3;
+            return t3 >= 1 && t3 <= u2[0].length ? e3 ? I(o2(u2)) : o2(u2) : a;
+          }, t2.SQRT = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : n3 < 0 ? c : Math.sqrt(n3);
+          }, t2.SQRTPI = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.sqrt(n3 * Math.PI);
+          }, t2.STANDARDIZE = function(n3, t3, r3) {
+            return S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : (n3 - t3) / r3;
+          }, t2.STDEV = Fn, t2.STDEVA = function() {
+            const n3 = _n.apply(this, arguments);
+            return Math.sqrt(n3);
+          }, t2.STDEVP = Or, t2.STDEVPA = function() {
+            const n3 = Vn.apply(this, arguments);
+            let t3 = Math.sqrt(n3);
+            return isNaN(t3) && (t3 = c), t3;
+          }, t2.STDEVS = xr, t2.STEYX = function(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            const r3 = e2.mean(t3), o2 = e2.mean(n3), i3 = t3.length;
+            let u2 = 0, f2 = 0, l2 = 0;
+            for (let e3 = 0; e3 < i3; e3++) u2 += Math.pow(n3[e3] - o2, 2), f2 += (t3[e3] - r3) * (n3[e3] - o2), l2 += Math.pow(t3[e3] - r3, 2);
+            return Math.sqrt((u2 - f2 * f2 / l2) / (i3 - 2));
+          }, t2.SUBSTITUTE = function(n3, t3, r3, e3) {
+            if (arguments.length < 3) return s;
+            if (n3 && t3) {
+              if (void 0 === e3) return n3.split(t3).join(r3);
+              {
+                if (e3 = Math.floor(Number(e3)), Number.isNaN(e3) || e3 <= 0) return a;
+                let o2 = 0, i3 = 0;
+                for (; o2 > -1 && n3.indexOf(t3, o2) > -1; ) if (o2 = n3.indexOf(t3, o2 + 1), i3++, o2 > -1 && i3 === e3) return n3.substring(0, o2) + r3 + n3.substring(o2 + t3.length);
+                return n3;
+              }
+            }
+            return n3;
+          }, t2.SUBTOTAL = function(n3, t3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            switch (n3) {
+              case 1:
+              case 101:
+                return tn(t3);
+              case 2:
+              case 102:
+                return fn(t3);
+              case 3:
+              case 103:
+                return ln(t3);
+              case 4:
+              case 104:
+                return wn(t3);
+              case 5:
+              case 105:
+                return In(t3);
+              case 6:
+              case 106:
+                return Wn(t3);
+              case 7:
+              case 107:
+                return Fn.S(t3);
+              case 8:
+              case 108:
+                return Fn.P(t3);
+              case 9:
+              case 109:
+                return Qn(t3);
+              case 10:
+              case 110:
+                return Un.S(t3);
+              case 11:
+              case 111:
+                return Un.P(t3);
+            }
+          }, t2.SUM = Qn, t2.SUMIF = function(n3, t3, r3) {
+            if (n3 = M(n3), r3 = r3 ? M(r3) : n3, n3 instanceof Error) return n3;
+            if (null == t3 || t3 instanceof Error) return 0;
+            let e3 = 0;
+            const o2 = "*" === t3, i3 = o2 ? null : X(t3 + "");
+            for (let t4 = 0; t4 < n3.length; t4++) {
+              const u2 = n3[t4], a2 = r3[t4];
+              if (o2) e3 += u2;
+              else {
+                const n4 = [H(u2, G)].concat(i3);
+                e3 += B(n4) ? a2 : 0;
+              }
+            }
+            return e3;
+          }, t2.SUMIFS = function() {
+            const n3 = m(arguments), t3 = P(M(n3.shift()));
+            if (t3 instanceof Error) return t3;
+            const r3 = n3, e3 = r3.length / 2;
+            for (let n4 = 0; n4 < e3; n4++) r3[2 * n4] = M(r3[2 * n4]);
+            let o2 = 0;
+            for (let n4 = 0; n4 < t3.length; n4++) {
+              let i3 = false;
+              for (let t4 = 0; t4 < e3; t4++) {
+                const e4 = r3[2 * t4][n4], o3 = r3[2 * t4 + 1];
+                let u2 = false;
+                if (void 0 === o3 || "*" === o3) u2 = true;
+                else {
+                  const n5 = X(o3 + ""), t5 = [H(e4, G)].concat(n5);
+                  u2 = B(t5);
+                }
+                if (!u2) {
+                  i3 = false;
+                  break;
+                }
+                i3 = true;
+              }
+              i3 && (o2 += t3[n4]);
+            }
+            return o2;
+          }, t2.SUMPRODUCT = function() {
+            if (!arguments || 0 === arguments.length) return a;
+            const n3 = arguments.length + 1;
+            let t3, r3, e3, o2, i3 = 0;
+            for (let u2 = 0; u2 < arguments[0].length; u2++) if (arguments[0][u2] instanceof Array) for (let e4 = 0; e4 < arguments[0][u2].length; e4++) {
+              for (t3 = 1, r3 = 1; r3 < n3; r3++) {
+                const n4 = arguments[r3 - 1][u2][e4];
+                if (n4 instanceof Error) return n4;
+                if (o2 = R(n4), o2 instanceof Error) return o2;
+                t3 *= o2;
+              }
+              i3 += t3;
+            }
+            else {
+              for (t3 = 1, r3 = 1; r3 < n3; r3++) {
+                const n4 = arguments[r3 - 1][u2];
+                if (n4 instanceof Error) return n4;
+                if (e3 = R(n4), e3 instanceof Error) return e3;
+                t3 *= e3;
+              }
+              i3 += t3;
+            }
+            return i3;
+          }, t2.SUMSQ = function() {
+            const n3 = P(M(arguments));
+            if (n3 instanceof Error) return n3;
+            let t3 = 0;
+            const r3 = n3.length;
+            for (let e3 = 0; e3 < r3; e3++) t3 += Q(n3[e3]) ? n3[e3] * n3[e3] : 0;
+            return t3;
+          }, t2.SUMX2MY2 = function(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            let r3 = 0;
+            for (let e3 = 0; e3 < n3.length; e3++) r3 += n3[e3] * n3[e3] - t3[e3] * t3[e3];
+            return r3;
+          }, t2.SUMX2PY2 = function(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            let r3 = 0;
+            n3 = P(M(n3)), t3 = P(M(t3));
+            for (let e3 = 0; e3 < n3.length; e3++) r3 += n3[e3] * n3[e3] + t3[e3] * t3[e3];
+            return r3;
+          }, t2.SUMXMY2 = function(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)))) return a;
+            let r3 = 0;
+            n3 = M(n3), t3 = M(t3);
+            for (let e3 = 0; e3 < n3.length; e3++) r3 += Math.pow(n3[e3] - t3[e3], 2);
+            return r3;
+          }, t2.SWITCH = function() {
+            let n3;
+            if (arguments.length > 0) {
+              const t3 = arguments[0], r3 = arguments.length - 1, e3 = Math.floor(r3 / 2);
+              let o2 = false;
+              const i3 = r3 % 2 != 0, u2 = r3 % 2 == 0 ? null : arguments[arguments.length - 1];
+              if (e3) {
+                for (let r4 = 0; r4 < e3; r4++) if (t3 === arguments[2 * r4 + 1]) {
+                  n3 = arguments[2 * r4 + 2], o2 = true;
+                  break;
+                }
+              }
+              o2 || (n3 = i3 ? u2 : s);
+            } else n3 = a;
+            return n3;
+          }, t2.SYD = function(n3, t3, r3, e3) {
+            return S(n3 = R(n3), t3 = R(t3), r3 = R(r3), e3 = R(e3)) ? a : 0 === r3 || e3 < 1 || e3 > r3 ? c : (n3 - t3) * (r3 - (e3 = parseInt(e3, 10)) + 1) * 2 / (r3 * (r3 + 1));
+          }, t2.T = function(n3) {
+            return n3 instanceof Error || "string" == typeof n3 ? n3 : "";
+          }, t2.TAN = function(n3) {
+            return (n3 = R(n3)) instanceof Error ? n3 : Math.tan(n3);
+          }, t2.TANH = function(n3) {
+            if ((n3 = R(n3)) instanceof Error) return n3;
+            const t3 = Math.exp(2 * n3);
+            return (t3 - 1) / (t3 + 1);
+          }, t2.TBILLEQ = function(n3, t3, r3) {
+            return S(n3 = O(n3), t3 = O(t3), r3 = R(r3)) ? a : r3 <= 0 || n3 > t3 || t3 - n3 > 31536e6 ? c : 365 * r3 / (360 - r3 * ut(n3, t3, false));
+          }, t2.TBILLPRICE = function(n3, t3, r3) {
+            return S(n3 = O(n3), t3 = O(t3), r3 = R(r3)) ? a : r3 <= 0 || n3 > t3 || t3 - n3 > 31536e6 ? c : 100 * (1 - r3 * ut(n3, t3, false) / 360);
+          }, t2.TBILLYIELD = function(n3, t3, r3) {
+            return S(n3 = O(n3), t3 = O(t3), r3 = R(r3)) ? a : r3 <= 0 || n3 > t3 || t3 - n3 > 31536e6 ? c : 360 * (100 - r3) / (r3 * ut(n3, t3, false));
+          }, t2.TDIST = Rr, t2.TDISTRT = Pr, t2.TEXT = function(n3, t3) {
+            if (void 0 === n3 || n3 instanceof Error || t3 instanceof Error) return s;
+            if (null == t3) return "";
+            if ("number" == typeof t3) return String(t3);
+            if ("string" != typeof t3) return a;
+            const r3 = t3.startsWith("$") ? "$" : "", e3 = t3.endsWith("%");
+            return e3 && (n3 *= 100), n3 = (n3 = Et(n3, (t3 = t3.replace(/%/g, "").replace(/\$/g, "")).split(".")[1].match(/0/g).length, !t3.includes(","))).startsWith("-") ? "-" + r3 + (n3 = n3.replace("-", "")) : r3 + n3, e3 && (n3 += "%"), n3;
+          }, t2.TEXTJOIN = function(n3, t3, ...r3) {
+            if ("boolean" != typeof t3 && (t3 = D(t3)), arguments.length < 3) return s;
+            n3 = null != n3 ? n3 : "";
+            let e3 = M(r3), o2 = t3 ? e3.filter((n4) => n4) : e3;
+            if (Array.isArray(n3)) {
+              n3 = M(n3);
+              let t4 = o2.map((n4) => [n4]), r4 = 0;
+              for (let e4 = 0; e4 < t4.length - 1; e4++) t4[e4].push(n3[r4]), r4++, r4 === n3.length && (r4 = 0);
+              return o2 = M(t4), o2.join("");
+            }
+            return o2.join(n3);
+          }, t2.TIME = function(n3, t3, r3) {
+            return S(n3 = R(n3), t3 = R(t3), r3 = R(r3)) ? a : n3 < 0 || t3 < 0 || r3 < 0 ? c : (3600 * n3 + 60 * t3 + r3) / 86400;
+          }, t2.TIMEVALUE = function(n3) {
+            return (n3 = O(n3)) instanceof Error ? n3 : (3600 * n3.getHours() + 60 * n3.getMinutes() + n3.getSeconds()) / 86400;
+          }, t2.TINV = Lr, t2.TODAY = function() {
+            return ot(/* @__PURE__ */ new Date());
+          }, t2.TRANSPOSE = function(n3) {
+            return n3 ? I(E(n3)) : s;
+          }, t2.TREND = function(n3, t3, r3) {
+            if (S(n3 = P(M(n3)), t3 = P(M(t3)), r3 = P(M(r3)))) return a;
+            const e3 = Mn(n3, t3), o2 = e3[0], i3 = e3[1], u2 = [];
+            return r3.forEach((n4) => {
+              u2.push(o2 * n4 + i3);
+            }), u2;
+          }, t2.TRIM = function(n3) {
+            return (n3 = L(n3)) instanceof Error ? n3 : n3.replace(/\s+/g, " ").trim();
+          }, t2.TRIMMEAN = function(n3, t3) {
+            if (S(n3 = P(M(n3)), t3 = R(t3))) return a;
+            const r3 = Bn(n3.length * t3, 2) / 2;
+            return e2.mean((i3 = (i3 = r3) || 1, (o2 = y2(n3.sort((n4, t4) => n4 - t4), r3)) && "function" == typeof o2.slice ? o2.slice(0, o2.length - i3) : o2));
+            var o2, i3;
+          }, t2.TRUE = function() {
+            return true;
+          }, t2.TRUNC = function(n3, t3) {
+            return T(n3 = R(n3), t3 = R(t3)) || (n3 > 0 ? 1 : -1) * Math.floor(Math.abs(n3) * Math.pow(10, t3)) / Math.pow(10, t3);
+          }, t2.TTEST = Fr, t2.TYPE = function(n3) {
+            return Q(n3) ? 1 : Z(n3) ? 2 : K(n3) ? 4 : W(n3) ? 16 : Array.isArray(n3) ? 64 : void 0;
+          }, t2.UNICHAR = Nt, t2.UNICODE = wt, t2.UNIQUE = J, t2.UPPER = function(n3) {
+            return (n3 = L(n3)) instanceof Error ? n3 : n3.toUpperCase();
+          }, t2.VALUE = function(n3) {
+            const t3 = T(n3);
+            if (t3) return t3;
+            if ("number" == typeof n3) return n3;
+            if (q(n3) || (n3 = ""), "string" != typeof n3) return a;
+            const r3 = /(%)$/.test(n3) || /^(%)/.test(n3);
+            if ("" === (n3 = (n3 = (n3 = n3.replace(/^[^0-9-]{0,3}/, "")).replace(/[^0-9]{0,3}$/, "")).replace(/[ ,]/g, ""))) return 0;
+            let e3 = Number(n3);
+            return isNaN(e3) ? a : (e3 = e3 || 0, r3 && (e3 *= 0.01), e3);
+          }, t2.VAR = Un, t2.VARA = _n, t2.VARP = qr, t2.VARPA = Vn, t2.VARS = Ur, t2.VDB = function() {
+            throw new Error("VDB is not implemented");
+          }, t2.VLOOKUP = nn, t2.WEEKDAY = function(n3, t3) {
+            if ((n3 = O(n3)) instanceof Error) return n3;
+            void 0 === t3 && (t3 = 1);
+            const r3 = n3.getDay();
+            return tt[t3][r3];
+          }, t2.WEEKNUM = function(n3, t3) {
+            if ((n3 = O(n3)) instanceof Error) return n3;
+            if (void 0 === t3 && (t3 = 1), 21 === t3) return at(n3);
+            const r3 = nt[t3];
+            let e3 = new Date(n3.getFullYear(), 0, 1);
+            const o2 = e3.getDay() < r3 ? 1 : 0;
+            return e3 -= 24 * Math.abs(e3.getDay() - r3) * 60 * 60 * 1e3, Math.floor((n3 - e3) / 864e5 / 7 + 1) + o2;
+          }, t2.WEIBULL = kn, t2.WEIBULLDIST = _r, t2.WORKDAY = lt, t2.WORKDAYINTL = Vr, t2.XIRR = function(n3, t3, r3) {
+            if (S(n3 = P(M(n3)), t3 = x2(M(t3)), r3 = R(r3))) return a;
+            const e3 = (n4, t4, r4) => {
+              const e4 = r4 + 1;
+              let o3 = n4[0];
+              for (let r5 = 1; r5 < n4.length; r5++) o3 += n4[r5] / Math.pow(e4, it(t4[r5], t4[0]) / 365);
+              return o3;
+            }, o2 = (n4, t4, r4) => {
+              const e4 = r4 + 1;
+              let o3 = 0;
+              for (let r5 = 1; r5 < n4.length; r5++) {
+                const i4 = it(t4[r5], t4[0]) / 365;
+                o3 -= i4 * n4[r5] / Math.pow(e4, i4 + 1);
+              }
+              return o3;
+            };
+            let i3 = false, u2 = false;
+            for (let t4 = 0; t4 < n3.length; t4++) n3[t4] > 0 && (i3 = true), n3[t4] < 0 && (u2 = true);
+            if (!i3 || !u2) return c;
+            let f2, l2, s2, h2 = r3 = r3 || 0.1, g2 = true;
+            do {
+              s2 = e3(n3, t3, h2), f2 = h2 - s2 / o2(n3, t3, h2), l2 = Math.abs(f2 - h2), h2 = f2, g2 = l2 > 1e-10 && Math.abs(s2) > 1e-10;
+            } while (g2);
+            return h2;
+          }, t2.XNPV = function(n3, t3, r3) {
+            if (S(n3 = R(n3), t3 = P(M(t3)), r3 = x2(M(r3)))) return a;
+            let e3 = 0;
+            for (let o2 = 0; o2 < t3.length; o2++) e3 += t3[o2] / Math.pow(1 + n3, it(r3[o2], r3[0]) / 365);
+            return e3;
+          }, t2.XOR = function() {
+            const n3 = M(arguments);
+            let t3 = a;
+            for (let r3 = 0; r3 < n3.length; r3++) {
+              if (n3[r3] instanceof Error) return n3[r3];
+              void 0 !== n3[r3] && null !== n3[r3] && "string" != typeof n3[r3] && (t3 === a && (t3 = 0), n3[r3] && t3++);
+            }
+            return t3 === a ? t3 : !!(1 & Math.floor(Math.abs(t3)));
+          }, t2.YEAR = function(n3) {
+            return (n3 = O(n3)) instanceof Error ? n3 : n3.getFullYear();
+          }, t2.YEARFRAC = ht, t2.YIELD = function() {
+            throw new Error("YIELD is not implemented");
+          }, t2.YIELDDISC = function() {
+            throw new Error("YIELDDISC is not implemented");
+          }, t2.YIELDMAT = function() {
+            throw new Error("YIELDMAT is not implemented");
+          }, t2.Z = jn, t2.ZTEST = kr, t2.utils = Wr;
+        } }, t = {};
+        function r(e2) {
+          var o = t[e2];
+          if (void 0 !== o) return o.exports;
+          var i2 = t[e2] = { exports: {} };
+          return n[e2].call(i2.exports, i2, i2.exports, r), i2.exports;
+        }
+        r.g = function() {
+          if ("object" == typeof globalThis) return globalThis;
+          try {
+            return this || new Function("return this")();
+          } catch (n2) {
+            if ("object" == typeof window) return window;
+          }
+        }();
+        var e = r(960);
+        Formula = e;
+      }();
+      return Formula;
+    });
+  }
+});
+
+// C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/jspreadsheet-ce@5.0.4/node_modules/jspreadsheet-ce/dist/index.js
+var require_dist2 = __commonJS({
+  "C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/jspreadsheet-ce@5.0.4/node_modules/jspreadsheet-ce/dist/index.js"(exports, module) {
+    if (!jSuites && typeof __require === "function") {
+      jSuites = require_jsuites();
+    }
+    var jSuites;
+    if (!formula && typeof __require === "function") {
+      formula = require_dist();
+    }
+    var formula;
+    (function(global, factory2) {
+      typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory2() : typeof define === "function" && define.amd ? define(factory2) : global.jspreadsheet = factory2();
+    })(exports, function() {
+      var jspreadsheet;
+      (function() {
+        "use strict";
+        var __webpack_modules__ = { 805: function(e, t) {
+          const s = function(e2) {
+            const t2 = this, s2 = [];
+            for (let n2 = 0; n2 < e2.length; n2++) {
+              const o2 = e2[n2].x, r = e2[n2].y, l = t2.options.columns[o2].name ? t2.options.columns[o2].name : o2;
+              s2[r] || (s2[r] = { row: r, data: {} }), s2[r].data[l] = e2[n2].value;
+            }
+            return s2.filter(function(e3) {
+              return null != e3;
+            });
+          }, n = function(e2, t2) {
+            const s2 = this, n2 = o.call(s2.parent, "onbeforesave", s2.parent, s2, t2);
+            if (n2) t2 = n2;
+            else if (false === n2) return false;
+            jSuites.ajax({ url: e2, method: "POST", dataType: "json", data: { data: JSON.stringify(t2) }, success: function(e3) {
+              o.call(s2, "onsave", s2.parent, s2, t2);
+            } });
+          }, o = function(e2) {
+            const t2 = this;
+            let o2 = null, r = t2.parent ? t2.parent : t2;
+            if (!r.ignoreEvents && ("function" == typeof r.config.onevent && (o2 = r.config.onevent.apply(this, arguments)), "function" == typeof r.config[e2] && (o2 = r.config[e2].apply(this, Array.prototype.slice.call(arguments, 1))), "object" == typeof r.plugins)) {
+              const e3 = Object.keys(r.plugins);
+              for (let t3 = 0; t3 < e3.length; t3++) {
+                const s2 = e3[t3], n2 = r.plugins[s2];
+                "function" == typeof n2.onevent && (o2 = n2.onevent.apply(this, arguments));
+              }
+            }
+            if ("onafterchanges" == e2) {
+              const e3 = arguments;
+              if ("object" == typeof r.plugins && Object.entries(r.plugins).forEach(function([, s2]) {
+                "function" == typeof s2.persistence && s2.persistence(t2, "setValue", { data: e3[2] });
+              }), t2.options.persistence) {
+                const e4 = 1 == t2.options.persistence ? t2.options.url : t2.options.persistence, o3 = s.call(t2, arguments[2]);
+                n.call(t2, e4, o3);
+              }
+            }
+            return o2;
+          };
+          t.A = o;
+        }, 829: function(e, t, s) {
+          s.d(t, { F8: function() {
+            return l;
+          }, N$: function() {
+            return r;
+          }, dr: function() {
+            return i2;
+          } });
+          var n = s(530), o = s(657);
+          const r = function(e2) {
+            const t2 = this;
+            if (t2.options.filters) {
+              e2 = parseInt(e2), t2.resetSelection();
+              let s2 = [];
+              if ("checkbox" == t2.options.columns[e2].type) s2.push({ id: "true", name: "True" }), s2.push({ id: "false", name: "False" });
+              else {
+                const n3 = [];
+                let o2 = false;
+                for (let s3 = 0; s3 < t2.options.data.length; s3++) {
+                  const r4 = t2.options.data[s3][e2], l2 = t2.records[s3][e2].element.innerHTML;
+                  r4 && l2 ? n3[r4] = l2 : o2 = true;
+                }
+                const r3 = Object.keys(n3);
+                s2 = [];
+                for (let e3 = 0; e3 < r3.length; e3++) s2.push({ id: r3[e3], name: n3[r3[e3]] });
+                o2 && s2.push({ value: "", id: "", name: "(Blanks)" });
+              }
+              const n2 = document.createElement("div");
+              t2.filter.children[e2 + 1].innerHTML = "", t2.filter.children[e2 + 1].appendChild(n2), t2.filter.children[e2 + 1].style.paddingLeft = "0px", t2.filter.children[e2 + 1].style.paddingRight = "0px", t2.filter.children[e2 + 1].style.overflow = "initial";
+              const r2 = { data: s2, multiple: true, autocomplete: true, opened: true, value: void 0 !== t2.filters[e2] ? t2.filters[e2] : null, width: "100%", position: 1 == t2.options.tableOverflow || 1 == t2.parent.config.fullscreen, onclose: function(s3) {
+                i2.call(t2), t2.filters[e2] = s3.dropdown.getValue(true), t2.filter.children[e2 + 1].innerHTML = s3.dropdown.getText(), t2.filter.children[e2 + 1].style.paddingLeft = "", t2.filter.children[e2 + 1].style.paddingRight = "", t2.filter.children[e2 + 1].style.overflow = "", l.call(t2, e2), o.G9.call(t2);
+              } };
+              jSuites.dropdown(n2, r2);
+            } else console.log("Jspreadsheet: filters not enabled.");
+          }, l = function(e2) {
+            const t2 = this;
+            if (!e2) for (let s3 = 0; s3 < t2.filter.children.length; s3++) t2.filters[s3] && (e2 = s3);
+            const s2 = function(e3, s3, n2) {
+              for (let o3 = 0; o3 < e3.length; o3++) {
+                const r2 = "" + t2.options.data[n2][s3], l2 = "" + t2.records[n2][s3].element.innerHTML;
+                if (e3[o3] == r2 || e3[o3] == l2) return true;
+              }
+              return false;
+            }, o2 = t2.filters[e2];
+            t2.results = [];
+            for (let n2 = 0; n2 < t2.options.data.length; n2++) s2(o2, e2, n2) && t2.results.push(n2);
+            t2.results.length || (t2.results = null), n.hG.call(t2);
+          }, i2 = function() {
+            const e2 = this;
+            if (e2.options.filters) for (let t2 = 0; t2 < e2.filter.children.length; t2++) e2.filter.children[t2].innerHTML = "&nbsp;", e2.filters[t2] = null;
+            e2.results = null, n.hG.call(e2);
+          };
+        }, 160: function(e, t, s) {
+          s.d(t, { e: function() {
+            return o;
+          } });
+          var n = s(530);
+          const o = function(e2) {
+            const t2 = this;
+            if (e2 && (t2.options.footers = e2), t2.options.footers) {
+              t2.tfoot || (t2.tfoot = document.createElement("tfoot"), t2.table.appendChild(t2.tfoot));
+              for (let e3 = 0; e3 < t2.options.footers.length; e3++) {
+                let s2;
+                if (t2.tfoot.children[e3]) s2 = t2.tfoot.children[e3];
+                else {
+                  s2 = document.createElement("tr");
+                  const e4 = document.createElement("td");
+                  s2.appendChild(e4), t2.tfoot.appendChild(s2);
+                }
+                for (let o2 = 0; o2 < t2.headers.length; o2++) {
+                  let r;
+                  if (t2.options.footers[e3][o2] || (t2.options.footers[e3][o2] = ""), t2.tfoot.children[e3].children[o2 + 1]) r = t2.tfoot.children[e3].children[o2 + 1];
+                  else {
+                    r = document.createElement("td"), s2.appendChild(r);
+                    const e4 = t2.options.columns[o2].align || t2.options.defaultColAlign || "center";
+                    r.style.textAlign = e4;
+                  }
+                  r.textContent = n.$x.call(t2, +t2.records.length + o2, e3, t2.options.footers[e3][o2]), r.style.display = t2.cols[o2].colElement.style.display;
+                }
+              }
+            }
+          };
+        }, 296: function(e, t, s) {
+          s.d(t, { w: function() {
+            return n;
+          } });
+          const n = function() {
+            const e2 = this;
+            let t2 = 0;
+            if (e2.options.freezeColumns > 0) for (let s2 = 0; s2 < e2.options.freezeColumns; s2++) {
+              let n2;
+              n2 = e2.options.columns && e2.options.columns[s2] && void 0 !== e2.options.columns[s2].width ? parseInt(e2.options.columns[s2].width) : void 0 !== e2.options.defaultColWidth ? parseInt(e2.options.defaultColWidth) : 100, t2 += n2;
+            }
+            return t2;
+          };
+        }, 978: function(e, t, s) {
+          s.r(t), s.d(t, { createFromTable: function() {
+            return u;
+          }, getCaretIndex: function() {
+            return o;
+          }, getCellNameFromCoords: function() {
+            return i2;
+          }, getColumnName: function() {
+            return l;
+          }, getCoordsFromCellName: function() {
+            return a;
+          }, getCoordsFromRange: function() {
+            return c;
+          }, invert: function() {
+            return r;
+          }, parseCSV: function() {
+            return d;
+          } });
+          var n = s(689);
+          const o = function(e2) {
+            let t2;
+            t2 = this.config.root ? this.config.root : window;
+            let s2 = 0;
+            const n2 = t2.getSelection();
+            if (n2 && 0 !== n2.rangeCount) {
+              const t3 = n2.getRangeAt(0), o2 = t3.cloneRange();
+              o2.selectNodeContents(e2), o2.setEnd(t3.endContainer, t3.endOffset), s2 = o2.toString().length;
+            }
+            return s2;
+          }, r = function(e2) {
+            const t2 = [], s2 = Object.keys(e2);
+            for (let n2 = 0; n2 < s2.length; n2++) t2[e2[s2[n2]]] = s2[n2];
+            return t2;
+          }, l = function(e2) {
+            let t2, s2 = e2 + 1, n2 = "";
+            for (; s2 > 0; ) t2 = (s2 - 1) % 26, n2 = String.fromCharCode(65 + t2).toString() + n2, s2 = parseInt((s2 - t2) / 26);
+            return n2;
+          }, i2 = function(e2, t2) {
+            return l(parseInt(e2)) + (parseInt(t2) + 1);
+          }, a = function(e2) {
+            const t2 = /^[a-zA-Z]+/.exec(e2);
+            if (t2) {
+              let s2 = 0;
+              for (let e3 = 0; e3 < t2[0].length; e3++) s2 += parseInt(t2[0].charCodeAt(e3) - 64) * Math.pow(26, t2[0].length - 1 - e3);
+              s2--, s2 < 0 && (s2 = 0);
+              let n2 = parseInt(/[0-9]+$/.exec(e2)) || null;
+              return n2 > 0 && n2--, [s2, n2];
+            }
+          }, c = function(e2) {
+            const [t2, s2] = e2.split(":");
+            return [...a(t2), ...a(s2)];
+          }, d = function(e2, t2) {
+            t2 = t2 || ",", e2 = e2.replace(/\r?\n$|\r$|\n$/g, "");
+            const s2 = [];
+            let n2 = false, o2 = 0, r2 = 0, l2 = 0;
+            for (let i3 = 0; i3 < e2.length; i3++) {
+              const a2 = e2[i3], c2 = e2[i3 + 1];
+              s2[r2] = s2[r2] || [], s2[r2][l2] = s2[r2][l2] || "", '"' == a2 && n2 && '"' == c2 ? (s2[r2][l2] += a2, ++i3) : '"' != a2 ? a2 != t2 || n2 ? "\r" != a2 || "\n" != c2 || n2 ? "\n" == a2 && !n2 || "\r" == a2 && !n2 ? (++r2, o2 = Math.max(o2, l2), l2 = 0) : s2[r2][l2] += a2 : (++r2, o2 = Math.max(o2, l2), l2 = 0, ++i3) : ++l2 : n2 = !n2;
+            }
+            return s2.forEach((e3, t3) => {
+              for (let t4 = e3.length; t4 <= o2; t4++) e3.push("");
+            }), s2;
+          }, u = function(e2, t2) {
+            if ("TABLE" == e2.tagName) {
+              t2 || (t2 = {}), t2.columns = [], t2.data = [];
+              const s2 = e2.querySelectorAll("colgroup > col");
+              if (s2.length) for (let e3 = 0; e3 < s2.length; e3++) {
+                let n2 = s2[e3].style.width;
+                n2 || (n2 = s2[e3].getAttribute("width")), n2 && (t2.columns[e3] || (t2.columns[e3] = {}), t2.columns[e3].width = n2);
+              }
+              const o2 = function(e3, s3) {
+                let n2 = e3.getBoundingClientRect();
+                const o3 = n2.width > 50 ? n2.width : 50;
+                t2.columns[s3] || (t2.columns[s3] = {}), e3.getAttribute("data-celltype") ? t2.columns[s3].type = e3.getAttribute("data-celltype") : t2.columns[s3].type = "text", t2.columns[s3].width = o3 + "px", t2.columns[s3].title = e3.innerHTML, e3.style.textAlign && (t2.columns[s3].align = e3.style.textAlign), (n2 = e3.getAttribute("name")) && (t2.columns[s3].name = n2), (n2 = e3.getAttribute("id")) && (t2.columns[s3].id = n2), (n2 = e3.getAttribute("data-mask")) && (t2.columns[s3].mask = n2);
+              }, r2 = [];
+              let l2 = e2.querySelectorAll(":scope > thead > tr");
+              if (l2.length) {
+                for (let e3 = 0; e3 < l2.length - 1; e3++) {
+                  const t3 = [];
+                  for (let s3 = 0; s3 < l2[e3].children.length; s3++) {
+                    const n2 = { title: l2[e3].children[s3].textContent, colspan: l2[e3].children[s3].getAttribute("colspan") || 1 };
+                    t3.push(n2);
+                  }
+                  r2.push(t3);
+                }
+                l2 = l2[l2.length - 1].children;
+                for (let e3 = 0; e3 < l2.length; e3++) o2(l2[e3], e3);
+              }
+              let i3 = 0;
+              const a2 = {}, c2 = {}, d2 = {}, u2 = {};
+              let p = e2.querySelectorAll(":scope > tr, :scope > tbody > tr");
+              for (let e3 = 0; e3 < p.length; e3++) if (t2.data[i3] = [], 1 != t2.parseTableFirstRowAsHeader || l2.length || 0 != e3) {
+                for (let s3 = 0; s3 < p[e3].children.length; s3++) {
+                  let o3 = p[e3].children[s3].getAttribute("data-formula");
+                  o3 ? "=" != o3.substr(0, 1) && (o3 = "=" + o3) : o3 = p[e3].children[s3].innerHTML, t2.data[i3].push(o3);
+                  const r3 = (0, n.t3)([s3, e3]), l3 = p[e3].children[s3].getAttribute("class");
+                  l3 && (u2[r3] = l3);
+                  const c3 = parseInt(p[e3].children[s3].getAttribute("colspan")) || 0, h = parseInt(p[e3].children[s3].getAttribute("rowspan")) || 0;
+                  (c3 || h) && (a2[r3] = [c3 || 1, h || 1]), p[e3].children[s3].style && "none" == p[e3].children[s3].style.display && (p[e3].children[s3].style.display = "");
+                  const m = p[e3].children[s3].getAttribute("style");
+                  m && (d2[r3] = m), p[e3].children[s3].classList.contains("styleBold") && (d2[r3] ? d2[r3] += "; font-weight:bold;" : d2[r3] = "font-weight:bold;");
+                }
+                p[e3].style && p[e3].style.height && (c2[e3] = { height: p[e3].style.height }), i3++;
+              } else for (let t3 = 0; t3 < p[e3].children.length; t3++) o2(p[e3].children[t3], t3);
+              if (Object.keys(r2).length > 0 && (t2.nestedHeaders = r2), Object.keys(d2).length > 0 && (t2.style = d2), Object.keys(a2).length > 0 && (t2.mergeCells = a2), Object.keys(c2).length > 0 && (t2.rows = c2), Object.keys(u2).length > 0 && (t2.classes = u2), p = e2.querySelectorAll("tfoot tr"), p.length) {
+                const e3 = [];
+                for (let t3 = 0; t3 < p.length; t3++) {
+                  let s3 = [];
+                  for (let e4 = 0; e4 < p[t3].children.length; e4++) s3.push(p[t3].children[e4].textContent);
+                  e3.push(s3);
+                }
+                Object.keys(e3).length > 0 && (t2.footers = e3);
+              }
+              if (1 == t2.parseTableAutoCellType) {
+                const e3 = [];
+                for (let s3 = 0; s3 < t2.columns.length; s3++) {
+                  let n2 = true, o3 = true;
+                  e3[s3] = [];
+                  for (let r4 = 0; r4 < t2.data.length; r4++) {
+                    const l3 = t2.data[r4][s3];
+                    e3[s3][l3] || (e3[s3][l3] = 0), e3[s3][l3]++, l3.length > 25 && (n2 = false), 10 == l3.length && "-" == l3.substr(4, 1) && "-" == l3.substr(7, 1) || (o3 = false);
+                  }
+                  const r3 = Object.keys(e3[s3]).length;
+                  o3 ? t2.columns[s3].type = "calendar" : 1 == n2 && r3 > 1 && r3 <= parseInt(0.1 * t2.data.length) && (t2.columns[s3].type = "dropdown", t2.columns[s3].source = Object.keys(e3[s3]));
+                }
+              }
+              return t2;
+            }
+            console.log("Element is not a table");
+          };
+        }, 911: function(e, t, s) {
+          s.d(t, { Dh: function() {
+            return c;
+          }, ZS: function() {
+            return h;
+          }, tN: function() {
+            return p;
+          } });
+          var n = s(805), o = s(689), r = s(530), l = s(910), i2 = s(94), a = s(657);
+          const c = function(e2) {
+            const t2 = this;
+            if (1 != t2.ignoreHistory) {
+              const s2 = ++t2.historyIndex;
+              t2.history = t2.history = t2.history.slice(0, s2 + 1), t2.history[s2] = e2;
+            }
+          }, d = function(e2, t2) {
+            const s2 = this, n2 = t2.insertBefore ? +t2.rowNumber : t2.rowNumber + 1;
+            if (1 == s2.options.search && s2.results && s2.results.length != s2.rows.length && s2.resetSearch(), 1 == e2) {
+              const e3 = t2.numOfRows;
+              for (let t3 = n2; t3 < e3 + n2; t3++) s2.rows[t3].element.parentNode.removeChild(s2.rows[t3].element);
+              s2.records.splice(n2, e3), s2.options.data.splice(n2, e3), s2.rows.splice(n2, e3), a.at.call(s2, 1, n2, e3 + n2 - 1);
+            } else {
+              const e3 = t2.rowRecords.map((e4) => [...e4]);
+              s2.records = (0, o.Hh)(s2.records, n2, e3);
+              const r2 = t2.rowData.map((e4) => [...e4]);
+              s2.options.data = (0, o.Hh)(s2.options.data, n2, r2), s2.rows = (0, o.Hh)(s2.rows, n2, t2.rowNode);
+              let l2 = 0;
+              for (let e4 = n2; e4 < t2.numOfRows + n2; e4++) s2.tbody.insertBefore(t2.rowNode[l2].element, s2.tbody.children[e4]), l2++;
+            }
+            for (let e3 = n2; e3 < s2.rows.length; e3++) s2.rows[e3].y = e3;
+            for (let e3 = n2; e3 < s2.records.length; e3++) for (let t3 = 0; t3 < s2.records[e3].length; t3++) s2.records[e3][t3].y = e3;
+            s2.options.pagination > 0 && s2.page(s2.pageNumber), r.o8.call(s2);
+          }, u = function(e2, t2) {
+            const s2 = this, n2 = t2.insertBefore ? t2.columnNumber : t2.columnNumber + 1;
+            if (1 == e2) {
+              const e3 = t2.numOfColumns;
+              s2.options.columns.splice(n2, e3);
+              for (let t3 = n2; t3 < e3 + n2; t3++) s2.headers[t3].parentNode.removeChild(s2.headers[t3]), s2.cols[t3].colElement.parentNode.removeChild(s2.cols[t3].colElement);
+              s2.headers.splice(n2, e3), s2.cols.splice(n2, e3);
+              for (let o2 = 0; o2 < t2.data.length; o2++) {
+                for (let t3 = n2; t3 < e3 + n2; t3++) s2.records[o2][t3].element.parentNode.removeChild(s2.records[o2][t3].element);
+                s2.records[o2].splice(n2, e3), s2.options.data[o2].splice(n2, e3);
+              }
+              if (s2.options.footers) for (let t3 = 0; t3 < s2.options.footers.length; t3++) s2.options.footers[t3].splice(n2, e3);
+            } else {
+              s2.options.columns = (0, o.Hh)(s2.options.columns, n2, t2.columns), s2.headers = (0, o.Hh)(s2.headers, n2, t2.headers), s2.cols = (0, o.Hh)(s2.cols, n2, t2.cols);
+              let e3 = 0;
+              for (let o2 = n2; o2 < t2.numOfColumns + n2; o2++) s2.headerContainer.insertBefore(t2.headers[e3], s2.headerContainer.children[o2 + 1]), s2.colgroupContainer.insertBefore(t2.cols[e3].colElement, s2.colgroupContainer.children[o2 + 1]), e3++;
+              for (let e4 = 0; e4 < t2.data.length; e4++) {
+                s2.options.data[e4] = (0, o.Hh)(s2.options.data[e4], n2, t2.data[e4]), s2.records[e4] = (0, o.Hh)(s2.records[e4], n2, t2.records[e4]);
+                let r2 = 0;
+                for (let o2 = n2; o2 < t2.numOfColumns + n2; o2++) s2.rows[e4].element.insertBefore(t2.records[e4][r2].element, s2.rows[e4].element.children[o2 + 1]), r2++;
+              }
+              if (s2.options.footers) for (let e4 = 0; e4 < s2.options.footers.length; e4++) s2.options.footers[e4] = (0, o.Hh)(s2.options.footers[e4], n2, t2.footers[e4]);
+            }
+            for (let e3 = n2; e3 < s2.cols.length; e3++) s2.cols[e3].x = e3;
+            for (let e3 = 0; e3 < s2.records.length; e3++) for (let t3 = n2; t3 < s2.records[e3].length; t3++) s2.records[e3][t3].x = t3;
+            if (s2.options.nestedHeaders && s2.options.nestedHeaders.length > 0 && s2.options.nestedHeaders[0] && s2.options.nestedHeaders[0][0]) for (let n3 = 0; n3 < s2.options.nestedHeaders.length; n3++) {
+              let o2;
+              o2 = 1 == e2 ? parseInt(s2.options.nestedHeaders[n3][s2.options.nestedHeaders[n3].length - 1].colspan) - t2.numOfColumns : parseInt(s2.options.nestedHeaders[n3][s2.options.nestedHeaders[n3].length - 1].colspan) + t2.numOfColumns, s2.options.nestedHeaders[n3][s2.options.nestedHeaders[n3].length - 1].colspan = o2, s2.thead.children[n3].children[s2.thead.children[n3].children.length - 1].setAttribute("colspan", o2);
+            }
+            r.o8.call(s2);
+          }, p = function() {
+            const e2 = this, t2 = !!e2.parent.ignoreEvents, s2 = !!e2.ignoreHistory;
+            e2.parent.ignoreEvents = true, e2.ignoreHistory = true;
+            const o2 = [];
+            let r2;
+            if (e2.historyIndex >= 0) {
+              if (r2 = e2.history[e2.historyIndex--], "insertRow" == r2.action) d.call(e2, 1, r2);
+              else if ("deleteRow" == r2.action) d.call(e2, 0, r2);
+              else if ("insertColumn" == r2.action) u.call(e2, 1, r2);
+              else if ("deleteColumn" == r2.action) u.call(e2, 0, r2);
+              else if ("moveRow" == r2.action) e2.moveRow(r2.newValue, r2.oldValue);
+              else if ("moveColumn" == r2.action) e2.moveColumn(r2.newValue, r2.oldValue);
+              else if ("setMerge" == r2.action) e2.removeMerge(r2.column, r2.data);
+              else if ("setStyle" == r2.action) e2.setStyle(r2.oldValue, null, null, 1);
+              else if ("setWidth" == r2.action) e2.setWidth(r2.column, r2.oldValue);
+              else if ("setHeight" == r2.action) e2.setHeight(r2.row, r2.oldValue);
+              else if ("setHeader" == r2.action) e2.setHeader(r2.column, r2.oldValue);
+              else if ("setComments" == r2.action) e2.setComments(r2.oldValue);
+              else if ("orderBy" == r2.action) {
+                let t3 = [];
+                for (let e3 = 0; e3 < r2.rows.length; e3++) t3[r2.rows[e3]] = e3;
+                i2.Th.call(e2, r2.column, r2.order ? 0 : 1), i2.iY.call(e2, t3);
+              } else if ("setValue" == r2.action) {
+                for (let t3 = 0; t3 < r2.records.length; t3++) o2.push({ x: r2.records[t3].x, y: r2.records[t3].y, value: r2.records[t3].oldValue }), r2.oldStyle && e2.resetStyle(r2.oldStyle);
+                e2.setValue(o2), r2.selection && e2.updateSelectionFromCoords(r2.selection[0], r2.selection[1], r2.selection[2], r2.selection[3]);
+              }
+            }
+            e2.parent.ignoreEvents = t2, e2.ignoreHistory = s2, n.A.call(e2, "onundo", e2, r2);
+          }, h = function() {
+            const e2 = this, t2 = !!e2.parent.ignoreEvents, s2 = !!e2.ignoreHistory;
+            let o2;
+            if (e2.parent.ignoreEvents = true, e2.ignoreHistory = true, e2.historyIndex < e2.history.length - 1) {
+              if (o2 = e2.history[++e2.historyIndex], "insertRow" == o2.action) d.call(e2, 0, o2);
+              else if ("deleteRow" == o2.action) d.call(e2, 1, o2);
+              else if ("insertColumn" == o2.action) u.call(e2, 0, o2);
+              else if ("deleteColumn" == o2.action) u.call(e2, 1, o2);
+              else if ("moveRow" == o2.action) e2.moveRow(o2.oldValue, o2.newValue);
+              else if ("moveColumn" == o2.action) e2.moveColumn(o2.oldValue, o2.newValue);
+              else if ("setMerge" == o2.action) l.FU.call(e2, o2.column, o2.colspan, o2.rowspan, 1);
+              else if ("setStyle" == o2.action) e2.setStyle(o2.newValue, null, null, 1);
+              else if ("setWidth" == o2.action) e2.setWidth(o2.column, o2.newValue);
+              else if ("setHeight" == o2.action) e2.setHeight(o2.row, o2.newValue);
+              else if ("setHeader" == o2.action) e2.setHeader(o2.column, o2.newValue);
+              else if ("setComments" == o2.action) e2.setComments(o2.newValue);
+              else if ("orderBy" == o2.action) i2.Th.call(e2, o2.column, o2.order), i2.iY.call(e2, o2.rows);
+              else if ("setValue" == o2.action) {
+                e2.setValue(o2.records);
+                for (let t3 = 0; t3 < o2.records.length; t3++) o2.oldStyle && e2.resetStyle(o2.newStyle);
+                o2.selection && e2.updateSelectionFromCoords(o2.selection[0], o2.selection[1], o2.selection[2], o2.selection[3]);
+              }
+            }
+            e2.parent.ignoreEvents = t2, e2.ignoreHistory = s2, n.A.call(e2, "onredo", e2, o2);
+          };
+        }, 530: function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+          __webpack_require__.d(__webpack_exports__, { $O: function() {
+            return getWorksheetActive;
+          }, $x: function() {
+            return parseValue;
+          }, C6: function() {
+            return showIndex;
+          }, Em: function() {
+            return executeFormula;
+          }, P9: function() {
+            return createCell;
+          }, Rs: function() {
+            return updateScroll;
+          }, TI: function() {
+            return hideIndex;
+          }, Xr: function() {
+            return getCellFromCoords;
+          }, Y5: function() {
+            return fullscreen;
+          }, am: function() {
+            return updateTable;
+          }, dw: function() {
+            return isFormula;
+          }, eN: function() {
+            return getWorksheetInstance;
+          }, hG: function() {
+            return updateResult;
+          }, ju: function() {
+            return createNestedHeader;
+          }, k9: function() {
+            return updateCell;
+          }, o8: function() {
+            return updateTableReferences;
+          }, p9: function() {
+            return getLabel;
+          }, rS: function() {
+            return getMask;
+          }, tT: function() {
+            return getCell;
+          }, xF: function() {
+            return updateFormulaChain;
+          }, yB: function() {
+            return updateFormula;
+          } });
+          var _dispatch_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(805), _selection_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(657), _helpers_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(978), _meta_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(654), _freeze_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(296), _pagination_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(167), _footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(160), _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(689);
+          const updateTable = function() {
+            const e = this;
+            if (e.options.minSpareRows > 0) {
+              let t = 0;
+              for (let s = e.rows.length - 1; s >= 0; s--) {
+                let n = false;
+                for (let t2 = 0; t2 < e.headers.length; t2++) e.options.data[s][t2] && (n = true);
+                if (n) break;
+                t++;
+              }
+              e.options.minSpareRows - t > 0 && e.insertRow(e.options.minSpareRows - t);
+            }
+            if (e.options.minSpareCols > 0) {
+              let t = 0;
+              for (let s = e.headers.length - 1; s >= 0; s--) {
+                let n = false;
+                for (let t2 = 0; t2 < e.rows.length; t2++) e.options.data[t2][s] && (n = true);
+                if (n) break;
+                t++;
+              }
+              e.options.minSpareCols - t > 0 && e.insertColumn(e.options.minSpareCols - t);
+            }
+            e.options.footers && _footer_js__WEBPACK_IMPORTED_MODULE_0__.e.call(e), setTimeout(function() {
+              _selection_js__WEBPACK_IMPORTED_MODULE_1__.Aq.call(e);
+            }, 0);
+          }, parseNumber = function(e, t) {
+            const s = t && this.options.columns[t].decimal ? this.options.columns[t].decimal : ".";
+            let n = "" + e;
+            return n = n.split(s), n[0] = n[0].match(/[+-]?[0-9]/g), n[0] && (n[0] = n[0].join("")), n[1] && (n[1] = n[1].match(/[0-9]*/g).join("")), n[0] && Number.isInteger(Number(n[0])) ? n[1] ? Number(n[0] + "." + n[1]) : Number(n[0] + ".00") : null;
+          }, executeFormula = function(expression, x, y) {
+            const obj = this, formulaResults = [], formulaLoopProtection = [], execute = function(expression, x, y) {
+              const parentId = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.t3)([x, y]);
+              if (formulaLoopProtection[parentId]) return console.error("Reference loop detected"), "#ERROR";
+              formulaLoopProtection[parentId] = true;
+              const tokensUpdate = function(e) {
+                for (let t = 0; t < e.length; t++) {
+                  const s = [], n = e[t].split(":"), o = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.vu)(n[0], true), r = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.vu)(n[1], true);
+                  let l, i2, a, c;
+                  o[0] <= r[0] ? (l = o[0], i2 = r[0]) : (l = r[0], i2 = o[0]), o[1] <= r[1] ? (a = o[1], c = r[1]) : (a = r[1], c = o[1]);
+                  for (let e2 = a; e2 <= c; e2++) for (let t2 = l; t2 <= i2; t2++) s.push((0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.t3)([t2, e2]));
+                  expression = expression.replace(e[t], s.join(","));
+                }
+              };
+              expression = expression.replace(/\$?([A-Z]+)\$?([0-9]+)/g, "$1$2");
+              let tokens = expression.match(/([A-Z]+[0-9]+)\:([A-Z]+[0-9]+)/g);
+              if (tokens && tokens.length && tokensUpdate(tokens), tokens = expression.match(/([A-Z]+[0-9]+)/g), tokens && tokens.indexOf(parentId) > -1) return console.error("Self Reference detected"), "#ERROR";
+              {
+                const formulaExpressions = {};
+                if (tokens) {
+                  for (let i = 0; i < tokens.length; i++) if (obj.formula[tokens[i]] || (obj.formula[tokens[i]] = []), obj.formula[tokens[i]].indexOf(parentId) < 0 && obj.formula[tokens[i]].push(parentId), eval("typeof(" + tokens[i] + ') == "undefined"')) {
+                    const e = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.vu)(tokens[i], 1);
+                    let t;
+                    if (t = void 0 !== obj.options.data[e[1]] && void 0 !== obj.options.data[e[1]][e[0]] ? obj.options.data[e[1]][e[0]] : "", "=" == ("" + t).substr(0, 1) && (void 0 !== formulaResults[tokens[i]] ? t = formulaResults[tokens[i]] : (t = execute(t, e[0], e[1]), formulaResults[tokens[i]] = t)), "" == ("" + t).trim()) formulaExpressions[tokens[i]] = null;
+                    else if (t == Number(t) && 0 != obj.parent.config.autoCasting) formulaExpressions[tokens[i]] = Number(t);
+                    else {
+                      const s = parseNumber.call(obj, t, e[0]);
+                      0 != obj.parent.config.autoCasting && s ? formulaExpressions[tokens[i]] = s : formulaExpressions[tokens[i]] = '"' + t + '"';
+                    }
+                  }
+                }
+                const ret = _dispatch_js__WEBPACK_IMPORTED_MODULE_3__.A.call(obj, "onbeforeformula", obj, expression, x, y);
+                if (false === ret) return expression;
+                let res;
+                ret && (expression = ret);
+                try {
+                  res = formula(expression.substr(1), formulaExpressions, x, y, obj), "function" == typeof res && (res = "#ERROR");
+                } catch (e) {
+                  res = "#ERROR", true === obj.parent.config.debugFormulas && console.log(expression.substr(1), formulaExpressions, e);
+                }
+                return res;
+              }
+            };
+            return execute(expression, x, y);
+          }, parseValue = function(e, t, s, n) {
+            const o = this;
+            "=" == ("" + s).substr(0, 1) && 0 != o.parent.config.parseFormulas && (s = executeFormula.call(o, s, e, t));
+            const r = o.options.columns && o.options.columns[e];
+            if (r && !isFormula(s)) {
+              let e2 = null;
+              if (e2 = getMask(r)) {
+                s && s == Number(s) && (s = Number(s));
+                let t2 = jSuites.mask.render(s, e2, true);
+                if (n && e2.mask) {
+                  const o2 = e2.mask.split(";");
+                  o2[1] && (o2[1].match(new RegExp("\\[Red\\]", "gi")) && (s < 0 ? n.classList.add("red") : n.classList.remove("red")), o2[1].match(new RegExp("\\(", "gi")) && s < 0 && (t2 = "(" + t2 + ")"));
+                }
+                t2 && (s = t2);
+              }
+            }
+            return s;
+          }, getDropDownValue = function(e, t) {
+            const s = this, n = [];
+            if (s.options.columns && s.options.columns[e] && s.options.columns[e].source) {
+              const o = [], r = s.options.columns[e].source;
+              for (let e2 = 0; e2 < r.length; e2++) "object" == typeof r[e2] ? o[r[e2].id] = r[e2].name : o[r[e2]] = r[e2];
+              const l = Array.isArray(t) ? t : ("" + t).split(";");
+              for (let e2 = 0; e2 < l.length; e2++) "object" == typeof l[e2] ? n.push(o[l[e2].id]) : o[l[e2]] && n.push(o[l[e2]]);
+            } else console.error("Invalid column");
+            return n.length > 0 ? n.join("; ") : "";
+          }, validDate = function(e) {
+            return "-" == (e = "" + e).substr(4, 1) && "-" == e.substr(7, 1) || 4 == (e = e.split("-"))[0].length && e[0] == Number(e[0]) && 2 == e[1].length && e[1] == Number(e[1]);
+          }, stripScript = function(e) {
+            const t = new Option();
+            t.innerHTML = e;
+            let s = null;
+            for (e = t.getElementsByTagName("script"); s = e[0]; ) s.parentNode.removeChild(s);
+            return t.innerHTML;
+          }, createCell = function(e, t, s) {
+            const n = this;
+            let o = document.createElement("td");
+            if (o.setAttribute("data-x", e), o.setAttribute("data-y", t), "none" === n.headers[e].style.display && (o.style.display = "none"), "=" == ("" + s).substr(0, 1) && 1 == n.options.secureFormulas) {
+              const e2 = secureFormula(s);
+              e2 != s && (s = e2);
+            }
+            if (n.options.columns && n.options.columns[e] && "object" == typeof n.options.columns[e].type) true === n.parent.config.parseHTML ? o.innerHTML = s : o.textContent = s, "function" == typeof n.options.columns[e].type.createCell && n.options.columns[e].type.createCell(o, s, parseInt(e), parseInt(t), n, n.options.columns[e]);
+            else if (n.options.columns && n.options.columns[e] && "hidden" == n.options.columns[e].type) o.style.display = "none", o.textContent = s;
+            else if (n.options.columns && n.options.columns[e] && ("checkbox" == n.options.columns[e].type || "radio" == n.options.columns[e].type)) {
+              const r2 = document.createElement("input");
+              r2.type = n.options.columns[e].type, r2.name = "c" + e, r2.checked = 1 == s || 1 == s || "true" == s, r2.onclick = function() {
+                n.setValue(o, this.checked);
+              }, 1 != n.options.columns[e].readOnly && 0 != n.options.editable || r2.setAttribute("disabled", "disabled"), o.appendChild(r2), n.options.data[t][e] = r2.checked;
+            } else if (n.options.columns && n.options.columns[e] && "calendar" == n.options.columns[e].type) {
+              let t2 = null;
+              if (!validDate(s)) {
+                const o2 = jSuites.calendar.extractDateFromString(s, n.options.columns[e].options && n.options.columns[e].options.format || "YYYY-MM-DD");
+                o2 && (t2 = o2);
+              }
+              o.textContent = jSuites.calendar.getDateString(t2 || s, n.options.columns[e].options && n.options.columns[e].options.format);
+            } else if (n.options.columns && n.options.columns[e] && "dropdown" == n.options.columns[e].type) o.classList.add("jss_dropdown"), o.textContent = getDropDownValue.call(n, e, s);
+            else if (n.options.columns && n.options.columns[e] && "color" == n.options.columns[e].type) if ("square" == n.options.columns[e].render) {
+              const e2 = document.createElement("div");
+              e2.className = "color", e2.style.backgroundColor = s, o.appendChild(e2);
+            } else o.style.color = s, o.textContent = s;
+            else if (n.options.columns && n.options.columns[e] && "image" == n.options.columns[e].type) {
+              if (s && "data:image" == s.substr(0, 10)) {
+                const e2 = document.createElement("img");
+                e2.src = s, o.appendChild(e2);
+              }
+            } else n.options.columns && n.options.columns[e] && "html" == n.options.columns[e].type || true === n.parent.config.parseHTML ? o.innerHTML = stripScript(parseValue.call(this, e, t, s, o)) : o.textContent = parseValue.call(this, e, t, s, o);
+            n.options.columns && n.options.columns[e] && 1 == n.options.columns[e].readOnly && (o.className = "readonly");
+            const r = n.options.columns && n.options.columns[e] && n.options.columns[e].align || n.options.defaultColAlign || "center";
+            return o.style.textAlign = r, n.options.columns && n.options.columns[e] && 0 == n.options.columns[e].wordWrap || !(1 == n.options.wordWrap || n.options.columns && n.options.columns[e] && 1 == n.options.columns[e].wordWrap || o.innerHTML.length > 200) || (o.style.whiteSpace = "pre-wrap"), e > 0 && 1 == this.options.textOverflow && (s || o.innerHTML ? n.records[t][e - 1].element.style.overflow = "hidden" : e == n.options.columns.length - 1 && (o.style.overflow = "hidden")), _dispatch_js__WEBPACK_IMPORTED_MODULE_3__.A.call(n, "oncreatecell", n, o, e, t, s), o;
+          }, updateCell = function(e, t, s, n) {
+            const o = this;
+            let r;
+            if (1 != o.records[t][e].element.classList.contains("readonly") || n) {
+              if ("=" == ("" + s).substr(0, 1) && 1 == o.options.secureFormulas) {
+                const e2 = secureFormula(s);
+                e2 != s && (s = e2);
+              }
+              const n2 = _dispatch_js__WEBPACK_IMPORTED_MODULE_3__.A.call(o, "onbeforechange", o, o.records[t][e].element, e, t, s);
+              if (null != n2 && (s = n2), o.options.columns && o.options.columns[e] && "object" == typeof o.options.columns[e].type && "function" == typeof o.options.columns[e].type.updateCell) {
+                const n3 = o.options.columns[e].type.updateCell(o.records[t][e].element, s, parseInt(e), parseInt(t), o, o.options.columns[e]);
+                void 0 !== n3 && (s = n3);
+              }
+              r = { x: e, y: t, col: e, row: t, value: s, oldValue: o.options.data[t][e] };
+              let l = o.options.columns && o.options.columns[e] && "object" == typeof o.options.columns[e].type ? o.options.columns[e].type : null;
+              if (l) o.options.data[t][e] = s, "function" == typeof l.setValue && l.setValue(o.records[t][e].element, s);
+              else if (o.options.columns && o.options.columns[e] && ("checkbox" == o.options.columns[e].type || "radio" == o.options.columns[e].type)) {
+                if ("radio" == o.options.columns[e].type) for (let t2 = 0; t2 < o.options.data.length; t2++) o.options.data[t2][e] = false;
+                o.records[t][e].element.children[0].checked = 1 == s || 1 == s || "true" == s || "TRUE" == s, o.options.data[t][e] = o.records[t][e].element.children[0].checked;
+              } else if (o.options.columns && o.options.columns[e] && "dropdown" == o.options.columns[e].type) o.options.data[t][e] = s, o.records[t][e].element.textContent = getDropDownValue.call(o, e, s);
+              else if (o.options.columns && o.options.columns[e] && "calendar" == o.options.columns[e].type) {
+                let n3 = null;
+                if (!validDate(s)) {
+                  const t2 = jSuites.calendar.extractDateFromString(s, o.options.columns[e].options && o.options.columns[e].options.format || "YYYY-MM-DD");
+                  t2 && (n3 = t2);
+                }
+                o.options.data[t][e] = s, o.records[t][e].element.textContent = jSuites.calendar.getDateString(n3 || s, o.options.columns[e].options && o.options.columns[e].options.format);
+              } else if (o.options.columns && o.options.columns[e] && "color" == o.options.columns[e].type) if (o.options.data[t][e] = s, "square" == o.options.columns[e].render) {
+                const n3 = document.createElement("div");
+                n3.className = "color", n3.style.backgroundColor = s, o.records[t][e].element.textContent = "", o.records[t][e].element.appendChild(n3);
+              } else o.records[t][e].element.style.color = s, o.records[t][e].element.textContent = s;
+              else if (o.options.columns && o.options.columns[e] && "image" == o.options.columns[e].type) {
+                if (s = "" + s, o.options.data[t][e] = s, o.records[t][e].element.innerHTML = "", s && "data:image" == s.substr(0, 10)) {
+                  const n3 = document.createElement("img");
+                  n3.src = s, o.records[t][e].element.appendChild(n3);
+                }
+              } else o.options.data[t][e] = s, o.options.columns && o.options.columns[e] && "html" == o.options.columns[e].type ? o.records[t][e].element.innerHTML = stripScript(parseValue.call(o, e, t, s)) : true === o.parent.config.parseHTML ? o.records[t][e].element.innerHTML = stripScript(parseValue.call(o, e, t, s, o.records[t][e].element)) : o.records[t][e].element.textContent = parseValue.call(o, e, t, s, o.records[t][e].element), o.options.columns && o.options.columns[e] && 0 == o.options.columns[e].wordWrap || !(1 == o.options.wordWrap || o.options.columns && o.options.columns[e] && 1 == o.options.columns[e].wordWrap || o.records[t][e].element.innerHTML.length > 200) ? o.records[t][e].element.style.whiteSpace = "" : o.records[t][e].element.style.whiteSpace = "pre-wrap";
+              e > 0 && (o.records[t][e - 1].element.style.overflow = s ? "hidden" : ""), o.options.columns && o.options.columns[e] && "function" == typeof o.options.columns[e].render && o.options.columns[e].render(o.records[t] && o.records[t][e] ? o.records[t][e].element : null, s, parseInt(e), parseInt(t), o, o.options.columns[e]), _dispatch_js__WEBPACK_IMPORTED_MODULE_3__.A.call(o, "onchange", o, o.records[t] && o.records[t][e] ? o.records[t][e].element : null, e, t, s, r.oldValue);
+            } else r = { x: e, y: t, col: e, row: t };
+            return r;
+          }, isFormula = function(e) {
+            const t = ("" + e)[0];
+            return "=" == t || "#" == t;
+          }, getMask = function(e) {
+            if (e.format || e.mask || e.locale) {
+              const t = {};
+              return e.mask ? t.mask = e.mask : e.format ? t.mask = e.format : (t.locale = e.locale, t.options = e.options), e.decimal && (t.options || (t.options = {}), t.options = { decimal: e.decimal }), t;
+            }
+            return null;
+          }, secureFormula = function(e) {
+            let t = "", s = 0;
+            for (let n = 0; n < e.length; n++) '"' == e[n] && (s = 0 == s ? 1 : 0), t += 1 == s ? e[n] : e[n].toUpperCase();
+            return t;
+          };
+          let chainLoopProtection = [];
+          const updateFormulaChain = function(e, t, s) {
+            const n = this, o = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.t3)([e, t]);
+            if (n.formula[o] && n.formula[o].length > 0) if (chainLoopProtection[o]) n.records[t][e].element.innerHTML = "#ERROR", n.formula[o] = "";
+            else {
+              chainLoopProtection[o] = true;
+              for (let e2 = 0; e2 < n.formula[o].length; e2++) {
+                const t2 = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.vu)(n.formula[o][e2], true), r = "" + n.options.data[t2[1]][t2[0]];
+                "=" == r.substr(0, 1) ? s.push(updateCell.call(n, t2[0], t2[1], r, true)) : Object.keys(n.formula)[e2] = null, updateFormulaChain.call(n, t2[0], t2[1], s);
+              }
+            }
+            chainLoopProtection = [];
+          }, updateFormula = function(e, t) {
+            const s = /[A-Z]/, n = /[0-9]/;
+            let o = "", r = null, l = null, i2 = "";
+            for (let a = 0; a < e.length; a++) s.exec(e[a]) ? (r = 1, l = 0, i2 += e[a]) : n.exec(e[a]) ? (l = r ? 1 : 0, i2 += e[a]) : (r && l && (i2 = t[i2] ? t[i2] : i2), o += i2, o += e[a], r = 0, l = 0, i2 = "");
+            return i2 && (r && l && (i2 = t[i2] ? t[i2] : i2), o += i2), o;
+          }, updateFormulas = function(e) {
+            const t = this;
+            for (let s2 = 0; s2 < t.options.data.length; s2++) for (let n2 = 0; n2 < t.options.data[0].length; n2++) {
+              const o = "" + t.options.data[s2][n2];
+              if ("=" == o.substr(0, 1)) {
+                const r = updateFormula(o, e);
+                r != o && (t.options.data[s2][n2] = r);
+              }
+            }
+            const s = [], n = Object.keys(t.formula);
+            for (let o = 0; o < n.length; o++) {
+              let r = n[o];
+              const l = t.formula[r];
+              e[r] && (r = e[r]), s[r] = [];
+              for (let t2 = 0; t2 < l.length; t2++) {
+                let n2 = l[t2];
+                e[n2] && (n2 = e[n2]), s[r].push(n2);
+              }
+            }
+            t.formula = s;
+          }, updateTableReferences = function() {
+            const e = this;
+            if (e.skipUpdateTableReferences) return;
+            for (let t2 = 0; t2 < e.headers.length; t2++) e.headers[t2].getAttribute("data-x") != t2 && (e.headers[t2].setAttribute("data-x", t2), e.headers[t2].getAttribute("title") || (e.headers[t2].innerHTML = (0, _helpers_js__WEBPACK_IMPORTED_MODULE_4__.getColumnName)(t2)));
+            for (let t2 = 0; t2 < e.rows.length; t2++) e.rows[t2] && e.rows[t2].element.getAttribute("data-y") != t2 && (e.rows[t2].element.setAttribute("data-y", t2), e.rows[t2].element.children[0].setAttribute("data-y", t2), e.rows[t2].element.children[0].innerHTML = t2 + 1);
+            const t = [], s = [], n = function(s2, n2, o2, r) {
+              if (s2 != o2 && e.records[r][o2].element.setAttribute("data-x", o2), n2 != r && e.records[r][o2].element.setAttribute("data-y", r), s2 != o2 || n2 != r) {
+                const e2 = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.t3)([s2, n2]), l = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.t3)([o2, r]);
+                t[e2] = l;
+              }
+            };
+            for (let t2 = 0; t2 < e.records.length; t2++) for (let o2 = 0; o2 < e.records[0].length; o2++) if (e.records[t2][o2]) {
+              const r = e.records[t2][o2].element.getAttribute("data-x"), l = e.records[t2][o2].element.getAttribute("data-y");
+              if (e.records[t2][o2].element.getAttribute("data-merged")) {
+                const e2 = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.t3)([r, l]), n2 = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.t3)([o2, t2]);
+                if (null == s[e2]) if (e2 == n2) s[e2] = false;
+                else {
+                  const i2 = parseInt(o2 - r), a = parseInt(t2 - l);
+                  s[e2] = [n2, i2, a];
+                }
+              } else n(r, l, o2, t2);
+            }
+            const o = Object.keys(s);
+            if (o.length) {
+              for (let t2 = 0; t2 < o.length; t2++) if (s[o[t2]]) {
+                const r = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.vu)(o[t2], true);
+                let l = r[0], i2 = r[1];
+                n(l, i2, l + s[o[t2]][1], i2 + s[o[t2]][2]);
+                const a = o[t2], c = s[o[t2]][0];
+                for (let n2 = 0; n2 < e.options.mergeCells[a][2].length; n2++) l = parseInt(e.options.mergeCells[a][2][n2].getAttribute("data-x")), i2 = parseInt(e.options.mergeCells[a][2][n2].getAttribute("data-y")), e.options.mergeCells[a][2][n2].setAttribute("data-x", l + s[o[t2]][1]), e.options.mergeCells[a][2][n2].setAttribute("data-y", i2 + s[o[t2]][2]);
+                e.options.mergeCells[c] = e.options.mergeCells[a], delete e.options.mergeCells[a];
+              }
+            }
+            updateFormulas.call(e, t), _meta_js__WEBPACK_IMPORTED_MODULE_5__.hs.call(e, t), _selection_js__WEBPACK_IMPORTED_MODULE_1__.G9.call(e), updateTable.call(e);
+          }, updateScroll = function(e) {
+            const t = this, s = t.content.getBoundingClientRect(), n = s.left, o = s.top, r = s.width, l = s.height, i2 = t.records[t.selectedCell[3]][t.selectedCell[2]].element.getBoundingClientRect(), a = i2.left, c = i2.top, d = i2.width, u = i2.height;
+            let p, h;
+            0 == e || 1 == e ? (p = a - n + t.content.scrollLeft, h = c - o + t.content.scrollTop - 2) : (p = a - n + t.content.scrollLeft + d, h = c - o + t.content.scrollTop + u), h > t.content.scrollTop + 30 && h < t.content.scrollTop + l || (h < t.content.scrollTop + 30 ? t.content.scrollTop = h - u : t.content.scrollTop = h - (l - 2));
+            const m = _freeze_js__WEBPACK_IMPORTED_MODULE_6__.w.call(t);
+            p > t.content.scrollLeft + m && p < t.content.scrollLeft + r || (p < t.content.scrollLeft + 30 ? (t.content.scrollLeft = p, t.content.scrollLeft < 50 && (t.content.scrollLeft = 0)) : p < t.content.scrollLeft + m ? t.content.scrollLeft = p - m - 1 : t.content.scrollLeft = p - (r - 20));
+          }, updateResult = function() {
+            const e = this;
+            let t = 0, s = 0;
+            for (t = 1 == e.options.lazyLoading ? 100 : e.options.pagination > 0 ? e.options.pagination : e.results ? e.results.length : e.rows.length; e.tbody.firstChild; ) e.tbody.removeChild(e.tbody.firstChild);
+            for (let n = 0; n < e.rows.length; n++) !e.results || e.results.indexOf(n) > -1 ? (s < t && (e.tbody.appendChild(e.rows[n].element), s++), e.rows[n].element.style.display = "") : e.rows[n].element.style.display = "none";
+            return e.options.pagination > 0 && _pagination_js__WEBPACK_IMPORTED_MODULE_7__.IV.call(e), _selection_js__WEBPACK_IMPORTED_MODULE_1__.Aq.call(e), t;
+          }, getCell = function(e, t) {
+            if ("string" == typeof e) {
+              const s = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.vu)(e, true);
+              e = s[0], t = s[1];
+            }
+            return this.records[t][e].element;
+          }, getCellFromCoords = function(e, t) {
+            return this.records[t][e].element;
+          }, getLabel = function(e, t) {
+            if ("string" == typeof e) {
+              const s = (0, _internalHelpers_js__WEBPACK_IMPORTED_MODULE_2__.vu)(e, true);
+              e = s[0], t = s[1];
+            }
+            return this.records[t][e].element.innerHTML;
+          }, fullscreen = function(e) {
+            const t = this;
+            null == e && (e = !t.config.fullscreen), t.config.fullscreen != e && (t.config.fullscreen = e, 1 == e ? t.element.classList.add("fullscreen") : t.element.classList.remove("fullscreen"));
+          }, showIndex = function() {
+            this.table.classList.remove("jss_hidden_index");
+          }, hideIndex = function() {
+            this.table.classList.add("jss_hidden_index");
+          }, createNestedHeader = function(e) {
+            const t = this, s = document.createElement("tr");
+            s.classList.add("jss_nested");
+            const n = document.createElement("td");
+            n.classList.add("jss_selectall"), s.appendChild(n), e.element = s;
+            let o = 0;
+            for (let n2 = 0; n2 < e.length; n2++) {
+              e[n2].colspan || (e[n2].colspan = 1), e[n2].title || (e[n2].title = ""), e[n2].id || (e[n2].id = "");
+              let r = e[n2].colspan;
+              const l = [];
+              for (let e2 = 0; e2 < r; e2++) t.options.columns[o] && "hidden" == t.options.columns[o].type && r++, l.push(o), o++;
+              const i2 = document.createElement("td");
+              i2.setAttribute("data-column", l.join(",")), i2.setAttribute("colspan", e[n2].colspan), i2.setAttribute("align", e[n2].align || "center"), i2.setAttribute("id", e[n2].id), i2.textContent = e[n2].title, s.appendChild(i2);
+            }
+            return s;
+          }, getWorksheetActive = function() {
+            const e = this.parent ? this.parent : this;
+            return e.element.tabs ? e.element.tabs.getActive() : 0;
+          }, getWorksheetInstance = function(e) {
+            const t = void 0 !== e ? e : getWorksheetActive.call(this);
+            return this.worksheets[t];
+          };
+        }, 689: function(e, t, s) {
+          s.d(t, { Hh: function() {
+            return o;
+          }, t3: function() {
+            return l;
+          }, vu: function() {
+            return r;
+          } });
+          var n = s(978);
+          const o = function(e2, t2, s2) {
+            if (t2 <= e2.length) return e2.slice(0, t2).concat(s2).concat(e2.slice(t2));
+            const n2 = e2.slice(0, e2.length);
+            for (; t2 > n2.length; ) n2.push(void 0);
+            return n2.concat(s2);
+          }, r = function(e2, t2) {
+            const s2 = /^[a-zA-Z]+/.exec(e2);
+            if (s2) {
+              let n2 = 0;
+              for (let e3 = 0; e3 < s2[0].length; e3++) n2 += parseInt(s2[0].charCodeAt(e3) - 64) * Math.pow(26, s2[0].length - 1 - e3);
+              n2--, n2 < 0 && (n2 = 0);
+              let o2 = parseInt(/[0-9]+$/.exec(e2));
+              o2 > 0 && o2--, e2 = 1 == t2 ? [n2, o2] : n2 + "-" + o2;
+            }
+            return e2;
+          }, l = function(e2) {
+            return Array.isArray(e2) || (e2 = e2.split("-")), (0, n.getColumnName)(parseInt(e2[0])) + (parseInt(e2[1]) + 1);
+          };
+        }, 497: function(e, t, s) {
+          s.d(t, { AG: function() {
+            return o;
+          }, G_: function() {
+            return r;
+          }, p6: function() {
+            return l;
+          }, wu: function() {
+            return n;
+          } });
+          const n = function(e2) {
+            const t2 = this;
+            let s2;
+            s2 = 1 != t2.options.search && 1 != t2.options.filters || !t2.results ? t2.rows : t2.results;
+            const n2 = 100;
+            null != e2 && -1 != e2 || (e2 = Math.ceil(s2.length / n2) - 1);
+            let o2 = e2 * n2, r2 = e2 * n2 + n2;
+            r2 > s2.length && (r2 = s2.length), o2 = r2 - 100, o2 < 0 && (o2 = 0);
+            for (let e3 = o2; e3 < r2; e3++) 1 != t2.options.search && 1 != t2.options.filters || !t2.results ? t2.tbody.appendChild(t2.rows[e3].element) : t2.tbody.appendChild(t2.rows[s2[e3]].element), t2.tbody.children.length > n2 && t2.tbody.removeChild(t2.tbody.firstChild);
+          }, o = function() {
+            const e2 = this;
+            if (e2.selectedCell) {
+              const t2 = parseInt(e2.tbody.firstChild.getAttribute("data-y")) / 100, s2 = parseInt(e2.selectedCell[3] / 100), n2 = parseInt(e2.rows.length / 100);
+              if (t2 != s2 && s2 <= n2 && !Array.prototype.indexOf.call(e2.tbody.children, e2.rows[e2.selectedCell[3]].element)) return e2.loadPage(s2), true;
+            }
+            return false;
+          }, r = function() {
+            const e2 = this;
+            let t2;
+            t2 = 1 != e2.options.search && 1 != e2.options.filters || !e2.results ? e2.rows : e2.results;
+            let s2 = 0;
+            if (t2.length > 100) {
+              let n2 = parseInt(e2.tbody.firstChild.getAttribute("data-y"));
+              if (1 != e2.options.search && 1 != e2.options.filters || !e2.results || (n2 = t2.indexOf(n2)), n2 > 0) for (let o2 = 0; o2 < 30; o2++) n2 -= 1, n2 > -1 && (1 != e2.options.search && 1 != e2.options.filters || !e2.results ? e2.tbody.insertBefore(e2.rows[n2].element, e2.tbody.firstChild) : e2.tbody.insertBefore(e2.rows[t2[n2]].element, e2.tbody.firstChild), e2.tbody.children.length > 100 && (e2.tbody.removeChild(e2.tbody.lastChild), s2 = 1));
+            }
+            return s2;
+          }, l = function() {
+            const e2 = this;
+            let t2;
+            t2 = 1 != e2.options.search && 1 != e2.options.filters || !e2.results ? e2.rows : e2.results;
+            let s2 = 0;
+            if (t2.length > 100) {
+              let n2 = parseInt(e2.tbody.lastChild.getAttribute("data-y"));
+              if (1 != e2.options.search && 1 != e2.options.filters || !e2.results || (n2 = t2.indexOf(n2)), n2 < e2.rows.length - 1) for (let o2 = 0; o2 <= 30; o2++) n2 < t2.length && (1 != e2.options.search && 1 != e2.options.filters || !e2.results ? e2.tbody.appendChild(e2.rows[n2].element) : e2.tbody.appendChild(e2.rows[t2[n2]].element), e2.tbody.children.length > 100 && (e2.tbody.removeChild(e2.tbody.firstChild), s2 = 1)), n2 += 1;
+            }
+            return s2;
+          };
+        }, 910: function(e, t, s) {
+          s.d(t, { D0: function() {
+            return c;
+          }, FU: function() {
+            return u;
+          }, Lt: function() {
+            return a;
+          }, VP: function() {
+            return h;
+          }, Zp: function() {
+            return p;
+          }, fd: function() {
+            return d;
+          } });
+          var n = s(689), o = s(530), r = s(911), l = s(805), i2 = s(657);
+          const a = function(e2, t2) {
+            const s2 = this, o2 = [];
+            if (s2.options.mergeCells) {
+              const r2 = Object.keys(s2.options.mergeCells);
+              for (let l2 = 0; l2 < r2.length; l2++) {
+                const i3 = (0, n.vu)(r2[l2], true), a2 = s2.options.mergeCells[r2[l2]][0], c2 = i3[0], d2 = i3[0] + (a2 > 1 ? a2 - 1 : 0);
+                null == t2 ? c2 <= e2 && d2 >= e2 && o2.push(r2[l2]) : t2 ? c2 < e2 && d2 >= e2 && o2.push(r2[l2]) : c2 <= e2 && d2 > e2 && o2.push(r2[l2]);
+              }
+            }
+            return o2;
+          }, c = function(e2, t2) {
+            const s2 = this, o2 = [];
+            if (s2.options.mergeCells) {
+              const r2 = Object.keys(s2.options.mergeCells);
+              for (let l2 = 0; l2 < r2.length; l2++) {
+                const i3 = (0, n.vu)(r2[l2], true), a2 = s2.options.mergeCells[r2[l2]][1], c2 = i3[1], d2 = i3[1] + (a2 > 1 ? a2 - 1 : 0);
+                null == t2 ? c2 <= e2 && d2 >= e2 && o2.push(r2[l2]) : t2 ? c2 < e2 && d2 >= e2 && o2.push(r2[l2]) : c2 <= e2 && d2 > e2 && o2.push(r2[l2]);
+              }
+            }
+            return o2;
+          }, d = function(e2) {
+            const t2 = this;
+            let s2 = {};
+            if (e2) s2 = t2.options.mergeCells && t2.options.mergeCells[e2] ? [t2.options.mergeCells[e2][0], t2.options.mergeCells[e2][1]] : null;
+            else if (t2.options.mergeCells) {
+              t2.options.mergeCells;
+              const e3 = Object.keys(t2.options.mergeCells);
+              for (let n2 = 0; n2 < e3.length; n2++) s2[e3[n2]] = [t2.options.mergeCells[e3[n2]][0], t2.options.mergeCells[e3[n2]][1]];
+            }
+            return s2;
+          }, u = function(e2, t2, s2, a2) {
+            const c2 = this;
+            let d2 = false;
+            if (e2) {
+              if ("string" != typeof e2) return null;
+            } else {
+              if (!c2.highlighted.length) return alert(jSuites.translate("No cells selected")), null;
+              {
+                const o2 = parseInt(c2.highlighted[0].getAttribute("data-x")), r2 = parseInt(c2.highlighted[0].getAttribute("data-y")), l2 = parseInt(c2.highlighted[c2.highlighted.length - 1].getAttribute("data-x")), i3 = parseInt(c2.highlighted[c2.highlighted.length - 1].getAttribute("data-y"));
+                e2 = (0, n.t3)([o2, r2]), t2 = l2 - o2 + 1, s2 = i3 - r2 + 1;
+              }
+            }
+            const u2 = (0, n.vu)(e2, true);
+            if (c2.options.mergeCells && c2.options.mergeCells[e2]) c2.records[u2[1]][u2[0]].element.getAttribute("data-merged") && (d2 = "Cell already merged");
+            else if ((!t2 || t2 < 2) && (!s2 || s2 < 2)) d2 = "Invalid merged properties";
+            else for (let e3 = u2[1]; e3 < u2[1] + s2; e3++) for (let s3 = u2[0]; s3 < u2[0] + t2; s3++) (0, n.t3)([s3, e3]), c2.records[e3][s3].element.getAttribute("data-merged") && (d2 = "There is a conflict with another merged cell");
+            if (d2) alert(jSuites.translate(d2));
+            else {
+              t2 > 1 ? c2.records[u2[1]][u2[0]].element.setAttribute("colspan", t2) : t2 = 1, s2 > 1 ? c2.records[u2[1]][u2[0]].element.setAttribute("rowspan", s2) : s2 = 1, c2.options.mergeCells || (c2.options.mergeCells = {}), c2.options.mergeCells[e2] = [t2, s2, []], c2.records[u2[1]][u2[0]].element.setAttribute("data-merged", "true"), c2.records[u2[1]][u2[0]].element.style.overflow = "hidden";
+              const n2 = [];
+              for (let r2 = u2[1]; r2 < u2[1] + s2; r2++) for (let s3 = u2[0]; s3 < u2[0] + t2; s3++) u2[0] == s3 && u2[1] == r2 || (n2.push(c2.options.data[r2][s3]), o.k9.call(c2, s3, r2, "", true), c2.options.mergeCells[e2][2].push(c2.records[r2][s3].element), c2.records[r2][s3].element.style.display = "none", c2.records[r2][s3].element = c2.records[u2[1]][u2[0]].element);
+              i2.c6.call(c2, c2.records[u2[1]][u2[0]].element), a2 || (r.Dh.call(c2, { action: "setMerge", column: e2, colspan: t2, rowspan: s2, data: n2 }), l.A.call(c2, "onmerge", c2, { [e2]: [t2, s2] }));
+            }
+          }, p = function(e2, t2, s2) {
+            const r2 = this;
+            if (r2.options.mergeCells && r2.options.mergeCells[e2]) {
+              const l2 = (0, n.vu)(e2, true);
+              r2.records[l2[1]][l2[0]].element.removeAttribute("colspan"), r2.records[l2[1]][l2[0]].element.removeAttribute("rowspan"), r2.records[l2[1]][l2[0]].element.removeAttribute("data-merged");
+              const a2 = r2.options.mergeCells[e2];
+              let c2, d2, u2 = 0;
+              for (c2 = 0; c2 < a2[1]; c2++) for (d2 = 0; d2 < a2[0]; d2++) (c2 > 0 || d2 > 0) && (r2.records[l2[1] + c2][l2[0] + d2].element = a2[2][u2], r2.records[l2[1] + c2][l2[0] + d2].element.style.display = "", t2 && t2[u2] && o.k9.call(r2, l2[0] + d2, l2[1] + c2, t2[u2]), u2++);
+              i2.c6.call(r2, r2.records[l2[1]][l2[0]].element, r2.records[l2[1] + c2 - 1][l2[0] + d2 - 1].element), s2 || delete r2.options.mergeCells[e2];
+            }
+          }, h = function(e2) {
+            const t2 = this;
+            if (t2.options.mergeCells) {
+              t2.options.mergeCells;
+              const s2 = Object.keys(t2.options.mergeCells);
+              for (let n2 = 0; n2 < s2.length; n2++) p.call(t2, s2[n2], null, e2);
+            }
+          };
+        }, 654: function(e, t, s) {
+          s.d(t, { IQ: function() {
+            return o;
+          }, hs: function() {
+            return r;
+          }, iZ: function() {
+            return l;
+          } });
+          var n = s(805);
+          const o = function(e2, t2) {
+            const s2 = this;
+            return e2 ? t2 ? s2.options.meta && s2.options.meta[e2] && s2.options.meta[e2][t2] ? s2.options.meta[e2][t2] : null : s2.options.meta && s2.options.meta[e2] ? s2.options.meta[e2] : null : s2.options.meta;
+          }, r = function(e2) {
+            const t2 = this;
+            if (t2.options.meta) {
+              const s2 = {}, n2 = Object.keys(t2.options.meta);
+              for (let o2 = 0; o2 < n2.length; o2++) e2[n2[o2]] ? s2[e2[n2[o2]]] = t2.options.meta[n2[o2]] : s2[n2[o2]] = t2.options.meta[n2[o2]];
+              t2.options.meta = s2;
+            }
+          }, l = function(e2, t2, s2) {
+            const o2 = this;
+            if (o2.options.meta || (o2.options.meta = {}), t2 && s2) o2.options.meta[e2] || (o2.options.meta[e2] = {}), o2.options.meta[e2][t2] = s2, n.A.call(o2, "onchangemeta", o2, { [e2]: { [t2]: s2 } });
+            else {
+              const t3 = Object.keys(e2);
+              for (let s3 = 0; s3 < t3.length; s3++) {
+                o2.options.meta[t3[s3]] || (o2.options.meta[t3[s3]] = {});
+                const n2 = Object.keys(e2[t3[s3]]);
+                for (let r2 = 0; r2 < n2.length; r2++) o2.options.meta[t3[s3]][n2[r2]] = e2[t3[s3]][n2[r2]];
+              }
+              n.A.call(o2, "onchangemeta", o2, e2);
+            }
+          };
+        }, 94: function(e, t, s) {
+          s.d(t, { My: function() {
+            return d;
+          }, Th: function() {
+            return a;
+          }, iY: function() {
+            return c;
+          } });
+          var n = s(911), o = s(805), r = s(530), l = s(497), i2 = s(829);
+          const a = function(e2, t2) {
+            const s2 = this;
+            for (let e3 = 0; e3 < s2.headers.length; e3++) s2.headers[e3].classList.remove("arrow-up"), s2.headers[e3].classList.remove("arrow-down");
+            t2 ? s2.headers[e2].classList.add("arrow-up") : s2.headers[e2].classList.add("arrow-down");
+          }, c = function(e2) {
+            const t2 = this;
+            let s2 = [];
+            for (let n2 = 0; n2 < e2.length; n2++) s2[n2] = t2.options.data[e2[n2]];
+            t2.options.data = s2, s2 = [];
+            for (let n2 = 0; n2 < e2.length; n2++) {
+              s2[n2] = t2.records[e2[n2]];
+              for (let e3 = 0; e3 < s2[n2].length; e3++) s2[n2][e3].y = n2;
+            }
+            t2.records = s2, s2 = [];
+            for (let n2 = 0; n2 < e2.length; n2++) s2[n2] = t2.rows[e2[n2]], s2[n2].y = n2;
+            if (t2.rows = s2, r.o8.call(t2), t2.results && t2.results.length) t2.searchInput.value ? t2.search(t2.searchInput.value) : i2.F8.call(t2);
+            else if (t2.results = null, t2.pageNumber = 0, t2.options.pagination > 0) t2.page(0);
+            else if (1 == t2.options.lazyLoading) l.wu.call(t2, 0);
+            else for (let e3 = 0; e3 < t2.rows.length; e3++) t2.tbody.appendChild(t2.rows[e3].element);
+          }, d = function(e2, t2) {
+            const s2 = this;
+            if (e2 >= 0) {
+              if (s2.options.mergeCells && Object.keys(s2.options.mergeCells).length > 0) {
+                if (!confirm(jSuites.translate("This action will destroy any existing merged cells. Are you sure?"))) return false;
+                s2.destroyMerge();
+              }
+              t2 = null == t2 ? s2.headers[e2].classList.contains("arrow-down") ? 1 : 0 : t2 ? 1 : 0;
+              let r2 = [];
+              if (s2.options.columns && s2.options.columns[e2] && ("number" == s2.options.columns[e2].type || "numeric" == s2.options.columns[e2].type || "percentage" == s2.options.columns[e2].type || "autonumber" == s2.options.columns[e2].type || "color" == s2.options.columns[e2].type)) for (let t3 = 0; t3 < s2.options.data.length; t3++) r2[t3] = [t3, Number(s2.options.data[t3][e2])];
+              else if (s2.options.columns && s2.options.columns[e2] && ("calendar" == s2.options.columns[e2].type || "checkbox" == s2.options.columns[e2].type || "radio" == s2.options.columns[e2].type)) for (let t3 = 0; t3 < s2.options.data.length; t3++) r2[t3] = [t3, s2.options.data[t3][e2]];
+              else for (let t3 = 0; t3 < s2.options.data.length; t3++) r2[t3] = [t3, s2.records[t3][e2].element.textContent.toLowerCase()];
+              "function" != typeof s2.parent.config.sorting && (s2.parent.config.sorting = function(e3) {
+                return function(t3, s3) {
+                  const n2 = t3[1], o2 = s3[1];
+                  return e3 ? "" === n2 && "" !== o2 ? 1 : "" !== n2 && "" === o2 || n2 > o2 ? -1 : n2 < o2 ? 1 : 0 : "" === n2 && "" !== o2 ? 1 : "" !== n2 && "" === o2 ? -1 : n2 > o2 ? 1 : n2 < o2 ? -1 : 0;
+                };
+              }), r2 = r2.sort(s2.parent.config.sorting(t2));
+              const l2 = [];
+              for (let e3 = 0; e3 < r2.length; e3++) l2[e3] = r2[e3][0];
+              return n.Dh.call(s2, { action: "orderBy", rows: l2, column: e2, order: t2 }), a.call(s2, e2, t2), c.call(s2, l2), o.A.call(s2, "onsort", s2, e2, t2, l2.map((e3) => e3)), true;
+            }
+          };
+        }, 167: function(e, t, s) {
+          s.d(t, { $f: function() {
+            return a;
+          }, IV: function() {
+            return l;
+          }, MY: function() {
+            return i2;
+          }, ho: function() {
+            return r;
+          } });
+          var n = s(805), o = s(657);
+          const r = function(e2) {
+            const t2 = this;
+            return 1 != t2.options.search && 1 != t2.options.filters || !t2.results || (e2 = t2.results.indexOf(e2)), Math.ceil((parseInt(e2) + 1) / parseInt(t2.options.pagination)) - 1;
+          }, l = function() {
+            const e2 = this;
+            if (e2.pagination.children[0].innerHTML = "", e2.pagination.children[1].innerHTML = "", e2.options.pagination) {
+              let t2;
+              if (t2 = 1 != e2.options.search && 1 != e2.options.filters || !e2.results ? e2.rows.length : e2.results.length, t2) {
+                const s2 = Math.ceil(t2 / e2.options.pagination);
+                let n2, o2;
+                if (e2.pageNumber < 6 ? (n2 = 1, o2 = s2 < 10 ? s2 : 10) : s2 - e2.pageNumber < 5 ? (n2 = s2 - 9, o2 = s2, n2 < 1 && (n2 = 1)) : (n2 = e2.pageNumber - 4, o2 = e2.pageNumber + 5), n2 > 1) {
+                  const t3 = document.createElement("div");
+                  t3.className = "jss_page", t3.innerHTML = "<", t3.title = 1, e2.pagination.children[1].appendChild(t3);
+                }
+                for (let t3 = n2; t3 <= o2; t3++) {
+                  const s3 = document.createElement("div");
+                  s3.className = "jss_page", s3.innerHTML = t3, e2.pagination.children[1].appendChild(s3), e2.pageNumber == t3 - 1 && s3.classList.add("jss_page_selected");
+                }
+                if (o2 < s2) {
+                  const t3 = document.createElement("div");
+                  t3.className = "jss_page", t3.innerHTML = ">", t3.title = s2, e2.pagination.children[1].appendChild(t3);
+                }
+                const r2 = function(e3) {
+                  const t3 = Array.prototype.slice.call(arguments, 1);
+                  return e3.replace(/{(\d+)}/g, function(e4, s3) {
+                    return void 0 !== t3[s3] ? t3[s3] : e4;
+                  });
+                };
+                e2.pagination.children[0].innerHTML = r2(jSuites.translate("Showing page {0} of {1} entries"), e2.pageNumber + 1, s2);
+              } else e2.pagination.children[0].innerHTML = jSuites.translate("No records found");
+            }
+          }, i2 = function(e2) {
+            const t2 = this, s2 = t2.pageNumber;
+            let r2;
+            r2 = 1 != t2.options.search && 1 != t2.options.filters || !t2.results ? t2.rows : t2.results;
+            const i3 = parseInt(t2.options.pagination);
+            null != e2 && -1 != e2 || (e2 = Math.ceil(r2.length / i3) - 1), t2.pageNumber = e2;
+            let a2 = e2 * i3, c = e2 * i3 + i3;
+            for (c > r2.length && (c = r2.length), a2 < 0 && (a2 = 0); t2.tbody.firstChild; ) t2.tbody.removeChild(t2.tbody.firstChild);
+            for (let e3 = a2; e3 < c; e3++) 1 != t2.options.search && 1 != t2.options.filters || !t2.results ? t2.tbody.appendChild(t2.rows[e3].element) : t2.tbody.appendChild(t2.rows[r2[e3]].element);
+            t2.options.pagination > 0 && l.call(t2), o.Aq.call(t2), n.A.call(t2, "onchangepage", t2, e2, s2, t2.options.pagination);
+          }, a = function() {
+            const e2 = this;
+            let t2;
+            return t2 = 1 != e2.options.search && 1 != e2.options.filters || !e2.results ? e2.rows.length : e2.results.length, Math.ceil(t2 / e2.options.pagination);
+          };
+        }, 657: function(e, t, s) {
+          s.d(t, { AH: function() {
+            return m;
+          }, Aq: function() {
+            return d;
+          }, G9: function() {
+            return g;
+          }, Jg: function() {
+            return f;
+          }, Lo: function() {
+            return v;
+          }, R5: function() {
+            return _;
+          }, Ub: function() {
+            return B;
+          }, at: function() {
+            return w;
+          }, c6: function() {
+            return p;
+          }, eO: function() {
+            return x2;
+          }, ef: function() {
+            return A;
+          }, gE: function() {
+            return u;
+          }, gG: function() {
+            return y2;
+          }, kA: function() {
+            return h;
+          }, kF: function() {
+            return C;
+          }, kV: function() {
+            return k;
+          }, sp: function() {
+            return E;
+          }, tW: function() {
+            return j;
+          } });
+          var n = s(805), o = s(296), r = s(978), l = s(911), i2 = s(530), a = s(689), c = s(392);
+          const d = function() {
+            const e2 = this;
+            if (e2.highlighted && e2.highlighted.length) {
+              const t2 = e2.highlighted[e2.highlighted.length - 1].element, s2 = t2.getAttribute("data-x"), n2 = e2.content.getBoundingClientRect(), r2 = n2.left, l2 = n2.top, i3 = t2.getBoundingClientRect(), a2 = i3.left, c2 = i3.top, d2 = i3.width, u2 = i3.height, p2 = a2 - r2 + e2.content.scrollLeft + d2 - 4, h2 = c2 - l2 + e2.content.scrollTop + u2 - 4;
+              if (e2.corner.style.top = h2 + "px", e2.corner.style.left = p2 + "px", e2.options.freezeColumns) {
+                const t3 = o.w.call(e2);
+                s2 > e2.options.freezeColumns - 1 && a2 - r2 + d2 < t3 ? e2.corner.style.display = "none" : 0 != e2.options.selectionCopy && (e2.corner.style.display = "");
+              } else 0 != e2.options.selectionCopy && (e2.corner.style.display = "");
+            } else e2.corner.style.top = "-2000px", e2.corner.style.left = "-2000px";
+            (0, c.nK)(e2);
+          }, u = function(e2) {
+            const t2 = this;
+            let s2;
+            if (t2.highlighted && t2.highlighted.length) {
+              s2 = 1;
+              for (let e3 = 0; e3 < t2.highlighted.length; e3++) {
+                t2.highlighted[e3].element.classList.remove("highlight"), t2.highlighted[e3].element.classList.remove("highlight-left"), t2.highlighted[e3].element.classList.remove("highlight-right"), t2.highlighted[e3].element.classList.remove("highlight-top"), t2.highlighted[e3].element.classList.remove("highlight-bottom"), t2.highlighted[e3].element.classList.remove("highlight-selected");
+                const s3 = parseInt(t2.highlighted[e3].element.getAttribute("data-x")), n2 = parseInt(t2.highlighted[e3].element.getAttribute("data-y"));
+                let o2, r2;
+                if (t2.highlighted[e3].element.getAttribute("data-merged")) {
+                  const l2 = parseInt(t2.highlighted[e3].element.getAttribute("colspan")), i3 = parseInt(t2.highlighted[e3].element.getAttribute("rowspan"));
+                  o2 = l2 > 0 ? s3 + (l2 - 1) : s3, r2 = i3 > 0 ? n2 + (i3 - 1) : n2;
+                } else o2 = s3, r2 = n2;
+                for (let e4 = s3; e4 <= o2; e4++) t2.headers[e4] && t2.headers[e4].classList.remove("selected");
+                for (let e4 = n2; e4 <= r2; e4++) t2.rows[e4] && t2.rows[e4].element.classList.remove("selected");
+              }
+            } else s2 = 0;
+            return t2.highlighted = [], t2.selectedCell = null, t2.corner.style.top = "-2000px", t2.corner.style.left = "-2000px", 1 == e2 && 1 == s2 && n.A.call(t2, "onblur", t2), s2;
+          }, p = function(e2, t2, s2) {
+            const n2 = e2.getAttribute("data-x"), o2 = e2.getAttribute("data-y");
+            let r2, l2;
+            t2 ? (r2 = t2.getAttribute("data-x"), l2 = t2.getAttribute("data-y")) : (r2 = n2, l2 = o2), m.call(this, n2, o2, r2, l2, s2);
+          }, h = function() {
+            const e2 = document.querySelectorAll(".jss_worksheet .copying");
+            for (let t2 = 0; t2 < e2.length; t2++) e2[t2].classList.remove("copying"), e2[t2].classList.remove("copying-left"), e2[t2].classList.remove("copying-right"), e2[t2].classList.remove("copying-top"), e2[t2].classList.remove("copying-bottom");
+          }, m = function(e2, t2, s2, o2, r2) {
+            const l2 = this;
+            if (null == t2) {
+              if (t2 = 0, o2 = l2.rows.length - 1, null == e2) return;
+            } else null == e2 && (e2 = 0, s2 = l2.options.data[0].length - 1);
+            null == s2 && (s2 = e2), null == o2 && (o2 = t2), e2 >= l2.headers.length && (e2 = l2.headers.length - 1), t2 >= l2.rows.length && (t2 = l2.rows.length - 1), s2 >= l2.headers.length && (s2 = l2.headers.length - 1), o2 >= l2.rows.length && (o2 = l2.rows.length - 1);
+            let i3, a2, c2, u2, p2 = null, m2 = null, f2 = null, g2 = null;
+            parseInt(e2) < parseInt(s2) ? (i3 = parseInt(e2), a2 = parseInt(s2)) : (i3 = parseInt(s2), a2 = parseInt(e2)), parseInt(t2) < parseInt(o2) ? (c2 = parseInt(t2), u2 = parseInt(o2)) : (c2 = parseInt(o2), u2 = parseInt(t2));
+            for (let e3 = i3; e3 <= a2; e3++) for (let t3 = c2; t3 <= u2; t3++) if (l2.records[t3][e3] && l2.records[t3][e3].element.getAttribute("data-merged")) {
+              const s3 = parseInt(l2.records[t3][e3].element.getAttribute("data-x")), n2 = parseInt(l2.records[t3][e3].element.getAttribute("data-y")), o3 = parseInt(l2.records[t3][e3].element.getAttribute("colspan")), r3 = parseInt(l2.records[t3][e3].element.getAttribute("rowspan"));
+              o3 > 1 && (s3 < i3 && (i3 = s3), s3 + o3 > a2 && (a2 = s3 + o3 - 1)), r3 && (n2 < c2 && (c2 = n2), n2 + r3 > u2 && (u2 = n2 + r3 - 1));
+            }
+            for (let e3 = c2; e3 <= u2; e3++) "none" != l2.rows[e3].element.style.display && (null == f2 && (f2 = e3), g2 = e3);
+            for (let e3 = i3; e3 <= a2; e3++) for (let t3 = c2; t3 <= u2; t3++) l2.options.columns && l2.options.columns[e3] && "hidden" == l2.options.columns[e3].type || (null == p2 && (p2 = e3), m2 = e3);
+            if (p2 || (p2 = 0), m2 || (m2 = 0), false === n.A.call(l2, "onbeforeselection", l2, p2, f2, m2, g2, r2)) return false;
+            const y3 = l2.resetSelection();
+            l2.selectedCell = [e2, t2, s2, o2], l2.records[t2][e2] && l2.records[t2][e2].element.classList.add("highlight-selected");
+            for (let e3 = i3; e3 <= a2; e3++) for (let t3 = c2; t3 <= u2; t3++) "none" != l2.rows[t3].element.style.display && "none" != l2.records[t3][e3].element.style.display && (l2.records[t3][e3].element.classList.add("highlight"), l2.highlighted.push(l2.records[t3][e3]));
+            for (let e3 = p2; e3 <= m2; e3++) l2.options.columns && l2.options.columns[e3] && "hidden" == l2.options.columns[e3].type || !l2.cols[e3].colElement.style || "none" == l2.cols[e3].colElement.style.display || (l2.records[f2] && l2.records[f2][e3] && l2.records[f2][e3].element.classList.add("highlight-top"), l2.records[g2] && l2.records[g2][e3] && l2.records[g2][e3].element.classList.add("highlight-bottom"), l2.headers[e3].classList.add("selected"));
+            for (let e3 = f2; e3 <= g2; e3++) l2.rows[e3] && "none" != l2.rows[e3].element.style.display && (l2.records[e3][p2].element.classList.add("highlight-left"), l2.records[e3][m2].element.classList.add("highlight-right"), l2.rows[e3].element.classList.add("selected"));
+            l2.selectedContainer = [p2, f2, m2, g2], 0 == y3 && (n.A.call(l2, "onfocus", l2), h()), n.A.call(l2, "onselection", l2, p2, f2, m2, g2, r2), d.call(l2);
+          }, f = function(e2) {
+            const t2 = this;
+            if (!t2.selectedCell) return [];
+            const s2 = [];
+            for (let n2 = Math.min(t2.selectedCell[0], t2.selectedCell[2]); n2 <= Math.max(t2.selectedCell[0], t2.selectedCell[2]); n2++) e2 && "none" == t2.headers[n2].style.display || s2.push(n2);
+            return s2;
+          }, g = function() {
+            const e2 = this;
+            e2.selectedCell && e2.updateSelectionFromCoords(e2.selectedCell[0], e2.selectedCell[1], e2.selectedCell[2], e2.selectedCell[3]);
+          }, y2 = function() {
+            const e2 = this;
+            for (let t2 = 0; t2 < e2.selection.length; t2++) e2.selection[t2].classList.remove("selection"), e2.selection[t2].classList.remove("selection-left"), e2.selection[t2].classList.remove("selection-right"), e2.selection[t2].classList.remove("selection-top"), e2.selection[t2].classList.remove("selection-bottom");
+            e2.selection = [];
+          }, b = function(e2) {
+            return 1 == (e2 = "" + e2).length && (e2 = "0" + e2), e2;
+          }, C = function(e2, t2) {
+            const s2 = this, o2 = s2.getData(true, false), r2 = s2.selectedContainer, c2 = parseInt(e2.getAttribute("data-x")), d2 = parseInt(e2.getAttribute("data-y")), u2 = parseInt(t2.getAttribute("data-x")), p2 = parseInt(t2.getAttribute("data-y")), h2 = [];
+            let m2, f2, g2 = false;
+            r2[0] == c2 ? (m2 = d2 < r2[1] ? d2 - r2[1] : 1, f2 = 0) : (f2 = c2 < r2[0] ? c2 - r2[0] : 1, m2 = 0);
+            let y3 = 0, C2 = 0;
+            for (let e3 = d2; e3 <= p2; e3++) if (!s2.rows[e3] || "none" != s2.rows[e3].element.style.display) {
+              null == o2[C2] && (C2 = 0), y3 = 0, r2[0] != c2 && (f2 = c2 < r2[0] ? c2 - r2[0] : 1);
+              for (let t3 = c2; t3 <= u2; t3++) {
+                if (s2.records[e3][t3] && !s2.records[e3][t3].element.classList.contains("readonly") && "none" != s2.records[e3][t3].element.style.display && 0 == g2) {
+                  if (!s2.selection.length && "" != s2.options.data[e3][t3]) {
+                    g2 = true;
+                    continue;
+                  }
+                  (null == o2[C2] || null == o2[C2][y3]) && (y3 = 0);
+                  let n2 = o2[C2][y3];
+                  if (n2 && !o2[1] && 0 != s2.parent.config.autoIncrement) if (!s2.options.columns || !s2.options.columns[t3] || s2.options.columns[t3].type && "text" != s2.options.columns[t3].type && "number" != s2.options.columns[t3].type) {
+                    if (s2.options.columns && s2.options.columns[t3] && "calendar" == s2.options.columns[t3].type) {
+                      const e4 = new Date(n2);
+                      e4.setDate(e4.getDate() + m2), n2 = e4.getFullYear() + "-" + b(parseInt(e4.getMonth() + 1)) + "-" + b(e4.getDate()) + " 00:00:00";
+                    }
+                  } else if ("=" == ("" + n2).substr(0, 1)) {
+                    const e4 = n2.match(/([A-Z]+[0-9]+)/g);
+                    if (e4) {
+                      const t4 = [];
+                      for (let s3 = 0; s3 < e4.length; s3++) {
+                        const n3 = (0, a.vu)(e4[s3], 1);
+                        n3[0] += f2, n3[1] += m2, n3[1] < 0 && (n3[1] = 0);
+                        const o3 = (0, a.t3)([n3[0], n3[1]]);
+                        o3 != e4[s3] && (t4[e4[s3]] = o3);
+                      }
+                      t4 && (n2 = (0, i2.yB)(n2, t4));
+                    }
+                  } else n2 == Number(n2) && (n2 = Number(n2) + m2);
+                  h2.push(i2.k9.call(s2, t3, e3, n2)), i2.xF.call(s2, t3, e3, h2);
+                }
+                y3++, r2[0] != c2 && f2++;
+              }
+              C2++, m2++;
+            }
+            l.Dh.call(s2, { action: "setValue", records: h2, selection: s2.selectedCell }), i2.am.call(s2);
+            const j2 = h2.map(function(e3) {
+              return { x: e3.x, y: e3.y, value: e3.value, oldValue: e3.oldValue };
+            });
+            n.A.call(s2, "onafterchanges", s2, j2);
+          }, j = function(e2) {
+            let t2, s2, n2 = 0;
+            if (!e2 || 0 === e2.length) return n2;
+            for (t2 = 0; t2 < e2.length; t2++) s2 = e2.charCodeAt(t2), n2 = (n2 << 5) - n2 + s2, n2 |= 0;
+            return n2;
+          }, w = function(e2, t2, s2) {
+            const n2 = this;
+            if (1 == e2) {
+              if (n2.selectedCell && (t2 >= n2.selectedCell[1] && t2 <= n2.selectedCell[3] || s2 >= n2.selectedCell[1] && s2 <= n2.selectedCell[3])) return void n2.resetSelection();
+            } else if (n2.selectedCell && (t2 >= n2.selectedCell[0] && t2 <= n2.selectedCell[2] || s2 >= n2.selectedCell[0] && s2 <= n2.selectedCell[2])) return void n2.resetSelection();
+          }, _ = function(e2) {
+            const t2 = this;
+            if (!t2.selectedCell) return [];
+            const s2 = [];
+            for (let n2 = Math.min(t2.selectedCell[1], t2.selectedCell[3]); n2 <= Math.max(t2.selectedCell[1], t2.selectedCell[3]); n2++) e2 && "none" == t2.rows[n2].element.style.display || s2.push(n2);
+            return s2;
+          }, B = function() {
+            const e2 = this;
+            e2.selectedCell || (e2.selectedCell = []), e2.selectedCell[0] = 0, e2.selectedCell[1] = 0, e2.selectedCell[2] = e2.headers.length - 1, e2.selectedCell[3] = e2.records.length - 1, e2.updateSelectionFromCoords(e2.selectedCell[0], e2.selectedCell[1], e2.selectedCell[2], e2.selectedCell[3]);
+          }, v = function() {
+            const e2 = this;
+            return e2.selectedCell ? [Math.min(e2.selectedCell[0], e2.selectedCell[2]), Math.min(e2.selectedCell[1], e2.selectedCell[3]), Math.max(e2.selectedCell[0], e2.selectedCell[2]), Math.max(e2.selectedCell[1], e2.selectedCell[3])] : null;
+          }, A = function(e2) {
+            const t2 = this, s2 = v.call(t2);
+            if (!s2) return [];
+            const n2 = [];
+            for (let o2 = s2[1]; o2 <= s2[3]; o2++) for (let l2 = s2[0]; l2 <= s2[2]; l2++) e2 ? n2.push((0, r.getCellNameFromCoords)(l2, o2)) : n2.push(t2.records[o2][l2]);
+            return n2;
+          }, x2 = function() {
+            const e2 = this, t2 = v.call(e2);
+            if (!t2) return "";
+            const s2 = (0, r.getCellNameFromCoords)(t2[0], t2[1]), n2 = (0, r.getCellNameFromCoords)(t2[2], t2[3]);
+            return s2 === n2 ? e2.options.worksheetName + "!" + s2 : e2.options.worksheetName + "!" + s2 + ":" + n2;
+          }, E = function(e2, t2) {
+            const s2 = v.call(this);
+            return e2 >= s2[0] && e2 <= s2[2] && t2 >= s2[1] && t2 <= s2[3];
+          }, k = function() {
+            const e2 = v.call(this);
+            return e2 ? [e2] : [];
+          };
+        }, 392: function(e, t, s) {
+          s.d(t, { Ar: function() {
+            return u;
+          }, ll: function() {
+            return d;
+          }, nK: function() {
+            return c;
+          } });
+          var n = s(978), o = s(530);
+          const r = function(e2, t2) {
+            0 != t2.options.editable ? e2.classList.remove("jtoolbar-disabled") : e2.classList.add("jtoolbar-disabled");
+          }, l = function() {
+            const e2 = [], t2 = this, s2 = function() {
+              return o.eN.call(t2);
+            };
+            e2.push({ content: "undo", onclick: function() {
+              s2().undo();
+            } }), e2.push({ content: "redo", onclick: function() {
+              s2().redo();
+            } }), e2.push({ content: "save", onclick: function() {
+              const e3 = s2();
+              e3 && e3.download();
+            } }), e2.push({ type: "divisor" }), e2.push({ type: "select", width: "120px", options: ["Default", "Verdana", "Arial", "Courier New"], render: function(e3) {
+              return '<span style="font-family:' + e3 + '">' + e3 + "</span>";
+            }, onchange: function(e3, t3, n2, o2, r2) {
+              const l3 = s2();
+              let i3 = l3.getSelected(true);
+              if (i3) {
+                let e4 = r2 ? o2 : "";
+                l3.setStyle(Object.fromEntries(i3.map(function(t4) {
+                  return [t4, "font-family: " + e4];
+                })));
+              }
+            }, updateState: function(e3, t3, n2) {
+              r(n2, s2());
+            } }), e2.push({ type: "select", width: "48px", content: "format_size", options: ["x-small", "small", "medium", "large", "x-large"], render: function(e3) {
+              return '<span style="font-size:' + e3 + '">' + e3 + "</span>";
+            }, onchange: function(e3, t3, n2, o2) {
+              const r2 = s2();
+              let l3 = r2.getSelected(true);
+              l3 && r2.setStyle(Object.fromEntries(l3.map(function(e4) {
+                return [e4, "font-size: " + o2];
+              })));
+            }, updateState: function(e3, t3, n2) {
+              r(n2, s2());
+            } }), e2.push({ type: "select", options: ["left", "center", "right", "justify"], render: function(e3) {
+              return '<i class="material-icons">format_align_' + e3 + "</i>";
+            }, onchange: function(e3, t3, n2, o2) {
+              const r2 = s2();
+              let l3 = r2.getSelected(true);
+              l3 && r2.setStyle(Object.fromEntries(l3.map(function(e4) {
+                return [e4, "text-align: " + o2];
+              })));
+            }, updateState: function(e3, t3, n2) {
+              r(n2, s2());
+            } }), e2.push({ content: "format_bold", onclick: function(e3, t3, n2) {
+              const o2 = s2();
+              let r2 = o2.getSelected(true);
+              r2 && o2.setStyle(Object.fromEntries(r2.map(function(e4) {
+                return [e4, "font-weight:bold"];
+              })));
+            }, updateState: function(e3, t3, n2) {
+              r(n2, s2());
+            } }), e2.push({ type: "color", content: "format_color_text", k: "color", updateState: function(e3, t3, n2) {
+              r(n2, s2());
+            } }), e2.push({ type: "color", content: "format_color_fill", k: "background-color", updateState: function(e3, t3, n2, o2) {
+              r(n2, s2());
+            } });
+            let l2 = ["top", "middle", "bottom"];
+            return e2.push({ type: "select", options: ["vertical_align_top", "vertical_align_center", "vertical_align_bottom"], render: function(e3) {
+              return '<i class="material-icons">' + e3 + "</i>";
+            }, value: 1, onchange: function(e3, t3, n2, o2, r2) {
+              const i3 = s2();
+              let a2 = i3.getSelected(true);
+              a2 && i3.setStyle(Object.fromEntries(a2.map(function(e4) {
+                return [e4, "vertical-align: " + l2[r2]];
+              })));
+            }, updateState: function(e3, t3, n2) {
+              r(n2, s2());
+            } }), e2.push({ content: "web", tooltip: jSuites.translate("Merge the selected cells"), onclick: function() {
+              const e3 = s2();
+              if (e3.selectedCell && confirm(jSuites.translate("The merged cells will retain the value of the top-left cell only. Are you sure?"))) {
+                const t3 = [Math.min(e3.selectedCell[0], e3.selectedCell[2]), Math.min(e3.selectedCell[1], e3.selectedCell[3]), Math.max(e3.selectedCell[0], e3.selectedCell[2]), Math.max(e3.selectedCell[1], e3.selectedCell[3])];
+                let s3 = (0, n.getCellNameFromCoords)(t3[0], t3[1]);
+                if (e3.records[t3[1]][t3[0]].element.getAttribute("data-merged")) e3.removeMerge(s3);
+                else {
+                  let n2 = t3[2] - t3[0] + 1, o2 = t3[3] - t3[1] + 1;
+                  1 === n2 && 1 === o2 || e3.setMerge(s3, n2, o2);
+                }
+              }
+            }, updateState: function(e3, t3, n2) {
+              r(n2, s2());
+            } }), e2.push({ type: "select", options: ["border_all", "border_outer", "border_inner", "border_horizontal", "border_vertical", "border_left", "border_top", "border_right", "border_bottom", "border_clear"], columns: 5, render: function(e3) {
+              return '<i class="material-icons">' + e3 + "</i>";
+            }, right: true, onchange: function(e3, t3, o2, r2) {
+              const l3 = s2();
+              if (l3.selectedCell) {
+                const e4 = [Math.min(l3.selectedCell[0], l3.selectedCell[2]), Math.min(l3.selectedCell[1], l3.selectedCell[3]), Math.max(l3.selectedCell[0], l3.selectedCell[2]), Math.max(l3.selectedCell[1], l3.selectedCell[3])];
+                let s3 = r2;
+                if (e4) {
+                  let o3 = t3.thickness || 1, r3 = t3.color || "black";
+                  const i3 = t3.style || "solid";
+                  "double" === i3 && (o3 += 2);
+                  let a2 = {}, c2 = e4[0], d2 = e4[1], u2 = e4[2], p = e4[3];
+                  const h = function(e5, t4, n2) {
+                    let l4 = ["", "", "", ""];
+                    l4[0] = ("border_top" === s3 || "border_outer" === s3) && n2 === d2 || ("border_inner" === s3 || "border_horizontal" === s3) && n2 > d2 || "border_all" === s3 ? "border-top: " + o3 + "px " + i3 + " " + r3 : "border-top: ", l4[1] = "border_all" !== s3 && "border_right" !== s3 && "border_outer" !== s3 || t4 !== u2 ? "border-right: " : "border-right: " + o3 + "px " + i3 + " " + r3, l4[2] = "border_all" !== s3 && "border_bottom" !== s3 && "border_outer" !== s3 || n2 !== p ? "border-bottom: " : "border-bottom: " + o3 + "px " + i3 + " " + r3, l4[3] = ("border_left" === s3 || "border_outer" === s3) && t4 === c2 || ("border_inner" === s3 || "border_vertical" === s3) && t4 > c2 || "border_all" === s3 ? "border-left: " + o3 + "px " + i3 + " " + r3 : "border-left: ", a2[e5] = l4.join(";");
+                  };
+                  for (let t4 = e4[1]; t4 <= e4[3]; t4++) for (let s4 = e4[0]; s4 <= e4[2]; s4++) h((0, n.getCellNameFromCoords)(s4, t4), s4, t4), l3.records[t4][s4].element.getAttribute("data-merged") && h((0, n.getCellNameFromCoords)(e4[0], e4[1]), s4, t4);
+                  Object.keys(a2) && l3.setStyle(a2);
+                }
+              }
+            }, onload: function(e3, t3) {
+              let s3 = document.createElement("div"), n2 = document.createElement("div");
+              s3.appendChild(n2);
+              let o2 = jSuites.color(n2, { closeOnChange: false, onchange: function(e4, s4) {
+                e4.parentNode.children[1].style.color = s4, t3.color = s4;
+              } }), r2 = document.createElement("i");
+              r2.classList.add("material-icons"), r2.innerHTML = "color_lens", r2.onclick = function() {
+                o2.open();
+              }, s3.appendChild(r2), e3.children[1].appendChild(s3), n2 = document.createElement("div"), jSuites.picker(n2, { type: "select", data: [1, 2, 3, 4, 5], render: function(e4) {
+                return '<div style="height: ' + e4 + 'px; width: 30px; background-color: black;"></div>';
+              }, onchange: function(e4, s4, n3, o3) {
+                t3.thickness = o3;
+              }, width: "50px" }), e3.children[1].appendChild(n2);
+              const l3 = document.createElement("div");
+              jSuites.picker(l3, { type: "select", data: ["solid", "dotted", "dashed", "double"], render: function(e4) {
+                return "double" === e4 ? '<div style="width: 30px; border-top: 3px ' + e4 + ' black;"></div>' : '<div style="width: 30px; border-top: 2px ' + e4 + ' black;"></div>';
+              }, onchange: function(e4, s4, n3, o3) {
+                t3.style = o3;
+              }, width: "50px" }), e3.children[1].appendChild(l3), n2 = document.createElement("div"), n2.style.flex = "1", e3.children[1].appendChild(n2);
+            }, updateState: function(e3, t3, n2) {
+              r(n2, s2());
+            } }), e2.push({ type: "divisor" }), e2.push({ content: "fullscreen", tooltip: "Toggle Fullscreen", onclick: function(e3, s3, n2) {
+              "fullscreen" === n2.children[0].textContent ? (t2.fullscreen(true), n2.children[0].textContent = "fullscreen_exit") : (t2.fullscreen(false), n2.children[0].textContent = "fullscreen");
+            }, updateState: function(e3, t3, s3, n2) {
+              true === n2.parent.config.fullscreen ? s3.children[0].textContent = "fullscreen_exit" : s3.children[0].textContent = "fullscreen";
+            } }), e2;
+          }, i2 = function(e2) {
+            const t2 = this, s2 = e2.items;
+            for (let e3 = 0; e3 < s2.length; e3++) s2[e3].tooltip && (s2[e3].title = s2[e3].tooltip, delete s2[e3].tooltip), "select" == s2[e3].type ? s2[e3].options ? (s2[e3].data = s2[e3].options, delete s2[e3].options) : (s2[e3].data = s2[e3].v, delete s2[e3].v, s2[e3].k && !s2[e3].onchange && (s2[e3].onchange = function(n2, r2, l2) {
+              const i3 = o.eN.call(t2), a2 = i3.getSelected(true);
+              i3.setStyle(Object.fromEntries(a2.map(function(t3) {
+                return [t3, s2[e3].k + ": " + l2];
+              })));
+            })) : "color" == s2[e3].type && (s2[e3].type = "i", s2[e3].onclick = function(n2, r2, l2) {
+              l2.color || (jSuites.color(l2, { onchange: function(n3, r3) {
+                const l3 = o.eN.call(t2), i3 = l3.getSelected(true);
+                l3.setStyle(Object.fromEntries(i3.map(function(t3) {
+                  return [t3, s2[e3].k + ": " + r3];
+                })));
+              }, onopen: function(e4) {
+                e4.color.select("");
+              } }), l2.color.open());
+            });
+          }, a = function(e2) {
+            const t2 = this, s2 = document.createElement("div");
+            return s2.classList.add("jss_toolbar"), i2.call(t2, e2), "object" == typeof t2.plugins && Object.entries(t2.plugins).forEach(function([, t3]) {
+              if ("function" == typeof t3.toolbar) {
+                const s3 = t3.toolbar(e2);
+                s3 && (e2 = s3);
+              }
+            }), jSuites.toolbar(s2, e2), s2;
+          }, c = function(e2) {
+            e2.parent.toolbar && e2.parent.toolbar.toolbar.update(e2);
+          }, d = function() {
+            const e2 = this;
+            if (e2.config.toolbar && !e2.toolbar) {
+              let t2;
+              Array.isArray(e2.config.toolbar) ? t2 = { items: e2.config.toolbar } : "object" == typeof e2.config.toolbar ? t2 = e2.config.toolbar : (t2 = { items: l.call(e2) }, "function" == typeof e2.config.toolbar && (t2 = e2.config.toolbar(t2))), e2.toolbar = e2.element.insertBefore(a.call(e2, t2), e2.element.children[1]);
+            }
+          }, u = function() {
+            const e2 = this;
+            e2.toolbar && (e2.toolbar.parentNode.removeChild(e2.toolbar), delete e2.toolbar);
+          };
+        } }, __webpack_module_cache__ = {};
+        function __webpack_require__(e) {
+          var t = __webpack_module_cache__[e];
+          if (void 0 !== t) return t.exports;
+          var s = __webpack_module_cache__[e] = { exports: {} };
+          return __webpack_modules__[e](s, s.exports, __webpack_require__), s.exports;
+        }
+        __webpack_require__.d = function(e, t) {
+          for (var s in t) __webpack_require__.o(t, s) && !__webpack_require__.o(e, s) && Object.defineProperty(e, s, { enumerable: true, get: t[s] });
+        }, __webpack_require__.o = function(e, t) {
+          return Object.prototype.hasOwnProperty.call(e, t);
+        }, __webpack_require__.r = function(e) {
+          "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: true });
+        };
+        var __webpack_exports__ = {};
+        __webpack_require__.d(__webpack_exports__, { default: function() {
+          return src;
+        } });
+        const lib = { jspreadsheet: {} };
+        var libraryBase = lib, dispatch = __webpack_require__(805), internal = __webpack_require__(530), utils_history = __webpack_require__(911);
+        const openEditor = function(e, t, s) {
+          const n = this, o = e.getAttribute("data-y"), r = e.getAttribute("data-x");
+          dispatch.A.call(n, "oneditionstart", n, e, parseInt(r), parseInt(o)), r > 0 && (n.records[o][r - 1].element.style.overflow = "hidden");
+          const l = function(t2) {
+            const s2 = e.getBoundingClientRect(), n2 = document.createElement(t2);
+            return n2.style.width = s2.width + "px", n2.style.height = s2.height - 2 + "px", n2.style.minHeight = s2.height - 2 + "px", e.classList.add("editor"), e.innerHTML = "", e.appendChild(n2), n2;
+          };
+          if (1 == e.classList.contains("readonly")) ;
+          else if (n.edition = [n.records[o][r].element, n.records[o][r].element.innerHTML, r, o], n.options.columns && n.options.columns[r] && "object" == typeof n.options.columns[r].type) n.options.columns[r].type.openEditor(e, n.options.data[o][r], parseInt(r), parseInt(o), n, n.options.columns[r], s), dispatch.A.call(n, "oncreateeditor", n, e, parseInt(r), parseInt(o), null, n.options.columns[r]);
+          else if (n.options.columns && n.options.columns[r] && "hidden" == n.options.columns[r].type) ;
+          else if (n.options.columns && n.options.columns[r] && ("checkbox" == n.options.columns[r].type || "radio" == n.options.columns[r].type)) {
+            const t2 = !e.children[0].checked;
+            n.setValue(e, t2), n.edition = null;
+          } else if (n.options.columns && n.options.columns[r] && "dropdown" == n.options.columns[r].type) {
+            let t2, s2 = n.options.data[o][r];
+            n.options.columns[r].multiple && !Array.isArray(s2) && (s2 = s2.split(";")), t2 = "function" == typeof n.options.columns[r].filter ? n.options.columns[r].filter(n.element, e, r, o, n.options.columns[r].source) : n.options.columns[r].source;
+            const i2 = [];
+            if (t2) for (let e2 = 0; e2 < t2.length; e2++) i2.push(t2[e2]);
+            const a = l("div");
+            dispatch.A.call(n, "oncreateeditor", n, e, parseInt(r), parseInt(o), null, n.options.columns[r]);
+            const c = { data: i2, multiple: !!n.options.columns[r].multiple, autocomplete: !!n.options.columns[r].autocomplete, opened: true, value: s2, width: "100%", height: a.style.minHeight, position: 1 == n.options.tableOverflow || 1 == n.parent.config.fullscreen, onclose: function() {
+              closeEditor.call(n, e, true);
+            } };
+            n.options.columns[r].options && n.options.columns[r].options.type && (c.type = n.options.columns[r].options.type), jSuites.dropdown(a, c);
+          } else if (n.options.columns && n.options.columns[r] && ("calendar" == n.options.columns[r].type || "color" == n.options.columns[r].type)) {
+            const t2 = n.options.data[o][r], s2 = l("input");
+            dispatch.A.call(n, "oncreateeditor", n, e, parseInt(r), parseInt(o), null, n.options.columns[r]), s2.value = t2;
+            const i2 = n.options.columns[r].options ? { ...n.options.columns[r].options } : {};
+            if (1 != n.options.tableOverflow && 1 != n.parent.config.fullscreen || (i2.position = true), i2.value = n.options.data[o][r], i2.opened = true, i2.onclose = function(t3, s3) {
+              closeEditor.call(n, e, true);
+            }, "color" == n.options.columns[r].type) {
+              jSuites.color(s2, i2);
+              const t3 = e.getBoundingClientRect();
+              i2.position && (s2.nextSibling.children[1].style.top = t3.top + t3.height + "px", s2.nextSibling.children[1].style.left = t3.left + "px");
+            } else i2.format || (i2.format = "YYYY-MM-DD"), jSuites.calendar(s2, i2);
+            s2.focus();
+          } else if (n.options.columns && n.options.columns[r] && "html" == n.options.columns[r].type) {
+            const t2 = n.options.data[o][r], s2 = l("div");
+            dispatch.A.call(n, "oncreateeditor", n, e, parseInt(r), parseInt(o), null, n.options.columns[r]), s2.style.position = "relative";
+            const i2 = document.createElement("div");
+            i2.classList.add("jss_richtext"), s2.appendChild(i2), jSuites.editor(i2, { focus: true, value: t2 });
+            const a = e.getBoundingClientRect(), c = i2.getBoundingClientRect();
+            window.innerHeight < a.bottom + c.height ? i2.style.top = a.bottom - (c.height + 2) + "px" : i2.style.top = a.top + "px", window.innerWidth < a.left + c.width ? i2.style.left = a.right - (c.width + 2) + "px" : i2.style.left = a.left + "px";
+          } else if (n.options.columns && n.options.columns[r] && "image" == n.options.columns[r].type) {
+            const t2 = e.children[0], s2 = l("div");
+            dispatch.A.call(n, "oncreateeditor", n, e, parseInt(r), parseInt(o), null, n.options.columns[r]), s2.style.position = "relative";
+            const i2 = document.createElement("div");
+            i2.classList.add("jclose"), t2 && t2.src && i2.appendChild(t2), s2.appendChild(i2), jSuites.image(i2, n.options.columns[r]);
+            const a = e.getBoundingClientRect(), c = i2.getBoundingClientRect();
+            window.innerHeight < a.bottom + c.height ? i2.style.top = a.top - (c.height + 2) + "px" : i2.style.top = a.top + "px", i2.style.left = a.left + "px";
+          } else {
+            const s2 = 1 == t ? "" : n.options.data[o][r];
+            let i2;
+            i2 = n.options.columns && n.options.columns[r] && 0 == n.options.columns[r].wordWrap || !(1 == n.options.wordWrap || n.options.columns && n.options.columns[r] && 1 == n.options.columns[r].wordWrap) ? l("input") : l("textarea"), dispatch.A.call(n, "oncreateeditor", n, e, parseInt(r), parseInt(o), null, n.options.columns[r]), i2.focus(), i2.value = s2;
+            const a = n.options.columns && n.options.columns[r];
+            if (!(0, internal.dw)(s2) && a) {
+              const e2 = (0, internal.rS)(a);
+              if (e2) {
+                if (!a.disabledMaskOnEdition) if (a.mask) {
+                  const e3 = a.mask.split(";");
+                  i2.setAttribute("data-mask", e3[0]);
+                } else a.locale && i2.setAttribute("data-locale", a.locale);
+                e2.input = i2, i2.mask = e2, jSuites.mask.render(s2, e2, false);
+              }
+            }
+            i2.onblur = function() {
+              closeEditor.call(n, e, true);
+            }, i2.scrollLeft = i2.scrollWidth;
+          }
+        }, closeEditor = function(e, t) {
+          const s = this, n = parseInt(e.getAttribute("data-x")), o = parseInt(e.getAttribute("data-y"));
+          let r;
+          if (1 == t) {
+            if (s.options.columns && s.options.columns[n] && "object" == typeof s.options.columns[n].type) r = s.options.columns[n].type.closeEditor(e, t, parseInt(n), parseInt(o), s, s.options.columns[n]);
+            else if (s.options.columns && s.options.columns[n] && ("checkbox" == s.options.columns[n].type || "radio" == s.options.columns[n].type || "hidden" == s.options.columns[n].type)) ;
+            else if (s.options.columns && s.options.columns[n] && "dropdown" == s.options.columns[n].type) r = e.children[0].dropdown.close(true);
+            else if (s.options.columns && s.options.columns[n] && "calendar" == s.options.columns[n].type) r = e.children[0].calendar.close(true);
+            else if (s.options.columns && s.options.columns[n] && "color" == s.options.columns[n].type) r = e.children[0].color.close(true);
+            else if (s.options.columns && s.options.columns[n] && "html" == s.options.columns[n].type) r = e.children[0].children[0].editor.getData();
+            else if (s.options.columns && s.options.columns[n] && "image" == s.options.columns[n].type) {
+              const t2 = e.children[0].children[0].children[0];
+              r = t2 && "IMG" == t2.tagName ? t2.src : "";
+            } else if (s.options.columns && s.options.columns[n] && "numeric" == s.options.columns[n].type) r = e.children[0].value, "=" != ("" + r).substr(0, 1) && "" == r && (r = s.options.columns[n].allowEmpty ? "" : 0), e.children[0].onblur = null;
+            else {
+              r = e.children[0].value, e.children[0].onblur = null;
+              const t2 = s.options.columns && s.options.columns[n];
+              if (t2) {
+                const e2 = (0, internal.rS)(t2);
+                if (e2 && "" !== r && !(0, internal.dw)(r) && "number" != typeof r) {
+                  const t3 = jSuites.mask.extract(r, e2, true);
+                  t3 && "" !== t3.value && (r = t3.value);
+                }
+              }
+            }
+            s.options.data[o][n] == r ? e.innerHTML = s.edition[1] : s.setValue(e, r);
+          } else s.options.columns && s.options.columns[n] && "object" == typeof s.options.columns[n].type ? s.options.columns[n].type.closeEditor(e, t, parseInt(n), parseInt(o), s, s.options.columns[n]) : s.options.columns && s.options.columns[n] && "dropdown" == s.options.columns[n].type ? e.children[0].dropdown.close(true) : s.options.columns && s.options.columns[n] && "calendar" == s.options.columns[n].type ? e.children[0].calendar.close(true) : s.options.columns && s.options.columns[n] && "color" == s.options.columns[n].type ? e.children[0].color.close(true) : e.children[0].onblur = null, e.innerHTML = s.edition && s.edition[1] ? s.edition[1] : "";
+          dispatch.A.call(s, "oneditionend", s, e, n, o, r, t), e.classList.remove("editor"), s.edition = null;
+        }, setCheckRadioValue = function() {
+          const e = this, t = [], s = Object.keys(e.highlighted);
+          for (let n = 0; n < s.length; n++) {
+            const s2 = e.highlighted[n].element.getAttribute("data-x"), o = e.highlighted[n].element.getAttribute("data-y");
+            "checkbox" != e.options.columns[s2].type && "radio" != e.options.columns[s2].type || t.push(internal.k9.call(e, s2, o, !e.options.data[o][s2]));
+          }
+          if (t.length) {
+            utils_history.Dh.call(e, { action: "setValue", records: t, selection: e.selectedCell });
+            const s2 = t.map(function(e2) {
+              return { x: e2.x, y: e2.y, value: e2.value, oldValue: e2.oldValue };
+            });
+            dispatch.A.call(e, "onafterchanges", e, s2);
+          }
+        };
+        var lazyLoading = __webpack_require__(497);
+        const upGet = function(e, t) {
+          const s = this;
+          e = parseInt(e);
+          for (let n = (t = parseInt(t)) - 1; n >= 0; n--) if ("none" != s.records[n][e].element.style.display && "none" != s.rows[n].element.style.display) {
+            if (s.records[n][e].element.getAttribute("data-merged") && s.records[n][e].element == s.records[t][e].element) continue;
+            t = n;
+            break;
+          }
+          return t;
+        }, upVisible = function(e, t) {
+          const s = this;
+          let n, o;
+          if (0 == e ? (n = parseInt(s.selectedCell[0]), o = parseInt(s.selectedCell[1])) : (n = parseInt(s.selectedCell[2]), o = parseInt(s.selectedCell[3])), 0 == t) {
+            for (let e2 = 0; e2 < o; e2++) if ("none" != s.records[e2][n].element.style.display && "none" != s.rows[e2].element.style.display) {
+              o = e2;
+              break;
+            }
+          } else o = upGet.call(s, n, o);
+          0 == e ? (s.selectedCell[0] = n, s.selectedCell[1] = o) : (s.selectedCell[2] = n, s.selectedCell[3] = o);
+        }, up = function(e, t) {
+          const s = this;
+          if (e ? s.selectedCell[3] > 0 && upVisible.call(s, 1, t ? 0 : 1) : (s.selectedCell[1] > 0 && upVisible.call(s, 0, t ? 0 : 1), s.selectedCell[2] = s.selectedCell[0], s.selectedCell[3] = s.selectedCell[1]), s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]), 1 == s.options.lazyLoading) if (0 == s.selectedCell[1] || 0 == s.selectedCell[3]) lazyLoading.wu.call(s, 0), s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]);
+          else if (lazyLoading.AG.call(s)) s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]);
+          else {
+            const e2 = parseInt(s.tbody.firstChild.getAttribute("data-y"));
+            s.selectedCell[1] - e2 < 30 && (lazyLoading.G_.call(s), s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]));
+          }
+          else if (s.options.pagination > 0) {
+            const e2 = s.whichPage(s.selectedCell[3]);
+            e2 != s.pageNumber && s.page(e2);
+          }
+          internal.Rs.call(s, 1);
+        }, rightGet = function(e, t) {
+          const s = this;
+          e = parseInt(e), t = parseInt(t);
+          for (let n = e + 1; n < s.headers.length; n++) if ("none" != s.records[t][n].element.style.display) {
+            if (s.records[t][n].element.getAttribute("data-merged") && s.records[t][n].element == s.records[t][e].element) continue;
+            e = n;
+            break;
+          }
+          return e;
+        }, rightVisible = function(e, t) {
+          const s = this;
+          let n, o;
+          if (0 == e ? (n = parseInt(s.selectedCell[0]), o = parseInt(s.selectedCell[1])) : (n = parseInt(s.selectedCell[2]), o = parseInt(s.selectedCell[3])), 0 == t) {
+            for (let e2 = s.headers.length - 1; e2 > n; e2--) if ("none" != s.records[o][e2].element.style.display) {
+              n = e2;
+              break;
+            }
+          } else n = rightGet.call(s, n, o);
+          0 == e ? (s.selectedCell[0] = n, s.selectedCell[1] = o) : (s.selectedCell[2] = n, s.selectedCell[3] = o);
+        }, right = function(e, t) {
+          const s = this;
+          e ? s.selectedCell[2] < s.headers.length - 1 && rightVisible.call(s, 1, t ? 0 : 1) : (s.selectedCell[0] < s.headers.length - 1 && rightVisible.call(s, 0, t ? 0 : 1), s.selectedCell[2] = s.selectedCell[0], s.selectedCell[3] = s.selectedCell[1]), s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]), internal.Rs.call(s, 2);
+        }, downGet = function(e, t) {
+          const s = this;
+          e = parseInt(e);
+          for (let n = (t = parseInt(t)) + 1; n < s.rows.length; n++) if ("none" != s.records[n][e].element.style.display && "none" != s.rows[n].element.style.display) {
+            if (s.records[n][e].element.getAttribute("data-merged") && s.records[n][e].element == s.records[t][e].element) continue;
+            t = n;
+            break;
+          }
+          return t;
+        }, downVisible = function(e, t) {
+          const s = this;
+          let n, o;
+          if (0 == e ? (n = parseInt(s.selectedCell[0]), o = parseInt(s.selectedCell[1])) : (n = parseInt(s.selectedCell[2]), o = parseInt(s.selectedCell[3])), 0 == t) {
+            for (let e2 = s.rows.length - 1; e2 > o; e2--) if ("none" != s.records[e2][n].element.style.display && "none" != s.rows[e2].element.style.display) {
+              o = e2;
+              break;
+            }
+          } else o = downGet.call(s, n, o);
+          0 == e ? (s.selectedCell[0] = n, s.selectedCell[1] = o) : (s.selectedCell[2] = n, s.selectedCell[3] = o);
+        }, down = function(e, t) {
+          const s = this;
+          if (e ? s.selectedCell[3] < s.records.length - 1 && downVisible.call(s, 1, t ? 0 : 1) : (s.selectedCell[1] < s.records.length - 1 && downVisible.call(s, 0, t ? 0 : 1), s.selectedCell[2] = s.selectedCell[0], s.selectedCell[3] = s.selectedCell[1]), s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]), 1 == s.options.lazyLoading) s.selectedCell[1] == s.records.length - 1 || s.selectedCell[3] == s.records.length - 1 ? (lazyLoading.wu.call(s, -1), s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3])) : lazyLoading.AG.call(s) ? s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]) : parseInt(s.tbody.lastChild.getAttribute("data-y")) - s.selectedCell[3] < 30 && (lazyLoading.p6.call(s), s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]));
+          else if (s.options.pagination > 0) {
+            const e2 = s.whichPage(s.selectedCell[3]);
+            e2 != s.pageNumber && s.page(e2);
+          }
+          internal.Rs.call(s, 3);
+        }, leftGet = function(e, t) {
+          const s = this;
+          e = parseInt(e), t = parseInt(t);
+          for (let n = e - 1; n >= 0; n--) if ("none" != s.records[t][n].element.style.display) {
+            if (s.records[t][n].element.getAttribute("data-merged") && s.records[t][n].element == s.records[t][e].element) continue;
+            e = n;
+            break;
+          }
+          return e;
+        }, leftVisible = function(e, t) {
+          const s = this;
+          let n, o;
+          if (0 == e ? (n = parseInt(s.selectedCell[0]), o = parseInt(s.selectedCell[1])) : (n = parseInt(s.selectedCell[2]), o = parseInt(s.selectedCell[3])), 0 == t) {
+            for (let e2 = 0; e2 < n; e2++) if ("none" != s.records[o][e2].element.style.display) {
+              n = e2;
+              break;
+            }
+          } else n = leftGet.call(s, n, o);
+          0 == e ? (s.selectedCell[0] = n, s.selectedCell[1] = o) : (s.selectedCell[2] = n, s.selectedCell[3] = o);
+        }, left = function(e, t) {
+          const s = this;
+          e ? s.selectedCell[2] > 0 && leftVisible.call(s, 1, t ? 0 : 1) : (s.selectedCell[0] > 0 && leftVisible.call(s, 0, t ? 0 : 1), s.selectedCell[2] = s.selectedCell[0], s.selectedCell[3] = s.selectedCell[1]), s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]), internal.Rs.call(s, 0);
+        }, first = function(e, t) {
+          const s = this;
+          if (e ? t ? s.selectedCell[3] = 0 : leftVisible.call(s, 1, 0) : (t ? s.selectedCell[1] = 0 : leftVisible.call(s, 0, 0), s.selectedCell[2] = s.selectedCell[0], s.selectedCell[3] = s.selectedCell[1]), 1 != s.options.lazyLoading || 0 != s.selectedCell[1] && 0 != s.selectedCell[3]) {
+            if (s.options.pagination > 0) {
+              const e2 = s.whichPage(s.selectedCell[3]);
+              e2 != s.pageNumber && s.page(e2);
+            }
+          } else lazyLoading.wu.call(s, 0);
+          s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]), internal.Rs.call(s, 1);
+        }, last = function(e, t) {
+          const s = this;
+          if (e ? t ? s.selectedCell[3] = s.records.length - 1 : rightVisible.call(s, 1, 0) : (t ? s.selectedCell[1] = s.records.length - 1 : rightVisible.call(s, 0, 0), s.selectedCell[2] = s.selectedCell[0], s.selectedCell[3] = s.selectedCell[1]), 1 != s.options.lazyLoading || s.selectedCell[1] != s.records.length - 1 && s.selectedCell[3] != s.records.length - 1) {
+            if (s.options.pagination > 0) {
+              const e2 = s.whichPage(s.selectedCell[3]);
+              e2 != s.pageNumber && s.page(e2);
+            }
+          } else lazyLoading.wu.call(s, -1);
+          s.updateSelectionFromCoords(s.selectedCell[0], s.selectedCell[1], s.selectedCell[2], s.selectedCell[3]), internal.Rs.call(s, 3);
+        };
+        var merges = __webpack_require__(910), selection = __webpack_require__(657), helpers = __webpack_require__(978), internalHelpers = __webpack_require__(689);
+        const copy = function(e, t, s, n, o, r, l) {
+          const i2 = this;
+          t || (t = "	");
+          const a = new RegExp(t, "ig"), c = [];
+          let d = [], u = [];
+          const p = [], h = [], m = i2.options.data[0].length, f = i2.options.data.length;
+          let g = "", y2 = false, b = "", C = "", j = 0, w = 0, _ = 0, B = 0, v = true;
+          for (let t2 = 0; t2 < f; t2++) for (let s2 = 0; s2 < m; s2++) e && !i2.records[t2][s2].element.classList.contains("highlight") || (_ <= s2 && (_ = s2), B <= t2 && (B = t2));
+          if (m === _ + 1 && f === B + 1 && false, o && (1 == i2.parent.config.includeHeadersOnDownload || n)) {
+            if (i2.options.nestedHeaders && i2.options.nestedHeaders.length > 0) {
+              g = i2.options.nestedHeaders;
+              for (let e2 = 0; e2 < g.length; e2++) {
+                const s2 = [];
+                for (let t2 = 0; t2 < g[e2].length; t2++) {
+                  const n2 = parseInt(g[e2][t2].colspan);
+                  s2.push(g[e2][t2].title);
+                  for (let e3 = 0; e3 < n2 - 1; e3++) s2.push("");
+                }
+                C += s2.join(t) + "\r\n";
+              }
+            }
+            y2 = true;
+          }
+          i2.style = [];
+          for (let s2 = 0; s2 < f; s2++) {
+            d = [], u = [];
+            for (let t2 = 0; t2 < m; t2++) if (!e || i2.records[s2][t2].element.classList.contains("highlight")) {
+              1 == y2 && c.push(i2.headers[t2].textContent);
+              let e2, n2 = i2.options.data[s2][t2];
+              n2.match && (n2.match(a) || n2.match(/,/g) || n2.match(/\n/) || n2.match(/\"/)) && (n2 = n2.replace(new RegExp('"', "g"), '""'), n2 = '"' + n2 + '"'), d.push(n2), i2.options.columns && i2.options.columns[t2] && ("checkbox" == i2.options.columns[t2].type || "radio" == i2.options.columns[t2].type) ? e2 = n2 : (e2 = i2.records[s2][t2].element.innerHTML, e2.match && (e2.match(a) || e2.match(/,/g) || e2.match(/\n/) || e2.match(/\"/)) && (e2 = e2.replace(new RegExp('"', "g"), '""'), e2 = '"' + e2 + '"')), u.push(e2), g = i2.records[s2][t2].element.getAttribute("style"), g = g.replace("display: none;", ""), i2.style.push(g || "");
+            }
+            d.length && (y2 && (j = d.length, p.push(c.join(t))), p.push(d.join(t))), u.length && (w++, y2 && (h.push(c.join(t)), y2 = false), h.push(u.join(t)));
+          }
+          m == j && f == w && (b = C);
+          const A = b + p.join("\r\n");
+          let x2 = b + h.join("\r\n");
+          if (!s) {
+            const e2 = [Math.min(i2.selectedCell[0], i2.selectedCell[2]), Math.min(i2.selectedCell[1], i2.selectedCell[3]), Math.max(i2.selectedCell[0], i2.selectedCell[2]), Math.max(i2.selectedCell[1], i2.selectedCell[3])], t2 = dispatch.A.call(i2, "oncopy", i2, e2, x2, r);
+            if (t2) x2 = t2;
+            else if (false === t2) return false;
+            i2.textarea.value = x2, i2.textarea.select(), document.execCommand("copy");
+          }
+          if (i2.data = 1 == l ? x2 : A, i2.hashString = selection.tW.call(i2, i2.data), !s && (selection.kA.call(i2), i2.highlighted)) for (let e2 = 0; e2 < i2.highlighted.length; e2++) i2.highlighted[e2].element.classList.add("copying"), i2.highlighted[e2].element.classList.contains("highlight-left") && i2.highlighted[e2].element.classList.add("copying-left"), i2.highlighted[e2].element.classList.contains("highlight-right") && i2.highlighted[e2].element.classList.add("copying-right"), i2.highlighted[e2].element.classList.contains("highlight-top") && i2.highlighted[e2].element.classList.add("copying-top"), i2.highlighted[e2].element.classList.contains("highlight-bottom") && i2.highlighted[e2].element.classList.add("copying-bottom");
+          return i2.data;
+        }, paste = function(e, t, s) {
+          const n = this, o = (0, selection.tW)(s);
+          let r = o == n.hashString ? n.style : null;
+          o == n.hashString && (s = n.data), s = (0, helpers.parseCSV)(s, "	");
+          const l = n.selectedCell[2] - e + 1, i2 = n.selectedCell[3] - t + 1, a = s[0].length;
+          if (l > 1 & Number.isInteger(l / a)) {
+            const e2 = l / a;
+            if (r) {
+              const t3 = [];
+              for (let s2 = 0; s2 < r.length; s2 += a) {
+                const n2 = r.slice(s2, s2 + a);
+                for (let s3 = 0; s3 < e2; s3++) t3.push(...n2);
+              }
+              r = t3;
+            }
+            const t2 = s.map(function(t3, s2) {
+              const n2 = Array.apply(null, { length: e2 * t3.length }).map(function(e3, s3) {
+                return t3[s3 % t3.length];
+              });
+              return n2;
+            });
+            s = t2;
+          }
+          const c = s.length;
+          if (i2 > 1 & Number.isInteger(i2 / c)) {
+            const e2 = i2 / c;
+            if (r) {
+              const t3 = [];
+              for (let s2 = 0; s2 < e2; s2++) t3.push(...r);
+              r = t3;
+            }
+            const t2 = Array.apply(null, { length: e2 * c }).map(function(e3, t3) {
+              return s[t3 % c];
+            });
+            s = t2;
+          }
+          const d = dispatch.A.call(n, "onbeforepaste", n, s.map(function(e2) {
+            return e2.map(function(e3) {
+              return { value: e3 };
+            });
+          }), e, t);
+          if (false === d) return false;
+          if (d && (s = d), null != e && null != t && s) {
+            let o2 = 0, l2 = 0;
+            const i3 = [], a2 = {}, c2 = {};
+            let d2 = 0, u = parseInt(e), p = parseInt(t), h = null;
+            const m = n.headers.slice(u).filter((e2) => "none" === e2.style.display).length, f = u + m + s[0].length, g = n.headers.length;
+            f > g && (n.skipUpdateTableReferences = true, n.insertColumn(f - g));
+            const y2 = n.rows.slice(p).filter((e2) => "none" === e2.element.style.display).length, b = p + y2 + s.length, C = n.rows.length;
+            for (b > C && (n.skipUpdateTableReferences = true, n.insertRow(b - C)), n.skipUpdateTableReferences && (n.skipUpdateTableReferences = false, internal.o8.call(n)); h = s[l2]; ) {
+              for (o2 = 0, u = parseInt(e); null != h[o2]; ) {
+                let e2 = h[o2];
+                n.options.columns && n.options.columns[o2] && "calendar" == n.options.columns[o2].type && (e2 = jSuites.calendar.extractDateFromString(e2, n.options.columns[o2].options && n.options.columns[o2].options.format || "YYYY-MM-DD"));
+                const t2 = internal.k9.call(n, u, p, e2);
+                if (i3.push(t2), internal.xF.call(n, u, p, i3), r && r[d2]) {
+                  const e3 = (0, internalHelpers.t3)([u, p]);
+                  a2[e3] = r[d2], c2[e3] = n.getStyle(e3), n.records[p][u].element.setAttribute("style", r[d2]), d2++;
+                }
+                if (o2++, null != h[o2]) {
+                  if (u >= n.headers.length - 1) {
+                    if (0 == n.options.allowInsertColumn) break;
+                    n.insertColumn();
+                  }
+                  u = rightGet.call(n, u, p);
+                }
+              }
+              if (l2++, s[l2]) {
+                if (p >= n.rows.length - 1) {
+                  if (0 == n.options.allowInsertRow) break;
+                  n.insertRow();
+                }
+                p = downGet.call(n, e, p);
+              }
+            }
+            selection.AH.call(n, e, t, u, p), utils_history.Dh.call(n, { action: "setValue", records: i3, selection: n.selectedCell, newStyle: a2, oldStyle: c2 }), internal.am.call(n);
+            const j = [];
+            for (let n2 = 0; n2 < s.length; n2++) for (let o3 = 0; o3 < s[n2].length; o3++) j.push({ x: o3 + e, y: n2 + t, value: s[n2][o3] });
+            dispatch.A.call(n, "onpaste", n, j);
+            const w = i3.map(function(e2) {
+              return { x: e2.x, y: e2.y, value: e2.value, oldValue: e2.oldValue };
+            });
+            dispatch.A.call(n, "onafterchanges", n, w);
+          }
+          (0, selection.kA)();
+        };
+        var filter = __webpack_require__(829), footer = __webpack_require__(160);
+        const getNumberOfColumns = function() {
+          const e = this;
+          let t = e.options.columns && e.options.columns.length || 0;
+          if (e.options.data && void 0 !== e.options.data[0]) {
+            const s = Object.keys(e.options.data[0]);
+            s.length > t && (t = s.length);
+          }
+          return e.options.minDimensions && e.options.minDimensions[0] > t && (t = e.options.minDimensions[0]), t;
+        }, createCellHeader = function(e) {
+          const t = this, s = t.options.columns && t.options.columns[e] && t.options.columns[e].width || t.options.defaultColWidth || 100, n = t.options.columns && t.options.columns[e] && t.options.columns[e].align || t.options.defaultColAlign || "center";
+          t.headers[e] = document.createElement("td"), t.headers[e].textContent = t.options.columns && t.options.columns[e] && t.options.columns[e].title || (0, helpers.getColumnName)(e), t.headers[e].setAttribute("data-x", e), t.headers[e].style.textAlign = n, t.options.columns && t.options.columns[e] && t.options.columns[e].title && t.headers[e].setAttribute("title", t.headers[e].innerText), t.options.columns && t.options.columns[e] && t.options.columns[e].id && t.headers[e].setAttribute("id", t.options.columns[e].id);
+          const o = document.createElement("col");
+          o.setAttribute("width", s), t.cols[e] = { colElement: o, x: e }, t.options.columns && t.options.columns[e] && "hidden" == t.options.columns[e].type && (t.headers[e].style.display = "none", o.style.display = "none");
+        }, insertColumn = function(e, t, s, n) {
+          const o = this;
+          if (0 != o.options.allowInsertColumn) {
+            let r, l = [];
+            Array.isArray(e) ? (r = 1, e && (l = e)) : r = "number" == typeof e ? e : 1, s = !!s;
+            const i2 = Math.max(o.options.columns.length, ...o.options.data.map(function(e2) {
+              return e2.length;
+            })) - 1;
+            (null == t || t >= parseInt(i2) || t < 0) && (t = i2), n || (n = []);
+            for (let e2 = 0; e2 < r; e2++) n[e2] || (n[e2] = {});
+            const a = [];
+            if (Array.isArray(e)) {
+              const r2 = [];
+              for (let t2 = 0; t2 < o.options.data.length; t2++) r2.push(t2 < e.length ? e[t2] : "");
+              const l2 = { column: t + (s ? 0 : 1), options: Object.assign({}, n[0]), data: r2 };
+              a.push(l2);
+            } else for (let o2 = 0; o2 < e; o2++) {
+              const e2 = { column: t + o2 + (s ? 0 : 1), options: Object.assign({}, n[o2]) };
+              a.push(e2);
+            }
+            if (false === dispatch.A.call(o, "onbeforeinsertcolumn", o, a)) return false;
+            if (o.options.mergeCells && Object.keys(o.options.mergeCells).length > 0 && merges.Lt.call(o, t, s).length) {
+              if (!confirm(jSuites.translate("This action will destroy any existing merged cells. Are you sure?"))) return false;
+              o.destroyMerge();
+            }
+            const c = s ? t : t + 1;
+            o.options.columns = (0, internalHelpers.Hh)(o.options.columns, c, n);
+            const d = o.headers.splice(c), u = o.cols.splice(c), p = [], h = [], m = [], f = [], g = [];
+            for (let e2 = c; e2 < r + c; e2++) createCellHeader.call(o, e2), o.headerContainer.insertBefore(o.headers[e2], o.headerContainer.children[e2 + 1]), o.colgroupContainer.insertBefore(o.cols[e2].colElement, o.colgroupContainer.children[e2 + 1]), p.push(o.headers[e2]), h.push(o.cols[e2]);
+            if (o.options.footers) for (let e2 = 0; e2 < o.options.footers.length; e2++) {
+              g[e2] = [];
+              for (let t2 = 0; t2 < r; t2++) g[e2].push("");
+              o.options.footers[e2].splice(c, 0, g[e2]);
+            }
+            for (let e2 = 0; e2 < o.options.data.length; e2++) {
+              const t2 = o.options.data[e2].splice(c), s2 = o.records[e2].splice(c);
+              f[e2] = [], m[e2] = [];
+              for (let t3 = c; t3 < r + c; t3++) {
+                const s3 = l[e2] ? l[e2] : "";
+                o.options.data[e2][t3] = s3;
+                const n2 = internal.P9.call(o, t3, e2, o.options.data[e2][t3]);
+                o.records[e2][t3] = { element: n2, y: e2 }, o.rows[e2] && o.rows[e2].element.insertBefore(n2, o.rows[e2].element.children[t3 + 1]), o.options.columns && o.options.columns[t3] && "function" == typeof o.options.columns[t3].render && o.options.columns[t3].render(n2, s3, parseInt(t3), parseInt(e2), o, o.options.columns[t3]), f[e2].push(s3), m[e2].push({ element: n2, x: t3, y: e2 });
+              }
+              Array.prototype.push.apply(o.options.data[e2], t2), Array.prototype.push.apply(o.records[e2], s2);
+            }
+            Array.prototype.push.apply(o.headers, d), Array.prototype.push.apply(o.cols, u);
+            for (let e2 = c; e2 < o.cols.length; e2++) o.cols[e2].x = e2;
+            for (let e2 = 0; e2 < o.records.length; e2++) for (let t2 = 0; t2 < o.records[e2].length; t2++) o.records[e2][t2].x = t2;
+            if (o.options.nestedHeaders && o.options.nestedHeaders.length > 0 && o.options.nestedHeaders[0] && o.options.nestedHeaders[0][0]) for (let e2 = 0; e2 < o.options.nestedHeaders.length; e2++) {
+              const t2 = parseInt(o.options.nestedHeaders[e2][o.options.nestedHeaders[e2].length - 1].colspan) + r;
+              o.options.nestedHeaders[e2][o.options.nestedHeaders[e2].length - 1].colspan = t2, o.thead.children[e2].children[o.thead.children[e2].children.length - 1].setAttribute("colspan", t2);
+              let s2 = o.thead.children[e2].children[o.thead.children[e2].children.length - 1].getAttribute("data-column");
+              s2 = s2.split(",");
+              for (let e3 = c; e3 < r + c; e3++) s2.push(e3);
+              o.thead.children[e2].children[o.thead.children[e2].children.length - 1].setAttribute("data-column", s2);
+            }
+            utils_history.Dh.call(o, { action: "insertColumn", columnNumber: t, numOfColumns: r, insertBefore: s, columns: n, headers: p, cols: h, records: m, footers: g, data: f }), internal.o8.call(o), dispatch.A.call(o, "oninsertcolumn", o, a);
+          }
+        }, moveColumn = function(e, t) {
+          const s = this;
+          if (s.options.mergeCells && Object.keys(s.options.mergeCells).length > 0) {
+            let n2;
+            if (n2 = e > t ? 1 : 0, merges.Lt.call(s, e).length || merges.Lt.call(s, t, n2).length) {
+              if (!confirm(jSuites.translate("This action will destroy any existing merged cells. Are you sure?"))) return false;
+              s.destroyMerge();
+            }
+          }
+          if ((e = parseInt(e)) > (t = parseInt(t))) {
+            s.headerContainer.insertBefore(s.headers[e], s.headers[t]), s.colgroupContainer.insertBefore(s.cols[e].colElement, s.cols[t].colElement);
+            for (let n2 = 0; n2 < s.rows.length; n2++) s.rows[n2].element.insertBefore(s.records[n2][e].element, s.records[n2][t].element);
+          } else {
+            s.headerContainer.insertBefore(s.headers[e], s.headers[t].nextSibling), s.colgroupContainer.insertBefore(s.cols[e].colElement, s.cols[t].colElement.nextSibling);
+            for (let n2 = 0; n2 < s.rows.length; n2++) s.rows[n2].element.insertBefore(s.records[n2][e].element, s.records[n2][t].element.nextSibling);
+          }
+          s.options.columns.splice(t, 0, s.options.columns.splice(e, 1)[0]), s.headers.splice(t, 0, s.headers.splice(e, 1)[0]), s.cols.splice(t, 0, s.cols.splice(e, 1)[0]);
+          const n = Math.min(e, t), o = Math.max(e, t);
+          for (let n2 = 0; n2 < s.rows.length; n2++) s.options.data[n2].splice(t, 0, s.options.data[n2].splice(e, 1)[0]), s.records[n2].splice(t, 0, s.records[n2].splice(e, 1)[0]);
+          for (let e2 = n; e2 <= o; e2++) s.cols[e2].x = e2;
+          for (let e2 = 0; e2 < s.records.length; e2++) for (let t2 = n; t2 <= o; t2++) s.records[e2][t2].x = t2;
+          if (s.options.footers) for (let n2 = 0; n2 < s.options.footers.length; n2++) s.options.footers[n2].splice(t, 0, s.options.footers[n2].splice(e, 1)[0]);
+          utils_history.Dh.call(s, { action: "moveColumn", oldValue: e, newValue: t }), internal.o8.call(s), dispatch.A.call(s, "onmovecolumn", s, e, t, 1);
+        }, deleteColumn = function(e, t) {
+          const s = this;
+          if (0 != s.options.allowDeleteColumn) if (s.headers.length > 1) {
+            if (null == e) {
+              const n2 = s.getSelectedColumns(true);
+              n2.length ? (e = parseInt(n2[0]), t = parseInt(n2.length)) : (e = s.headers.length - 1, t = 1);
+            }
+            const n = s.options.data[0].length - 1;
+            (null == e || e > n || e < 0) && (e = n), t || (t = 1), t > s.options.data[0].length - e && (t = s.options.data[0].length - e);
+            const o = [];
+            for (let s2 = 0; s2 < t; s2++) o.push(s2 + e);
+            if (false === dispatch.A.call(s, "onbeforedeletecolumn", s, o)) return false;
+            if (parseInt(e) > -1) {
+              let n2 = false;
+              if (s.options.mergeCells && Object.keys(s.options.mergeCells).length > 0) for (let o2 = e; o2 < e + t; o2++) merges.Lt.call(s, o2, null).length && (n2 = true);
+              if (n2) {
+                if (!confirm(jSuites.translate("This action will destroy any existing merged cells. Are you sure?"))) return false;
+                s.destroyMerge();
+              }
+              const r = s.options.columns ? s.options.columns.splice(e, t) : void 0;
+              for (let n3 = e; n3 < e + t; n3++) s.cols[n3].colElement.className = "", s.headers[n3].className = "", s.cols[n3].colElement.parentNode.removeChild(s.cols[n3].colElement), s.headers[n3].parentNode.removeChild(s.headers[n3]);
+              const l = s.headers.splice(e, t), i2 = s.cols.splice(e, t), a = [], c = [], d = [];
+              for (let n3 = 0; n3 < s.options.data.length; n3++) for (let o2 = e; o2 < e + t; o2++) s.records[n3][o2].element.className = "", s.records[n3][o2].element.parentNode.removeChild(s.records[n3][o2].element);
+              for (let n3 = 0; n3 < s.options.data.length; n3++) c[n3] = s.options.data[n3].splice(e, t), a[n3] = s.records[n3].splice(e, t);
+              for (let t2 = e; t2 < s.cols.length; t2++) s.cols[t2].x = t2;
+              for (let t2 = 0; t2 < s.records.length; t2++) for (let n3 = e; n3 < s.records[t2].length; n3++) s.records[t2][n3].x = n3;
+              if (s.options.footers) for (let n3 = 0; n3 < s.options.footers.length; n3++) d[n3] = s.options.footers[n3].splice(e, t);
+              if (selection.at.call(s, 0, e, e + t - 1), s.options.nestedHeaders && s.options.nestedHeaders.length > 0 && s.options.nestedHeaders[0] && s.options.nestedHeaders[0][0]) for (let e2 = 0; e2 < s.options.nestedHeaders.length; e2++) {
+                const n3 = parseInt(s.options.nestedHeaders[e2][s.options.nestedHeaders[e2].length - 1].colspan) - t;
+                s.options.nestedHeaders[e2][s.options.nestedHeaders[e2].length - 1].colspan = n3, s.thead.children[e2].children[s.thead.children[e2].children.length - 1].setAttribute("colspan", n3);
+              }
+              utils_history.Dh.call(s, { action: "deleteColumn", columnNumber: e, numOfColumns: t, insertBefore: 1, columns: r, headers: l, cols: i2, records: a, footers: d, data: c }), internal.o8.call(s), dispatch.A.call(s, "ondeletecolumn", s, o);
+            }
+          } else console.error("Jspreadsheet: It is not possible to delete the last column");
+        }, getWidth = function(e) {
+          const t = this;
+          let s;
+          if (void 0 === e) {
+            s = [];
+            for (let e2 = 0; e2 < t.headers.length; e2++) s.push(t.options.columns && t.options.columns[e2] && t.options.columns[e2].width || t.options.defaultColWidth || 100);
+          } else s = parseInt(t.cols[e].colElement.getAttribute("width"));
+          return s;
+        }, setWidth = function(e, t, s) {
+          const n = this;
+          if (t) {
+            if (Array.isArray(e)) {
+              s || (s = []);
+              for (let o = 0; o < e.length; o++) {
+                s[o] || (s[o] = parseInt(n.cols[e[o]].colElement.getAttribute("width")));
+                const r = Array.isArray(t) && t[o] ? t[o] : t;
+                n.cols[e[o]].colElement.setAttribute("width", r), n.options.columns || (n.options.columns = []), n.options.columns[e[o]] || (n.options.columns[e[o]] = {}), n.options.columns[e[o]].width = r;
+              }
+            } else s || (s = parseInt(n.cols[e].colElement.getAttribute("width"))), n.cols[e].colElement.setAttribute("width", t), n.options.columns || (n.options.columns = []), n.options.columns[e] || (n.options.columns[e] = {}), n.options.columns[e].width = t;
+            utils_history.Dh.call(n, { action: "setWidth", column: e, oldValue: s, newValue: t }), dispatch.A.call(n, "onresizecolumn", n, e, t, s), selection.Aq.call(n);
+          }
+        }, showColumn = function(e) {
+          const t = this;
+          Array.isArray(e) || (e = [e]);
+          for (let s = 0; s < e.length; s++) {
+            const n = e[s];
+            t.headers[n].style.display = "", t.cols[n].colElement.style.display = "", t.filter && t.filter.children.length > n + 1 && (t.filter.children[n + 1].style.display = "");
+            for (let e2 = 0; e2 < t.options.data.length; e2++) t.records[e2][n].element.style.display = "";
+          }
+          t.options.footers && footer.e.call(t), t.resetSelection();
+        }, hideColumn = function(e) {
+          const t = this;
+          Array.isArray(e) || (e = [e]);
+          for (let s = 0; s < e.length; s++) {
+            const n = e[s];
+            t.headers[n].style.display = "none", t.cols[n].colElement.style.display = "none", t.filter && t.filter.children.length > n + 1 && (t.filter.children[n + 1].style.display = "none");
+            for (let e2 = 0; e2 < t.options.data.length; e2++) t.records[e2][n].element.style.display = "none";
+          }
+          t.options.footers && footer.e.call(t), t.resetSelection();
+        }, getColumnData = function(e, t) {
+          const s = this, n = [];
+          for (let o = 0; o < s.options.data.length; o++) t ? n.push(s.records[o][e].element.innerHTML) : n.push(s.options.data[o][e]);
+          return n;
+        }, setColumnData = function(e, t, s) {
+          const n = this;
+          for (let o = 0; o < n.rows.length; o++) {
+            const r = (0, internalHelpers.t3)([e, o]);
+            null != t[o] && n.setValue(r, t[o], s);
+          }
+        }, createRow = function(e, t) {
+          const s = this;
+          s.records[e] || (s.records[e] = []), t || (t = s.options.data[e]);
+          const n = { element: document.createElement("tr"), y: e };
+          s.rows[e] = n, n.element.setAttribute("data-y", e);
+          let o = null;
+          s.options.defaultRowHeight && (n.element.style.height = s.options.defaultRowHeight + "px"), s.options.rows && s.options.rows[e] && (s.options.rows[e].height && (n.element.style.height = s.options.rows[e].height), s.options.rows[e].title && (o = s.options.rows[e].title)), o || (o = parseInt(e + 1));
+          const r = document.createElement("td");
+          r.innerHTML = o, r.setAttribute("data-y", e), r.className = "jss_row", n.element.appendChild(r);
+          const l = getNumberOfColumns.call(s);
+          for (let o2 = 0; o2 < l; o2++) s.records[e][o2] = { element: internal.P9.call(this, o2, e, t[o2]), x: o2, y: e }, n.element.appendChild(s.records[e][o2].element), s.options.columns && s.options.columns[o2] && "function" == typeof s.options.columns[o2].render && s.options.columns[o2].render(s.records[e][o2].element, t[o2], parseInt(o2), parseInt(e), s, s.options.columns[o2]);
+          return n;
+        }, insertRow = function(e, t, s) {
+          const n = this;
+          if (0 != n.options.allowInsertRow) {
+            let o, r = [];
+            Array.isArray(e) ? (o = 1, e && (r = e)) : o = void 0 !== e ? e : 1, s = !!s;
+            const l = n.options.data.length - 1;
+            (null == t || t >= parseInt(l) || t < 0) && (t = l);
+            const i2 = [];
+            for (let e2 = 0; e2 < o; e2++) {
+              const o2 = [];
+              for (let e3 = 0; e3 < n.options.columns.length; e3++) o2[e3] = r[e3] ? r[e3] : "";
+              i2.push({ row: e2 + t + (s ? 0 : 1), data: o2 });
+            }
+            if (false === dispatch.A.call(n, "onbeforeinsertrow", n, i2)) return false;
+            if (n.options.mergeCells && Object.keys(n.options.mergeCells).length > 0 && merges.D0.call(n, t, s).length) {
+              if (!confirm(jSuites.translate("This action will destroy any existing merged cells. Are you sure?"))) return false;
+              n.destroyMerge();
+            }
+            if (1 == n.options.search) {
+              if (n.results && n.results.length != n.rows.length) {
+                if (!confirm(jSuites.translate("This action will clear your search results. Are you sure?"))) return false;
+                n.resetSearch();
+              }
+              n.results = null;
+            }
+            const a = s ? t : t + 1, c = n.records.splice(a), d = n.options.data.splice(a), u = n.rows.splice(a), p = [], h = [], m = [];
+            for (let e2 = a; e2 < o + a; e2++) {
+              n.options.data[e2] = [];
+              for (let t2 = 0; t2 < n.options.columns.length; t2++) n.options.data[e2][t2] = r[t2] ? r[t2] : "";
+              const s2 = createRow.call(n, e2, n.options.data[e2]);
+              u[0] ? Array.prototype.indexOf.call(n.tbody.children, u[0].element) >= 0 && n.tbody.insertBefore(s2.element, u[0].element) : Array.prototype.indexOf.call(n.tbody.children, n.rows[t].element) >= 0 && n.tbody.appendChild(s2.element), p.push([...n.records[e2]]), h.push([...n.options.data[e2]]), m.push(s2);
+            }
+            Array.prototype.push.apply(n.records, c), Array.prototype.push.apply(n.options.data, d), Array.prototype.push.apply(n.rows, u);
+            for (let e2 = a; e2 < n.rows.length; e2++) n.rows[e2].y = e2;
+            for (let e2 = a; e2 < n.records.length; e2++) for (let t2 = 0; t2 < n.records[e2].length; t2++) n.records[e2][t2].y = e2;
+            n.options.pagination > 0 && n.page(n.pageNumber), utils_history.Dh.call(n, { action: "insertRow", rowNumber: t, numOfRows: o, insertBefore: s, rowRecords: p, rowData: h, rowNode: m }), internal.o8.call(n), dispatch.A.call(n, "oninsertrow", n, i2);
+          }
+        }, moveRow = function(e, t, s) {
+          const n = this;
+          if (n.options.mergeCells && Object.keys(n.options.mergeCells).length > 0) {
+            let s2;
+            if (s2 = e > t ? 1 : 0, merges.D0.call(n, e).length || merges.D0.call(n, t, s2).length) {
+              if (!confirm(jSuites.translate("This action will destroy any existing merged cells. Are you sure?"))) return false;
+              n.destroyMerge();
+            }
+          }
+          if (1 == n.options.search) {
+            if (n.results && n.results.length != n.rows.length) {
+              if (!confirm(jSuites.translate("This action will clear your search results. Are you sure?"))) return false;
+              n.resetSearch();
+            }
+            n.results = null;
+          }
+          s || (Array.prototype.indexOf.call(n.tbody.children, n.rows[t].element) >= 0 ? e > t ? n.tbody.insertBefore(n.rows[e].element, n.rows[t].element) : n.tbody.insertBefore(n.rows[e].element, n.rows[t].element.nextSibling) : n.tbody.removeChild(n.rows[e].element)), n.rows.splice(t, 0, n.rows.splice(e, 1)[0]), n.records.splice(t, 0, n.records.splice(e, 1)[0]), n.options.data.splice(t, 0, n.options.data.splice(e, 1)[0]);
+          const o = Math.min(e, t), r = Math.max(e, t);
+          for (let e2 = o; e2 <= r; e2++) n.rows[e2].y = e2;
+          for (let e2 = o; e2 <= r; e2++) for (let t2 = 0; t2 < n.records[e2].length; t2++) n.records[e2][t2].y = e2;
+          n.options.pagination > 0 && n.tbody.children.length != n.options.pagination && n.page(n.pageNumber), utils_history.Dh.call(n, { action: "moveRow", oldValue: e, newValue: t }), internal.o8.call(n), dispatch.A.call(n, "onmoverow", n, parseInt(e), parseInt(t), 1);
+        }, deleteRow = function(e, t) {
+          const s = this;
+          if (0 != s.options.allowDeleteRow) if (1 == s.options.allowDeletingAllRows || s.options.data.length > 1) {
+            if (null == e) {
+              const n2 = selection.R5.call(s);
+              0 === n2.length ? (e = s.options.data.length - 1, t = 1) : (e = n2[0], t = n2.length);
+            }
+            let n = s.options.data.length - 1;
+            (null == e || e > n || e < 0) && (e = n), t || (t = 1), e + t >= s.options.data.length && (t = s.options.data.length - e);
+            const o = [];
+            for (let s2 = 0; s2 < t; s2++) o.push(s2 + e);
+            if (false === dispatch.A.call(s, "onbeforedeleterow", s, o)) return false;
+            if (parseInt(e) > -1) {
+              let r = false;
+              if (s.options.mergeCells && Object.keys(s.options.mergeCells).length > 0) for (let n2 = e; n2 < e + t; n2++) merges.D0.call(s, n2, false).length && (r = true);
+              if (r) {
+                if (!confirm(jSuites.translate("This action will destroy any existing merged cells. Are you sure?"))) return false;
+                s.destroyMerge();
+              }
+              if (1 == s.options.search) {
+                if (s.results && s.results.length != s.rows.length) {
+                  if (!confirm(jSuites.translate("This action will clear your search results. Are you sure?"))) return false;
+                  s.resetSearch();
+                }
+                s.results = null;
+              }
+              1 != s.options.allowDeletingAllRows && n + 1 === t && (t--, console.error("Jspreadsheet: It is not possible to delete the last row"));
+              for (let n2 = e; n2 < e + t; n2++) Array.prototype.indexOf.call(s.tbody.children, s.rows[n2].element) >= 0 && (s.rows[n2].element.className = "", s.rows[n2].element.parentNode.removeChild(s.rows[n2].element));
+              const l = s.records.splice(e, t), i2 = s.options.data.splice(e, t), a = s.rows.splice(e, t);
+              for (let t2 = e; t2 < s.rows.length; t2++) s.rows[t2].y = t2;
+              for (let t2 = e; t2 < s.records.length; t2++) for (let e2 = 0; e2 < s.records[t2].length; e2++) s.records[t2][e2].y = t2;
+              s.options.pagination > 0 && s.tbody.children.length != s.options.pagination && s.page(s.pageNumber), selection.at.call(s, 1, e, e + t - 1), utils_history.Dh.call(s, { action: "deleteRow", rowNumber: e, numOfRows: t, insertBefore: 1, rowRecords: l, rowData: i2, rowNode: a }), internal.o8.call(s), dispatch.A.call(s, "ondeleterow", s, o);
+            }
+          } else console.error("Jspreadsheet: It is not possible to delete the last row");
+        }, getHeight = function(e) {
+          const t = this;
+          let s;
+          if (void 0 === e) {
+            s = [];
+            for (let e2 = 0; e2 < t.rows.length; e2++) {
+              const n = t.rows[e2].element.style.height;
+              n && (s[e2] = n);
+            }
+          } else "object" == typeof e && (e = $(e).getAttribute("data-y")), s = t.rows[e].element.style.height;
+          return s;
+        }, setHeight = function(e, t, s) {
+          const n = this;
+          t > 0 && (s || (s = n.rows[e].element.getAttribute("height")) || (s = n.rows[e].element.getBoundingClientRect().height), t = parseInt(t), n.rows[e].element.style.height = t + "px", n.options.rows || (n.options.rows = []), n.options.rows[e] || (n.options.rows[e] = {}), n.options.rows[e].height = t, utils_history.Dh.call(n, { action: "setHeight", row: e, oldValue: s, newValue: t }), dispatch.A.call(n, "onresizerow", n, e, t, s), selection.Aq.call(n));
+        }, showRow = function(e) {
+          const t = this;
+          Array.isArray(e) || (e = [e]), e.forEach(function(e2) {
+            t.rows[e2].element.style.display = "";
+          });
+        }, hideRow = function(e) {
+          const t = this;
+          Array.isArray(e) || (e = [e]), e.forEach(function(e2) {
+            t.rows[e2].element.style.display = "none";
+          });
+        }, getRowData = function(e, t) {
+          return t ? this.records[e].map(function(e2) {
+            return e2.element.innerHTML;
+          }) : this.options.data[e];
+        }, setRowData = function(e, t, s) {
+          const n = this;
+          for (let o = 0; o < n.headers.length; o++) {
+            const r = (0, internalHelpers.t3)([o, e]);
+            null != t[o] && n.setValue(r, t[o], s);
+          }
+        };
+        var version = { version: "5.0.0", host: "https://bossanova.uk/jspreadsheet", license: "MIT", print: function() {
+          return [["Jspreadsheet CE", this.version, this.host, this.license].join("\r\n")];
+        } };
+        const getElement = function(e) {
+          let t = 0, s = 0;
+          return function e2(n) {
+            n.className && (n.classList.contains("jss_container") && (s = n), n.classList.contains("jss_spreadsheet") && (s = n.querySelector(":scope > .jtabs-content > .jtabs-selected"))), "THEAD" == n.tagName ? t = 1 : "TBODY" == n.tagName && (t = 2), n.parentNode && (s || e2(n.parentNode));
+          }(e), [s, t];
+        }, mouseUpControls = function(e) {
+          if (libraryBase.jspreadsheet.current) if (libraryBase.jspreadsheet.current.resizing) {
+            if (libraryBase.jspreadsheet.current.resizing.column) {
+              const e2 = parseInt(libraryBase.jspreadsheet.current.cols[libraryBase.jspreadsheet.current.resizing.column].colElement.getAttribute("width")), t = libraryBase.jspreadsheet.current.getSelectedColumns();
+              if (t.length > 1) {
+                const s = [];
+                for (let e3 = 0; e3 < t.length; e3++) s.push(parseInt(libraryBase.jspreadsheet.current.cols[t[e3]].colElement.getAttribute("width")));
+                s[t.indexOf(parseInt(libraryBase.jspreadsheet.current.resizing.column))] = libraryBase.jspreadsheet.current.resizing.width, setWidth.call(libraryBase.jspreadsheet.current, t, e2, s);
+              } else setWidth.call(libraryBase.jspreadsheet.current, parseInt(libraryBase.jspreadsheet.current.resizing.column), e2, libraryBase.jspreadsheet.current.resizing.width);
+              libraryBase.jspreadsheet.current.headers[libraryBase.jspreadsheet.current.resizing.column].classList.remove("resizing");
+              for (let e3 = 0; e3 < libraryBase.jspreadsheet.current.records.length; e3++) libraryBase.jspreadsheet.current.records[e3][libraryBase.jspreadsheet.current.resizing.column] && libraryBase.jspreadsheet.current.records[e3][libraryBase.jspreadsheet.current.resizing.column].element.classList.remove("resizing");
+            } else {
+              libraryBase.jspreadsheet.current.rows[libraryBase.jspreadsheet.current.resizing.row].element.children[0].classList.remove("resizing");
+              let e2 = libraryBase.jspreadsheet.current.rows[libraryBase.jspreadsheet.current.resizing.row].element.getAttribute("height");
+              setHeight.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.resizing.row, e2, libraryBase.jspreadsheet.current.resizing.height), libraryBase.jspreadsheet.current.resizing.element.classList.remove("resizing");
+            }
+            libraryBase.jspreadsheet.current.resizing = null;
+          } else if (libraryBase.jspreadsheet.current.dragging) {
+            if (libraryBase.jspreadsheet.current.dragging) {
+              if (libraryBase.jspreadsheet.current.dragging.column) {
+                const t = e.target.getAttribute("data-x");
+                libraryBase.jspreadsheet.current.headers[libraryBase.jspreadsheet.current.dragging.column].classList.remove("dragging");
+                for (let e2 = 0; e2 < libraryBase.jspreadsheet.current.rows.length; e2++) libraryBase.jspreadsheet.current.records[e2][libraryBase.jspreadsheet.current.dragging.column] && libraryBase.jspreadsheet.current.records[e2][libraryBase.jspreadsheet.current.dragging.column].element.classList.remove("dragging");
+                for (let e2 = 0; e2 < libraryBase.jspreadsheet.current.headers.length; e2++) libraryBase.jspreadsheet.current.headers[e2].classList.remove("dragging-left"), libraryBase.jspreadsheet.current.headers[e2].classList.remove("dragging-right");
+                t && libraryBase.jspreadsheet.current.dragging.column != libraryBase.jspreadsheet.current.dragging.destination && libraryBase.jspreadsheet.current.moveColumn(libraryBase.jspreadsheet.current.dragging.column, libraryBase.jspreadsheet.current.dragging.destination);
+              } else {
+                let e2;
+                libraryBase.jspreadsheet.current.dragging.element.nextSibling ? (e2 = parseInt(libraryBase.jspreadsheet.current.dragging.element.nextSibling.getAttribute("data-y")), libraryBase.jspreadsheet.current.dragging.row < e2 && (e2 -= 1)) : e2 = parseInt(libraryBase.jspreadsheet.current.dragging.element.previousSibling.getAttribute("data-y")), libraryBase.jspreadsheet.current.dragging.row != libraryBase.jspreadsheet.current.dragging.destination && moveRow.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.dragging.row, e2, true), libraryBase.jspreadsheet.current.dragging.element.classList.remove("dragging");
+              }
+              libraryBase.jspreadsheet.current.dragging = null;
+            }
+          } else libraryBase.jspreadsheet.current.selectedCorner && (libraryBase.jspreadsheet.current.selectedCorner = false, libraryBase.jspreadsheet.current.selection.length > 0 && (selection.kF.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.selection[0], libraryBase.jspreadsheet.current.selection[libraryBase.jspreadsheet.current.selection.length - 1]), selection.gG.call(libraryBase.jspreadsheet.current)));
+          libraryBase.jspreadsheet.timeControl && (clearTimeout(libraryBase.jspreadsheet.timeControl), libraryBase.jspreadsheet.timeControl = null), libraryBase.jspreadsheet.isMouseAction = false;
+        }, mouseDownControls = function(e) {
+          let t;
+          t = (e = e || window.event).buttons ? e.buttons : e.button ? e.button : e.which;
+          const s = getElement(e.target);
+          if (s[0] ? libraryBase.jspreadsheet.current != s[0].jssWorksheet && (libraryBase.jspreadsheet.current && (libraryBase.jspreadsheet.current.edition && closeEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.edition[0], true), libraryBase.jspreadsheet.current.resetSelection()), libraryBase.jspreadsheet.current = s[0].jssWorksheet) : libraryBase.jspreadsheet.current && (libraryBase.jspreadsheet.current.edition && closeEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.edition[0], true), e.target.classList.contains("jss_object") || (selection.gE.call(libraryBase.jspreadsheet.current, true), libraryBase.jspreadsheet.current = null)), libraryBase.jspreadsheet.current && 1 == t) {
+            if (e.target.classList.contains("jss_selectall")) libraryBase.jspreadsheet.current && selection.Ub.call(libraryBase.jspreadsheet.current);
+            else if (e.target.classList.contains("jss_corner")) 0 != libraryBase.jspreadsheet.current.options.editable && (libraryBase.jspreadsheet.current.selectedCorner = true);
+            else {
+              if (1 == s[1]) {
+                const t2 = e.target.getAttribute("data-x");
+                if (t2) {
+                  const s2 = e.target.getBoundingClientRect();
+                  if (0 != libraryBase.jspreadsheet.current.options.columnResize && s2.width - e.offsetX < 6) {
+                    libraryBase.jspreadsheet.current.resizing = { mousePosition: e.pageX, column: t2, width: s2.width }, libraryBase.jspreadsheet.current.headers[t2].classList.add("resizing");
+                    for (let e2 = 0; e2 < libraryBase.jspreadsheet.current.records.length; e2++) libraryBase.jspreadsheet.current.records[e2][t2] && libraryBase.jspreadsheet.current.records[e2][t2].element.classList.add("resizing");
+                  } else if (0 != libraryBase.jspreadsheet.current.options.columnDrag && s2.height - e.offsetY < 6) if (merges.Lt.call(libraryBase.jspreadsheet.current, t2).length) console.error("Jspreadsheet: This column is part of a merged cell.");
+                  else {
+                    libraryBase.jspreadsheet.current.resetSelection(), libraryBase.jspreadsheet.current.dragging = { element: e.target, column: t2, destination: t2 }, libraryBase.jspreadsheet.current.headers[t2].classList.add("dragging");
+                    for (let e2 = 0; e2 < libraryBase.jspreadsheet.current.records.length; e2++) libraryBase.jspreadsheet.current.records[e2][t2] && libraryBase.jspreadsheet.current.records[e2][t2].element.classList.add("dragging");
+                  }
+                  else {
+                    let s3, n;
+                    libraryBase.jspreadsheet.current.selectedHeader && (e.shiftKey || e.ctrlKey) ? (s3 = libraryBase.jspreadsheet.current.selectedHeader, n = t2) : (libraryBase.jspreadsheet.current.selectedHeader == t2 && 0 != libraryBase.jspreadsheet.current.options.allowRenameColumn && (libraryBase.jspreadsheet.timeControl = setTimeout(function() {
+                      libraryBase.jspreadsheet.current.setHeader(t2);
+                    }, 800)), libraryBase.jspreadsheet.current.selectedHeader = t2, s3 = t2, n = t2), selection.AH.call(libraryBase.jspreadsheet.current, s3, 0, n, libraryBase.jspreadsheet.current.options.data.length - 1, e);
+                  }
+                } else if (e.target.parentNode.classList.contains("jss_nested")) {
+                  let t3, s2;
+                  if (e.target.getAttribute("data-column")) {
+                    const n = e.target.getAttribute("data-column").split(",");
+                    t3 = parseInt(n[0]), s2 = parseInt(n[n.length - 1]);
+                  } else t3 = 0, s2 = libraryBase.jspreadsheet.current.options.columns.length - 1;
+                  selection.AH.call(libraryBase.jspreadsheet.current, t3, 0, s2, libraryBase.jspreadsheet.current.options.data.length - 1, e);
+                }
+              } else libraryBase.jspreadsheet.current.selectedHeader = false;
+              if (2 == s[1]) {
+                const t2 = parseInt(e.target.getAttribute("data-y"));
+                if (e.target.classList.contains("jss_row")) {
+                  const s2 = e.target.getBoundingClientRect();
+                  if (0 != libraryBase.jspreadsheet.current.options.rowResize && s2.height - e.offsetY < 6) libraryBase.jspreadsheet.current.resizing = { element: e.target.parentNode, mousePosition: e.pageY, row: t2, height: s2.height }, e.target.parentNode.classList.add("resizing");
+                  else if (0 != libraryBase.jspreadsheet.current.options.rowDrag && s2.width - e.offsetX < 6) merges.D0.call(libraryBase.jspreadsheet.current, t2).length ? console.error("Jspreadsheet: This row is part of a merged cell") : 1 == libraryBase.jspreadsheet.current.options.search && libraryBase.jspreadsheet.current.results ? console.error("Jspreadsheet: Please clear your search before perform this action") : (libraryBase.jspreadsheet.current.resetSelection(), libraryBase.jspreadsheet.current.dragging = { element: e.target.parentNode, row: t2, destination: t2 }, e.target.parentNode.classList.add("dragging"));
+                  else {
+                    let s3, n;
+                    null != libraryBase.jspreadsheet.current.selectedRow && (e.shiftKey || e.ctrlKey) ? (s3 = libraryBase.jspreadsheet.current.selectedRow, n = t2) : (libraryBase.jspreadsheet.current.selectedRow = t2, s3 = t2, n = t2), selection.AH.call(libraryBase.jspreadsheet.current, null, s3, null, n, e);
+                  }
+                } else if (e.target.classList.contains("jclose") && e.target.clientWidth - e.offsetX < 50 && e.offsetY < 50) closeEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.edition[0], true);
+                else {
+                  const t3 = function(e2) {
+                    const s3 = e2.getAttribute("data-x"), n = e2.getAttribute("data-y");
+                    return s3 && n ? [s3, n] : e2.parentNode ? t3(e2.parentNode) : void 0;
+                  }, s2 = t3(e.target);
+                  if (s2) {
+                    const t4 = s2[0], n = s2[1];
+                    libraryBase.jspreadsheet.current.edition && (libraryBase.jspreadsheet.current.edition[2] == t4 && libraryBase.jspreadsheet.current.edition[3] == n || closeEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.edition[0], true)), libraryBase.jspreadsheet.current.edition || (e.shiftKey ? selection.AH.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.selectedCell[0], libraryBase.jspreadsheet.current.selectedCell[1], t4, n, e) : selection.AH.call(libraryBase.jspreadsheet.current, t4, n, void 0, void 0, e)), libraryBase.jspreadsheet.current.selectedHeader = null, libraryBase.jspreadsheet.current.selectedRow = null;
+                  }
+                }
+              } else libraryBase.jspreadsheet.current.selectedRow = false;
+              e.target.classList.contains("jss_page") && ("<" == e.target.textContent ? libraryBase.jspreadsheet.current.page(0) : ">" == e.target.textContent ? libraryBase.jspreadsheet.current.page(e.target.getAttribute("title") - 1) : libraryBase.jspreadsheet.current.page(e.target.textContent - 1));
+            }
+            libraryBase.jspreadsheet.current.edition ? libraryBase.jspreadsheet.isMouseAction = false : libraryBase.jspreadsheet.isMouseAction = true;
+          } else libraryBase.jspreadsheet.isMouseAction = false;
+        }, mouseMoveControls = function(e) {
+          let t;
+          if (t = (e = e || window.event).buttons ? e.buttons : e.button ? e.button : e.which, t || (libraryBase.jspreadsheet.isMouseAction = false), libraryBase.jspreadsheet.current) if (1 == libraryBase.jspreadsheet.isMouseAction) {
+            if (libraryBase.jspreadsheet.current.resizing) if (libraryBase.jspreadsheet.current.resizing.column) {
+              const t2 = e.pageX - libraryBase.jspreadsheet.current.resizing.mousePosition;
+              if (libraryBase.jspreadsheet.current.resizing.width + t2 > 0) {
+                const e2 = libraryBase.jspreadsheet.current.resizing.width + t2;
+                libraryBase.jspreadsheet.current.cols[libraryBase.jspreadsheet.current.resizing.column].colElement.setAttribute("width", e2), selection.Aq.call(libraryBase.jspreadsheet.current);
+              }
+            } else {
+              const t2 = e.pageY - libraryBase.jspreadsheet.current.resizing.mousePosition;
+              if (libraryBase.jspreadsheet.current.resizing.height + t2 > 0) {
+                const e2 = libraryBase.jspreadsheet.current.resizing.height + t2;
+                libraryBase.jspreadsheet.current.rows[libraryBase.jspreadsheet.current.resizing.row].element.setAttribute("height", e2), selection.Aq.call(libraryBase.jspreadsheet.current);
+              }
+            }
+            else if (libraryBase.jspreadsheet.current.dragging) if (libraryBase.jspreadsheet.current.dragging.column) {
+              const t2 = e.target.getAttribute("data-x");
+              if (t2) if (merges.Lt.call(libraryBase.jspreadsheet.current, t2).length) console.error("Jspreadsheet: This column is part of a merged cell.");
+              else {
+                for (let e2 = 0; e2 < libraryBase.jspreadsheet.current.headers.length; e2++) libraryBase.jspreadsheet.current.headers[e2].classList.remove("dragging-left"), libraryBase.jspreadsheet.current.headers[e2].classList.remove("dragging-right");
+                libraryBase.jspreadsheet.current.dragging.column == t2 ? libraryBase.jspreadsheet.current.dragging.destination = parseInt(t2) : e.target.clientWidth / 2 > e.offsetX ? (libraryBase.jspreadsheet.current.dragging.column < t2 ? libraryBase.jspreadsheet.current.dragging.destination = parseInt(t2) - 1 : libraryBase.jspreadsheet.current.dragging.destination = parseInt(t2), libraryBase.jspreadsheet.current.headers[t2].classList.add("dragging-left")) : (libraryBase.jspreadsheet.current.dragging.column < t2 ? libraryBase.jspreadsheet.current.dragging.destination = parseInt(t2) : libraryBase.jspreadsheet.current.dragging.destination = parseInt(t2) + 1, libraryBase.jspreadsheet.current.headers[t2].classList.add("dragging-right"));
+              }
+            } else {
+              const t2 = e.target.getAttribute("data-y");
+              if (t2) if (merges.D0.call(libraryBase.jspreadsheet.current, t2).length) console.error("Jspreadsheet: This row is part of a merged cell.");
+              else {
+                const t3 = e.target.clientHeight / 2 > e.offsetY ? e.target.parentNode.nextSibling : e.target.parentNode;
+                libraryBase.jspreadsheet.current.dragging.element != t3 && (e.target.parentNode.parentNode.insertBefore(libraryBase.jspreadsheet.current.dragging.element, t3), libraryBase.jspreadsheet.current.dragging.destination = Array.prototype.indexOf.call(libraryBase.jspreadsheet.current.dragging.element.parentNode.children, libraryBase.jspreadsheet.current.dragging.element));
+              }
+            }
+          } else {
+            const t2 = e.target.getAttribute("data-x"), s = e.target.getAttribute("data-y"), n = e.target.getBoundingClientRect();
+            libraryBase.jspreadsheet.current.cursor && (libraryBase.jspreadsheet.current.cursor.style.cursor = "", libraryBase.jspreadsheet.current.cursor = null), e.target.parentNode.parentNode && e.target.parentNode.parentNode.className && (e.target.parentNode.parentNode.classList.contains("resizable") && (e.target && t2 && !s && n.width - (e.clientX - n.left) < 6 ? (libraryBase.jspreadsheet.current.cursor = e.target, libraryBase.jspreadsheet.current.cursor.style.cursor = "col-resize") : e.target && !t2 && s && n.height - (e.clientY - n.top) < 6 && (libraryBase.jspreadsheet.current.cursor = e.target, libraryBase.jspreadsheet.current.cursor.style.cursor = "row-resize")), e.target.parentNode.parentNode.classList.contains("draggable") && (e.target && !t2 && s && n.width - (e.clientX - n.left) < 6 || e.target && t2 && !s && n.height - (e.clientY - n.top) < 6) && (libraryBase.jspreadsheet.current.cursor = e.target, libraryBase.jspreadsheet.current.cursor.style.cursor = "move"));
+          }
+        }, updateCopySelection = function(e, t) {
+          const s = this;
+          selection.gG.call(s);
+          const n = s.selectedContainer[0], o = s.selectedContainer[1], r = s.selectedContainer[2], l = s.selectedContainer[3];
+          if (null != e && null != t) {
+            let i2, a, c, d;
+            e - r > 0 ? (i2 = parseInt(r) + 1, a = parseInt(e)) : (i2 = parseInt(e), a = parseInt(n) - 1), t - l > 0 ? (c = parseInt(l) + 1, d = parseInt(t)) : (c = parseInt(t), d = parseInt(o) - 1), a - i2 <= d - c ? (i2 = parseInt(n), a = parseInt(r)) : (c = parseInt(o), d = parseInt(l));
+            for (let e2 = c; e2 <= d; e2++) for (let t2 = i2; t2 <= a; t2++) s.records[e2][t2] && "none" != s.rows[e2].element.style.display && "none" != s.records[e2][t2].element.style.display && (s.records[e2][t2].element.classList.add("selection"), s.records[c][t2].element.classList.add("selection-top"), s.records[d][t2].element.classList.add("selection-bottom"), s.records[e2][i2].element.classList.add("selection-left"), s.records[e2][a].element.classList.add("selection-right"), s.selection.push(s.records[e2][t2].element));
+          }
+        }, mouseOverControls = function(e) {
+          let t;
+          if (t = (e = e || window.event).buttons ? e.buttons : e.button ? e.button : e.which, t || (libraryBase.jspreadsheet.isMouseAction = false), libraryBase.jspreadsheet.current && 1 == libraryBase.jspreadsheet.isMouseAction) {
+            const t2 = getElement(e.target);
+            if (t2[0]) {
+              if (libraryBase.jspreadsheet.current != t2[0].jssWorksheet && libraryBase.jspreadsheet.current) return false;
+              let s = e.target.getAttribute("data-x");
+              const n = e.target.getAttribute("data-y");
+              if (libraryBase.jspreadsheet.current.resizing || libraryBase.jspreadsheet.current.dragging) ;
+              else {
+                if (1 == t2[1] && libraryBase.jspreadsheet.current.selectedHeader) {
+                  s = e.target.getAttribute("data-x");
+                  const t3 = libraryBase.jspreadsheet.current.selectedHeader, n2 = s;
+                  selection.AH.call(libraryBase.jspreadsheet.current, t3, 0, n2, libraryBase.jspreadsheet.current.options.data.length - 1, e);
+                }
+                if (2 == t2[1]) if (e.target.classList.contains("jss_row")) {
+                  if (null != libraryBase.jspreadsheet.current.selectedRow) {
+                    const t3 = libraryBase.jspreadsheet.current.selectedRow, s2 = n;
+                    selection.AH.call(libraryBase.jspreadsheet.current, 0, t3, libraryBase.jspreadsheet.current.options.data[0].length - 1, s2, e);
+                  }
+                } else libraryBase.jspreadsheet.current.edition || s && n && (libraryBase.jspreadsheet.current.selectedCorner ? updateCopySelection.call(libraryBase.jspreadsheet.current, s, n) : libraryBase.jspreadsheet.current.selectedCell && selection.AH.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.selectedCell[0], libraryBase.jspreadsheet.current.selectedCell[1], s, n, e));
+              }
+            }
+          }
+          libraryBase.jspreadsheet.timeControl && (clearTimeout(libraryBase.jspreadsheet.timeControl), libraryBase.jspreadsheet.timeControl = null);
+        }, doubleClickControls = function(e) {
+          if (libraryBase.jspreadsheet.current) if (e.target.classList.contains("jss_corner")) {
+            if (libraryBase.jspreadsheet.current.highlighted.length > 0) {
+              const e2 = libraryBase.jspreadsheet.current.highlighted[0].element.getAttribute("data-x"), t = parseInt(libraryBase.jspreadsheet.current.highlighted[libraryBase.jspreadsheet.current.highlighted.length - 1].element.getAttribute("data-y")) + 1, s = libraryBase.jspreadsheet.current.highlighted[libraryBase.jspreadsheet.current.highlighted.length - 1].element.getAttribute("data-x"), n = libraryBase.jspreadsheet.current.records.length - 1;
+              selection.kF.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.records[t][e2].element, libraryBase.jspreadsheet.current.records[n][s].element);
+            }
+          } else if (e.target.classList.contains("jss_column_filter")) {
+            const t = e.target.getAttribute("data-x");
+            filter.N$.call(libraryBase.jspreadsheet.current, t);
+          } else {
+            const t = getElement(e.target);
+            if (1 == t[1] && 0 != libraryBase.jspreadsheet.current.options.columnSorting) {
+              const t2 = e.target.getAttribute("data-x");
+              t2 && libraryBase.jspreadsheet.current.orderBy(parseInt(t2));
+            }
+            if (2 == t[1] && 0 != libraryBase.jspreadsheet.current.options.editable && !libraryBase.jspreadsheet.current.edition) {
+              const t2 = function(e2) {
+                if (e2.parentNode) {
+                  const s2 = e2.getAttribute("data-x"), n = e2.getAttribute("data-y");
+                  return s2 && n ? e2 : t2(e2.parentNode);
+                }
+              }, s = t2(e.target);
+              s && s.classList.contains("highlight") && openEditor.call(libraryBase.jspreadsheet.current, s, void 0, e);
+            }
+          }
+        }, pasteControls = function(e) {
+          libraryBase.jspreadsheet.current && libraryBase.jspreadsheet.current.selectedCell && (libraryBase.jspreadsheet.current.edition || 0 != libraryBase.jspreadsheet.current.options.editable && (e && e.clipboardData ? (paste.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.selectedCell[0], libraryBase.jspreadsheet.current.selectedCell[1], e.clipboardData.getData("text")), e.preventDefault()) : window.clipboardData && paste.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.selectedCell[0], libraryBase.jspreadsheet.current.selectedCell[1], window.clipboardData.getData("text"))));
+        }, getRole = function(e) {
+          if (e.classList.contains("jss_selectall")) return "select-all";
+          if (e.classList.contains("jss_corner")) return "fill-handle";
+          let t = e;
+          for (; !t.classList.contains("jss_spreadsheet"); ) {
+            if (t.classList.contains("jss_row")) return "row";
+            if (t.classList.contains("jss_nested")) return "nested";
+            if (t.classList.contains("jtabs-headers")) return "tabs";
+            if (t.classList.contains("jtoolbar")) return "toolbar";
+            if (t.classList.contains("jss_pagination")) return "pagination";
+            if ("TBODY" === t.tagName) return "cell";
+            if ("TFOOT" === t.tagName) return 0 === getElementIndex(e) ? "grid" : "footer";
+            if ("THEAD" === t.tagName) return "header";
+            t = t.parentElement;
+          }
+          return "applications";
+        }, defaultContextMenu = function(e, t, s, n) {
+          const o = [];
+          if ("header" === n && (0 != e.options.allowInsertColumn && o.push({ title: jSuites.translate("Insert a new column before"), onclick: function() {
+            e.insertColumn(1, parseInt(t), 1);
+          } }), 0 != e.options.allowInsertColumn && o.push({ title: jSuites.translate("Insert a new column after"), onclick: function() {
+            e.insertColumn(1, parseInt(t), 0);
+          } }), 0 != e.options.allowDeleteColumn && o.push({ title: jSuites.translate("Delete selected columns"), onclick: function() {
+            e.deleteColumn(e.getSelectedColumns().length ? void 0 : parseInt(t));
+          } }), 0 != e.options.allowRenameColumn && o.push({ title: jSuites.translate("Rename this column"), onclick: function() {
+            const s2 = e.getHeader(t), n2 = prompt(jSuites.translate("Column name"), s2);
+            e.setHeader(t, n2);
+          } }), 0 != e.options.columnSorting && (o.push({ type: "line" }), o.push({ title: jSuites.translate("Order ascending"), onclick: function() {
+            e.orderBy(t, 0);
+          } }), o.push({ title: jSuites.translate("Order descending"), onclick: function() {
+            e.orderBy(t, 1);
+          } }))), "row" !== n && "cell" !== n || (0 != e.options.allowInsertRow && (o.push({ title: jSuites.translate("Insert a new row before"), onclick: function() {
+            e.insertRow(1, parseInt(s), 1);
+          } }), o.push({ title: jSuites.translate("Insert a new row after"), onclick: function() {
+            e.insertRow(1, parseInt(s));
+          } })), 0 != e.options.allowDeleteRow && o.push({ title: jSuites.translate("Delete selected rows"), onclick: function() {
+            e.deleteRow(e.getSelectedRows().length ? void 0 : parseInt(s));
+          } })), "cell" === n && 0 != e.options.allowComments) {
+            o.push({ type: "line" });
+            const n2 = e.records[s][t].element.getAttribute("title") || "";
+            o.push({ title: jSuites.translate(n2 ? "Edit comments" : "Add comments"), onclick: function() {
+              const o2 = prompt(jSuites.translate("Comments"), n2);
+              o2 && e.setComments((0, helpers.getCellNameFromCoords)(t, s), o2);
+            } }), n2 && o.push({ title: jSuites.translate("Clear comments"), onclick: function() {
+              e.setComments((0, helpers.getCellNameFromCoords)(t, s), "");
+            } });
+          }
+          return 0 !== o.length && o.push({ type: "line" }), "header" !== n && "row" !== n && "cell" !== n || (o.push({ title: jSuites.translate("Copy") + "...", shortcut: "Ctrl + C", onclick: function() {
+            copy.call(e, true);
+          } }), navigator && navigator.clipboard && o.push({ title: jSuites.translate("Paste") + "...", shortcut: "Ctrl + V", onclick: function() {
+            e.selectedCell && navigator.clipboard.readText().then(function(t2) {
+              t2 && paste.call(e, e.selectedCell[0], e.selectedCell[1], t2);
+            });
+          } })), 0 != e.parent.config.allowExport && o.push({ title: jSuites.translate("Save as") + "...", shortcut: "Ctrl + S", onclick: function() {
+            e.download();
+          } }), 0 != e.parent.config.about && o.push({ title: jSuites.translate("About"), onclick: function() {
+            void 0 === e.parent.config.about || true === e.parent.config.about ? alert(version.print()) : alert(e.parent.config.about);
+          } }), o;
+        }, getElementIndex = function(e) {
+          const t = e.parentElement.children;
+          for (let s = 0; s < t.length; s++) if (e === t[s]) return s;
+          return -1;
+        }, contextMenuControls = function(e) {
+          if ("buttons" in (e = e || window.event) ? e.buttons : e.which || e.button, libraryBase.jspreadsheet.current) {
+            const t = libraryBase.jspreadsheet.current.parent;
+            if (libraryBase.jspreadsheet.current.edition) e.preventDefault();
+            else if (t.contextMenu.contextmenu.close(), libraryBase.jspreadsheet.current) {
+              const s = getRole(e.target);
+              let n = null, o = null;
+              if ("cell" === s) {
+                let t2 = e.target;
+                for (; "TD" !== t2.tagName; ) t2 = t2.parentNode;
+                o = t2.getAttribute("data-y"), n = t2.getAttribute("data-x"), (!libraryBase.jspreadsheet.current.selectedCell || n < parseInt(libraryBase.jspreadsheet.current.selectedCell[0]) || n > parseInt(libraryBase.jspreadsheet.current.selectedCell[2]) || o < parseInt(libraryBase.jspreadsheet.current.selectedCell[1]) || o > parseInt(libraryBase.jspreadsheet.current.selectedCell[3])) && selection.AH.call(libraryBase.jspreadsheet.current, n, o, n, o, e);
+              } else if ("row" === s || "header" === s) "row" === s ? o = e.target.getAttribute("data-y") : n = e.target.getAttribute("data-x"), (!libraryBase.jspreadsheet.current.selectedCell || n < parseInt(libraryBase.jspreadsheet.current.selectedCell[0]) || n > parseInt(libraryBase.jspreadsheet.current.selectedCell[2]) || o < parseInt(libraryBase.jspreadsheet.current.selectedCell[1]) || o > parseInt(libraryBase.jspreadsheet.current.selectedCell[3])) && selection.AH.call(libraryBase.jspreadsheet.current, n, o, n, o, e);
+              else if ("nested" === s) {
+                const t2 = e.target.getAttribute("data-column").split(",");
+                n = getElementIndex(e.target) - 1, o = getElementIndex(e.target.parentElement), libraryBase.jspreadsheet.current.selectedCell && t2[0] == parseInt(libraryBase.jspreadsheet.current.selectedCell[0]) && t2[t2.length - 1] == parseInt(libraryBase.jspreadsheet.current.selectedCell[2]) && null == libraryBase.jspreadsheet.current.selectedCell[1] && null == libraryBase.jspreadsheet.current.selectedCell[3] || selection.AH.call(libraryBase.jspreadsheet.current, t2[0], null, t2[t2.length - 1], null, e);
+              } else "select-all" === s ? selection.Ub.call(libraryBase.jspreadsheet.current) : "tabs" === s ? n = getElementIndex(e.target) : "footer" === s && (n = getElementIndex(e.target) - 1, o = getElementIndex(e.target.parentElement));
+              let r = defaultContextMenu(libraryBase.jspreadsheet.current, parseInt(n), parseInt(o), s);
+              if ("function" == typeof t.config.contextMenu) {
+                const l = t.config.contextMenu(libraryBase.jspreadsheet.current, n, o, e, r, s, n, o);
+                if (l) r = l;
+                else if (false === l) return;
+              }
+              "object" == typeof t.plugins && Object.entries(t.plugins).forEach(function([, t2]) {
+                if ("function" == typeof t2.contextMenu) {
+                  const l = t2.contextMenu(libraryBase.jspreadsheet.current, null !== n ? parseInt(n) : null, null !== o ? parseInt(o) : null, e, r, s, null !== n ? parseInt(n) : null, null !== o ? parseInt(o) : null);
+                  l && (r = l);
+                }
+              }), t.contextMenu.contextmenu.open(e, r), e.preventDefault();
+            }
+          }
+        }, touchStartControls = function(e) {
+          const t = getElement(e.target);
+          if (t[0] ? libraryBase.jspreadsheet.current != t[0].jssWorksheet && (libraryBase.jspreadsheet.current && libraryBase.jspreadsheet.current.resetSelection(), libraryBase.jspreadsheet.current = t[0].jssWorksheet) : libraryBase.jspreadsheet.current && (libraryBase.jspreadsheet.current.resetSelection(), libraryBase.jspreadsheet.current = null), libraryBase.jspreadsheet.current && !libraryBase.jspreadsheet.current.edition) {
+            const t2 = e.target.getAttribute("data-x"), s = e.target.getAttribute("data-y");
+            t2 && s && (selection.AH.call(libraryBase.jspreadsheet.current, t2, s, void 0, void 0, e), libraryBase.jspreadsheet.timeControl = setTimeout(function() {
+              "color" == libraryBase.jspreadsheet.current.options.columns[t2].type ? libraryBase.jspreadsheet.tmpElement = null : libraryBase.jspreadsheet.tmpElement = e.target, openEditor.call(libraryBase.jspreadsheet.current, e.target, false, e);
+            }, 500));
+          }
+        }, touchEndControls = function(e) {
+          libraryBase.jspreadsheet.timeControl && (clearTimeout(libraryBase.jspreadsheet.timeControl), libraryBase.jspreadsheet.timeControl = null, libraryBase.jspreadsheet.tmpElement && "INPUT" == libraryBase.jspreadsheet.tmpElement.children[0].tagName && libraryBase.jspreadsheet.tmpElement.children[0].focus(), libraryBase.jspreadsheet.tmpElement = null);
+        }, cutControls = function(e) {
+          libraryBase.jspreadsheet.current && (libraryBase.jspreadsheet.current.edition || (copy.call(libraryBase.jspreadsheet.current, true, void 0, void 0, void 0, void 0, true), 0 != libraryBase.jspreadsheet.current.options.editable && libraryBase.jspreadsheet.current.setValue(libraryBase.jspreadsheet.current.highlighted.map(function(e2) {
+            return e2.element;
+          }), "")));
+        }, copyControls = function(e) {
+          libraryBase.jspreadsheet.current && copyControls.enabled && (libraryBase.jspreadsheet.current.edition || copy.call(libraryBase.jspreadsheet.current, true));
+        }, isMac = function() {
+          return navigator.platform.toUpperCase().indexOf("MAC") >= 0;
+        }, isCtrl = function(e) {
+          return isMac() ? e.metaKey : e.ctrlKey;
+        }, keyDownControls = function(e) {
+          if (libraryBase.jspreadsheet.current) {
+            if (libraryBase.jspreadsheet.current.edition) if (27 == e.which) libraryBase.jspreadsheet.current.edition && closeEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.edition[0], false), e.preventDefault();
+            else if (13 == e.which) if (libraryBase.jspreadsheet.current.options.columns && libraryBase.jspreadsheet.current.options.columns[libraryBase.jspreadsheet.current.edition[2]] && "calendar" == libraryBase.jspreadsheet.current.options.columns[libraryBase.jspreadsheet.current.edition[2]].type) closeEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.edition[0], true);
+            else if (libraryBase.jspreadsheet.current.options.columns && libraryBase.jspreadsheet.current.options.columns[libraryBase.jspreadsheet.current.edition[2]] && "dropdown" == libraryBase.jspreadsheet.current.options.columns[libraryBase.jspreadsheet.current.edition[2]].type) ;
+            else if ((1 == libraryBase.jspreadsheet.current.options.wordWrap || libraryBase.jspreadsheet.current.options.columns && libraryBase.jspreadsheet.current.options.columns[libraryBase.jspreadsheet.current.edition[2]] && 1 == libraryBase.jspreadsheet.current.options.columns[libraryBase.jspreadsheet.current.edition[2]].wordWrap || libraryBase.jspreadsheet.current.options.data[libraryBase.jspreadsheet.current.edition[3]][libraryBase.jspreadsheet.current.edition[2]] && libraryBase.jspreadsheet.current.options.data[libraryBase.jspreadsheet.current.edition[3]][libraryBase.jspreadsheet.current.edition[2]].length > 200) && e.altKey) {
+              const e2 = libraryBase.jspreadsheet.current.edition[0].children[0];
+              let t = libraryBase.jspreadsheet.current.edition[0].children[0].value;
+              const s = e2.selectionStart;
+              t = t.slice(0, s) + "\n" + t.slice(s), e2.value = t, e2.focus(), e2.selectionStart = s + 1, e2.selectionEnd = s + 1;
+            } else libraryBase.jspreadsheet.current.edition[0].children[0].blur();
+            else 9 == e.which && (libraryBase.jspreadsheet.current.options.columns && libraryBase.jspreadsheet.current.options.columns[libraryBase.jspreadsheet.current.edition[2]] && ["calendar", "html"].includes(libraryBase.jspreadsheet.current.options.columns[libraryBase.jspreadsheet.current.edition[2]].type) ? closeEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.edition[0], true) : libraryBase.jspreadsheet.current.edition[0].children[0].blur());
+            if (!libraryBase.jspreadsheet.current.edition && libraryBase.jspreadsheet.current.selectedCell) if (37 == e.which) left.call(libraryBase.jspreadsheet.current, e.shiftKey, e.ctrlKey), e.preventDefault();
+            else if (39 == e.which) right.call(libraryBase.jspreadsheet.current, e.shiftKey, e.ctrlKey), e.preventDefault();
+            else if (38 == e.which) up.call(libraryBase.jspreadsheet.current, e.shiftKey, e.ctrlKey), e.preventDefault();
+            else if (40 == e.which) down.call(libraryBase.jspreadsheet.current, e.shiftKey, e.ctrlKey), e.preventDefault();
+            else if (36 == e.which) first.call(libraryBase.jspreadsheet.current, e.shiftKey, e.ctrlKey), e.preventDefault();
+            else if (35 == e.which) last.call(libraryBase.jspreadsheet.current, e.shiftKey, e.ctrlKey), e.preventDefault();
+            else if (46 == e.which || 8 == e.which) 0 != libraryBase.jspreadsheet.current.options.editable && (null != libraryBase.jspreadsheet.current.selectedRow ? 0 != libraryBase.jspreadsheet.current.options.allowDeleteRow && confirm(jSuites.translate("Are you sure to delete the selected rows?")) && libraryBase.jspreadsheet.current.deleteRow() : libraryBase.jspreadsheet.current.selectedHeader ? 0 != libraryBase.jspreadsheet.current.options.allowDeleteColumn && confirm(jSuites.translate("Are you sure to delete the selected columns?")) && libraryBase.jspreadsheet.current.deleteColumn() : libraryBase.jspreadsheet.current.setValue(libraryBase.jspreadsheet.current.highlighted.map(function(e2) {
+              return e2.element;
+            }), ""));
+            else if (13 == e.which) e.shiftKey ? up.call(libraryBase.jspreadsheet.current) : (0 != libraryBase.jspreadsheet.current.options.allowInsertRow && 0 != libraryBase.jspreadsheet.current.options.allowManualInsertRow && libraryBase.jspreadsheet.current.selectedCell[1] == libraryBase.jspreadsheet.current.options.data.length - 1 && libraryBase.jspreadsheet.current.insertRow(), down.call(libraryBase.jspreadsheet.current)), e.preventDefault();
+            else if (9 == e.which) e.shiftKey ? left.call(libraryBase.jspreadsheet.current) : (0 != libraryBase.jspreadsheet.current.options.allowInsertColumn && 0 != libraryBase.jspreadsheet.current.options.allowManualInsertColumn && libraryBase.jspreadsheet.current.selectedCell[0] == libraryBase.jspreadsheet.current.options.data[0].length - 1 && libraryBase.jspreadsheet.current.insertColumn(), right.call(libraryBase.jspreadsheet.current)), e.preventDefault();
+            else if (!e.ctrlKey && !e.metaKey || e.shiftKey) {
+              if (libraryBase.jspreadsheet.current.selectedCell && 0 != libraryBase.jspreadsheet.current.options.editable) {
+                const t = libraryBase.jspreadsheet.current.selectedCell[1], s = libraryBase.jspreadsheet.current.selectedCell[0];
+                32 == e.keyCode ? (e.preventDefault(), "checkbox" == libraryBase.jspreadsheet.current.options.columns[s].type || "radio" == libraryBase.jspreadsheet.current.options.columns[s].type ? setCheckRadioValue.call(libraryBase.jspreadsheet.current) : openEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.records[t][s].element, true, e)) : 113 == e.keyCode ? openEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.records[t][s].element, false, e) : 1 !== e.key.length && "Process" !== e.key || e.altKey || isCtrl(e) || (openEditor.call(libraryBase.jspreadsheet.current, libraryBase.jspreadsheet.current.records[t][s].element, true, e), libraryBase.jspreadsheet.current.options.columns && libraryBase.jspreadsheet.current.options.columns[s] && "calendar" == libraryBase.jspreadsheet.current.options.columns[s].type && e.preventDefault());
+              }
+            } else 65 == e.which ? (selection.Ub.call(libraryBase.jspreadsheet.current), e.preventDefault()) : 83 == e.which ? (libraryBase.jspreadsheet.current.download(), e.preventDefault()) : 89 == e.which ? (libraryBase.jspreadsheet.current.redo(), e.preventDefault()) : 90 == e.which ? (libraryBase.jspreadsheet.current.undo(), e.preventDefault()) : 67 == e.which ? (copy.call(libraryBase.jspreadsheet.current, true), e.preventDefault()) : 88 == e.which ? (0 != libraryBase.jspreadsheet.current.options.editable ? cutControls() : copyControls(), e.preventDefault()) : 86 == e.which && pasteControls();
+            else e.target.classList.contains("jss_search") && (libraryBase.jspreadsheet.timeControl && clearTimeout(libraryBase.jspreadsheet.timeControl), libraryBase.jspreadsheet.timeControl = setTimeout(function() {
+              libraryBase.jspreadsheet.current.search(e.target.value);
+            }, 200));
+          }
+        }, wheelControls = function(e) {
+          const t = this;
+          1 == t.options.lazyLoading && null == libraryBase.jspreadsheet.timeControlLoading && (libraryBase.jspreadsheet.timeControlLoading = setTimeout(function() {
+            t.content.scrollTop + t.content.clientHeight >= t.content.scrollHeight - 10 ? lazyLoading.p6.call(t) && (t.content.scrollTop + t.content.clientHeight > t.content.scrollHeight - 10 && (t.content.scrollTop = t.content.scrollTop - t.content.clientHeight), selection.Aq.call(t)) : t.content.scrollTop <= t.content.clientHeight && lazyLoading.G_.call(t) && (t.content.scrollTop < 10 && (t.content.scrollTop = t.content.scrollTop + t.content.clientHeight), selection.Aq.call(t)), libraryBase.jspreadsheet.timeControlLoading = null;
+          }, 100));
+        };
+        let scrollLeft = 0;
+        const updateFreezePosition = function() {
+          const e = this;
+          scrollLeft = e.content.scrollLeft;
+          let t = 0;
+          if (scrollLeft > 50) for (let s = 0; s < e.options.freezeColumns; s++) {
+            if (s > 0 && (!e.options.columns || !e.options.columns[s - 1] || "hidden" !== e.options.columns[s - 1].type)) {
+              let n;
+              n = e.options.columns && e.options.columns[s - 1] && void 0 !== e.options.columns[s - 1].width ? parseInt(e.options.columns[s - 1].width) : void 0 !== e.options.defaultColWidth ? parseInt(e.options.defaultColWidth) : 100, t += parseInt(n);
+            }
+            e.headers[s].classList.add("jss_freezed"), e.headers[s].style.left = t + "px";
+            for (let t2 = 0; t2 < e.rows.length; t2++) if (e.rows[t2] && e.records[t2][s]) {
+              const n = scrollLeft + (s > 0 ? e.records[t2][s - 1].element.style.width : 0) - 51 + "px";
+              e.records[t2][s].element.classList.add("jss_freezed"), e.records[t2][s].element.style.left = n;
+            }
+          }
+          else for (let t2 = 0; t2 < e.options.freezeColumns; t2++) {
+            e.headers[t2].classList.remove("jss_freezed"), e.headers[t2].style.left = "";
+            for (let s = 0; s < e.rows.length; s++) e.records[s][t2] && (e.records[s][t2].element.classList.remove("jss_freezed"), e.records[s][t2].element.style.left = "");
+          }
+          selection.Aq.call(e);
+        }, scrollControls = function(e) {
+          const t = this;
+          wheelControls.call(t), t.options.freezeColumns > 0 && t.content.scrollLeft != scrollLeft && updateFreezePosition.call(t), 1 != t.options.lazyLoading && 1 != t.options.tableOverflow || t.edition && "jdropdown" != e.target.className.substr(0, 9) && closeEditor.call(t, t.edition[0], true);
+        }, setEvents = function(e) {
+          destroyEvents(e), e.addEventListener("mouseup", mouseUpControls), e.addEventListener("mousedown", mouseDownControls), e.addEventListener("mousemove", mouseMoveControls), e.addEventListener("mouseover", mouseOverControls), e.addEventListener("dblclick", doubleClickControls), e.addEventListener("paste", pasteControls), e.addEventListener("contextmenu", contextMenuControls), e.addEventListener("touchstart", touchStartControls), e.addEventListener("touchend", touchEndControls), e.addEventListener("touchcancel", touchEndControls), e.addEventListener("touchmove", touchEndControls), document.addEventListener("keydown", keyDownControls);
+        }, destroyEvents = function(e) {
+          e.removeEventListener("mouseup", mouseUpControls), e.removeEventListener("mousedown", mouseDownControls), e.removeEventListener("mousemove", mouseMoveControls), e.removeEventListener("mouseover", mouseOverControls), e.removeEventListener("dblclick", doubleClickControls), e.removeEventListener("paste", pasteControls), e.removeEventListener("contextmenu", contextMenuControls), e.removeEventListener("touchstart", touchStartControls), e.removeEventListener("touchend", touchEndControls), e.removeEventListener("touchcancel", touchEndControls), document.removeEventListener("keydown", keyDownControls);
+        };
+        var toolbar = __webpack_require__(392), pagination = __webpack_require__(167);
+        const setData = function(e) {
+          const t = this;
+          if (e && (t.options.data = e), t.options.data || (t.options.data = []), t.options.data && t.options.data[0] && !Array.isArray(t.options.data[0])) {
+            e = [];
+            for (let s2 = 0; s2 < t.options.data.length; s2++) {
+              const n2 = [];
+              for (let e2 = 0; e2 < t.options.columns.length; e2++) n2[e2] = t.options.data[s2][t.options.columns[e2].name];
+              e.push(n2);
+            }
+            t.options.data = e;
+          }
+          let s = 0, n = 0;
+          const o = t.options.columns && t.options.columns.length || 0, r = t.options.data.length, l = t.options.minDimensions[0], i2 = t.options.minDimensions[1], a = l > o ? l : o, c = i2 > r ? i2 : r;
+          for (s = 0; s < c; s++) for (n = 0; n < a; n++) null == t.options.data[s] && (t.options.data[s] = []), null == t.options.data[s][n] && (t.options.data[s][n] = "");
+          let d, u;
+          for (t.rows = [], t.results = null, t.records = [], t.history = [], t.historyIndex = -1, t.tbody.innerHTML = "", 1 == t.options.lazyLoading ? (d = 0, u = t.options.data.length < 100 ? t.options.data.length : 100, t.options.pagination && (t.options.pagination = false, console.error("Jspreadsheet: Pagination will be disable due the lazyLoading"))) : t.options.pagination ? (t.pageNumber || (t.pageNumber = 0), t.options.pagination, d = t.options.pagination * t.pageNumber, u = t.options.pagination * t.pageNumber + t.options.pagination, t.options.data.length < u && (u = t.options.data.length)) : (d = 0, u = t.options.data.length), s = 0; s < t.options.data.length; s++) {
+            const e2 = createRow.call(t, s, t.options.data[s]);
+            s >= d && s < u && t.tbody.appendChild(e2.element);
+          }
+          if (1 == t.options.lazyLoading || t.options.pagination && pagination.IV.call(t), t.options.mergeCells) {
+            const e2 = Object.keys(t.options.mergeCells);
+            for (let s2 = 0; s2 < e2.length; s2++) {
+              const n2 = t.options.mergeCells[e2[s2]];
+              merges.FU.call(t, e2[s2], n2[0], n2[1], 1);
+            }
+          }
+          internal.am.call(t);
+        }, getValue = function(e, t) {
+          const s = this;
+          let n, o;
+          if ("string" != typeof e) return null;
+          n = (e = (0, internalHelpers.vu)(e, true))[0], o = e[1];
+          let r = null;
+          return null != n && null != o && (s.records[o] && s.records[o][n] && t ? r = s.records[o][n].element.innerHTML : s.options.data[o] && "undefined" != s.options.data[o][n] && (r = s.options.data[o][n])), r;
+        }, getValueFromCoords = function(e, t, s) {
+          const n = this;
+          let o = null;
+          return null != e && null != t && (n.records[t] && n.records[t][e] && s ? o = n.records[t][e].element.innerHTML : n.options.data[t] && "undefined" != n.options.data[t][e] && (o = n.options.data[t][e])), o;
+        }, setValue = function(e, t, s) {
+          const n = this, o = [];
+          if ("string" == typeof e) {
+            const r2 = (0, internalHelpers.vu)(e, true), l = r2[0], i2 = r2[1];
+            o.push(internal.k9.call(n, l, i2, t, s)), internal.xF.call(n, l, i2, o);
+          } else {
+            let r2 = null, l = null;
+            if (e && e.getAttribute && (r2 = e.getAttribute("data-x"), l = e.getAttribute("data-y")), null != r2 && null != l) o.push(internal.k9.call(n, r2, l, t, s)), internal.xF.call(n, r2, l, o);
+            else {
+              const r3 = Object.keys(e);
+              if (r3.length > 0) for (let l2 = 0; l2 < r3.length; l2++) {
+                let r4, i2;
+                if ("string" == typeof e[l2]) {
+                  const t2 = (0, internalHelpers.vu)(e[l2], true);
+                  r4 = t2[0], i2 = t2[1];
+                } else null != e[l2].x && null != e[l2].y ? (r4 = e[l2].x, i2 = e[l2].y, null != e[l2].value && (t = e[l2].value)) : (r4 = e[l2].getAttribute("data-x"), i2 = e[l2].getAttribute("data-y"));
+                null != r4 && null != i2 && (o.push(internal.k9.call(n, r4, i2, t, s)), internal.xF.call(n, r4, i2, o));
+              }
+            }
+          }
+          utils_history.Dh.call(n, { action: "setValue", records: o, selection: n.selectedCell }), internal.am.call(n);
+          const r = o.map(function(e2) {
+            return { x: e2.x, y: e2.y, value: e2.value, oldValue: e2.oldValue };
+          });
+          dispatch.A.call(n, "onafterchanges", n, r);
+        }, setValueFromCoords = function(e, t, s, n) {
+          const o = this, r = [];
+          r.push(internal.k9.call(o, e, t, s, n)), internal.xF.call(o, e, t, r), utils_history.Dh.call(o, { action: "setValue", records: r, selection: o.selectedCell }), internal.am.call(o);
+          const l = r.map(function(e2) {
+            return { x: e2.x, y: e2.y, value: e2.value, oldValue: e2.oldValue };
+          });
+          dispatch.A.call(o, "onafterchanges", o, l);
+        }, getData = function(e, t, s, n) {
+          const o = this, r = [];
+          let l = 0, i2 = 0;
+          const a = Math.max(...o.options.data.map(function(e2) {
+            return e2.length;
+          })), c = o.options.data.length;
+          for (let s2 = 0; s2 < c; s2++) {
+            l = 0;
+            for (let n2 = 0; n2 < a; n2++) e && !o.records[s2][n2].element.classList.contains("highlight") || (r[i2] || (r[i2] = []), r[i2][l] = t ? o.records[s2][n2].element.innerHTML : o.options.data[s2][n2], l++);
+            l > 0 && i2++;
+          }
+          return s ? r.map(function(e2) {
+            return e2.join(s);
+          }).join("\r\n") + "\r\n" : n ? r.map(function(e2) {
+            const t2 = {};
+            return e2.forEach(function(e3, s2) {
+              t2[s2] = e3;
+            }), t2;
+          }) : r;
+        }, getDataFromRange = function(e, t) {
+          const s = this, n = (0, helpers.getCoordsFromRange)(e), o = [];
+          for (let e2 = n[1]; e2 <= n[3]; e2++) {
+            o.push([]);
+            for (let r = n[0]; r <= n[2]; r++) t ? o[o.length - 1].push(s.records[e2][r].element.innerHTML) : o[o.length - 1].push(s.options.data[e2][r]);
+          }
+          return o;
+        }, search = function(e) {
+          const t = this;
+          if (t.options.filters && filter.dr.call(t), t.resetSelection(), t.pageNumber = 0, t.results = [], e) {
+            t.searchInput.value !== e && (t.searchInput.value = e);
+            const s = function(e2, s2, n2) {
+              for (let o2 = 0; o2 < e2.length; o2++) if (("" + e2[o2]).toLowerCase().search(s2) >= 0 || ("" + t.records[n2][o2].element.innerHTML).toLowerCase().search(s2) >= 0) return true;
+              return false;
+            }, n = function(e2) {
+              -1 == t.results.indexOf(e2) && t.results.push(e2);
+            };
+            let o = e.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+            o = new RegExp(o, "i"), t.options.data.forEach(function(e2, r) {
+              if (s(e2, o, r)) {
+                const e3 = merges.D0.call(t, r);
+                if (e3.length) for (let s2 = 0; s2 < e3.length; s2++) {
+                  const o2 = (0, internalHelpers.vu)(e3[s2], true);
+                  for (let r2 = 0; r2 < t.options.mergeCells[e3[s2]][1]; r2++) n(o2[1] + r2);
+                }
+                else n(r);
+              }
+            });
+          } else t.results = null;
+          internal.hG.call(t);
+        }, resetSearch = function() {
+          const e = this;
+          e.searchInput.value = "", e.search(""), e.results = null;
+        }, getHeader = function(e) {
+          return this.headers[e].textContent;
+        }, getHeaders = function(e) {
+          const t = this, s = [];
+          for (let e2 = 0; e2 < t.headers.length; e2++) s.push(t.getHeader(e2));
+          return e ? s : s.join(t.options.csvDelimiter);
+        }, setHeader = function(e, t) {
+          const s = this;
+          if (s.headers[e]) {
+            const n = s.headers[e].textContent, o = s.options.columns && s.options.columns[e] && s.options.columns[e].title || "";
+            t || (t = (0, helpers.getColumnName)(e)), s.headers[e].textContent = t, s.headers[e].setAttribute("title", t), s.options.columns || (s.options.columns = []), s.options.columns[e] || (s.options.columns[e] = {}), s.options.columns[e].title = t, utils_history.Dh.call(s, { action: "setHeader", column: e, oldValue: n, newValue: t }), dispatch.A.call(s, "onchangeheader", s, parseInt(e), t, o);
+          }
+        }, getStyle = function(e, t) {
+          const s = this;
+          if (e) return e = (0, internalHelpers.vu)(e, true), t ? s.records[e[1]][e[0]].element.style[t] : s.records[e[1]][e[0]].element.getAttribute("style");
+          {
+            const e2 = {}, n = s.options.data[0].length, o = s.options.data.length;
+            for (let r = 0; r < o; r++) for (let o2 = 0; o2 < n; o2++) {
+              const n2 = t ? s.records[r][o2].element.style[t] : s.records[r][o2].element.getAttribute("style");
+              n2 && (e2[(0, internalHelpers.t3)([o2, r])] = n2);
+            }
+            return e2;
+          }
+        }, setStyle = function(e, t, s, n, o) {
+          const r = this, l = {}, i2 = {}, a = function(e2, t2, s2) {
+            const o2 = (0, internalHelpers.vu)(e2, true);
+            if (r.records[o2[1]] && r.records[o2[1]][o2[0]] && (0 == r.records[o2[1]][o2[0]].element.classList.contains("readonly") || n)) {
+              const a2 = r.records[o2[1]][o2[0]].element.style[t2];
+              a2 != s2 || n ? r.records[o2[1]][o2[0]].element.style[t2] = s2 : (s2 = "", r.records[o2[1]][o2[0]].element.style[t2] = ""), i2[e2] || (i2[e2] = []), l[e2] || (l[e2] = []), i2[e2].push([t2 + ":" + a2]), l[e2].push([t2 + ":" + s2]);
+            }
+          };
+          if (t && s) "string" == typeof e && a(e, t, s);
+          else {
+            const t2 = Object.keys(e);
+            for (let s2 = 0; s2 < t2.length; s2++) {
+              let n2 = e[t2[s2]];
+              "string" == typeof n2 && (n2 = n2.split(";"));
+              for (let e2 = 0; e2 < n2.length; e2++) "string" == typeof n2[e2] && (n2[e2] = n2[e2].split(":")), n2[e2][0].trim() && a(t2[s2], n2[e2][0].trim(), n2[e2][1]);
+            }
+          }
+          let c = Object.keys(i2);
+          for (let e2 = 0; e2 < c.length; e2++) i2[c[e2]] = i2[c[e2]].join(";");
+          c = Object.keys(l);
+          for (let e2 = 0; e2 < c.length; e2++) l[c[e2]] = l[c[e2]].join(";");
+          o || utils_history.Dh.call(r, { action: "setStyle", oldValue: i2, newValue: l }), dispatch.A.call(r, "onchangestyle", r, l);
+        }, resetStyle = function(e, t) {
+          const s = this, n = Object.keys(e);
+          for (let e2 = 0; e2 < n.length; e2++) {
+            const t2 = (0, internalHelpers.vu)(n[e2], true);
+            s.records[t2[1]] && s.records[t2[1]][t2[0]] && s.records[t2[1]][t2[0]].element.setAttribute("style", "");
+          }
+          s.setStyle(e, null, null, null, t);
+        }, download = function(e, t) {
+          const s = this;
+          if (0 == s.parent.config.allowExport) console.error("Export not allowed");
+          else {
+            let n = "";
+            n += copy.call(s, false, s.options.csvDelimiter, true, e, true, void 0, t);
+            const o = new Blob(["\uFEFF" + n], { type: "text/csv;charset=utf-8;" });
+            if (window.navigator && window.navigator.msSaveOrOpenBlob) window.navigator.msSaveOrOpenBlob(o, (s.options.csvFileName || s.options.worksheetName) + ".csv");
+            else {
+              const e2 = document.createElement("a");
+              e2.setAttribute("target", "_top");
+              const t2 = URL.createObjectURL(o);
+              e2.href = t2, e2.setAttribute("download", (s.options.csvFileName || s.options.worksheetName) + ".csv"), document.body.appendChild(e2), e2.click(), e2.parentNode.removeChild(e2);
+            }
+          }
+        }, getComments = function(e) {
+          const t = this;
+          if (e) return "string" != typeof e ? getComments.call(t) : (e = (0, internalHelpers.vu)(e, true), t.records[e[1]][e[0]].element.getAttribute("title") || "");
+          {
+            const e2 = {};
+            for (let s = 0; s < t.options.data.length; s++) for (let n = 0; n < t.options.columns.length; n++) {
+              const o = t.records[s][n].element.getAttribute("title");
+              o && (e2[(0, internalHelpers.t3)([n, s])] = o);
+            }
+            return e2;
+          }
+        }, setComments = function(e, t) {
+          const s = this;
+          let n;
+          n = "string" == typeof e ? { [e]: t } : e;
+          const o = {};
+          Object.entries(n).forEach(function([e2, t2]) {
+            const n2 = (0, helpers.getCoordsFromCellName)(e2);
+            o[e2] = s.records[n2[1]][n2[0]].element.getAttribute("title"), s.records[n2[1]][n2[0]].element.setAttribute("title", t2 || ""), t2 ? (s.records[n2[1]][n2[0]].element.classList.add("jss_comments"), s.options.comments || (s.options.comments = {}), s.options.comments[e2] = t2) : (s.records[n2[1]][n2[0]].element.classList.remove("jss_comments"), s.options.comments && s.options.comments[e2] && delete s.options.comments[e2]);
+          }), utils_history.Dh.call(s, { action: "setComments", newValue: n, oldValue: o }), dispatch.A.call(s, "oncomments", s, n, o);
+        };
+        var orderBy = __webpack_require__(94);
+        const getWorksheetConfig = function() {
+          return this.options;
+        }, getSpreadsheetConfig = function() {
+          return this.config;
+        }, setConfig = function(e, t) {
+          const s = this, n = Object.keys(e);
+          let o;
+          s.parent ? o = s.parent : (t = true, o = s), n.forEach(function(n2) {
+            t ? (o.config[n2] = e[n2], "toolbar" === n2 && (true === e[n2] ? o.showToolbar() : false === e[n2] && o.hideToolbar())) : s.options[n2] = e[n2];
+          });
+        };
+        var meta = __webpack_require__(654);
+        const setReadOnly = function(e, t) {
+          const s = this;
+          let n;
+          if ("string" == typeof e) {
+            const t2 = (0, helpers.getCoordsFromCellName)(e);
+            n = s.records[t2[1]][t2[0]];
+          } else {
+            const t2 = parseInt(e.getAttribute("data-x")), o = parseInt(e.getAttribute("data-y"));
+            n = s.records[o][t2];
+          }
+          t ? n.element.classList.add("readonly") : n.element.classList.remove("readonly");
+        }, isReadOnly = function(e, t) {
+          if ("string" == typeof e && void 0 === t) {
+            const s = (0, helpers.getCoordsFromCellName)(e);
+            [e, t] = s;
+          }
+          return this.records[t][e].element.classList.contains("readonly");
+        }, setWorksheetFunctions = function(e) {
+          for (let t = 0; t < worksheetPublicMethodsLength; t++) {
+            const [s, n] = worksheetPublicMethods[t];
+            e[s] = n.bind(e);
+          }
+        }, createTable = function() {
+          let e = this;
+          setWorksheetFunctions(e), e.table = document.createElement("table"), e.thead = document.createElement("thead"), e.tbody = document.createElement("tbody"), e.headers = [], e.cols = [], e.content = document.createElement("div"), e.content.classList.add("jss_content"), e.content.onscroll = function(t2) {
+            scrollControls.call(e, t2);
+          }, e.content.onwheel = function(t2) {
+            wheelControls.call(e, t2);
+          };
+          const t = document.createElement("div"), s = document.createElement("label");
+          s.innerHTML = jSuites.translate("Search") + ": ", t.appendChild(s), e.searchInput = document.createElement("input"), e.searchInput.classList.add("jss_search"), s.appendChild(e.searchInput), e.searchInput.onfocus = function() {
+            e.resetSelection();
+          };
+          const n = document.createElement("div");
+          if (e.options.pagination > 0 && e.options.paginationOptions && e.options.paginationOptions.length > 0) {
+            e.paginationDropdown = document.createElement("select"), e.paginationDropdown.classList.add("jss_pagination_dropdown"), e.paginationDropdown.onchange = function() {
+              e.options.pagination = parseInt(this.value), e.page(0);
+            };
+            for (let t2 = 0; t2 < e.options.paginationOptions.length; t2++) {
+              const s2 = document.createElement("option");
+              s2.value = e.options.paginationOptions[t2], s2.innerHTML = e.options.paginationOptions[t2], e.paginationDropdown.appendChild(s2);
+            }
+            e.paginationDropdown.value = e.options.pagination, n.appendChild(document.createTextNode(jSuites.translate("Show "))), n.appendChild(e.paginationDropdown), n.appendChild(document.createTextNode(jSuites.translate("entries")));
+          }
+          const o = document.createElement("div");
+          o.classList.add("jss_filter"), o.appendChild(n), o.appendChild(t), e.colgroupContainer = document.createElement("colgroup");
+          let r = document.createElement("col");
+          if (r.setAttribute("width", "50"), e.colgroupContainer.appendChild(r), e.options.nestedHeaders && e.options.nestedHeaders.length > 0 && e.options.nestedHeaders[0] && e.options.nestedHeaders[0][0]) for (let t2 = 0; t2 < e.options.nestedHeaders.length; t2++) e.thead.appendChild(internal.ju.call(e, e.options.nestedHeaders[t2]));
+          e.headerContainer = document.createElement("tr"), r = document.createElement("td"), r.classList.add("jss_selectall"), e.headerContainer.appendChild(r);
+          const l = getNumberOfColumns.call(e);
+          for (let t2 = 0; t2 < l; t2++) createCellHeader.call(e, t2), e.headerContainer.appendChild(e.headers[t2]), e.colgroupContainer.appendChild(e.cols[t2].colElement);
+          if (e.thead.appendChild(e.headerContainer), 1 == e.options.filters) {
+            e.filter = document.createElement("tr");
+            const t2 = document.createElement("td");
+            e.filter.appendChild(t2);
+            for (let t3 = 0; t3 < e.options.columns.length; t3++) {
+              const s2 = document.createElement("td");
+              s2.innerHTML = "&nbsp;", s2.setAttribute("data-x", t3), s2.className = "jss_column_filter", "hidden" == e.options.columns[t3].type && (s2.style.display = "none"), e.filter.appendChild(s2);
+            }
+            e.thead.appendChild(e.filter);
+          }
+          e.table = document.createElement("table"), e.table.classList.add("jss_worksheet"), e.table.setAttribute("cellpadding", "0"), e.table.setAttribute("cellspacing", "0"), e.table.setAttribute("unselectable", "yes"), e.table.appendChild(e.colgroupContainer), e.table.appendChild(e.thead), e.table.appendChild(e.tbody), e.options.textOverflow || e.table.classList.add("jss_overflow"), e.corner = document.createElement("div"), e.corner.className = "jss_corner", e.corner.setAttribute("unselectable", "on"), e.corner.setAttribute("onselectstart", "return false"), 0 == e.options.selectionCopy && (e.corner.style.display = "none"), e.textarea = document.createElement("textarea"), e.textarea.className = "jss_textarea", e.textarea.id = "jss_textarea", e.textarea.tabIndex = "-1", e.textarea.ariaHidden = "true";
+          const i2 = document.createElement("a");
+          i2.setAttribute("href", "https://bossanova.uk/jspreadsheet/"), e.ads = document.createElement("div"), e.ads.className = "jss_about";
+          const a = document.createElement("span");
+          a.innerHTML = "Jspreadsheet CE", i2.appendChild(a), e.ads.appendChild(i2), document.createElement("div").classList.add("jss_table"), e.pagination = document.createElement("div"), e.pagination.classList.add("jss_pagination");
+          const c = document.createElement("div"), d = document.createElement("div");
+          if (e.pagination.appendChild(c), e.pagination.appendChild(d), e.options.pagination || (e.pagination.style.display = "none"), 1 == e.options.search && e.element.appendChild(o), e.content.appendChild(e.table), e.content.appendChild(e.corner), e.content.appendChild(e.textarea), e.element.appendChild(e.content), e.element.appendChild(e.pagination), e.element.appendChild(e.ads), e.element.classList.add("jss_container"), e.element.jssWorksheet = e, e.element.jspreadsheet = e, 1 == e.options.tableOverflow && (e.options.tableHeight && (e.content.style["overflow-y"] = "auto", e.content.style["box-shadow"] = "rgb(221 221 221) 2px 2px 5px 0.1px", e.content.style.maxHeight = "string" == typeof e.options.tableHeight ? e.options.tableHeight : e.options.tableHeight + "px"), e.options.tableWidth && (e.content.style["overflow-x"] = "auto", e.content.style.width = "string" == typeof e.options.tableWidth ? e.options.tableWidth : e.options.tableWidth + "px")), 1 != e.options.tableOverflow && e.parent.config.toolbar && e.element.classList.add("with-toolbar"), 0 != e.options.columnDrag && e.thead.classList.add("draggable"), 0 != e.options.columnResize && e.thead.classList.add("resizable"), 0 != e.options.rowDrag && e.tbody.classList.add("draggable"), 0 != e.options.rowResize && e.tbody.classList.add("resizable"), e.setData.call(e), e.options.style && (e.setStyle(e.options.style, null, null, 1, 1), delete e.options.style), Object.defineProperty(e.options, "style", { enumerable: true, configurable: true, get() {
+            return e.getStyle();
+          } }), e.options.comments && e.setComments(e.options.comments), e.options.classes) {
+            const t2 = Object.keys(e.options.classes);
+            for (let s2 = 0; s2 < t2.length; s2++) {
+              const n2 = (0, internalHelpers.vu)(t2[s2], true);
+              e.records[n2[1]][n2[0]].element.classList.add(e.options.classes[t2[s2]]);
+            }
+          }
+        }, prepareTable = function() {
+          const e = this;
+          1 == e.options.lazyLoading && 1 != e.options.tableOverflow && 1 != e.parent.config.fullscreen && (console.error("Jspreadsheet: The lazyloading only works when tableOverflow = yes or fullscreen = yes"), e.options.lazyLoading = false), e.options.columns || (e.options.columns = []);
+          let t, s = e.options.columns.length;
+          if (e.options.data && void 0 !== e.options.data[0]) if (Array.isArray(e.options.data[0])) {
+            const t2 = e.options.data[0].length;
+            t2 > s && (s = t2);
+          } else t = Object.keys(e.options.data[0]), t.length > s && (s = t.length);
+          e.options.minDimensions || (e.options.minDimensions = [0, 0]), e.options.minDimensions[0] > s && (s = e.options.minDimensions[0]);
+          const n = [];
+          for (let o = 0; o < s; o++) e.options.columns[o] || (e.options.columns[o] = {}), !e.options.columns[o].name && t && t[o] && (e.options.columns[o].name = t[o]), "dropdown" == e.options.columns[o].type && e.options.columns[o].url && n.push({ url: e.options.columns[o].url, index: o, method: "GET", dataType: "json", success: function(t2) {
+            e.options.columns[this.index].source || (e.options.columns[this.index].source = []);
+            for (let s2 = 0; s2 < t2.length; s2++) e.options.columns[this.index].source.push(t2[s2]);
+          } });
+          n.length ? jSuites.ajax(n, function() {
+            createTable.call(e);
+          }) : createTable.call(e);
+        }, getNextDefaultWorksheetName = function(e) {
+          const t = /^Sheet(\d+)$/;
+          let s = 0;
+          return e.worksheets.forEach(function(e2) {
+            const n = t.exec(e2.options.worksheetName);
+            n && (s = Math.max(s, parseInt(n[1])));
+          }), "Sheet" + (s + 1);
+        }, buildWorksheet = async function() {
+          const e = this, t = (e.element, e.parent);
+          "object" == typeof t.plugins && Object.entries(t.plugins).forEach(function([, t2]) {
+            "function" == typeof t2.beforeinit && t2.beforeinit(e);
+          }), libraryBase.jspreadsheet.current = e;
+          const s = [];
+          if (e.options.csv) {
+            const t2 = new Promise((t3) => {
+              jSuites.ajax({ url: e.options.csv, method: "GET", dataType: "text", success: function(s2) {
+                const n = (0, helpers.parseCSV)(s2, e.options.csvDelimiter);
+                if (1 == e.options.csvHeaders && n.length > 0) {
+                  const t4 = n.shift();
+                  if (t4.length > 0) {
+                    e.options.columns || (e.options.columns = []);
+                    for (let s3 = 0; s3 < t4.length; s3++) e.options.columns[s3] || (e.options.columns[s3] = {}), void 0 === e.options.columns[s3].title && (e.options.columns[s3].title = t4[s3]);
+                  }
+                }
+                e.options.data = n, prepareTable.call(e), t3();
+              } });
+            });
+            s.push(t2);
+          } else if (e.options.url) {
+            const t2 = new Promise((t3) => {
+              jSuites.ajax({ url: e.options.url, method: "GET", dataType: "json", success: function(s2) {
+                e.options.data = s2.data ? s2.data : s2, prepareTable.call(e), t3();
+              } });
+            });
+            s.push(t2);
+          } else prepareTable.call(e);
+          await Promise.all(s), "object" == typeof t.plugins && Object.entries(t.plugins).forEach(function([, t2]) {
+            "function" == typeof t2.init && t2.init(e);
+          });
+        }, createWorksheetObj = function(e) {
+          const t = this.parent;
+          e.worksheetName || (e.worksheetName = getNextDefaultWorksheetName(this.parent));
+          const s = { parent: t, options: e, filters: [], formula: [], history: [], selection: [], historyIndex: -1 };
+          return t.config.worksheets.push(s.options), t.worksheets.push(s), s;
+        }, createWorksheet = function(e) {
+          const t = this.parent;
+          t.creationThroughJss = true, createWorksheetObj.call(this, e), t.element.tabs.create(e.worksheetName);
+        }, openWorksheet = function(e) {
+          this.parent.element.tabs.open(e);
+        }, deleteWorksheet = function(e) {
+          const t = this;
+          t.parent.element.tabs.remove(e);
+          const s = t.parent.worksheets.splice(e, 1)[0];
+          dispatch.A.call(t.parent, "ondeleteworksheet", s, e);
+        }, worksheetPublicMethods = [["selectAll", selection.Ub], ["updateSelectionFromCoords", function(e, t, s, n) {
+          return selection.AH.call(this, e, t, s, n);
+        }], ["resetSelection", function() {
+          return selection.gE.call(this);
+        }], ["getSelection", selection.Lo], ["getSelected", selection.ef], ["getSelectedColumns", selection.Jg], ["getSelectedRows", selection.R5], ["getData", getData], ["setData", setData], ["getValue", getValue], ["getValueFromCoords", getValueFromCoords], ["setValue", setValue], ["setValueFromCoords", setValueFromCoords], ["getWidth", getWidth], ["setWidth", function(e, t) {
+          return setWidth.call(this, e, t);
+        }], ["insertRow", insertRow], ["moveRow", function(e, t) {
+          return moveRow.call(this, e, t);
+        }], ["deleteRow", deleteRow], ["hideRow", hideRow], ["showRow", showRow], ["getRowData", getRowData], ["setRowData", setRowData], ["getHeight", getHeight], ["setHeight", function(e, t) {
+          return setHeight.call(this, e, t);
+        }], ["getMerge", merges.fd], ["setMerge", function(e, t, s) {
+          return merges.FU.call(this, e, t, s);
+        }], ["destroyMerge", function() {
+          return merges.VP.call(this);
+        }], ["removeMerge", function(e, t) {
+          return merges.Zp.call(this, e, t);
+        }], ["search", search], ["resetSearch", resetSearch], ["getHeader", getHeader], ["getHeaders", getHeaders], ["setHeader", setHeader], ["getStyle", getStyle], ["setStyle", function(e, t, s, n) {
+          return setStyle.call(this, e, t, s, n);
+        }], ["resetStyle", resetStyle], ["insertColumn", insertColumn], ["moveColumn", moveColumn], ["deleteColumn", deleteColumn], ["getColumnData", getColumnData], ["setColumnData", setColumnData], ["whichPage", pagination.ho], ["page", pagination.MY], ["download", download], ["getComments", getComments], ["setComments", setComments], ["orderBy", orderBy.My], ["undo", utils_history.tN], ["redo", utils_history.ZS], ["getCell", internal.tT], ["getCellFromCoords", internal.Xr], ["getLabel", internal.p9], ["getConfig", getWorksheetConfig], ["setConfig", setConfig], ["getMeta", function(e) {
+          return meta.IQ.call(this, e);
+        }], ["setMeta", meta.iZ], ["showColumn", showColumn], ["hideColumn", hideColumn], ["showIndex", internal.C6], ["hideIndex", internal.TI], ["getWorksheetActive", internal.$O], ["openEditor", openEditor], ["closeEditor", closeEditor], ["createWorksheet", createWorksheet], ["openWorksheet", openWorksheet], ["deleteWorksheet", deleteWorksheet], ["copy", function(e) {
+          e ? cutControls() : copy.call(this, true);
+        }], ["paste", paste], ["executeFormula", internal.Em], ["getDataFromRange", getDataFromRange], ["quantiyOfPages", pagination.$f], ["getRange", selection.eO], ["isSelected", selection.sp], ["setReadOnly", setReadOnly], ["isReadOnly", isReadOnly], ["getHighlighted", selection.kV], ["dispatch", dispatch.A], ["down", down], ["first", first], ["last", last], ["left", left], ["right", right], ["up", up], ["openFilter", filter.N$], ["resetFilters", filter.dr]], worksheetPublicMethodsLength = worksheetPublicMethods.length, factory = function() {
+        }, createWorksheets = async function(e, t, s) {
+          let n = t.worksheets;
+          if (!n) throw new Error("JSS: worksheets are not defined");
+          {
+            let o = { animation: true, onbeforecreate: function(t2, s2) {
+              return s2 || getNextDefaultWorksheetName(e);
+            }, oncreate: function(s2, n2) {
+              if (e.creationThroughJss) e.creationThroughJss = false;
+              else {
+                const t2 = s2.tabs.headers.children[s2.tabs.headers.children.length - 2].innerHTML;
+                createWorksheetObj.call(e.worksheets[0], { minDimensions: [10, 15], worksheetName: t2 });
+              }
+              const o2 = e.worksheets[e.worksheets.length - 1];
+              o2.element = n2, buildWorksheet.call(o2).then(function() {
+                (0, toolbar.nK)(o2), dispatch.A.call(o2, "oncreateworksheet", o2, t, e.worksheets.length - 1);
+              });
+            }, onchange: function(t2, s2, n2) {
+              0 != e.worksheets.length && e.worksheets[n2] && (0, toolbar.nK)(e.worksheets[n2]);
+            } };
+            1 == t.tabs ? o.allowCreate = true : o.hideHeaders = true, o.data = [];
+            let r = 1;
+            for (let e2 = 0; e2 < n.length; e2++) n[e2].worksheetName || (n[e2].worksheetName = "Sheet" + r++), o.data.push({ title: n[e2].worksheetName, content: "" });
+            s.classList.add("jss_spreadsheet"), s.tabIndex = 0;
+            const l = jSuites.tabs(s, o), i2 = t.style;
+            delete t.style;
+            for (let t2 = 0; t2 < n.length; t2++) n[t2].style && Object.entries(n[t2].style).forEach(function([e2, s2]) {
+              "number" == typeof s2 && (n[t2].style[e2] = i2[s2]);
+            }), e.worksheets.push({ parent: e, element: l.content.children[t2], options: n[t2], filters: [], formula: [], history: [], selection: [], historyIndex: -1 }), await buildWorksheet.call(e.worksheets[t2]);
+          }
+        };
+        factory.spreadsheet = async function(e, t, s) {
+          if ("TABLE" == e.tagName) {
+            t || (t = {}), t.worksheets || (t.worksheets = []);
+            const s2 = (0, helpers.createFromTable)(e, t.worksheets[0]);
+            t.worksheets[0] = s2;
+            const n2 = document.createElement("div");
+            e.parentNode.insertBefore(n2, e), e.remove(), e = n2;
+          }
+          let n = { worksheets: s, config: t, element: e, el: e };
+          return n.contextMenu = document.createElement("div"), n.contextMenu.className = "jss_contextmenu", n.getWorksheetActive = internal.$O.bind(n), n.fullscreen = internal.Y5.bind(n), n.showToolbar = toolbar.ll.bind(n), n.hideToolbar = toolbar.Ar.bind(n), n.getConfig = getSpreadsheetConfig.bind(n), n.setConfig = setConfig.bind(n), n.setPlugins = function(e2) {
+            n.plugins || (n.plugins = {}), "object" == typeof e2 && Object.entries(e2).forEach(function([e3, t2]) {
+              n.plugins[e3] = t2.call(libraryBase.jspreadsheet, n, {}, n.config);
+            });
+          }, n.setPlugins(t.plugins), await createWorksheets(n, t, e), n.element.appendChild(n.contextMenu), jSuites.contextmenu(n.contextMenu, { onclick: function() {
+            n.contextMenu.contextmenu.close(false);
+          } }), 1 == n.config.fullscreen && n.element.classList.add("fullscreen"), toolbar.ll.call(n), t.root ? setEvents(t.root) : setEvents(document), e.spreadsheet = n, n;
+        }, factory.worksheet = function(e, t, s) {
+          let n = { parent: e, options: {} };
+          return void 0 === s ? e.worksheets.push(n) : e.worksheets.splice(s, 0, n), Object.assign(n.options, t), n;
+        };
+        var utils_factory = factory;
+        libraryBase.jspreadsheet = function(e, t) {
+          try {
+            let s = [];
+            return utils_factory.spreadsheet(e, t, s).then((e2) => {
+              libraryBase.jspreadsheet.spreadsheet.push(e2), dispatch.A.call(e2, "onload", e2);
+            }), s;
+          } catch (e2) {
+            console.error(e2);
+          }
+        }, libraryBase.jspreadsheet.getWorksheetInstanceByName = function(e, t) {
+          const s = libraryBase.jspreadsheet.spreadsheet.find((e2) => e2.config.namespace === t);
+          if (s) return {};
+          if (null == e) {
+            const e2 = s.worksheets.map((e3) => [e3.options.worksheetName, e3]);
+            return Object.fromEntries(e2);
+          }
+          return s.worksheets.find((t2) => t2.options.worksheetName === e);
+        }, libraryBase.jspreadsheet.setDictionary = function(e) {
+          jSuites.setDictionary(e);
+        }, libraryBase.jspreadsheet.destroy = function(e, t) {
+          if (e.spreadsheet) {
+            const s = libraryBase.jspreadsheet.spreadsheet.indexOf(e.spreadsheet);
+            libraryBase.jspreadsheet.spreadsheet.splice(s, 1);
+            const n = e.spreadsheet.config.root || document;
+            e.spreadsheet = null, e.innerHTML = "", t && destroyEvents(n);
+          }
+        }, libraryBase.jspreadsheet.destroyAll = function() {
+          for (let e = 0; e < libraryBase.jspreadsheet.spreadsheet.length; e++) {
+            const t = libraryBase.jspreadsheet.spreadsheet[e];
+            libraryBase.jspreadsheet.destroy(t.element);
+          }
+        }, libraryBase.jspreadsheet.current = null, libraryBase.jspreadsheet.spreadsheet = [], libraryBase.jspreadsheet.helpers = {}, libraryBase.jspreadsheet.version = function() {
+          return version;
+        }, Object.entries(helpers).forEach(([e, t]) => {
+          libraryBase.jspreadsheet.helpers[e] = t;
+        });
+        var src = libraryBase.jspreadsheet;
+        jspreadsheet = __webpack_exports__.default;
+      })();
+      return jspreadsheet;
+    });
+  }
+});
+export default require_dist2();

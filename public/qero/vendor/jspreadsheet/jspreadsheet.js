@@ -9,9 +9,9 @@ var __commonJS = (cb, mod) => function __require2() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/jsuites@5.13.5/node_modules/jsuites/dist/jsuites.js
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/jsuites@5.13.5/node_modules/jsuites/dist/jsuites.js
 var require_jsuites = __commonJS({
-  "C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/jsuites@5.13.5/node_modules/jsuites/dist/jsuites.js"(exports2, module2) {
+  "../../../.cache/deno/deno_esbuild/registry.npmjs.org/jsuites@5.13.5/node_modules/jsuites/dist/jsuites.js"(exports2, module2) {
     (function(global, factory2) {
       typeof exports2 === "object" && typeof module2 !== "undefined" ? module2.exports = factory2() : typeof define === "function" && define.amd ? define(factory2) : global.jSuites = factory2();
     })(exports2, function() {
@@ -10513,9 +10513,9 @@ var require_jsuites = __commonJS({
   }
 });
 
-// C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/@jspreadsheet/formula@2.0.2/node_modules/@jspreadsheet/formula/dist/index.js
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/@jspreadsheet/formula@2.0.2/node_modules/@jspreadsheet/formula/dist/index.js
 var require_dist = __commonJS({
-  "C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/@jspreadsheet/formula@2.0.2/node_modules/@jspreadsheet/formula/dist/index.js"(exports2, module2) {
+  "../../../.cache/deno/deno_esbuild/registry.npmjs.org/@jspreadsheet/formula@2.0.2/node_modules/@jspreadsheet/formula/dist/index.js"(exports2, module2) {
     (function(global, factory2) {
       typeof exports2 === "object" && typeof module2 !== "undefined" ? module2.exports = factory2() : typeof define === "function" && define.amd ? define(factory2) : global.formula = factory2();
     })(exports2, function() {
@@ -14665,9 +14665,9 @@ var require_dist = __commonJS({
   }
 });
 
-// C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/jspreadsheet-ce@5.0.4/node_modules/jspreadsheet-ce/dist/index.js
+// ../../../.cache/deno/deno_esbuild/registry.npmjs.org/jspreadsheet-ce@5.0.4/node_modules/jspreadsheet-ce/dist/index.js
 var require_dist2 = __commonJS({
-  "C:/Users/hgsk8/AppData/Local/deno/deno_esbuild/registry.npmjs.org/jspreadsheet-ce@5.0.4/node_modules/jspreadsheet-ce/dist/index.js"(exports, module) {
+  "../../../.cache/deno/deno_esbuild/registry.npmjs.org/jspreadsheet-ce@5.0.4/node_modules/jspreadsheet-ce/dist/index.js"(exports, module) {
     if (!jSuites && typeof __require === "function") {
       jSuites = require_jsuites();
     }

@@ -7,13 +7,13 @@ updatedDate: 2026-05-30
 
 ## 実装目標
 
-*フレームワークに頼らず、TCP上に<punch-line>最小限のRPC</punch-line>を自力で実装します。プロトコルが何をしているかを理解するための単元です。*
+*フレームワークに頼らず、TCP上に<punch-line>最小限のRPC</punch-line>を自力で実装する。プロトコルが何をしているかを理解するための単元である。フレームワークとは、理解を先送りにする装置である。今回はその装置を使わない。*
 
-JSON 1行を1メッセージとして扱う簡易RPCを作り、Peer間でエコーします。
+JSON 1行を1メッセージとして扱う簡易RPCを作り、Peer間でエコーする。
 
 ## サーバー実装（Peer A）
 
-*接続を待ち受け、受信したJSONを<punch-line>デシリアライズしてエコーを返します。</punch-line>*
+*接続を待ち受け、受信したJSONを<punch-line>デシリアライズしてエコーを返す。</punch-line>*
 
 ```csharp
 using System.Net;
@@ -45,7 +45,7 @@ record EchoRequest(string method, string message);
 
 ## クライアント実装（Peer B）
 
-*サーバーに接続し、JSONメッセージを1行送信してレスポンスを受け取ります。*
+*サーバーに接続し、JSONメッセージを1行送信してレスポンスを受け取る。*
 
 ```csharp
 using System.Net.Sockets;
@@ -64,7 +64,7 @@ Console.WriteLine(line);
 
 ## 実装注意点
 
-*このコードをそのまま本番に持ち込む前に、<punch-line>最低限ここだけは対処</punch-line>しておいてください。*
+*このコードをそのまま本番に持ち込む前に、<punch-line>最低限ここだけは対処</punch-line>しておくこと。動くコードと、本番で動き続けるコードの間には、いくつかの深い溝がある。ここで挙げるのは、その溝のうちの最小の3つである。*
 
 - 区切りは改行（フレーミング簡易化）
 - `ReadLineAsync` のタイムアウトを設定

@@ -7,7 +7,7 @@ updatedDate: 2026-05-30
 
 ## Program.cs
 
-*WebSocket のアップグレードを受け付け、受信したテキストをそのままエコーする<punch-line>最小のサーバー</punch-line>を実装します。*
+*WebSocket のアップグレードを受け付け、受信したテキストをそのままエコーする<punch-line>最小のサーバー</punch-line>を実装する。双方向というと難しく聞こえるが、実装は案外短い。短いのは良いことである。長い実装は、何かを誤魔化している。*
 
 ```csharp
 using System.Net.WebSockets;
@@ -49,14 +49,12 @@ app.Run("http://0.0.0.0:5001");
 
 ## 動作確認
 
-*wscat で実際に接続し、<punch-line>双方向通信が成立していること</punch-line>を確認します。*
+*wscat で実際に接続し、<punch-line>双方向通信が成立していること</punch-line>を確認する。送信した文字列に `echo:` が付いて返れば成功である。この単純な確認が、全二重通信の証明なのである。*
 
 ```bash
 dotnet run
 npx wscat -c ws://localhost:5001/ws
 ```
-
-送信した文字列に `echo:` が付いて返れば成功です。
 
 ---
 

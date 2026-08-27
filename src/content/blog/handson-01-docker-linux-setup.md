@@ -3,6 +3,7 @@ title: 01. Docker隔離環境構築
 description: Ubuntuコンテナを使った再現可能なLinux検証環境の作成
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-01-docker-linux-setup.svg
 ---
 
 ## 構築目標

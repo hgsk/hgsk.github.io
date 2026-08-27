@@ -3,6 +3,7 @@ title: 09. WebSocket全二重通信実装
 description: ASP.NET Coreで双方向エコーWebSocketを実装
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-09-csharp-websocket-server.svg
 ---
 
 ## Program.cs

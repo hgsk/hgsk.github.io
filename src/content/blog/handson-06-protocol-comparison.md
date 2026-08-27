@@ -3,6 +3,7 @@ title: 06. 通信プロトコル比較論
 description: HTTP、WebSocket、gRPC、生TCPの特徴比較
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-06-protocol-comparison.svg
 ---
 
 「どのプロトコルを使えばよいか」という問いは、<punch-line>技術選定においてたびたび登場</punch-line>します。

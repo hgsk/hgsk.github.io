@@ -3,6 +3,7 @@ title: 11. リアルタイムP2P対戦実装
 description: 入力同期型のP2P対戦ゲームを段階的に実装する
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-11-pingpong-p2p-game.svg
 ---
 
 ## 最小構成

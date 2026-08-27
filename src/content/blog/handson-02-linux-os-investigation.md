@@ -3,6 +3,7 @@ title: 02. OS内部構造観測
 description: カーネル、ディストリ、CPU・メモリ・ディスクを確認する
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-02-linux-os-investigation.svg
 ---
 
 ## 実行コマンド一覧

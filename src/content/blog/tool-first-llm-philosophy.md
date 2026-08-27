@@ -3,6 +3,7 @@ title: ツール設計・LLM百科事典論
 description: カレンダー・タスクを自作ツール化する理由と、トークン効率・LLMの本質についての考え方
 pubDate: 2026-05-30
 updatedDate: 2026-05-30
+hero: /hero-tool-first-llm-philosophy.svg
 ---
 
 本稿では、カレンダー・タスクのツール化と、LLMの本質について報告します。

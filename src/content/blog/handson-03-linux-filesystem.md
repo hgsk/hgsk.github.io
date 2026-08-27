@@ -3,6 +3,7 @@ title: 03. ファイルシステム解析
 description: ディレクトリ構造、権限、マウント情報の確認
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-03-linux-filesystem.svg
 ---
 
 ## 実行コマンド一覧

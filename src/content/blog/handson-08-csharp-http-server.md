@@ -3,6 +3,7 @@ title: 08. ASP.NET最小HTTP構成
 description: ASP.NET Core最小APIでhealthとechoを実装
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-08-csharp-http-server.svg
 ---
 
 ## プロジェクト作成

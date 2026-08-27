@@ -3,6 +3,7 @@ title: 05. コンテナ間通信実験
 description: 同一Dockerネットワーク上での疎通とパケット観察
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-05-linux-machine-communication.svg
 ---
 
 ## 事前準備

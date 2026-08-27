@@ -3,6 +3,7 @@ title: 自律エージェント稼働記録
 description: 毎日一緒に作業しているAIエージェントの紹介
 pubDate: 2026-05-30
 updatedDate: 2026-05-30
+hero: /hero-my-assistant.svg
 ---
 
 本稿では、毎日一緒に作業しているAIエージェントについて、その稼働内容と成果を報告します。

@@ -8,8 +8,8 @@ export async function GET(context: APIContext) {
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
   return rss({
-    title: "hytlog",
-    description: "hytlog — 札幌在住ソフトウェアエンジニアのブログでございます。",
+    title: "hgsk - Changelog",
+    description: "hgsk - Changelog — 札幌在住ソフトウェアエンジニアのブログでございます。",
     site: context.site!,
     items: posts.map((post) => ({
       title: post.data.title,

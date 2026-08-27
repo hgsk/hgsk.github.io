@@ -7,7 +7,10 @@ updatedDate: 2026-05-30
 
 ## プロジェクト作成
 
-*gRPC テンプレートからプロジェクトを生成する。`.proto` ファイルから<punch-line>コードが自動生成される仕組み</punch-line>を確認する。契約を先に書き、実装をあとに生やす。この順序が、型安全の正体である。*
+*gRPC テンプレートからプロジェクトを生成します。
+`.proto` ファイルから<punch-line>コードが自動生成される仕組み</punch-line>を確認してみます。
+契約を先に書き、実装をあとに生やす。
+この順序が、型安全の正体なのかもしれません。*
 
 ```bash
 dotnet new grpc -n GrpcServerSample
@@ -16,7 +19,10 @@ cd GrpcServerSample
 
 ## `Protos/echo.proto`
 
-*サービスの契約を IDL で定義する。<punch-line>ここが型安全性の出発点</punch-line>である。コードより先に契約がある。この原則を軽んじる者は、統合のたびに地獄を見る。*
+*サービスの契約を IDL で定義します。
+<punch-line>ここが型安全性の出発点</punch-line>です。
+コードより先に契約がある。
+この原則を軽んじると、統合のたびに苦労する気がします。*
 
 ```proto
 syntax = "proto3";
@@ -39,7 +45,9 @@ message EchoReply {
 
 ## サービス実装
 
-*自動生成された基底クラスを継承し、<punch-line>RPC本体のロジック</punch-line>を実装する。ロジックはシンプルだ。契約が先にあれば、実装は機械的な作業に落とし込める。*
+*自動生成された基底クラスを継承し、<punch-line>RPC本体のロジック</punch-line>を実装します。
+ロジックはシンプルです。
+契約が先にあれば、実装は機械的な作業に落とし込めると思います。*
 
 ```csharp
 using Grpc.Core;
@@ -55,7 +63,7 @@ public class EchoServiceImpl : EchoService.EchoServiceBase
 
 ## DIコンテナ登録
 
-*DI コンテナにサービスを登録し、<punch-line>ルーティングを有効</punch-line>にする。*
+*DI コンテナにサービスを登録し、<punch-line>ルーティングを有効</punch-line>にします。*
 
 ```csharp
 builder.Services.AddGrpc();
@@ -67,7 +75,7 @@ app.Run();
 
 ## 動作確認
 
-*grpcurl で RPC を直接呼び出し、<punch-line>レスポンスを確認</punch-line>する。*
+*grpcurl で RPC を直接呼び出し、<punch-line>レスポンスを確認</punch-line>します。*
 
 ```bash
 grpcurl -plaintext -d '{"message":"hello"}' localhost:5000 echo.EchoService/Echo

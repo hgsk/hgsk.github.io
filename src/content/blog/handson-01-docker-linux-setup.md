@@ -7,20 +7,23 @@ updatedDate: 2026-05-30
 
 ## 構築目標
 
-*本環境を用意することが、<punch-line>以降の全単元の前提</punch-line>となる。ここを省くと何も動かない。これは脅しではない。実験環境というものは、土台が崩れれば全てが崩れるのである。*
+*本環境を用意することが、<punch-line>以降の全単元の前提</punch-line>になります。
+ここを省くと、何も動かないかもしれません。
+実験環境というものは、土台が崩れると、全部が崩れる気がします。*
 
 - Linux検証用コンテナを作る
 - 2台のコンテナを起動できる状態にする
 
 ## 実行手順
 
-*Dockerfile を書き、イメージをビルドし、<punch-line>コンテナを2つ起動</punch-line>する。手順は短い。短い手順ほど、実は慎重に踏む必要がある。*
+*Dockerfile を書き、イメージをビルドし、<punch-line>コンテナを2つ起動</punch-line>します。
+手順は短いけど、短い手順ほど、実は慎重に踏む必要があるのかもしれません。*
 
 ```bash
 mkdir linux-net-handson && cd linux-net-handson
 ```
 
-`Dockerfile` を作成する。
+`Dockerfile` を作成します。
 
 ```dockerfile
 FROM ubuntu:24.04
@@ -32,7 +35,7 @@ WORKDIR /work
 CMD ["bash"]
 ```
 
-ビルドして2台起動する。
+ビルドして2台起動します。
 
 ```bash
 docker build -t linux-lab .
@@ -42,7 +45,8 @@ docker run --rm -it --name linux-lab-2 linux-lab
 
 ## 動作確認
 
-*2台が<punch-line>同時に稼働していること</punch-line>を、一目で確認する。この確認を怠る者の失敗は、ここから始まっている。*
+*2台が<punch-line>同時に稼働していること</punch-line>を、一目で確認します。
+この確認を飛ばすと、あとで混乱するかもしれません。*
 
 ```bash
 docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"

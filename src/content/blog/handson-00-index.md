@@ -3,9 +3,14 @@ title: P2P通信実装全記録
 description: 各単元ページへ分割したハンズオン記事の目次
 pubDate: 2026-04-21
 updatedDate: 2026-04-21
+hero: /hero-handson-00-index.svg
 ---
 
-以下の11単元に分割しました。各ページで手順とコードを詳細化しています。
+以下、全11単元に分割してみました。
+各ページで手順とコードを詳細化しています。
+この連載は、通信というものをゼロから組み立てる実験の記録なのかもしれません。
+順番に読むのがおすすめです。
+飛ばし読みすると、途中で迷子になる気がします。
 
 1. [DockerによるLinux環境構築](/posts/handson-01-docker-linux-setup/)
 2. [基礎的なLinuxコマンドによるOSの調査](/posts/handson-02-linux-os-investigation/)

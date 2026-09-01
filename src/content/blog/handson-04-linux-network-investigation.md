@@ -3,11 +3,13 @@ title: 04. ネットワーク層観測
 description: IP、ルーティング、DNS、ポート監視の基本確認
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-04-linux-network-investigation.svg
 ---
 
 ## 実行コマンド一覧
 
-*「このマシンは<punch-line>どこと繋がっているか</punch-line>」を、ネットワーク層ごとに確認します。*
+*「このマシンは<punch-line>どこと繋がっているか</punch-line>」を、ネットワーク層ごとに確認します。
+通信というものを理解するための最初の一歩は、このマシンの「見えている世界」を把握することなのかもしれません。*
 
 ```bash
 ip a
@@ -18,9 +20,10 @@ nslookup example.com
 traceroute example.com
 ```
 
-## 出力解読指針
+## 出力解釈指針
 
-*各コマンドの出力が示す<punch-line>ネットワーク構造の意味</punch-line>を押さえます。*
+*各コマンドの出力が示す<punch-line>ネットワーク構造の意味</punch-line>を押さえます。
+出力を「暗号のようなもの」として眺めていると、ネットワークの勘所を掴めないままな気がします。*
 
 - `ip a`: NICごとのIPアドレス
 - `ip route`: デフォルトゲートウェイ

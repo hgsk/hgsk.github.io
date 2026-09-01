@@ -3,11 +3,14 @@ title: 09. WebSocket全二重通信実装
 description: ASP.NET Coreで双方向エコーWebSocketを実装
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-09-csharp-websocket-server.svg
 ---
 
 ## Program.cs
 
-*WebSocket のアップグレードを受け付け、受信したテキストをそのままエコーする<punch-line>最小のサーバー</punch-line>を実装します。*
+*WebSocket のアップグレードを受け付け、受信したテキストをそのままエコーする<punch-line>最小のサーバー</punch-line>を実装します。
+双方向というと難しく聞こえるけど、実装は案外短い気がします。
+短いのは良いことで、長い実装は何かを誤魔化しているのかもしれません。*
 
 ```csharp
 using System.Net.WebSockets;
@@ -49,14 +52,14 @@ app.Run("http://0.0.0.0:5001");
 
 ## 動作確認
 
-*wscat で実際に接続し、<punch-line>双方向通信が成立していること</punch-line>を確認します。*
+*wscat で実際に接続し、<punch-line>双方向通信が成立していること</punch-line>を確認します。
+送信した文字列に `echo:` が付いて返れば成功です。
+この単純な確認が、全二重通信の証明なのかもしれません。*
 
 ```bash
 dotnet run
 npx wscat -c ws://localhost:5001/ws
 ```
-
-送信した文字列に `echo:` が付いて返れば成功です。
 
 ---
 

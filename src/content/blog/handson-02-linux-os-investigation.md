@@ -3,11 +3,13 @@ title: 02. OS内部構造観測
 description: カーネル、ディストリ、CPU・メモリ・ディスクを確認する
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-02-linux-os-investigation.svg
 ---
 
 ## 実行コマンド一覧
 
-*「今自分が触っているOSは<punch-line>何者か</punch-line>」を、コマンド一本ずつで明らかにしていきます。*
+*「今自分が触っているOSは<punch-line>何者か</punch-line>」を、コマンド一本ずつで明らかにしていきます。
+OSというものを、誰かに説明された通りに信じるのはちょっと危険かもしれないので、自分の目で、自分の指で確かめるのが確実だと思います。*
 
 ```bash
 uname -a
@@ -20,7 +22,8 @@ ps aux | head
 
 ## 出力解読指針
 
-*出力の中で<punch-line>どの数値・行に着目すべきか</punch-line>を押さえておきます。*
+*出力の中で<punch-line>どの数値・行に着目すべきか</punch-line>を押さえておきます。
+コマンドは結果を返すけど、結果を読めるかどうかは、また別の話なのかもしれません。*
 
 - `uname -a`: カーネルとアーキテクチャ
 - `/etc/os-release`: ディストリビューション情報

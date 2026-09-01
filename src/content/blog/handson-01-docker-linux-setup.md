@@ -3,18 +3,22 @@ title: 01. Docker隔離環境構築
 description: Ubuntuコンテナを使った再現可能なLinux検証環境の作成
 pubDate: 2026-04-21
 updatedDate: 2026-05-30
+hero: /hero-handson-01-docker-linux-setup.svg
 ---
 
 ## 構築目標
 
-*本環境を用意することが、<punch-line>以降の全単元の前提</punch-line>となります。ここを省くと何も動きません。*
+*本環境を用意することが、<punch-line>以降の全単元の前提</punch-line>になります。
+ここを省くと、何も動かないかもしれません。
+実験環境というものは、土台が崩れると、全部が崩れる気がします。*
 
 - Linux検証用コンテナを作る
 - 2台のコンテナを起動できる状態にする
 
 ## 実行手順
 
-*Dockerfile を書き、イメージをビルドし、<punch-line>コンテナを2つ起動</punch-line>します。*
+*Dockerfile を書き、イメージをビルドし、<punch-line>コンテナを2つ起動</punch-line>します。
+手順は短いけど、短い手順ほど、実は慎重に踏む必要があるのかもしれません。*
 
 ```bash
 mkdir linux-net-handson && cd linux-net-handson
@@ -42,7 +46,8 @@ docker run --rm -it --name linux-lab-2 linux-lab
 
 ## 動作確認
 
-*2台が<punch-line>同時に稼働していること</punch-line>を、一目で確認します。*
+*2台が<punch-line>同時に稼働していること</punch-line>を、一目で確認します。
+この確認を飛ばすと、あとで混乱するかもしれません。*
 
 ```bash
 docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}"

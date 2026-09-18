@@ -59,8 +59,7 @@ jobs:
             mv "$TEMP_APK" "$TARGET"
           elif [ ! -s "$TARGET" ]; then
             rm -f "$TEMP_APK"
-            echo "Loci update APK is unavailable" >&2
-            exit 1
+            echo "::warning::Loci update APK is unavailable; continuing without it."
           else
             rm -f "$TEMP_APK"
             echo "::warning::Rolling Loci APK is not available yet; keeping the source copy."
